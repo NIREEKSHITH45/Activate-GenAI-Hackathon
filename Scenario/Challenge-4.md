@@ -75,4 +75,4 @@ Throughout this challenge, your tasks will encompass configuring diagnostic sett
 
 ## Summary
 
-In this challenge, you have explored and gained information on Monitoring Azure OpenAI Service using different methods.
+During this challenge, you've investigated and acquired insights into monitoring the Azure OpenAI Service through various methods.
