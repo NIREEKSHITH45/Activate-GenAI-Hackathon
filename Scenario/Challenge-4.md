@@ -45,4 +45,3 @@ Your task is to create a serverless document batch processing solution that leve
 - Basic understanding of OpenAI APIs and embeddings.
 - Knowledge of scalable and efficient document processing.
 
-## Good luck, and happy hacking!
