@@ -25,17 +25,12 @@ Your task is to deploy the architecture provided in the [Azure Activate GenAI Gi
    - Adhere to Terraform best practices, ensuring modularity, maintainability, and reusability of code.
    - Implement variables and modules where applicable to enhance code structure.
 
-5. **Documentation:**
-   - Provide clear documentation on how to execute the Terraform scripts and deploy the architecture.
-   - Include any specific considerations or prerequisites for successful deployment.
-
 ## Success Criteria:
 
 - Successful deployment of the architecture using Terraform scripts.
 - Correct configuration of Azure resources according to the provided architecture.
 - Implementation of networking and security features as outlined.
 - Adherence to Terraform best practices, modularity, and maintainability.
-- Clear and concise documentation for deploying and managing the infrastructure.
 
 ## Additional Resources:
 
