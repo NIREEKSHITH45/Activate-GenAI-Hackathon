@@ -1,4 +1,4 @@
-# Challenge 01:  Deploy Azure OpenAI Service and Large Language Models Challenge
+# Challenge 01:  Deploy Azure OpenAI Service and Large Language Models 
 
 ## Introduction:
 
