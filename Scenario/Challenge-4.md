@@ -6,7 +6,7 @@ This challenge involves delving into monitoring the Azure OpenAI Service by util
 
 ## Description
 
-In this challenge, you will be Configuring Diagnostic Settings, Deploying an OpenAI model, Analyzing logs using Kusto Queries and Monitoring OpenAI prompts using Azure API Management and Log Analytics workspace.
+Throughout this challenge, your tasks will encompass configuring diagnostic settings, deploying an OpenAI model, analyzing logs via Kusto Queries, and monitoring OpenAI prompts by employing Azure API Management in conjunction with Log Analytics workspace.
 
 ## Success criteria:
 
