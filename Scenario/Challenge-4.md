@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this challenge, you will explore on Monitoring Azure OpenAI Service using Log Analytics workspace and using Azure API Management.
+This challenge involves delving into monitoring the Azure OpenAI Service by utilizing Log Analytics workspace and leveraging Azure API Management.
 
 ## Description
 
