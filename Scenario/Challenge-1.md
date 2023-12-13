@@ -1,52 +1,41 @@
-# Challenge 1: Deploy Azure OpenAI Service and LLM Models
+# Challenge 01:  Deploy Azure OpenAI Service and Large Language Models Challenge
+
+## Introduction:
+
+Welcome to the Deploy Azure OpenAI Service and LLM Models Challenge! This challenge is designed to test your skills in deploying the Azure OpenAI Service and integrating Large Language Models into your applications. The goal is to set up the OpenAI Service, deploy LLM models, and demonstrate their usage in a practical scenario.
+
+## Challenge Description:
+
+Your task is to deploy the Azure OpenAI Service, integrate Large Language Models, and create a functional application that utilizes these models for natural language processing.
+
+## Challenge Objectives:
+
+1. **Azure OpenAI Service Deployment:**
+   - Set up an Azure OpenAI Service instance in your Azure portal.
+   - Configure and obtain necessary API keys and access credentials.
+
+2. **Large Language Models (LLM) Integration:**
+   - Choose a specific Large Language Model (e.g., GPT-3) for integration.
+   - Implement code to interact with the OpenAI Service and make requests to the chosen LLM.
+
+3. **Functional Application:**
+   - Develop a functional application that demonstrates the capabilities of the deployed OpenAI Service and LLM.
+   - Showcase natural language processing features, such as text generation, summarization, or question answering.
 
 
-## Introduction
+## Success Criteria:
 
-In this challenge you will explore on Azure OpenAI service and different deployment models.
+- Successful deployment of Azure OpenAI Service.
+- Integration of a Large Language Model (LLM) with the OpenAI Service.
+- Development of a functional application demonstrating natural language processing capabilities.
 
-## Description
+## Additional Resources:
 
-In this challenge, you will be creating Azure OpenAI and deploy various model with different base model.
+- Refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for guidance on deploying the service.
 
-### Accessing Azure portal
 
-1. To access the Azure portal, open a private/incognito window in your browser and navigate to Azure Portal.
+## Prerequisites:
 
-1. On the **Sign in to Microsoft Azure tab** you will see a login screen, enter the following email/username and then click on **Next**.
-
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-
-1. Now enter the following password and click on **Sign in**.
-
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
-
-1. If you see the pop-up **Stay Signed in?**, click No.
-
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
-
-1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
-
-## Success criteria:
-
-### 1: Create the Azure OpenAI service
-
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
-
-2. From **Azure AI Services | Azure OpenAI** blade, create an **Azure OpenAI** resource.
-
-3. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-
-### 2: Deploy a model in Azure OpenAI
-
-Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
-
-1. Login to Azure portal, select Azure OpenAI service that you have created in previous challenge.
-
-2. Launch Azure OpeanAI Studio from overview pane and deploy three OpenAI Models i.e, `gpt-4`, `gpt-35-turbo` and `text-embedding-ada-002` with the TPM capacity of 20k.
-  
-5. This will deploy the models which you will be playing around with as you proceed.
-
-## Summary
-
-In this challenge, you have explored and gained information on Azure OpenAI service and Deploying a model in Azure OpenAI service.
+- Proficiency in deploying services on Azure.
+- Familiarity with Large Language Models and natural language processing concepts.
+- Basic programming skills in a language of your choice (e.g., Python, JavaScript).
