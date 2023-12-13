@@ -1,4 +1,4 @@
-# Challenge 4: Serverless Document Batch Processing 
+# Challenge 04: Serverless Document Batch Processing 
 
 ## Introduction:
 
