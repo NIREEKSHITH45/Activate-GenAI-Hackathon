@@ -19,17 +19,16 @@ Throughout this challenge, your tasks will encompass configuring diagnostic sett
 
 ### 2: Monitoring Azure OpenAI Service using Kusto query
 
-1. Login to Azure portal, create Azure OpenAI service with SKU size `S0`.
+1. Login to Azure portal, select Azure OpenAI service which you have created in Challenge 1.
 2. Add diagnostic setting to monitor using Log Analytics workspace.
 3. Launch Azure OpeanAI Studio from overview pane and deploy OpenAI Model i.e, `text-embedding-ada-002` with the TPM capacity of 20k.
-4. From **Playground** section, create the **chat** deployment.
-5. Add an example in the Assistant setup pane.
-6. Use the pre-created Log Analytics workspace that was used to configure with diagnostics for your Azure OpenAI resource.
-7. Enter the Kusto query into the edit region for analysis of Azure Diagnostics data about your resource.
+4. From **Playground** section, use the **chat** deployment to ingest additional logs.you can add an example in the Assistant setup pane.
+5. Use the pre-created Log Analytics workspace that was used to configure with diagnostics for your Azure OpenAI resource.
+6. Enter the Kusto query into the edit region for analysis of Azure Diagnostics data about your resource.
 
 ### 3: Monitoring OpenAI prompts using Azure API Management
 
-1. From Azure OpenAI service, copy the values of the  `key1` and `endpoint` and Paste it into notepad.\
+1. From Azure OpenAI service, copy the values of the  `key1` and `endpoint` and Paste it into notepad.
 2. Create API Management Services from azure portal.
 3. Create Named Values from the API Management Services using the Azure OpenAI key.
 4. Create Backends from the API Management Service using the Azure OpenAI endpoint and using Named Values that you created earlier.
@@ -39,8 +38,12 @@ Throughout this challenge, your tasks will encompass configuring diagnostic sett
    <set-backend-service backend-id="backend-endpoint" />
    Note: Here the value backend-endpoint refers to the newly created backend, pointing to the runtime URL - the Azure OpenAI endpoint.
 8. Configure to call the OpenAI API through the API Management Service by setting the Number of payload bytes to log (up to 8192) to 8192 in Azure Monitor of newly created API.
-9. Run a POST operation to test the functionality of the added API by Selecting the newly added API. Click on the the POST operation that Creates a completion for the chat message. In the Request body provide : {"model":"gpt-35-turbo","messages":[{"role":"user","content":"Hello! What does an API Management Service in Azure do?"}]}.
-10. Naviagate back to the API Management Service and click on Logs and Within the New Query 1 tab, draft a new query such that and run it:
+9. Run a POST operation to test the functionality of the added API by Selecting the newly added API. Use the POST operation that Creates a completion for the chat message.
+10. Under the Template parameters section enter the following details:
+        - deployment-id: gpt-35-turbo
+        - api-version: 2023-03-15-preview
+11. In the Request body provide : {"model":"gpt-35-turbo","messages":[{"role":"user","content":"Hello! What does an API Management Service in Azure do?"}]}.
+12. Naviagate back to the API Management Service and click on Logs and Within the New Query 1 tab, draft a new query such that and run it:
     
     ```
     ApiManagementGatewayLogs
@@ -62,7 +65,7 @@ Throughout this challenge, your tasks will encompass configuring diagnostic sett
         by ip, model
     ```
 
-11. Let's run an other query to monitor prompt completions.
+13. Let's run an other query to monitor prompt completions.
     - Replace the contents of the query editor with the following KQL to log the prompts and run it.
     ```
     ApiManagementGatewayLogs
