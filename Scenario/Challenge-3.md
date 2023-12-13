@@ -25,18 +25,10 @@ Imagine a chat app that not only facilitates communication but also understands 
 ## Success Criteria:
 Participants will be evaluated based on the following criteria:
 
-1. **Functionality :**
    - Successful integration of Azure OpenAI LLM into the chat application.
    - Accurate understanding of user input and appropriate generation of responses.
    - Implementation of features that enhance the user experience.
-
-2. **Innovation :**
    - Creative and innovative use of Azure OpenAI LLM to make the chat app stand out.
-   - Implementation of additional features beyond the basic requirements.
-
-3. **User Interaction :**
-   - User-friendly design and interface.
-   - Effective handling of conversations, including context retention and personalization.
 
 ## Prerequisites:
 Before starting the challenge, participants should have the following:
