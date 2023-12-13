@@ -33,9 +33,9 @@ Throughout this event, participants will explore the intricate landscape of AI s
 1. Set up a couple of Azure OpenAI resources across diverse regions, deploying the `gpt-35-turbo` and `text-embedding-ada-002` models.
 
 2. Utilize API Management as an API proxy to link and interface it with Azure OpenAI resources.
-  - Configure Azure API Management by incorporating API featuring POST operations to access both the Completions API (gpt-35-turbo) and the Embeddings API (text-embedding-ada-002).
-  - Configure Azure API Management to enable load balancing across multiple Azure OpenAI resources upon accessing the APIM endpoint, while also implementing a failover mechanism to switch the backend in case of errors.
-  - Automatically load Azure OpenAI endpoints and keys using APIM's **Named Values** and configure the **HTTP(s) endpoint**.
+    - Configure Azure API Management by incorporating API featuring POST operations to access both the Completions API (gpt-35-turbo) and the Embeddings API (text-embedding-ada-002).
+    - Configure Azure API Management to enable load balancing across multiple Azure OpenAI resources upon accessing the APIM endpoint, while also implementing a failover mechanism to switch the backend in case of errors.
+    - Automatically load Azure OpenAI endpoints and keys using APIM's **Named Values** and configure the **HTTP(s) endpoint**.
 
 3. Create and update the API's **Inbound processing policies** to adhere to the load balancing capabilities.
 
