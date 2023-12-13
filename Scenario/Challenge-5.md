@@ -46,15 +46,15 @@ Throughout this event, participants will explore the intricate landscape of AI s
 ## Success criteria:
 
 1. Deploy Azure OpenAI resources
-  - Creation of two Azure OpenAI instances, across two diverse regions.
+    - Creation of two Azure OpenAI instances, across two diverse regions.
 
 2. Deploy OpenAI models within the created AOAI instances
-  - Ensure to have deployed the `gpt-35-turbo` and `text=embedding-ada-002` models within createed instances.
+    - Ensure to have deployed the `gpt-35-turbo` and `text=embedding-ada-002` models within createed instances.
 
 3. Within the APIM service, create an Inbound Policy for the API such that the backend (Azure OpenAI's endpoint URL) and AOAI keys are changed dynamically to implement load balancing capabilities.
 
 4. APIM’s policy is so sophisticated that it has the ability to retry under certain conditions if an error occurs on the back end.
-  - Configure and edit the inbound policy to implement the retry method such that the backend HTTP status code is 200.
-  - Use the `<forward-request buffer-request-body=”true” buffer-response=”false” />` within the backend policy in order to forward the API request to another backed for any HTTP status code of 300.
+    - Configure and edit the inbound policy to implement the retry method such that the backend HTTP status code is 200.
+    - Use the `<forward-request buffer-request-body=”true” buffer-response=”false” />` within the backend policy in order to forward the API request to another backed for any HTTP status code of 300.
 
 ## Lab Validation:
