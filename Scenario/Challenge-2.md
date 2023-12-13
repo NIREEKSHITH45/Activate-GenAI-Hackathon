@@ -41,12 +41,6 @@ Your task is to deploy the architecture provided in the [Azure Activate GenAI Gi
 
 - Refer to the  [Azure Activate GenAI GitHub repository](https://github.com/Azure/activate-genai) for detailed information on the architecture.
 
-## Submission Guidelines:
-
-1. Fork the provided GitHub repository or create a new repository for your Terraform scripts.
-2. Implement the Terraform scripts to deploy the specified architecture.
-3. Include a README.md file in your repository with clear documentation on how to use and deploy the Terraform scripts.
-
 ## Prerequisites:
 
 - Proficiency in Terraform and Infrastructure as Code (IaC) concepts.
