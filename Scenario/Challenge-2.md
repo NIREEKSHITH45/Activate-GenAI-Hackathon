@@ -1,4 +1,4 @@
-# Challenge 02 :  Architecture Deployment with Terraform Challenge
+# Challenge 02 :  Architecture Deployment with Terraform 
 
 ## Introduction:
 
