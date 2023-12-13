@@ -8,6 +8,24 @@ Welcome to the Serverless Document Batch Processing Hackathon! This challenge fo
 
 Your task is to create a serverless document batch processing solution that leverages Azure services and OpenAI embeddings. The solution should allow users to add documents in batches, process them to generate embeddings, and use these embeddings for enhanced search and question-answering experiences.
 
+### Accessing Azure portal
+
+1. To access the Azure portal, open a private/incognito window in your browser and navigate to Azure Portal.
+
+1. On the **Sign in to Microsoft Azure tab** you will see a login screen, enter the following email/username and then click on **Next**.
+
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+1. Now enter the following password and click on **Sign in**.
+
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+1. If you see the pop-up **Stay Signed in?**, click No.
+
+1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+
+1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
+
 ## Challenge Objectives:
 
 1. **Implement Batch Processing:**
