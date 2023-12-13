@@ -1,12 +1,12 @@
 # Challenge 05: Load Balancing Azure OpenAI resources
 
-## Introduction
+## Introduction:
 Welcome to the Load Balancing OpenAI Resources Hackathon! As technology advances, the demand for AI services grows, and effective load balancing becomes paramount. In this hackathon you will explore, innovate, collaborate and develop solutions that ensure the seamless distribution of workload across OpenAI's resources.
 
-## Description
+## Description:
 Throughout this event, participants will explore the intricate landscape of AI services within Azure, understanding the complexities of load balancing across various OpenAI resources. Leveraging the robust capabilities of Azure's API Management Service, participants will devise and implement innovative solutions aimed at achieving seamless and efficient distribution of workloads among these resources.
 
-## Contoso Environment
+## Contoso Environment:
 
 1. To access the Azure portal, open a private/incognito window in your browser and navigate to **[Azure Portal](https://portal.azure.com)**.
 
@@ -26,7 +26,7 @@ Throughout this event, participants will explore the intricate landscape of AI s
 
 6. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
 
-## Challenge Objectives
+## Challenge Objectives:
 
 **Optimal Resource Allocation**: **Design and implement a load balancing strategy using Azure API Management to efficiently distribute workloads across various OpenAI resources in different regions, ensuring optimal utilization and minimal latency. The requirements are as follows:**
 
@@ -57,4 +57,4 @@ Throughout this event, participants will explore the intricate landscape of AI s
   - Configure and edit the inbound policy to implement the retry method such that the backend HTTP status code is 200.
   - Use the `<forward-request buffer-request-body=”true” buffer-response=”false” />` within the backend policy in order to forward the API request to another backed for any HTTP status code of 300.
 
-## Lab Validation
+## Lab Validation:
