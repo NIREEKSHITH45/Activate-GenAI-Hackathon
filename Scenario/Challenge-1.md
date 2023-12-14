@@ -32,6 +32,7 @@ Your task is to deploy the Azure OpenAI Service, integrate Large Language Models
 ## Additional Resources:
 
 - Refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for guidance on deploying the service.
+- [Azure-AI-services-openai-quotas-limits](https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits)
 
 
 ## Prerequisites:
