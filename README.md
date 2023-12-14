@@ -23,11 +23,20 @@ By participating in this hackathon, you will:
 
 ## Challenges
 
-1. [Challenge 01: Deploy Azure OpenAI Service and Large Language Models](Scenario/Challenge-1.md)
-2. [Challenge 02 : Architecture Deployment with Terraform](Scenario/Challenge-2.md)
-3. [Challenge 03: Chat App Intelligence with Azure OpenAI LLM](Scenario/Challenge-3.md)
-4. [Challenge 04: Serverless Document Batch Processing](Scenario/Challenge-4.md)
-5. [Challenge 05: Load Balancing Azure OpenAI resources](Scenario/Challenge-5.md)
+1. Challenge 01: Deploy Azure OpenAI Service and Large Language Models
+   - Deploy Azure OpenAI Service with Large Language Models to harness advanced language capabilities in your applications.
+             
+3. Challenge 02 : Architecture Deployment with Terraform
+   - Master deploying scalable and efficient architectures in Azure using Terraform.
+          
+5. Challenge 03: Chat App Intelligence with Azure OpenAI LLM
+   - Elevate your chat applications by infusing intelligence through Azure OpenAI Large Language Models. Dive into natural language processing and understand how to enhance conversational experiences with AI.
+          
+7. Challenge 04: Serverless Document Batch Processing
+   - Discover the efficiency of serverless computing for document batch processing. This challenge will walk you through building a serverless solution for processing documents, showcasing the agility and scalability of serverless architectures.
+          
+9. Challenge 05: Load Balancing Azure OpenAI resources
+    - Optimize Azure OpenAI resource performance through effective load balancing with Azure API Management (APIM).
 
 Each challenge comes with its own set of tasks and objectives. Click on the challenge title to get started.
 
