@@ -30,6 +30,10 @@ Participants will be evaluated based on the following criteria:
    - Implementation of features that enhance the user experience.
    - Creative and innovative use of Azure OpenAI LLM to make the chat app stand out.
 
+## Additional Resources:
+
+- Refer to the  [azure-search-openai-demo](https://github.com/Azure-Samples/azure-search-openai-demo) for detailed information.
+  
 ## Prerequisites:
 Before starting the challenge, participants should have the following:
 
