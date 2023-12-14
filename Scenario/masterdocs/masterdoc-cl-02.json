@@ -1,0 +1,13 @@
+[ 
+  {
+  "Name": "Architecture deployment with Terraform : Challenge 02",
+  "Language": "English",
+  "BaseURL": "https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/tree/main",
+  "Files": [
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Challenge-2.md",
+       "Order": 1
+     }
+  ]
+ } 
+]
