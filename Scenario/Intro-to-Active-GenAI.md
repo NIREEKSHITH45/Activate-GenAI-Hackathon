@@ -31,11 +31,5 @@ Whether you're new to AI or looking to deepen your expertise, the [Azure Activat
 
 4. **Stay Informed:** Keep up to date with the latest trends, updates, and announcements in the AI space. The repository is regularly updated with new content and resources.
 
-## Contribute to Azure Activate Gen AI:
 
-Active Gen AI is a collaborative initiative, and contributions from the community are highly encouraged. Whether it's sharing your AI projects, contributing code, or suggesting improvements, your involvement helps enrich the learning experience for everyone.
-
-Ready to embark on your AI journey? Visit [Azure Activate Gen AI](https://github.com/Azure/activate-genai) and get started today!
-
-Happy coding, and welcome to the world of Active Gen AI!
 
