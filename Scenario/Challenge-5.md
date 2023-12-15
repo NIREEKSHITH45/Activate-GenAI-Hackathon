@@ -6,26 +6,6 @@ Welcome to the Load Balancing OpenAI Resources Hackathon! As technology advances
 ## Description:
 Throughout this event, participants will explore the intricate landscape of AI services within Azure, understanding the complexities of load balancing across various OpenAI resources. Leveraging the robust capabilities of Azure's API Management Service, participants will devise and implement innovative solutions aimed at achieving seamless and efficient distribution of workloads among these resources.
 
-## Contoso Environment:
-
-1. To access the Azure portal, open a private/incognito window in your browser and navigate to **[Azure Portal](https://portal.azure.com)**.
-
-2. On the **Sign in to Microsoft Azure** tab you will see a login screen, enter the following email/username and then click on **Next**. 
-   * Email/Username: <inject key="AzureAdUserEmail"></inject>
-   
-     ![](media/signin-email.png "Enter Email")
-
-3. Now enter the following password and click on **Sign in**.
-   * Password: <inject key="AzureAdUserPassword"></inject>
-   
-     ![](media/signin-password.png "Enter Password")
-
-4. If you see the pop-up **Stay Signed in?**, click No.
-
-5. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
-
-6. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
-
 ## Challenge Objectives:
 
 **Optimal Resource Allocation**: **Design and implement a load balancing strategy using Azure API Management to efficiently distribute workloads across various OpenAI resources in different regions, ensuring optimal utilization and minimal latency. The requirements are as follows:**
