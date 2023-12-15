@@ -49,7 +49,7 @@ Throughout this event, participants will explore the intricate landscape of AI s
     - Creation of two Azure OpenAI instances, across two diverse regions.
 
 2. Deploy OpenAI models within the created AOAI instances
-    - Ensure to have deployed the `gpt-35-turbo` and `text=embedding-ada-002` models within createed instances.
+    - Ensure to have deployed the `gpt-35-turbo` and `text-embedding-ada-002` models within createed instances.
 
 3. Within the APIM service, create an Inbound Policy for the API such that the backend (Azure OpenAI's endpoint URL) and AOAI keys are changed dynamically to implement load balancing capabilities.
 
