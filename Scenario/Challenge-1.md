@@ -8,6 +8,26 @@ Welcome to the Deploy Azure OpenAI Service and LLM Models Challenge! This challe
 
 Your task is to deploy the Azure OpenAI Service, integrate Large Language Models, and create a functional application that utilizes these models for natural language processing.
 
+## Accessing the Azure Portal:
+
+1. To access the Azure portal, open a private/incognito window in your browser and navigate to **[Azure Portal](https://portal.azure.com)**.
+
+2. On the **Sign in to Microsoft Azure** tab you will see a login screen, enter the following email/username and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+   
+     ![](media/signin-email.png "Enter Email")
+
+3. Now enter the following password and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
+   
+     ![](media/signin-password.png "Enter Password")
+
+4. If you see the pop-up **Stay Signed in?**, click No.
+
+5. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+
+6. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
+
 ## Challenge Objectives:
 
 1. **Azure OpenAI Service Deployment:**
