@@ -59,7 +59,7 @@ Throughout this event, participants will explore the intricate landscape of AI s
 
 ## Additional Resources
 
-- Refer to [Load Balancing AOAI instances](https://shiroyama.medium.com/introduction-eb8b8c94455a) for reference.
+- Refer to [How APIM can be used for load balancing resources](https://shiroyama.medium.com/introduction-eb8b8c94455a) for reference.
 - [Azure-AI-services-openai-quotas-limits](https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits)
 - [About Azure API Managerment service](https://learn.microsoft.com/en-us/azure/api-management/api-management-key-concepts)
 
