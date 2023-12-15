@@ -2,6 +2,8 @@
 
 Welcome to the dynamic landscape of Active Gen AI Challenge Lab! Get ready to embark on a thrilling journey that delves into the creation of intelligent applications with Active Gen AI. This challenge lab is your gateway to exploring groundbreaking technologies, pushing the boundaries of innovation, and crafting solutions that redefine the standards of artificial intelligence.
 
+The following repository which must be used extensively within this Hackathon is a part of the [Azure Activate Gen AI](https://github.com/Azure/activate-genai) project, is designed to provide resources, tools, and guidance for building, deploying, and managing AI solutions on the Microsoft Azure platform.
+
 ## Setting Expectations
 
 Throughout this exhilarating experience, you will navigate the comprehensive toolkit of Active Gen AI. Uncover its capabilities, learn how to harness its power, and discover the art of developing applications that not only possess intelligence but also adaptability and intuition. Brace yourself for an immersive exploration of tools, methodologies, and best practices necessary to build next-gen applications. This journey caters to both enthusiasts and seasoned developers, providing a perfect blend of foundational understanding and advanced techniques. By the end of this exploration, you will be equipped to craft intelligent applications that elevate user experiences and drive innovation across diverse domains.
