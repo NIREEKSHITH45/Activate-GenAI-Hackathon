@@ -4,7 +4,7 @@
 
 Welcome to the Serverless Document Batch Processing Hackathon! This challenge focuses on implementing an efficient and scalable serverless solution for document batch processing using Azure services and OpenAI capabilities. The goal is to enhance document search and question-answering experiences with OpenAI embeddings and Azure Cognitive Search.
 
-## Challenge Description:
+## Description:
 
 Your task is to create a serverless document batch processing solution that leverages Azure services and OpenAI embeddings. The solution should allow users to add documents in batches, process them to generate embeddings, and use these embeddings for enhanced search and question-answering experiences.
 
@@ -37,7 +37,6 @@ Your task is to create a serverless document batch processing solution that leve
 
 - Refer to the provided [GitHub repository](https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna) for the architecture and related resources.
 - Explore the [Azure Cognitive Search Vector Search Overview](https://learn.microsoft.com/en-us/azure/search/vector-search-overview) module for additional insights.
-
 
 ## Prerequisites:
 
