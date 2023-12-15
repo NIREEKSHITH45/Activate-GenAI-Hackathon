@@ -5,25 +5,33 @@
   "BaseURL": "https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/tree/main",
   "Files": [
      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Challenge-1.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/README.md",
        "Order": 1
      },
      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Challenge-2.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/overview.md",
        "Order": 2
      },
      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Challenge-3.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Challenge-1.md",
        "Order": 3
      },
      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Challenge-4.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Challenge-2.md",
        "Order": 4
      },
      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Challenge-5.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Challenge-3.md",
        "Order": 5
      },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Challenge-4.md",
+       "Order": 6
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Challenge-5.md",
+       "Order": 7
+     }
   ]
  } 
 ]
