@@ -6,7 +6,7 @@ Welcome to the Azure Architecture Deployment with Terraform Challenge! This chal
 
 ## Challenge Description:
 
-Your task is to deploy the architecture provided in the [](https://github.com/cmendible/azure-search-openai-demo) using Terraform. The architecture includes a set of Azure resources that form the foundation for an AI-driven solution.
+Your task is to deploy the architecture provided in the [azure-search-openai-demo repository](https://github.com/cmendible/azure-search-openai-demo) using Terraform. The architecture includes a set of Azure resources that form the foundation for an AI-driven solution.
 
 ![architecture](media/appcomponents.png)
 
