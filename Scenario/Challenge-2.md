@@ -8,6 +8,8 @@ Welcome to the Azure Architecture Deployment with Terraform Challenge! This chal
 
 Your task is to deploy the architecture provided in the [Azure Activate GenAI GitHub repository](https://github.com/Azure/activate-genai) using Terraform. The architecture includes a set of Azure resources that form the foundation for an AI-driven solution.
 
+![architecture](media/appcomponents.png)
+
 ## Challenge Objectives:
 
 1. **Terraform Deployment:**
