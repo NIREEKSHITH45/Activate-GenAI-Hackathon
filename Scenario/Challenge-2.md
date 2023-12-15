@@ -43,3 +43,7 @@ Your task is to deploy the architecture provided in the [Azure Activate GenAI Gi
 - Proficiency in Terraform and Infrastructure as Code (IaC) concepts.
 - Basic understanding of Azure services and networking.
 
+## Lab Validations: 
+
+- WIP
+
