@@ -43,6 +43,12 @@ Throughout this event, participants will explore the intricate landscape of AI s
 - [Azure-AI-services-openai-quotas-limits](https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits)
 - [About Azure API Managerment service](https://learn.microsoft.com/en-us/azure/api-management/api-management-key-concepts)
 
+## Prerequisites:
+
+- Well based knowledge and understanding of the intricacies of Azure API Management Service.
+- **Understanding Load Balancing Policies**: Familiarize yourself with Azure API Management's load balancing policies and choose the most suitable policy for your scenario. Azure API Management provides various policies for load balancing like round-robin, weighted, and more.
+- Basic understanding of Azure services and networking.
+
 ## Lab Validations: 
 
 - WIP
