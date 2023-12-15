@@ -48,5 +48,9 @@ Before starting the challenge, participants should have the following:
 
 4. **Understanding of REST APIs:**
    - Familiarity with making REST API calls, as you'll be interacting with Azure OpenAI LLM through API endpoints.
+  
+## Lab Validations: 
+
+- WIP
 
 
