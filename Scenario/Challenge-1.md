@@ -40,3 +40,7 @@ Your task is to deploy the Azure OpenAI Service, integrate Large Language Models
 - Proficiency in deploying services on Azure.
 - Familiarity with Large Language Models and natural language processing concepts.
 - Basic programming skills in a language of your choice (e.g., Python, JavaScript).
+
+## Lab Validations: 
+
+- WIP
