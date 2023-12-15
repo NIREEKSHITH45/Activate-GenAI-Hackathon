@@ -35,6 +35,8 @@ Your task is to deploy the architecture provided in the [Azure Activate GenAI Gi
 ## Additional Resources:
 
 - Refer to the  [Azure Activate GenAI GitHub repository](https://github.com/Azure/activate-genai) for detailed information on the architecture.
+- [Terraform-cli-commands](https://developer.hashicorp.com/terraform/cli/commands)
+-  [Terraform-best-practices](https://www.cloudbolt.io/terraform-best-practices/)
 
 ## Prerequisites:
 
