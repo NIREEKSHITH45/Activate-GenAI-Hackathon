@@ -37,7 +37,7 @@ Throughout this event, participants will explore the intricate landscape of AI s
     - Configure and edit the inbound policy to implement the retry method such that the backend HTTP status code is 200.
     - Use the `<forward-request buffer-request-body=”true” buffer-response=”false” />` within the backend policy in order to forward the API request to another backed for any HTTP status code of 300.
 
-## Additional Resources
+## Additional Resources:
 
 - Refer to [How APIM can be used for load balancing resources](https://shiroyama.medium.com/introduction-eb8b8c94455a) for reference.
 - [Azure-AI-services-openai-quotas-limits](https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits)
