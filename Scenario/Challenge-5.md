@@ -56,3 +56,7 @@ Throughout this event, participants will explore the intricate landscape of AI s
 4. APIM’s policy is so sophisticated that it has the ability to retry under certain conditions if an error occurs on the back end.
     - Configure and edit the inbound policy to implement the retry method such that the backend HTTP status code is 200.
     - Use the `<forward-request buffer-request-body=”true” buffer-response=”false” />` within the backend policy in order to forward the API request to another backed for any HTTP status code of 300.
+
+  ## Lab Validations: 
+
+- WIP
