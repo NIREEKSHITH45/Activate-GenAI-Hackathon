@@ -29,7 +29,7 @@ By participating in this hackathon, you will:
 3. **Challenge 02 : Architecture Deployment with Terraform**
    - Master deploying scalable and efficient architectures in Azure using Terraform.
           
-3. **Challenge 03: Chat App Intelligence with Azure OpenAI LLM**
+3. **Challenge 03: Implement Chat App with Azure OpenAI LLM**
    - Elevate your chat applications by infusing intelligence through Azure OpenAI Large Language Models. Dive into natural language processing and understand how to enhance conversational experiences with AI.
           
 4. **Challenge 04: Serverless Document Batch Processing**
