@@ -17,13 +17,9 @@ Your task is to deploy the architecture provided in the  [Azure Activate GenAI G
    - Configure Terraform scripts to provision Azure resources accurately.
 
 2. **Resource Configuration:**
-   - Define and configure Azure resources such as Virtual Networks, Virtual Machines, Storage Accounts, etc., as outlined in the architecture.
+   - Define and configure Azure resources such as Virtual Networks, Storage Accounts, etc., as outlined in the architecture.
 
-3. **Networking and Security:**
-   - Implement networking components with proper connectivity and security configurations.
-   - Ensure the correct setup of network security groups, subnets, and any required firewall rules.
-
-4. **Best Practices and Modularity:**
+3. **Best Practices and Modularity:**
    - Adhere to Terraform best practices, ensuring modularity, maintainability, and reusability of code.
    - Implement variables and modules where applicable to enhance code structure.
 
@@ -31,13 +27,12 @@ Your task is to deploy the architecture provided in the  [Azure Activate GenAI G
 
 - Successful deployment of the architecture using Terraform scripts.
 - Correct configuration of Azure resources according to the provided architecture.
-- Implementation of networking and security features as outlined.
 - Adherence to Terraform best practices, modularity, and maintainability.
 
 ## Additional Resources:
 
-- Refer to the  [Azure Activate GenAI GitHub repository](https://github.com/Azure/activate-genai) for detailed information on the architecture.
-- [Terraform-cli-commands](https://developer.hashicorp.com/terraform/cli/commands)
+-  Refer to the  [Azure Search OpenAI demo GitHub repository](https://github.com/cmendible/azure-search-openai-demo) for detailed information on the architecture.
+-  [Deploying Solution](https://github.com/Azure/activate-genai/blob/main/infra/README.md)
 -  [Terraform-best-practices](https://www.cloudbolt.io/terraform-best-practices/)
 
 ## Prerequisites:
