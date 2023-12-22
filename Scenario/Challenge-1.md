@@ -1,4 +1,3 @@
-
 # Challenge 1: Deploy Azure OpenAI Service and LLM Models
 
 ## Introduction
@@ -27,7 +26,13 @@ Your task is to deploy the Azure OpenAI Service, and deploy Large Language Model
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
 
+## Prerequisites
 
+- [Azure Subscription](https://azure.microsoft.com/en-us/free/)
+- [Azure OpenAI](https://aka.ms/oai/access) access with the following models
+  - gpt-4
+  - gpt-35-turbo
+  - text-embedding-ada-002
 
 ## Challenge Objectives:
 
@@ -44,21 +49,6 @@ Your task is to deploy the Azure OpenAI Service, and deploy Large Language Model
 - Successful deployment of Azure OpenAI Service.
 - Deploying Large Language Model (LLM) with the OpenAI Service.
 
-
 ## Additional Resources:
 
 - Refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for guidance on deploying the service.
-- [Azure-AI-services-openai-quotas-limits](https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits)
-
-
-## Prerequisites
-
-- [Azure Subscription](https://azure.microsoft.com/en-us/free/)
-- [Azure OpenAI](https://aka.ms/oai/access) access with the following models
-  - gpt-4
-  - gpt-35-turbo
-  - text-embedding-ada-002
-
-## Lab Validations: 
-
-- WIP
