@@ -1,4 +1,4 @@
-# Challenge 4: Implement Monitoring and Logging of Azure OpenAI using API Management Service
+# Optional Challenge: Implement Monitoring and Logging of Azure OpenAI using API Management Service
 
 ## Introduction:
 
