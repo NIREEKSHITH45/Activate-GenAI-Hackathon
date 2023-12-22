@@ -10,6 +10,20 @@ Your task is to deploy the architecture provided in the  [Azure Activate GenAI G
 
 ![architecture](media/appcomponents.png)
 
+
+## Pre-requisites:
+**Setup your Environment**
+* [Azure CLI v2.53.0 or later](https://aka.ms/azure-dev/install/)
+* [ Terraform v1.6.0 or later](https://developer.hashicorp.com/terraform/install)
+* Install [python 3.12.1](https://www.python.org/downloads)
+  * **Important**: Python and the pip package manager must be in the path in Windows for the setup scripts to work.
+  * **Important**: Ensure you can run `python --version` from console. On Ubuntu, you might need to run `sudo apt install python-is-python3` to link `python` to `python3`.
+* Install [Visual Studio Code](https://code.visualstudio.com/download/)
+* [Node.js 14+](https://nodejs.org/en/download/)
+* [Git](https://git-scm.com/downloads)
+
+ 
+
 ## Challenge Objectives:
 
 1. **Terraform Deployment:**
@@ -33,12 +47,6 @@ Your task is to deploy the architecture provided in the  [Azure Activate GenAI G
 
 -  Refer to the  [Azure Search OpenAI demo GitHub repository](https://github.com/cmendible/azure-search-openai-demo) for detailed information on the architecture.
 -  [Deploying Solution](https://github.com/Azure/activate-genai/blob/main/infra/README.md)
--  [Terraform-best-practices](https://www.cloudbolt.io/terraform-best-practices/)
-
-## Prerequisites:
-
-- Proficiency in Terraform and Infrastructure as Code (IaC) concepts.
-- Basic understanding of Azure services and networking.
 
 ## Lab Validations: 
 
