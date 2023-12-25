@@ -8,35 +8,29 @@ Imagine a chat app that not only facilitates communication but also understands 
 
 ## Challenge Objectives
 
- **1 : Access Web Application**
- 
-i. Click on "Browse" to open your web application.
+ **1. Access Web Application**
+  - Click on "Browse" to open your web application.
 
-**2 : Explore ChatGPT Interaction**
-
-i. In the chat application, provide the prompt: "What does a Product Manager do?"
-   - Observe chatapp responses.
-   - Explore annotations and citations in the response.
-
-ii. Ask another question: "Does the project manager manage the human resources team?"
+**2. Explore ChatGPT Interaction**
+- In the chat application, provide the prompt: "What does a Product Manager do?"
+    - Observe chatapp responses.
+    - Explore annotations and citations in the response.
+- Ask another question: "Does the project manager manage the human resources team?"
    - Note the influence of context on the response.
    - Click on citations to explore related information.
 
-**3 : Multilingual Query Capability**
-
-i. Modify the prompt in Developer Settings for multilingual queries.
+**3. Multilingual Query Capability**
+- Modify the prompt in Developer Settings for multilingual queries.
    - Add the message: "Convert prompt to English and provide a response when asked a question in a different language."
    - Close the settings.
-
-ii. Test multilingual query by asking in French:
+- Test multilingual query by asking in French:
    - Enter the prompt: "Quelles sont les responsabilités du responsable marketing?"
    - Observe ChatGPT's conversion and response.
 
-**4 : Advanced Settings Implementation**
+**4. Advanced Settings Implementation**
 
-i. In Developer Settings, enable "Use query-contextual summaries instead of whole documents" and "Suggest follow-up questions."
-  
-ii. Test the modified prompt:
+- In Developer Settings, enable "Use query-contextual summaries instead of whole documents" and "Suggest follow-up questions."
+- Test the modified prompt:
    - Ask: "What happens in a performance review?"
    - Observe how advanced settings influence chat responses.
 
