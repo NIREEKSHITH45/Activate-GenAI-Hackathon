@@ -6,29 +6,47 @@ Welcome to the "Chat App Intelligence with Azure OpenAI LLM" challenge! In this 
 ## Description:
 Imagine a chat app that not only facilitates communication but also understands and responds intelligently, making conversations more dynamic and engaging. Your task is to integrate Azure OpenAI LLM into a chat application, allowing it to comprehend user input, generate context-aware responses, and create a more natural and personalized conversational experience.
 
-## Challenge Objectives:
-1. **Integration with Azure OpenAI LLM:**
-   - Integrate Azure OpenAI LLM into your chat application to leverage its natural language processing capabilities.
+## Challenge Objectives
 
-2. **User Input Understanding:**
-   - Implement a mechanism to capture and analyze user input, ensuring the chat app understands the context and intent behind messages.
+ **1 : Access Web Application**
+ 
+i. Click on "Browse" to open your web application.
 
-3. **Dynamic Response Generation:**
-   - Utilize Azure OpenAI LLM to generate dynamic and contextually relevant responses based on the input received from users.
+**2 : Explore ChatGPT Interaction**
 
-4. **Personalization and Context Retention:**
-   - Enhance the chat app to remember and use context from previous interactions, creating a more personalized and continuous conversation.
+i. In the chat application, provide the prompt: "What does a Product Manager do?"
+   - Observe chatapp responses.
+   - Explore annotations and citations in the response.
 
-5. **User Experience Enhancement:**
-   - Implement features that elevate the overall user experience, such as sentiment analysis, suggested responses, or intelligent prompts.
+ii. Ask another question: "Does the project manager manage the human resources team?"
+   - Note the influence of context on the response.
+   - Click on citations to explore related information.
+
+**3 : Multilingual Query Capability**
+
+i. Modify the prompt in Developer Settings for multilingual queries.
+   - Add the message: "Convert prompt to English and provide a response when asked a question in a different language."
+   - Close the settings.
+
+ii. Test multilingual query by asking in French:
+   - Enter the prompt: "Quelles sont les responsabilités du responsable marketing?"
+   - Observe ChatGPT's conversion and response.
+
+**4 : Advanced Settings Implementation**
+
+i. In Developer Settings, enable "Use query-contextual summaries instead of whole documents" and "Suggest follow-up questions."
+  
+ii. Test the modified prompt:
+   - Ask: "What happens in a performance review?"
+   - Observe how advanced settings influence chat responses.
+
 
 ## Success Criteria:
 Participants will be evaluated based on the following criteria:
 
-   - Successful integration of Azure OpenAI LLM into the chat application.
-   - Accurate understanding of user input and appropriate generation of responses.
-   - Implementation of features that enhance the user experience.
-   - Creative and innovative use of Azure OpenAI LLM to make the chat app stand out.
+   - Successfully navigate and explore the web application.
+   - Demonstrate adept interaction with Chatapp through insightful questions and contextual exploration.
+   - Showcase proficiency in multilingual queries, and implement advanced settings to influence chat responses, thereby displaying a comprehensive grasp of Azure OpenAI services.
 
 ## Additional Resources:
 
