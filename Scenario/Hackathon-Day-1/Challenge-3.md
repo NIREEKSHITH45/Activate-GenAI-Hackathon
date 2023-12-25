@@ -25,22 +25,21 @@ Your task is to deploy the architecture provided in the  [Azure Activate GenAI G
 
 ## Challenge Objectives:
 
-1. **Terraform Deployment:**
+1. **Clone the Repository:**
+   - Clone the Active Gen AI repository: `https://github.com/Azure/activate-genai`.
+   - Verify if Terraform is installed on your machine. If not, follow the [Terraform installation guide](https://developer.hashicorp.com/terraform/install)
+
+2. **Terraform Deployment:**
    - Use Terraform to deploy the architecture specified in the provided GitHub repository.
    - Configure Terraform scripts to provision Azure resources accurately.
 
-2. **Resource Configuration:**
-   - Define and configure Azure resources such as Virtual Networks, Storage Accounts, etc., as outlined in the architecture.
-
-3. **Best Practices and Modularity:**
-   - Adhere to Terraform best practices, ensuring modularity, maintainability, and reusability of code.
-   - Implement variables and modules where applicable to enhance code structure.
-
+3. **Azure Search Index Deployment:**
+   - Follow the [manual steps](https://github.com/Azure/activate-genai/blob/main/infra/README.md) to deploy the Azure Search Index and upload the sample documents.
 ## Success Criteria:
 
 - Successful deployment of the architecture using Terraform scripts.
 - Correct configuration of Azure resources according to the provided architecture.
-- Adherence to Terraform best practices, modularity, and maintainability.
+- Successful deployment of Azure search index.
 
 ## Additional Resources:
 
