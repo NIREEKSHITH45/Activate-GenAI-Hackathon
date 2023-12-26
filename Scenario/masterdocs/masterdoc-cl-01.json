@@ -5,7 +5,7 @@
   "BaseURL": "https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/tree/main",
   "Files": [
      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Challenge-1.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Hackathon-Day-1/Challenge-1.md",
        "Order": 1
      }
   ]
