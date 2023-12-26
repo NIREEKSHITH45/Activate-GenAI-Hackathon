@@ -23,3 +23,7 @@ Participants will be evaluated based on the following criteria:
 1. The OpenAI service with the model deployment succeeded, and the analysis of logs using Kusto Queries proceeded as expected.
 2. The Azure API Management creation and configuration, as well as the analysis of logs using Kusto Queries within the API Management Service, occurred as expected.
 
+## Additional Resources:
+
+- Refer to the [how to configure Azure API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md) for detailed information.
+- Refer to this video about [Log & Monitor Everything in Azure OpenAI with API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md)
