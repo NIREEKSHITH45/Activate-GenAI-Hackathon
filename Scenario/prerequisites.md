@@ -6,11 +6,7 @@ Before you dive into the exciting world of Azure Activate Gen AI and explore the
 
 To engage with Azure Activate Gen AI and leverage Azure services, you'll need an active Microsoft Azure subscription. If you don't have one, you can [Use the account credentials shared](https://azure.microsoft.com/free/) to get started.
 
-## 2. Azure DevOps Account (Optional):
-
-For collaboration and version control, having an [Azure DevOps](https://dev.azure.com/) account is beneficial. While not mandatory, it enhances the development experience and facilitates teamwork.
-
-## 3. Development Environment:
+## 2. Development Environment:
 
 Ensure that you have a suitable development environment set up, including:
 
@@ -20,22 +16,14 @@ Ensure that you have a suitable development environment set up, including:
 
    - **Azure CLI:** The Azure Command-Line Interface (CLI) is useful for managing Azure resources from the command line. Install it from [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
 
-## 4. Basic Knowledge of AI Concepts:
+   - **Terraform:** [ Terraform v1.6.0 or later](https://developer.hashicorp.com/terraform/install)
+
+## 3. Basic Knowledge of AI Concepts:
 
 While the repository covers various AI topics, having a basic understanding of AI concepts, machine learning, and cloud computing will be beneficial for a smoother learning experience.
 
-## 5. Docker (Optional):
+## 4. Docker (Optional):
 
 Certain projects or labs might involve the use of Docker containers. If you plan to work with Dockerized applications, install Docker from [here](https://www.docker.com/get-started).
-
-## 6. Active GitHub Account:
-
-To contribute, ask questions, or engage with the community, you need an active GitHub account. If you don't have one, sign up for free at [GitHub](https://github.com/).
-
-## 7. Community Engagement:
-
-Active participation in the AI community, discussions, and forums can enhance your learning experience. Join relevant communities, forums, or social media groups to connect with other AI enthusiasts.
-
-Now that you have the prerequisites in place, you're ready to embark on your journey with Azure Activate Gen AI. Head to the repository, explore the resources, and start building intelligent solutions on Azure!
 
 Happy coding!
