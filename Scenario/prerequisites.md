@@ -18,12 +18,15 @@ Ensure that you have a suitable development environment set up, including:
 
    - **Terraform:** [ Terraform v1.6.0 or later](https://developer.hashicorp.com/terraform/install)
 
+   - **Python:** Install [python 3.12.1](https://www.python.org/downloads)
+     * **Important**: Python and the pip package manager must be in the path in Windows for the setup scripts to work.
+     * **Important**: Ensure you can run `python --version` from console. On Ubuntu, you might need to run `sudo apt install python-is-python3` to link `python` to `python3`.
+
+   - **Docker (Optional):** Install Docker from [here](https://www.docker.com/get-started).
+
 ## 3. Basic Knowledge of AI Concepts:
 
 While the repository covers various AI topics, having a basic understanding of AI concepts, machine learning, and cloud computing will be beneficial for a smoother learning experience.
 
-## 4. Docker (Optional):
-
-Certain projects or labs might involve the use of Docker containers. If you plan to work with Dockerized applications, install Docker from [here](https://www.docker.com/get-started).
 
 **Happy Hackathon!**
