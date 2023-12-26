@@ -26,4 +26,4 @@ While the repository covers various AI topics, having a basic understanding of A
 
 Certain projects or labs might involve the use of Docker containers. If you plan to work with Dockerized applications, install Docker from [here](https://www.docker.com/get-started).
 
-Happy coding!
+**Happy Hackathon!**
