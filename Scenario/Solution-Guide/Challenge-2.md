@@ -1,4 +1,4 @@
-# Create an Azure AI Search solution
+# Challenge 02: Create an Azure AI Search solution
 
 All organizations rely on information to make decisions, answer questions, and function efficiently. The problem for most organizations is not a lack of information, but the challenge of finding and  extracting the information from the massive set of documents, databases, and other sources in which the information is stored.
 
