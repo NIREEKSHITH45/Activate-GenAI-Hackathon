@@ -11,7 +11,7 @@ Imagine a chat app that not only facilitates communication but also understands 
  **1. Access Web Application**
   - Click on "Browse" to open your web application.
 
-**2. Explore ChatGPT Interaction**
+**2. Explore Chatapp Interaction**
 - In the chat application, provide the prompt: "What does a Product Manager do?"
     - Observe chatapp responses.
     - Explore annotations and citations in the response.
