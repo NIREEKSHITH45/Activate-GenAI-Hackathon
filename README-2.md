@@ -39,7 +39,7 @@ By participating in this hackathon, you will:
     - Optimize Azure OpenAI resource performance through effective load balancing with Azure API Management (APIM).
   
 6. **Challenge 06: Serverless Document Batch Processing**
-   - Discover the efficiency of serverless computing for document batch processing. This challenge will walk you through building a serverless solution for processing documents, showcasing the agility and scalability of serverless architectures.
+   - Discover the efficiency of serverless computing for document batch processing. This challenge will walk you through building a serverless solution for processing documents.
           
 
 
