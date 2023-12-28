@@ -42,7 +42,7 @@ Your task is to deploy the Azure OpenAI Service, and deploy Large Language Model
 
 2. **Deploy Large Language Models (LLM):**
    - Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
-   - Launch Azure OpeanAI Studio from overview pane and deploy three OpenAI Models i.e, `gpt-4`, `gpt-35-turbo` and `text-embedding-ada-002` with the TPM capacity of 20k.
+   - Launch Azure OpeanAI Studio from overview pane and deploy three OpenAI Models i.e, `gpt-35-turbo` and `text-embedding-ada-002` with the TPM capacity of 20k.
 
 ## Success Criteria:
 
