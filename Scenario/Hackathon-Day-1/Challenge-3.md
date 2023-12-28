@@ -1,4 +1,4 @@
-# Challenge 03 :  Architecture Deployment with Terraform 
+# Challenge 03:  Architecture Deployment with Terraform 
 
 ## Introduction:
 
@@ -16,7 +16,7 @@ Your task is to deploy the architecture provided in the  [Azure Activate GenAI G
 * [ Terraform v1.6.0 or later](https://developer.hashicorp.com/terraform/install)
 * Install [python 3.12.1](https://www.python.org/downloads)
   * **Important**: Python and the pip package manager must be in the path in Windows for the setup scripts to work.
-  * **Important**: Ensure you can run `python --version` from console. On Ubuntu, you might need to run `sudo apt install python-is-python3` to link `python` to `python3`.
+  * **Important**: Ensure you can run `python --version` from the console. On Ubuntu, you might need to run `sudo apt install python-is-python3` to link `python` to `python3`.
 * Install [Visual Studio Code](https://code.visualstudio.com/download/)
 * [Node.js 14+](https://nodejs.org/en/download/)
 * [Git](https://git-scm.com/downloads)
@@ -39,7 +39,7 @@ Your task is to deploy the architecture provided in the  [Azure Activate GenAI G
 
 - Successful deployment of the architecture using Terraform scripts.
 - Correct configuration of Azure resources according to the provided architecture.
-- Successful deployment of Azure search index.
+- Successful deployment of the Azure search index.
 
 ## Additional Resources:
 
