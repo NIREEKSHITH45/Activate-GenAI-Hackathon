@@ -16,11 +16,11 @@ To tackle this challenge head-on, Margie’s Travel seeks to harness the power o
 
 3. Create an **Azure AI Services resource** and an **Azure Storage Account**.
 
-4. Upload documents into the newly created storage account.
+4. Upload documents to the newly created storage account.
 
-5. Post the upload of documents into the storage blob container, create a search solution by indexing them.
+5. Post the upload of documents into the storage blob container, and create a search solution by indexing them.
 
-6. Explore and modify definitions of the search components.
+6. Explore and modify the definitions of the search components.
 
 ## Success criteria:
 
@@ -28,7 +28,7 @@ To tackle this challenge head-on, Margie’s Travel seeks to harness the power o
     - Creation of an Azure AI Search resource.
     - Creation of an Azure AI Services resource.
 
-2. In Visual Studio Code, in the **Explorer** pane which contains the folder of the cloned reopsitory `https://github.com/MicrosoftLearning/AI-102-AIEngineer`, expand the **22-create-a-search-solution** folder and edit the batch file, **UploadDocs.cmd** to replace the **YOUR_SUBSCRIPTION_ID** and **YOUR_AZURE_STORAGE_ACCOUNT_NAME**, and **YOUR_AZURE_STORAGE_KEY** placeholders with the appropriate subscription ID, Azure storage account name, and Azure storage account key values for the storage account you created previously.
+2. In Visual Studio Code, in the **Explorer** pane which contains the folder of the cloned repository `https://github.com/MicrosoftLearning/AI-102-AIEngineer`, expand the **22-create-a-search-solution** folder and edit the batch file, **UploadDocs.cmd** to replace the **YOUR_SUBSCRIPTION_ID** and **YOUR_AZURE_STORAGE_ACCOUNT_NAME**, and **YOUR_AZURE_STORAGE_KEY** placeholders with the appropriate subscription ID, Azure storage account name, and Azure storage account key values for the storage account you created previously.
 
 3. The Azure AI resource should have a new Index and Indexer named `margies-indexer`and `margies-index` respectively which defines the search solution.
 
@@ -40,8 +40,8 @@ To tackle this challenge head-on, Margie’s Travel seeks to harness the power o
 
 ## Prerequisites:
 
-- Well based knowledge and understanding of the intricacies of Azure Cognitive Services.
-- **Data Source**: Prepare the data source by cloning the above mentioned repository which includes documents containing the information you want to index and search.
+- Well-based knowledge and understanding of the intricacies of Azure Cognitive Services.
+- **Data Source**: Prepare the data source by cloning the above-mentioned repository, which includes documents containing the information you want to index and search.
 
 ## Lab Validations: 
 
