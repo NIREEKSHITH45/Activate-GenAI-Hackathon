@@ -1,7 +1,7 @@
-# Challenge 04: Implement Chat App with Azure OpenAI LLM
+# Challenge 04: Implement a Chat App with Azure OpenAI LLM
 
 ## Introduction:
-Welcome to the "Chat App Intelligence with Azure OpenAI LLM" challenge! In this hackathon, participants will dive into the world of conversational AI by creating a chat application infused with the power of Azure OpenAI Large Language Model (LLM). This challenge encourages participants to explore natural language understanding, generation, and interaction to enhance the user experience of a chat application.
+Welcome to the "Chat App Intelligence with Azure OpenAI LLM" challenge! In this hackathon, participants will dive into the world of conversational AI by creating a chat application infused with the power of the Azure OpenAI Large Language Model (LLM). This challenge encourages participants to explore natural language understanding, generation, and interaction to enhance the user experience of a chat application.
 
 ## Description:
 Imagine a chat app that not only facilitates communication but also understands and responds intelligently, making conversations more dynamic and engaging. Your task is to integrate Azure OpenAI LLM into a chat application, allowing it to comprehend user input, generate context-aware responses, and create a more natural and personalized conversational experience.
@@ -23,7 +23,7 @@ Imagine a chat app that not only facilitates communication but also understands 
 - Modify the prompt in Developer Settings for multilingual queries.
    - Add the message: "Convert prompt to English and provide a response when asked a question in a different language."
    - Close the settings.
-- Test multilingual query by asking in French:
+- Test a multilingual query by asking in French:
    - Enter the prompt: "Quelles sont les responsabilités du responsable marketing?"
    - Observe ChatGPT's conversion and response.
 
@@ -38,9 +38,9 @@ Imagine a chat app that not only facilitates communication but also understands 
 ## Success Criteria:
 Participants will be evaluated based on the following criteria:
 
-   - Successfully navigate and explore the web application.
+   - Successfully navigates and explores the web application.
    - Demonstrate adept interaction with Chatapp through insightful questions and contextual exploration.
-   - Showcase proficiency in multilingual queries, and implement advanced settings to influence chat responses, thereby displaying a comprehensive grasp of Azure OpenAI services.
+   - Showcase proficiency in multilingual queries and implement advanced settings to influence chat responses, thereby displaying a comprehensive grasp of Azure OpenAI services.
 
 ## Additional Resources:
 
