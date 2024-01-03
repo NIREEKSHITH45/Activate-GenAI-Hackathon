@@ -1,4 +1,4 @@
-# Challenge Optional: Implement Monitoring of Azure OpenAI prompts and responses
+# Challenge Optional: Implement Monitoring and Logging of Azure OpenAI using API Management Service
 
 ## Lab scenario
 
