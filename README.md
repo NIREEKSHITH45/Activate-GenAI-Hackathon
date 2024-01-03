@@ -24,18 +24,18 @@ By participating in this hackathon, you will:
 ## Challenges
 
 1. **Challenge 01: Deploy Azure OpenAI Service and Large Language Models**
-   - Deploy the Azure OpenAI Service and implement the deployment of a Large Language Model (LLM) within the OpenAI Service..
+   - Deploy the Azure OpenAI Service and implement the deployment of a Large Language Model (LLM) within the OpenAI Service.
      
-2. **Challenge 02 : Document Search using Azure Cognitive Search**
-   - create Azure AI Search, AI Services, Storage, upload & index documents, customize search using VS Code & Azure.
+2. **Challenge 02: Document Search using Azure Cognitive Search**
+   - Create Azure AI Search, AI Services, storage, upload and index documents, and customize search using VS Code and Azure.
              
-3. **Challenge 03 : Architecture Deployment with Terraform**
+3. **Challenge 03: Architecture Deployment with Terraform**
    - Master deploying scalable and efficient architectures in Azure using Terraform.
           
 4. **Challenge 04: Implement Chat App with Azure OpenAI LLM**
    - Navigate and explore the web app, interact adeptly with Chatapp using insightful questions, showcase multilingual query proficiency, and implement advanced settings for comprehensive Azure OpenAI service understanding.
           
-5. **Challenge 05: Load Balancing Azure OpenAI resources**
+5. **Challenge 05: Load Balancing Azure OpenAI Resources**
     - Optimize Azure OpenAI resource performance through effective load balancing with Azure API Management (APIM).
   
 6. **Challenge 06: Serverless Document Batch Processing**
@@ -49,7 +49,7 @@ Each challenge comes with its own set of tasks and objectives. Click on the chal
 
 Before you begin, ensure that you have the following prerequisites:
 
-- **Prerequisites**: Information on the tools and knowledge required for the hackathon.
+- Information on the tools and knowledge required for the hackathon.
 
 Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to our support team.
 

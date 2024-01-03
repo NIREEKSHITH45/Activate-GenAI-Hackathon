@@ -26,4 +26,4 @@ Participants will be evaluated based on the following criteria:
 ## Additional Resources:
 
 - Refer to the [how to configure Azure API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md) for detailed information.
-- Refer to this video about [Log & Monitor Everything in Azure OpenAI with API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md)
+- Refer to this video about [Log & Monitor Everything in Azure OpenAI with API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md).

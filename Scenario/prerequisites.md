@@ -4,7 +4,7 @@ Before you dive into the exciting world of Azure Activate Gen AI and explore the
 
 ## 1. Azure Subscription:
 
-To engage with Azure Activate Gen AI and leverage Azure services, you'll need an active Microsoft Azure subscription. If you don't have one, you can [Use the account credentials shared](https://azure.microsoft.com/free/) to get started.
+To engage with Azure Activate Gen AI and leverage Azure services, you'll need an active Microsoft Azure subscription. If you don't have one, you can [use the account credentials shared](https://azure.microsoft.com/free/) to get started.
 
 ## 2. Development Environment:
 
@@ -18,7 +18,7 @@ Ensure that you have a suitable development environment set up, including:
 
    - **Terraform:** [ Terraform v1.6.0 or later](https://developer.hashicorp.com/terraform/install)
 
-   - **Python:** Install [python 3.12.1](https://www.python.org/downloads)
+   - **Python:** Install [Python 3.12.1](https://www.python.org/downloads)
      * **Important**: Python and the pip package manager must be in the path in Windows for the setup scripts to work.
      * **Important**: Ensure you can run `python --version` from console. On Ubuntu, you might need to run `sudo apt install python-is-python3` to link `python` to `python3`.
 
