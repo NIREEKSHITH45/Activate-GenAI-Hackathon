@@ -2,7 +2,7 @@
 
 ## Lab scenario
 
-This lab focuses on content filtering in Azure OpenAI to prevent offensive language. Explore monitoring data collection, including activity logs and platform metrics. Configure Azure Monitor for log generation, customize data routing with diagnostic settings, and initiate resource logs collection. Discover Log Analytics Workspace limitations in logging user requests and model responses. Mitigate this by integrating Azure API Management Service for comprehensive logging in the Azure OpenAI environment.
+Explore monitoring data collection, including activity logs and platform metrics. Configure Azure Monitor for log generation, customize data routing with diagnostic settings, and initiate resource logs collection. Discover Log Analytics Workspace limitations in logging user requests and model responses. Mitigate this by integrating Azure API Management Service for comprehensive logging in the Azure OpenAI environment.
 
 # Solution Guide
 
