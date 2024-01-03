@@ -46,20 +46,6 @@ Participants will be evaluated based on the following criteria:
 
 - Refer to the  [azure-search-openai-demo](https://github.com/Azure-Samples/azure-search-openai-demo) for detailed information.
   
-## Prerequisites:
-Before starting the challenge, participants should have the following:
-
-1. **Azure Subscription:**
-   - Each participant or team should have access to an Azure subscription for utilizing Azure services, including Azure OpenAI LLM.
-
-2. **Development Environment:**
-   - Set up a development environment with the necessary tools and frameworks for building a chat application.
-
-3. **Azure OpenAI LLM API Key:**
-   - Acquire the API key for Azure OpenAI LLM to enable integration with your chat application.
-
-4. **Understanding of REST APIs:**
-   - Familiarity with making REST API calls, as you'll be interacting with Azure OpenAI LLM through API endpoints.
   
 ## Lab Validations: 
 
