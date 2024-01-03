@@ -1,7 +1,7 @@
 # Challenge 04: Implement Chat App with Azure OpenAI LLM
 
 ## Introduction:
-Welcome to the "Chat App Intelligence with Azure OpenAI LLM" challenge! In this hackathon, participants will dive into the world of conversational AI by creating a chat application infused with the power of Azure OpenAI Large Language Model (LLM). This challenge encourages participants to explore natural language understanding, generation, and interaction to enhance the user experience of a chat application.
+Welcome to the "Implement Chat App with Azure OpenAI LLM" challenge! In this hackathon, participants will dive into the world of conversational AI by creating a chat application infused with the power of Azure OpenAI Large Language Model (LLM). This challenge encourages participants to explore natural language understanding, generation, and interaction to enhance the user experience of a chat application.
 
 ## Description:
 Imagine a chat app that not only facilitates communication but also understands and responds intelligently, making conversations more dynamic and engaging. Your task is to integrate Azure OpenAI LLM into a chat application, allowing it to comprehend user input, generate context-aware responses, and create a more natural and personalized conversational experience.
@@ -47,6 +47,6 @@ Participants will be evaluated based on the following criteria:
 - Refer to the  [azure-search-openai-demo](https://github.com/Azure-Samples/azure-search-openai-demo) for detailed information.
   
   
-## Lab Validations: 
+## Lab Validations
 
-- WIP
+- Work in progress (WIP)
