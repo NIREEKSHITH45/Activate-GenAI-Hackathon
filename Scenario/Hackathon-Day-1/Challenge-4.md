@@ -57,9 +57,6 @@ Before starting the challenge, participants should have the following:
 
 3. **Azure OpenAI LLM API Key:**
    - Acquire the API key for Azure OpenAI LLM to enable integration with your chat application.
-
-4. **Understanding of REST APIs:**
-   - Familiarity with making REST API calls, as you'll be interacting with Azure OpenAI LLM through API endpoints.
   
 ## Lab Validations: 
 
