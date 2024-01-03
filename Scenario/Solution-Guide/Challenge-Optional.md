@@ -1,4 +1,4 @@
-# Challenge Optional: Implement Security and Monitoring
+# Challenge Optional: Implement Monitoring of Azure OpenAI prompts and responses
 
 ## Lab scenario
 
