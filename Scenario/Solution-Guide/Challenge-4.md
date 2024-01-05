@@ -10,9 +10,7 @@ Imagine a chat app that not only facilitates communication but also understands 
 
 ### Task 1: Interact with Chatapp with Azure OpenAI LLM
 
-One of the hottest themes at the moment is size models; users are particularly interested in conversation GPT. The most intriguing thing about all those basic models—Chat GPT included—is that while they perform admirably on their own, they perform even better when combined with your own data. The majority of users will accomplish this by using a method known as prompt stuffing or prompt engineering. 
-
-We are going to walk through a quick demonstration and example of how some straightforward integrations and prompt engineering may significantly enhance knowledge mining over your corporate data utilizing Azure Open AI service and Azure Cognitive search. To begin, let's combine Azure cognitive search with the Azure open AI service to generate a ChatGPT-like experience over certain private data.
+One of the hottest themes at the moment is size models; users are particularly interested in conversation GPT. The most intriguing thing about all those basic models—Chat GPT included—is that while they perform admirably on their own, they perform even better when combined with your own data.
 
 1. In Azure Portal, search and select **App service**. 
 
