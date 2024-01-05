@@ -25,7 +25,7 @@ In this event, participants will dive into the technical intricacies of AI servi
 
 ## Success criteria:
 
-1. Ensure to have deployed the `gpt-35-turbo` and `text-embedding-ada-002` models within the created instances.
+1. Ensure that the instances have the gpt-35-turbo and text-embedding-ada-002 models deployed.
 
 2. Within the APIM service, create an Inbound Policy for the API such that the backend (Azure OpenAI's endpoint URL) and AOAI keys are changed dynamically to implement load balancing capabilities.
 
