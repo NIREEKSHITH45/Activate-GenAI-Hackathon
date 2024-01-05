@@ -8,10 +8,10 @@ In this event, participants will dive into the technical intricacies of AI servi
 
 ## Challenge Objectives:
 
-**Optimal Resource Allocation**: **Design and implement a load balancing strategy using Azure API Management to efficiently distribute workloads across various OpenAI resources in different regions, ensuring optimal utilization and minimal latency. The requirements are as follows:**
+**Optimal Resource Allocation**: **Design and implement a load balancing strategy using Azure API Management to efficiently distribute workloads across geographically dispersed OpenAI resources by deploying OpenAI models tailored to the unique requirements of each region, ensuring optimal utilization and minimal latency. The requirements are as follows:**
 
-1. Utilize pre-deployed GPT-35-turbo and text-embedding-ada-002 models across Azure OpenAI resources in different regions.
-
+1. Utilize the existing Azure OpenAI resources across various regions while ensuring the deployment and availability of GPT-35-Turbo and text-embedding-ada-002 models.
+   
 2. Utilize API Management as an API proxy to link and interface it with Azure OpenAI resources.
     - Configure Azure API Management by incorporating API featuring POST operations to access both the Completions API (gpt-35-turbo) and the Embeddings API (text-embedding-ada-002).
     - Configure Azure API Management to enable load balancing across multiple Azure OpenAI resources upon accessing the APIM endpoint, while also implementing a failover mechanism to switch the backend in case of errors.
@@ -25,7 +25,7 @@ In this event, participants will dive into the technical intricacies of AI servi
 
 ## Success criteria:
 
-1. Ensure that the instances have the gpt-35-turbo and text-embedding-ada-002 models deployed.
+1. Ensure that the OpenAI instances have the gpt-35-Turbo and text-embedding-ada-002 models deployed.
 
 2. Within the APIM service, create an Inbound Policy for the API such that the backend (Azure OpenAI's endpoint URL) and AOAI keys are changed dynamically to implement load balancing capabilities.
 
