@@ -10,7 +10,7 @@ In this event, participants will dive into the technical intricacies of AI servi
 
 **Optimal Resource Allocation**: **Design and implement a load balancing strategy using Azure API Management to efficiently distribute workloads across various OpenAI resources in different regions, ensuring optimal utilization and minimal latency. The requirements are as follows:**
 
-1. Utilize the Azure OpenAI resources already provisioned with GPT-35-turbo and text-embedding-ada-002 models.
+1. Utilize pre-deployed GPT-355-turbo and text-embedding-ada-002 models across Azure OpenAI resources in different regions.
 
 2. Utilize API Management as an API proxy to link and interface it with Azure OpenAI resources.
     - Configure Azure API Management by incorporating API featuring POST operations to access both the Completions API (gpt-35-turbo) and the Embeddings API (text-embedding-ada-002).
@@ -25,15 +25,11 @@ In this event, participants will dive into the technical intricacies of AI servi
 
 ## Success criteria:
 
-1. Deploy Azure OpenAI Resources
-    - Creation of two Azure OpenAI instances across two diverse regions.
+1. Ensure to have deployed the `gpt-35-turbo` and `text-embedding-ada-002` models within the created instances.
 
-2. Deploy OpenAI models within the created AOAI instances
-    - Ensure to have deployed the `gpt-35-turbo` and `text-embedding-ada-002` models within the created instances.
+2. Within the APIM service, create an Inbound Policy for the API such that the backend (Azure OpenAI's endpoint URL) and AOAI keys are changed dynamically to implement load balancing capabilities.
 
-3. Within the APIM service, create an Inbound Policy for the API such that the backend (Azure OpenAI's endpoint URL) and AOAI keys are changed dynamically to implement load balancing capabilities.
-
-4. APIM’s policy is so sophisticated that it has the ability to retry under certain conditions if an error occurs on the back end.
+3. APIM’s policy is so sophisticated that it has the ability to retry under certain conditions if an error occurs on the back end.
     - Configure and edit the inbound policy to implement the retry method such that the backend HTTP status code is 200.
     - Use the `<forward-request buffer-request-body=”true” buffer-response=”false” />` within the backend policy to forward the API request to another backed for any HTTP status code of 300.
 
