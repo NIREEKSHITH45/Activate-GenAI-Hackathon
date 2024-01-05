@@ -4,36 +4,55 @@
 Welcome to Implement a Chat App with Azure OpenAI LLM ! In this challenge, participants will dive into the world of conversational AI by interacting with a chat application infused with the power of the Azure OpenAI Large Language Model (LLM).
 
 ## Description:
-In previous challenge you have successfully deployed the architecture. In this challenge we will integrate Azure OpenAI LLM into a chat application, allowing it to comprehend user input, generate context-aware responses, and create a more natural and personalized conversational experience.
+In previous challenge you have successfully deployed the architecture. In this challenge we will use the chat application integrated with Azure OpenAI LLM, allowing it to comprehend user input, generate context-aware responses, and create a more natural and personalized conversational experience.
 
 ## Challenge Objectives
 
- **1. Access Web Application**
-  - Click on "Browse" to open your web application.
+**1. Access Web Application and Query Construction and Response:**
+   
+   - Click on "Browse" to open your web application.
+ You will be prompted with the **Northwind Health chat application** as below. 
 
-**2. Explore Chatapp Interaction**
-- In the chat application, provide the prompt: "What does a Product Manager do?"
-    - Observe chatapp responses.
-    - Explore annotations and citations in the response.
-- Ask another question: "Does the project manager manage the human resources team?"
-   - Note the influence of context on the response.
-   - Click on citations to explore related information.
+   ![](../media/lab03-04.png)
 
-**3. Multilingual Query Capability**
-- Modify the prompt in Developer Settings for multilingual queries.
-   - Add the message: "Convert prompt to English and provide a response when asked a question in a different language."
-   - Close the settings.
-- Test multilingual query by asking in French:
-   - Enter the prompt: "Quelles sont les responsabilités du responsable marketing?"
-   - Observe ChatGPT's conversion and response.
+- In the chat application provide the below prompt and check the how responses are given by the ChatGPT and Azure cognitive search services by interacting to construct search queries, retrieve candidate information from the knowledge base.
 
-**4. Advanced Settings Implementation**
+   ```
+   What does a Product Manager do?
+   ```
 
-- In Developer Settings, enable "Use query-contextual summaries instead of whole documents" and "Suggest follow-up questions."
-- Test the modified prompt:
-   - Ask: "What happens in a performance review?"
-   - Observe how advanced settings influence chat responses.
+- The response not only answered the question based on content found in these documents, but it has also included **citations (1)** to that content to validate the accuracy of the information. Click on an annotation, the app jumps right to the page of the **document (2)** that goes into the comparison of the plans, so that we can read more or do additional validation on the accuracy of the answer under the **citation** section. 
 
+
+- See how when we click on an annotation, the app jumps right to the page of the document that goes into the comparison of the plans, so that we can read more or do additional validation on the accuracy of the answer. 
+
+   ```
+   Does the project manager manage the human resources team?
+   ```
+
+- As per our constructed our app, we can pass context from previous parts of the chat into the prompt behind the scenes, which enables ChatGPT to answer the question if the project manager manage the human resources team. Click on the citation and you'll see the part of the plan that covers the related information.
+
+
+**2. Multilingual Query Capability:**
+   
+- Let us make a slight change to the prompt to ask open AI to take any question that is not asked in English and respond in the language it was asked in. Go to **Developer Settings** and add the below message in the **Override prompt template** section. Click on **Close**.
+
+  ```
+   convert prompt to English and provide response when asked question in different language
+   ```
+
+- In this override, when we ask a question in a different language, behind the scenes, the prompt gets converted to English to perform the search, and then the model will respond in the same language it was asked in. Enter the below prompt in the chat section and observe it's taking the question, detecting that it's in French, converting it to English, executing it as before, and then returning the expected response like before.
+
+   ```
+   Quelles sont les responsabilités du responsible marketing ?
+   ```
+
+**3. Advanced Settings Impact:** 
+- Go to **Developer Settings**, in the **Exclude category** section enable the check box for **Use query-contextual summaries instead of whole documents** and **Suggest follow-up questions**. Click on **Close** and observe how the responses for prompt will change in the chat by giving the below prompt.
+
+   ```
+   What happens in a performance review?
+   ```
 
 ## Success Criteria:
 Participants will be evaluated based on the following criteria:
