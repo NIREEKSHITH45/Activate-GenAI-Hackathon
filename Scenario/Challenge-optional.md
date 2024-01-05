@@ -11,17 +11,19 @@ In this challenge, you'll first set up diagnostic settings for thorough monitori
 ## Challenge Objectives:
 
 1. **Monitoring Azure OpenAI Service using Kusto query:**
-   - Monitoring the Azure OpenAI Service involves configuring diagnostic settings, deploying an OpenAI model through Azure OpenAI, and conducting log analysis using Kusto Queries.
+   - Utilize the Azure OpenAI service by ensuring the diagonistic settings are configured and an OpenAI model is deployed.
+   - Performing log analysis using Kusto Queries.
      
 2. **Monitoring OpenAI prompts using Azure API Management:**
-   - Overseeing OpenAI prompts in Azure API Management includes configuring the service, testing the API for chat message completions, and analyzing OpenAI logs using Kusto Queries within the API Management Service.
+   - Configure Azure API Management by ensuring seamless chat message completions by navigating through the nuances of API testing.
+   - Delve into OpenAI logs through Kusto Queries within the API Management Service.
   
 ## Success Criteria:
 
 Participants will be evaluated based on the following criteria:
 
-1. The OpenAI service, including the successful deployment of the model, and the analysis of logs using Kusto Queries proceeded as expected.
-2. The creation and configuration of Azure API Management, along with the analysis of logs using Kusto Queries within the API Management Service, occurred as expected.
+1. The OpenAI service, including the successful deployment of the model, and the analysis of logs using Kusto Queries progressed as anticipated.
+2. Ensure Azure API management is created and configured ,resulting in the visibility of logs and openAI prompts using Kusto Queries.
 
 ## Additional Resources:
 
