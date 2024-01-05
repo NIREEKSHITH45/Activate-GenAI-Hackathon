@@ -10,7 +10,7 @@ In this event, participants will dive into the technical intricacies of AI servi
 
 **Optimal Resource Allocation**: **Design and implement a load balancing strategy using Azure API Management to efficiently distribute workloads across various OpenAI resources in different regions, ensuring optimal utilization and minimal latency. The requirements are as follows:**
 
-1. Set up a couple of Azure OpenAI resources across diverse regions, deploying the `gpt-35-turbo` and `text-embedding-ada-002` models.
+1. Utilize the Azure OpenAI resources already provisioned with GPT-35-turbo and text-embedding-ada-002 models.
 
 2. Utilize API Management as an API proxy to link and interface it with Azure OpenAI resources.
     - Configure Azure API Management by incorporating API featuring POST operations to access both the Completions API (gpt-35-turbo) and the Embeddings API (text-embedding-ada-002).
