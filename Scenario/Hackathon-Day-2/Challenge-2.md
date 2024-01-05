@@ -1,11 +1,10 @@
 # Challenge 2: Document Search using Azure Cognitive Search
 
 ## Introduction:
-Welcome to the Create an Azure AI Search Solution Hackathon! Organizations depend on information to decide, address queries, and operate effectively. The hurdle isn't typically a scarcity of information but rather the difficulty of locating and extracting it from the vast array of documents, databases, and various sources where it resides.
+In the prior challenge, you effectively deployed models within the Azure OpenAI service. Now, in this challenge, you will focus on the integration of Azure Cognitive Search with OpenAI to develop a document search solutions. This enables users to not only search for specific keywords but also to extract meaningful insights from documents using advanced language models.
 
 ## Description:
-Margie’s Travel, a renowned travel agency specializing in organizing global city trips, faces a formidable task: managing an extensive repository of information contained within brochures and customer hotel reviews. This wealth of data serves as a goldmine of insights for both travel agents and customers in planning their dream vacations. However, the sheer volume of information poses a daunting obstacle when customers seek specific details for their travel queries.
-To tackle this challenge head-on, Margie’s Travel seeks to harness the power of Azure AI Search. The goal is to implement an innovative solution that indexes and enriches these documents using cutting-edge AI skills.
+Margie’s Travel, a leading travel agency, seeks to enhance information retrieval for global city trips. The challenge involves leveraging Azure AI Search to create a user-friendly solution that streamlines the organization and enrichment of extensive travel documents.
 
 ## Challenge Objectives:
 
