@@ -1,10 +1,7 @@
 # Challenge 2: Implement Document Search with Azure AI Search
 
 ## Introduction:
-In the prior challenge, you effectively deployed models within the Azure OpenAI service. Now, in this challenge, you will focus on the integration of Azure Cognitive Search with OpenAI to develop a document search solution. This enables users to not only search for specific keywords but also to extract meaningful insights from documents using advanced language models.
-
-## Description:
-Margie’s Travel, a leading travel agency, seeks to enhance information retrieval for global city trips. The challenge involves leveraging Azure AI Search to create a user-friendly solution that streamlines the organization and enrichment of extensive travel documents.
+In the prior challenge, you effectively deployed models within the Azure OpenAI service. Now, in this challenge, you will focus on the integration of Azure Cognitive Search with OpenAI to develop a document search solution. Embark on building a robust AI search solution by cloning the repository by eEstablishing an Azure AI Search and Storage Account. Customize with UploadDocs.cmd edits, seamless document upload. Configure AI Search, link with Azure AI Services, and create a potent indexer. Refine queries, define search components, and develop the search app with app.json. This concise guide streamlines a technical process for effective AI search.
 
 ## Challenge Objectives:
 
