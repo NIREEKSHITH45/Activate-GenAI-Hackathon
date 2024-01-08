@@ -10,7 +10,17 @@ In this lab, we've equipped you with the essential artifacts to explore the capa
 
 # Solution Guide
 
-### Task 1 - Creating a Form Recognizer Resource
+### Task 1 - Translate the documents using Language Studio
+
+1. Sign into the [language studio](https://aka.ms/dt-language-studio) using Azure credentials.
+
+1. Configure by choosing Translator resource & Azure Storage account.
+   
+1. Select source & target language(s).
+   
+1. Choose the source document(s) from your local file system or blob storage and choose the destination for the translated files. 
+
+### Task 2 - Creating a Form Recognizer Resource
 
 1. Go to the Resource group, search, and select the "**Azure AI services multi-service account**" resource type with the name similar **cogservicesbpa{suffix}**
 
@@ -60,7 +70,7 @@ In this lab, we've equipped you with the essential artifacts to explore the capa
 
      ![Alt text](images/create-project.png)
 
-### Task 2 - Train and Label data
+### Task 3 - Train and Label data
 In this step, you will upload 6 training documents to train the model.
 
 1. Click on **Browse for files** 
@@ -113,7 +123,7 @@ In this step, you will upload 6 training documents to train the model.
 
      ![Alt text](images/result.png)
 
-### Task 3 - Build a new pipeline with the custom model module in BPA
+### Task 4 - Build a new pipeline with the custom model module in BPA
 
 After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
 
@@ -169,7 +179,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
       ![Upload a document](images/pipeline-folder.png)
 
-### Task 4 - Configure Azure Cognitive Search 
+### Task 5 - Configure Azure Cognitive Search 
 
 1. Navigate back to the resource group window, search, and select **Search Service** with the name similar to **bpa{suffix}**
 
@@ -215,7 +225,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
    ![Create an indexer](images/create-an-indexer.png)
 
 
-### Task 5 - Use Sample Search Application
+### Task 6 - Use Sample Search Application
 
 1. Navigate back to the **Business Process Automation Accelerator** home page and click on **Sample Search Application**.
 
