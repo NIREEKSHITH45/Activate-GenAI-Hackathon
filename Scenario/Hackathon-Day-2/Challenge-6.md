@@ -33,5 +33,5 @@ In this challenge, the aim is to empower you to delve into the accelerator's cap
 
 ## Prerequisites:
 
-- Familiarity with serverless computing, Azure Functions, and Azure Cognitive Search.
+- Familiarity with serverless computing, Form recognizer, and Azure Cognitive Search.
 - Knowledge of scalable and efficient document processing.
