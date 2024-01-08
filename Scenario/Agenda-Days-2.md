@@ -33,6 +33,6 @@
 | 01:00 - 02:00 | **Lunch Break**                                           |                                          |
 | 02:00 - 04:00 | **Open Time for Additional Work or Optional Challenge** | pending challenges or [optional challenge](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Challenge-optional.md)  |
 | 04:00 - 04:15 | **Challenge Validation/Pending challenges completion**        | Validate any pending challenges |
-| 04:15 - 05:00  | **Closing and Submission & Next Steps/Future Collaboration**                      | Acknowledgment, awards, and closing      |
+| 04:15 - 05:00  | **Closing and Submission & Next Steps/Future Collaboration**                      | Acknowledgment, submission, and closing      |
 
 
