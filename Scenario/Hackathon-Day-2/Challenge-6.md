@@ -6,7 +6,7 @@ In this challenge, the aim is to empower you to delve into the accelerator's cap
 
 ## Challenge Objectives:
 
-1) Ensure the creation of a language service, gain access to the studio, and specifically opt for document translation to facilitate a streamlined linguistic experience.
+1) Initiate the development of a language service, secure immediate access to the studio, and explicitly prioritize document translation for a highly efficient linguistic experience.
 
 1) Configure precise source and target languages, selectively choose files for translation from the local system, and seamlessly define the destination for an efficient translation process.
 
