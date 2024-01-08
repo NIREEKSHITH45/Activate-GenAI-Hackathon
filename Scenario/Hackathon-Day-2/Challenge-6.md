@@ -10,28 +10,20 @@ Your task is to create a serverless document batch processing solution that leve
 
 ## Challenge Objectives:
 
-1. **Implement Batch Processing:**
-   - Develop a serverless function or set of functions to process documents in batches.
-   - Use OpenAI embeddings (text-embedding-ada-002) to generate embeddings for each document.
+1) Make use of the Azure AI services multi-service account to ensure the creation and initiation of a project.
 
-2. **Azure Cognitive Search Integration:**
-   - Integrate Azure Cognitive Search to index the processed documents and their embeddings.
-   - Enable efficient and powerful search capabilities using Azure Cognitive Search.
+1) Ensure thorough training by uploading specific files and conducting rigorous testing to validate the effectiveness of the implemented solution.
 
-3. **Question-Answering with OpenAI:**
-   - Implement a mechanism to perform question-answering using OpenAI (e.g., text-davinci-003).
-   - Retrieve relevant documents and answers based on user queries.
+1) Forge a pipeline using a static web app, designate a document type for transformation into a Form Recognizer model, and guarantee smooth document ingestion for thorough processing.
 
-4. **Scalability and Performance:**
-   - Optimize the solution for scalability, ensuring it performs well with large volumes of documents.
-   - Utilize Azure services for efficient batch processing and search operations.
+1) Optimize data import with advanced indexing in the search service. Utilize the BPA Accelerator's search app for precise document retrieval.
 
 ## Success Criteria:
 
-- Successful implementation of serverless document batch processing using OpenAI embeddings.
-- Efficient integration with Azure Cognitive Search for indexing and searching.
-- Accurate question-answering capabilities based on document embeddings.
-- Scalability and performance optimizations for handling large document volumes.
+- Establish the project by configuring the service resource and linking the training data source effectively.
+- The model successfully identified the respective field created in the preceding step, providing its confidence score.
+- Confirm the accurate selection of the "Select a stage to add it to your pipeline configuration" option to align with the specific requirements of your pipeline configuration.
+- The file retrieval operation was executed successfully, and the relevant document is displayed in the search results.
 
 ## Additional Resources:
 
@@ -41,7 +33,4 @@ Your task is to create a serverless document batch processing solution that leve
 ## Prerequisites:
 
 - Familiarity with serverless computing, Azure Functions, and Azure Cognitive Search.
-- Basic understanding of OpenAI APIs and embeddings.
 - Knowledge of scalable and efficient document processing.
-
-
