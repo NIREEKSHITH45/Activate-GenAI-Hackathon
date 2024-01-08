@@ -1,4 +1,4 @@
-# Challenge 2: Document Search using Azure Cognitive Search
+# Challenge 2: Implement Document Search with Cognitive Search
 
 ## Introduction:
 In the prior challenge, you effectively deployed models within the Azure OpenAI service. Now, in this challenge, you will focus on the integration of Azure Cognitive Search with OpenAI to develop a document search solution. This enables users to not only search for specific keywords but also to extract meaningful insights from documents using advanced language models.
