@@ -2,7 +2,7 @@
 
 ## Introduction:
 
-Welcome to the Serverless Document Batch Processing Hackathon! This challenge, we've equipped you with the essential artifacts to explore the capabilities of the Form Recognizer Service, OpenAI, and the Business Process Automation Accelerator. Our goal is to empower you to gain insights into utilizing the accelerator for building pipelines across various services, creating AI solutions tailored to your business requirements.
+In this challenge, we provide you with the essential tools to explore Form Recognizer Service, OpenAI, and the Business Process Automation Accelerator. Our aim is to empower you to delve into the accelerator's capabilities for building pipelines across diverse services, crafting AI solutions aligned with your business needs. Your mission is to create a serverless document batch processing solution, utilizing Azure services and OpenAI embeddings. The solution should enable users to add documents in batches, process them for embeddings, and leverage these embeddings to enhance search and question-answering experiences. Get ready for an immersive and innovative hackathon experience!
 
 ## Description:
 
