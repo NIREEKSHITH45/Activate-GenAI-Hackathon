@@ -45,6 +45,4 @@ In this event, participants will dive into the technical intricacies of AI servi
 - **Understanding Load Balancing Policies**: Familiarize yourself with Azure API Management's load balancing policies and choose the most suitable policy for your scenario. Azure API Management provides various policies for load balancing, like round-robin, weighted, and more.
 - Basic understanding of Azure services and networking.
 
-## Lab Validations: 
 
-- WIP
