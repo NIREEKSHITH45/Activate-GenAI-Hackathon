@@ -22,7 +22,7 @@ In the prior challenge, you effectively deployed models within the Azure OpenAI 
 
 1. **Create Search Client Application**
 
-   - Update the application settings in app.json, configure the web app, and then run it to explore search functionality.
+   - Update the application settings in appsettings.json, configure the web app, and then run it to explore search functionality.
 
 ## Success criteria:
 To complete this challenge successfully:
