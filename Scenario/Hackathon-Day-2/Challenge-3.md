@@ -1,4 +1,4 @@
-# Challenge 03 :  Deployment of Chatapp
+# Challenge 03 :  Deploy the Chatapp
 
 ## Introduction:
 
