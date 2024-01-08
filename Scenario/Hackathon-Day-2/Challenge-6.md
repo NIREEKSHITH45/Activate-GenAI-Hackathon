@@ -10,6 +10,10 @@ Your task is to create a serverless document batch processing solution that leve
 
 ## Challenge Objectives:
 
+1) Ensure the creation of a language service, gain access to the studio, and specifically opt for document translation to facilitate a streamlined linguistic experience.
+
+1) Configure precise source and target languages, selectively choose files for translation from the local system, and seamlessly define the destination for an efficient translation process.
+
 1) Make use of the Azure AI services multi-service account to ensure the creation and initiation of a project.
 
 1) Ensure thorough training by uploading specific files and conducting rigorous testing to validate the effectiveness of the implemented solution.
