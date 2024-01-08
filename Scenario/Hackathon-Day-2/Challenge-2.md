@@ -11,21 +11,21 @@ Margie’s Travel, a leading travel agency, seeks to enhance information retriev
 1. **Clone the Repository:**
    - Clone the repository within Visual Studio Code: `https://github.com/MicrosoftLearning/AI-102-AIEngineer`.
 
-2. Create an **Azure AI Search resource** wherein you can use a visual interface to create, test, manage, and monitor the various components of a search solution; including data sources, indexes, indexers, and skillsets.
+2. Create an **Azure AI Search resource** and an **Azure Storage Account**, wherein you can use a visual interface to create, test, manage, and monitor the various components of a search solution; including data sources, indexes, indexers, and skillsets.
 
-3. Use the existing **Azure AI Services resource** and Create an **Azure Storage Account**.
+3. In Visual Studio Code, in the Explorer pane which contains the folder of the cloned reopsitory `https://github.com/MicrosoftLearning/AI-102-AIEngineer`, expand the 22-create-a-search-solution folder and edit the batch file, **UploadDocs.cmd** to replace the `YOUR_SUBSCRIPTION_ID` and `YOUR_AZURE_STORAGE_ACCOUNT_NAME`, and `YOUR_AZURE_STORAGE_KEY` placeholders with the appropriate subscription ID, Azure storage account name, and Azure storage account key values for the storage account you created.
 
-4. Upload documents into the newly created storage account.
+4. Run the **UploadDocs.cmd** batch file using Azure CLI,after loging in to Azure. This will create a blob container in your storage account and upload the documents in the data folder to it.
 
-5. Post the upload of documents into the storage blob container, create a search solution by indexing them.
+6. Post the upload of documents into the storage blob container, create a search solution by indexing them.
 
-6. Explore and modify definitions of the search components.
+7. Explore and modify definitions of the search components.
 
 ## Success criteria:
 
 1. Successfully deployed the Azure Search Service.
   
-2. In Visual Studio Code, in the **Explorer** pane which contains the folder of the cloned reopsitory `https://github.com/MicrosoftLearning/AI-102-AIEngineer`, expand the **22-create-a-search-solution** folder and edit the batch file, **UploadDocs.cmd** to replace the **YOUR_SUBSCRIPTION_ID** and **YOUR_AZURE_STORAGE_ACCOUNT_NAME**, and **YOUR_AZURE_STORAGE_KEY** placeholders with the appropriate subscription ID, Azure storage account name, and Azure storage account key values for the storage account you created previously.
+2. Successfully added the data into the storage account.
 
 3. The Azure AI resource should have a new Index and Indexer named `margies-indexer`and `margies-index` respectively which defines the search solution.
 
