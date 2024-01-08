@@ -1,8 +1,8 @@
-# Challenge 03 :  Architecture Deployment with Terraform 
+# Challenge 03 :  Deployment of Chatapp
 
 ## Introduction:
 
-Welcome to the Azure Architecture Deployment with Terraform Challenge! This challenge is designed to test your skills in deploying Azure infrastructure using Terraform. The goal is to deploy a given architecture utilizing Infrastructure as Code (IaC) principles and Terraform best practices.
+Welcome to the Deployment of the Chtapp Challenge! This challenge is designed to test your skills in deploying the....
 
 In this Challenge we will harness the potential of Azure OpenAI, Cognitive Search, Container Apps, Application Insights, and Azure API Management to build an intelligent and scalable document search retrieval solution.
 
