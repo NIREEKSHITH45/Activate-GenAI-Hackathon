@@ -17,64 +17,15 @@ Margie’s Travel, a leading travel agency, seeks to enhance information retriev
 
 4. Run the **UploadDocs.cmd** batch file using Azure CLI,after logging in to Azure. This will create a blob container in your storage account and upload the documents in the data folder to it.
 
-1. **Document Indexing**
+1. Ensure to import data for AI Search, choose Blob Storage, link Azure AI Services, customize index, and create an indexer for seamless integration.
    
-   a. In Azure portal, go to your AI Search resource, select **Import data** on the **Overview** page.
-   
-   b. Choose **Azure Blob Storage** as the **Data Source**. Fill in details for **margies-data**:
-      - **Data Source**: Azure Blob Storage
-      - **Connection**: Existing storage account, **margies** container.
-      - **Data to extract**: Content and metadata
-   
-   c. In **Attach Azure AI Services**, select your resource. Configure **margies-skillset**:
-      - Enable OCR, merge text into **merged_content**.
-      - Select cognitive skills for enrichment.
-   
-   d. **Customize the index:**
-      - **Index name**: **margies-index**
-      - **Key**: **metadata_storage_path**
-      - Define fields for retrieval, filtering, sorting, faceting, and searching.
-   
-   e. **Create an indexer:**
-      - **Indexer name**: **margies-indexer**
-      - **Schedule**: **Once**
-      - **Advanced**: Select **Base-64 encode keys** for efficiency.
-   
-   f. Hit **Submit**. Wait for **margies-indexer** status to indicate success under **Overview > Indexers**.
+1. **Interact with indexed documents**
 
-1. **Interact with Indexed Documents**
-
-   a. **Azure Portal: Search Explorer**
-      - Open Search Explorer.
-      - Enter `*` for all documents.
-      - Modify query for counts and specific fields.
-   
-   b. **Define Search Components (Using modify-search.cmd)**
-      - Get Azure AI Search resource URL.
-      - Update `modify-search.cmd` with resource details.
-      - Enhance skillset with sentiment analysis.
-      - Update index and indexer for new fields.
-      - Use `modify-search.cmd` to submit JSON definitions.
-   
-   c. **Query Modified Index**
-      - In Search Explorer, test queries.
-      - Find positive reviews mentioning "London."
+   - Adjust queries for counts and specific fields, define search components, and query the modified index for refined and targeted information retrieval.
 
 1. **Create Search Client Application**
 
-   a. **Configure Application**
-      - Get Azure AI Search URL and query key.
-      - Update app settings (appsettings.json or .env).
-   
-   b. **Run Web App**
-      - Run the app (C# with `dotnet run` or Python with `flask run`).
-      - Open Margies Travel in a browser.
-   
-   c. **Explore Search**
-      - Search for "London hotel" and refine results.
-      - Try various queries like "quiet hotel in New York."
-      - Explore terms like "Tower of London" and "skyscraper."
-
+   - Update the application settings in app.json, configure the web app, and then run it to explore search functionality.
 
 ## Success criteria:
 To complete this challenge successfully:
