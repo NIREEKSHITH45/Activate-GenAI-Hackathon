@@ -20,7 +20,7 @@ In the prior challenge, you effectively deployed models within the Azure OpenAI 
 
    - Adjust queries for counts and specific fields, define search components, and query the modified index for refined and targeted information retrieval.
 
-1. **Create Search Client Application**
+1. **Create Search Client Application** (wip) 
 
    - Update the application settings in appsettings.json, configure the web app, and then run it to explore search functionality.
 
