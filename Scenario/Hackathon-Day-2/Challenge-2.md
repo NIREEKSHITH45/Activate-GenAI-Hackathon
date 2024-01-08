@@ -89,7 +89,6 @@ To complete this challenge successfully:
 - Successfullu utilized the Azure AI Search SDK to create a client application for search.
 - Successfully developed a web application to interact with the Azure AI Search service.
 - Successfully ran the web application locally, performed searches, and refined results successfully.
-- Explored and understood the search results and refined search options in the web application.
 
   
 
