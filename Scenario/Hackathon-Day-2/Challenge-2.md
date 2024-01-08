@@ -43,7 +43,7 @@ Margie’s Travel, a leading travel agency, seeks to enhance information retriev
    
    f. Hit **Submit**. Wait for **margies-indexer** status to indicate success under **Overview > Indexers**.
 
-1. **Search & Modify Azure AI Index**
+1. **Interact with Indexed Documents**
 
    a. **Azure Portal: Search Explorer**
       - Open Search Explorer.
