@@ -16,7 +16,7 @@ In this challenge, you'll first set up diagnostic settings for thorough monitori
      
 2. **Monitoring OpenAI prompts using Azure API Management:**
    - Configure Azure API Management by ensuring seamless chat message completions by navigating through the nuances of API testing.
-   - Utilize the kusto queries within the API Management Service to analyse the logs and the queries generated.
+   - Utilize the robust capabilities of Kusto queries within the API Management Service for advanced log analysis and in-depth examination of the queries generated.
   
 ## Success Criteria:
 
