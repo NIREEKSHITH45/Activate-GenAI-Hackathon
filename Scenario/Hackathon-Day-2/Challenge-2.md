@@ -24,7 +24,7 @@ Margie’s Travel, a leading travel agency, seeks to enhance information retriev
 
 ## Success criteria:
 
-1. Successfully deployed the Azure Search Service.
+1. Successfully deployed the Azure Search Service and the Azure Storage Account
   
 2. Successfully added the data into the storage account.
 
