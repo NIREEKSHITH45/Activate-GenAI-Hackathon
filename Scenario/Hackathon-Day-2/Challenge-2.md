@@ -30,12 +30,10 @@ To complete this challenge successfully:
 - Successfully deployed the Azure Search Service and the Azure Storage Account
 - Successfully added the data into the storage account.
 - Successfully indexed the documents in Azure AI Search using the Azure portal.
-- Successfully implemented a skillset for AI enrichment, including sentiment analysis.
 - Suuccessfully customized the index and configured the indexer in Azure AI Search.
 - Successfully modified and explored search components using JSON definitions.
-- Successfullu utilized the Azure AI Search SDK to create a client application for search.
-- Successfully developed a web application to interact with the Azure AI Search service.
-- Successfully ran the web application locally, performed searches, and refined results successfully.
+- Successfully utilized the Azure AI Search SDK to create a client application for search.
+- Successfully ran the web application locally, performed searches, and refined search results successfully.
 
   
 
