@@ -37,7 +37,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 1. **Azure OpenAI Service Deployment:**
    - Set up an Azure OpenAI Service instance with SKU size Standard `S0` in your Azure portal.
-   - Configure and obtain the necessary API keys and access credentials.
+   - Obtain the Azure OpenAI Key and Endpoint required..
 
 2. **Deploy Large Language Models (LLM):**
    - Azure OpenAI provides a web-based portal named **Azure OpenAI Studio** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
