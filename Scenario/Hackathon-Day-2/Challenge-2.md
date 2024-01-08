@@ -14,7 +14,7 @@ In the prior challenge, you effectively deployed models within the Azure OpenAI 
 
 4. Run the **UploadDocs.cmd** batch file using Azure CLI,after logging in to Azure. This will create a blob container in your storage account and upload the documents in the data folder to it.
 
-1. Ensure to import data for AI Search, choose Blob Storage, link Azure AI Services, customize index, and create an indexer for seamless integration.
+1. Import data for AI Search, opting for Blob Storage. Establish a link with Azure AI Services, customize the index, and create an indexer for smooth integration.
    
 1. **Interact with indexed documents**
 
