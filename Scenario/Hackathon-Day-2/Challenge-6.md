@@ -20,9 +20,10 @@ In this challenge, the aim is to empower you to delve into the accelerator's cap
 
 ## Success Criteria:
 
-- Establish the project by configuring the service resource and linking the training data source effectively.
-- The model successfully identified the respective field created in the preceding step, providing its confidence score.
-- Confirm the accurate selection of the "Select a stage to add it to your pipeline configuration" option to align with the specific requirements of your pipeline configuration.
+- Successfully created the language service and the documents is successfully translated.
+- Make sure the project is established by configuring the service resource and linking the training data source effectively.
+- Successfully identified the respective field created in the preceding step, providing its confidence score.
+- Ensure the accurate selection of the "Select a stage to add it to your pipeline configuration" option to align with the specific requirements of your pipeline configured
 - The file retrieval operation was executed successfully, and the relevant document is displayed in the search results.
 
 ## Additional Resources:
