@@ -4,7 +4,7 @@
 
 | Time          | Agenda                                              | Remarks                                  |
 |---------------|-----------------------------------------------------|------------------------------------------|
-| 09:00 - 09:15 | **Kick Off**                                        |                                          |
+| 09:00 - 09:15 | **Welcome note**                                        |                                          |
 | 09:15 - 09:45 | **Hackathon Challenge Use-Case : Active GenAI Challenge Discussion** |      |
 | 09:45 - 10:15 | **Challenge 01: Deploy Azure OpenAI Service and Large Language Models - 30 min** | Complete [Challenge 01](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-1.md)        |
 | 10:15 - 10:30 | **Validate Challenge 01 Completion, Q&A** | Discussion, etc.                  |
@@ -24,7 +24,7 @@
 
 | Time          | Agenda                                              | Remarks                                  |
 |---------------|-----------------------------------------------------|------------------------------------------|
-| 09:00 - 09:15 | **Kick Off**                                        |                                          |
+| 09:00 - 09:15 | **Day 2 Opening Session**                                        |                                          |
 | 09:15 - 10:45 | **Challenge 05: Load Balancing Azure OpenAI Resources - 90 min** | Complete [Challenge 05](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-5.md)         |
 | 10:45 - 11:00 | **Validate Challenge 05 Completion, Q&A** | Discussion, etc.                         |
 | 11:00 - 11:15 | **Break**                                           |                                          |
