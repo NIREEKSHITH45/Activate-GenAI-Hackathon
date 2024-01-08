@@ -13,7 +13,7 @@ Margie’s Travel, a leading travel agency, seeks to enhance information retriev
 
 2. Create an **Azure AI Search resource** wherein you can use a visual interface to create, test, manage, and monitor the various components of a search solution; including data sources, indexes, indexers, and skillsets.
 
-3. Create an **Azure AI Services resource** and an **Azure Storage Account**.
+3. Use the existing **Azure AI Services resource** and Create an **Azure Storage Account**.
 
 4. Upload documents into the newly created storage account.
 
@@ -25,8 +25,7 @@ Margie’s Travel, a leading travel agency, seeks to enhance information retriev
 
 1. Deploy Azure AI resources
     - Creation of an Azure AI Search resource.
-    - Creation of an Azure AI Services resource.
-
+  
 2. In Visual Studio Code, in the **Explorer** pane which contains the folder of the cloned reopsitory `https://github.com/MicrosoftLearning/AI-102-AIEngineer`, expand the **22-create-a-search-solution** folder and edit the batch file, **UploadDocs.cmd** to replace the **YOUR_SUBSCRIPTION_ID** and **YOUR_AZURE_STORAGE_ACCOUNT_NAME**, and **YOUR_AZURE_STORAGE_KEY** placeholders with the appropriate subscription ID, Azure storage account name, and Azure storage account key values for the storage account you created previously.
 
 3. The Azure AI resource should have a new Index and Indexer named `margies-indexer`and `margies-index` respectively which defines the search solution.
@@ -37,11 +36,3 @@ Margie’s Travel, a leading travel agency, seeks to enhance information retriev
 - [Create an Azure AI Search Solution](https://github.com/MicrosoftLearning/AI-102-AIEngineer/blob/master/Instructions/22-azure-search.md)
 - [Searching document text at scale using Azure Cognitive Search](https://benalexkeen.com/searching-document-text-at-scale-using-azure-cognitive-search/)
 
-## Prerequisites:
-
-- Well based knowledge and understanding of the intricacies of Azure Cognitive Services.
-- **Data Source**: Prepare the data source by cloning the above mentioned repository which includes documents containing the information you want to index and search.
-
-## Lab Validations: 
-
-- WIP
