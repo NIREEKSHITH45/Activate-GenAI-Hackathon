@@ -58,14 +58,9 @@ In previous challenge you have successfully deployed the architecture. In this c
 Participants will be evaluated based on the following criteria:
 
    - Successfully navigate and explore the web application.
-   - Demonstrate adept interaction with Chatapp through insightful questions and contextual exploration.
-   - Showcase proficiency in multilingual queries, and implement advanced settings to influence chat responses, thereby displaying a comprehensive grasp of Azure OpenAI services.
+   - Successfully display of proficiency in multilingual queries, and use of advanced settings to influence chat responses, demonstrating a comprehensive understanding of Azure OpenAI services.
 
 ## Additional Resources:
 
 - Refer to the  [azure-search-openai-demo](https://github.com/Azure-Samples/azure-search-openai-demo) for detailed information.
   
-  
-## Lab Validations
-
-- Work in progress (WIP)
