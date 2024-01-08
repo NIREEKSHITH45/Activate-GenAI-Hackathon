@@ -1,7 +1,7 @@
 # Challenge 2: Document Search using Azure Cognitive Search
 
 ## Introduction:
-In the prior challenge, you effectively deployed models within the Azure OpenAI service. Now, in this challenge, you will focus on the integration of Azure Cognitive Search with OpenAI to develop a document search solutions. This enables users to not only search for specific keywords but also to extract meaningful insights from documents using advanced language models.
+In the prior challenge, you effectively deployed models within the Azure OpenAI service. Now, in this challenge, you will focus on the integration of Azure Cognitive Search with OpenAI to develop a document search solution. This enables users to not only search for specific keywords but also to extract meaningful insights from documents using advanced language models.
 
 ## Description:
 Margie’s Travel, a leading travel agency, seeks to enhance information retrieval for global city trips. The challenge involves leveraging Azure AI Search to create a user-friendly solution that streamlines the organization and enrichment of extensive travel documents.
