@@ -3,7 +3,7 @@
 | Time          | Agenda                                              | Remarks                                  |
 |---------------|-----------------------------------------------------|------------------------------------------|
 | 09:00 - 09:15          | **Kick Off**                                        |                                          |
-| 09:15 - 09:45 | **Hackathon Challenge Use-Case : Active GenAI Challenge Discussion** |  Agenda,overview and prerequisites, etc  |
+| 09:15 - 09:45 | **Hackathon Challenge Use-Case : Active GenAI Challenge Discussion** |   |
 | 09:45 - 10:45 | **Challenge 01: Deploy Azure OpenAI Service and Large Language Models - 60 min** | Complete Challenge 01         |
 | 10:45 - 11:00 | **Challenge 01: Validate Challenge Completion, Q&A** | Discussion, Q&A,etc.                       |
 | 11:00 - 11:15 | **Break**                                           |                                          |
