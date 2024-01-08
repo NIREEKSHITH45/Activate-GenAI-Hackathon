@@ -2,11 +2,7 @@
 
 ## Introduction
 
-Welcome to the Deploy Azure OpenAI Service and LLM Models Challenge! This challenge is designed to test your skills in deploying the Azure OpenAI Service and its Large Language Models (LLM). The goal is to set up the OpenAI Service and deploy LLM models.
-
-## Description
-
-Your task is to deploy the Azure OpenAI Service and deploy Large Language Models (LLM).
+Welcome to the Deploy Azure OpenAI Service and LLM Models Challenge! This challenge has been crafted to evaluate your proficiency in deploying the Azure OpenAI Service along with its Large Language Models (LLM). The objective is to successfully configure the OpenAI Service and deploy the specified LLM models. Your assignment is to initiate the deployment of the Azure OpenAI Service and execute the deployment process for Large Language Models (LLM). 
 
 ### Accessing Azure portal
 
