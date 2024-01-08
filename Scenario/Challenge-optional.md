@@ -18,7 +18,7 @@ In this challenge, dive into the intricacies by utilizing the Log Analytics work
 
 Participants will be evaluated based on the following criteria:
 
-1. The OpenAI service, including the successful deployment of the model, and the analysis of logs using Kusto Queries progressed as anticipated.
+1. Mkae sure the OpenAI service, including the successful deployment of the model, and the analysis of logs using Kusto Queries has progressed as anticipated.
 2. Ensure Azure API management is created and configured ,resulting in the visibility of logs and openAI prompts using Kusto Queries.
 
 ## Additional Resources:
