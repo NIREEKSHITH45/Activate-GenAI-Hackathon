@@ -8,7 +8,8 @@ Welcome to the "Interact with Chat App" challenge! In this phase, participants w
 
 **1. Access Web Application and Query Construction and Response:**
    
-   - Click on "Browse" to open your web application.
+   - In the Azure Portal, search for **`App Services`** and select the web app you deployed in previous challenge.
+   - Click on **"Browse"** to open your web application.
  You will be prompted with the **Northwind Health chat application** as below. 
 
    ![](../media/lab03-04.png)
