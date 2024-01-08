@@ -16,7 +16,7 @@ Margie’s Travel, a leading travel agency, seeks to enhance information retriev
 
 3. In Visual Studio Code, in the Explorer pane which contains the folder of the cloned reopsitory `https://github.com/MicrosoftLearning/AI-102-AIEngineer`, expand the 22-create-a-search-solution folder and edit the batch file, **UploadDocs.cmd** to replace the `YOUR_SUBSCRIPTION_ID` and `YOUR_AZURE_STORAGE_ACCOUNT_NAME`, and `YOUR_AZURE_STORAGE_KEY` placeholders with the appropriate subscription ID, Azure storage account name, and Azure storage account key values for the storage account you created.
 
-4. Run the **UploadDocs.cmd** batch file using Azure CLI,after loging in to Azure. This will create a blob container in your storage account and upload the documents in the data folder to it.
+4. Run the **UploadDocs.cmd** batch file using Azure CLI,after logging in to Azure. This will create a blob container in your storage account and upload the documents in the data folder to it.
 
 1. **Document Indexing**
    
