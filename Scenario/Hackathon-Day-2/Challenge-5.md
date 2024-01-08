@@ -1,7 +1,7 @@
 # Challenge 05: Load Balancing Azure OpenAI Resources
 
 ## Introduction:
-Welcome to the Load Balancing OpenAI Resources challenge! As technology advances, the demand for AI services grows, and effective load balancing becomes paramount. In this challenge, you will explore, innovate, collaborate, and develop solutions that ensure the seamless distribution of workload across OpenAI's resources.
+As technology advances, the demand for AI services grows, and effective load balancing becomes paramount. In this challenge, you will explore, innovate, collaborate, and develop solutions that ensure the seamless distribution of workload across OpenAI's resources.
 
 ## Description:
 In this event, participants will dive into the technical intricacies of AI services in Azure, focusing on load balancing across diverse OpenAI resources. Utilizing Azure's API Management Service, they craft innovative solutions for efficient workload distribution. It's a hands-on exploration, merging theoretical insights with practical implementation to optimize AI service orchestration.
