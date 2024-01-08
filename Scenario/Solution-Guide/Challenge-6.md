@@ -1,7 +1,7 @@
 # Challenge 06: Serverless Document Batch Processing 
 
 ### Lab Scenario
-In this lab, we've equipped you with the essential artifacts to explore the capabilities of the Form Recognizer Service, OpenAI, and the Business Process Automation Accelerator. Our goal is to empower you to gain insights into utilizing the accelerator for building pipelines across various services, creating AI solutions tailored to your business requirements. You'll find all the necessary files and code in this GitHub repository, enabling you to execute the Azure OpenAI and Form Recognizer BPA accelerator and enhance document analysis. Feel free to explore and innovate!
+In this lab, we've equipped you with the essential artifacts to explore the capabilities of the Form Recognizer Service, OpenAI, and the Business Process Automation Accelerator. Our goal is to empower you to gain insights into utilizing the accelerator for building pipelines across various services, creating AI solutions tailored to your business requirements. 
 
 ### Pre-requisites
 * The accelerator is deployed and ready in the resource group
