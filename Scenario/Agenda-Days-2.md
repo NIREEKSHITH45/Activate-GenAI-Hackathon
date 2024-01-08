@@ -31,8 +31,8 @@
 | 11:15 - 12:45 | **Challenge 06: Serverless Document Batch Processing - 90 min** | Complete Challenge 06    |
 | 12:45 - 01:00 | **Challenge 06: Validate Challenge Completion, Q&A** | Discussion, etc.                         |
 | 01:00 - 02:00 | **Lunch Break**                                           |                                          |
-| 02:00 - 04:00 | **Open Time for Additional Work or Optional Challenge** | Participants can work on challenges or opt for the optional challenge |
-| 04:00 - 04:15 | **Challenge Validation**        | Validate any pending challenges, closing remarks |
+| 02:00 - 04:00 | **Open Time for Additional Work or Optional Challenge** | Participants can work on pending challenges |
+| 04:00 - 04:15 | **Challenge Validation**        | Validate any pending challenges |
 | 04:15 - 05:00  | **Closing and Submission & Next Steps and Future Collaboration**                      | Acknowledgment, awards, and closing      |
 
 
