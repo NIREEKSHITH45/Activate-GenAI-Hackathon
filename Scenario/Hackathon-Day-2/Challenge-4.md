@@ -58,7 +58,7 @@ In previous challenge you have successfully deployed the architecture. In this c
 Participants will be evaluated based on the following criteria:
 
    - Successfully navigate and explore the web application.
-   - Successfully display of proficiency in multilingual queries, and use of advanced settings to influence chat responses, demonstrating a comprehensive understanding of Azure OpenAI services.
+   - Successfull display of proficiency in multilingual queries, and use of advanced settings to influence chat responses.
 
 ## Additional Resources:
 
