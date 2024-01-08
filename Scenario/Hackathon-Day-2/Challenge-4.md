@@ -1,7 +1,7 @@
-# Challenge 04: Implement a Chat App with Azure OpenAI LLM
+# Challenge 04: Interact with Chat App
 
 ## Introduction:
-Welcome to Implement a Chat App with Azure OpenAI LLM ! In this challenge, participants will dive into the world of conversational AI by interacting with a chat application infused with the power of the Azure OpenAI Large Language Model (LLM).
+Welcome to Interact with Chat App ! In this challenge, participants will dive into the world of conversational AI by interacting with a chat application infused with the power of the Azure OpenAI Large Language Model (LLM).
 
 ## Description:
 In previous challenge you have successfully deployed the architecture. In this challenge we will use the web app(chat-application) integrated with Azure OpenAI LLM, to comprehend user input, generate context-aware responses, and create a more natural and personalized conversational experience.
