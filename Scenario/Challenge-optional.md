@@ -2,11 +2,7 @@
 
 ## Introduction:
 
-This challenge requires a deep dive into the oversight of the Azure OpenAI Service. It entails utilizing the Log Analytics workspace to thoroughly monitor system performance and behavior. Additionally, it involves harnessing the capabilities of Azure API Management to ensure effective management and optimization of the service.
-
-## Description:
-
-In this challenge, you'll first set up diagnostic settings for thorough monitoring. Next, you'll deploy a key OpenAI model, a critical step in implementing AI capabilities. Then, you'll analyze logs using Kusto Queries, gaining insights into system performance. Finally, you'll monitor OpenAI prompts, leveraging Azure API Management and Log Analytics to ensure smooth system operation.
+Immerse yourself in this challenge, requiring an in-depth exploration of the Azure OpenAI Service oversight. Dive into the intricacies by utilizing the Log Analytics workspace for comprehensive system monitoring, analyzing performance and behavior. Harness the powerful features of Azure API Management to effectively manage and optimize the service. The challenge unfolds with the initial setup of diagnostic settings for meticulous monitoring, followed by the deployment of a pivotal OpenAI model to enhance AI capabilities. Delve into log analysis using Kusto Queries to extract insights into system performance. Conclude by monitoring OpenAI prompts, employing Azure API Management and Log Analytics for seamless system operation. Get ready to navigate the complexities of Azure OpenAI with hands-on technical tasks.
 
 ## Challenge Objectives:
 
