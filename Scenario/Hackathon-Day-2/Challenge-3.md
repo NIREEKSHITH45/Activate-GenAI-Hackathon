@@ -12,6 +12,8 @@ Your task is to deploy the architecture provided in the  [Azure Activate GenAI G
 
 ## Pre-requisites:
 **Setup your Environment**
+
+Before attending the Active GenAI Workshop, please ensure you have the following prerequisites in place:
 * [Azure CLI v2.53.0 or later](https://aka.ms/azure-dev/install/)
 * [ Terraform v1.6.0 or later](https://developer.hashicorp.com/terraform/install)
 * Install [python 3.12.1](https://www.python.org/downloads)
