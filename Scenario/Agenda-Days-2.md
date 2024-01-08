@@ -26,13 +26,13 @@
 |---------------|-----------------------------------------------------|------------------------------------------|
 | 09:00 - 09:15 | **Kick Off**                                        |                                          |
 | 09:15 - 10:45 | **Challenge 05: Load Balancing Azure OpenAI Resources - 90 min** | Complete Challenge 05         |
-| 10:45 - 11:00 | **Challenge 05: Validate Challenge Completion, Q&A** | Discussion, etc.                         |
+| 10:45 - 11:00 | **Validate Challenge 05 Completion, Q&A** | Discussion, etc.                         |
 | 11:00 - 11:15 | **Break**                                           |                                          |
 | 11:15 - 12:45 | **Challenge 06: Serverless Document Batch Processing - 90 min** | Complete Challenge 06    |
-| 12:45 - 01:00 | **Challenge 06: Validate Challenge Completion, Q&A** | Discussion, etc.                         |
+| 12:45 - 01:00 | **Validate Challenge 06 Completion, Q&A** | Discussion, etc.                         |
 | 01:00 - 02:00 | **Lunch Break**                                           |                                          |
 | 02:00 - 04:00 | **Open Time for Additional Work or Optional Challenge** | Participants can work on pending challenges |
-| 04:00 - 04:15 | **Challenge Validation**        | Validate any pending challenges |
-| 04:15 - 05:00  | **Closing and Submission & Next Steps and Future Collaboration**                      | Acknowledgment, awards, and closing      |
+| 04:00 - 04:15 | **Challenge Validation/Pending challenges completion**        | Validate any pending challenges |
+| 04:15 - 05:00  | **Closing and Submission & Next Steps/Future Collaboration**                      | Acknowledgment, awards, and closing      |
 
 
