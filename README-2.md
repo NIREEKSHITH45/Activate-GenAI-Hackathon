@@ -26,13 +26,13 @@ By participating in this hackathon, you will:
 1. **Challenge 01: Deploy Azure OpenAI Service and Large Language Models**
    - Deploy the Azure OpenAI Service and implement the deployment of a Large Language Model (LLM) within the OpenAI Service.
      
-2. **Challenge 02: Document Search using Azure Cognitive Search**
+2. **Challenge 02: Implement Document Search with Cognitive Searchh**
    - Create Azure AI Search, AI Services, storage, upload and index documents, and customize search using VS Code and Azure.
              
 3. **Challenge 03: Architecture Deployment with Terraform**
    - Master deploying scalable and efficient architectures in Azure using Terraform.
           
-4. **Challenge 04: Implement Chat App with Azure OpenAI LLM**
+4. **Challenge 04: Interact with Chat App**
    - Navigate and explore the web app, interact adeptly with Chatapp using insightful questions, showcase multilingual query proficiency, and implement advanced settings for comprehensive Azure OpenAI service understanding.
           
 5. **Challenge 05: Load Balancing Azure OpenAI Resources**
