@@ -1,7 +1,7 @@
 # Challenge 2: Implement Document Search with Azure AI Search
 
 ## Introduction:
-In the prior challenge, you effectively deployed models within the Azure OpenAI service. Now, in this challenge, you will focus on the integration of Azure Cognitive Search with OpenAI to develop a document search solution. Embark on building a robust AI search solution by initially cloning the given repository and then establishing  an Azure AI Search and Storage Account to lay the foundation for the solution. Tailor the solution with precise edits in UploadDocs.cmd for seamless document upload. Set up Azure AI Search, connect with Azure AI Services, and create a powerful indexer for advanced search capabilities. Finally, fine-tune queries, define search components, and initiate search app development using app.json.
+In the prior challenge, you effectively deployed models within the Azure OpenAI service. This challenge will focus on creating a document search solution by integrating Azure Cognitive Search with OpenAI. To construct a resilient AI search solution, you will begin by cloning the provided repository and establishing an Azure AI Search and Storage Account as the foundation. You will customize the solution by refining UploadDocs.cmd for seamless document uploading. Next, you will proceed to set up Azure AI Search, connect it with Azure AI Services, and construct a robust indexer for advanced search functionalities. Concluding the process, you will fine-tune queries, define search components, and initiate the development of the search app using app.json.
 
 ## Challenge Objectives:
 
