@@ -6,7 +6,7 @@ In the prior challenge, you have understood how we can practise load balancing a
 
 ## Challenge Objectives:
 
-1) Make use of the Azure AI services multi-service account and create a Translator.
+1) Utilize the multi-service account in Azure AI services to establish a Translator.
 
 1) **Key and Endpoint Retrieval and Azure Blob Storage Container Creation:**
 
@@ -22,7 +22,7 @@ In the prior challenge, you have understood how we can practise load balancing a
 
 **Using Doc Intelligence:**
 
-1) Make use of the Azure AI services multi-service account to ensure the creation and initiation of a project.
+1) Make use of the Azure AI services multi-service account to ensure the creation and initiation of a project by selecting Doc Intelligence.
 
 1) Forge a pipeline using a static web app, designate a document type for transformation into a Form Recognizer model, and guarantee smooth document ingestion for thorough processing.
 
