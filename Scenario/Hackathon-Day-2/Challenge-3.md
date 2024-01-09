@@ -1,4 +1,4 @@
-# Challenge 03 :  Deploy the Chatapp with Terraform
+# Challenge 03 :  Deploy the Chat App with Terraform
 
 ## Introduction:
 
