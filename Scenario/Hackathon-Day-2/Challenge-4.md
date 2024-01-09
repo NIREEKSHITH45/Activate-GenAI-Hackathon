@@ -2,7 +2,7 @@
 
 ## Introduction:
 
-In this challenge participants will engage with a chat application powered by the Azure OpenAI Large Language Model (LLM). Following the successful deployment of the architecture in the previous challenge, participants will now dive into the technical intricacies of the web app (chat-application) integrated with Azure OpenAI LLM. The objective is to harness the model's capabilities to comprehend user input, generate context-aware responses, and enhance the overall conversational experience with a focus on technical precision and optimization.
+In this challenge participants will engage with a chat application powered by the Azure OpenAI Large Language Model (LLM). Following the successful deployment of Chatapp with Terraform in the previous challenge, participants will now dive into the technical intricacies of the web app (chat-application) integrated with Azure OpenAI LLM. The objective is to harness the model's capabilities to comprehend user input, generate context-aware responses, and enhance the overall conversational experience with a focus on technical precision and optimization.
 
 ## Challenge Objectives
 
