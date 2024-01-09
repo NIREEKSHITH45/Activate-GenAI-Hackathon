@@ -4,10 +4,8 @@ Before you begin, ensure that you have the following prerequisites installed and
 
 1. **Azure account**: A Microsoft Azure account with an active subscription. (For the ease of this hackathon, we have provided you with an Active Azure Subscription)
 
-2. [Azure OpenAI](https://aka.ms/oai/access) access with the following models:
-      - gpt-35-turbo
-      - text-embedding-ada-002
-
+2. Ensure to deploy the LLM models - gpt-35-turbo and text-embedding-ada-002 within the Azure OpenAI instances that you will be deploying in the challenges.
+      
 3. **Development IDE:** Choose a preferred integrated development environment (IDE) for coding. Popular choices include Visual Studio Code, Visual Studio, or any IDE that supports your programming language.
 
 4. **Node.js:** Install [Node.js 14+](https://nodejs.org/en/download/)
