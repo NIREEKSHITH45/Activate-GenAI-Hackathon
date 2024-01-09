@@ -28,7 +28,12 @@ In this challenge, you will be exploring the accelerator's capabilities for buil
 
 ## Success Criteria:
 
-- Successfully created the language service and the documents is successfully translated.
+1. Successful Translation:
+
+        - The translated documents can be found in your target container.
+        - The successful POST method returns a 202 Accepted response code indicating that the service created the batch request.
+        - The POST request also returns response headers including Operation-Location that provides a value used in subsequent GET requests.
+   
 - Make sure the project is established by configuring the service resource and linking the training data source effectively.
 - Successfully identified the respective field created in the preceding step, providing its confidence score.
 - Ensure the accurate selection of the "Select a stage to add it to your pipeline configuration" option to align with the specific requirements of your pipeline configured
