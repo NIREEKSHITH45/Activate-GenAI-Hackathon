@@ -35,7 +35,7 @@ In this hackathon, you will:
 **2: Implement Document Search with Azure AI Search**
 - **Description:** Delve into the world of document search using Azure AI Search. Explore use cases such as semantic search, knowledge mining, and information retrieval. Brainstorm how effective document search can enhance decision-making and knowledge discovery.
 
-**3: Deploy the Chat App**
+**3: Deploy the Chatapp with Terraform**
 - **Description:** Experience the practical aspects of deploying a chat app architecture. Consider user interactions, scalability, and customization. Brainstorm how personalized chat applications can be utilized across various domains, from customer support to knowledge sharing.
 
 **4: Interact with Chat App**
