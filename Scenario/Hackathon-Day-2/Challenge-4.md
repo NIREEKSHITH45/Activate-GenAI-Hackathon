@@ -2,7 +2,7 @@
 
 ## Introduction:
 
-In this challenge participants will engage with a chat application powered by the Azure OpenAI Large Language Model (LLM). Following the successful deployment of Chatapp with Terraform in the previous challenge, participants will now interact with the web app integrated with Azure OpenAI LLM. 
+In this challenge participants will engage with a chat application powered by the Azure OpenAI Large Language Model (LLM). Following the successful deployment of Chatapp using Terraform in the previous challenge, participants will now interact with the web app integrated with Azure OpenAI LLM. 
 
 The objective is to interact with chat app for easy use, effective queries, multilingual interactions, and explore advanced settings for a better user experience.
 
@@ -56,10 +56,10 @@ The objective is to interact with chat app for easy use, effective queries, mult
    ```
 
 ## Success Criteria:
-Participants will be evaluated based on the following criteria:
 
-   - Successfully navigate and explore the web application.
-   - Successfull display of proficiency in multilingual queries, and use of advanced settings to influence chat responses.
+  - Interacted with the chat application and accessed it successfully
+     
+> **Important**: In this challenge, we are not validating anything !
 
 ## Additional Resources:
 
