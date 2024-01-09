@@ -6,13 +6,17 @@ In this challenge, you will be exploring the accelerator's capabilities for buil
 
 ## Challenge Objectives:
 
-1) Initiate the development of a language service, secure immediate access to the studio, and explicitly prioritize document translation for a highly efficient linguistic experience.
+1) Efficiently deploy or access a Document Translation resource, secure the key and endpoint, and seamlessly integrate these credentials into the provided code samples for authenticating API requests.
+
+1) Establish a required source container for file uploads and an obligatory target container for storing translated files within your Azure Blob Storage account.
 
 1) Configure precise source and target languages, selectively choose files for translation from the local system, and seamlessly define the destination for an efficient translation process.
 
 1) Make use of the Azure AI services multi-service account to ensure the creation and initiation of a project.
 
-1) Ensure thorough training by uploading specific files and conducting rigorous testing to validate the effectiveness of the implemented solution.
+1) Ensure thorough training by uploading specific files and conducting rigorous testing to validate the effectiveness of the implemented solution. Document that can be uploaded:
+
+1)
 
 1) Forge a pipeline using a static web app, designate a document type for transformation into a Form Recognizer model, and guarantee smooth document ingestion for thorough processing.
 
