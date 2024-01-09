@@ -28,8 +28,7 @@ In this challenge, you will be exploring the accelerator's capabilities for buil
 
 ## Additional Resources:
 
-- Refer to the provided [GitHub repository](https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna) for the architecture and related resources.
-- Explore the [Azure Cognitive Search Vector Search Overview](https://learn.microsoft.com/en-us/azure/search/vector-search-overview) module for additional insights.
+- Refer to the provided [GitHub repository](https://github.com/MSUSAzureAccelerators/Azure-OpenAI-and-Form-Recognizer-Workshop/blob/main/README.md) for detailed information.
 
 ## Prerequisites:
 
