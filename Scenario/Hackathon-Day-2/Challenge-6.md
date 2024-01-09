@@ -49,5 +49,4 @@ In the prior challenge, you have understood how we can practise load balancing a
 
 - Familiarity with serverless computing, Form recognizer, and Azure Cognitive Search.
 - Knowledge of scalable and efficient document processing.
-- Download [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
-- 
+- Install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) 
