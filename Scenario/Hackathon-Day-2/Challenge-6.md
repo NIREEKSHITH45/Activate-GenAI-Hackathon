@@ -8,7 +8,7 @@ In this Challenge there are  three main stages: language translation, serverless
 
 ## Challenge Objectives:
 
-1) Utilize the multi-service account in Azure AI services to establish a Translator.
+1) Utilize the Azure AI services multi-service Account to establish a Translator.
 
 1) **Key and Endpoint Retrieval and Azure Blob Storage Container Creation:**
 
@@ -24,7 +24,7 @@ In this Challenge there are  three main stages: language translation, serverless
 
 **Using Doc Intelligence:**
 
-1) Make use of the Azure AI services multi-service account to ensure the creation and initiation of a project by selecting Doc Intelligence.
+1) Make use of the Azure AI services multi-service Account to ensure the creation and initiation of a project by selecting Doc Intelligence.
 
 1) Forge a pipeline using a static web app, designate a document type for transformation into a Form Recognizer model, and guarantee smooth document ingestion for thorough processing.
 
