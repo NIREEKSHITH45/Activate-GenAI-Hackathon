@@ -26,7 +26,6 @@ Before you begin, ensure that you have the following prerequisites installed and
 
 8. Install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
 
-While the repository covers various AI topics, having a basic understanding of AI concepts, machine learning, and cloud computing will be beneficial for a smoother learning experience.
+Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to our support team.
 
-
-**Happy Hackathon!**
+Happy hacking!
