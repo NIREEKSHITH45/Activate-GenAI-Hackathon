@@ -12,7 +12,7 @@ In this challenge, you will be exploring the accelerator's capabilities for buil
 
 1) **Prepare your C#/.NET environment:**
 
-    - Initiate a new project in Visual Studio by opting for "Create a new project" on the Get started page. Locate and select the Console Application template through the search box. Continue by specifying your project as "document-translation-qs" and opting for .NET 6.0 (Long-term support) before finalizing the project creation.
+    - Begin a new Visual Studio project by selecting "Create a new project" and opting for the Console Application template. Specify a name for your project with .NET 6.0 before finalizing.
 
 1) **Install Newtonsoft.Json, Translate and run your application :**
 
