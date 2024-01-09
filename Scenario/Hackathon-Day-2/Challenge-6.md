@@ -30,12 +30,7 @@ In the prior challenge, you have understood how we can practise load balancing a
 
 ## Success Criteria:
 
-1. Successful Translation:
-
-   - The translated documents can be found in your target container.
-   - The successful POST method returns a 202 Accepted response code indicating that the service created the batch request.
-   - The POST request also returns response headers including Operation-Location that provides a value used in subsequent GET requests.
-   
+- Successfully executing the POST method yields a 202 Accepted response, indicating the service created the batch request. Translated documents are then available in your target container, with the Operation-Location value in response headers essential for subsequent GET request  
 - Make sure the project is established by configuring the service resource and linking the training data source effectively.
 - Successfully identified the respective field created in the preceding step, providing its confidence score.
 - Ensure the accurate selection of the "Select a stage to add it to your pipeline configuration" option to align with the specific requirements of your pipeline configured
