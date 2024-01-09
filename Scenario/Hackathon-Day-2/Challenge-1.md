@@ -24,6 +24,7 @@ Welcome to the Deploy Azure OpenAI Service and LLM Models Challenge! In this cha
 
 ## Prerequisites
 
+Make sure you have the following from the CloudLabs provided integrated environment:
 - [Azure Subscription](https://azure.microsoft.com/en-us/free/)
 - [Azure OpenAI](https://aka.ms/oai/access) access with the following models:
   - gpt-35-turbo
@@ -33,7 +34,7 @@ Welcome to the Deploy Azure OpenAI Service and LLM Models Challenge! In this cha
 
 1. **Azure OpenAI Service Deployment:**
    - Set up an Azure OpenAI Service instance with SKU size Standard `S0` in your Azure portal.
-   - Obtain the Azure OpenAI Key and Endpoint required..
+   - Obtain the Azure OpenAI Key and Endpoint.
 
 2. **Deploy Large Language Models (LLM):**
    - Azure OpenAI provides a web-based portal named **Azure OpenAI Studio** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
