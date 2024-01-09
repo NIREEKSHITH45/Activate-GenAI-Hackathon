@@ -24,7 +24,7 @@ In this Challenge there are  three main stages: language translation, serverless
 
 **Using Doc Intelligence:**
 
-1) Establish Document Intelligent service and go to the studio and ensure the creation and initiation of a project by selecting Doc Intelligence.
+1) Set up the Document Intelligent service, navigate to the studio, and confirm project creation and initiation by choosing "Doc Intelligence."
 
 1) Forge a pipeline using a static web app, designate a document type for transformation into a Form Recognizer model, and guarantee smooth document ingestion for thorough processing.
 
