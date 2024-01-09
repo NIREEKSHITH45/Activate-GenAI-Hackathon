@@ -12,15 +12,15 @@ To create an AI search solution, you will begin by cloning the provided reposito
 
 2. Create an **Azure AI Search resource** and an **Azure Storage Account**.
 
-3. In Visual Studio Code, in the Explorer pane which contains the folder of the cloned reopsitory `https://github.com/MicrosoftLearning/AI-102-AIEngineer`, expand the 22-create-a-search-solution folder and edit the batch file, **UploadDocs.cmd** to replace the `YOUR_SUBSCRIPTION_ID` and `YOUR_AZURE_STORAGE_ACCOUNT_NAME`, and `YOUR_AZURE_STORAGE_KEY` placeholders with the appropriate subscription ID, Azure storage account name, and Azure storage account key values for the storage account you created.
+3. In Visual Studio Code, in the Explorer pane which contains the folder of the cloned reopsitory `https://github.com/MicrosoftLearning/AI-102-AIEngineer`, expand the 22-create-a-search-solution folder and edit the batch file **UploadDocs.cmd**, to replace the `YOUR_SUBSCRIPTION_ID` and `YOUR_AZURE_STORAGE_ACCOUNT_NAME`, and `YOUR_AZURE_STORAGE_KEY` placeholders with the appropriate subscription ID, Azure storage account name, and Azure storage account key values for the storage account you created.
 
-4. Run the **UploadDocs.cmd** batch file using Azure CLI,after logging in to Azure. This will create a blob container in your storage account and upload the documents in the data folder to it.
+4. Run the **UploadDocs.cmd** batch file using Azure CLI, after logging in to Azure. This will create a blob container in your storage account and upload the documents in the data folder to it.
 
-1. Import data for AI Search, opting for Blob Storage. Establish a link with Azure AI Services, customize the index, and create an indexer for smooth integration.
+5. Import data for AI Search, opting for Blob Storage. Establish a link with Azure AI Services, customize the index, and create an indexer for smooth integration.
    
-1. **Interact with indexed documents**
+6. **Interact with indexed documents**
    
-      **Index the Documents:**
+   **Index the Documents:**
       
    - Navigate to your Azure AI Search resource in the Azure portal.
    - On the Overview page, choose "Import data."
@@ -44,7 +44,6 @@ To create an AI search solution, you will begin by cloning the provided reposito
    - Explore queries for specific fields and conditions.
    - Review and modify search components using JSON definitions.
    - Get the endpoint and key for Azure AI Search resource.
-
    
    **Explore and Modify Definitions:**
       
@@ -70,8 +69,7 @@ To create an AI search solution, you will begin by cloning the provided reposito
       - In Search explorer, submit JSON queries to test the modified index.
       - Explore advanced queries with filters and specific field selections.
 
-
-1. **Create Search Client Application** 
+7. **Create Search Client Application** 
 
    - Use the SDK (C# or Python) according to your language preference .
    - Get the endpoint and query key from Azure AI Search resource.
@@ -96,13 +94,8 @@ To complete this challenge successfully:
 - Successfully utilized the Azure AI Search SDK to create a client application for search.
 - Successfully ran the web application locally, performed searches, and refined search results successfully.
 
-  
-
 ## Additional Resources:
 
 - Refer to [What is Azure AI Search](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search) for reference.
 - [Create an Azure AI Search Solution](https://github.com/MicrosoftLearning/AI-102-AIEngineer/blob/master/Instructions/22-azure-search.md)
 - [Searching document text at scale using Azure Cognitive Search](https://benalexkeen.com/searching-document-text-at-scale-using-azure-cognitive-search/)
-
-
-
