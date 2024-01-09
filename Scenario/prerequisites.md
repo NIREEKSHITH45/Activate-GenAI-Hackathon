@@ -10,11 +10,13 @@ Before you begin, ensure that you have the following prerequisites installed and
 
 3. **Development IDE:** Choose a preferred integrated development environment (IDE) for coding. Popular choices include Visual Studio Code, Visual Studio, or any IDE that supports your programming language.
 
-4. **Git:** Install Git to clone and contribute to the repository. You can download Git from [here](https://git-scm.com/).
+4. **Node.js:** Install [Node.js 14+](https://nodejs.org/en/download/)
 
-5. **Azure CLI:** The Azure Command-Line Interface (CLI) is useful for managing Azure resources from the command line. Install it from [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
+5. **Git:** Install Git to clone and contribute to the repository. You can download Git from [here](https://git-scm.com/).
 
-6. **Terraform:** [ Terraform v1.6.0 or later](https://developer.hashicorp.com/terraform/install)
+6. **Azure CLI:** The Azure Command-Line Interface (CLI) is useful for managing Azure resources from the command line. Install it from [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
+
+7. **Terraform:** [ Terraform v1.6.0 or later](https://developer.hashicorp.com/terraform/install)
 
    - **Python:** Install [Python 3.12.1](https://www.python.org/downloads)
      * **Important**: Python and the pip package manager must be in the path in Windows for the setup scripts to work.
@@ -22,7 +24,7 @@ Before you begin, ensure that you have the following prerequisites installed and
 
    - **Docker (Optional):** Install Docker from [here](https://www.docker.com/get-started).
 
-7. Install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
+8. Install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
 
 While the repository covers various AI topics, having a basic understanding of AI concepts, machine learning, and cloud computing will be beneficial for a smoother learning experience.
 
