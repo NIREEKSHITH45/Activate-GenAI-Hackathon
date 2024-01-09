@@ -11,7 +11,7 @@ Active Gen AI is all about empowering you to harness the potential of Azure Open
 - Dive into the significance of AI search using Azure AI Search.
 - Understand the importance of Azure AI search in the context of building private Open AI with your own data.
 - Deploy a chat app architecture with Terraform, emphasizing the practical aspects of implementation.
-- Experience interacting with a chat app and explore features in multilingual queries, and use of advanced settings to influence chat responses..
+- Experience interacting with a chat app and explore features in multilingual queries, and use of advanced settings to influence chat responses.
 
 ## Setting Expectations:
 In this hackathon, you will:
