@@ -2,15 +2,23 @@
 
 ## Introduction:
 
-In this **Deploy the Chatapp with Terraform** challenge, we will be deploying a solution to run a chat application using terraform. The chat application uses several Microsoft Azure services to create a seamless and intelligent user experience. 
+In the prior challenges, you effectively deployed models within the Azure OpenAI service and created a document search solution by using Azure AI Search. Now, in this challenge , you will be deploying a solution to run a chat application using terraform.
 
-The **App Service** is like the home where the chat app lives, making sure it can handle lots of users without any problems. **Application Insights** helps keep an eye on how well the app is doing, fixing issues before they become a big deal.
+The chat application seamlessly integrates various Azure services for an intelligent user experience. Here's a brief overview of each service:
 
-**The Document Intelligence** service is super smart, using AI to understand what's in uploaded documents. This helps the chat app give users better and more relevant information. **Azure OpenAI** adds even more smarts, making the chat app understand and respond to users in a very natural way.
+- **App Service:** Hosts the chat app, ensuring scalability for a large user base.
+- **Application Insights:** Proactively monitors app performance, addressing issues before they escalate.
+- **Document Intelligence:** Utilizes AI to understand content in uploaded documents, enhancing user information.
+- **Azure OpenAI:** Enhances the app's capabilities with natural language understanding and response.
+- **Shared Dashboard:** Serves as a centralized hub for team data sharing and collaboration.
+- **Smart Detector Alert Rule:** Monitors app health and alerts the team in case of issues.
+- **Search Service:** Empowers users with dynamic and efficient search functionality within the app.
+- **Log Analytics Workspace:** Tracks and analyzes app activity, providing valuable insights.
+- **App Service Plan:** Optimizes resource allocation, ensuring optimal app performance.
+- **Storage Account:** Securely stores various data types, from documents to images, forming a robust foundation for the chat app.
 
-The **Shared Dashboard** is like a central place where the team can see and share important information. The **Smart Detector Alert Rule** keeps an eye on the app's health, telling the team if something is going wrong. The Search Service helps users find things quickly in the app, making their interactions more dynamic.
+Together, these services create a responsive chat application that combines AI capabilities, monitoring, and data management for an exceptional user experience.
 
-Behind the scenes, the **Log Analytics Workspace** keeps track of what's happening in the app. The **App Service Plan** makes sure everything is in the right place and works well. The **Storage Account** is like a secure storage room, keeping all kinds of data, from documents to images. Together, these services create a smart and responsive chat app that combines AI, monitoring, and data management for a great user experience.
 
 ## Architecture diagram:
 
