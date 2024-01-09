@@ -8,7 +8,7 @@ In this Challenge there are  three main stages: language translation, serverless
 
 ## Challenge Objectives:
 
-1) Establish a Translator.
+1) Set up a translator within Azure AI services.
 
 1) **Key and Endpoint Retrieval and Azure Blob Storage Container Creation:**
 
