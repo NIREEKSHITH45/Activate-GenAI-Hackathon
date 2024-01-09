@@ -43,13 +43,7 @@ By participating in this hackathon, you will:
           
 
 
-Each challenge comes with its own set of tasks and objectives. Click on the challenge title to get started.
-
-## Prerequisites
-
-Before you begin, ensure that you have the following prerequisites:
-
-- **Prerequisites**: Information on the tools and knowledge required for the hackathon.
+Each challenge comes with its own set of tasks and objectives. 
 
 Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to our support team.
 
