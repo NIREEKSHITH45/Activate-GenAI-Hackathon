@@ -6,15 +6,15 @@ In this challenge, you will be exploring the accelerator's capabilities for buil
 
 ## Challenge Objectives:
 
-1) Key and Endpoint Retrieval and Azure Blob Storage Container Creation:
+1) **Key and Endpoint Retrieval and Azure Blob Storage Container Creation:**
 
     - Set up Document Translation efficiently, secure key and endpoint, integrate credentials for API authentication, and create mandatory source and target containers in Azure Blob Storage.
 
-1) Prepare your C#/.NET environment.
+1) **Prepare your C#/.NET environment:**
 
     - Initiate a new project in Visual Studio by opting for "Create a new project" on the Get started page. Locate and select the Console Application template through the search box. Continue by specifying your project as "document-translation-qs" and opting for .NET 6.0 (Long-term support) before finalizing the project creation.
 
-1) **Install Newtonsoft.Json, Translate and run your application**
+1) **Install Newtonsoft.Json, Translate and run your application :**
 
     - Add NewtonsoftJson to your project via NuGet Packages, replace code in Program.cs with the document translation sample, update URLs, and start the program by clicking the green button or pressing F5.
 
