@@ -1,4 +1,4 @@
-# Active Gen AI Hackathon Overview - 2-Day Hackathon
+# Active Gen AI Hackathon Overview: Day-1 Hackathon
 
 ## Introduction:
 Welcome to the Active Gen AI Hackathon, a transformative journey into the world of Gen AI and its practical implementation. In this two-day immersive experience, you'll explore the capabilities of Azure OpenAI and Azure AI Search to build your personalized chat applications with a focus on scalability, performance, and document intelligence.
