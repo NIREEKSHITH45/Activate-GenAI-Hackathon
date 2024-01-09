@@ -54,7 +54,7 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
 ## Success Criteria:
 
 - Successful deployment of the chatapp.
-- validate if the following services are successfully deployed in the Resouce group
+- validate if the following services are successfully deployed in the RG.
   - App Service
   - Document Intelligence
   - Azure OpenAI
@@ -64,7 +64,7 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
   - Log Analytics Workspace
   - App Service Plan
   - Storage Account
-- Validate if the data is populated into the container named `content`.
+- Validate if the data is populated into the storage container named `content`.
 
 ## Additional Resources:
 
