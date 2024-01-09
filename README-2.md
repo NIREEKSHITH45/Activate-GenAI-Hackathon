@@ -30,7 +30,7 @@ By participating in this hackathon, you will:
    - Create Azure AI Search, AI Services, storage, upload and index documents, and customize search using VS Code and Azure.
              
 3. **Challenge 03: Deploy the Chatapp with Terraform**
-   - Master deploying scalable and efficient architectures in Azure using Terraform.
+   - Deploy the chatapp in Azure using Terraform.
           
 4. **Challenge 04: Interact with Chat App**
    - Navigate and explore the web app, interact adeptly with Chatapp using insightful questions, showcase multilingual query proficiency, and implement advanced settings for comprehensive Azure OpenAI service understanding.
