@@ -18,6 +18,8 @@ Before you begin, ensure that you have the following prerequisites installed and
 
    - **Docker (Optional):** Install Docker from [here](https://www.docker.com/get-started).
 
+6. Install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
+
 While the repository covers various AI topics, having a basic understanding of AI concepts, machine learning, and cloud computing will be beneficial for a smoother learning experience.
 
 
