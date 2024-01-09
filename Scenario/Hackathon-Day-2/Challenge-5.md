@@ -35,6 +35,7 @@ In the previous challenge, we have interacted with Chat App and the deployed Ope
 
 ## Additional Resources:
 
-- Refer to [How APIM can be used for load balancing resources](https://shiroyama.medium.com/introduction-eb8b8c94455a) for reference.
-- [Azure-AI-services-openai-quotas-limits](https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits)
 - [About Azure API Management service](https://learn.microsoft.com/en-us/azure/api-management/api-management-key-concepts)
+- [Azure-AI-services-openai-quotas-limits](https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits)
+- [Policies in Azure API Management](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-policies)
+- [Use named values in Azure API Management policies](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-properties?tabs=azure-portal)
