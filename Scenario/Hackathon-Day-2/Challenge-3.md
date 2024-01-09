@@ -53,9 +53,18 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
    - Follow the [manual steps](https://github.com/Azure/activate-genai/blob/main/infra/README.md) to deploy the Azure Search Index and upload the sample documents.
 ## Success Criteria:
 
-- Successful deployment of the architecture using Terraform scripts.
-- Correct configuration of Azure resources according to the provided architecture.
-- Successful deployment of Azure search index.
+- Successful deployment of the chatapp.
+- validate if the following services are successfully deployed in the Resouce group
+  - App Service
+  - Document Intelligence
+  - Azure OpenAI
+  - Shared Dashboard
+  - Smart Detector Alert Rule
+  - Search Service
+  - Log Analytics Workspace
+  - App Service Plan
+  - Storage Account
+- Validate if the data is populated into the container named `content`.
 
 ## Additional Resources:
 
