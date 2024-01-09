@@ -5,8 +5,8 @@ Before you begin, ensure that you have the following prerequisites installed and
 1. **Azure account**: A Microsoft Azure account with an active subscription.
 
 2. [Azure OpenAI](https://aka.ms/oai/access) access with the following models:
-  - gpt-35-turbo
-  - text-embedding-ada-002
+      - gpt-35-turbo
+      - text-embedding-ada-002
 
 3. **Development IDE:** Choose a preferred integrated development environment (IDE) for coding. Popular choices include Visual Studio Code, Visual Studio, or any IDE that supports your programming language.
 
