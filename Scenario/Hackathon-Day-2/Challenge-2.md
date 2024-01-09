@@ -1,4 +1,4 @@
-# Challenge 2: Implement Document Search with Azure AI Search
+# Challenge 02: Implement Document Search with Azure AI Search
 
 ## Introduction:
 In the prior challenge, you effectively deployed models within the Azure OpenAI service. In this challenge will focus on creating a document search solution by integrating Azure AI Search with OpenAI. 
