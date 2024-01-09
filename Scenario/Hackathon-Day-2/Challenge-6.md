@@ -18,7 +18,7 @@ In this challenge, you will be exploring the accelerator's capabilities for buil
 
     - Add NewtonsoftJson to your project via NuGet Packages, replace code in Program.cs with the document translation sample, update URLs, and start the program by clicking the green button or pressing F5.
 
-Using Doc Intelligence: 
+**Using Doc Intelligence:**
 
 1) Make use of the Azure AI services multi-service account to ensure the creation and initiation of a project.
 
