@@ -2,11 +2,9 @@
 
 ## Introduction
 
-Welcome to the Deploy Azure OpenAI Service and LLM Models Challenge! This challenge is designed to test your skills in deploying the Azure OpenAI Service and its Large Language Models (LLM). The goal is to set up the OpenAI Service and deploy LLM models.
+Welcome to the Deploy Azure OpenAI Service and LLM Models Challenge! In this challenge, your proficiency will be evaluated in deploying the Azure OpenAI Service along with its Large Language Models (LLM). 
 
-## Description
-
-Your task is to deploy the Azure OpenAI Service and deploy Large Language Models (LLM).
+The objective will be to successfully configure the OpenAI Service and deploy the specified LLM models.
 
 ### Accessing Azure portal
 
@@ -28,9 +26,9 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 ## Prerequisites
 
+Make sure you have the following from the CloudLabs provided integrated environment:
 - [Azure Subscription](https://azure.microsoft.com/en-us/free/)
 - [Azure OpenAI](https://aka.ms/oai/access) access with the following models:
-  - gpt-4
   - gpt-35-turbo
   - text-embedding-ada-002
 
@@ -38,11 +36,11 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 1. **Azure OpenAI Service Deployment:**
    - Set up an Azure OpenAI Service instance with SKU size Standard `S0` in your Azure portal.
-   - Configure and obtain the necessary API keys and access credentials.
+   - Obtain the Azure OpenAI Key and Endpoint.
 
 2. **Deploy Large Language Models (LLM):**
    - Azure OpenAI provides a web-based portal named **Azure OpenAI Studio** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
-   - Launch Azure OpeanAI Studio from the overview pane and deploy three OpenAI Models, i.e, `gpt-35-turbo` and `text-embedding-ada-002` with a TPM capacity of 20k.
+   - Launch Azure OpeanAI Studio from the overview pane and deploy the OpenAI Models, i.e, `gpt-35-turbo` and `text-embedding-ada-002` with a TPM capacity of 20k.
 
 ## Success Criteria:
 
