@@ -18,7 +18,7 @@ In the prior challenge, you have understood how we can practise load balancing a
 
 1) **Install Newtonsoft.Json, Translate and run your application :**
 
-    - Add NewtonsoftJson to your project via NuGet Packages, replace code in Program.cs with the document translation sample, update URLs, and start the program by clicking the green button or pressing F5.
+    - Add NewtonsoftJson to your project via NuGet Packages, replace [code](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) in Program.cs with the document translation sample, update URLs, and start the program by clicking the green button or pressing F5.
 
 **Using Doc Intelligence:**
 
