@@ -29,7 +29,7 @@ By participating in this hackathon, you will:
 2. **Challenge 02: Implement Document Search with Cognitive Search**
    - Create Azure AI Search, AI Services, storage, upload and index documents, and customize search using VS Code and Azure.
              
-3. **Challenge 03: Architecture Deployment with Terraform**
+3. **Challenge 03: Deploy the Chatapp with Terraform**
    - Master deploying scalable and efficient architectures in Azure using Terraform.
           
 4. **Challenge 04: Interact with Chat App**
