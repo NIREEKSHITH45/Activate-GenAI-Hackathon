@@ -6,17 +6,27 @@ In this challenge, you will be exploring the accelerator's capabilities for buil
 
 ## Challenge Objectives:
 
-1) Efficiently deploy or access a Document Translation resource, secure the key and endpoint, and seamlessly integrate these credentials into the provided code samples for authenticating API requests.
+1) Key and Endpoint Retrieval and Azure Blob Storage Container Creation:
 
-1) Establish a required source container for file uploads and an obligatory target container for storing translated files within your Azure Blob Storage account.
+    - Efficiently deploy or access a Document Translation resource, secure the key and endpoint, and seamlessly integrate these credentials into the provided code samples for authenticating API requests.
 
-1) Configure precise source and target languages, selectively choose files for translation from the local system, and seamlessly define the destination for an efficient translation process.
+    - Establish a required source container for file uploads and an obligatory target container for storing translated files within your Azure Blob Storage account. Document that can be uploaded:
+
+1) Prepare your C#/.NET environment.
+
+    - Initiate a new project in Visual Studio by opting for "Create a new project" on the Get started page. Locate and select the Console Application template through the search box. Continue by specifying your project as "document-translation-qs" and opting for .NET 6.0 (Long-term support) before finalizing the project creation.
+
+1) **Install Newtonsoft.Json**
+
+    - Add NewtonsoftJson to your project by right-clicking on document-translation-qs, selecting Manage NuGet Packages, and installing the latest stable version from the Browse tab.
+
+1) **Translate and run your application**
+    
+    - In Program.cs, replace code with document translation sample. Update endpoint, key, source and target URLs. Start the program by selecting the green button or pressing F5.
+
+Using Doc Intelligence: 
 
 1) Make use of the Azure AI services multi-service account to ensure the creation and initiation of a project.
-
-1) Ensure thorough training by uploading specific files and conducting rigorous testing to validate the effectiveness of the implemented solution. Document that can be uploaded:
-
-1)
 
 1) Forge a pipeline using a static web app, designate a document type for transformation into a Form Recognizer model, and guarantee smooth document ingestion for thorough processing.
 
