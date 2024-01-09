@@ -19,12 +19,71 @@ To create an AI search solution, you will begin by cloning the provided reposito
 1. Import data for AI Search, opting for Blob Storage. Establish a link with Azure AI Services, customize the index, and create an indexer for smooth integration.
    
 1. **Interact with indexed documents**
+   
+      **Index the Documents:**
+      
+   - Navigate to your Azure AI Search resource in the Azure portal.
+   - On the Overview page, choose "Import data."
+   - Select "Azure Blob Storage" as the Data Source.
+   - Configure data store details, including connection to the storage account and container.
+   - Proceed to the next step, "Add cognitive skills."
+   - Attach your Azure AI Services resource.
+   - Configure the skillset (margies-skillset) with desired enrichments.
+   - Proceed to the next step, "Customize target index."
+   - Change the Index name to "margies-index" and configure index fields.
+   - Proceed to the next step, "Create an indexer."
+   - Change the Indexer name to "margies-indexer" and configure advanced options.
+   - Submit to create data source, skillset, index, and indexer.
+   - Check the Indexers tab for successful indexing.
+    
+   **Search the Index:**
+   
+   - On the Azure AI Search Overview page, select "Search explorer."
+   - In the Query string box, enter `"*"` to retrieve all documents in JSON format.
+   - Modify the JSON request to include parameters like "count" to refine results.
+   - Explore queries for specific fields and conditions.
+   - Review and modify search components using JSON definitions.
+   - Get the endpoint and key for Azure AI Search resource.
 
-   - Adjust queries for counts and specific fields, define search components, and query the modified index for refined and targeted information retrieval.
+   
+   **Explore and Modify Definitions:**
+      
+   **Skillset:**
+      - Open `skillset.json` in Visual Studio Code.
+      - Update `cognitiveServices` key with Azure AI Services resource key.
+      - Review and modify skills, including the new sentiment skill.
 
-1. **Create Search Client Application** (wip) 
+   **Index:**
+      - Open `index.json` in Visual Studio Code.
+      - Scroll through field definitions, noting additional sentiment and URL fields.
+    
+   **Indexer:**
+      - Open `indexer.json` in Visual Studio Code.
+      - Review mappings for `metadata_storage_path` and URL.
+      - Check `outputFieldMappings`, including the `sentimentLabel` mapping.
 
-   - Update the application settings in appsettings.json, configure the web app, and then run it to explore search functionality.
+   **Use REST API to Update:**
+      - Open an integrated terminal in the "modify-search" folder.
+      - Run the `modify-search.cmd` script to update the search solution.
+      
+   **Query the Modified Index:**
+      - In Search explorer, submit JSON queries to test the modified index.
+      - Explore advanced queries with filters and specific field selections.
+
+
+1. **Create Search Client Application** 
+
+   - Use the SDK (C# or Python) according to your language preference .
+   - Get the endpoint and query key from Azure AI Search resource.
+   - Install Azure AI Search SDK in Visual Studio Code.
+   - Update configuration values in `appsettings.json` (C#) or `.env` (Python).
+   - Explore code to search an index using the SDK.
+     
+   **Run the Web App:**
+   - Use terminal: `dotnet run` (C#) or `flask run` (Python).
+   - Open the provided link in a browser to access the Margies Travel site.
+   - Enter a search term, review results, and explore refinement options.
+
 
 ## Success criteria:
 To complete this challenge successfully:
@@ -44,4 +103,6 @@ To complete this challenge successfully:
 - Refer to [What is Azure AI Search](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search) for reference.
 - [Create an Azure AI Search Solution](https://github.com/MicrosoftLearning/AI-102-AIEngineer/blob/master/Instructions/22-azure-search.md)
 - [Searching document text at scale using Azure Cognitive Search](https://benalexkeen.com/searching-document-text-at-scale-using-azure-cognitive-search/)
+
+
 
