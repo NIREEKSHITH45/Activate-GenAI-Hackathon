@@ -20,7 +20,7 @@ In this Challenge there are  three main stages: language translation, serverless
 
 1) **Install Newtonsoft.Json, Translate and run your application :**
 
-    - Add NewtonsoftJson to your project via NuGet Packages, replace [code](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) in Program.cs with the document translation sample, update URLs, and start the program by clicking the green button or pressing F5.
+    - Add NewtonsoftJson to your project via NuGet Packages, replace code in Program.cs with the document translation sample, update URLs, and start the program by clicking the green button or pressing F5.
 
 **Using Doc Intelligence:**
 
@@ -41,6 +41,7 @@ In this Challenge there are  three main stages: language translation, serverless
 ## Additional Resources:
 
 - Refer to the provided [GitHub repository](https://github.com/MSUSAzureAccelerators/Azure-OpenAI-and-Form-Recognizer-Workshop/blob/main/README.md) for detailed information.
+- Refer [Github repository](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) for detailed information.
 
 ## Prerequisites:
 
