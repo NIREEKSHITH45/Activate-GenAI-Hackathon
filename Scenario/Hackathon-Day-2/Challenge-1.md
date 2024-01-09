@@ -24,14 +24,6 @@ The objective will be to successfully configure the OpenAI Service and deploy th
 
 1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Maybe Later** to skip the tour.
 
-## Prerequisites
-
-Make sure you have the following from the CloudLabs provided integrated environment:
-- [Azure Subscription](https://azure.microsoft.com/en-us/free/)
-- [Azure OpenAI](https://aka.ms/oai/access) access with the following models:
-  - gpt-35-turbo
-  - text-embedding-ada-002
-
 ## Challenge Objectives:
 
 1. **Azure OpenAI Service Deployment:**
