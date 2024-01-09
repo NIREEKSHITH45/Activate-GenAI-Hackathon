@@ -2,7 +2,7 @@
 
 Before you begin, ensure that you have the following prerequisites installed and configured in CloudLabs provided Integrated Environment (JumpVM) which you are going to use through out the hackathon:
 
-1. **Azure account**: A Microsoft Azure account with an active subscription. (Fetch the credentials from Environment Details Tab)
+1. **Azure account**: A Microsoft Azure account with an active subscription. (For the ease of this hackathon, we have provided you with an Active Azure Subscription)
 
 2. [Azure OpenAI](https://aka.ms/oai/access) access with the following models:
       - gpt-35-turbo
