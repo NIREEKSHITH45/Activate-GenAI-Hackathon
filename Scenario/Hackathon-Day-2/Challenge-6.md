@@ -8,7 +8,7 @@ In this challenge, you will be exploring the accelerator's capabilities for buil
 
 1) **Key and Endpoint Retrieval and Azure Blob Storage Container Creation:**
 
-    - Set up Document Translation efficiently, secure key and endpoint, integrate credentials for API authentication, and create mandatory source and target containers in Azure Blob Storage.
+    - Set up Document Translation efficiently, secure key and endpoint, integrate credentials for API authentication, and create mandatory source and target containers in Azure Blob Storage previously utilized.
 
 1) **Prepare your C#/.NET environment:**
 
