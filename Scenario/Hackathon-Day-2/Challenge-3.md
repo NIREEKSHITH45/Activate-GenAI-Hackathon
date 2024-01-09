@@ -1,8 +1,8 @@
-# Challenge 03 :  Deploy the Chatapp
+# Challenge 03 :  Deploy the Chatapp with Terraform
 
 ## Introduction:
 
-Welcome to the Deployment of the Chtapp Challenge! This challenge is designed to test your skills in deploying the....
+Welcome to the Deploy the Chatapp with Terraform Challenge! This challenge is designed to test your skills in deploying the....
 
 In this Challenge we will harness the potential of Azure OpenAI, Cognitive Search, Container Apps, Application Insights, and Azure API Management to build an intelligent and scalable document search retrieval solution.
 
@@ -27,7 +27,7 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
 
  
 
-## Challenge Objectives:
+## Challenge Objectives: (WIP)
 
 1. **Clone the Repository:**
    - Clone the Active Gen AI repository: `https://github.com/Azure/activate-genai`.
