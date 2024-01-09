@@ -35,12 +35,13 @@ Make sure you have the following from the CloudLabs provided integrated environm
 ## Challenge Objectives:
 
 1. **Azure OpenAI Service Deployment:**
-   - Create an Azure OpenAI Service instance with SKU size Standard `S0` in your Azure portal.
+   - Set up an Azure OpenAI Service instance with SKU size Standard `S0` in your Azure portal.
    - Obtain the Azure OpenAI Key and Endpoint.
 
 2. **Deploy Large Language Models (LLM):**
    - Azure OpenAI provides a web-based portal named **Azure OpenAI Studio** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
-   - Launch Azure OpeanAI Studio from the overview pane and deploy the OpenAI Models, i.e, `gpt-35-turbo` and `text-embedding-ada-002` with a TPM capacity of 20k.
+   - Launch Azure OpeanAI Studio from the overview pane and deploy the OpenAI Models, i.e, `gpt-35-turbo` and `text-embedding-ada-002` with TPM (Tokens per Minute Rate Limit) capacity of 20k.
+   > Hint: Ensure to click on **Advance options** to define TPM capacity while deploying the Model.
 
 ## Success Criteria:
 
