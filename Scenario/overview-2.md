@@ -23,7 +23,7 @@ Active Gen AI is all about empowering you to harness the potential of Azure Open
 In this hackathon, you will:
 
 **Understand Gen AI Concepts:**
-- Gain insights into the core concepts of Gen AI, including Azure OpenAI and Cognitive Search.
+- Gain insights into the core concepts of Gen AI, including Azure OpenAI and Azure AI Search.
 
 **Hands-On Implementation:**
 - Engage in hands-on challenges, from deploying a chat app to scaling and integrating document intelligence.
