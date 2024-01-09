@@ -35,7 +35,7 @@ Make sure you have the following from the CloudLabs provided integrated environm
 ## Challenge Objectives:
 
 1. **Azure OpenAI Service Deployment:**
-   - Set up an Azure OpenAI Service instance with SKU size Standard `S0` in your Azure portal.
+   - Create an Azure OpenAI Service instance with SKU size Standard `S0` in your Azure portal.
    - Obtain the Azure OpenAI Key and Endpoint.
 
 2. **Deploy Large Language Models (LLM):**
