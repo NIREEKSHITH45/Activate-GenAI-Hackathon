@@ -8,7 +8,7 @@ Active Gen AI is all about empowering you to harness the potential of Azure Open
 
 **Day 1: Building the Foundation**
 - Learn about Azure OpenAI service and its configuration.
-- Dive into the significance of AI search using Azure Cognitive Search.
+- Dive into the significance of AI search using Azure AI Search.
 - Understand the importance of Azure AI search in the context of building private Open AI with your own data.
 - Deploy a chat app architecture with Terraform, emphasizing the practical aspects of implementation.
 
@@ -39,7 +39,7 @@ In this hackathon, you will:
 - **Description:** Understand the challenges and possibilities of deploying Azure OpenAI services and integrating large language models into your applications. Brainstorm how this can be utilized in real-world scenarios, from content generation to natural language understanding.
 
 **2: Implement Document Search with Azure AI Search**
-- **Description:** Delve into the world of document search using Azure Cognitive Search. Explore use cases such as semantic search, knowledge mining, and information retrieval. Brainstorm how effective document search can enhance decision-making and knowledge discovery.
+- **Description:** Delve into the world of document search using Azure AI Search. Explore use cases such as semantic search, knowledge mining, and information retrieval. Brainstorm how effective document search can enhance decision-making and knowledge discovery.
 
 **3: Deploy the Chat App**
 - **Description:** Experience the practical aspects of deploying a chat app architecture. Consider user interactions, scalability, and customization. Brainstorm how personalized chat applications can be utilized across various domains, from customer support to knowledge sharing.
