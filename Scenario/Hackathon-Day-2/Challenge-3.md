@@ -2,7 +2,7 @@
 
 ## Introduction:
 
-In the prior challenges, you effectively deployed models within the Azure OpenAI service and created a document search solution by using Azure AI Search. Now, in this challenge , you will be deploying a solution to run a chat application using terraform.
+In the prior challenges, you effectively deployed models within the Azure OpenAI service and created a document search solution by using Azure AI Search. Now, in this challenge, you will be deploying a solution to run a chat application using terraform.
 
 The chat application seamlessly integrates various Azure services for an intelligent user experience. Here's a brief overview of each service:
 
@@ -19,7 +19,6 @@ The chat application seamlessly integrates various Azure services for an intelli
 
 Together, these services create a responsive chat application that combines AI capabilities, monitoring, and data management for an exceptional user experience.
 
-
 ## Architecture diagram:
 
 ![](../media/appcomponents.png)
@@ -27,17 +26,15 @@ Together, these services create a responsive chat application that combines AI c
 ## Pre-requisites:
 **Setup your Environment**
 
-Before you begin the Challenge Lab, please ensure you have the following prerequisites installed in the CloudLabs provided integrated environment:
+Before you begin the Challenge Lab, please ensure you have the following prerequisites installed in your lab environment:
 * [Azure CLI v2.53.0 or later](https://aka.ms/azure-dev/install/)
-* [ Terraform v1.6.0 or later](https://developer.hashicorp.com/terraform/install)
+* [Terraform v1.6.0 or later](https://developer.hashicorp.com/terraform/install)
 * Install [python 3.12.1](https://www.python.org/downloads)
   * **Important**: Python and the pip package manager must be in the path in Windows for the setup scripts to work.
   * **Important**: Ensure you can run `python --version` from console. On Ubuntu, you might need to run `sudo apt install python-is-python3` to link `python` to `python3`.
 * Install [Visual Studio Code](https://code.visualstudio.com/download/)
 * [Node.js 14+](https://nodejs.org/en/download/)
 * [Git](https://git-scm.com/downloads)
-
- 
 
 ## Challenge Objectives: (WIP)
 
@@ -54,7 +51,7 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
 ## Success Criteria:
 
 - Successful deployment of the chatapp.
-- validate if the following services are successfully deployed in the RG.
+- validate if the following services are successfully deployed in the RG (Resource Group).
   - App Service
   - Document Intelligence
   - Azure OpenAI
