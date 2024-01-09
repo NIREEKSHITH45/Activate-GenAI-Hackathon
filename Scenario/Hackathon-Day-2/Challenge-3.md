@@ -12,9 +12,7 @@ The **Shared Dashboard** is like a central place where the team can see and shar
 
 Behind the scenes, the **Log Analytics Workspace** keeps track of what's happening in the app. The **App Service Plan** makes sure everything is in the right place and works well. The **Storage Account** is like a secure storage room, keeping all kinds of data, from documents to images. Together, these services create a smart and responsive chat app that combines AI, monitoring, and data management for a great user experience.
 
-## Description:
-
-Your task is to deploy the architecture provided in the  [Azure Activate GenAI GitHub repository](https://github.com/Azure/activate-genai) using Terraform. The architecture includes a set of Azure resources that form the foundation for an AI-driven solution.
+## Architecture diagram:
 
 ![](../media/appcomponents.png)
 
