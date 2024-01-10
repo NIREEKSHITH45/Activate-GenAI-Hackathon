@@ -26,6 +26,4 @@ Before you begin, ensure that you have the following prerequisites installed and
 
   9. Install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
 
-Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to our support team.
-
 Happy hacking!
