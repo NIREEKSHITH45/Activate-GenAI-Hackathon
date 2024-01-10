@@ -5,11 +5,11 @@
   "BaseURL": "https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/tree/main",
   "Files": [
      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/README-2.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Hackathon-Day-2/README.md",
        "Order": 1
      },
      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/overview-2.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Hackathon-Day-2/overview.md",
        "Order": 2
      },
      {
