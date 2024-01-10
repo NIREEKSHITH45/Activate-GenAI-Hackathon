@@ -1,7 +1,7 @@
-# Challenge 2: Implement Document Search with Azure AI Search
+# Challenge 02: Implement Document Search with Azure AI Search
 
 ## Introduction:
-In the prior challenge, you effectively deployed models within the Azure OpenAI service. In this challenge will focus on creating a document search solution by integrating Azure Cognitive Search with OpenAI. 
+In the prior challenge, you effectively deployed models within the Azure OpenAI service. In this challenge will focus on creating a document search solution by integrating Azure AI Search with OpenAI. 
 
 To create an AI search solution, you will begin by cloning the provided repository and establishing an Azure AI Search and storage Account as the foundation. You will customize the solution by refining UploadDocs.cmd for seamless document uploading. Next, you will proceed to set up Azure AI Search, connect it with Azure AI Services, and construct a robust indexer for advanced search functionalities. Concluding the process, you will fine-tune queries, define search components, and initiate the development of the search app.
 
@@ -22,9 +22,10 @@ To create an AI search solution, you will begin by cloning the provided reposito
 
    - Adjust queries for counts and specific fields, define search components, and query the modified index for refined and targeted information retrieval.
 
-1. **Create Search Client Application** (wip) 
+1. **Create Search Client Application** 
 
-   - Update the application settings in appsettings.json, configure the web app, and then run it to explore search functionality.
+   - Update the application settings , configure the web app, and then run it to explore search functionality.
+
 
 ## Success criteria:
 To complete this challenge successfully:
@@ -32,16 +33,13 @@ To complete this challenge successfully:
 - Successfully deployed the Azure Search Service and the Azure Storage Account
 - Successfully added the data into the storage account.
 - Successfully indexed the documents in Azure AI Search using the Azure portal.
-- Suuccessfully customized the index and configured the indexer in Azure AI Search.
+- Successfully customized the index and configured the indexer in Azure AI Search.
 - Successfully modified and explored search components using JSON definitions.
 - Successfully utilized the Azure AI Search SDK to create a client application for search.
 - Successfully ran the web application locally, performed searches, and refined search results successfully.
-
-  
 
 ## Additional Resources:
 
 - Refer to [What is Azure AI Search](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search) for reference.
 - [Create an Azure AI Search Solution](https://github.com/MicrosoftLearning/AI-102-AIEngineer/blob/master/Instructions/22-azure-search.md)
 - [Searching document text at scale using Azure Cognitive Search](https://benalexkeen.com/searching-document-text-at-scale-using-azure-cognitive-search/)
-
