@@ -12,7 +12,7 @@ This challenge unfolds in three main stages: language translation, serverless do
 
 ## Challenge Objectives:
 
-> **Important**: When deploying services in this challenge, please make sure to use the resource group named **Activate-GenAI-<inject key="Deployment ID"/>**.  !
+> **Important**: When deploying services in this challenge, please make sure to use the resource group named **Activate-GenAI-<inject key="Resource Group Name"/>**.  !
 
 1) **Set up a translator within Azure AI services.**
 
