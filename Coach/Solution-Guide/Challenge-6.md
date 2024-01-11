@@ -24,26 +24,26 @@ In this lab, we've equipped you with the essential artifacts to explore the capa
 
 1. Go to the Resource group, search, and select the "**Azure AI services multi-service account**" resource type with the name similar **cogservicesbpa{suffix}**
 
-      ![](.../Scenario/media/1.1.png)
+   ![](../media/1.1.png)
 
 2. Click on the Document Intelligence tab and select "**Go to Studio**"
 
-   [](../media/1.2.png)
+   ![](../media/1.2.png)
 
 3. In Document Intelligence Studio, scroll down to Custom Models and choose **Create new**.
 
-   ![Alt text](images/custom-models.png)
+   ![](../media/1.3.png)
 
 4. Under My Project click on  **+ Create a project**
 
-   ![Alt text](images/create-a-project.png)
+   ![](../media/1.4.png)
 
 5. Enter the following details and click on **Continue**  **(3)**.
     
    - Project name : **testproject** **(1)**.
    - Description : **Custom model project** **(2)**.
 
-     ![Alt text](images/enter-project-details.png)
+     ![](../media/1.5.png)
 
 6. Enter the following details **configuring service resource** and click on **Continue** **(5)**.
 
@@ -52,7 +52,7 @@ In this lab, we've equipped you with the essential artifacts to explore the capa
    - Form Recognizer or Cognitive Service Resource: Select the available Cognitive Service Form Recognizer name similar to **cogservicesbpass{suffic}** **(3)**.
    - API version : **2022-08-31 (3.0 General Availability)** **(4)**.
 
-     ![configuring service resource](images/configure-service-resource.png)
+     ![](../media/1.6.png)
 
 7. Enter the following details **Connect training data source** and click on **Continue** **(8)**.
 
@@ -64,26 +64,26 @@ In this lab, we've equipped you with the essential artifacts to explore the capa
    - Pricing tier : **Standard_LRS Standard** **(6)**.
    - Blob container name : **custommoduletext** **(7)**.
    
-        ![storage account](images/connect-training-data-source.png)
+        ![](../media/1.7.png)
 
 8. validate the information and choose **create project**
 
-     ![Alt text](images/create-project.png)
+    ![](../media/1.8.png)
 
 ### Task 3 - Train and Label data
 In this step, you will upload 6 training documents to train the model.
 
 1. Click on **Browse for files** 
 
-     ![Browse for files](images/browse-for-files.png)
+     [](../media/2.1.png)
 
 2.  On the file explorer enter the following `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** path hit **enter**, select all train JPEG files **train1 thought train6** **(2)**, and hit **Open** **(3)**.
 
-     ![train-upload](images/train-upload.png)
+     [](../media/2.2.png)
 
 3. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
 
-     ![train-upload](images/run-now.png)
+     [](../media/2.3.png)
 
 4. Click on **+ Add a field** **(1)**, select **Field** **(2)** , enter the field name as **Organization_sample** **(3)** and hit **enter**.
 
