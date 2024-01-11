@@ -4,7 +4,7 @@
 
 Welcome to the Challenge of Deploying Azure OpenAI Service and LLM Models! The objective of this challenge is to evaluate your proficiency in setting up and deploying Azure OpenAI Service along with its Large Language Models (LLM).
 
-Contoso Ltd, a leading technological firm, is seeking to enhance its product support operations using smart technology. In this challenge, the team will learn how to use Azure OpenAI services and its large language models. They'll set up these tools, ask the AI questions, and see how it responds. The focus will be on using models like `gpt-3.5-turbo` and `text-embedding-ada-002` to make customer service better. The goal is to understand how to use these advanced tools well and make them work for Contoso's needs.
+Contoso Ltd, a leading technological firm, is seeking to enhance its product support operations using AI technology. In this challenge, the team will learn how to use Azure OpenAI services and its large language models. They'll set up these tools, ask the AI questions, and see how it responds. The focus will be on using models like `gpt-3.5-turbo` and `text-embedding-ada-002` to make customer service better. The goal is to understand how to use these advanced tools well and make them work for Contoso's needs.
 
 As a Developer, your task is to assist Contoso Ltd in setting up and deploying the Azure OpenAI Service and the LLMs such as **gpt-35-turbo** and **text-embedding-ada-002**. 
 
