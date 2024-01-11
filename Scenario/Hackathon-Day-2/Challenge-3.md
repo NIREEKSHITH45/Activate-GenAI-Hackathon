@@ -2,7 +2,7 @@
 
 ## Introduction:
 
-Contoso is working on a fantastic chat application tailored to its specific needs. In this challenge, the team will learn how to set up this chat app using Terraform, focusing on user-friendliness, scalability, and easy customization for Contoso. The goal is to create a versatile chat app capable of handling various tasks, from assisting customers to sharing knowledge. Building on the success of deploying models in the Azure OpenAI service and creating a document search solution with Azure AI Search in previous challenges, this task involves deploying a solution for running a chat application using Terraform.
+Contoso Ltd aims to improve product support with a user-friendly chat application, leveraging AI technology. In this challenge, the team will learn how to set up this chat app using Terraform, focusing on user-friendliness, scalability, and easy customization for Contoso. The goal is to create a versatile chat app capable of handling various tasks, from assisting customers to sharing knowledge. Building on the success of deploying models in the Azure OpenAI service and creating a document search solution with Azure AI Search in previous challenges, this task involves deploying a solution for running a chat application using Terraform.
 
 The chat application integrates seamlessly with different Azure services to provide an intelligent user experience. Here's a simple overview of each service:
 
