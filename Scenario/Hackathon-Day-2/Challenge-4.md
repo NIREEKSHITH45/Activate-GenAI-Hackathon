@@ -2,7 +2,7 @@
 
 ## Introduction:
 
-Contoso is all about creating a chat app that's easy to use and brings joy to users. In this challenge, our team is focusing on ensuring a smooth experience for people using the chat app. We're figuring out the best way for conversations to flow, adding interesting features, and making the app easy to navigate. Our aim is to craft a chat app that's not only simple and engaging but also something users genuinely enjoy using.
+Contoso Ltd aims to improve product support with a user-friendly chat application, leveraging AI technology. In this challenge, our team is focusing on ensuring a smooth experience for people using the chat app. We're figuring out the best way for conversations to flow, adding interesting features, and making the app easy to navigate. Our aim is to craft a chat app that's not only simple and engaging but also something users genuinely enjoy using.
 
 After successfully setting up the Chatapp using Terraform in the previous challenge, our participants are now diving into the chat app experience. We're keen on making interactions effortless, enabling effective queries, supporting multilingual conversations, and exploring advanced settings to enhance the overall user experience. Our goal is to make the chat app a delightful and user-friendly tool for everyone at Contoso!
 
