@@ -2,7 +2,6 @@
 
 ## Introduction:
 
-
 Contoso is all about efficiently handling loads of documents without slowing down its systems. In this challenge, our team is diving into serverless document batch processing, like having a digital helper that quickly organizes and understands new documents without causing any hassles.
 
 Our goal here is pure efficiency. We're figuring out how to seamlessly integrate this system with our chat app, using smart tools to translate and organize new documents without making things complicated or slow.
@@ -13,7 +12,9 @@ This challenge unfolds in three main stages: language translation, serverless do
 
 ## Challenge Objectives:
 
-1) Set up a translator within Azure AI services.
+> **Important**: When deploying services in this challenge, please make sure to use the resource group named **Activate-GenAI-<inject key="Deployment ID"/>**.  !
+
+1) **Set up a translator within Azure AI services.**
 
 1) **Key and Endpoint Retrieval and Azure Blob Storage Container Creation:**
 
