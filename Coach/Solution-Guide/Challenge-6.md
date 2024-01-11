@@ -10,15 +10,9 @@ In this lab, we've equipped you with the essential artifacts to explore the capa
 
 # Solution Guide
 
-### Task 1 - Translate the documents using Language Studio
+### Task 1 - Translate the documents using Translate
 
-1. Sign into the [language studio](https://aka.ms/dt-language-studio) using Azure credentials.
 
-1. Configure by choosing Translator resource & Azure Storage account.
-   
-1. Select source & target language(s).
-   
-1. Choose the source document(s) from your local file system or blob storage and choose the destination for the translated files. 
 
 ### Task 2 - Creating a Form Recognizer Resource
 
@@ -83,46 +77,45 @@ In this step, you will upload 5 training documents to train the model.
 
 3.Label the new field added by selecting the CONTOSO LTD in the top left of each document uploaded. Do this for all the five documents.
 
-![Alt text](<images/1.3 label data new filed apply.png>)
+![](../media/2.3.png)
 
 4. Once all the documents are labelled, choose Train in the top right corner
 
-![Alt text](<images/1.3 label data train.png>)
+![](../media/2.4.png)
 
 5. Specify a model ID and choose Template for the Build Mode. Save this Model ID somewhere as you will be needing it in next steps.
 
-![Alt text](<images/1.3 train a new model .png>)
+![](../media/2.5.png)
 
 6. Go to Models. Wait till the model status shows succeeded.
 
-![Alt text](<images/1.3 go to models.png>)
+![](../media/2.6.png)
 
 Select the model you created and choose Test.
 
-![Alt text](images/image-8.png)
+![](../media/2.6-1.png)
 
 7. In the Test model window, use the sample files marked as test from the [same location](/SampleInvoices/Custom%20Model%20Sample/) where you picked the files for training. Once uploaded, choose Run all analysis.
 
-![Alt text](images/image-9.png)
+![](../media/2.7.png)
 
 8. Now you can see on the right hand side, the model was able to detect the field "Organization_sample" we created in the last step along with its confidence score
 
-![Alt text](<images/1.5 test model last step.png>)
+![](../media/2.8.png)
 
-
-### Step 3 Build new pipeline with custom model module in BPA
+### Task 4: Build new pipeline with custom model module in BPA
 
 After you are sastified with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Cusom Model module in the next step.
 
-#### 3.1 Launch BPA Accelerator
+1. Launch BPA Accelerator
 
 Navigate to the Resource Group and select the resource group which is already created for you.
 
-![Alt text](images/image-10.png)
+![](../media/3.1.png)
 
-#### 3.2 Select the static web app and click on the URL
+2. Select the static web app and click on the URL
 
-![Alt text](<images/static web app.png>)
+![](../media/3.2.png)
 
 ![Alt text](images/image-11.png)
 
