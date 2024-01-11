@@ -2,7 +2,9 @@
 
 ## Introduction:
 
-In this challenge, you will delve into the intricacies by utilizing the Log Analytics workspace for comprehensive system monitoring and analyzing performance. The process will commence by creating and configuring an existing OpenAI service with diagnostic settings, facilitating log retrieval through Kusto queries. On the other hand, an API management service will be established, incorporating essential named values, backend configurations, and API settings. This service will be connected with diagnostic settings, enabling Azure Monitor. The subsequent step will involve analyzing logs within the API management service using Kusto queries to ensure effective monitoring and seamless integration with the OpenAI service. The focus will be on observing outputs and prompts to guarantee a well-integrated and monitored system.
+Contoso Ltd aims to improve product support with a user-friendly chat application, leveraging AI technology, and making sure everything runs smoothly.
+
+In this challenge, our team is diving into the details by using the Log Analytics workspace for a complete system check and performance analysis. We're starting by setting up an existing OpenAI service with diagnostic settings, making it easy to retrieve logs through Kusto queries. Simultaneously, we're establishing an API management service, adding essential values and configurations. This service connects with diagnostic settings, enabling Azure Monitor. Our next step is to analyze logs within the API management service using Kusto queries, ensuring effective monitoring and seamless integration with the OpenAI service. Our focus is on watching outputs and prompts to guarantee a well-integrated and monitored system.
 
 ## Challenge Objectives:
 
