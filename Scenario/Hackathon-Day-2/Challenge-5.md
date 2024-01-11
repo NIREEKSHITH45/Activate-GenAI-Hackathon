@@ -41,3 +41,23 @@ After interacting with the Chat App and deploying OpenAI services in the previou
 - [Azure-AI-services-openai-quotas-limits](https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits)
 - [Policies in Azure API Management](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-policies)
 - [Use named values in Azure API Management policies](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-properties?tabs=azure-portal)
+
+## Challenge Validation
+ 
+1. After completing the challenge, you need to visit the **Lab Validation (1)** tab and click on the **VALIDATE (2)** button under Actions to perform the validation steps. Verify that you have met the success criteria of the challenge. 
+ 
+    ![](media/validate01.png "Validation")
+ 
+1. If the validation status displays **Success** for all the validation steps, **congratulations!**. This means that you have successfully completed the challenge.
+ 
+     ![](media/validate02.png "Validation")
+
+1. If the validation status displays **Fail**, **don't worry!** This could mean that you did not perform the challenge correctly.
+ 
+     ![](media/validate03.png "Validation")
+ 
+1. Hover your mouse over the `i` **(1)** icon to see the error message and determine the root cause of the failure. Based on the error message, revisit the challenge as necessary, and redo the validation by clicking on the **VALIDATE (3)** button again.
+
+   ![](media/validate04.png "Validation")
+ 
+1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you to troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.
