@@ -22,7 +22,7 @@ In this lab, we've equipped you with the essential artifacts to explore the capa
 
 1. You paste your key and document translation endpoint into the code samples to authenticate your request to the Document Translation service.
 
-      ![](../media/tran-1.png)
+      ![](../media/T-1.png)
    
 #### Task 1.2 - Create Azure Blob Storage containers
 
@@ -37,31 +37,31 @@ In this lab, we've equipped you with the essential artifacts to explore the capa
 
 1. On the Get started page, choose Create a new project.
 
-   ![](../media/trans-2.png)
+   ![](../media/T-2.png)
 
 1. On the Create a new project page, enter console in the search box. Choose the Console Application template, then choose Next.
 
-   ![](../media/tran-3.png)
+   ![](../media/T-3.png)
 
 1. In the Configure your new project dialog window, enter document-translation-qs in the Project name box. Then choose Next.
 
-   ![](../media/tran-4.png)
+   ![](../media/T-4.png)
 
 1. In the Additional information dialog window, select .NET 6.0 (Long-term support), and then select Create.
 
-   ![](../media/tran-5.png)
+   ![](../media/T-5.png)
 
 1. Right-click on your document-translation-qs project and select Manage NuGet Packages.
 
-   ![](../media/tran-6.png)
+   ![](../media/T-6.png)
 
 1. Select the Browse tab and type NewtonsoftJson.
 
-   ![](../media/tran-7.png)
+   ![](../media/T-7.png)
    
 1. Select the latest stable version from the dropdown menu and install the package in your project.
 
-   ![](../media/tran-8.png)
+   ![](../media/T-8.png)
 
 #### Task 1.4 -Translate all documents in a storage container and Run your application
 
