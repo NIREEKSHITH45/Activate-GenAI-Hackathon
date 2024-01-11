@@ -77,7 +77,7 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
  
     ![](media/validate01.png "Validation")
  
-1. If the validation status displays **Success** for all the validation steps, **congratulations!**. This means that you have successfully completed the challenge.
+1. If the validation status displays **Success** for all the validation steps, **congratulations!**. This means that you have successfully completed the challenge and have unlocked the next challenge.
  
      ![](media/validate02.png "Validation")
 
@@ -89,5 +89,5 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
 
    ![](media/validate04.png "Validation")
  
-1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you to troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.
+1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.
 
