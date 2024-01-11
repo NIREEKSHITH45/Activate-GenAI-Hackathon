@@ -28,7 +28,7 @@ Your task is to set up the Azure OpenAI Service and deploy Large Language Models
    
 1. Now you will see the Azure Portal Dashboard. Click on **Resource groups** from the Navigate panel to see the resource groups.
   
-1. Confirm you have a resource group **Build-AI-Apps-<inject key="Deployment ID"/>** present, as shown in the below screenshot. You need to use the **Build-AI-Apps-<inject key="Deployment ID"/>** resource group throughout this challenge.
+1. Confirm you have a resource group **Activate-GenAI-<inject key="Deployment ID"/>** present, as shown in the below screenshot. You need to use the **Activate-GenAI-<inject key="Deployment ID"/>** resource group throughout this challenge.
 
 ## Prerequisites
 
