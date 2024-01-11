@@ -12,8 +12,33 @@ In this lab, we've equipped you with the essential artifacts to explore the capa
 
 ### Task 1 - Translate the documents using Translate
 
+#### Task 1.1 - Retrieve your key and document translation endpoint
 
+1. If you have an existing Document Translation resource, navigate directly to your resource page.
 
+1. In the left rail, under Resource Management, select Keys and Endpoint.
+
+1. Copy and paste your key and document translation endpoint in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
+
+1. You paste your key and document translation endpoint into the code samples to authenticate your request to the Document Translation service.
+
+#### Task 1.2 - Create Azure Blob Storage containers and set up your C#/.NET environment
+
+1. You need to create containers in your Azure Blob Storage account for source and target files.
+
+      Source container. This container is where you upload your files for translation (required). <br>
+      Target container. This container is where your translated files are stored (required).
+   
+1. Start Visual Studio.
+
+1. On the Get started page, choose Create a new project.
+
+1. On the Create a new project page, enter console in the search box. Choose the Console Application template, then choose Next.
+
+1. In the Configure your new project dialog window, enter document-translation-qs in the Project name box. Then choose Next.
+
+1. In the Additional information dialog window, select .NET 6.0 (Long-term support), and then select Create.
+   
 ### Task 2 - Creating a Form Recognizer Resource
 
 1. Go to the Resource group, search, and select the "**Azure AI services multi-service account**" resource type with the name similar **cogservicesbpa{suffix}**
