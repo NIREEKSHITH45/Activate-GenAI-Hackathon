@@ -4,11 +4,9 @@
 
 Welcome to the Challenge of Deploying Azure OpenAI Service and LLM Models! The objective of this challenge is to evaluate your proficiency in setting up and deploying Azure OpenAI Service along with its Large Language Models (LLM).
 
-**Azure OpenAI Service** through its REST API, offers access to the powerful language models of OpenAI, such as GPT-4, GPT-4 Turbo with Vision, GPT-3.5-Turbo, and the Embeddings model series. Now, the GPT-4 and GPT-3.5-Turbo model series have also achieved general availability status.
+Contoso Ltd, a leading technological firm, is seeking to enhance its product support operations using smart technology. In this challenge, the team will learn how to use Azure OpenAI services and large language models. They'll set up these tools, ask the AI questions, and see how it responds. The focus will be on using models like `gpt-3.5-turbo` and `text-embedding-ada-002` to make customer service better. The goal is to understand how to use these advanced tools well and make them work for Contoso's needs.
 
-**A Large Language Model (LLM)** a deep learning algorithm, is proficient in executing several natural language processing (NLP) tasks. Trained using vast datasets, the large language models use transformer models, empowering them to interpret,
-
-Your task is to set up the Azure OpenAI Service and deploy Large Language Models (LLM) such as **gpt-35-turbo** and **text-embedding-ada-002**.
+As a Developer, your task is to assist Contoso Ltd in setting up and deploying the Azure OpenAI Service and the LLMs such as **gpt-35-turbo** and **text-embedding-ada-002**. 
 
 ## Accessing Azure portal
 
