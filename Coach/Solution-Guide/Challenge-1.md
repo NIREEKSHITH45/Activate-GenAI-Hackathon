@@ -69,7 +69,7 @@ Your task is to deploy the Azure OpenAI Service, and deploy Large Language Model
     - **Select a model**: gpt-35-turbo (1)
     - **Model version**: *Use the default version* (2)
     - **Deployment name**: text-turbo
-    - **Tokens per Minute Rate Limit (thousands)**: 1K
+    - **Tokens per Minute Rate Limit (thousands)**: 40K
   
          ![](../media/1-3.png)
 
