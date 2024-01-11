@@ -28,7 +28,7 @@ In this lab, we've equipped you with the essential artifacts to explore the capa
 
 2. Click on the Document Intelligence tab and select "**Go to Studio**"
 
-   ![Alt text](images/select-document-intelligence.png)
+   [](../media/1.2.png)
 
 3. In Document Intelligence Studio, scroll down to Custom Models and choose **Create new**.
 
