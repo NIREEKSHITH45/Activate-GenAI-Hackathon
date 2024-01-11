@@ -15,7 +15,7 @@ To achieve this, you'll start by cloning a provided repository and establishing 
 1. **Clone the Repository:**
    - Clone the repository within Visual Studio Code: `https://github.com/MicrosoftLearning/AI-102-AIEngineer`.
 
-2. Create an **Azure AI Search resource** and an **Azure Storage Account**.
+2. Create an **Azure AI Search resource** with  Standard S0 SKU and **Azure AI Service** with basic pricing and an **Azure Storage Account** with Standard tier.
 
 3. In Visual Studio Code, in the Explorer pane which contains the folder of the cloned repository `https://github.com/MicrosoftLearning/AI-102-AIEngineer`, expand the 22-create-a-search-solution folder and edit the batch file, **UploadDocs.cmd** with the required values.
 
