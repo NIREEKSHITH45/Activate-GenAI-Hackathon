@@ -24,7 +24,7 @@ In this lab, we've equipped you with the essential artifacts to explore the capa
 
 1. Go to the Resource group, search, and select the "**Azure AI services multi-service account**" resource type with the name similar **cogservicesbpa{suffix}**
 
-   ![](../media/1.1.png)
+      ![](../media/1.1.png)
 
 2. Click on the Document Intelligence tab and select "**Go to Studio**"
 
