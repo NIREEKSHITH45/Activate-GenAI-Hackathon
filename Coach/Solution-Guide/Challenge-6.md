@@ -22,12 +22,14 @@ In this lab, we've equipped you with the essential artifacts to explore the capa
 
 1. You paste your key and document translation endpoint into the code samples to authenticate your request to the Document Translation service.
 
-#### Task 1.2 - Create Azure Blob Storage containers and set up your C#/.NET environment
+#### Task 1.2 - Create Azure Blob Storage containers
 
 1. You need to create containers in your Azure Blob Storage account for source and target files.
 
       Source container. This container is where you upload your files for translation (required). <br>
       Target container. This container is where your translated files are stored (required).
+
+#### Task 1.3 - Set up your C#/.NET environment and Install Newtonsoft.Json
    
 1. Start Visual Studio.
 
@@ -38,6 +40,12 @@ In this lab, we've equipped you with the essential artifacts to explore the capa
 1. In the Configure your new project dialog window, enter document-translation-qs in the Project name box. Then choose Next.
 
 1. In the Additional information dialog window, select .NET 6.0 (Long-term support), and then select Create.
+
+1. Right-click on your document-translation-qs project and select Manage NuGet Packages.
+
+1. Select the Browse tab and type NewtonsoftJson.
+
+1. Select the latest stable version from the dropdown menu and install the package in your project.
    
 ### Task 2 - Creating a Form Recognizer Resource
 
