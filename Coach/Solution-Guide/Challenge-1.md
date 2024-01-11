@@ -30,7 +30,6 @@ Your task is to deploy the Azure OpenAI Service, and deploy Large Language Model
 
 - [Azure Subscription](https://azure.microsoft.com/en-us/free/)
 - [Azure OpenAI](https://aka.ms/oai/access) access with the following models
-  - gpt-4
   - gpt-35-turbo
   - text-embedding-ada-002
 
