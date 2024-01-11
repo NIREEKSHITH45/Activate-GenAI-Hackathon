@@ -10,6 +10,8 @@ To achieve this, you'll start by cloning a provided repository and establishing 
 
 ## Challenge Objectives:
 
+> **Important**: When deploying services in this challenge, please make sure to use the resource group named **Activate-GenAI-<inject key="Deployment ID"/>**.  !
+
 1. **Clone the Repository:**
    - Clone the repository within Visual Studio Code: `https://github.com/MicrosoftLearning/AI-102-AIEngineer`.
 
