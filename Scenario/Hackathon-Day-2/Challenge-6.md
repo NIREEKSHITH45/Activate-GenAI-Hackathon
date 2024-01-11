@@ -2,7 +2,7 @@
 
 ## Introduction:
 
-Contoso is all about efficiently handling loads of documents without slowing down its systems. In this challenge, our team is diving into serverless document batch processing, like having a digital helper that quickly organizes and understands new documents without causing any hassles.
+Contoso Ltd aims to improve product support with a user-friendly chat application, leveraging AI technology and at the same time efficiently handling loads of documents without slowing down its systems. In this challenge, our team is diving into serverless document batch processing, like having a digital helper that quickly organizes and understands new documents without causing any hassles.
 
 Our goal here is pure efficiency. We're figuring out how to seamlessly integrate this system with our chat app, using smart tools to translate and organize new documents without making things complicated or slow.
 
