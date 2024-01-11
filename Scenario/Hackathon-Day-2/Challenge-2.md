@@ -48,7 +48,7 @@ To complete this challenge successfully:
 ## Additional Resources:
 
 - Refer to [What is Azure AI Search](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search) for reference.
-- [Create an Azure AI Search Solution](https://github.com/MicrosoftLearning/AI-102-AIEngineer/blob/master/Instructions/22-azure-search.md)
+- [What are Indexes in Azure AI Search](https://learn.microsoft.com/en-us/azure/search/search-what-is-an-index)
 - [Searching document text at scale using Azure Cognitive Search](https://benalexkeen.com/searching-document-text-at-scale-using-azure-cognitive-search/)
 
 ## Challenge Validation
