@@ -44,7 +44,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 2. **Deploy Azure OpenAI's Large Language Models (LLM):**
    - Azure OpenAI provides a web-based portal named **Azure OpenAI Studio** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
-   - Launch Azure OpeanAI Studio from the overview pane and deploy three OpenAI Models, i.e, `gpt-35-turbo` and `text-embedding-ada-002` with a TPM capacity of 40k.
+   - Launch Azure OpeanAI Studio from the overview pane and deploy two OpenAI Models, i.e, `gpt-35-turbo` and `text-embedding-ada-002` with a TPM capacity of 40k.
 
 ## Success Criteria
 
