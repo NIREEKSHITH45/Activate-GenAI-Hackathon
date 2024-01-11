@@ -2,7 +2,7 @@
 
 ## Introduction:
 
-Contoso is all about ensuring its systems can handle a large number of users seamlessly. In this challenge, our team is focused on smartly dividing the workload to ensure everything runs like clockwork. We're figuring out how to use our resources efficiently, adapt swiftly to changes, and keep costs in check. Our goal is to build a strong system that can handle a lot of users at the same time, providing them with a great experience without breaking the bank. We want to create a reliable system that performs well, even when many people are using it.
+Contoso Ltd aims to improve product support with a user-friendly chat application, leveraging AI technology and ensuring its systems can handle a large number of users seamlessly. In this challenge, our team is focused on smartly dividing the workload to ensure everything runs like clockwork. We're figuring out how to use our resources efficiently, adapt swiftly to changes, and keep costs in check. Our goal is to build a strong system that can handle a lot of users at the same time, providing them with a great experience without breaking the bank. We want to create a reliable system that performs well, even when many people are using it.
 
 Load balancing in Azure for OpenAI resources is crucial for optimizing performance and scalability. It ensures that incoming traffic is evenly distributed, preventing overloads, reducing delays, and using resources efficiently. This forms a sturdy foundation for a high-performing OpenAI infrastructure.
 
