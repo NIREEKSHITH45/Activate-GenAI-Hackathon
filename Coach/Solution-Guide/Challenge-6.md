@@ -46,6 +46,20 @@ In this lab, we've equipped you with the essential artifacts to explore the capa
 1. Select the Browse tab and type NewtonsoftJson.
 
 1. Select the latest stable version from the dropdown menu and install the package in your project.
+
+#### Task 1.4 -Translate all documents in a storage container and Run your application
+
+1. Open the Program.cs file.
+
+1. Delete the pre-existing code, including the line Console.WriteLine("Hello World!").
+
+1. Copy and paste the document translation code sample into the Program.cs file.
+
+1. Update {your-document-translation-endpoint} and {your-key} with values from your Azure portal Translator instance.
+
+1. Update {your-source-container-SAS-URL} and {your-target-container-SAS-URL} with values from your Azure portal Storage account containers instance
+
+Once you've added a code sample to your application, choose the green Start button next to document-translation-qs to build and run your program, or press F5.
    
 ### Task 2 - Creating a Form Recognizer Resource
 
