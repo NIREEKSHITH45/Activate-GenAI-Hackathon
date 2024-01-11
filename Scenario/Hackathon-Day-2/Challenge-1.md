@@ -10,7 +10,7 @@ As a Developer, your task is to assist Contoso Ltd in setting up and deploying t
 
 ## Accessing Azure portal
 
-1. To access the Azure portal, open a private/incognito window in your browser and navigate to **[Azure Portal](https://portal.azure.com)**.
+1. To access the Azure portal, open the edge browser from inside the environment and navigate to **[Azure Portal](https://portal.azure.com)**.
 
 1. On the **Sign in to Microsoft Azure** tab, you will see a login screen. Enter the following email/username and then click on **Next**. 
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
@@ -42,7 +42,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
    - Set up an Azure OpenAI Service instance with SKU size Standard `S0` in your Azure portal.
    - Obtain the necessary Azure OpenAI Key and Endpoint.
 
-2. **Deploy Large Language Models (LLM):**
+2. **Deploy Azure OpenAI's Large Language Models (LLM):**
    - Azure OpenAI provides a web-based portal named **Azure OpenAI Studio** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
    - Launch Azure OpeanAI Studio from the overview pane and deploy three OpenAI Models, i.e, `gpt-35-turbo` and `text-embedding-ada-002` with a TPM capacity of 40k.
 
