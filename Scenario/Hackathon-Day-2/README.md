@@ -12,6 +12,7 @@ Welcome to the Active Gen AI challenge hackathon! This event is designed to enha
 ## Introduction
 
 Welcome to Active Gen AI, an immersive exploration into the world of Azure OpenAI. Active Gen AI goes beyond the fundamentals, providing a hands-on experience to apply your knowledge and build practical solutions using Azure OpenAI models. This program serves as a comprehensive guide for those aiming to deepen their understanding and proficiency in creating AI-powered applications. Whether you're a newcomer or have some experience with OpenAI, Active Gen AI is tailored to your learning journey. The content within this initiative offers valuable insights and skills to empower you in crafting intelligent and innovative solutions using Azure OpenAI.
+
 This hack consists of six challenges and is designed to be self-administered, so anyone can complete the material independently. Whether you have limited to no experience with Active GenAI or have experimented with OpenAI before but want a deeper understanding of how to implement an AI solution, this hack is for you.
 
 ## Learning Objectives
