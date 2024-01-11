@@ -2,22 +2,23 @@
 
 ## Introduction:
 
-In the prior challenges, you effectively deployed models within the Azure OpenAI service and created a document search solution by using Azure AI Search. Now, in this challenge, you will be deploying a solution to run a chat application using terraform.
+Contoso is working on a fantastic chat application tailored to its specific needs. In this challenge, the team will learn how to set up this chat app using Terraform, focusing on user-friendliness, scalability, and easy customization for Contoso. The goal is to create a versatile chat app capable of handling various tasks, from assisting customers to sharing knowledge. Building on the success of deploying models in the Azure OpenAI service and creating a document search solution with Azure AI Search in previous challenges, this task involves deploying a solution for running a chat application using Terraform.
 
-The chat application seamlessly integrates various Azure services for an intelligent user experience. Here's a brief overview of each service:
+The chat application integrates seamlessly with different Azure services to provide an intelligent user experience. Here's a simple overview of each service:
 
-- **App Service:** Hosts the chat app, ensuring scalability for a large user base.
-- **Application Insights:** Proactively monitors app performance, addressing issues before they escalate.
-- **Document Intelligence:** Utilizes AI to understand content in uploaded documents, enhancing user information.
-- **Azure OpenAI:** Enhances the app's capabilities with natural language understanding and response.
-- **Shared Dashboard:** Serves as a centralized hub for team data sharing and collaboration.
-- **Smart Detector Alert Rule:** Monitors app health and alerts the team in case of issues.
+- **App Service:** This hosts the chat app, ensuring it can handle a large number of users effectively.
+- **Application Insights:** It proactively monitors the app's performance, taking care of issues before they become significant.
+- **Document Intelligence:** Using AI, it understands the content in uploaded documents, making user information more insightful.
+- **Azure OpenAI:** Enhances the app's capabilities with natural language understanding and responses.
+- **Shared Dashboard:** Acts as a central hub for team collaboration and data sharing.
+- **Smart Detector Alert Rule:** Monitors the app's health and notifies the team if any issues arise.
 - **Search Service:** Empowers users with dynamic and efficient search functionality within the app.
-- **Log Analytics Workspace:** Tracks and analyzes app activity, providing valuable insights.
-- **App Service Plan:** Optimizes resource allocation, ensuring optimal app performance.
-- **Storage Account:** Securely stores various data types, from documents to images, forming a robust foundation for the chat app.
+- **Log Analytics Workspace:** Tracks and analyzes app activity, offering valuable insights.
+- **App Service Plan:** Optimizes resource allocation for optimal app performance.
+- **Storage Account:** Securely stores various data types, forming a robust foundation for the chat app.
 
-Together, these services create a responsive chat application that combines AI capabilities, monitoring, and data management for an exceptional user experience.
+Together, these services create a responsive chat application that combines AI features, monitoring capabilities, and efficient data management, providing Contoso with an exceptional user experience.
+
 
 ## Architecture diagram:
 
