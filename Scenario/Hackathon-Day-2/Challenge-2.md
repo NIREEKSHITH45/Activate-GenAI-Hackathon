@@ -24,7 +24,7 @@ To achieve this, you'll start by cloning a provided repository and establishing 
      
 1. Import data for AI Search, opting for Blob Storage. Establish a link with Azure AI Services, customize the index, and create an indexer for smooth integration.
    
-1. **Interact with indexed documents**
+1. **Interact and search queries with indexed documents**
 
    - Adjust queries for counts and specific fields, define search components, and query the modified index for refined and targeted information retrieval.
 
@@ -32,6 +32,7 @@ To achieve this, you'll start by cloning a provided repository and establishing 
 
    - Update the application settings, configure the web app, and then run it to explore search functionality.
 
+      > Hint: The app is available in two languages, use the one that is in your scope.
 
 ## Success criteria:
 To complete this challenge successfully:
@@ -56,7 +57,7 @@ To complete this challenge successfully:
  
     ![](media/validate01.png "Validation")
  
-1. If the validation status displays **Success** for all the validation steps, **congratulations!**. This means that you have successfully completed the challenge.
+1. If the validation status displays **Success** for all the validation steps, **congratulations!**. This means that you have successfully completed the challenge and have unlocked the next challenge.
  
      ![](media/validate02.png "Validation")
 
@@ -68,4 +69,4 @@ To complete this challenge successfully:
 
    ![](media/validate04.png "Validation")
  
-1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you to troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.
+1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.
