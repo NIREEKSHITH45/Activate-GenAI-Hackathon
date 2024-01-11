@@ -117,71 +117,69 @@ Navigate to the Resource Group and select the resource group which is already cr
 
 ![](../media/3.2.png)
 
-![Alt text](images/image-11.png)
+![](../media/3.2-1.png)
 
-#### 3.3 Choose Create/Update/Delete Pipelines option and create a new pipeline by specifying a name
+3. Choose Create/Update/Delete Pipelines option and create a new pipeline by specifying a name
 
-![Alt text](<images/launch bpa step 5.png>)
+![](../media/3.3.png)
 
-![Alt text](<images/bpa 2.png>)
+![](../media/3.3-1.png)
 
-#### 3.4 Select PDF Document
+4. Select PDF Document
 
-![Alt text](images/image-12.png)
+![](../media/3.4.png)
 
-#### 3.5 Select Form Recognizer custom model (batch) option and specify the model ID you gave in Step 2. 
+5. Select Form Recognizer custom model (batch) option and specify the model ID you gave in Step 2. 
 
-![Alt text](images/image-13.png)
+![](../media/3.5.png)
 
-![Alt text](images/image-14.png)
+![](../media/3.5-1.png)
 
 Click on Done
 
-![Alt text](images/image-15.png)
+![](../media/3.5-2.png)
 
-#### 3.6 Now you will be ingesting documents by going to the Home page of BPA and choosing Ingest Documents option.
+6. Now you will be ingesting documents by going to the Home page of BPA and choosing Ingest Documents option.
 
-![Alt text](images/image-16.png)
+![](../media/3.6.png)
 
-#### 3.7 From the Select a pipeline drop-down, select the pipeline you just created and click on upload under upload a single document
+7. From the Select a pipeline drop-down, select the pipeline you just created and click on upload under upload a single document
 
-![Alt text](images/image-17.png)
+![](../media/3.7.png)
 
 #### 3.8 For documents, go to [Lab 1 Step 3.7](/SampleInvoices/Lab%201%20Step%203.7/) folder. You can upload multiple invoice one-by-one.
 
+Task 4 - Configure Azure Cognitive Search 
 
-### Step 4 Configure Azure Cognitive Search 
+1. Go back to the resource group window and select Search service
 
+![](../media/4.1.png)
 
-#### 4.1 Fo back to the resource group window and select Search service
+2. Click on Import data and select Azure Blog Storage for the Data source option
 
-![Alt text](images/image-18.png)
-
-#### 4.2 Click on Import data and select Azure Blog Storage for the Data source option
-
-![Alt text](images/image-20.png)
+![](../media/4.2.png)
 
 For connection string, choose an existing connection and select the storage account which was created for you already. Within that, select the results container. For Blob folder, specify the name of the pipeline you created in Step 3 in BPA.
 
-![Alt text](images/image-19.png)
+![](../media/4.2-1.png)
 
-#### 4.3 Click on Add congnitive skills and skip to customize target index. Make all fields Retrievable and Searchable. Expand the documents field and under it, expand fields to make the three fields facetable (type, valueString & content).
+3. Click on Add congnitive skills and skip to customize target index. Make all fields Retrievable and Searchable. Expand the documents field and under it, expand fields to make the three fields facetable (type, valueString & content).
 
-![Alt text](images/facetable.png)
+![](../media/4.3.png)
 
-#### 4.4 Provide a name for the indexer if not already given and select Submit. You will get a notification that the import is successfully configured
+4. Provide a name for the indexer if not already given and select Submit. You will get a notification that the import is successfully configured
 
-![Alt text](images/image-22.png)
+![](../media/4.4.png)
 
-### Step 5 Use Sample Search Application
+Task 6 - Use Sample Search Application
 
-#### 5.1 Now go back to the BPA webpage and select Sample Search Application
+1. Now go back to the BPA webpage and select Sample Search Application
 
-![Alt text](images/image-23.png)
+![](../media/5.1.png)
 
 You can now filter and search on items and other fields configured.
 
-![Alt text](<images/sample search app.png>)
+![](../media/5.2.png)
 
 ## More Resources  
 Getting Started with Form Recognizer Studio - https://learn.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/form-recognizer-studio-overview?view=form-recog-3.0.0  
