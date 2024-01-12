@@ -88,7 +88,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 1. In the **Playground** section, select the **chat** page, and ensure that the **text turbo** deployment is selected in the configuration pane.
 
-   ![](../media/4-3.png)
+   ![](../media/chat.png)
 
 2. In the **Assistant setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
