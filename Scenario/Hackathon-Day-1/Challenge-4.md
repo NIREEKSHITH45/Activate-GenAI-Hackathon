@@ -1,10 +1,13 @@
 # Challenge 04: Interact with Chat App
 
+### Estimated Time: 30 minutes
+
 ## Introduction:
 
-In this challenge participants will engage with a chat application powered by the Azure OpenAI Large Language Model (LLM). Following the successful deployment of Chatapp using Terraform in the previous challenge, participants will now interact with the web app integrated with Azure OpenAI LLM. 
+Contoso Ltd aims to improve product support with a user-friendly chat application, leveraging AI technology. In this challenge, our team is focusing on ensuring a smooth experience for people using the chat app. We're figuring out the best way for conversations to flow, adding interesting features, and making the app easy to navigate. Our aim is to craft a chat app that's not only simple and engaging but also something users genuinely enjoy using.
 
-The objective is to interact with chat app for easy use, effective queries, multilingual interactions, and explore advanced settings for a better user experience.
+After successfully setting up the Chatapp using Terraform in the previous challenge, our participants are now diving into the chat app experience. We're keen on making interactions effortless, enabling effective queries, supporting multilingual conversations, and exploring advanced settings to enhance the overall user experience. Our goal is to make the chat app a delightful and user-friendly tool for everyone at Contoso!
+
 
 ## Challenge Objectives
 
