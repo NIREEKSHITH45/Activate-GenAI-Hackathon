@@ -187,65 +187,65 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 1. Navigate back to the Resource groups and select the resource group **business-process -<inject key="Deployment ID" enableCopy="false"/>**.
 
-    ![](../media/bpa2-12.png)
+    ![](../media/bpa3-1.png)
 
 2. Go to the Resource group, search, and select the **Static Web App** resource type with the name similar to **webappbpa{suffix}**.
 
-   ![webappbpa](images/static-web-page.png)
+   ![](../media/bpa3-2.png)
 
 3. On the **Static Web App** page, click on **View app in browser**.
 
-      ![webappbpa](images/formm.png)
+      ![](../media/bpa3-3.png)
 
 4. Once the **Business Process Automation Accelerator** page loaded successfully, click on the **Create/Update/Delete Pipelines**. 
 
-   ![Web APP](images/select-create-pipeline.png)
+   ![](../media/bpa3-4.png)
 
 5. On the **Create Or Select A Pipeline** page, enter New Pipeline Name as **workshop** **(1)**, and click on the **Create Custom Pipeline** **(2)**. 
 
-   ![workshop](images/create-pipeline.png)
+   ![](../media/bpa3-5.png)
 
 6. On the **Select a document type to get started** page, select **PDF Document**
 
-   ![workshop](images/image-document.png)
+   ![](../media/bpa3-6.png)
 
 7. On the **Select a stage to add it to your pipeline configuration** page, search and select for **Form Recognizer Custom Model (Batch)**.
 
-   ![workshop](images/form-recognizer-custom-model.png)
+   ![](../media/bpa3-7.png)
 
 8. On the pop-up, enter the Model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
 
-   ![Model ID](images/pipeline-model-id.png)
+   ![](../media/bpa3-8.png)
 
 9. On the **Select a stage to add it to your pipeline configuration** page, scroll down to review the **Pipeline Preview**, and click on **Done**.
 
-   ![Pipeline Preview](images/done-pipeline.png)
+   ![](../media/bpa3-9.png)
 
 10. On the **Piplelines workshop** page, click on **Home**. 
 
-      ![home-pipeline](images/home-pipeline.png)
+      ![](../media/bpa3-10.png)
 
 11. On the **Business Process Automation Accelerator** page, click on **Ingest Documents**.
 
-      ![ingest-documents](images/ingest-documents.png)
+      ![](../media/bpa3-11.png)
 
 12. On the **Upload a document to Blob Storage** page, from the drop-down select a Pipeline with the name **workshop** **(1)**, and click on **Upload or drop a file right here**.
 
-      ![Upload a document](images/upload-document-to-blob.png)
+      ![](../media/bpa3-12.png)
 
 13. For documents, enter the following `C:\Users\Public\Desktop\Data\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
 
-      ![Upload a document](images/pipeline-folder.png)
+      ![](../media/bpa3-13.png)
 
 ### Task 5: Configure Azure Cognitive Search 
 
 1. Navigate back to the resource group window, search, and select **Search Service** with a name similar to **bpa{suffix}**.
 
-   ![search service](images/rg3.png)
+   ![](../media/bpa4-1.png)
 
 2. On the **Search service** page, click on **Import data**.
 
-   ![Data source](images/BPAA1.png)
+   ![](../media/bpa4-2.png)
 
 3. Enter the following details for **Connect to your data**.
 
@@ -254,44 +254,30 @@ After you are satisfied with the custom model performance, you can retrieve the 
    - Parsing mode: Select **JSON** **(3)**.
    - Click on **Choose an existing connection** **(4)** under Connection string.
   
-     ![Connection to your data](images/connection-to-your-data.png)
+     ![](../media/bpa4-3.png)
 
 4. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix}**. 
 
-     ![Storage account](images/stoarge-account.png)
+     ![](../media/bpa4-4.png)
 
 5. Select **results** **(1)** container from the **Containers** page and click on **Select** **(2)**. It will redirect back to **Connection to your data** page.
 
-     ![Storage account](images/continers.png)   
+     ![](../media/bpa4-5.png)
   
 6. On the **Connect to your data** page, enter the **workshop** **(1)** as **Blob folder** and click on **Next : Add cognitive skills (Optional) (2)**.
 
-   ![Connection](images/connection-to-your-data-blob(1).png)
+   ![](../media/bpa4-6.png)
 
 7. On the **Add cognitive skills (Optional)** click on **Skip to : Customize target index**.
 
 8. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
 
-      ![Connection](images/retrievable-searchable.png)
+      ![](../media/bpa4-8.png)
 
 9. Expand the **aggregatedResults** **(1)** > **customFormRec** **(2)** > **documents** **(3)** > **fields** **(4)** under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
 
-      ![import-data](images/BPA5.png)
+      ![](../media/bpa4-9.png)
 
-7. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
+10. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
    
-   ![Create an indexer](images/create-an-indexer.png)
-
-## Review
-
-In this lab, you have accomplished the following:
-
-* Use a sample training data set to train a custom model in the Azure Form Recognizer Studio.
-* Label the training data documents with custom fields of interest.
-* Test the trained model on test data, visualized results, and confidence scores in the studio.
-* Use the custom model in the BPA pipeline.
-
-## More Resources
-
-**Getting Started with Form Recognizer Studio**: https://learn.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/form-recognizer-studio-overview?view=form-recog-3.0.0  
-**Form Recognizer Documentation**: https://learn.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/concept-invoice?view=form-recog-3.0.0
+   ![](../media/bpa4-10.png)
