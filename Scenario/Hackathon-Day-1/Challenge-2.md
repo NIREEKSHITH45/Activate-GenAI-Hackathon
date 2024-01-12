@@ -1,31 +1,40 @@
 # Challenge 02: Implement Document Search with Azure AI Search
 
-## Introduction:
-In the prior challenge, you effectively deployed models within the Azure OpenAI service. In this challenge will focus on creating a document search solution by integrating Azure AI Search with OpenAI. 
+### Estimated Time: 120 minutes
 
-To create an AI search solution, you will begin by cloning the provided repository and establishing an Azure AI Search and storage Account as the foundation. You will customize the solution by refining UploadDocs.cmd for seamless document uploading. Next, you will proceed to set up Azure AI Search, connect it with Azure AI Services, and construct a robust indexer for advanced search functionalities. Concluding the process, you will fine-tune queries, define search components, and initiate the development of the search app.
+## Introduction:
+
+In the previous challenge, you successfully set up models in the Azure OpenAI service. Now, Contoso needs a way for its team to quickly find information. This challenge focuses on using Azure AI Search to make the search process easier for the team.
+
+The goal is to teach them how to search for documents in a smart way, simplifying decision-making and extracting essential information. The team will work on organizing data, improving search capabilities, and gaining valuable insights from messy information. The ultimate objective is to create a solution that makes finding information quick and effortless for Contoso.
+
+To achieve this, you'll start by cloning a provided repository and establishing the foundation with Azure AI Search and a storage account. The process involves customizing the document uploading script, setting up Azure AI Search, connecting it with Azure AI Services, and building a powerful indexer for advanced search features. Finally, you'll refine queries, define search components, and kickstart the development of the search app.
 
 ## Challenge Objectives:
+
+> **Important**: When deploying services in this challenge, please make sure to use the resource group named **Activate-GenAI-<inject key="Resource Group Name"/>**.  !
 
 1. **Clone the Repository:**
    - Clone the repository within Visual Studio Code: `https://github.com/MicrosoftLearning/AI-102-AIEngineer`.
 
-2. Create an **Azure AI Search resource** and an **Azure Storage Account**.
+2. Create an **Azure AI Search resource** with  Standard S0 SKU and **Azure AI Service** with basic pricing and an **Azure Storage Account** with Standard tier.
 
-3. In Visual Studio Code, in the Explorer pane which contains the folder of the cloned reopsitory `https://github.com/MicrosoftLearning/AI-102-AIEngineer`, expand the 22-create-a-search-solution folder and edit the batch file, **UploadDocs.cmd** to replace the `YOUR_SUBSCRIPTION_ID` and `YOUR_AZURE_STORAGE_ACCOUNT_NAME`, and `YOUR_AZURE_STORAGE_KEY` placeholders with the appropriate subscription ID, Azure storage account name, and Azure storage account key values for the storage account you created.
+3. In Visual Studio Code, in the Explorer pane which contains the folder of the cloned repository `https://github.com/MicrosoftLearning/AI-102-AIEngineer`, expand the 22-create-a-search-solution folder and edit the batch file, **UploadDocs.cmd** with the required values.
 
-4. Run the **UploadDocs.cmd** batch file using Azure CLI,after logging in to Azure. This will create a blob container in your storage account and upload the documents in the data folder to it.
-
+4. open and explore the **UploadDocs.cmd** batch file using VS Code and later execute it. Make sure that the required resources and files are created in Azure.
+    > Hint: Make sure to log in to Azure in cmd to execute the file.
+     
 1. Import data for AI Search, opting for Blob Storage. Establish a link with Azure AI Services, customize the index, and create an indexer for smooth integration.
    
-1. **Interact with indexed documents**
+1. **Interact and search queries with indexed documents**
 
    - Adjust queries for counts and specific fields, define search components, and query the modified index for refined and targeted information retrieval.
 
 1. **Create Search Client Application** 
 
-   - Update the application settings , configure the web app, and then run it to explore search functionality.
+   - Update the application settings, configure the web app, and then run it to explore search functionality.
 
+      > Hint: The app is available in two languages, use the one that is in your scope.
 
 ## Success criteria:
 To complete this challenge successfully:
@@ -41,5 +50,25 @@ To complete this challenge successfully:
 ## Additional Resources:
 
 - Refer to [What is Azure AI Search](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search) for reference.
-- [Create an Azure AI Search Solution](https://github.com/MicrosoftLearning/AI-102-AIEngineer/blob/master/Instructions/22-azure-search.md)
+- [What are Indexes in Azure AI Search](https://learn.microsoft.com/en-us/azure/search/search-what-is-an-index)
 - [Searching document text at scale using Azure Cognitive Search](https://benalexkeen.com/searching-document-text-at-scale-using-azure-cognitive-search/)
+
+## Challenge Validation
+ 
+1. After completing the challenge, you need to visit the **Lab Validation (1)** tab and click on the **VALIDATE (2)** button under Actions to perform the validation steps. Verify that you have met the success criteria of the challenge. 
+ 
+    ![](media/validate01.png "Validation")
+ 
+1. If the validation status displays **Success** for all the validation steps, **congratulations!**. This means that you have successfully completed the challenge and have unlocked the next challenge.
+ 
+     ![](media/validate02.png "Validation")
+
+1. If the validation status displays **Fail**, **don't worry!** This could mean that you did not perform the challenge correctly.
+ 
+     ![](media/validate03.png "Validation")
+ 
+1. Hover your mouse over the `i` **(1)** icon to see the error message and determine the root cause of the failure. Based on the error message, revisit the challenge as necessary, and redo the validation by clicking on the **VALIDATE (3)** button again.
+
+   ![](media/validate04.png "Validation")
+ 
+1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.
