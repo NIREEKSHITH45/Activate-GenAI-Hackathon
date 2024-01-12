@@ -69,7 +69,7 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
 ## Additional Resources:
 
 -  Refer to the  [Azure Search OpenAI demo GitHub repository](https://github.com/cmendible/azure-search-openai-demo) for detailed information on the architecture.
--  [Deploying Solution](https://github.com/Azure/activate-genai/blob/main/infra/README.md)
+-  [Azure copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
 
 ## Challenge Validation
  
