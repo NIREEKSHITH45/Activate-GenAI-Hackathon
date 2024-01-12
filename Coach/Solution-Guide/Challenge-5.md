@@ -1,4 +1,4 @@
-# Challenge 05: Utilize API Management to make Azure OpenAI load-balanced
+# Challenge 05: Load Balancing Azure OpenAI Resources
 
 ## Lab scenario
 Have you ever experienced a failure in Azure OpenAI Service (AOAI) because a provisioned AOAI resource is out of service or the API is unavailable due to Rate Limit? Fortunately, Azure allows multiple AOAI resources to be created in multiple regions, which can be used to load balance traffic and automatically remove non-functioning resources from the back end to provide redundancy. But how?
