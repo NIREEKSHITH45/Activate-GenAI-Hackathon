@@ -1,5 +1,7 @@
 # Challenge 04: Interact with Chat App
 
+### Estimated Time: 30 minutes
+
 ## Introduction:
 
 Contoso Ltd aims to improve product support with a user-friendly chat application, leveraging AI technology. In this challenge, our team is focusing on ensuring a smooth experience for people using the chat app. We're figuring out the best way for conversations to flow, adding interesting features, and making the app easy to navigate. Our aim is to craft a chat app that's not only simple and engaging but also something users genuinely enjoy using.
