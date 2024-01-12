@@ -81,26 +81,26 @@ Once you've added a code sample to your application, choose the green Start butt
 
 1. Go to the Resource group, search, and select the **Azure AI services multi-service account** resource type with the name similar to **cogservicesbpa{suffix}**.
 
-   ![Alt text](images/select-multi-service.png)
+   ![](../media/bpa1.png)
 
 2. Click on the Document Intelligence tab and select **Go to studio**.
 
-   ![Alt text](images/select-document-intelligence.png)
+   ![](../media/bpa2.png)
 
 3. In Document Intelligence Studio, scroll down to Custom Models and choose **Try it now**.
 
-   ![Alt text](images/tryitnow.png)
+   ![](../media/bpa3.png)
 
 4. Under My Project, click on **+ Create a project**.
 
-   ![Alt text](images/create-a-project.png)
+   ![](../media/bpa4.png)
 
 5. Enter the following details and click on **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
 
-     ![Alt text](images/enter-project-details.png)
+     ![](../media/bpa5.png)
 
 6. Enter the following details **Configure service resource** and click on **Continue** **(5)**.
 
@@ -109,7 +109,7 @@ Once you've added a code sample to your application, choose the green Start butt
    - Form Recognizer or Cognitive Service Resource: Select the available Cognitive Service Form Recognizer name similar to **cogservicesbpass{suffix}** **(3)**.
    - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
 
-     ![configuring service resource](images/configure-service-resource.png)
+     ![](../media/bpa6.png)
 
 7. Enter the following details **Connect training data source** and click on **Continue** **(8)**.
 
@@ -121,11 +121,11 @@ Once you've added a code sample to your application, choose the green Start butt
    - Pricing tier: **Standard_LRS Standard** **(6)**.
    - Blob container name: **custommoduletext** **(7)**.
    
-        ![storage account](images/connect-training-data-source.png)
+        ![](../media/bpa7.png)
 
 8. Validate the information and choose **Create project**.
 
-     ![Alt text](images/create-project.png)
+     ![](../media/bpa8.png)
 
 ### Task 3: Train and Label data
 
@@ -133,53 +133,53 @@ In this step, you will upload 6 training documents to train the model.
 
 1. Click on **Browse for files**.
 
-     ![Browse for files](images/browse-for-files.png)
+     ![](../media/bpa2-1.png)
 
 2.  On the file explorer, enter the following `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** path hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and hit **Open** **(3)**.
 
-     ![train-upload](images/train-upload.png)
+     ![](../media/bpa2-2.png)
 
 3. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
 
-     ![train-upload](images/run-now.png)
+     ![](../media/bpa2-3.png)
 
 4. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization_sample** **(3)** and hit **enter**.
 
-     ![run-now](images/add-field.png)
+     ![](../media/bpa2-4.png)
 
-     ![run-now](images/add-field-name.png)
+     ![](../media/bpa2-4.1.png)
 
 5. Label the new field added by selecting **CONTOSO LTD** in the top left of each document uploaded. Do this for all six documents.
 
-     ![train-module](images/train-module.png)
+     ![](../media/bpa2-5.png)
 
 6. Once all the documents are labeled, click on **Train** in the top right corner.
 
-     ![Train](images/train-module1.png)
+     ![](../media/bpa2-6.png)
 
 7. Specify the model ID as **customfrs** **(1)**, Model Description as **custom model** **(2)**, from the drop-down select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
 
-     ![Name](images/train-a-new-model.png)
+     ![](../media/bpa2-7.png)
 
 8. Click on **Go to Models**. 
 
-   ![Alt text](images/training-in-progress.png)
+   ![](../media/bpa2-8.png)
 
 9. Wait till the model status shows **succeeded** **(1)**. Once the status Select the model **customfrs** **(2)** you created and choose **Test** **(3)**.
 
-     ![select-models](images/select-models1.png)
+     ![](../media/bpa2-9.png)
 
 10. On the Test model window, click on **Browse for files**. 
 
-     ![select-models](images/test-upload.png)
+     ![](../media/bpa2-10.png)
 
 11. On the file explorer, enter the following `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** path hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
 
-     ![test-file-upload](images/test-file-upload.png)
+     ![](../media/bpa2-11.png)
 
 12. Once uploaded, select one test model, and click on **Run analysis** **(1)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(2)** we created in the last step along with its confidence score.
 
-     ![Alt text](images/result.png)
+     ![](../media/bpa2-12.png)
 
 ### Task 4: Build a new pipeline with the custom model module in BPA
 
@@ -187,7 +187,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 1. Navigate back to the Resource groups and select the resource group **business-process -<inject key="Deployment ID" enableCopy="false"/>**.
 
-    ![Alt text](images/rgg.png)
+    ![](../media/bpa2-12.png)
 
 2. Go to the Resource group, search, and select the **Static Web App** resource type with the name similar to **webappbpa{suffix}**.
 
