@@ -1,5 +1,7 @@
 # Challenge 02: Implement Document Search with Azure AI Search
 
+### Estimated Time: 120 minutes
+
 ## Introduction:
 
 In the previous challenge, you successfully set up models in the Azure OpenAI service. Now, Contoso needs a way for its team to quickly find information. This challenge focuses on using Azure AI Search to make the search process easier for the team.
