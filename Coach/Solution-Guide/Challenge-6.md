@@ -76,10 +76,8 @@ In this lab, we've equipped you with the essential artifacts to explore the capa
 1. Update {your-source-container-SAS-URL} and {your-target-container-SAS-URL} with values from your Azure portal Storage account containers instance
 
 Once you've added a code sample to your application, choose the green Start button next to document-translation-qs to build and run your program, or press F5.
-   
-### Instructions
 
-### Task 1: Creating a Form Recognizer Resource
+### Task 2: Creating a Form Recognizer Resource
 
 1. Go to the Resource group, search, and select the **Azure AI services multi-service account** resource type with the name similar to **cogservicesbpa{suffix}**.
 
@@ -129,7 +127,7 @@ Once you've added a code sample to your application, choose the green Start butt
 
      ![Alt text](images/create-project.png)
 
-### Task 2: Train and Label data
+### Task 3: Train and Label data
 
 In this step, you will upload 6 training documents to train the model.
 
@@ -183,7 +181,7 @@ In this step, you will upload 6 training documents to train the model.
 
      ![Alt text](images/result.png)
 
-### Task 3: Build a new pipeline with the custom model module in BPA
+### Task 4: Build a new pipeline with the custom model module in BPA
 
 After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
 
@@ -239,7 +237,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
       ![Upload a document](images/pipeline-folder.png)
 
-### Task 4: Configure Azure Cognitive Search 
+### Task 5: Configure Azure Cognitive Search 
 
 1. Navigate back to the resource group window, search, and select **Search Service** with a name similar to **bpa{suffix}**.
 
