@@ -11,7 +11,7 @@ This lab session proposes several approaches for load balancing of AOAI resource
 4. You already have one copy of the valid API key.
 5. You have already set up the HTTP client of your choice such as curl command.
 
-# Solution Guide
+## Solution Guide
 
 ## Task 1: Setting up the prerequisites
 
