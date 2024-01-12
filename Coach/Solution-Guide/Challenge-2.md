@@ -17,7 +17,7 @@ If you have not already cloned **AI-102-AIEngineer** code repository to the envi
 
     > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
-## Solution Guide:
+## Solution Guide
 ### Create Azure resources
 
 The solution you will create for Margie's Travel requires the following resources in your Azure subscription:
