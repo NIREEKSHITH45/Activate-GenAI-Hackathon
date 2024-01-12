@@ -1,5 +1,7 @@
 # Challenge 05: Load Balancing Azure OpenAI Resources
 
+### Estimated Time: 90 minutes
+
 ## Introduction:
 
 Contoso Ltd aims to improve product support with a user-friendly chat application, leveraging AI technology and ensuring its systems can handle a large number of users seamlessly. In this challenge, our team is focused on smartly dividing the workload to ensure everything runs like clockwork. We're figuring out how to use our resources efficiently, adapt swiftly to changes, and keep costs in check. Our goal is to build a strong system that can handle a lot of users at the same time, providing them with a great experience without breaking the bank. We want to create a reliable system that performs well, even when many people are using it.
