@@ -1,5 +1,7 @@
 # Challenge 06: Serverless Document Batch Processing 
 
+### Estimated Time: 90 minutes
+
 ## Introduction:
 
 Contoso Ltd aims to improve product support with a user-friendly chat application, leveraging AI technology and at the same time efficiently handling loads of documents without slowing down its systems. In this challenge, our team is diving into serverless document batch processing, like having a digital helper that quickly organizes and understands new documents without causing any hassles.
