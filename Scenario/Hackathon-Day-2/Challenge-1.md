@@ -1,6 +1,6 @@
 # Challenge 01: Deploy Azure OpenAI Service
 
-### Estimated Time: 1 Hour
+### Estimated Time: 30 minutes
 
 ## Introduction
 
