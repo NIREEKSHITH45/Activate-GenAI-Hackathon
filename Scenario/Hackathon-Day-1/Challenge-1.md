@@ -38,7 +38,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
   - gpt-35-turbo
   - text-embedding-ada-002
 
-## Challenge Tasks
+## Challenge Objectives
 
 1. **Azure OpenAI Service Deployment:**
    - Set up an Azure OpenAI Service instance with SKU size Standard `S0` in your Azure portal.
