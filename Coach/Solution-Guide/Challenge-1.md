@@ -34,7 +34,7 @@ Your task is to deploy the Azure OpenAI Service, and deploy Large Language Model
   - text-embedding-ada-002
 
 ## Solution Guide
-### Task 1: Deploy a Azure open AI Service
+### Task 1: Deploy an Azure open AI Service
 
 1. In the Azure Portal, search for **Azure OpenAI** and select it.
 
