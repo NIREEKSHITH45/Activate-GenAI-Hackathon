@@ -55,7 +55,7 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
    - Follow the [manual steps](https://github.com/Azure/activate-genai/blob/main/infra/README.md) to deploy the Azure Search Index and upload the sample documents.
 ## Success Criteria:
 
-- Successful deployment of the chatapp.
+- Successful deployment of the Chat App.
 - validate if the following services are successfully deployed in the RG (Resource Group).
   - App Service
   - Document Intelligence
