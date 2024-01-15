@@ -55,7 +55,7 @@ Your task is to deploy the Azure OpenAI Service, and deploy Large Language Model
 
     ![](../media/challenge01.01.jpg)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/challenge01.02.jpg)
 
