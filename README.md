@@ -33,7 +33,7 @@ By participating in this hackathon, you will:
    - Master deploying scalable and efficient architectures in Azure using Terraform.
           
 4. **Challenge 04: Implement Chat App with Azure OpenAI LLM**
-   - Navigate and explore the web app, interact adeptly with Chatapp using insightful questions, showcase multilingual query proficiency, and implement advanced settings for comprehensive Azure OpenAI service understanding.
+   - Navigate and explore the web app, interact adeptly with Chat app using insightful questions, showcase multilingual query proficiency, and implement advanced settings for comprehensive Azure OpenAI service understanding.
           
 5. **Challenge 05: Load Balancing Azure OpenAI Resources**
     - Optimize Azure OpenAI resource performance through effective load balancing with Azure API Management (APIM).
