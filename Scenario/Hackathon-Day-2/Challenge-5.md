@@ -4,7 +4,7 @@
 
 ## Introduction:
 
-Contoso Ltd aims to improve product support with a user-friendly chat application, leveraging AI technology and ensuring its systems can handle a large number of users seamlessly. In this challenge, our team is focused on smartly dividing the workload to ensure everything runs like clockwork. We're figuring out how to use our resources efficiently, adapt swiftly to changes, and keep costs in check. Our goal is to build a strong system that can handle a lot of users at the same time, providing them with a great experience without breaking the bank. We want to create a reliable system that performs well, even when many people are using it.
+In this challenge, our team is focused on smartly dividing the workload to ensure everything runs like clockwork. We need to figure out how to use our resources efficiently, adapt swiftly to changes, and keep costs in check. Our goal is to build a strong system that can handle a lot of users at the same time, providing them with a great experience without breaking the bank. We want to create a reliable system that performs well, even when many people are using it.
 
 Load balancing in Azure for OpenAI resources is crucial for optimizing performance and scalability. It ensures that incoming traffic is evenly distributed, preventing overloads, reducing delays, and using resources efficiently. This forms a sturdy foundation for a high-performing OpenAI infrastructure.
 
@@ -33,7 +33,7 @@ After interacting with the Chat App and deploying OpenAI services in the previou
 
 2. Within the APIM service, create an Inbound Policy for the API such that the backend (Azure OpenAI's endpoint URL) and AOAI keys are changed dynamically to implement load balancing capabilities.
 
-3. APIM’s policy is so sophisticated that it has the ability to retry under certain conditions if an error occurs on the back end.
+3. APIM’s policy is so sophisticated that it can retry under certain conditions if an error occurs on the back end.
     - Configure and edit the inbound policy to implement the retry method such that the backend HTTP status code is 200.
     - Use the `<forward-request buffer-request-body=”true” buffer-response=”false” />` within the backend policy to forward the API request to another backed for any HTTP status code of 300.
 
