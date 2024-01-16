@@ -55,17 +55,22 @@ In this hackathon, you will:
 - **Description:** Delve into the world of serverless document batch processing. Explore how document intelligence services can be utilized for processing, translating, and indexing new documents. Brainstorm how this process can be seamlessly integrated into the chat app architecture.
 
 
-## Key Features and Objectives: (WIP)
+## Key Features and Objectives: 
 
-- **Learning Resources:** Access a curated collection of learning materials, tutorials, and guides to enhance your understanding of AI concepts and technologies.
 
-- **Hands-On Labs:** Engage in practical, hands-on labs and projects that allow you to apply your AI knowledge in real-world scenarios using Azure services.
+- **Hands-On Learning:** Engage in practical challenges to deploy Azure OpenAI, implement document search, set up chat apps using Terraform, and deploy solutions in a real-world context.
 
-- **Community Collaboration:** Join a vibrant community of AI enthusiasts, developers, and experts. Share your experiences, ask questions, and collaborate on AI projects.
+- **Team Collaboration:** Work together with peers to share ideas and solve real problems in a friendly environment.
 
-- **Azure AI Services:** Explore and leverage Azure's powerful AI services, including Azure Cognitive Services, Azure Machine Learning, and more, to build intelligent applications.
+- **Focus on Azure OpenAI:** Learn to use and deploy Azure OpenAI models for real-world applications.
 
-- **Best Practices:** Learn best practices for designing, developing, and deploying AI solutions on Azure, ensuring scalability, reliability, and security.
+- **Solution Deployment:** Explore how to use Terraform to make deploying chat apps in Azure simple and customizable.
+
+- **Enhance Interaction Skills:** Develop skills to navigate and interact effectively with chat apps, even handling multilingual queries.
+
+- **Scalability & Load Balancing:** Learn to optimize Azure OpenAI resources for performance and implement load balancing for scalability.
+
+- **Efficient Serverless Computing:** Discover the efficiency of serverless computing for processing batches of documents seamlessly.
 
 ## Getting Started:
 
