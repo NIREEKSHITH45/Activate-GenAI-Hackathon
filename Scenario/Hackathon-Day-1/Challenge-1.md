@@ -28,7 +28,7 @@ As a Developer, your task is to assist Contoso Ltd in setting up and deploying t
    
 1. Now you will see the Azure Portal Dashboard. Click on **Resource groups** from the Navigate panel to see the resource groups.
   
-1. Confirm you have a resource group **Activate-GenAI-<inject key="Deployment ID"/>** present, as shown in the below screenshot. You need to use the **Activate-GenAI-<inject key="Resource Group Name"/>** resource group throughout this challenge.
+1. Confirm you have a resource group **Activate-GenAI** present, as shown in the below screenshot. You need to use the **<inject key="Resource Group Name"/>** resource group throughout this challenge.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
   - gpt-35-turbo
   - text-embedding-ada-002
 
-## Challenge Objectives
+## Challenge Tasks
 
 1. **Azure OpenAI Service Deployment:**
    - Set up an Azure OpenAI Service instance with SKU size Standard `S0` in your Azure portal.
@@ -64,18 +64,18 @@ To complete this challenge successfully, you should be able to:
  
 1. After completing the challenge, you need to visit the **Lab Validation (1)** tab and click on the **VALIDATE (2)** button under Actions to perform the validation steps. Verify that you have met the success criteria of the challenge. 
  
-    ![](media/validate01.png "Validation")
+    ![](../media/validate01.png "Validation")
  
 1. If the validation status displays **Success** for all the validation steps, **congratulations!**. This means that you have completed the challenge and have unlocked the next challenge.
  
-     ![](media/validate02.png "Validation")
+     ![](../media/validate02.png "Validation")
 
 1. If the validation status displays **Fail**, **don't worry!** This could mean that you did not perform the challenge correctly.
  
-     ![](media/validate03.png "Validation")
+     ![](../media/validate03.png "Validation")
  
 1. Hover your mouse over the `i` **(1)** icon to see the error message and determine the root cause of the failure. Based on the error message, revisit the challenge as necessary, and redo the validation by clicking on the **VALIDATE (3)** button again.
 
-   ![](media/validate04.png "Validation")
+   ![](../media/validate04.png "Validation")
  
 1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you to troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.
