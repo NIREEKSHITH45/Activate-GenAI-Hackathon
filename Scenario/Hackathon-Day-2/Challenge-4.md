@@ -13,12 +13,13 @@ After successfully setting up the Chatapp using Terraform in the previous challe
 
 **1. Access Web Application and Query Construction and Response:**
    
-   - Browse the chat app that you have deployed in the previous challenge.
+   - In the Azure Portal, search for **`App Services`** and select the web app you deployed in the previous challenge.
+   - Click on **"Browse"** to open your web application.
  You will be prompted with the **Northwind Health chat application** as below. 
 
    ![](../media/lab03-04.png)
 
-- In the chat application provide the below prompt and check how responses are given by the ChatGPT and Azure cognitive search services by interacting to construct search queries and retrieve candidate information from the knowledge base.
+- In the chat application provide the below prompt and check how responses are given by the ChatGPT and Azure cognitive search services by interacting to construct search queries, and retrieve candidate information from the knowledge base.
 
    ```
    What does a Product Manager do?
@@ -33,9 +34,8 @@ After successfully setting up the Chatapp using Terraform in the previous challe
    Does the project manager manage the human resources team?
    ```
 
-- As per our constructed app, we can pass context from previous parts of the chat into the prompt behind the scenes, which enables ChatGPT to answer the question of the project manager managing the human resources team. Click on the citation and you'll see the part of the plan that covers the related information.
+- As per our constructed app, we can pass context from previous parts of the chat into the prompt behind the scenes, which enables ChatGPT to answer the question if the project manager manages the human resources team. Click on the citation and you'll see the part of the plan that covers the related information.
 
-- Customize the queries and try out if the app sends the correct response. 
 
 **2. Multilingual Query Capability:**
    
