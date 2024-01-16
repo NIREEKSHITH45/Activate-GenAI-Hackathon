@@ -28,7 +28,7 @@ As a Developer, your task is to assist Contoso Ltd in setting up and deploying t
    
 1. Now you will see the Azure Portal Dashboard. Click on **Resource groups** from the Navigate panel to see the resource groups.
   
-1. Confirm you have a resource group **Activate-GenAI-<inject key="Deployment ID"/>** present, as shown in the below screenshot. You need to use the **Activate-GenAI-<inject key="Resource Group Name"/>** resource group throughout this challenge.
+1. Confirm you have a resource group **Activate-GenAI** present, as shown in the below screenshot. You need to use the **<inject key="Resource Group Name"/>** resource group throughout this challenge.
 
 ## Prerequisites
 
