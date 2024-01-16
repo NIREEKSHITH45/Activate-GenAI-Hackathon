@@ -54,7 +54,8 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
    - Configure Terraform scripts to provision Azure resources accurately.
 
 3. **Azure Search Index Deployment:**
-   - Follow the [manual steps](https://github.com/Azure/activate-genai/blob/main/infra/README.md) to deploy the Azure Search Index and upload the sample documents.
+   - Use the `prepdocs.ps1` from the scripts folder to analyze and upload the data to the storage account. 
+
 ## Success Criteria:
 
 - Successful deployment of the Chat App.
@@ -69,6 +70,7 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
   - App Service Plan
   - Storage Account
 - Validate if the data is populated into the storage container named `content`.
+- The Chat app should be accessible using the Azure App service.
 
 ## Additional Resources:
 
