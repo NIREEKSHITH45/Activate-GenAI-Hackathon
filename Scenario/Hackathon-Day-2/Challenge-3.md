@@ -28,18 +28,6 @@ Together, these services create a responsive chat application that combines AI f
 
 ![](../media/appcomponents.png)
 
-## Pre-requisites:
-**Setup your Environment**
-
-Before you begin the Challenge Lab, please ensure you have the following prerequisites installed in your lab environment:
-* [Azure CLI v2.53.0 or later](https://aka.ms/azure-dev/install/)
-* [Terraform v1.6.0 or later](https://developer.hashicorp.com/terraform/install)
-* Install [python 3.12.1](https://www.python.org/downloads)
-  * **Important**: Python and the pip package manager must be in the path in Windows for the setup scripts to work.
-  * **Important**: Ensure you can run `python --version` from console. On Ubuntu, you might need to run `sudo apt install python-is-python3` to link `python` to `python3`.
-* Install [Visual Studio Code](https://code.visualstudio.com/download/)
-* [Node.js 14+](https://nodejs.org/en/download/)
-* [Git](https://git-scm.com/downloads)
 
 ## Challenge Objectives: (WIP)
 
