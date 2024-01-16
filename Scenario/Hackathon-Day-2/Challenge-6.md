@@ -6,7 +6,7 @@
 
 In this challenge, our team is diving into serverless document batch processing, like having a digital helper that quickly organizes and understands new documents without causing any hassles.
 
-Our goal here is pure efficiency. You will figure out how to seamlessly integrate this system with our chat app, using smart tools to translate and organize new documents without making things complicated or slow.
+Our goal here is pure efficiency. You will need to figure out, how to seamlessly integrate this system with our chat app, using smart tools to translate and organize new documents without making things complicated or slow.
 
 After mastering load balancing among Azure OpenAI resources in various regions in the previous challenge, our current focus is exploring the accelerator's capabilities to build pipelines across diverse services for AI solutions tailored to our business needs.
 
