@@ -31,7 +31,7 @@ As a Developer, your task is to assist Contoso Ltd in setting up and deploying t
 1. Confirm you have a resource group **Activate-GenAI** present, as shown in the below screenshot. You need to use the **<inject key="Resource Group Name"/>** resource group throughout this challenge.
 
 
-## Challenge Tasks
+## Challenge Objectives
 
 1. **Azure OpenAI Service Deployment:**
    - Set up an Azure OpenAI Service instance with SKU size Standard `S0` in your Azure portal.
