@@ -45,7 +45,7 @@ In this hackathon, you will:
 ## Key Features and Objectives:
 
 
-- **Hands-On Learning:** Dive into practical challenges to deploy Azure OpenAI, implement document search, and set up chat apps using Terraform.
+- **Hands-On Learning:** Engage in practical challenges to deploy Azure OpenAI, implement document search, and set up chat apps using Terraform.
 
 - **Team Collaboration:** Work together with peers to share ideas and solve real problems in a friendly environment.
 
