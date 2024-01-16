@@ -17,11 +17,13 @@ This hack consists of four challenges and is designed to be self-administered, s
 
 ## Learning Objectives
 
-By participating in this hackathon, you will:
+By participating in this hackathon, you will learn how to:
 
-- Gain practical experience with Azure AI technologies.
-- Enhance your problem-solving skills in AI application development.
-- Collaborate with peers and industry professionals to tackle real-world challenges.
+- Understand Gen AI concepts and how they can be used to build chat applications.
+- Learn how to configure Azure OpenAI service and use Azure AI Search to build private Open AI with your own data.
+- Gain practical experience in implementing a chat app architecture with Terraform.
+- Explore features of chat apps, such as multilingual queries and advanced chat response settings.
+- Collaborate with other participants to tackle challenges and share insights.
 
 ## Challenges
 
