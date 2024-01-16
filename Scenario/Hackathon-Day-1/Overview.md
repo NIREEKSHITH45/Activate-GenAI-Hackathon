@@ -11,7 +11,7 @@ Active Gen AI is all about empowering you to harness the potential of Azure Open
 - Dive into the significance of AI search using Azure AI Search.
 - Understand the importance of Azure AI search in the context of building private Open AI with your own data.
 - Deploy a chat app architecture with Terraform, emphasizing the practical aspects of implementation.
-- Experience interacting with a chat app and explore features in multilingual queries, and use of advanced settings to influence chat responses.
+- Experience interacting with a chat app and exploring features in multilingual queries, and use of advanced settings to influence chat responses.
 
 ## Setting Expectations:
 In this hackathon, you will:
@@ -56,15 +56,15 @@ In this hackathon, you will:
 
 ## Getting Started:
 
-1. **Understand the Concept**: A Hackathon is an event in which developers, designers, and other participants collaborate intensively over a short period to solves a particular problem or serves a specific need based on the challenges provided in the hackathon.
+1. **Understand the Concept**: A Hackathon is an event in which developers, designers, and other participants collaborate intensively over a short period to solve a particular problem or serve a specific need based on the challenges provided in the hackathon.
 
 2. **Identify the Challenge**: To understand the challenge in a hackathon, grasp the theme or problem statement thoroughly and familiarize yourself with the required technology, in this case, Active Gen AI.
 
-3. **Collaborate with Team members**: You might not be coding the solution yourself, but your input and collaboration are essential. Your role could involve defining the problem, suggesting features, and testing the usability of the final product.
+3. **Collaborate with Team Members**: You might not be coding the solution yourself, but your input and collaboration are essential. Your role could involve defining the problem, suggesting features, and testing the usability of the final product.
 
 4. **Use and Test the Solution**: Once a solution is ready, you'll have a chance to use and test it. You can provide feedback on its functionality, interface, and overall user experience.
 
-5. **Present the Solution**: You can present the solution at the end of the Hackathon. This could involve explaining the problem, demonstrating how the solution works.
+5. **Present the Solution**: You can present the solution at the end of the Hackathon. This could involve explaining the problem, and demonstrating how the solution works.
 
 
 In total, the Active GenAI Hackathon is an excellent opportunity for you to get involved in the development process, helping to shape a solution that can have a positive impact on the real world.
