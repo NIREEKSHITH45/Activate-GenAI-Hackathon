@@ -1,6 +1,6 @@
 # Activate Gen AI Challenge Lab 
 
-Welcome to the Active Gen AI challenge hackathon! This event is designed to enhance your skills in the exciting field of AI. Below, you'll find essential information to get started.
+Welcome to the Activate Gen AI challenge hackathon! This event is designed to enhance your skills in the exciting field of AI. Below, you'll find essential information to get started.
 
 ## Table of Contents
 
@@ -11,13 +11,13 @@ Welcome to the Active Gen AI challenge hackathon! This event is designed to enha
 
 ## Introduction
 
-In this hackathon, you will immerse yourself in the world of Active Gen AI, exploring innovative solutions and pushing the boundaries of artificial intelligence.
+In this hackathon, you will immerse yourself in the world of Activate Gen AI, exploring innovative solutions and pushing the boundaries of artificial intelligence.
 
 ## Learning Objectives
 
 By participating in this hackathon, you will:
 
-- Gain practical experience with Active Gen AI technologies.
+- Gain practical experience with Activate Gen AI technologies.
 - Enhance your problem-solving skills in AI application development.
 - Collaborate with peers and industry professionals to tackle real-world challenges.
 
