@@ -19,7 +19,7 @@ This hack consists of six challenges and is designed to be self-administered, so
 
 By participating in this hackathon, you will:
 
-- Gain practical experience with Active Gen AI technologies.
+- Gain practical experience with Azure AI technologies.
 - Enhance your problem-solving skills in AI application development.
 - Collaborate with peers and industry professionals to tackle real-world challenges.
 
