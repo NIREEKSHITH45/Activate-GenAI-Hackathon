@@ -1,10 +1,10 @@
-# Challenge 03:  Deploy the Chat App with Terraform
+# Challenge 03:  Deploy the AI Chat App Solution.
 
 ### Estimated Time: 150 minutes
 
 ## Introduction:
 
-In this challenge, the team will learn how to set up this chat app using Terraform, focusing on user-friendliness, scalability, and easy customization for Contoso. The goal is to create a versatile chat app capable of handling various tasks, from assisting customers to sharing knowledge. Building on the success of deploying models in the Azure OpenAI service and creating a document search solution with Azure AI Search in previous challenges, this task involves deploying a solution for running a chat application using Terraform.
+In this challenge, the team will learn how to deploy the solution that configures and builds the AI App, focusing on user-friendliness, scalability, and easy customization for Contoso. The goal is to create a versatile chat app capable of handling various tasks, from assisting customers to sharing knowledge. Building on the success of deploying models in the Azure OpenAI service and creating a document search solution with Azure AI Search in previous challenges, this task involves deploying a solution for running a chat application using Terraform.
 
 The Chat App should be able to provide a prompt response related to the data that we have added using the Form recognizer and analyzed using the Azure search service
 
@@ -30,6 +30,7 @@ Together, these services create a responsive chat application that combines AI f
 
 ## Pre-requisites:
 **Setup your Environment**
+ > **Note**: Pre-requisites are already set up in the provided environment. If you're using your personal computer or laptop, please make sure that all necessary prerequisites are installed to complete this Hackathon.
 
 Before you begin the Challenge Lab, please ensure you have the following prerequisites installed in your lab environment:
 * [Azure CLI v2.53.0 or later](https://aka.ms/azure-dev/install/)
