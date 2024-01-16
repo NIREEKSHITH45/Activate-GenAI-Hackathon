@@ -54,7 +54,8 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
    - Configure Terraform scripts to provision Azure resources accurately.
 
 3. **Azure Search Index Deployment:**
-   - Use the `prepdocs.ps1` from the scripts folder to analyze and upload the data to the storage account. 
+   - Use the `prepdocs.ps1` from the scripts folder to analyze and upload the data to the storage account.
+      > Note:- You will need to understand and update the script based on the requirements mentioned in the script.
 
 ## Success Criteria:
 
