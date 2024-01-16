@@ -10,16 +10,16 @@ The Chat App should be able to provide a prompt response related to the data tha
 
 The chat application integrates seamlessly with different Azure services to provide an intelligent user experience. Here's a simple overview of each service:
 
-- **App Service:** This hosts the chat app, ensuring it can handle a large number of users effectively.
+- **App Service:** This hosts the chat app, ensuring it can respond to the prompts sent by users from the uploaded relatable data.
 - **Application Insights:** It proactively monitors the app's performance, taking care of issues before they become significant.
 - **Document Intelligence:** Using AI, it understands the content in uploaded documents, making user information more insightful.
 - **Azure OpenAI:** Enhances the app's capabilities with natural language understanding and responses.
 - **Shared Dashboard:** Acts as a central hub for team collaboration and data sharing.
 - **Smart Detector Alert Rule:** Monitors the app's health and notifies the team if any issues arise.
 - **Search Service:** Empowers users with dynamic and efficient search functionality within the app.
-- **Log Analytics Workspace:** Tracks and analyzes app activity, offering valuable insights.
+- **Log Analytics Workspace:** Tracks and analyzes app activity, offering valuable insights and logs.
 - **App Service Plan:** Optimizes resource allocation for optimal app performance.
-- **Storage Account:** Securely stores various data types, forming a robust foundation for the chat app.
+- **Storage Account:** Securely stores the data that will be used by the Azure AI Search service to provide the inputs to the chat app.
 
 Together, these services create a responsive chat application that combines AI features, monitoring capabilities, and efficient data management, providing Contoso with an exceptional user experience.
 
