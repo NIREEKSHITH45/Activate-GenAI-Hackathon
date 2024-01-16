@@ -22,7 +22,7 @@ To achieve this, you'll start by cloning a provided repository and establishing 
 3. In Visual Studio Code, in the Explorer pane which contains the folder of the cloned repository `https://github.com/MicrosoftLearning/AI-102-AIEngineer`, expand the 22-create-a-search-solution folder and edit the batch file, **UploadDocs.cmd** with the required values.
 
 4. open and explore the **UploadDocs.cmd** batch file using VS Code and later execute it. Make sure that the required resources and files are created in Azure.
-    > Hint: Make sure to log in to Azure in cmd to execute the file.
+     > Hint: Make sure to log in to Azure in cmd to execute the file.
      
 1. Import data for AI Search, opting for Blob Storage. Establish a link with Azure AI Services, customize the index, and create an indexer for smooth integration.
    
