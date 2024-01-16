@@ -4,7 +4,7 @@
 
 ## Introduction:
 
-Contoso Ltd aims to improve product support with a user-friendly chat application, leveraging AI technology. In this challenge, our team is focusing on ensuring a smooth experience for people using the chat app. We're figuring out the best way for conversations to flow, adding interesting features, and making the app easy to navigate. Our aim is to craft a chat app that's not only simple and engaging but also something users genuinely enjoy using.
+In this challenge, our team is focusing on ensuring a smooth experience for people using the chat app. We're figuring out the best way for conversations to flow, adding interesting features, and making the app easy to navigate. We aim to craft a chat app that's not only simple and engaging but also something users genuinely enjoy using.
 
 After successfully setting up the Chatapp using Terraform in the previous challenge, our participants are now diving into the chat app experience. We're keen on making interactions effortless, enabling effective queries, supporting multilingual conversations, and exploring advanced settings to enhance the overall user experience. Our goal is to make the chat app a delightful and user-friendly tool for everyone at Contoso!
 
@@ -13,13 +13,13 @@ After successfully setting up the Chatapp using Terraform in the previous challe
 
 **1. Access Web Application and Query Construction and Response:**
    
-   - In the Azure Portal, search for **`App Services`** and select the web app you deployed in previous challenge.
+   - In the Azure Portal, search for **`App Services`** and select the web app you deployed in the previous challenge.
    - Click on **"Browse"** to open your web application.
  You will be prompted with the **Northwind Health chat application** as below. 
 
    ![](../media/lab03-04.png)
 
-- In the chat application provide the below prompt and check the how responses are given by the ChatGPT and Azure cognitive search services by interacting to construct search queries, retrieve candidate information from the knowledge base.
+- In the chat application provide the below prompt and check how responses are given by the ChatGPT and Azure cognitive search services by interacting to construct search queries, and retrieve candidate information from the knowledge base.
 
    ```
    What does a Product Manager do?
@@ -34,7 +34,7 @@ After successfully setting up the Chatapp using Terraform in the previous challe
    Does the project manager manage the human resources team?
    ```
 
-- As per our constructed our app, we can pass context from previous parts of the chat into the prompt behind the scenes, which enables ChatGPT to answer the question if the project manager manage the human resources team. Click on the citation and you'll see the part of the plan that covers the related information.
+- As per our constructed app, we can pass context from previous parts of the chat into the prompt behind the scenes, which enables ChatGPT to answer the question if the project manager manages the human resources team. Click on the citation and you'll see the part of the plan that covers the related information.
 
 
 **2. Multilingual Query Capability:**
@@ -42,7 +42,7 @@ After successfully setting up the Chatapp using Terraform in the previous challe
 - Let us make a slight change to the prompt to ask open AI to take any question that is not asked in English and respond in the language it was asked in. Go to **Developer Settings** and add the below message in the **Override prompt template** section. Click on **Close**.
 
   ```
-   convert prompt to English and provide response when asked question in different language
+   convert prompts to English and respond when asked questions in different language
    ```
 
 - In this override, when we ask a question in a different language, behind the scenes, the prompt gets converted to English to perform the search, and then the model will respond in the same language it was asked in. Enter the below prompt in the chat section and observe it's taking the question, detecting that it's in French, converting it to English, executing it as before, and then returning the expected response like before.
@@ -62,7 +62,7 @@ After successfully setting up the Chatapp using Terraform in the previous challe
 
   - Interacted with the chat application and accessed it successfully
      
-> **Important**: In this challenge, we are not validating anything !
+> **Important**: In this challenge, we are not validating anything!
 
 ## Additional Resources:
 
