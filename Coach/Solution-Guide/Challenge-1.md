@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the Deploy Azure OpenAI Service and LLM Models Challenge! This challenge is designed to test your skills in deploying the Azure OpenAI Service and it's Large Language Models (LLM) . The goal is to set up the OpenAI Service, and deploy LLM models.
+Welcome to the Deploy Azure OpenAI Service Challenge! This challenge is designed to test your skills in deploying the Azure OpenAI Service and it's Large Language Models (LLM) . The goal is to set up the OpenAI Service, and deploy LLM models.
 
 ## Description
 
@@ -74,6 +74,18 @@ Your task is to deploy the Azure OpenAI Service, and deploy Large Language Model
          ![](../media/1-3.png)
 
 7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+
+1. In the **Deployments** page again, click on **+ Create new deployment**.
+
+1. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
+    - **Select a model**: text-embedding-ada-002 (1)
+    - **Model version**: *Use the default version* (2)
+    - **Deployment name**: text-embedding-ada-002
+    - **Tokens per Minute Rate Limit (thousands)**: 40K
+  
+         ![](../media/text-ada.png)
+
+1. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
 
 ## Success Criteria:
