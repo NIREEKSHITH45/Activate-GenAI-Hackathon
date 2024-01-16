@@ -1,4 +1,4 @@
-# Active Gen AI Challenge Lab - 1 Day Hackathon
+# Activate Gen AI Challenge Lab - 1 Day Hackathon
 
 Welcome to the Active Gen AI Challenge Lab! This event is designed to enhance your skills in the exciting field of AI. Below, you'll find essential information to get started.
 
