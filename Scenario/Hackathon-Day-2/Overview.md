@@ -36,23 +36,22 @@ In this hackathon, you will:
 - Collaborate with fellow participants, share insights, and collectively tackle challenges.
 
 ### Use Case Ideation & Brainstorming:
-**1: Deploy Azure OpenAI Service and Large Language Models**
-- **Description:** Understand the challenges and possibilities of deploying Azure OpenAI services and integrating large language models into your applications. Brainstorm how this can be utilized in real-world scenarios, from content generation to natural language understanding.
 
-**2: Implement Document Search with Azure AI Search**
-- **Description:** Delve into the world of document search using Azure AI Search. Explore use cases such as semantic search, knowledge mining, and information retrieval. Brainstorm how effective document search can enhance decision-making and knowledge discovery.
+1. **Customer Support Chatbot**
+Use Azure OpenAI and Azure AI Search to create a customer support chatbot that can handle multilingual queries and provide personalized responses based on user data.
 
-**3: Deploy the Chatapp with Terraform**
-- **Description:** Experience the practical aspects of deploying a chat app architecture. Consider user interactions, scalability, and customization. Brainstorm how personalized chat applications can be utilized across various domains, from customer support to knowledge sharing.
+1. **Language Translation App**
+Utilize the serverless document batch processing feature to create a language translation app that can automatically translate large volumes of documents into different languages.
 
-**4: Interact with Chat App**
-- **Description:** Dive into the user experience of interacting with a chat app. Explore possibilities for conversation flow, user engagement, and feature enhancement. Brainstorm creative ways to make the chat app intuitive, interactive, and user-friendly.
+1. **Virtual Assistant for Healthcare**
+Leverage Azure OpenAI and Azure AI Search to create a virtual assistant that can help patients book appointments, get prescription refills, and answer common health-related questions.
 
-**5: Load Balancing Azure OpenAI Resources**
-- **Description:** Address the challenges of scalability by exploring load balancing techniques for Azure OpenAI resources. Brainstorm scenarios where load balancing is crucial and how it can enhance the performance and reliability of chat applications.
+1. **E-commerce Chatbot**
+Apply Azure OpenAI and Azure AI Search to create a chatbot that assists customers in finding products, making purchases, and tracking their orders.
 
-**6: Serverless Document Batch Processing**
-- **Description:** Delve into the world of serverless document batch processing. Explore how document intelligence services can be utilized for processing, translating, and indexing new documents. Brainstorm how this process can be seamlessly integrated into the chat app architecture.
+1. **HR Chatbot**
+Harness the power of Azure OpenAI and Azure AI Search to create a chatbot that supports employees with HR-related tasks such as submitting time-off requests, updating personal information, and accessing company policies.
+
 
 
 ## Key Features and Objectives: 
