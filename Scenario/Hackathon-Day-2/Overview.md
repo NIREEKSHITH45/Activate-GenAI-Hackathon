@@ -52,10 +52,7 @@ Apply Azure OpenAI and Azure AI Search to create a chatbot that assists customer
 1. **HR Chatbot**
 Harness the power of Azure OpenAI and Azure AI Search to create a chatbot that supports employees with HR-related tasks such as submitting time-off requests, updating personal information, and accessing company policies.
 
-
-
-## Key Features and Objectives: 
-
+## Objectives: 
 
 - **Hands-On Learning:** Engage in practical challenges to deploy Azure OpenAI, implement document search, set up chat apps using Terraform, and deploy solutions in a real-world context.
 
