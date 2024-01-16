@@ -4,7 +4,9 @@
 
 ## Introduction:
 
-Contoso Ltd aims to improve product support with a user-friendly chat application, leveraging AI technology. In this challenge, the team will learn how to set up this chat app using Terraform, focusing on user-friendliness, scalability, and easy customization for Contoso. The goal is to create a versatile chat app capable of handling various tasks, from assisting customers to sharing knowledge. Building on the success of deploying models in the Azure OpenAI service and creating a document search solution with Azure AI Search in previous challenges, this task involves deploying a solution for running a chat application using Terraform.
+In this challenge, the team will learn how to set up this chat app using Terraform, focusing on user-friendliness, scalability, and easy customization for Contoso. The goal is to create a versatile chat app capable of handling various tasks, from assisting customers to sharing knowledge. Building on the success of deploying models in the Azure OpenAI service and creating a document search solution with Azure AI Search in previous challenges, this task involves deploying a solution for running a chat application using Terraform.
+
+The Chat App should be able to provide a prompt response related to the data that we have added using the Form recognizer and analyzed using the Azure search service
 
 The chat application integrates seamlessly with different Azure services to provide an intelligent user experience. Here's a simple overview of each service:
 
@@ -52,10 +54,12 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
    - Configure Terraform scripts to provision Azure resources accurately.
 
 3. **Azure Search Index Deployment:**
-   - Follow the [manual steps](https://github.com/Azure/activate-genai/blob/main/infra/README.md) to deploy the Azure Search Index and upload the sample documents.
+   - Use the `prepdocs.ps1` from the scripts folder to analyze and upload the data to the storage account.
+      > Note:- You will need to understand and update the script based on the requirements mentioned in the script.
+      
 ## Success Criteria:
 
-- Successful deployment of the chatapp.
+- Successful deployment of the chat-app.
 - validate if the following services are successfully deployed in the RG (Resource Group).
   - App Service
   - Document Intelligence
