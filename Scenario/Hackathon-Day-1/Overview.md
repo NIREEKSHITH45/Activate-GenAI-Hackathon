@@ -46,8 +46,7 @@ Harness the power of Azure OpenAI and Azure AI Search to create a chatbot that s
 
 
 
-## Key Features and Objectives:
-
+## Objectives:
 
 - **Hands-On Learning:** Engage in practical challenges to deploy Azure OpenAI, implement document search, and set up chat apps using Terraform.
 
