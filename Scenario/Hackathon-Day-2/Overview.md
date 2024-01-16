@@ -35,7 +35,7 @@ In this hackathon, you will:
 **Collaborative Learning:**
 - Collaborate with fellow participants, share insights, and collectively tackle challenges.
 
-### Use Case Ideation & Brainstorming:
+## Use Case Ideation & Brainstorming:
 
 1. **Customer Support Chatbot**
 Use Azure OpenAI and Azure AI Search to create a customer support chatbot that can handle multilingual queries and provide personalized responses based on user data.
