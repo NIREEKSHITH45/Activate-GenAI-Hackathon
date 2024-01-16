@@ -4,7 +4,7 @@
 
 ## Introduction:
 
-In this challenge, the team will learn how to set up this chat app using Terraform, focusing on user-friendliness, scalability, and easy customization for Contoso. The goal is to create a versatile chat app capable of handling various tasks, from assisting customers to sharing knowledge based on the data provided. Building on the success of deploying models in the Azure OpenAI service and creating a document search solution with Azure AI Search in previous challenges, this task involves deploying a solution for running a chat application using Terraform.
+In this challenge, the team will learn how to set up this chat app using Terraform, focusing on user-friendliness, scalability, and easy customization for Contoso. The goal is to create a versatile chat app capable of handling various tasks, from assisting customers to sharing knowledge. Building on the success of deploying models in the Azure OpenAI service and creating a document search solution with Azure AI Search in previous challenges, this task involves deploying a solution for running a chat application using Terraform.
 
 The Chat App should be able to provide a prompt response related to the data that we have added using the Form recognizer and analyzed using the Azure search service
 
@@ -43,7 +43,7 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
 
 ## Challenge Objectives: (WIP)
 
-> **Important**: When deploying services in this challenge, please make sure to use the resource group named **Activate-GenAI-<inject key="Resource Group Name"/>**.  !
+> **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>** !
 
 1. **Clone the Repository:**
    - Clone the Active Gen AI repository: `https://github.com/Azure/activate-genai`.
@@ -56,10 +56,10 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
 3. **Azure Search Index Deployment:**
    - Use the `prepdocs.ps1` from the scripts folder to analyze and upload the data to the storage account.
       > Note:- You will need to understand and update the script based on the requirements mentioned in the script.
-
+      
 ## Success Criteria:
 
-- Successful deployment of the Chat App.
+- Successful deployment of the chat-app.
 - validate if the following services are successfully deployed in the RG (Resource Group).
   - App Service
   - Document Intelligence
@@ -71,7 +71,6 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
   - App Service Plan
   - Storage Account
 - Validate if the data is populated into the storage container named `content`.
-- The Chat app should be accessible using the Azure App service.
 
 ## Additional Resources:
 
@@ -82,18 +81,18 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
  
 1. After completing the challenge, you need to visit the **Lab Validation (1)** tab and click on the **VALIDATE (2)** button under Actions to perform the validation steps. Verify that you have met the success criteria of the challenge. 
  
-    ![](media/validate01.png "Validation")
+    ![](../media/validate01.png "Validation")
  
 1. If the validation status displays **Success** for all the validation steps, **congratulations!**. This means that you have successfully completed the challenge and have unlocked the next challenge.
  
-     ![](media/validate02.png "Validation")
+     ![](../media/validate02.png "Validation")
 
 1. If the validation status displays **Fail**, **don't worry!** This could mean that you did not perform the challenge correctly.
  
-     ![](media/validate03.png "Validation")
+     ![](../media/validate03.png "Validation")
  
 1. Hover your mouse over the `i` **(1)** icon to see the error message and determine the root cause of the failure. Based on the error message, revisit the challenge as necessary, and redo the validation by clicking on the **VALIDATE (3)** button again.
 
-   ![](media/validate04.png "Validation")
+   ![](../media/validate04.png "Validation")
  
 1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.
