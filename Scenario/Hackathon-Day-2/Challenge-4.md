@@ -13,8 +13,7 @@ After successfully setting up the Chatapp using Terraform in the previous challe
 
 **1. Access Web Application and Query Construction and Response:**
    
-   - In the Azure Portal, search for **`App Services`** and select the web app you deployed in the previous challenge.
-   - Click on **"Browse"** to open your web application.
+   - Browse the chat app that you have deployed in the previous challenge.
  You will be prompted with the **Northwind Health chat application** as below. 
 
    ![](../media/lab03-04.png)
@@ -34,15 +33,16 @@ After successfully setting up the Chatapp using Terraform in the previous challe
    Does the project manager manage the human resources team?
    ```
 
-- As per our constructed our app, we can pass context from previous parts of the chat into the prompt behind the scenes, which enables ChatGPT to answer the question if the project manager manage the human resources team. Click on the citation and you'll see the part of the plan that covers the related information.
+- As per our constructed app, we can pass context from previous parts of the chat into the prompt behind the scenes, which enables ChatGPT to answer the question of the project manager managing the human resources team. Click on the citation and you'll see the part of the plan that covers the related information.
 
+- Customize the queries and try out if the app sends the correct response. 
 
 **2. Multilingual Query Capability:**
    
 - Let us make a slight change to the prompt to ask open AI to take any question that is not asked in English and respond in the language it was asked in. Go to **Developer Settings** and add the below message in the **Override prompt template** section. Click on **Close**.
 
   ```
-   convert prompts to English and respond when asked questions in different language
+   convert prompts to English and respond when asked questions in a different language
    ```
 
 - In this override, when we ask a question in a different language, behind the scenes, the prompt gets converted to English to perform the search, and then the model will respond in the same language it was asked in. Enter the below prompt in the chat section and observe it's taking the question, detecting that it's in French, converting it to English, executing it as before, and then returning the expected response like before.
@@ -52,7 +52,7 @@ After successfully setting up the Chatapp using Terraform in the previous challe
    ```
 
 **3. Advanced Settings Impact:** 
-- Go to **Developer Settings**, in the **Exclude category** section enable the check box for **Use query-contextual summaries instead of whole documents** and **Suggest follow-up questions**. Click on **Close** and observe how the responses for prompt will change in the chat by giving the below prompt.
+- Go to **Developer Settings**, in the **Exclude category** section enable the check box for **Use query-contextual summaries instead of whole documents** and **Suggest follow-up questions**. Click on **Close** and observe how the responses for the prompt will change in the chat by giving the below prompt.
 
    ```
    What happens in a performance review?
