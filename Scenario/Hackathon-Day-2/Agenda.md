@@ -12,7 +12,7 @@
 | 10:45 - 11:45 | **Challenge 02: Implement Document Search with Azure AI Search - 120 min** | Complete [Challenge 02](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-2.md)    |
 | 11:45 - 12:00 | **Validate Challenge 02 Completion, Q&A** | Discussion, etc.                   |
 | 12:00 - 01:00 | **Lunch Break**                                           |                                    |
-| 01:00 - 03:30 | **Challenge 03: Architecture Deployment with Terraform - 150 min** | Complete [Challenge 03](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-3.md) |
+| 01:00 - 03:30 | **Challenge 03: Deploy the Chat App with Terraform - 150 min** | Complete [Challenge 03](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-3.md) |
 | 03:30 - 03:45 | **Validate Challenge 03 Completion, Q&A** | Discussion, etc.                  |
 | 03:45 - 04:00 | **Break**                                           |                                  |
 | 04:00 - 04:30 | **Challenge 04: Interact with Chat App - 30 min**   | Complete [Challenge 04](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-4.md)             |
