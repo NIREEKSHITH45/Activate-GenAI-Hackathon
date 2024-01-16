@@ -73,7 +73,7 @@ Harness the power of Azure OpenAI and Azure AI Search to create a chatbot that s
 
 ## Getting Started:
 
-1. **Understand the Concept**: A Hackathon is an event in which developers, designers, and other participants collaborate intensively over a short period to solves a particular problem or serves a specific need based on the challenges provided in the hackathon.
+1. **Understand the Concept**: Before you start working on a challange, understand the key technologies involved and their fundamentals.
 2. **Identify the Challenge**: To understand the challenge in a hackathon, grasp the theme or problem statement thoroughly and familiarize yourself with the required technology, in this case, Active Gen AI.
 3. **Collaborate with Team members**: You might not be coding the solution yourself, but your input and collaboration are essential. Your role could involve defining the problem, suggesting features, and testing the usability of the final product.
 4. **Use and Test the Solution**: Once a solution is ready, you'll have a chance to use and test it. You can provide feedback on its functionality, interface, and overall user experience.
