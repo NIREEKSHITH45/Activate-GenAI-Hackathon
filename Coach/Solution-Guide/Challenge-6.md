@@ -281,3 +281,13 @@ After you are satisfied with the custom model performance, you can retrieve the 
 10. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
    
    ![](../media/bpa4-10.png)
+
+### Task 6: Use Sample Search Application
+
+1. Now go back to the BPA webpage and select Sample Search Application
+
+![Alt text](images/image-23.png)
+
+2. You can now filter and search on items and other fields configured.
+
+![Alt text](<images/sample search app.png>)
