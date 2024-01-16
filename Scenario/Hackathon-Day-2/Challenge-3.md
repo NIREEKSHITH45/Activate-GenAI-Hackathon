@@ -41,8 +41,7 @@ Before you begin the Challenge Lab, please ensure you have the following prerequ
 
 ## Challenge Objectives: (WIP)
 
-> **Important**: When deploying services in this challenge, please make sure to use the resource group named
- **<inject key="Resource Group Name"/>**.  !
+> **Important**: When deploying services in this challenge, please make sure to use the resource group named <br> **<inject key="Resource Group Name"/>**.  !
 
 1. **Clone the Repository:**
    - Clone the Active Gen AI repository: `https://github.com/Azure/activate-genai`.
