@@ -36,10 +36,6 @@ By participating in this hackathon, you will:
    - Navigate and explore the web app, interact adeptly with Chat App using insightful questions, showcase multilingual query proficiency, and implement advanced settings for comprehensive Azure OpenAI service understanding.
           
 
-
-Each challenge comes with its own set of tasks and objectives. Click on the challenge title to get started.
-
-
 Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to our support team.
 
 Happy hacking!
