@@ -30,7 +30,7 @@ This challenge unfolds in three main stages: language translation, serverless do
 
     - Add NewtonsoftJson to your project via NuGet Packages, replace code in Program.cs with the document translation sample, update URLs, and start the program by clicking the green button or pressing F5.
 
-      >Note: Please find the documents in C:\LabFiles\Documents
+      >Note: You can find the documents in C:\LabFiles\Documents
 
 **Using Doc Intelligence:**
 
