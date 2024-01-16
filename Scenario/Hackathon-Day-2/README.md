@@ -1,6 +1,6 @@
 # Active Gen AI Challenge Lab - 2 Day Hackathon
 
-Welcome to the Active Gen AI challenge Lab! This event is designed to enhance your skills in the exciting field of AI. Below, you'll find essential information to get started.
+Welcome to the Active Gen AI Challenge Lab! This event is designed to enhance your skills in the exciting field of AI. Below, you'll find essential information to get started.
 
 ## Table of Contents
 
