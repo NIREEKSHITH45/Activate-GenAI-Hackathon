@@ -276,18 +276,18 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 9. Expand the **aggregatedResults** **(1)** > **customFormRec** **(2)** > **documents** **(3)** > **fields** **(4)** under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
 
-      ![](../media/bpa4-9.png)
+   ![](../media/bpa4-9.png)
 
 10. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
    
-   ![](../media/bpa4-10.png)
+    ![](../media/bpa4-10.png)
 
 ### Task 6: Use Sample Search Application
 
 1. Now go back to the BPA webpage and select Sample Search Application
 
-![Alt text](images/image-23.png)
+      ![](../media/bpa6.1.png)
 
 2. You can now filter and search on items and other fields configured.
 
-![Alt text](<images/sample search app.png>)
+      ![](../media/bpa6.2.png)
