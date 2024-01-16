@@ -30,13 +30,6 @@ As a Developer, your task is to assist Contoso Ltd in setting up and deploying t
   
 1. Confirm you have a resource group **Activate-GenAI** present, as shown in the below screenshot. You need to use the **<inject key="Resource Group Name"/>** resource group throughout this challenge.
 
-## Prerequisites
-
-Make sure you have the following from the CloudLabs-provided integrated environment:
-- [Azure Subscription](https://azure.microsoft.com/en-us/free/)
-- [Azure OpenAI](https://aka.ms/oai/access) access with the following models:
-  - gpt-35-turbo
-  - text-embedding-ada-002
 
 ## Challenge Tasks
 
