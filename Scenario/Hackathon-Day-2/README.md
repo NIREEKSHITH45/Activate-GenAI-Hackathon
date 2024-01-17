@@ -15,7 +15,9 @@ By participating in this hackathon, you will learn how to:
 - Gain practical experience in implementing a chat app architecture with Terraform.
 - Explore features of chat apps, such as multilingual queries and advanced chat response settings.
 - Apply Gen AI to real-world scenarios, including increased user interactions and dynamic document processing.
-- Collaborate with other participants to tackle challenges and share insights.
+- Opertionalize AI Enabled Applications with Enteprise level monitoring and logging.
+- Scale AI Enabled Applications with Enteprise level load balancing.
+
 
 ## Hackathon Format: Challenge Based
 
@@ -41,13 +43,13 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
    - Navigate and explore the web app, interact adeptly with Chat App using insightful questions, showcase multilingual query proficiency, and implement advanced settings for comprehensive Azure OpenAI service understanding.
           
 5. **Challenge 05: Load Balancing Azure OpenAI Resources**
-    - Optimize Azure OpenAI resource performance through effective load balancing with Azure API Management (APIM).
+    - Ensure optimal performance of Azure OpenAI resources by implementing load balancing strategies using Azure API Management (APIM).
   
 6. **Challenge 06: Serverless Document Batch Processing**
-   - Discover the efficiency of serverless computing for document batch processing. This challenge will walk you through analyzing documents with Azure Document Intelligence and process with OpenAI. 
+   - Embrace the power of serverless computing for batch processing documents. Analyze documents using Azure Document Intelligence Services and process them with OpenAI. 
      
 7. **Challenge 07: Implement Monitoring & Logging**
-   - In this challange, you will opertioanlize the solution and implement monitoring and logging with  with Log Analytics andd APIM
+   - Operationalize your solution by setting up monitoring and logging. Use Azure Monitor, Log Analytics, and APIM to gain insights and maintain the robustness of your AI services.
 
 
 Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to your coach.
