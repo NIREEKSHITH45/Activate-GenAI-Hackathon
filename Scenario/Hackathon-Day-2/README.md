@@ -41,14 +41,11 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
           
 4. **Challenge 04: Interact with Chat App**
    - Navigate and explore the web app, interact adeptly with Chat App using insightful questions, showcase multilingual query proficiency, and implement advanced settings for comprehensive Azure OpenAI service understanding.
-          
-5. **Challenge 05: Load Balancing Azure OpenAI Resources**
-    - Ensure optimal performance of Azure OpenAI resources by implementing load balancing strategies using Azure API Management (APIM).
-  
-6. **Challenge 06: Serverless Document Batch Processing**
+            
+6. **Challenge 05: Serverless Document Batch Processing**
    - Embrace the power of serverless computing for batch processing documents. Analyze documents using Azure Document Intelligence Services and process them with OpenAI. 
      
-7. **Challenge 07: Implement Monitoring & Logging**
+7. **Challenge 06: Implement Monitoring & Logging**
    - Operationalize your solution by setting up monitoring and logging. Use Azure Monitor, Log Analytics, and APIM to gain insights and maintain the robustness of your AI services.
 
 
