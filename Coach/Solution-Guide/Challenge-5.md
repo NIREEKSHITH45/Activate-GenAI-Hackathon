@@ -34,9 +34,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
    
 1. Copy and paste your key and document translation endpoint in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
 
-1. You paste your key and document translation endpoint into the code samples to authenticate your request to the Document Translation Service.
-
-      ![](../media/T-1.png)
+1. You will be using your key and document translation endpoint into the code samples to authenticate your request to the Document Translation Service.
    
    
 #### Task 1.2 - Create Azure Blob Storage containers
