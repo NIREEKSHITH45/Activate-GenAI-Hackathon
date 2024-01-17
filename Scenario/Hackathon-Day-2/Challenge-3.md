@@ -1,4 +1,4 @@
-# Challenge 03:  Deploy the Sample Chat App with Terraform
+# Challenge 03:  Deploy the chat app Solution.
 
 ### Estimated Time: 150 minutes
 
