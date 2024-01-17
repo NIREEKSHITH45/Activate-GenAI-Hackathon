@@ -1,574 +1,320 @@
-# Challenge 05: Load Balancing Azure OpenAI Resources
-
-### Estimated Time: 90 minutes
+# Challenge 06: Serverless Document Batch Processing 
 
 ## Introduction:
 
-Building on your experience with deploying and interacting with the AI-powered chat application, this challenge introduces a critical component for scalability and efficiency: load balancing for Azure OpenAI resources. Your task is to create a system that not only handles high user traffic smoothly but also optimizes resource utilization and maintains performance across different regions. This is key to providing a consistent and reliable user experience for Contoso's chat app, especially during peak usage times.
+Welcome to a pivotal challenge where Contoso Ltd aims to enhance their AI-powered chat app with a robust document processing system. This challenge focuses on creating a serverless solution for processing new documents, translating them as needed, and seamlessly storing them into Azure AI Search. This system will ensure that these documents are continuously available for consumption by Azure OpenAI, enhancing the chat app's knowledge base and response accuracy.
 
-Utilizing Azure API Management (APIM), you'll set up a load balancing mechanism for the OpenAI services. This setup will distribute workloads evenly across multiple OpenAI instances, ensuring high availability and fault tolerance. By doing so, you'll enhance the chat app's capacity to serve a larger audience efficiently, while maintaining cost-effectiveness and robust performance.
+Building on your previous achievements in load balancing Azure OpenAI resources, you will now embark on a journey to streamline document processing. This involves setting up a translation service, creating a serverless architecture for batch processing using Azure services, and leveraging technologies like Form Recognizer and Azure AI Search. Your task is to ensure that newly added documents are promptly processed, analyzed, and indexed, making them readily available for the chat app's AI to utilize.
 
-## Solution Guide
+This challenge unfolds in three main stages: language translation, serverless document batch processing using Azure services, and leveraging advanced features like Form Recognizer and AI search. We kick things off by translating files to meet language requirements. Next, you deploy a serverless architecture, utilizing Azure services, for efficient batch processing of documents. You train and test our model, establish a pipeline to convert documents into a Form Recognizer format, and bring in Azure's AI search service to verify the presence of specific documents in the processed dataset from where they can be used by Azure OpenAI. 
 
-### Task 1: Setting up the prerequisites
+You will utilize the Form Recognizer Service and the Business Process Automation (BPA) Accelerator to build pipelines across various Azure services, creating a seamless document processing solution. This challenge is a step towards realizing an AI solution that can adapt and grow with Contoso's business needs.
 
-### Task 1.1: Use the Existing Azure OpenAI resources
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/azure-openai-1-new.png)
 
-2. On the Azure AI services | Azure OpenAI blade, click on the Existing **OpenAI service**
+# Solution Guide
 
- 
-5. To capture the values of the Azure OpenAI's key and endpoint, execute the following steps:
-    - Select **Keys and Endpoints (1)** under the **Resource Management** section from the left navigation pane.
-    - Click on **Show Keys (2)**.
-    - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
-    - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
+### Task 1 - Translate the documents using Translate
 
-   ![](../media/k&e.png "Create Azure OpenAI resource")
+#### Task 1.1 - Retrieve your key and document translation endpoint
+#### Task 1.1 - Create your Azure AI Translator and retrieve the key and document translation endpoint
 
-1. For both Open AI services capture the  **keys and Endpoint** values.
+1. Navigate to Azure AI Services and select Translator from the left side menu and click on the **Create** button.
 
-### Task 1.2: Setting up API Management
+    ![](../media/ch6-1.png)
 
-API Management (APIM) is a managed API management service provided by Azure that combines various backends together to provide a unified interface for APIs. If properly configured, users only need to access the APIM’s endpoint, which can load and balance multiple AOAI resources or switch backend in the event of errors.
+1. Enter the required details and select `S1` pricing tier.
 
-1. In the **Azure portal**, search for and select **API Management Services**. and create one
-
-   ![](../media/apim-resource.png)
-
-    - **Subscription**: Default - Pre-assigned subscription **(1)**
-    - **Resource group**: Default - Select the pre-created resource group **(2)**
-    - **Region**: Select **East US (3)**
-    - **Resource Name**: Name of your choice **(4)**
-    - **Organization Name**: Contoso **(5)**
-    - **Administrator email**: User name **<inject key="AzureAdUserEmail"></inject>>(6)**
-    - **Pricing tier**: Basic **(7)**
-    - Click on **Review + Create (8)**
-      
-![](../media/APIM.jpg)
-
-3. After Creating the **API Management service**, we will add a New API to the service
-
-4. To add a new API to the API Management service, follow the steps below:
-    - Select **APIs (1)** under the **APIs** section within the left navigation pane of the APIM blade.
-
-         >**Note:** Here you can define the API and configure how it will be forwarded to the backend and finally returned to the user. There is a pre-defined          “Echo API” that is very useful as a reference.
-         
-    - Click on **+ Add API (2)**.
-    - Select the **HTTP-Manually define an HTTP API (3)**.
-    - Within the **Create an HTTP API** pop-up, enter the following:
-        - **Display Name:** `My Cool OpenAI Test` **(4)**
-        - **Name:** my-cool-openai-test (this field is auto-populated)
-          
-             >**Note:** Leave the other fields at default.
-             
-        - Click on **Create (5)**.
-
-             ![](../media/new-api-1.png)
+1. Once the Translator resource is created, please get the resource keys by following the next step.
    
-             ![](../media/new-api-2.png) 
+1. In the left rail, under Resource Management, select Keys and Endpoint.
 
-5. To configure the newly created API with an API URL suffix, perform the following:
-    - Select the **My Cool OpenAI Test (1)** API.
-    - Switch to the **Settings (2)** tab.
-    - **API URL suffix:** openai-test **(3)**
-      
-         >**Note:** Here, the base URL is shared with other APIs (e.g., Echo API); you can make this API endpoint unique by adding any suffix in the API URL            suffix field.
-         
-    - Under **Products**, select the pre-defined **Unlimited (4)** product.
-    - Ensure to uncheck **Subscription required (5)**.
-    - Click on **Save (6)**.
-
-         ![](../media/api-settings.png)
-
-6. Now that the basic setup is complete, let’s briefly explain the basic flow of APIM, which divides the process from API call to response into several stages.
-
-    - Frontend: HTTP Methods and URL paths
-    - Inbound processing: Modify the request before it is sent to the backend
-    - Backend: Backend’s HTTP(s) endpoint
-    - Outbound processing: Modify the response before it is sent to the client
-
-   ![](../media/flow-apim.png)
-
-## Task 2: Use API Management as API proxy
-
-### Task 2.1: Add API Frontend settings
-
-1. In the **Azure portal**, search for and select **API Management Services**.
-
-   ![](../media/apim-resource.png)
-
-2. Select **apim-service-<inject key="Deployment-id" enableCopy="false"></inject>**
-
-   ![](../media/4-7.png)
-
-3. Now we need to be able to access the **Completions API** and **Embeddings API** when we use AOAI resources via APIM. Since each of them has a different URL path, they need to be mapped to the backend with different paths as well. To ensure that the basic flow of APIM is understood, perform the following steps to add the API Frontend settings:
-    - Select **APIs (1)** under the **APIs** section within the left navigation pane of the APIM blade.
-    - Select **My Cool OpenAI Test (2)** API.
-    - Switch to the **Design (3)** tab.
-    - Click on **+ Add operation (4)**.
-    - Within the **Frontend** page, enter the following:
-        - **Display Name:** chat/completions **(5)**
-        - **Name:** chat-completions (auto populated)
-        - **URL:** 
-                - Select **POST (6)** from the dropdown
-                - Enter `/openai/deployments/{deployment}/chat/completions` **(7)**
-          
-             >**Note:** The `{deployment}` part is a variable that the user can change upon request to match the deployed model name.
-             
-        - Within the Template parameters section, 
-            - **TYPE:**  Enter **string** **(8)**
-            - **VALUES:** 
-                - Click on **+ Add value** and type **gpt-35-turbo (9)**
-        - Click on **Save (10)**.
-
-   ![](../media/chat-completions.png)
-
-4. Likewise, let's add another operation for Embeddings API:
-    - Select **APIs (1)** under the **APIs** section within the left navigation pane of the APIM blade.
-    - Select **My Cool OpenAI Test (2)** API.
-    - Switch to the **Design (3)** tab.
-    - Click on **+ Add operation (4)**.
-    - Within the **Frontend** page, enter the following:
-        - **Display Name:** embeddings **(5)**
-        - **Name:** chat-completions (auto populated)
-        - **URL:** 
-                - Select **POST (6)** from the dropdown
-                - Enter `/openai/deployments/{deployment}/embeddings` **(7)**
-
-          >**Note:** The `{deployment}` part is a variable that the user can change upon request to match the deployed model name.
-        - Within the Template parameters section, 
-            - **TYPE:** string **(8)**
-            - **VALUES:** 
-                - Click on **+ Add value** and type **text-embedding-ada-002 (9)**
-        - Click on **Save (10)**.
-
-   ![](../media/embeddings.png)
-
-### Task 2.2: Connect an Azure OpenAI resource to APIM
-
-Now, the goal is to achieve load balancing and redundancy with multiple AOAI resources.
-
-1. Within the **APIs** blade of the API Management service,
-    - Select the **My Cool OpenAI Test (1)** API.
-    - Switch to the **Design (2)** tab.
-    - Ensure to select **All operations (3)**.
-    - Wihtin the **Backend** tile, click on edit **HTTP(s) endpoint (4)**.
-    - Within the **Backend** page, specify the AOAI resource **Service URL (5)** with the AOAI endpoint URL that was copied earlier over a notepad.
-    - Ensure that the **Override (6)** checkbox is checked.
-    - Click on **Save (7)**.
-
-         ![](../media/backend-1.png)
-      
-         ![](../media/backend-2.png)
-
-2. Now let's try accessing the API using the APIM endpoint. Your APIM endpoint should look like this: `https://<APIM resource name>.azure-api.net/openai-test/openai/deployments/gpt-35-turbo/chat/completions?api-version=2023–05–15`. Within the **APIs** blade of the API Management service, follow the below steps to know your APIM endpoint:
-    - Select the **My Cool OpenAI Test** API.
-    - Switch to the **Settings** tab.
-    - Under the **General** section, note the **Base URL** which marks the APIM endpoint. Copy this URL over a notepad for future reference.
-
-3. Use the **Cloud Shell** button **[\>_]** to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***Bash*** environment. Please click on **Additional settings** and make the following changes:
-
-   - Use the **existing** resource group (1).
-   - **Create new** storage A/c and provide the name as **store<inject key="Deployment-id" enableCopy="false"></inject>** (2).
-   - **Create new** file share and provid the name as **fileshare<inject key="Deployment-id" enableCopy="false"></inject>** (3).
-   - Click on **Create Storage** (4).
-
-     ![](../media/5-1.png)
-  
-4. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
-
-      ![](../media/cloudshell-1.png)
-
-    > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, use the drop-down menu at the top left of the cloud shell pane to change it to ***PowerShell***.
-
-5. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
-
-6. In the Bash pane, enter the following commands to access the chat completions API via APIM:
-
-    ```Bash
-    # Chat Completions API via APIM
-    curl "https://${APIM resource name}.azure-api.net/openai-test/openai/deployments/gpt-35-turbo/chat/completions?api-version=2023-05-15" \
-    -H "Content-Type: application/json" \
-    -H "api-key: ${API_KEY}" \
-    -d '{
-    "messages": [{"role": "user", "content": "Tell me about Azure OpenAI Service."}]
-    }'
-    ```
-
-    >**Note:** Ensure to replace the `${APIM resource name}` with the name of your API Management service.
-    
-    >**Note:** Replace `${API_KEY}` with the AOAI key that was copied earlier onto a notepad.
-
-7. Upon running the above command to call the chat completions API, you should receive the following appropriate response as shown below if the API key setting is correct:
-
-   ![](../media/cloudshell-2.png)
-
-    >**Note:** Similarly even the Embeddings API should work in the same way given that a sample document is uploaded and its appropriate path is provided.
-
-    >**Note:** Below is the sample code for accessing the Embeddings API. Feel free to play around with the code for more clarity.
-
-    ```Bash
-    # Embeddings API via APIM
-    curl "https://${APIM resource name}.azure-api.net/openai-test/openai/deployments/text-embedding-ada-002/embeddings?api-version=2023-05-15" \
-    -H "Content-Type: application/json" \
-    -H "api-key: ${API_KEY}" \
-    -d '{"input": "Sample Document URL goes here"}'
-    ```
-
-### Task 2.3: Automatically load values and secrets
-
-The scenario in the previous tasks included APIM and AOAI to be linked one-to-one and the API key of AOAI ws directly specified in the request header of the bash command to access the needed API. A question arises here. What if down the road we have to handle multiple AOAI resources on the backend? Since the API Key is different for each AOAI resource, we cannot specify it in the header. Let's understand how to handle this issue.
-
-1. Within the global search bar, search for and select the **API Management Services**.
-
-   ![](../media/apim-resource.png)
-
-2. Select **apim-service-<inject key="Deployment-id" enableCopy="false"></inject>**.
-
-   ![](../media/4-7.png)
-
-3. Select **Named Values (1)** under the **API** section in the left navigation pane of the API Management Service and then click on **+ Add (2)**.
-
-   ![](../media/4-8.png)
-
-4. To add the AOAI endpoint, within the **Add named values** pane enter the following:
-    - **Name:** endpoint-us1 **(1)**
-    - **Display Name:** endpoint-us1 **(2)**
-    - **Type:** Select **Plain (3)**
-    - **Value:** Enter the Azure OpenAI endpoint that was copied earlier onto a notepad **(4)**
-    - Click on **Save (4)**.
-
-         ![](../media/add-named-value-endpoint.png)
-
-5. Within the **APIs** blade of the API Management service,
-   - Select the **My Cool OpenAI Test (1)** API.
-   - Switch to the **Design (2)** tab.
-   - Ensure to select **All operations (3)**.
-   - Click on **Backend** and then edit **HTTP(s) endpoint (4)**.
-   - Within the **Backend** page, enter the following:
-      - **Service URl:** `{{endpoint-us1}}` **(5)**
-   - Ensure that the **Override (6)** checkbox is checked.
-   - Click on **Save (7)**.
-
-        ![](../media/backend-1.png)
-     
-        ![](../media/backend-3.png)
-
-6. Navigate back to the **Named Values (1)** under the **APIs** section in the left navigation pane of the API Management Service and then click on **+ Add (2)**.
-
-   ![](../media/4-8.png)
-
-7. To add the AOAI key, within the **Add named values** pane enter the following:
-    - **Name:** endpoint-us1-key **(1)**
-    - **Display Name:** endpoint-us1-key **(2)**
-    - **Type:** Select **Secret (3)**
-    - **Value:** Enter the Azure OpenAI key value that was copied earlier onto a notepad **(4)**
-    - Click on **Save (5)**.
-
-   ![](../media/add-named-value-key.png)
-
-8. Navigate back to **APIs** under the **APIs** section in the left navigation pane of the API Management Service.
-
-9. Now, let's set the above named value pointing to the AOAI key in the header. In order to do this,
-   - Select the **My Cool OpenAI Test (1)** API.
-   - Switch to the **Design (2)** tab.
-   - Ensure to select **All operations (3)**.
-   - Click on `</>` **(4)** next to **Policies** within the **Inbound processing** tile.
+    ![](../media/ch6-2.png)
    
-   >**Note:** “Policies” is where processing and calculations can be inserted at each stage of the request and response.
+1. Copy and paste your key and document translation endpoint in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
 
-   ![](../media/inbound-processing.png)
+1. You paste your key and document translation endpoint into the code samples to authenticate your request to the Document Translation Service.
 
-10. The AOAI key is set using `<set-header name=”api-key”>` and the value will be the secret which was added within named values using `{{endpoint-us1-key}}`. Within the policy editor, replace the existing policy with the policy given below and then click on **Save**.
+      ![](../media/T-1.png)
+   
+   
+#### Task 1.2 - Create Azure Blob Storage containers
 
-   ```Policy
-   <policies>
-    <inbound>
-        <base />
-        <set-backend-service base-url="{{endpoint-us1}}" />
-        <set-header name="api-key" exists-action="override">
-            <value>{{endpoint-us1-key}}</value>
-        </set-header>
-    </inbound>
-    <backend>
-        <base />
-    </backend>
-    <outbound>
-        <base />
-    </outbound>
-    <on-error>
-        <base />
-    </on-error>
-   </policies>
-   ```
+1. You need to create containers in your Azure Blob Storage account for source and target files.
 
-   ![](../media/policy.png)
+      Source container. This container is where you upload your files for translation (required). <br>
+      Target container. This container is where your translated files are stored (required).
 
-11. Use the **Cloud Shell** button **[\>_]** to the right of the search bar at the top of the page to reopen/create a new Cloud Shell in the Azure portal, selecting a ***Bash*** environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal.
+ 1. Required authentication
+The sourceUrl , targetUrl must include a **Shared Access Signature (SAS) token**, appended as a query string. The token can be assigned to your container or specific blobs.
+     - Your source container or blob must have designated **read** and **list** access.
+     - Your target container or blob must have designated **write** and **list** access.
 
-12. After having updating the inbound processing policy, in the Bash pane, enter the following commands to access the chat completions API via APIM but this time without the `api-key` header from the curl request:
 
-    ```Bash
-    # Chat Completions API via APIM
-    curl "https://${APIM resource name}.azure-api.net/openai-test/openai/deployments/gpt-35-turbo/chat/completions?api-version=2023-05-15" \
-    -H "Content-Type: application/json" \
-    -d '{"messages": [{"role": "user", "content": "Tell me about Azure OpenAI Service."}]}'
-    ```
+ 1. Sample document
+For this project, you need a source document uploaded to your source container. You can download our [document translation sample document](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fcognitive-services-REST-api-samples%2Fmaster%2Fcurl%2FTranslator%2Fdocument-translation-sample.docx&wdOrigin=BROWSELINK) for this quickstart. The source language is English.
 
-    >**Note:** Ensure to replace the `${APIM resource name}` with the name of your API Management service.
+#### Task 1.3 - Set up your C#/.NET environment and Install Newtonsoft.Json
+   
+1. Start Visual Studio.
 
-13. Upon running the above command to call the chat completions API, you should receive the following appropriate response:
+1. On the Get Started page, choose Create a new project.
 
-   ![](../media/cloudshell-3.png)
+   ![](../media/T-2.png)
 
-   >**Note:** Similarly even the Embeddings API should work in the same way given that a sample document is uploaded and its appropriate path is provided.
+1. On the Create a new project page, enter console in the search box. Choose the Console Application template, then choose Next.
 
-### Task 2.4: Verify communication details
+   ![](../media/T-3.png)
 
-What steps can we take to troubleshoot our API testing with the curl command if it's not functioning properly? Fortunately, APIM offers a robust built-in testing feature.
+1. In the Configure your new project dialog window, enter document-translation-qs in the Project name box. Then choose Next.
 
-1. Within the **APIs** blade of the API Management service,
-    - Select the **My Cool OpenAI Test (1)** API.
-    - Switch to the **Test (2)** tab.
-    - Select the **POST chat/completions (3)** operation
-    - Within the chat/completions console, enter the following details:
-      - **Template parameters** section:
-         - **VALUE:** Select `gpt-35-turbo` **(4)**
-      - **Query parameters** section:
-         - Click on **+ Add parameter (5)**.
-         - **NAME:** `api-version` **(6)**
-         - **VALUE:** `2023-05-15` **(7)**
-      - **Headers** section:
-         - Click on **+ Add header (8)**.
-         - **NAME:** Select `Content-Type` from the dropdown **(9)**
-         - **VALUE:** `application/json` **(10)**
-      - **Request body** section:
-         - Ensure that the **Raw (11)** radio option is selected.
-         - Enter the following JSON of the request body **(12)**:
+   ![](../media/T-4.png)
 
-         ```JSON
-         {"messages": [{"role": "user", "content": "Tell me about Azure API Management Service."}]}
-         ``` 
+1. In the Additional information dialog window, select .NET 6.0 (Long-term support), and then select Create.
 
-         - Click on the **Trace (13)** button.
+   ![](../media/T-5.png)
 
-   ![](../media/test-api-1-new.png)
-   ![](../media/test-api-2-new.png)
+1. Right-click on your document-translation-qs project and select Manage NuGet Packages.
 
-2. If asked, click on **Enable tracing for an hour**.
+   ![](../media/T-6.png)
 
-   ![](../media/enable-tracing.png)
+1. Select the Browse tab and type NewtonsoftJson.
 
-3. Scroll down to the **HTTP response** section and within the **Message tab** notice the HTTP 200 success status which has a response from the assistant in JSON as shown below:
+   ![](../media/T-7.png)
+   
+1. Select the latest stable version from the dropdown menu and install the package in your project.
 
-   ![](../media/test-response.png)
+   ![](../media/T-8.png)
 
-4. Switch to the **Trace** tab within the **HTTP response** section and scroll down to view the named values. 
+#### Task 1.4 -Translate all documents in a storage container and Run your application
 
-   >**Note:** In this view, the entire process of the API receiving the request, forwarding it to the backend, and finally returning the response to the user is recorded verbatim. Notice the named values that were set in the previous section are used correctly and set in the header through policy expressions. This trace feature can be used for debugging.
+1. Open the Program.cs file.
 
-   ![](../media/response.png)
+1. Delete the pre-existing code, including the line Console.WriteLine("Hello World!").
 
-## Task 3: Load Balancing Azure OpenAI resources
+1. Copy and paste the document translation a [code sample](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) into the Program.cs file.
 
-In this task, we will try to load-balance AOAI resources using the policies that have been defined earlier in this lab session.
+1. Update **{your-document-translation-endpoint}** and **{your-key}** with values from your Azure portal Translator instance.
 
-### Task 3.1: Provision an Azure OpenAI resource
+1. Update **{your-source-container-SAS-URL}** and **{your-target-container-SAS-URL}** with values from your Azure portal Storage account containers instance
 
-This sub-task includes the creation of a new Azure OpenAI instance deployed in the `australiaeast` region in addition to the earlier created AOAI resource deployed in the `eastus` region.
+Once you've added code sample to your application, choose the green Start button next to document-translation-qs to build and run your program, or press F5.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+### Task 2: Creating a Form Recognizer Resource
+1. Navigate to **Azure AI services multi-service account** and click on the **Create** button.
 
-   ![](../media/azure-openai-1-new.png)
+    ![](../media/c06-01.png)
 
-2. On the Azure AI services | Azure OpenAI blade, click on the **+ Create** button.
+1. Enter the required details and select `Standard s0` pricing tier. and **check the box**
+   
+1. Go to the Resource group, search, and select the **Azure AI services multi-service account** resource which you deployed earlier
 
-   ![](../media/openai_create-1.png)
+  ![](../media/c06-02.png)
 
-3. Create an **Azure OpenAI** resource with the following settings:
-    - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: Default - Select the pre-created resource group
-    - **Region**: Select **australiaeast (1)**
-    - **Name**: endpoint-australia-<inject key="Deployment-id" enableCopy="false"></inject> **(2)**
-    - **Pricing tier**: Standard S0 **(3)**
+2. Click on the Document Intelligence tab and select **Go to studio**.
 
-   ![](../media/openai_create-3.png)
+   ![](../media/bpa2.png)
 
-    >**Note:** Leave all the other configurations at default and then click on **Create** within the **Review + submit** tab.
+3. In Document Intelligence Studio, scroll down to **Custom Extraction Models** and choose **Try it now**.
 
-4. Wait for deployment to complete. Then navigate to the newly deployed Azure OpenAI resource in the Azure portal.
+   ![](../media/c06-03.png)
 
-5. To capture the values of the Azure OpenAI's key and endpoint, execute the following steps:
-    - Select **Keys and Endpoints (1)** under the **Resource Management** section from the left navigation pane.
-    - Click on **Show Keys (2)**.
-    - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
-    - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
+4. Under My Project, click on **+ Create a project**.
 
-   ![](../media/k&e.png "Create Azure OpenAI resource")
+   ![](../media/bpa4.png)
 
-### Task 3.2: Deploy OpenAI model
-
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
-
-   ![](../media/azure-openai-1-new.png)
-
-2. On **Azure AI Services | Azure OpenAI** blade, select **endpoint-australia-<inject key="Deployment-id" enableCopy="false"></inject>**.
-
-   ![](../media/endaus-1.png)
-
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
-
-   ![](../media/openai_studio-1.png)
-
-4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
-
-   ![](../media/create-deployment.png)
-
-5. In the **Deployments** page, click on **+ Create new deployment**.
-
-   ![](../media/create-deployment-1.png)
-
-6. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo **(1)**
-    - **Model version**: Auto-update to default **(2)**
-    - **Deployment name**: gpt-35-turbo **(3)**
-    - Click on **Advanced Settings** **(4)**
-    - **Tokens per Minute Rate Limit (thousands)**: 1K **(5)**
-    - **Enable dynamic quota**: Enabled **(6)**
-    - Click on **Create** **(7)**
-  
-   ![](../media/deploy-model-1.png "Deploy gpt-35-turbo model")
-
-   >**Note:** `text-embedding-ada-002` is not available in this region.
-
-   > **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
-
-### Task 3.3: Set up Named values for the AOAI key and endpoint
-
-1. Within the global search bar, search for and select the **API Management Services**.
-
-   ![](../media/apim-resource.png)
-
-2. Select **apim-service-<inject key="Deployment-id" enableCopy="false"></inject>**.
-
-   ![](../media/4-7.png)
-
-3. Select **Named Values (1)** under the **API** section in the left navigation pane of the API Management Service and then click on **+ Add (2)**.
-
-   ![](../media/4-8.png)
-
-4. To add the AOAI endpoint, within the **Add named values** pane enter the following:
-    - **Name:** endpoint-australia **(1)**
-    - **Display Name:** endpoint-australia **(2)**
-    - **Type:** Select **Plain (3)**
-    - **Value:** Enter the Azure OpenAI endpoint of the instance deployed in the Australia region. **(4)**
-    - Click on **Save (4)**.
+5. Enter the following details and click on **Continue**  **(3)**.
     
-   ![](../media/add-named-value-endpoint-australia.png)
+   - Project name: **testproject** **(1)**.
+   - Description: **Custom model project** **(2)**.
 
-5. To add the AOAI key, within the **Add named values** pane enter the following:
-    - **Name:** endpoint-australia-key **(1)**
-    - **Display Name:** endpoint-australia-key **(2)**
-    - **Type:** Select **Secret (3)**
-    - **Value:** Enter the Azure OpenAI key value of the instance that's deployed in the Australia region. **(4)**
-    - Click on **Save (5)**.
+     ![](../media/bpa5.png)
 
-   ![](../media/add-named-value-key-australia.png)
+6. Enter the following details **Configure service resource** and click on **Continue** **(5)**.
 
-6. Navigate back to **APIs** under the **APIs** section in the left navigation pane of the API Management Service.
+   - Subscription: Select your **Default Subscription** **(1)**.
+   - Resource group: **<inject key="Resource Group Name"/>** **(2)**.
+   - Form Recognizer or Cognitive Service Resource: Select the available Cognitive Service Form Recognizer name similar to **cogservicesbpass{suffix}** **(3)**.
+   - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
 
-7. Now, let's set the above named value pointing to the AOAI key in the header. In order to do this,
-   - Select the **My Cool OpenAI Test (1)** API.
-   - Switch to the **Design (2)** tab.
-   - Ensure to select **All operations (3)**.
-   - Click on `</>` **(4)** next to **Policies** within the **Inbound processing** tile.
+     ![](../media/bpa6.png)
 
-   >**Note:** “Policies” is where processing and calculations can be inserted at each stage of the request and response.
+7. Enter the following details **Connect training data source** and click on **Continue** **(8)**.
 
-   ![](../media/inbound-processing.png)
+   - Subscription: Select your **Default Subscription** **(1)**.
+   - Resource group: **<inject key="Resource Group Name"/>** **(2)**.
+   - Check the box to **Create new storage account** **(3)**
+   - Storage account name: **formrecognizer<inject key="Deployment ID" enableCopy="false"/>** **(4)**.
+   - Location: **East US** **(5)**.
+   - Pricing tier: **Standard_LRS Standard** **(6)**.
+   - Blob container name: **custommoduletext** **(7)**.
+   
+        ![](../media/bpa7.png)
 
-8. Update the policy as follows and then click on **Save**.
+8. Validate the information and choose **Create project**.
 
-   ```C#
-   <policies>
-    <inbound>
-        <base />
-        <set-variable name="rand" value="@(new Random().Next(0, 2))" />
-        <choose>
-            <when condition="@(context.Variables.GetValueOrDefault<int>("rand") == 0)">
-                <set-backend-service base-url="{{endpoint-us1}}" />
-                <set-header name="api-key" exists-action="override">
-                    <value>{{endpoint-us1-key}}</value>
-                </set-header>
-            </when>
-            <when condition="@(context.Variables.GetValueOrDefault<int>("rand") == 1)">
-                <set-backend-service base-url="{{endpoint-australia}}" />
-                <set-header name="api-key" exists-action="override">
-                    <value>{{endpoint-australia-key}}</value>
-                </set-header>
-            </when>
-            <otherwise />
-        </choose>
-    </inbound>
-   <backend>
-        <base />
-   </backend>
-   <outbound>
-        <base />
-   </outbound>
-   <on-error>
-        <base />
-   </on-error>
-   </policies>
-   ```
+     ![](../media/bpa8.png)
 
-The above policy, First, `@(new Random().Next(0, 2))` generates a random number and assigns it to the rand variable. Next, `<choose>` and `<when>` are combined to branch the case according to the value of the variable. This is similar to a switch in a general programming language. Depending on the value, the backend and its key are changed dynamically.
+### Task 3: Train and Label data
 
-### Task 3.4: Test and trace the API
+In this step, you will upload 6 training documents to train the model.
 
-1. Within the **APIs** blade of the API Management service,
-    - Select the **My Cool OpenAI Test (1)** API.
-    - Switch to the **Test (2)** tab.
-    - Select the **POST embeddings (3)** operation
-    - Within the embeddings console, enter the following details:
-      - **Template parameters** section:
-         - **VALUE:** Select `text-embedding-ada-002` **(4)**
-      - **Query parameters** section:
-         - Click on **+ Add parameter (5)**.
-         - **NAME:** `api-version` **(6)**
-         - **VALUE:** `2023-05-15` **(7)**
-      - **Headers** section:
-         - Click on **+ Add header (8)**.
-         - **NAME:** Select `Content-Type` from the dropdown **(9)**
-         - **VALUE:** `application/json` **(10)**
-      - **Request body** section:
-         - Ensure that the **Raw (11)** radio option is selected.
-         - Enter the following JSON of the request body **(12)**:
+1. Click on **Browse for files**.
 
-         ```JSON
-         {"input": "Sample Document goes here"}
-         ``` 
-      >**Note:** Ensure to replace the input with a sample document. However, you can use this sample document url: `https://www.africau.edu/images/default/sample.pdf`.
+     ![](../media/bpa2-1.png)
 
-      - Click on the **Send (13)** button.
-      - Once the response shows a status code of 200, click on **Trace (14)**.
+2.  On the file explorer, enter the following `C:\LabFiles\Data\Custom Model Sample` **(1)** path hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and hit **Open** **(3)**.
 
-2. If asked, click on **Enable tracing for an hour**.
+     ![](../media/bpa2-2.png)
 
-   ![](../media/enable-tracing.png)
+3. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
 
-3. Switch to the **Trace** tab within the **HTTP response** section and scroll down to view the named values. 
+     ![](../media/bpa2-3.png)
 
-   >**Note:** In this view, the entire process of the API receiving the request, forwarding it to the backend, and finally returning the response to the user is recorded verbatim. Notice the named values that were set in the previous section are used correctly and set in the header through policy expressions. This trace feature can be used for debugging.
+4. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization_sample** **(3)** and hit **enter**.
 
-   ![](../media/response.png)
+     ![](../media/bpa2-4.png)
 
-4. The **Trace** feature provides a detailed look at the evaluation of expressions and the subsequent processing branches. Here a random number `1` is selected and since the `text-embedding-ada-002` model is void in the eastus region, the corresponding AOAI resource in Australia is selected for the backend.
+     ![](../media/bpa2-4.1.png)
 
-   ![](../media/loadbalanced-backend.png)
+5. Label the new field added by selecting **CONTOSO LTD** in the top left of each document uploaded. Do this for all six documents.
 
-5. Repeat the tests many times to make sure that the backend switches correctly according to a random number and that the API returns a right response no matter where it is connected. This marks the final achievement of load balancing Azure OpenAI instances using the Azure API Management service.
+     ![](../media/bpa2-5.png)
+
+6. Once all the documents are labeled, click on **Train** in the top right corner.
+
+     ![](../media/bpa2-6.png)
+
+7. Specify the model ID as **customfrs** **(1)**, Model Description as **custom model** **(2)**, from the drop-down select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
+
+     ![](../media/bpa2-7.png)
+
+8. Click on **Go to Models**. 
+
+   ![](../media/bpa2-8.png)
+
+9. Wait till the model status shows **succeeded** **(1)**. Once the status Select the model **customfrs** **(2)** you created and choose **Test** **(3)**.
+
+     ![](../media/bpa2-9.png)
+
+10. On the Test model window, click on **Browse for files**. 
+
+     ![](../media/bpa2-10.png)
+
+11. On the file explorer, enter the following `C:\LabFiles\Data\Custom Model Sample` **(1)** path hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
+
+     ![](../media/bpa2-11.png)
+
+12. Once uploaded, select one test model, and click on **Run analysis** **(1)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(2)** we created in the last step along with its confidence score.
+
+     ![](../media/bpa2-12.png)
+
+### Task 4: Build a new pipeline with the custom model module in BPA
+
+After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
+
+1. Navigate back to the Resource groups and select the resource group **<inject key="Resource Group Name"/>**.
+
+2. Go to the Resource group, search, and select the **Static Web App** resource type with the name similar to **webappbpa{suffix}**.
+
+   ![](../media/bpa3-2.png)
+
+3. On the **Static Web App** page, click on **View app in browser**.
+
+      ![](../media/bpa3-3.png)
+
+4. Once the **Business Process Automation Accelerator** page loaded successfully, click on the **Create/Update/Delete Pipelines**. 
+
+   ![](../media/bpa3-4.png)
+
+5. On the **Create Or Select A Pipeline** page, enter New Pipeline Name as **workshop** **(1)**, and click on the **Create Custom Pipeline** **(2)**. 
+
+   ![](../media/bpa3-5.png)
+
+6. On the **Select a document type to get started** page, select **PDF Document**
+
+   ![](../media/bpa3-6.png)
+
+7. On the **Select a stage to add it to your pipeline configuration** page, search and select for **Form Recognizer Custom Model (Batch)**.
+
+   ![](../media/bpa3-7.png)
+
+8. On the pop-up, enter the Model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
+
+   ![](../media/bpa3-8.png)
+
+9. On the **Select a stage to add it to your pipeline configuration** page, scroll down to review the **Pipeline Preview**, and click on **Done**.
+
+   ![](../media/bpa3-9.png)
+
+10. On the **Piplelines workshop** page, click on **Home**. 
+
+      ![](../media/bpa3-10.png)
+
+11. On the **Business Process Automation Accelerator** page, click on **Ingest Documents**.
+
+      ![](../media/bpa3-11.png)
+
+12. On the **Upload a document to Blob Storage** page, from the drop-down select a Pipeline with the name **workshop** **(1)**, and click on **Upload or drop a file right here**.
+
+      ![](../media/bpa3-12.png)
+
+13. For documents, enter the following `C:\LabFiles\Data\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
+
+      ![](../media/bpa3-13.png)
+
+### Task 5: Configure Azure Cognitive Search 
+
+1. Navigate back to the resource group window, search, and select **Search Service** with a name similar to **bpa{suffix}**.
+
+   ![](../media/bpa4-1.png)
+
+2. On the **Search service** page, click on **Import data**.
+
+   ![](../media/bpa4-2.png)
+
+3. Enter the following details for **Connect to your data**.
+
+   - Data Source: Select **Azure Blob Storage** **(1)**
+   - Data Source Name: Enter **workshop** **(2)**.
+   - Parsing mode: Select **JSON** **(3)**.
+   - Click on **Choose an existing connection** **(4)** under Connection string.
+  
+     ![](../media/bpa4-3.png)
+
+4. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix}**. 
+
+     ![](../media/bpa4-4.png)
+
+5. Select **results** **(1)** container from the **Containers** page and click on **Select** **(2)**. It will redirect back to **Connection to your data** page.
+
+     ![](../media/bpa4-5.png)
+  
+6. On the **Connect to your data** page, enter the **workshop** **(1)** as **Blob folder** and click on **Next : Add cognitive skills (Optional) (2)**.
+
+   ![](../media/bpa4-6.png)
+
+7. On the **Add cognitive skills (Optional)** click on **Skip to : Customize target index**.
+
+8. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
+
+      ![](../media/bpa4-8.png)
+
+9. Expand the **aggregatedResults** **(1)** > **customFormRec** **(2)** > **documents** **(3)** > **fields** **(4)** under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
+
+   ![](../media/bpa4-9.png)
+
+10. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
+   
+    ![](../media/bpa4-10.png)
+
+### Task 6: Use Sample Search Application
+
+1. Now go back to the BPA webpage and select Sample Search Application
+
+      ![](../media/bpa6.1.png)
+
+2. You can now filter and search on items and other fields configured.
+
+      ![](../media/bpa6.2.png)

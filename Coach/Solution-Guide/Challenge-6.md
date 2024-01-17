@@ -1,320 +1,396 @@
-# Challenge 06: Serverless Document Batch Processing 
+# Challenge-06: Implement Monitoring and Logging of Azure OpenAI using API Management Service
 
-## Introduction:
+## Lab scenario
 
-Welcome to a pivotal challenge where Contoso Ltd aims to enhance their AI-powered chat app with a robust document processing system. This challenge focuses on creating a serverless solution for processing new documents, translating them as needed, and seamlessly storing them into Azure AI Search. This system will ensure that these documents are continuously available for consumption by Azure OpenAI, enhancing the chat app's knowledge base and response accuracy.
-
-Building on your previous achievements in load balancing Azure OpenAI resources, you will now embark on a journey to streamline document processing. This involves setting up a translation service, creating a serverless architecture for batch processing using Azure services, and leveraging technologies like Form Recognizer and Azure AI Search. Your task is to ensure that newly added documents are promptly processed, analyzed, and indexed, making them readily available for the chat app's AI to utilize.
-
-This challenge unfolds in three main stages: language translation, serverless document batch processing using Azure services, and leveraging advanced features like Form Recognizer and AI search. We kick things off by translating files to meet language requirements. Next, you deploy a serverless architecture, utilizing Azure services, for efficient batch processing of documents. You train and test our model, establish a pipeline to convert documents into a Form Recognizer format, and bring in Azure's AI search service to verify the presence of specific documents in the processed dataset from where they can be used by Azure OpenAI. 
-
-You will utilize the Form Recognizer Service and the Business Process Automation (BPA) Accelerator to build pipelines across various Azure services, creating a seamless document processing solution. This challenge is a step towards realizing an AI solution that can adapt and grow with Contoso's business needs.
-
-
-
+Explore monitoring data collection, including activity logs and platform metrics. Configure Azure Monitor for log generation, customize data routing with diagnostic settings, and initiate resource logs collection. Discover Log Analytics Workspace limitations in logging user requests and model responses. Mitigate this by integrating Azure API Management Service for comprehensive logging in the Azure OpenAI environment.
 
 # Solution Guide
 
-### Task 1 - Translate the documents using Translate
+## Task 1: Explore content filters
 
-#### Task 1.1 - Retrieve your key and document translation endpoint
-#### Task 1.1 - Create your Azure AI Translator and retrieve the key and document translation endpoint
+Content filters are applied to prompts and completions to prevent potentially harmful or offensive language being generated.
 
-1. Navigate to Azure AI Services and select Translator from the left side menu and click on the **Create** button.
+1. In the Azure Portal, search for **Azure OpenAI** and select it.
 
-    ![](../media/ch6-1.png)
+      ![](../media/azure-openai-1-new.png)
 
-1. Enter the required details and select `S1` pricing tier.
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI serive** created in previous challenges
 
-1. Once the Translator resource is created, please get the resource keys by following the next step.
+      ![](../media/1-2.png)
+
+1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+
+      ![](../media/1-1.png)
+
+1. In Azure OpenAI Studio, view the **Content filters (1)** page from the left navigation menu and select **Create customized content filter (2)**
+
+      ![](../media/4-1.png)
    
-1. In the left rail, under Resource Management, select Keys and Endpoint.
+1. Review the default settings for a content filter.
 
-    ![](../media/ch6-2.png)
+    Content filters are based on restrictions for four categories of potentially harmful content:
+
+    - **Hate**: Language that expresses discrimination or pejorative statements.
+    - **Sexual**: Sexually explicit or abusive language.
+    - **Violence**: Language that describes, advocates, or glorifies violence.
+    - **Self-harm**: Language that describes or encourages self-harm.
+
+    Filters are applied for each of these categories to prompts and completions, with a severity setting of **safe**, **low**, **medium**, and **high** used to determine what specific kinds of language are intercepted and prevented by the filter.
+
+1. Observe that the default settings (which are applied when no custom content filter is present) allow **low** severity language for each category. You can create a more restrictive custom filter by applying filters to one or more **low** severity levels. You cannot however make the filters less restrictive (by allowing **medium** or **high** severity language) unless you have applied for and received permission to do so in your subscription. Permission to do so is based on the requirements of your specific generative AI scenario.
+
+    > **Tip**: For more details about the categories and severity levels used in content filters, see [Content filtering](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/content-filter) in the Azure OpenAI service documentation.
+
+## Task 2: Monitoring Azure OpenAI Service
+
+When your crucial applications and business processes depend on Azure resources, it's essential to monitor their availability, performance, and operation. Azure OpenAI provides out-of-box dashboards for each of your Azure OpenAI resources. To access the monitoring dashboards, select the overview pane for one of your Azure OpenAI resources.
+
+   ![](../media/dashboard.png)
+
+The dashboards are grouped into four categories: HTTP Requests, Tokens-Based Usage, PTU Utilization, and Fine-tuning.
+- **HTTP Requests:** Dashboards that monitor OpenAI-powered services in Azure, displaying request volume, response times, errors, geographical distribution, and other metrics. They aid in understanding user interactions, pinpointing performance issues, and ensuring service reliability.
+- **Tokens-Based Usage:** This category likely includes dashboards monitoring token usage in Azure OpenAI. Tokens are vital for authentication, authorization, and access control. They offer insights into creation rates, usage patterns, lifetimes, and detect suspicious activities. Monitoring tokens is critical for AI resource security.
+- **PTU Utilization:** PTU refers to Performance Tuning Units in Azure OpenAI. These dashboards monitor and optimize PTU use, showing allocation, trends, efficiency metrics, and offering optimization suggestions. It's crucial for boosting performance and resource allocation.
+- **Fine-tuning:** This category involves dashboards offering tools and insights for fine-tuning Azure OpenAI services. They include performance metrics, configurations, experiment results, aiding AI model optimization on Azure. They empower informed decisions for better AI performance and accuracy.
+
+### Task 2.1: Configure Diagnostic Settings
+
+Azure OpenAI collects the same kinds of monitoring data as other Azure resources. You can configure Azure Monitor to generate data in activity logs, resource logs, virtual machine logs, and platform metrics. Platform metrics and the Azure Monitor activity log are collected and stored automatically which can be routed to other locations by using a diagnostic setting. Azure Monitor resource logs aren't collected and stored until you create a diagnostic setting and a Log Analytics Workspace.
+
+1. In the Azure Portal, search for **Azure OpenAI** and select it.
+
+   ![](../media/azure-openai-1-new.png)
+
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously
+
+   ![](../media/1-2.png)
+
+4. From the Azure OpenAI resource page, under **Monitoring**, select **Diagnostic settings (1)** on the left pane. On the Diagnostic settings page, select **Add diagnostic setting (2)**.
+
+   ![](../media/4-2.png)
+
+5. To create a new Diagnostic Settings, on the **Diagnostic Settings** page, configure the following fields:
+   - **Diagnostic settings name:** **OpenAI Diagnostic Setting (1)**
+   - Select **Send to Log Analytics workspace (2)** - To be checked.
+   - **Subscription**: Default - Pre-assigned subscription **(3)**
+   - **Log Analytics Workspace:** Select the only pre-created log analytics workspace available in the subscription. **(4)**
+   - Under **Logs** - Select **allLogs (5)**
+   - Under **Metrics** - Select **allMetrics (6)**
+   - To save the configuration, click on **Save (7)**.
+
+   ![](../media/azure-openai-3.png)
+
+> After the successful configuration of the diagnostic settings, you can work with metrics and log data for your Azure OpenAI resource in your Log Analytics workspace.
+
+### Task 2.2: Use the Chat Playground to ingest additional logs
+
+The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models. It uses the *ChatCompletions* API rather than the older *Completions* API.
+
+1. In the **Playground** section, select the **chat** page, and ensure that the **text turbo** deployment is selected in the configuration pane.
+
+   ![](../media/chat.png)
+
+2. In the **Assistant setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
+
+   ![](../media/chat-playground-2.png)
+
+3. To add a new example:
+    - Click on **Add an example** under the **Examples** section of the **Assistant setup** pane.
+    - Enter the following message and response in the designated boxes:
+        - **User**: `What are different types of artificial intelligence?` **(2)**
+          
+        - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).` **(3)**
+          
+        - Click on **Save changes (4)** to start a new session and set the behavioral context of the chat system.
+
+             ![](../media/chat-playground-3.png)
    
-1. Copy and paste your key and document translation endpoint in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
+             ![](../media/chat-playground-4.png)
 
-1. You paste your key and document translation endpoint into the code samples to authenticate your request to the Document Translation Service.
+             > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to                reflect the tone and style of the examples in its own responses.
 
-      ![](../media/T-1.png)
+5. Within the query box of the chat session pane, enter the text `What is artificial intelligence?`
    
+7. Use the **Send** button to submit the message and view the response.
+
+      > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
+
+      > Any text that you enter in the **Completions playground** or the **Chat completions playground** generates metrics and log data for your Azure OpenAI         resource. In the Log Analytics workspace for your resource, you can query the monitoring data by using the Kusto query language.
+
+### Task 2.3: Analyze logs using Kusto Queries
+
+Data in Azure Monitor Logs is stored in tables where each table has its own set of unique properties. The activity log is a type of platform log in Azure that provides insight into subscription-level events. You can view this log independently or route it to Azure Monitor Logs. In the Azure portal, you can use the activity log in Azure Monitor Logs to run complex queries with Log Analytics.
+
+1. In the **Azure portal**, search for **OpenAI** and select it.
+
+   ![](../media/azure-openai-1-new.png)
+
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously
    
-#### Task 1.2 - Create Azure Blob Storage containers
+4. From your Azure OpenAI resource page, under **Monitoring** on the left pane, select **Logs (1)** and then click on the pre-created Log Analytics workspace **(2)** that was used to configure with diagnostics for your Azure OpenAI resource.
 
-1. You need to create containers in your Azure Blob Storage account for source and target files.
+   ![](../media/4-4.png)
 
-      Source container. This container is where you upload your files for translation (required). <br>
-      Target container. This container is where your translated files are stored (required).
+5. Within the **Log Analytics workspace** page, under Overview on the left pane, select **Logs**.
 
- 1. Required authentication
-The sourceUrl , targetUrl must include a **Shared Access Signature (SAS) token**, appended as a query string. The token can be assigned to your container or specific blobs.
-     - Your source container or blob must have designated **read** and **list** access.
-     - Your target container or blob must have designated **write** and **list** access.
+   ![](../media/4-5.png)
 
+> The Azure portal displays a Queries window with sample queries and suggestions by default. You can close this window.
 
- 1. Sample document
-For this project, you need a source document uploaded to your source container. You can download our [document translation sample document](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fcognitive-services-REST-api-samples%2Fmaster%2Fcurl%2FTranslator%2Fdocument-translation-sample.docx&wdOrigin=BROWSELINK) for this quickstart. The source language is English.
+5. For the following examples, enter the Kusto query into the edit region at the top of the Query window, and then select Run. The query results display below the query text.
 
-#### Task 1.3 - Set up your C#/.NET environment and Install Newtonsoft.Json
+    - This Kusto query is useful for an initial analysis of Azure Diagnostics (AzureDiagnostics) data about your resource:
+      
+         - This query returns a sample of 100 entries and displays a subset of the available columns of data in the logs.
+      
+        ```kusto
+       AzureDiagnostics
+       | take 100
+       | project TimeGenerated, _ResourceId, Category, OperationName
+        ```
+
+6. In the query results, you can select the arrow next to the table name to view all available columns and associated data types.
+
+   ![](../media/query-results.png)
+
+7. To see all available columns of data, you can remove the scoping parameters line `| project ...` from the query:
+
+   ```kusto
+   AzureDiagnostics
+   | take 100
+   ```
+   > **Note:** If the logs don't reflect immediately, please wait for 10-15 mins for it to come up.
+
+8. You can also expand the results and check for the details provided under each for more information.
+
+   ![](../media/4-6.png)
+
+## Task 3: Monitoring OpenAI prompts using Azure API Management
+
+### Task 3.1: Configuring Azure API Management
+
+Creating a Diagnostic setting and linking Azure OpenAI to a log analytics workspace does help in caturing native logs, however Log analytics workspace is incapable to log the user request and OpenAI model response prompts. In such scenarios the Azure API Management Service comes in handy.
+
+1. In the **Azure portal**, search for **OpenAI** and select it.
+
+   ![](../media/azure-openai-1-new.png)
+
+2. Select **OpenAI Service** deployed previous challenge
+
+3. To capture the values of the Azure OpenAI's key and endpoint, execute the following steps:
+    - Select **Keys and Endpoints (1)** under the **Resource Management** section from the left navigation pane.
+    - Click on **Show Keys (2)**.
+    - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
+    - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+
+         ![](../media/k&e.png "Create Azure OpenAI resource")
+
+4. Within the global search bar, search for and select the **API Management Services**. and create one new APIM service by giving the required values.
+
+   ![](../media/apim-resource.png)
+
+5. Select the deployed **APIM service.**
+
+   ![](../media/4-7.png)
+
+6. Select **Named Values (1)** under the **API** section in the left navigation pane of the API Management Service and then click on **+ Add (2)**.
+
+   ![](../media/4-8.png)
+
+7. Within the **Add named values** pane,
+    - **Name:** AOAI-key **(1)**
+    - **Display Name:** AOAI-key **(2)**
+    - **Type:** Select **Secret (3)**
+    - **Value:** Enter the Azure OpenAI key that you had earlier copied onto a notepad **(4)**
+    - Click on **Save (4)**.
+
+   ![](../media/named-values-apim-1.png)
+
+8. Select **Backends (1)** under the **API** section in the left navigation pane of the API Management Service and then click on **+ Add (2)**.
+
+   ![](../media/4-9.png)
+
+9. Within the **Backend** configuration pane, enter the following details:
+    -  **Name:** AOAI-endpoint **(1)**
+    -  **Type:** Ensure to select **Custom URL (2)**
+    -  **Runtime URL:** Enter the Azure OpenAI endpoint that you had earlier copied onto a notepad **(3)**
+
+          > **Note**: Please ensure to add '/openai' towards the end of the URL.
+       
+    -  Under the **Headers** tab,
+        - **Name:** api-key **(4)**
+        - **Value:** Click on **Select named value (5)**
+            - Within the **Specify value** pane that shows up, enter the following details:
+                - **Input type:** Select **Named value (6)**
+                - **Name:** Select **AOAI-key (7)** named value that you created earlier in this task. Notice that the **Value** field is automatically                        populated.
+                - Click on **OK (8)**
+    - Click on **Create (9)**
+
+      ![](../media/backends-apim-1.png)
+
+      ![](../media/backends-apim-2.png)
+
+10. To add a new API into the API Management service, follow the steps below:
+    -  Select **APIs (1)** under the **APIs** section within the left navigation pane of the APIM blade.
+    -  Select the **Import (2)** option from one of the exisiting APIs.
+    -  Within the **Import API** pane, select **OpenAPI (3)**.
+
+      ![](../media/4-10.png)
+
+      ![](../media/import-api-1.png)
+
+11. Within the **Import from OpenAPI specification** pop-up window, enter and configure the following details:
+    - **OpenAPI specification:** `https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/cognitiveservices/data-plane/AzureOpenAI/inference/stable/2023-05-15/inference.json` **(1)**
+    - **Import method:** Select **Update (2)**
+    - Click on **Import (3)** to update the existing API with the above OpenAPI specification.
+
+    ![](../media/import-api-2.png)
+
+>**Note:**  The OpenAPI specification is a JSON file which contains the API specifications of Azure OpenAI. You can have a detailed look on the specifications by accessing the above provided link for a deeper understanding and clarity.
+
+12. Notice that a new API named **Azure OpenAI Service API** is added under the **All APIs** section.
+
+13. Click on the newly added API and observe the presence of multiple POST operations based on the OpenAPI specification that was provided earlier.
+
+       ![](../media/post-operations.png)
+
+14. To create a new policy with specific parameters, follow the below instructions:
+    - Select **All Opeartions (1)**.
+    - Within the Inbound processing tile, click on the ellipses **(2)** adjacent to **base** policy.
+    - Click on **Code editor (3)**.
    
-1. Start Visual Studio.
+      ![](../media/allop.png)
 
-1. On the Get Started page, choose Create a new project.
+15. Within the code editor, create a new inbound policy by adding the following code at line 16:
 
-   ![](../media/T-2.png)
+    ```html
+    <set-backend-service backend-id="AOAI-endpoint" />
+    ```
 
-1. On the Create a new project page, enter console in the search box. Choose the Console Application template, then choose Next.
+    The final policy code should should now be similar to the below screenshot:
 
-   ![](../media/T-3.png)
-
-1. In the Configure your new project dialog window, enter document-translation-qs in the Project name box. Then choose Next.
-
-   ![](../media/T-4.png)
-
-1. In the Additional information dialog window, select .NET 6.0 (Long-term support), and then select Create.
-
-   ![](../media/T-5.png)
-
-1. Right-click on your document-translation-qs project and select Manage NuGet Packages.
-
-   ![](../media/T-6.png)
-
-1. Select the Browse tab and type NewtonsoftJson.
-
-   ![](../media/T-7.png)
-   
-1. Select the latest stable version from the dropdown menu and install the package in your project.
-
-   ![](../media/T-8.png)
-
-#### Task 1.4 -Translate all documents in a storage container and Run your application
-
-1. Open the Program.cs file.
-
-1. Delete the pre-existing code, including the line Console.WriteLine("Hello World!").
-
-1. Copy and paste the document translation a [code sample](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) into the Program.cs file.
-
-1. Update **{your-document-translation-endpoint}** and **{your-key}** with values from your Azure portal Translator instance.
-
-1. Update **{your-source-container-SAS-URL}** and **{your-target-container-SAS-URL}** with values from your Azure portal Storage account containers instance
-
-Once you've added code sample to your application, choose the green Start button next to document-translation-qs to build and run your program, or press F5.
-
-### Task 2: Creating a Form Recognizer Resource
-1. Navigate to **Azure AI services multi-service account** and click on the **Create** button.
-
-    ![](../media/c06-01.png)
-
-1. Enter the required details and select `Standard s0` pricing tier. and **check the box**
-   
-1. Go to the Resource group, search, and select the **Azure AI services multi-service account** resource which you deployed earlier
-
-  ![](../media/c06-02.png)
-
-2. Click on the Document Intelligence tab and select **Go to studio**.
-
-   ![](../media/bpa2.png)
-
-3. In Document Intelligence Studio, scroll down to **Custom Extraction Models** and choose **Try it now**.
-
-   ![](../media/c06-03.png)
-
-4. Under My Project, click on **+ Create a project**.
-
-   ![](../media/bpa4.png)
-
-5. Enter the following details and click on **Continue**  **(3)**.
+       ![](../media/op2.png)
     
-   - Project name: **testproject** **(1)**.
-   - Description: **Custom model project** **(2)**.
-
-     ![](../media/bpa5.png)
-
-6. Enter the following details **Configure service resource** and click on **Continue** **(5)**.
-
-   - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **<inject key="Resource Group Name"/>** **(2)**.
-   - Form Recognizer or Cognitive Service Resource: Select the available Cognitive Service Form Recognizer name similar to **cogservicesbpass{suffix}** **(3)**.
-   - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
-
-     ![](../media/bpa6.png)
-
-7. Enter the following details **Connect training data source** and click on **Continue** **(8)**.
-
-   - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **<inject key="Resource Group Name"/>** **(2)**.
-   - Check the box to **Create new storage account** **(3)**
-   - Storage account name: **formrecognizer<inject key="Deployment ID" enableCopy="false"/>** **(4)**.
-   - Location: **East US** **(5)**.
-   - Pricing tier: **Standard_LRS Standard** **(6)**.
-   - Blob container name: **custommoduletext** **(7)**.
-   
-        ![](../media/bpa7.png)
-
-8. Validate the information and choose **Create project**.
-
-     ![](../media/bpa8.png)
-
-### Task 3: Train and Label data
-
-In this step, you will upload 6 training documents to train the model.
-
-1. Click on **Browse for files**.
-
-     ![](../media/bpa2-1.png)
-
-2.  On the file explorer, enter the following `C:\LabFiles\Data\Custom Model Sample` **(1)** path hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and hit **Open** **(3)**.
-
-     ![](../media/bpa2-2.png)
-
-3. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
-
-     ![](../media/bpa2-3.png)
-
-4. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization_sample** **(3)** and hit **enter**.
-
-     ![](../media/bpa2-4.png)
-
-     ![](../media/bpa2-4.1.png)
-
-5. Label the new field added by selecting **CONTOSO LTD** in the top left of each document uploaded. Do this for all six documents.
-
-     ![](../media/bpa2-5.png)
-
-6. Once all the documents are labeled, click on **Train** in the top right corner.
-
-     ![](../media/bpa2-6.png)
-
-7. Specify the model ID as **customfrs** **(1)**, Model Description as **custom model** **(2)**, from the drop-down select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
-
-     ![](../media/bpa2-7.png)
-
-8. Click on **Go to Models**. 
-
-   ![](../media/bpa2-8.png)
-
-9. Wait till the model status shows **succeeded** **(1)**. Once the status Select the model **customfrs** **(2)** you created and choose **Test** **(3)**.
-
-     ![](../media/bpa2-9.png)
-
-10. On the Test model window, click on **Browse for files**. 
-
-     ![](../media/bpa2-10.png)
-
-11. On the file explorer, enter the following `C:\LabFiles\Data\Custom Model Sample` **(1)** path hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
-
-     ![](../media/bpa2-11.png)
-
-12. Once uploaded, select one test model, and click on **Run analysis** **(1)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(2)** we created in the last step along with its confidence score.
-
-     ![](../media/bpa2-12.png)
-
-### Task 4: Build a new pipeline with the custom model module in BPA
-
-After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
-
-1. Navigate back to the Resource groups and select the resource group **<inject key="Resource Group Name"/>**.
-
-2. Go to the Resource group, search, and select the **Static Web App** resource type with the name similar to **webappbpa{suffix}**.
-
-   ![](../media/bpa3-2.png)
-
-3. On the **Static Web App** page, click on **View app in browser**.
-
-      ![](../media/bpa3-3.png)
-
-4. Once the **Business Process Automation Accelerator** page loaded successfully, click on the **Create/Update/Delete Pipelines**. 
-
-   ![](../media/bpa3-4.png)
-
-5. On the **Create Or Select A Pipeline** page, enter New Pipeline Name as **workshop** **(1)**, and click on the **Create Custom Pipeline** **(2)**. 
-
-   ![](../media/bpa3-5.png)
-
-6. On the **Select a document type to get started** page, select **PDF Document**
-
-   ![](../media/bpa3-6.png)
-
-7. On the **Select a stage to add it to your pipeline configuration** page, search and select for **Form Recognizer Custom Model (Batch)**.
-
-   ![](../media/bpa3-7.png)
-
-8. On the pop-up, enter the Model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
-
-   ![](../media/bpa3-8.png)
-
-9. On the **Select a stage to add it to your pipeline configuration** page, scroll down to review the **Pipeline Preview**, and click on **Done**.
-
-   ![](../media/bpa3-9.png)
-
-10. On the **Piplelines workshop** page, click on **Home**. 
-
-      ![](../media/bpa3-10.png)
-
-11. On the **Business Process Automation Accelerator** page, click on **Ingest Documents**.
-
-      ![](../media/bpa3-11.png)
-
-12. On the **Upload a document to Blob Storage** page, from the drop-down select a Pipeline with the name **workshop** **(1)**, and click on **Upload or drop a file right here**.
-
-      ![](../media/bpa3-12.png)
-
-13. For documents, enter the following `C:\LabFiles\Data\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
-
-      ![](../media/bpa3-13.png)
-
-### Task 5: Configure Azure Cognitive Search 
-
-1. Navigate back to the resource group window, search, and select **Search Service** with a name similar to **bpa{suffix}**.
-
-   ![](../media/bpa4-1.png)
-
-2. On the **Search service** page, click on **Import data**.
-
-   ![](../media/bpa4-2.png)
-
-3. Enter the following details for **Connect to your data**.
-
-   - Data Source: Select **Azure Blob Storage** **(1)**
-   - Data Source Name: Enter **workshop** **(2)**.
-   - Parsing mode: Select **JSON** **(3)**.
-   - Click on **Choose an existing connection** **(4)** under Connection string.
+   >**Note:** Here the value **AOAI-endpoint** refers to the newly created backend, pointing to the runtime URL - the Azure OpenAI endpoint.
+
+16. Click on **Save**. Notice that a new policy named **set-backend-service** has been added within the Inbound processing tile.
+    
+17. Navigate to **Diagnostic settings** in the left pane of the API management service.
+
+    ![](../media/diag1.png)
+
+18. - Keep the category groups checked(1) <br>
+    - Keep the **All metrics** checked(2) <br>
+    - Keep the **Destination details** checked(3) <br>
+    - Make sure the log analytics workspace is selected(4) <br>
+    - Click on **Save (5)**
+
+      ![](../media/diag2.png)
+    
+19. Now, since the API has been added successfully, it requires the configuration to call the OpenAI API through the API Management Service which can be done by following the below steps:
+
+    - Select the newly added API **(1)**.
+    - Click on the **Settings (2)** tab.
+    - Click on the **Azure Monitor (3)** tab under the **Diagnostics Logs** section. Check the box for **Override-global**.
+    - Set the **Number of payload bytes to log (up to 8192)** to **8192 (4)**.
+    - Click on **Save (5)**.
+
+         >**Note:** It might take 15-20 minutes for the **Override global** option to appear under **Azure Monitor**.
+      
+         ![](../media/diag-logs-configs-1.png)
+      
+      >**Note:** Here the value **AOAI-endpoint** refers to the newly created backend, pointing to the runtime URL - the Azure OpenAI endpoint.
+
+20. Also, ensure to keep the **Subscription required** unchecked.
+
+      ![](../media/uncheck.png)   
+
+### Task 3.2: Test the API to create completions for chat message
+
+1. To run a POST operation to test the functionality of the added API:
+
+    - Select Azure OpenAI Service API **(1)**.
+    - Click on the **Test (2)** tab.
+    - Click on the the POST operation that **Creates a completion for the chat message (3)**.
+    - Under the **Template parameters** section enter the following details:
+        - **deployment-id:** gpt-35-turbo **(4)**
+        - **api-version:** 2023-03-15-preview **(5)**
+    - Within the **Request body** section, edit the content **(6)** of the sample with the following prompt:
+        ```
+        {"model":"gpt-35-turbo","messages":[{"role":"user","content":"Hello! What does an API Management Service in Azure do?"}]}
+        ```
+    - Click on **Send (7)**.
+
+    ![](../media/test-api-1.png)
+    ![](../media/test-api-2.png)
+
+2. Notice the **HTTP response** that is generated with the reply under the **message** tab:
+
+   ![](../media/http-response.png)
+
+### Task 3.3: Analyze OpenAI logs using Kusto Queries within API Management Service
+
+> **DISCLAIMER:** Please note that it might take an hour or two for the Log Analytics Workspace to display results after a query. To ensure smooth execution and to save time, we've included screenshots of the results for better clarity and understanding. 
+
+1. Once OpenAI requests begin to log to the Azure Monitor service, you can begin to analyze the service usage using Log Analytics queries.
+
+2. Naviagate back to the API Management Service and click on **Logs** under the **Monitoring** section.
+
+   ![](../media/apim-logs.png)
+
+3. Within the **New Query 1** tab, draft a new query such that:
+    - The table should be named **ApiManagementGatewayLogs**.
+    - The **BackendResponseBody** field contains the json response from the OpenAI service which includes the text completion as well as the token and model information.
+    - Past the below query within the query editor to identify token usage by ip model:
+    ```
+    ApiManagementGatewayLogs
+    | where tolower(OperationId) in ('completions_create','chatcompletions_create')
+    | where ResponseCode  == '200'
+    | extend modelkey = substring(parse_json(BackendResponseBody)['model'], 0, indexof(parse_json(BackendResponseBody)['model'], 
+    '-', 0, -1, 2))
+    | extend model = tostring(parse_json(BackendResponseBody)['model'])
+    | extend prompttokens = parse_json(parse_json(BackendResponseBody)['usage'])['prompt_tokens']
+    | extend completiontokens = parse_json(parse_json(BackendResponseBody)['usage'])['completion_tokens']
+    | extend totaltokens = parse_json(parse_json(BackendResponseBody)['usage'])['total_tokens']
+    | extend ip = CallerIpAddress
+    | where model !=  ''
+    | summarize
+        sum(todecimal(prompttokens)),
+        sum(todecimal(completiontokens)),
+        sum(todecimal(totaltokens)),
+        avg(todecimal(totaltokens))
+        by ip, model
+    ```
+
+   ![](../media/apim-query.png)
+
+4. Click on **Run** and notice the result which defines the token usage based on the given prompt and response.
+
+   ![](../media/apim-result.png)
+
+5. Let's run an other query to monitor prompt completions.
+    - Replace the contents of the query editor with the following KQL to log the prompts **(1)**.
+    ```
+    ApiManagementGatewayLogs
+    | where tolower(OperationId) in ('completions_create','chatcompletions_create')
+    | where ResponseCode  == '200'
+    | extend model = tostring(parse_json(BackendResponseBody)['model'])
+    | extend prompttokens = parse_json(parse_json(BackendResponseBody)['usage'])['prompt_tokens']
+    | extend prompttext = substring(parse_json(parse_json(BackendResponseBody)['choices'])[0], 0, 100)
+    ```
+    - Click on **Run (2)**.
+    - Observe the intricacies of the generated result under the **Results** tab **(3)**.
   
-     ![](../media/bpa4-3.png)
+   ![](../media/apim-result-2.png)
 
-4. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix}**. 
+6. To view the logged prompts,
+       - Under the **Results** tab, click on the arrow adjacent to the result that was generated using the above query to log prompts.
+       - Scroll down and observe the Key-Value pairs of **RequestBody** and **ResponseBody**.
 
-     ![](../media/bpa4-4.png)
-
-5. Select **results** **(1)** container from the **Containers** page and click on **Select** **(2)**. It will redirect back to **Connection to your data** page.
-
-     ![](../media/bpa4-5.png)
-  
-6. On the **Connect to your data** page, enter the **workshop** **(1)** as **Blob folder** and click on **Next : Add cognitive skills (Optional) (2)**.
-
-   ![](../media/bpa4-6.png)
-
-7. On the **Add cognitive skills (Optional)** click on **Skip to : Customize target index**.
-
-8. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
-
-      ![](../media/bpa4-8.png)
-
-9. Expand the **aggregatedResults** **(1)** > **customFormRec** **(2)** > **documents** **(3)** > **fields** **(4)** under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
-
-   ![](../media/bpa4-9.png)
-
-10. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
+   ![](../media/apim-result-3.png)
    
-    ![](../media/bpa4-10.png)
+   ![](../media/apim-result-4.png)
 
-### Task 6: Use Sample Search Application
+>**Note:** If you get the following error, please proceed to the next lab and ensure to come back and check if the logs have come up.
 
-1. Now go back to the BPA webpage and select Sample Search Application
-
-      ![](../media/bpa6.1.png)
-
-2. You can now filter and search on items and other fields configured.
-
-      ![](../media/bpa6.2.png)
+![](../media/image.png)
