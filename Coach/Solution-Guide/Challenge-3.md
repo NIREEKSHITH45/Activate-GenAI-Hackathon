@@ -41,7 +41,7 @@ If you have not already cloned **Activate GenAI** code repository to the environ
 
 ## Task 2: Deploying the solution using terraform
 
-1.**Deploying the infrastructure**
+**Deploying the infrastructure**
 
 Verify terraform installed in your machine by runnig the following command `terraform --version`
 
@@ -59,7 +59,7 @@ terraform init
 terraform apply
 ```
 
-## Task 3: Azure Search Index Deployment:
+## Task 3: Azure Search Index Deployment and Upload The Sample Data::
 
 
 Run the following commands to deploy the Azure Search Index and upload the sample documents:
