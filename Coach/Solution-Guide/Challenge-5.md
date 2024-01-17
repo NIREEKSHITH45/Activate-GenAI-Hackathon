@@ -31,7 +31,7 @@ This lab session proposes several approaches for load balancing of AOAI resource
 
    ![](../media/k&e.png "Create Azure OpenAI resource")
 
-1. For both Open AI serives capture the  **key and endpoint** values.
+1. For both Open AI serives capture the  **keys and Endpoint** values.
 
 ### Task 1.2: Setting up API Management
 
