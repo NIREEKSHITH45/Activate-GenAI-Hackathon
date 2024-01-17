@@ -82,4 +82,3 @@ One of the hottest themes at the moment is size models; users are particularly i
    ![](../media/3-10.png)
 
 
-## You have successfully completed this challenge.
