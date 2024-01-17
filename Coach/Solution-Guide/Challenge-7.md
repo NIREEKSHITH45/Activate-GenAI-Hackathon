@@ -185,11 +185,11 @@ Creating a Diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
          ![](../media/k&e.png "Create Azure OpenAI resource")
 
-4. Within the global search bar, search for and select the **API Management Services**.
+4. Within the global search bar, search for and select the **API Management Services**. and create one APIM service
 
    ![](../media/apim-resource.png)
 
-5. Select **apim-service-<inject key="Deployment-id" enableCopy="false"></inject>**.
+5. Select the deployed APIM service
 
    ![](../media/4-7.png)
 
