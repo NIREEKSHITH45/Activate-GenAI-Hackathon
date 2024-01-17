@@ -43,7 +43,12 @@ The solution you will create for Margie's Travel requires the following resource
     - **Pricing tier**: Basic
 
 3. Wait for deployment to complete, and then go to the deployed resource.
+   
+   ![](../media/searchservices.png)
+
 4. Review the **Overview** page on the blade for your Azure AI Search resource in the Azure portal. Here, you can use a visual interface to create, test, manage, and monitor the various components of a search solution; including data sources, indexes, indexers, and skillsets.
+
+   ![](../media/searchservices-01.png)
 
 #### Task 2.2: Create an Azure AI Services resource
 
@@ -56,21 +61,36 @@ If you don't already have one in your subscription, you'll need to provision an 
     - **Name**: *Enter a unique name*
     - **Pricing tier**: Standard S0
 2. Select the required checkboxes and create the resource.
+
+     ![](../media/aiservices.png)
+
 3. Wait for deployment to complete, and then view the deployment details.
+
+   ![](../media/aiservices-01.png)
 
 #### Task 2.3: Create a storage account
 
 1. Return to the home page of the Azure portal, and then select the **&#65291;Create a resource** button, search for *storage account*, and create a **Storage account** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: **The same resource group as your Azure AI Search and Azure AI Services resources*
+    - **Resource group**: *The same resource group as your Azure AI Search and Azure AI Services resources*
     - **Storage account name**: *Enter a unique name*
     - **Region**: *Choose any available region*
     - **Performance**: Standard
     - **Replication**: Locally-redundant storage (LRS)
     - On the **Advanced** tab, check the box next to *Allow enabling anonymous access on individual containers*
+
+      ![](../media/search-storageaccount.png)
+
+      ![](../media/search-storageaccount-01.png)
+
 2. Wait for deployment to complete, and then go to the deployed resource.
 3. On the **Overview** page, note the **Subscription ID** -this identifies the subscription in which the storage account is provisioned.
+
+   ![](../media/search-storageaccount-02.png)
+
 4. On the **Access keys** page, note that two keys have been generated for your storage account. Then select **Show keys** to view the keys.
+
+   ![](../media/search-storageaccount-04.png)
 
     > **Tip**: Keep the **Storage Account** blade open - you will need the subscription ID and one of the keys in the next procedure.
 
@@ -82,6 +102,8 @@ Now that you have the required resources, you can upload some documents to your 
 2. Edit the batch file to replace the **YOUR_SUBSCRIPTION_ID**, **YOUR_AZURE_STORAGE_ACCOUNT_NAME**, and **YOUR_AZURE_STORAGE_KEY** placeholders with the appropriate subscription ID, Azure storage account name, and Azure storage account key values for the storage account you created previously.
 3. Save your changes, and then right-click the **22-create-a-search-solution** folder and open an integrated terminal.
 4. Enter the following command to sign into your Azure subscription by using the Azure CLI.
+
+   > **Note**: Ensure we have installed Azure CLI and Azure CLI Tools extension in Visual Studio Code.
 
     ```
     az login
