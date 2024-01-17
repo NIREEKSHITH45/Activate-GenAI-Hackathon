@@ -7,7 +7,6 @@ Welcome to the Active Gen AI Challenge Lab! This event is designed to enhance yo
 - [Introduction](#introduction)
 - [Learning Objectives](#learning-objectives)
 - [Challenges](#challenges)
-- [Prerequisites](#prerequisites)
 
 ## Introduction
 
@@ -27,18 +26,18 @@ By participating in this hackathon, you will learn how to:
 
 ## Challenges
 
-1. **Challenge 01: Deploy Azure OpenAI Service and Large Language Models**
+1. **Challenge 01: Deploy Azure OpenAI Service and LLM Models**
    - Deploy the Azure OpenAI Service and implement the deployment of a Large Language Model (LLM) within the OpenAI Service.
      
-2. **Challenge 02: Implement Document Search with Cognitive Search**
+2. **Challenge 02: Implement Document Search with Azure AI Search**
    - Create Azure AI Search, AI Services, storage, upload and index documents, and customize search using VS Code and Azure.
              
-3. **Challenge 03: Deploy the Chat App with Terraform**
-   - Master deploying scalable and efficient architectures in Azure using Terraform.
+3. **Challenge 03: Deploy the Sample Chat App with Terraform**
+   - Deploy the chatapp in Azure using Terraform.
           
 4. **Challenge 04: Interact with Chat App**
    - Navigate and explore the web app, interact adeptly with Chat App using insightful questions, showcase multilingual query proficiency, and implement advanced settings for comprehensive Azure OpenAI service understanding.
-          
+                    
 
 Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to your coach.
 
