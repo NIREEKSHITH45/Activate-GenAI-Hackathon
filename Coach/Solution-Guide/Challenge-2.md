@@ -117,7 +117,8 @@ Now that you have the required resources, you can upload some documents to your 
     UploadDocs
     ```
 
-### Task 5: Index the documents
+### Task 5: Data Import and Indexing:
+#### Task 5.1: Index the documents
 
 Now that you have the documents in place, you can create a search solution by indexing them.
 
@@ -172,6 +173,9 @@ Now that you have the documents in place, you can create a search solution by in
     | language | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | |
 
 11. Double-check your selections, paying particular attention to ensure that the correct **Retrievable**, **Filterable**, **Sortable**, **Facetable**, and **Searchable** options are selected for each field  (it can be difficult to change them later). Then proceed to the next step (*Create an indexer*).
+
+    ![](../media/importdata-02.png)
+
 12. Change the **Indexer name** to **margies-indexer**.
 13. Leave the **Schedule** set to **Once**.
 14. Expand the **Advanced** options, and ensure that the **Base-64 encode keys** option is selected (generally encoding keys make the index more efficient).
@@ -179,9 +183,14 @@ Now that you have the documents in place, you can create a search solution by in
     1. Extracts the document metadata fields and content from the data source
     2. Runs the skillset of cognitive skills to generate additional enriched fields
     3. Maps the extracted fields to the index.
+
+    ![](../media/importdata-03.png)  
+
 16. In the bottom half of the **Overview** page for your Azure AI Search resource, view the **Indexers** tab, which should show the newly created **margies-indexer**. Wait a few minutes, and click **&orarr; Refresh** until the **Status** indicates success.
 
-### Task 5: Search the index
+    ![](../media/indexer.png) 
+
+#### Task 5.2: Search the index
 
 Now that you have an index, you can search it.
 
@@ -244,8 +253,10 @@ Now that you have an index, you can search it.
     }
     ```
 
-    This query returns the filename of any documents authored by *Reviewer* that mention "New York".
+    This query returns the filename of any documents authored by *Reviewer* that mention "New York".>
 
+     ![](../media/search-explorer.png) 
+  
 ### Task 6: Explore and modify definitions of search components
 
 The components of the search solution are based on JSON definitions, which you can view and edit in the Azure portal.
@@ -255,7 +266,7 @@ While you can use the portal to create and modify search solutions, it's often d
 ### Get the endpoint and key for your Azure AI Search resource
 
 1. In the Azure portal, return to the **Overview** page for your Azure AI Search resource; and in the top section of the page, find the **Url** for your resource (which looks like **https://resource_name.search.windows.net**) and copy it to the clipboard.
-2. In Visual Studio Code, in the Explorer pane, expand the **22-create-a-search-solution** folder and its **modify-search** subfolder, and select **modify-search.cmd** to open it. You will use this script file to run *cURL* commands that submit JSON to the Azure AI Service REST interface.
+2. In Visual Studio Code, in the Explorer pane, expand the **22-create-a-search-solution** folder and its **modify-search** subfolder, and select **modify-search.cmd** to open it. You will use this script file to run *CURL* commands that submit JSON to the Azure AI Service REST interface.
 3. In **modify-search.cmd**, replace the **YOUR_SEARCH_URL** placeholder with the URL you copied to the clipboard.
 4. In the Azure portal, view the **Keys** page for your Azure AI Search resource, and copy the **Primary admin key** to the clipboard.
 5. In Visual Studio Code, replace the **YOUR_ADMIN_KEY** placeholder with the key you copied to the clipboard.
@@ -362,6 +373,8 @@ The new skill is named **get-sentiment**, and for each **document** level in a d
 
 3. When the script has finished, return to the **Overview** page for your Azure AI Search resource in the Azure portal and view the **Indexers** page. The periodically select **Refresh** to track the progress of the indexing operation. It may take a minute or so to complete.
 
+   ![](../media/indexer-01.png) 
+
     *There may be some warnings for a few documents that are too large to evaluate sentiment. Often sentiment analysis is performed at the page or sentence level rather than the full document; but in this case scenario, most of the documents - particularly the hotel reviews, are short enough for useful document-level sentiment scores to be evaluated.*
 
 ### Query the modified index
@@ -389,7 +402,7 @@ Now that you have a useful index, you can use it from a client application. You 
 
 ### Get the endpoint and keys for your search resource
 
-1. In the Azure portal, on the **Overview** page for your Azure AI Search resource, note the **Url** value, which should be similar to **https://*your_resource_name*.search.windows.net**. This is the endpoint for your search resource.
+1. In the Azure portal, on the **Overview** page for your Azure AI Search resource, note the **url** value, which should be similar to **https://*your_resource_name*.search.windows.net**. This is the endpoint for your search resource.
 2. On the **Keys** page, note that there are two **admin** keys, and a single **query** key. An *admin* key is used to create and manage search resources; a *query* key is used by client applications that only need to perform search queries.
 
     *You will need the endpoint and query key for your client application.*
@@ -398,6 +411,7 @@ Now that you have a useful index, you can use it from a client application. You 
 
 1. In Visual Studio Code, in the **Explorer** pane, browse to the **22-create-a-search-solution** folder and expand the **C-Sharp** or **Python** folder depending on your language preference.
 2. Right-click the **margies-travel** folder and open an integrated terminal. Then install the Azure AI Search SDK package by running the appropriate command for your language preference:
+   > **Note**: Please ensure necessary extensions are already installed in the VS Code.
 
     **C#**
     
