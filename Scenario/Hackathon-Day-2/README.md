@@ -32,10 +32,10 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
    - Deploy the Azure OpenAI Service and implement the deployment of a Large Language Model (LLM) within the OpenAI Service.
      
 2. **Challenge 02: Implement Document Search with Azure AI Search**
-   - Create Azure AI Search, AI Services, storage, upload and index documents, and customize search using VS Code and Azure.
+   - Create Azure AI Search, AI Services, storage, upload and index documents, and c
              
 3. **Challenge 03: Deploy the Sample Chat App with Terraform**
-   - Deploy the chatapp in Azure using Terraform.
+   - Deploy the chatapp solution architecture in Azure using Terraform.
           
 4. **Challenge 04: Interact with Chat App**
    - Navigate and explore the web app, interact adeptly with Chat App using insightful questions, showcase multilingual query proficiency, and implement advanced settings for comprehensive Azure OpenAI service understanding.
@@ -44,8 +44,10 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
     - Optimize Azure OpenAI resource performance through effective load balancing with Azure API Management (APIM).
   
 6. **Challenge 06: Serverless Document Batch Processing**
-   - Discover the efficiency of serverless computing for document batch processing. This challenge will walk you through building a serverless solution for processing documents.
-          
+   - Discover the efficiency of serverless computing for document batch processing. This challenge will walk you through analyzing documents with Azure Document Intelligence and process with OpenAI. 
+     
+7. **Challenge 07: Implement Monitoring & Logging**
+   - In this challange, you will opertioanlize the solution and implement monitoring and logging with  with Log Analytics andd APIM
 
 
 Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to your coach.
