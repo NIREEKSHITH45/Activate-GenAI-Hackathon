@@ -50,6 +50,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 1) **Using an Azure Document Intelligence (Form Recognizer) resource:**
     - Navigate to Azure AI services and set up an Azure Document Intelligence (Form Recognizer) resource.
     - Upload and label training documents to train the Azure Document Intelligence (Form Recognizer) model.
+    - The files you need can be found at `C:\LabFiles\Data`
 
 1) **Build a New Pipeline with Custom Model Module in BPA:**
     - Utilize the trained Form Recognizer model to create a new pipeline in BPA.
