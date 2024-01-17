@@ -56,7 +56,7 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
    ```
    What happens in a performance review?
    ```
-4. OpenAI and AI Search Capabilities Exploration:
+**4. OpenAI and AI Search Capabilities Exploration:**
   - Conduct your own tests using various prompts to assess the range and depth of the app's conversational and search capabilities.
   - Focus on understanding how the app integrates OpenAI's model and AI Search for seamless user interactions.
 ## Success Criteria:
