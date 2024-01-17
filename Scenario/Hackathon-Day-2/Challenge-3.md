@@ -31,7 +31,7 @@ Together, these services create a responsive chat application that combines AI f
 
 ## Challenge Objectives:
 
-> **Important**: When deploying services in this challenge, please make sure to use the resource group named **Activate-GenAI-<inject key="Resource Group Name"/>**.  !
+> **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**.  !
 
 1. **Clone the Repository:**
    - Clone the Active Gen AI repository: `https://github.com/CloudLabs-MOC/activate-genai`.
