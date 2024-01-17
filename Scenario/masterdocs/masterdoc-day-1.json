@@ -9,7 +9,7 @@
        "Order": 1
      },
      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Hackathon-Day-1/Overview.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Hackathon-Day-1/Use-Case.md",
        "Order": 2
      },
      {
@@ -31,10 +31,6 @@
      {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Hackathon-Day-1/Challenge-4.md",
        "Order": 7
-     },
-     {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/main/Scenario/Challenge-optional.md",
-       "Order": 8
      }
   ]
  } 
