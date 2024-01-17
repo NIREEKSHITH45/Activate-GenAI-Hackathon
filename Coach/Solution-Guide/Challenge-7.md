@@ -14,7 +14,7 @@ Content filters are applied to prompts and completions to prevent potentially ha
 
       ![](../media/azure-openai-1-new.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI serive** created in previous challenges
 
       ![](../media/1-2.png)
 
