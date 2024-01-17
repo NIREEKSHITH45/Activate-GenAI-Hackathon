@@ -4,11 +4,9 @@
 
 ## Introduction:
 
-In this challenge, your team is focused on smartly dividing the workload to ensure everything runs like clockwork. You need to figure out how to use our resources efficiently, adapt swiftly to changes, and keep costs in check. Your goal is to build a strong system that can handle a lot of users at the same time, providing them with a great experience without breaking the bank. You want to create a reliable system that performs well, even when many people are using it.
+Building on your experience with deploying and interacting with the AI-powered chat application, this challenge introduces a critical component for scalability and efficiency: load balancing for Azure OpenAI resources. Your task is to create a system that not only handles high user traffic smoothly but also optimizes resource utilization and maintains performance across different regions. This is key to providing a consistent and reliable user experience for Contoso's chat app, especially during peak usage times.
 
-Load balancing in Azure for OpenAI resources is crucial for optimizing performance and scalability. It ensures that incoming traffic is evenly distributed, preventing overloads, reducing delays, and using resources efficiently. This forms a sturdy foundation for a high-performing OpenAI infrastructure.
-
-After interacting with the Chat App and deploying OpenAI services in the previous challenge, your current focus is on using OpenAI instances with an API management service. You're systematically integrating named values, backend configurations, and API settings to enhance resilience and coverage. To ensure thorough testing and traceability, You're also incorporating an additional OpenAI service in an alternative region, recreating the initial configurations. This iterative process guarantees the robust performance of the OpenAI service across regions, implementing load balancing of AOAI (Artificial OpenAI) resources with defined policies in place.
+Utilizing Azure API Management (APIM), you'll set up a load balancing mechanism for the OpenAI services. This setup will distribute workloads evenly across multiple OpenAI instances, ensuring high availability and fault tolerance. By doing so, you'll enhance the chat app's capacity to serve a larger audience efficiently, while maintaining cost-effectiveness and robust performance.
 
 ## Solution Guide
 
@@ -20,22 +18,22 @@ After interacting with the Chat App and deploying OpenAI services in the previou
 
    ![](../media/azure-openai-1-new.png)
 
-2. On the Azure AI services | Azure OpenAI blade, click on the Existing **OpenAI servive**
+2. On the Azure AI services | Azure OpenAI blade, click on the Existing **OpenAI service**
 
  
 5. To capture the values of the Azure OpenAI's key and endpoint, execute the following steps:
     - Select **Keys and Endpoints (1)** under the **Resource Management** section from the left navigation pane.
     - Click on **Show Keys (2)**.
-    - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
-    - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+    - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
+    - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
    ![](../media/k&e.png "Create Azure OpenAI resource")
 
-1. For both Open AI serives capture the  **keys and Endpoint** values.
+1. For both Open AI services capture the  **keys and Endpoint** values.
 
 ### Task 1.2: Setting up API Management
 
-API Management (APIM) is a managed API management service provided by Azure that combines various backends together to provide a unified interface for APIs. If properly configured, users only need to access the APIM’s endpoint, which can load balance multiple AOAI resources or switch backend in the event of errors.
+API Management (APIM) is a managed API management service provided by Azure that combines various backends together to provide a unified interface for APIs. If properly configured, users only need to access the APIM’s endpoint, which can load and balance multiple AOAI resources or switch backend in the event of errors.
 
 1. In the **Azure portal**, search for and select **API Management Services**. and create one
 
@@ -52,9 +50,9 @@ API Management (APIM) is a managed API management service provided by Azure that
       
 ![](../media/APIM.jpg)
 
-3. After Creating the **API Management service** noe we will add a New API to the service
+3. After Creating the **API Management service**, we will add a New API to the service
 
-4. To add a new API into the API Management service, follow the steps below:
+4. To add a new API to the API Management service, follow the steps below:
     - Select **APIs (1)** under the **APIs** section within the left navigation pane of the APIM blade.
 
          >**Note:** Here you can define the API and configure how it will be forwarded to the backend and finally returned to the user. There is a pre-defined          “Echo API” that is very useful as a reference.
@@ -107,7 +105,7 @@ API Management (APIM) is a managed API management service provided by Azure that
 
    ![](../media/4-7.png)
 
-3. Now we need to be able to access the **Completions API** and **Embeddings API** when we use AOAI resources via APIM. Since each of them has a differenct URL path, they need to be mapped to the backend with different paths as well. Ensuring that the basic flow of APIM is understood, perform the following steps to add the API Frontend settings:
+3. Now we need to be able to access the **Completions API** and **Embeddings API** when we use AOAI resources via APIM. Since each of them has a different URL path, they need to be mapped to the backend with different paths as well. To ensure that the basic flow of APIM is understood, perform the following steps to add the API Frontend settings:
     - Select **APIs (1)** under the **APIs** section within the left navigation pane of the APIM blade.
     - Select **My Cool OpenAI Test (2)** API.
     - Switch to the **Design (3)** tab.
@@ -159,7 +157,7 @@ Now, the goal is to achieve load balancing and redundancy with multiple AOAI res
     - Switch to the **Design (2)** tab.
     - Ensure to select **All operations (3)**.
     - Wihtin the **Backend** tile, click on edit **HTTP(s) endpoint (4)**.
-    - Within the **Backend** page, specify the AOAI resource **Service URL (5)** with the AOAI endpoint URL that was copied earier over a notepad.
+    - Within the **Backend** page, specify the AOAI resource **Service URL (5)** with the AOAI endpoint URL that was copied earlier over a notepad.
     - Ensure that the **Override (6)** checkbox is checked.
     - Click on **Save (7)**.
 
@@ -187,7 +185,7 @@ Now, the goal is to achieve load balancing and redundancy with multiple AOAI res
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, use the drop-down menu at the top left of the cloud shell pane to change it to ***PowerShell***.
 
-5. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
+5. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
 6. In the Bash pane, enter the following commands to access the chat completions API via APIM:
 
@@ -275,7 +273,7 @@ The scenario in the previous tasks included APIM and AOAI to be linked one-to-on
 
 8. Navigate back to **APIs** under the **APIs** section in the left navigation pane of the API Management Service.
 
-9. Now, let's set the above named value pointing to the AOAI key in the header. Inorder to do this,
+9. Now, let's set the above named value pointing to the AOAI key in the header. In order to do this,
    - Select the **My Cool OpenAI Test (1)** API.
    - Switch to the **Design (2)** tab.
    - Ensure to select **All operations (3)**.
@@ -312,7 +310,7 @@ The scenario in the previous tasks included APIM and AOAI to be linked one-to-on
 
 11. Use the **Cloud Shell** button **[\>_]** to the right of the search bar at the top of the page to reopen/create a new Cloud Shell in the Azure portal, selecting a ***Bash*** environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal.
 
-12. After having updating the inbound procesing policy, in the Bash pane, enter the following commands to access the chat completions API via APIM but this time without the `api-key` header from the curl request:
+12. After having updating the inbound processing policy, in the Bash pane, enter the following commands to access the chat completions API via APIM but this time without the `api-key` header from the curl request:
 
     ```Bash
     # Chat Completions API via APIM
@@ -381,7 +379,7 @@ In this task, we will try to load-balance AOAI resources using the policies that
 
 ### Task 3.1: Provision an Azure OpenAI resource
 
-This sub-task includes the creation of a new Azure OpenAI instance deployed in the `australiaeast` region in addition to the earlier created AOAI resource dpeloyed in the `eastus` region.
+This sub-task includes the creation of a new Azure OpenAI instance deployed in the `australiaeast` region in addition to the earlier created AOAI resource deployed in the `eastus` region.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -407,8 +405,8 @@ This sub-task includes the creation of a new Azure OpenAI instance deployed in t
 5. To capture the values of the Azure OpenAI's key and endpoint, execute the following steps:
     - Select **Keys and Endpoints (1)** under the **Resource Management** section from the left navigation pane.
     - Click on **Show Keys (2)**.
-    - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
-    - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+    - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
+    - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
    ![](../media/k&e.png "Create Azure OpenAI resource")
 
@@ -422,7 +420,7 @@ This sub-task includes the creation of a new Azure OpenAI instance deployed in t
 
    ![](../media/endaus-1.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/openai_studio-1.png)
 
@@ -447,7 +445,7 @@ This sub-task includes the creation of a new Azure OpenAI instance deployed in t
 
    >**Note:** `text-embedding-ada-002` is not available in this region.
 
-   > **Note**: You can ignore any error related to assignment of roles to view the quota limits.
+   > **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
 
 ### Task 3.3: Set up Named values for the AOAI key and endpoint
 
@@ -467,7 +465,7 @@ This sub-task includes the creation of a new Azure OpenAI instance deployed in t
     - **Name:** endpoint-australia **(1)**
     - **Display Name:** endpoint-australia **(2)**
     - **Type:** Select **Plain (3)**
-    - **Value:** Enter the Azure OpenAI endpoint of the instance deployed in the australia region. **(4)**
+    - **Value:** Enter the Azure OpenAI endpoint of the instance deployed in the Australia region. **(4)**
     - Click on **Save (4)**.
     
    ![](../media/add-named-value-endpoint-australia.png)
@@ -476,14 +474,14 @@ This sub-task includes the creation of a new Azure OpenAI instance deployed in t
     - **Name:** endpoint-australia-key **(1)**
     - **Display Name:** endpoint-australia-key **(2)**
     - **Type:** Select **Secret (3)**
-    - **Value:** Enter the Azure OpenAI key value of the instance that's deployed in the australia region. **(4)**
+    - **Value:** Enter the Azure OpenAI key value of the instance that's deployed in the Australia region. **(4)**
     - Click on **Save (5)**.
 
    ![](../media/add-named-value-key-australia.png)
 
 6. Navigate back to **APIs** under the **APIs** section in the left navigation pane of the API Management Service.
 
-7. Now, let's set the above named value pointing to the AOAI key in the header. Inorder to do this,
+7. Now, let's set the above named value pointing to the AOAI key in the header. In order to do this,
    - Select the **My Cool OpenAI Test (1)** API.
    - Switch to the **Design (2)** tab.
    - Ensure to select **All operations (3)**.
@@ -528,7 +526,7 @@ This sub-task includes the creation of a new Azure OpenAI instance deployed in t
    </policies>
    ```
 
-The above policy, First, `@(new Random().Next(0, 2))` generates a random number and assigns it to the rand variable. Next, `<choose>` and `<when>` are combined to branch the case according to the value of the variable. This is similar to a switch in a general programming language. Depending on the value, the backend and its key is changed dynamically.
+The above policy, First, `@(new Random().Next(0, 2))` generates a random number and assigns it to the rand variable. Next, `<choose>` and `<when>` are combined to branch the case according to the value of the variable. This is similar to a switch in a general programming language. Depending on the value, the backend and its key are changed dynamically.
 
 ### Task 3.4: Test and trace the API
 
@@ -569,8 +567,8 @@ The above policy, First, `@(new Random().Next(0, 2))` generates a random number 
 
    ![](../media/response.png)
 
-4. The **Trace** feature provides a detailed look at the evaluation of expressions and the subsequent processing branches. Here a random number `1` is selected and since the `text-embedding-ada-002` model is voide in the eastus region, the corresponding AOAI resource in Australia is selected for the backend.
+4. The **Trace** feature provides a detailed look at the evaluation of expressions and the subsequent processing branches. Here a random number `1` is selected and since the `text-embedding-ada-002` model is void in the eastus region, the corresponding AOAI resource in Australia is selected for the backend.
 
    ![](../media/loadbalanced-backend.png)
 
-5. Repeat the tests many times to make sure that the backend switches correctly according to a random number and that the API returns a right response no matter where it is connected. This marks the final achievment of loadbalancing Azure OpenAI instances using the Azure API Management service.
+5. Repeat the tests many times to make sure that the backend switches correctly according to a random number and that the API returns a right response no matter where it is connected. This marks the final achievement of load balancing Azure OpenAI instances using the Azure API Management service.
