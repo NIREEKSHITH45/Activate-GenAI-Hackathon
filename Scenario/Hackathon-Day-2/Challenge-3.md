@@ -1,4 +1,4 @@
-# Challenge 03:  Deploy the chat app Solution.
+# Challenge 03:  Deploy the chat App Solution.
 
 ### Estimated Time: 150 minutes
 
@@ -38,7 +38,7 @@ Together, these services create a responsive chat application that combines AI f
    - Verify if Terraform is installed on your machine. If not, follow the [Terraform installation guide](https://developer.hashicorp.com/terraform/install)
 
 2. **Terraform Deployment:**
-   - Use Terraform to deploy the architecture specified in the provided GitHub repository.
+   - Use Terraform to deploy the App Solution specified in the provided GitHub repository.
    - Configure Terraform scripts to provision Azure resources accurately.
 
 3. **Azure Search Index Deployment:**
