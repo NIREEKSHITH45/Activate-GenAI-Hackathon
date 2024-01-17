@@ -29,7 +29,7 @@ Together, these services create a responsive chat application that combines AI f
 ![](../media/appcomponents.png)
 
 
-## Challenge Objectives: (WIP)
+## Challenge Objectives:
 
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **Activate-GenAI-<inject key="Resource Group Name"/>**.  !
 
