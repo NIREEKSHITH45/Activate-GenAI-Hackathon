@@ -48,7 +48,7 @@ API Management (APIM) is a managed API management service provided by Azure that
     - **Organization Name**: Contoso **(5)**
     - **Administrator email**: User name **<inject key="AzureAdUserEmail"></inject>>(6)**
     - **Pricing tier**: Basic **(7)**
-    - Click on **Review + Create**
+    - Click on **Review + Create (8)**
       
 ![](../media/APIM.jpg)
 
