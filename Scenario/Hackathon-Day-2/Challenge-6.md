@@ -8,7 +8,7 @@ Your task is to implement comprehensive monitoring for the Azure OpenAI service,
 
 ## Challenge Objectives:
 
-1. **Monitoring Azure OpenAI Service::**
+1. **Monitoring Azure OpenAI Service:**
    - Set up diagnostic settings for the existing Azure OpenAI services.
    - Conduct log analysis utilizing Kusto Queries to monitor the service's performance and usage.
      
