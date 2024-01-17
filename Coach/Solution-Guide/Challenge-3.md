@@ -50,15 +50,15 @@ If you have not already cloned **Activate GenAI** code repository to the environ
 
 **Deploying the infrastructure**
 
-Verify terraform is installed in your machine by running the following command `terraform --version`
+1. Verify terraform is installed in your machine by running the following command `terraform --version`
 
-Login to Azure:
+2. Login to Azure:
 
 ```bash
 azd auth login 
 ```
 
-Run the following commands to deploy the infrastructure:
+3. Run the following commands to deploy the infrastructure:
 
 ```bash
 cd infra
@@ -68,8 +68,7 @@ terraform apply
 
 ## Task 3: Azure Search Index Deployment and Upload The Sample Data
 
-
-Run the following commands to deploy the Azure Search Index and upload the sample documents:
+1. Run the following commands to deploy the Azure Search Index and upload the sample documents:
 
 ```bash
 export AZURE_RESOURCE_GROUP="<resource group>" 
@@ -86,15 +85,13 @@ export AZURE_OPENAI_EMB_MODEL_NAME="text-embedding-ada-002"
 export AZURE_SEARCH_INDEX="gptkbindex"
 ```
 
-
-Deploy the Azure Search Index and upload the sample documents by running the following command:
+2. Deploy the Azure Search Index and upload the sample documents by running the following command:
 
 ```bash
 ./scripts/prepdocs.ps1
 ```
 
-
-The above script will create an index in the AI search service and analyse and upload the PDF data to the storage account and integrate it with Azure OpenAI with the help of Form Recogniser and Azure AI search.
+  > **Note**: The above script will create an index in the AI search service and analyse and upload the PDF data to the storage account and integrate it with Azure OpenAI with the help of Form Recogniser and Azure AI search.
 
 ## Additional Resources:
 
