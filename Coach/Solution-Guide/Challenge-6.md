@@ -134,7 +134,7 @@ Once you've added code sample to your application, choose the green Start button
 6. Enter the following details **Configure service resource** and click on **Continue** **(5)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **business-process-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
+   - Resource group: **<inject key="Resource Group Name"/>** **(2)**.
    - Form Recognizer or Cognitive Service Resource: Select the available Cognitive Service Form Recognizer name similar to **cogservicesbpass{suffix}** **(3)**.
    - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
 
@@ -143,7 +143,7 @@ Once you've added code sample to your application, choose the green Start button
 7. Enter the following details **Connect training data source** and click on **Continue** **(8)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **business-process-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
+   - Resource group: **<inject key="Resource Group Name"/>** **(2)**.
    - Check the box to **Create new storage account** **(3)**
    - Storage account name: **formrecognizer<inject key="Deployment ID" enableCopy="false"/>** **(4)**.
    - Location: **East US** **(5)**.
@@ -164,7 +164,7 @@ In this step, you will upload 6 training documents to train the model.
 
      ![](../media/bpa2-1.png)
 
-2.  On the file explorer, enter the following `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** path hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and hit **Open** **(3)**.
+2.  On the file explorer, enter the following `C:\LabFiles\Data\Custom Model Sample` **(1)** path hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and hit **Open** **(3)**.
 
      ![](../media/bpa2-2.png)
 
@@ -202,7 +202,7 @@ In this step, you will upload 6 training documents to train the model.
 
      ![](../media/bpa2-10.png)
 
-11. On the file explorer, enter the following `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** path hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
+11. On the file explorer, enter the following `C:\LabFiles\Data\Custom Model Sample` **(1)** path hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
 
      ![](../media/bpa2-11.png)
 
@@ -214,7 +214,7 @@ In this step, you will upload 6 training documents to train the model.
 
 After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
 
-1. Navigate back to the Resource groups and select the resource group **business-process -<inject key="Deployment ID" enableCopy="false"/>**.
+1. Navigate back to the Resource groups and select the resource group **<inject key="Resource Group Name"/>**.
 
     ![](../media/bpa3-1.png)
 
@@ -262,7 +262,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
       ![](../media/bpa3-12.png)
 
-13. For documents, enter the following `C:\Users\Public\Desktop\Data\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
+13. For documents, enter the following `C:\LabFiles\Data\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
 
       ![](../media/bpa3-13.png)
 
