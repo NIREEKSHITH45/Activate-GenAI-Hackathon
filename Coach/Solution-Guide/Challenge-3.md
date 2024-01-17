@@ -43,10 +43,10 @@ Together, these services create a responsive chat application that combines AI f
 If you have not already cloned **Activate GenAI** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
 
 1. Start Visual Studio Code.
-2. Open the palette (SHIFT+CTRL+P) and run a **Git: Clone** command to clone the `https://github.com/CloudLabs-MOC/activate-genai` repository to a local folder (it doesn't matter which folder).
+2. Open the palette (SHIFT+CTRL+P) and run a **Git: Clone** command to clone the `https://github.com/CloudLabs-MOC/activate-genai` repository to a local folder.
 3. When the repository has been cloned, open the folder in Visual Studio Code.
 
-## Task 2: Deploying the solution using Terraform.
+## Task 2: Deploy the  AI-Powered Chat App.
 
 **Deploying the infrastructure**
 
@@ -55,7 +55,7 @@ If you have not already cloned **Activate GenAI** code repository to the environ
 2. Login to Azure:
 
 ```bash
-azd auth login 
+az login 
 ```
 
 3. Run the following commands to deploy the infrastructure:
@@ -68,7 +68,7 @@ terraform apply
 
 ## Task 3: Azure Search Index Deployment and Upload The Sample Data
 
-1. Run the following commands to deploy the Azure Search Index and upload the sample documents:
+1. Run the following commands in the same terminal to deploy the Azure Search Index and upload the sample documents:
 
 ```bash
 export AZURE_RESOURCE_GROUP="<resource group>" 
@@ -91,7 +91,7 @@ export AZURE_SEARCH_INDEX="gptkbindex"
 ./scripts/prepdocs.ps1
 ```
 
-  > **Note**: The above script will create an index in the AI search service and analyse and upload the PDF data to the storage account and integrate it with Azure OpenAI with the help of Form Recogniser and Azure AI search.
+  > **Note**: The above script will create an index in the AI search service and analyze and upload the PDF data to the storage account and integrate it with Azure OpenAI with the help of Form Recogniser and Azure AI search.
 
 ## Additional Resources:
 
