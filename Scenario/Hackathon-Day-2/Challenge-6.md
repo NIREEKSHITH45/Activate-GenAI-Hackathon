@@ -20,7 +20,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 1) **Set up a translator within Azure AI services.**
 
-- Implement a translation service to meet Contoso's multilingual document requirements.
+    - Implement a translation service to meet Contoso's multilingual document requirements.
 
 1) **Setup Azure Blob Storage  .**
 
@@ -40,18 +40,19 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 **Using Doc Intelligence:**
 
-1) Creating an Azure Document Intelligence (Form Recognizer) resource:
+1) **Creating an Azure Document Intelligence (Form Recognizer) resource:**
     - Navigate to Azure AI services and set up an Azure Document Intelligence (Form Recognizer) resource.
     - Upload and label training documents to train the Azure Document Intelligence (Form Recognizer) model.
 
-1) Build a New Pipeline with Custom Model Module in BPA:
+1) **Build a New Pipeline with Custom Model Module in BPA:**
     - Utilize the trained Form Recognizer model to create a new pipeline in BPA.
     - Configure the pipeline for efficient document processing and integration with Azure Cognitive Search.
 
-1) Configure Azure AI Search:
+1) **Configure Azure AI Search:**
     - Connect to Azure Blob Storage and configure data import and indexing.
     - Set up an indexer for organized data retrieval.
-1) Update Azure OpenAI Model to use the Azure AI Search
+
+1) **Update Azure OpenAI Model to use the Azure AI Search**
     - Update your existing Azure OpenAI model deployemnt to connect to newly created AI Search index and test using Azure OpenAI Playground.
 ## Success Criteria:
 
