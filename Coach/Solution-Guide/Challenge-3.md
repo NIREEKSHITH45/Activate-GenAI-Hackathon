@@ -46,11 +46,11 @@ If you have not already cloned **Activate GenAI** code repository to the environ
 2. Open the palette (SHIFT+CTRL+P) and run a **Git: Clone** command to clone the `https://github.com/CloudLabs-MOC/activate-genai` repository to a local folder (it doesn't matter which folder).
 3. When the repository has been cloned, open the folder in Visual Studio Code.
 
-## Task 2: Deploying the solution using terraform
+## Task 2: Deploying the solution using Terraform.
 
 **Deploying the infrastructure**
 
-Verify terraform installed in your machine by runnig the following command `terraform --version`
+Verify terraform is installed in your machine by running the following command `terraform --version`
 
 Login to Azure:
 
@@ -96,7 +96,7 @@ Deploy the Azure Search Index and upload the sample documents by running the fol
 ```
 
 
-The above script will create an index in AI search service and analyse and upload the PDF data to storage account and integrate it with Azure OpenAI with the help of Form Recogniser and Azure AI search.
+The above script will create an index in the AI search service and analyse and upload the PDF data to the storage account and integrate it with Azure OpenAI with the help of Form Recogniser and Azure AI search.
 
 ## Additional Resources:
 
