@@ -4,6 +4,16 @@
 
 Welcome to the Deploy Azure OpenAI Service Challenge! This challenge is designed to test your skills in deploying the Azure OpenAI Service and it's Large Language Models (LLM) . The goal is to set up the OpenAI Service, and deploy LLM models.
 
+**Azure OpenAI Service** provides REST API access to OpenAI's powerful language models including the GPT-4, GPT-4 Turbo with Vision, `gpt-35-turbo`, and Embeddings model series. In addition, the new `GPT-4` and `gpt-35-turbo` model series have now reached general availability.
+
+A **Large Language Model (LLM)** is a deep learning algorithm that can perform a variety of natural language processing (NLP) tasks. Large language models use transformer models and are trained using massive datasets — hence, large. This enables them to recognize, translate, predict, or generate text or other content.
+
+**Contoso Ltd**, a leading technological firm, is seeking to enhance its product support operations. They receive a vast number of queries daily, which results in longer waiting times and decreased customer satisfaction. To address this, Contoso is planning to implement an AI-powered solution that can handle customer inquiries effectively and efficiently.
+
+They have chosen to deploy Azure OpenAI Service along with its Large Language Models (LLM), like `gpt-35-turbo` and `text-embedding-ada-002`. These models are known for their capability in processing and generating human-like text, making them ideal for this application.
+
+As a part of this challenge, your task is to create an Azure OpenAI service and deploy Large Language Models (LLM). The Large Language Models include **gpt-35-turbo** and **text-embedding-ada-002**.
+
 ## Description
 
 Your task is to deploy the Azure OpenAI Service, and deploy Large Language Models (LLM).
@@ -38,18 +48,17 @@ Your task is to deploy the Azure OpenAI Service, and deploy Large Language Model
 
 1. In the Azure Portal, search for **Azure OpenAI** and select it.
 
-  ![](../media/azure-openai-1-new.png)
+   ![](../media/azure-openai-1-new.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on the **create** enter the details required and deploy the Azure Open AI service.
 
-  ![](../media/challenge01.jpg)
-
+   ![](../media/challenge01.jpg)
 
 ### Task 2: Deploy a model
 
- 1. In the Azure Portal, search for **Azure OpenAI** and select it.
+1. In the Azure Portal, search for **Azure OpenAI** and select it.
 
-     ![](../media/azure-openai-1-new.png)
+    ![](../media/azure-openai-1-new.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject>**
 
@@ -75,9 +84,9 @@ Your task is to deploy the Azure OpenAI Service, and deploy Large Language Model
 
 7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
-1. In the **Deployments** page again, click on **+ Create new deployment**.
+8. In the **Deployments** page again, click on **+ Create new deployment**.
 
-1. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
+9. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
     - **Select a model**: text-embedding-ada-002 (1)
     - **Model version**: *Use the default version* (2)
     - **Deployment name**: text-embedding-ada-002
@@ -85,8 +94,7 @@ Your task is to deploy the Azure OpenAI Service, and deploy Large Language Model
   
          ![](../media/text-ada.png)
 
-1. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
-
+10. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
 ## Success Criteria:
 
