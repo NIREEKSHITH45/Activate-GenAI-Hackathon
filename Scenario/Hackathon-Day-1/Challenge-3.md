@@ -1,4 +1,4 @@
-# Challenge 03:  Deploy the AI Chat App Solution.
+# Challenge 03:  Deploy an AI-Powered Chat App with Terraform
 
 ### Estimated Time: 150 minutes
 
