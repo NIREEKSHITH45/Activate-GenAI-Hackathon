@@ -12,7 +12,7 @@
 | 10:45 - 11:45 | **Challenge 02: Implement Document Search with Azure AI Search - 120 min** | Complete [Challenge 02](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-2.md)    |
 | 11:45 - 12:00 | **Validate Challenge 02 Completion, Q&A** | Discussion, etc.                   |
 | 12:00 - 01:00 | **Lunch Break**                                           |                                    |
-| 01:00 - 03:30 | **Challenge 03: Deploy the Sample Chat App with Terraform - 150 min** | Complete [Challenge 03](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-3.md) |
+| 01:00 - 03:30 | **Deploy an AI-Powered Chat App - 150 min** | Complete [Challenge 03](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-3.md) |
 | 03:30 - 03:45 | **Validate Challenge 03 Completion, Q&A** | Discussion, etc.                  |
 | 03:45 - 04:00 | **Break**                                           |                                  |
 | 04:00 - 04:30 | **Challenge 04: Interact with Chat App - 30 min**   | Complete [Challenge 04](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-4.md)             |
@@ -25,7 +25,7 @@
 | Time          | Agenda                                              | Remarks                                  |
 |---------------|-----------------------------------------------------|------------------------------------------|
 | 09:00 - 09:15 | **Day 2 Opening Session**                                        |                                          |
-| 09:15 - 10:45 | **Challenge 05: Load Balancing Azure OpenAI Resources - 90 min** | Complete [Challenge 05](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-5.md)         |
+| 09:15 - 10:45 | **Challenge 05: Serverless Document Batch Processing - 90 min** | Complete [Challenge 05](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-5.md)         |
 | 10:45 - 11:00 | **Validate Challenge 05 Completion, Q&A** | Discussion, etc.                         |
 | 11:00 - 11:15 | **Break**                                           |                                          |
 | 11:15 - 12:45 | **Challenge 06: Serverless Document Batch Processing - 90 min** | Complete [Challenge 06](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-6.md)   |
