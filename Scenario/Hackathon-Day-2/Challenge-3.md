@@ -34,7 +34,7 @@ Together, these services create a responsive chat application that combines AI f
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **Activate-GenAI-<inject key="Resource Group Name"/>**.  !
 
 1. **Clone the Repository:**
-   - Clone the Active Gen AI repository: `https://github.com/Azure/activate-genai`.
+   - Clone the Active Gen AI repository: `https://github.com/CloudLabs-MOC/activate-genai`.
    - Verify if Terraform is installed on your machine. If not, follow the [Terraform installation guide](https://developer.hashicorp.com/terraform/install)
 
 2. **Terraform Deployment:**
