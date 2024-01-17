@@ -1,77 +1,32 @@
-# Challenge 06: Serverless Document Batch Processing 
-
-### Estimated Time: 90 minutes
+# Challenge-07: Implement Monitoring and Logging of Azure OpenAI using API Management Service
 
 ## Introduction:
 
-Welcome to a pivotal challenge where Contoso Ltd aims to enhance their AI-powered chat app with a robust document processing system. This challenge focuses on creating a serverless solution for processing new documents, translating them as needed, and seamlessly storing them into Azure AI Search. This system will ensure that these documents are continuously available for consumption by Azure OpenAI, enhancing the chat app's knowledge base and response accuracy.
+Building on the success of enhancing Contoso's AI-powered chat app with serverless document processing, your next objective is to operationalize these Azure OpenAI solutions with robust monitoring and logging mechanisms. In this challenge, you will delve into the intricacies of setting up and analyzing advanced monitoring systems using the Azure API Management Service and Log Analytics workspace. This is a crucial step in ensuring the smooth operation and maintenance of the AI solutions you've developed, providing valuable insights into system performance and user interactions.
 
-Building on your previous achievements in load balancing Azure OpenAI resources, you will now embark on a journey to streamline document processing. This involves setting up a translation service, creating a serverless architecture for batch processing using Azure services, and leveraging technologies like Form Recognizer and Azure AI Search. Your task is to ensure that newly added documents are promptly processed, analyzed, and indexed, making them readily available for the chat app's AI to utilize.
-
-This challenge unfolds in three main stages: language translation, serverless document batch processing using Azure services, and leveraging advanced features like Form Recognizer and AI search. We kick things off by translating files to meet language requirements. Next, you deploy a serverless architecture, utilizing Azure services, for efficient batch processing of documents. You train and test our model, establish a pipeline to convert documents into a Form Recognizer format, and bring in Azure's AI search service to verify the presence of specific documents in the processed dataset from where they can be used by Azure OpenAI. 
-
-You will utilize the Form Recognizer Service and the Business Process Automation (BPA) Accelerator to build pipelines across various Azure services, creating a seamless document processing solution. This challenge is a step towards realizing an AI solution that can adapt and grow with Contoso's business needs.
-
-
+Your task is to implement comprehensive monitoring for the Azure OpenAI service, leveraging diagnostic settings and Kusto queries for in-depth log analysis. Additionally, you'll be integrating the API Management Service to oversee the chat message completions and further analyze the prompts and outputs. This level of monitoring is essential for Contoso to maintain a high-quality, efficient, and user-friendly AI chat application.
 
 ## Challenge Objectives:
 
-> **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**  !
-
-1) **Set up a translator within Azure AI services.**
-
-    - Implement a translation service to meet Contoso's multilingual document requirements.
-
-1) **Setup Azure Blob Storage  .**
-
-    - Create mandatory source and target containers in Azure Blob Storage for document processing.
-
-1) **Initialize C#/.NET Environment for Document Processing:**
-
-    - Set up a C#/.NET project in Visual Studio for document translation, using .Net Version 6.
-    - Install necessary packages, including Newtonsoft.Json.
-
-1) **Translate Documents and Run Application:.**
-
-    - Implement document translation code in the C#/.NET project.
-    - Execute the application to translate all documents in the storage container.
-
-      >Note: You can find the documents in C:\LabFiles\Documents
-
-**Using Doc Intelligence:**
-
-1) **Pre-requisites setup:**
-      - Click on the "Deploy to Azure" button (TODO).
-    
-    [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
-
-     - Verify the deployed Azure resources in the resource group
-
-1) **Using an Azure Document Intelligence (Form Recognizer) resource:**
-    - Navigate to Azure AI services and set up an Azure Document Intelligence (Form Recognizer) resource.
-    - Upload and label training documents to train the Azure Document Intelligence (Form Recognizer) model.
-    - The files you need can be found at `C:\LabFiles\Data`
-
-1) **Build a New Pipeline with Custom Model Module in BPA:**
-    - Utilize the trained Form Recognizer model to create a new pipeline in BPA.
-    - Configure the pipeline for efficient document processing and integration with Azure Cognitive Search.
-
-1) **Configure Azure AI Search:**
-    - Connect to Azure Blob Storage and configure data import and indexing.
-    - Set up an indexer for organized data retrieval.
-
-1) **Update Azure OpenAI Model to use the Azure AI Search**
-    - Update your existing Azure OpenAI model deployment to connect to the newly created AI Search index and test using Azure OpenAI Playground.
+1. **Monitoring Azure OpenAI Service::**
+   - Set up diagnostic settings for the existing Azure OpenAI services.
+   - Conduct log analysis utilizing Kusto Queries to monitor the service's performance and usage.
+     
+2. **Monitoring OpenAI prompts using Azure API Management:**
+   - Utilize Kusto queries within API Management for comprehensive log analysis, focusing on chat message completions and prompt interactions.
+  
 ## Success Criteria:
 
-- Successful translation of documents and storage in Azure Blob Storage target container.
-- Effective setup and utilization of Form Recognizer resource and BPA pipeline.
-- Proper configuration of Azure Cognitive Search for processed documents.
-- Validation of document processing and search functionality using the Sample Search Application in BPA.
+Participants will be evaluated based on the following criteria:
+
+1. Successfully configure the Azure OpenAI service with appropriate diagnostic settings and analyze its logs using Kusto Queries.
+2. Effectively create and configure Azure API Management, ensuring clear visibility of logs and OpenAI prompts through detailed Kusto Query analysis.
 
 ## Additional Resources:
 
-- Refer [document translation](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) for sample code that will be used for document translation using C#.
+- Refer to the [how to configure Azure API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md) for detailed information.
+- Refer to this video about [Log & Monitor Everything in Azure OpenAI with API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md).
+- Refer to the [Kusto Queries Tutorial](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-tutorial) for detailed information
 
 ## Challenge Validation
  

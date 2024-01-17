@@ -1,61 +1,77 @@
-# Challenge 05: Load Balancing Azure OpenAI Resources
+# Challenge 06: Serverless Document Batch Processing 
 
 ### Estimated Time: 90 minutes
 
 ## Introduction:
 
-Building on your experience with deploying and interacting with the AI-powered chat application, this challenge introduces a critical component for scalability and efficiency: load balancing for Azure OpenAI resources. Your task is to create a system that not only handles high user traffic smoothly but also optimizes resource utilization and maintains performance across different regions. This is key to providing a consistent and reliable user experience for Contoso's chat app, especially during peak usage times.
+Welcome to a pivotal challenge where Contoso Ltd aims to enhance their AI-powered chat app with a robust document processing system. This challenge focuses on creating a serverless solution for processing new documents, translating them as needed, and seamlessly storing them into Azure AI Search. This system will ensure that these documents are continuously available for consumption by Azure OpenAI, enhancing the chat app's knowledge base and response accuracy.
 
+Building on your previous achievements in load balancing Azure OpenAI resources, you will now embark on a journey to streamline document processing. This involves setting up a translation service, creating a serverless architecture for batch processing using Azure services, and leveraging technologies like Form Recognizer and Azure AI Search. Your task is to ensure that newly added documents are promptly processed, analyzed, and indexed, making them readily available for the chat app's AI to utilize.
 
-Utilizing Azure API Management (APIM), you'll set up a load balancing mechanism for the OpenAI services. This setup will distribute workloads evenly across multiple OpenAI instances, ensuring high availability and fault tolerance. By doing so, you'll enhance the chat app's capacity to serve a larger audience efficiently, while maintaining cost-effectiveness and robust performance.
+This challenge unfolds in three main stages: language translation, serverless document batch processing using Azure services, and leveraging advanced features like Form Recognizer and AI search. We kick things off by translating files to meet language requirements. Next, you deploy a serverless architecture, utilizing Azure services, for efficient batch processing of documents. You train and test our model, establish a pipeline to convert documents into a Form Recognizer format, and bring in Azure's AI search service to verify the presence of specific documents in the processed dataset from where they can be used by Azure OpenAI. 
+
+You will utilize the Form Recognizer Service and the Business Process Automation (BPA) Accelerator to build pipelines across various Azure services, creating a seamless document processing solution. This challenge is a step towards realizing an AI solution that can adapt and grow with Contoso's business needs.
 
 
 
 ## Challenge Objectives:
 
+> **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**  !
 
-1. **Multi-Region OpenAI Deployment:**
-   - Ensure the deployment of Azure OpenAI instances in multiple regions, with models like GPT-3.5 Turbo and Text Embedding Ada-002.
-   - Focus on geographic dispersion to reduce latency and optimize user experiences.
-   - [NOTE]: You may use previously deployed Azure OpenAI Instances for this challenge. 
+1) **Set up a translator within Azure AI services.**
 
-   
-2. **Set up API Management as a proxy to manage traffic to Azure OpenAI resources:**
-    - Integrate POST operations for accessing the Completions API (GPT-3.5 Turbo) and the Embeddings API (Text Embedding Ada-002) within APIM.
-    - Implement load balancing across OpenAI resources with a failover mechanism for backend errors.
-    - Use APIM’s Named Values for dynamic configuration of OpenAI endpoints and keys, ensuring efficient routing and resource management.
+    - Implement a translation service to meet Contoso's multilingual document requirements.
 
-3. **API Inbound Processing Policies:**
-    - Develop inbound processing policies in APIM to support load balancing.
-    - Include policies for dynamic backend switching and error handling.
-      
-4. **Testing and Redundancy:**
-    - Utilize APIM's testing feature to validate the load balancing setup.
-    - Implement the retry feature in APIM for enhanced redundancy and fault tolerance.
+1) **Setup Azure Blob Storage  .**
 
-5. **Chat App Configuration Update:**
-    - Modify the previously deployed chat application's configuration to connect to the OpenAI service via the newly set up APIM endpoint.
-    - Ensure the chat app seamlessly integrates with this updated architecture, maintaining its functionality and performance.
+    - Create mandatory source and target containers in Azure Blob Storage for document processing.
 
-## Success criteria:
+1) **Initialize C#/.NET Environment for Document Processing:**
 
-1. Ensure that the OpenAI instances have the GPT-35-Turbo and text-embedding-ada-002 models deployed.
+    - Set up a C#/.NET project in Visual Studio for document translation, using .Net Version 6.
+    - Install necessary packages, including Newtonsoft.Json.
 
-2. Within the APIM service, create an Inbound Policy for the API such that the backend (Azure OpenAI's endpoint URL) and AOAI keys are changed dynamically to implement load balancing capabilities.
+1) **Translate Documents and Run Application:.**
 
-3. APIM’s policy is so sophisticated that it can retry under certain conditions if an error occurs on the back end.
-    - Configure and edit the inbound policy to implement the retry method such that the backend HTTP status code is 200.
-    - Use the `<forward-request buffer-request-body=”true” buffer-response=”false” />` within the backend policy to forward the API request to another backed for any HTTP status code of 300.
-  
-4. The chat application should be updated and functioning correctly, connecting to OpenAI via the APIM endpoint.
+    - Implement document translation code in the C#/.NET project.
+    - Execute the application to translate all documents in the storage container.
 
+      >Note: You can find the documents in C:\LabFiles\Documents
+
+**Using Doc Intelligence:**
+
+1) **Pre-requisites setup:**
+      - Click on the "Deploy to Azure" button (TODO).
+    
+    [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
+
+     - Verify the deployed Azure resources in the resource group
+
+1) **Using an Azure Document Intelligence (Form Recognizer) resource:**
+    - Navigate to Azure AI services and set up an Azure Document Intelligence (Form Recognizer) resource.
+    - Upload and label training documents to train the Azure Document Intelligence (Form Recognizer) model.
+    - The files you need can be found at `C:\LabFiles\Data`
+
+1) **Build a New Pipeline with Custom Model Module in BPA:**
+    - Utilize the trained Form Recognizer model to create a new pipeline in BPA.
+    - Configure the pipeline for efficient document processing and integration with Azure Cognitive Search.
+
+1) **Configure Azure AI Search:**
+    - Connect to Azure Blob Storage and configure data import and indexing.
+    - Set up an indexer for organized data retrieval.
+
+1) **Update Azure OpenAI Model to use the Azure AI Search**
+    - Update your existing Azure OpenAI model deployment to connect to the newly created AI Search index and test using Azure OpenAI Playground.
+## Success Criteria:
+
+- Successful translation of documents and storage in Azure Blob Storage target container.
+- Effective setup and utilization of Form Recognizer resource and BPA pipeline.
+- Proper configuration of Azure Cognitive Search for processed documents.
+- Validation of document processing and search functionality using the Sample Search Application in BPA.
 
 ## Additional Resources:
 
-- [About Azure API Management service](https://learn.microsoft.com/en-us/azure/api-management/api-management-key-concepts)
-- [Azure-AI-services-openai-quotas-limits](https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits)
-- [Policies in Azure API Management](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-policies)
-- [Use named values in Azure API Management policies](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-properties?tabs=azure-portal)
+- Refer [document translation](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) for sample code that will be used for document translation using C#.
 
 ## Challenge Validation
  
