@@ -18,16 +18,26 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 ### Task 1 - Translate the documents using Translate
 
 #### Task 1.1 - Retrieve your key and document translation endpoint
+#### Task 1.1 - Create your Azure AI Translator and retrieve the key and document translation endpoint
 
-1. If you have an existing Document Translation resource, navigate directly to your resource page.
+1. Navigate to Azure AI Services and select Translator from the left side menu and click on the **Create** button.
 
+    ![](../media/ch6-1.png)
+
+1. Enter the required details and select `S1` pricing tier.
+
+1. Once the Translator resource is created, please get the resource keys by following the next step.
+   
 1. In the left rail, under Resource Management, select Keys and Endpoint.
 
+    ![](../media/ch6-2.png)
+   
 1. Copy and paste your key and document translation endpoint in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
 
 1. You paste your key and document translation endpoint into the code samples to authenticate your request to the Document Translation Service.
 
       ![](../media/T-1.png)
+   
    
 #### Task 1.2 - Create Azure Blob Storage containers
 
