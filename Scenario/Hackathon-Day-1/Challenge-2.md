@@ -6,7 +6,7 @@
 
 In the previous challenge, you successfully set up models in the Azure OpenAI service. Now, Contoso needs a way for its team to quickly find information. This challenge focuses on using Azure AI Search to make the search process easier for the team.
 
-The goal is to teach them how to search for documents smartly, simplifying decision-making and extracting essential information. The team will work on organizing data, improving search capabilities, and gaining valuable insights from messy information. The ultimate objective is to create a solution that makes finding information quick and effortless for Contoso.
+The goal is to teach them how to search for documents smartly, simplifying decision-making and extracting essential information. Your team will work on organizing data, improving search capabilities, and gaining valuable insights from messy information. The ultimate objective is to create a solution that makes finding information quick and effortless for Contoso.
 
 To achieve this, you'll start by cloning a provided repository and establishing the foundation with Azure AI Search and a storage account. The process involves customizing the document uploading script, setting up Azure AI Search, connecting it with Azure AI Services, and building a powerful indexer for advanced search features. Finally, you'll refine queries, define search components, and kickstart the development of the search app.
 
