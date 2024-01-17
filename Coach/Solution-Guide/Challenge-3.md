@@ -59,7 +59,7 @@ terraform init
 terraform apply
 ```
 
-## Task 3: Azure Search Index Deployment and Upload The Sample Data::
+## Task 3: Azure Search Index Deployment and Upload The Sample Data
 
 
 Run the following commands to deploy the Azure Search Index and upload the sample documents:
