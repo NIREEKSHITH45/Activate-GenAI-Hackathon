@@ -17,7 +17,7 @@ Utilizing Azure API Management (APIM), you'll set up a load balancing mechanism 
 1. **Multi-Region OpenAI Deployment:**
    - Ensure the deployment of Azure OpenAI instances in multiple regions, with models like GPT-3.5 Turbo and Text Embedding Ada-002.
    - Focus on geographic dispersion to reduce latency and optimize user experiences.
-   - [NOTE]: You may use previously deployed Azure OpenAI Instances for this challange. 
+   - [NOTE]: You may use previously deployed Azure OpenAI Instances for this challenge. 
 
    
 2. **Set up API Management as a proxy to manage traffic to Azure OpenAI resources:**
