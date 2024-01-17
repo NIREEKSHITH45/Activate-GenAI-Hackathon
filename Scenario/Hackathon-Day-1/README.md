@@ -25,7 +25,7 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 - Strategizing your approach to find the most effective solution.
 - Leveraging the provided lab environment and Azure AI services.
 - Collaborating with peers to refine and implement your solutions.
-- 
+  
 ## Challenges
 
 1. **Challenge 01: Deploy Azure OpenAI Service and LLM Models**
