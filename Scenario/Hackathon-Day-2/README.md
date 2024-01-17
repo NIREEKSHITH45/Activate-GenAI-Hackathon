@@ -7,7 +7,6 @@ Welcome to the Activate Gen AI Challenge Lab! This event is designed to enhance 
 - [Introduction](#introduction)
 - [Learning Objectives](#learning-objectives)
 - [Challenges](#challenges)
-- [Prerequisites](#prerequisites)
 
 ## Introduction
 
