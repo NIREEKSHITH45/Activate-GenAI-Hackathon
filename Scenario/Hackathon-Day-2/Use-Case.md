@@ -1,19 +1,21 @@
 # Hackathon Mission and Use-Case
+Welcome to Activate GenAI Hackathon, proudly presented by Contoso Ltd. Our mission is to leverage the power of Azure OpenAI to revolutionize Contoso's technology stack, streamlining operations, and scaling customer engagement like never before. This hackathon serves as a beacon of innovation, challenging you to build AI-enabled solutions that are not only transformative but also scalable and efficient.
 
-Welcome to the Activate Gen AI Challenge Lab, a vital event designed to enable participants to harness the transformative power of Azure OpenAI and Azure AI Search. This two-day hackathon serves as a crucial step in our journey toward AI maturity, seeking innovative solutions that align with our goals. We encourage participants to think creatively, apply AI in meaningful ways, and help us set new standards in AI application within the business world.
+As a beacon of innovation in the business world, Contoso Ltd is unwavering in its commitment to leading the charge in the adoption of cutting-edge technologies. We recognize the incredible potential of Azure OpenAI services to transform every aspect of our business operations. Our goal for this hackathon is to explore and implement AI-driven applications that seamlessly integrate with our existing infrastructure, thereby enhancing operational scalability and enriching customer interactions.
 
-As a dynamic player in the tech industry, we are committed to staying at the forefront of innovation. We recognize the immense potential of artificial intelligence, particularly Azure's capabilities, in shaping the future of application development. Our goal for this hackathon is to explore, experiment, and establish AI-driven solutions that can integrate seamlessly into our existing systems, elevating both operational efficiency and customer engagement.
+Your challenge, as the torchbearers of innovation, is to dive deep into the world of Azure OpenAI and harness its robust capabilities. Contoso Ltd is counting on you to design and deploy applications that will:
 
-Your challenge, as innovative developers, is to delve into the realms of AI, specifically leveraging Azure’s advanced technologies. We are looking to you to conceptualize and create applications that can:
+1. **Integrate Azure OpenAI into Contoso's Corporate Ecosystem**
+    - Deploy and experiment with LLMs to enrich GenTech's communication channels, focusing on interpreting, analyzing, and summarizing internal and external communications for more streamlined and impactful exchanges.
+2. **Implement Intelligent Document Search**
+    - Engineer innovative tools that allow for efficient indexing and searching of vast document repositories, enabling rapid retrieval of information and knowledge discovery, crucial for informed decision-making within GenTech.
+3. **Establish AI-Powered Chat Interactions**
+    -  Deploy and refine conversational AI interfaces within Contoso's digital ecosystem, ensuring they can handle intricate, multilingual conversations with finesse, thereby elevating the user experience on our platforms.
+4. **Scale AI-Enabled Solutions**
+    - Consider the scalability of the AI solutions you develop. Your applications should not only solve current problems but also have the capacity to grow and handle increased loads without compromising performance.
+5. **Enhanced Document Handling and Accessibility**
+    - In the fast-paced environment at Contoso Ltd, the ability to quickly access and interpret a vast array of documents is paramount. By implementing AI-driven document indexing and searching, Contoso can vastly improve knowledge management and operational efficiency.
 
-- Incorporate Azure OpenAI and Azure AI Search into Business Applications: Deploy and learn about AI models to enhance customer support systems, focusing on interpreting, analyzing, and summarizing customer interactions for quicker, more effective responses.
-  
-- Develop Intelligent Chat Apps: Create intelligent tools that can handle multilingual queries, provide personalized responses, and offer advanced settings to influence chat responses.
+Throughout the challenges of this hackathon, you will interact with state-of-the-art technologies essential for realizing Contoso's objectives. You will be equipped with the necessary arsenal of tools and services to effectively bring these use-cases to fruition.
 
-- Interact with Data in New Ways: Create applications that can interact with complex datasets, extracting and presenting key information in an intuitive manner. This includes implementing serverless document batch processing for continuous document indexing and language translation.
-
-- Enhance User Interactions: Craft AI-driven interfaces and chatbots that provide personalized and efficient user experiences, whether it's for internal use by our employees or for our customers interacting with our digital platforms.
-
-As part of the challenges outlined in this hackathon, you will engage with cutting-edge technologies vital for achieving our goals. You'll have access to the necessary tools and services to implement these use-cases effectively.
-
-We believe in the power of integrating Azure OpenAI and Azure AI Search into our applications, not just to transform our operational workflows but also to deliver unparalleled value to our customers. This hackathon transcends competition; it is a significant step towards a future where AI is a fundamental component of every solution we create. Join us on this exciting journey to push the limits of what's possible with AI in application development.
+At Contoso Ltd., we are convinced that the integration of Azure OpenAI into our applications is not merely an enhancement of our workflow but a catalyst for delivering exceptional value to our stakeholders. This hackathon is more than a competition; it represents a pivotal leap towards an era where AI is an integral part of every solution we craft. Join us in this enthralling venture to extend the boundaries of what's achievable with AI in enterprise application development.
