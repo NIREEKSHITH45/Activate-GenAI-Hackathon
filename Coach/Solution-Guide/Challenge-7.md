@@ -61,7 +61,7 @@ Azure OpenAI collects the same kinds of monitoring data as other Azure resources
 
    ![](../media/azure-openai-1-new.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously
 
    ![](../media/1-2.png)
 
@@ -121,11 +121,11 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 Data in Azure Monitor Logs is stored in tables where each table has its own set of unique properties. The activity log is a type of platform log in Azure that provides insight into subscription-level events. You can view this log independently or route it to Azure Monitor Logs. In the Azure portal, you can use the activity log in Azure Monitor Logs to run complex queries with Log Analytics.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **OpenAI** and select it.
 
    ![](../media/azure-openai-1-new.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously
    
 4. From your Azure OpenAI resource page, under **Monitoring** on the left pane, select **Logs (1)** and then click on the pre-created Log Analytics workspace **(2)** that was used to configure with diagnostics for your Azure OpenAI resource.
 
@@ -171,11 +171,11 @@ Data in Azure Monitor Logs is stored in tables where each table has its own set 
 
 Creating a Diagnostic setting and linking Azure OpenAI to a log analytics workspace does help in caturing native logs, however Log analytics workspace is incapable to log the user request and OpenAI model response prompts. In such scenarios the Azure API Management Service comes in handy.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **OpenAI** and select it.
 
    ![](../media/azure-openai-1-new.png)
 
-2. Select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**.
+2. Select **OpenAI Service** deployed previous challenge
 
 3. To capture the values of the Azure OpenAI's key and endpoint, execute the following steps:
     - Select **Keys and Endpoints (1)** under the **Resource Management** section from the left navigation pane.
@@ -185,11 +185,11 @@ Creating a Diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
          ![](../media/k&e.png "Create Azure OpenAI resource")
 
-4. Within the global search bar, search for and select the **API Management Services**. and create one APIM service
+4. Within the global search bar, search for and select the **API Management Services**. and create one new APIM service by giving the required values.
 
    ![](../media/apim-resource.png)
 
-5. Select the deployed APIM service
+5. Select the deployed **APIM service.**
 
    ![](../media/4-7.png)
 
