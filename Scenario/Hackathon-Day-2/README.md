@@ -25,7 +25,16 @@ By participating in this hackathon, you will learn how to:
 - Apply Gen AI to real-world scenarios, including increased user interactions and dynamic document processing.
 - Collaborate with other participants to tackle challenges and share insights.
 
-## Challenges
+## Hackathon Format: Challenge Based
+
+This hackathon adopts a challenge-based format, offering you a unique opportunity to learn while dealing with practical problems. Each challenge includes one or more self-contained tasks, designed to test and enhance your skills in specific aspects of AI app development. You will approach these challenges by:
+
+- Analyzing the problem statement.
+- Strategizing your approach to find the most effective solution.
+- Leveraging the provided lab environment and Azure Open AI Services.
+- Collaborating with peers to refine and implement your solutions.
+
+## Challenges Overview
 
 1. **Challenge 01: Deploy Azure OpenAI Service and LLM Models**
    - Deploy the Azure OpenAI Service and implement the deployment of a Large Language Model (LLM) within the OpenAI Service.
