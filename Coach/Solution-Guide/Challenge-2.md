@@ -121,7 +121,7 @@ Now that you have the required resources, you can upload some documents to your 
 
 Now that you have the documents in place, you can create a search solution by indexing them.
 
-1. In the Azure portal, browse to your Azure AI Search resource. Then, on its **Overview** page, select **Import data**.
+1. In the Azure portal, browse to your **Azure AI Search** resource. Then, on its **Overview** page, select **Import data**.
 2. On the **Connect to your data** page, in the **Data Source** list, select **Azure Blob Storage**. Then complete the data store details with the following values:
     - **Data Source**: Azure Blob Storage
     - **Data source name**: margies-data
