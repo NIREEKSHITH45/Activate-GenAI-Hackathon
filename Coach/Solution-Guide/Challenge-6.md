@@ -216,8 +216,6 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 1. Navigate back to the Resource groups and select the resource group **<inject key="Resource Group Name"/>**.
 
-    ![](../media/bpa3-1.png)
-
 2. Go to the Resource group, search, and select the **Static Web App** resource type with the name similar to **webappbpa{suffix}**.
 
    ![](../media/bpa3-2.png)
