@@ -14,24 +14,26 @@ Utilizing Azure API Management (APIM), you'll set up a load balancing mechanism 
 ## Challenge Objectives:
 
 
-1. Multi-Region OpenAI Deployment:
-- Ensure the deployment of Azure OpenAI instances in multiple regions, with models like GPT-3.5 Turbo and Text Embedding Ada-002.
-- Focus on geographic dispersion to reduce latency and optimize user experiences.
-- [NOTE]: You may use previously deployed Azure OpenAI Instances for this challange. 
+1. **Multi-Region OpenAI Deployment:**
+   - Ensure the deployment of Azure OpenAI instances in multiple regions, with models like GPT-3.5 Turbo and Text Embedding Ada-002.
+   - Focus on geographic dispersion to reduce latency and optimize user experiences.
+   - [NOTE]: You may use previously deployed Azure OpenAI Instances for this challange. 
 
    
-2. Set up API Management as a proxy to manage traffic to Azure OpenAI resources.
+2. **Set up API Management as a proxy to manage traffic to Azure OpenAI resources:**
     - Integrate POST operations for accessing the Completions API (GPT-3.5 Turbo) and the Embeddings API (Text Embedding Ada-002) within APIM.
     - Implement load balancing across OpenAI resources with a failover mechanism for backend errors.
     - Use APIM’s Named Values for dynamic configuration of OpenAI endpoints and keys, ensuring efficient routing and resource management.
 
-3. API Inbound Processing Policies:
+3. **API Inbound Processing Policies:**
     - Develop inbound processing policies in APIM to support load balancing.
     - Include policies for dynamic backend switching and error handling.
-4. Testing and Redundancy
+      
+4. **Testing and Redundancy:**
     - Utilize APIM's testing feature to validate the load balancing setup.
     - Implement the retry feature in APIM for enhanced redundancy and fault tolerance.
-5. Chat App Configuration Update:
+
+5. **Chat App Configuration Update:**
     - Modify the previously deployed chat application's configuration to connect to the OpenAI service via the newly set up APIM endpoint.
     - Ensure the chat app seamlessly integrates with this updated architecture, maintaining its functionality and performance.
 
