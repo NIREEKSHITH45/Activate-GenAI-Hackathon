@@ -40,8 +40,9 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 4. **Challenge 04: Interact with Chat App**
    - Explore the deployed web app, engaging with the Chat App through well-constructed inquiries. Display your ability to handle multilingual queries and make use of advanced settings to deepen your understanding of the Azure OpenAI service's capabilities.
                     
-Each challenge is meticulously designed to push the boundaries of your AI application development skills. Gear up for a day filled with learning, innovation, and the thrill of overcoming real-world tech hurdles. 
+Each challenge comes with its own set of tasks and objectives. Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to your coach.
 
+Happy hacking!
 Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to your coach.
 
 Happy hacking!
