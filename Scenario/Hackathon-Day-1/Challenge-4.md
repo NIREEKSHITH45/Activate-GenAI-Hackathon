@@ -56,8 +56,9 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
    ```
    What happens in a performance review?
    ```
-4. Similarly, test the potential of the OpenAI, AI Search capabilities using the chat interface through your own prompts and conversations. 
-5. 
+4. OpenAI and AI Search Capabilities Exploration:
+  - Conduct your own tests using various prompts to assess the range and depth of the app's conversational and search capabilities.
+  - Focus on understanding how the app integrates OpenAI's model and AI Search for seamless user interactions.
 ## Success Criteria:
   - Successful interaction with the chat application, exploring a variety of conversational use-cases.
   - Comprehensive understanding of the app's capabilities in handling multilingual queries, advanced settings, and its overall potential for Contoso's environment.
