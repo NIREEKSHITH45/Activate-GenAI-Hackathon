@@ -31,7 +31,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
     - Set up a C#/.NET project in Visual Studio for document translation, using .Net Version 6.
     - Install necessary packages, including Newtonsoft.Json.
 
-1) **Translate Documents and Run Application:.**
+1) **Translate Documents and Run Application:**
 
     - Implement document translation code in the C#/.NET project.
     - Execute the application to translate all documents in the storage container.
@@ -45,6 +45,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
     
     [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
 
+     - Select the mentioned subscription and resource group to deploy the resources.
      - Verify the deployed Azure resources in the resource group
 
 1) **Using an Azure Document Intelligence (Form Recognizer) resource:**
