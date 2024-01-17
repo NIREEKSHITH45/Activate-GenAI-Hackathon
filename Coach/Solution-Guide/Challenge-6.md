@@ -63,13 +63,13 @@
 
 1. Delete the pre-existing code, including the line Console.WriteLine("Hello World!").
 
-1. Copy and paste the document translation code sample into the Program.cs file.
+1. Copy and paste the document translation a [code sample](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) into the Program.cs file.
 
 1. Update {your-document-translation-endpoint} and {your-key} with values from your Azure portal Translator instance.
 
 1. Update {your-source-container-SAS-URL} and {your-target-container-SAS-URL} with values from your Azure portal Storage account containers instance
 
-Once you've added a code sample to your application, choose the green Start button next to document-translation-qs to build and run your program, or press F5.
+Once you've added code sample to your application, choose the green Start button next to document-translation-qs to build and run your program, or press F5.
 
 ### Task 2: Creating a Form Recognizer Resource
 
