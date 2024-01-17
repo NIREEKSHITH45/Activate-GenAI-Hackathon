@@ -4,11 +4,11 @@
 
 ## Introduction:
 
-In the previous challenge, you successfully set up models in the Azure OpenAI service. Now, Contoso needs a way for its team to quickly find information. This challenge focuses on using Azure AI Search to make the search process easier for the team.
+Contoso is leveraging Azure AI Search and Azure OpenAI (GPT-3.5-Turbo) to create a document search solution that not only makes support documents easily searchable but also uses OpenAI's powerful language model to understand and process customer queries effectively. This integration will enable Contoso to provide accurate and relevant responses, thereby streamlining their support services.
 
-Contoso Ltd uses Azure AI Search and OpenAI (GPT-3.5-Turbo) to enhance its customer support application. Azure AI Search makes support documents searchable, while OpenAI's model processes customer queries to understand their context. This combination provides accurate and relevant responses, improving the application's efficiency and accuracy. Concurrently, the team is working on smart document search techniques to simplify decision-making and extract essential information from unstructured data. The ultimate goal is to create a quick and effortless information retrieval solution, thereby elevating Contoso's customer support experience.
+Azure AI Search will be used to organize and index Contoso's large volumes of support documents, while Azure OpenAI will interpret customer queries for semantic search, improving the search results' relevance. This fusion of technologies will assist in making informed decisions and extracting vital information from unstructured data, ultimately providing a seamless information retrieval system that enhances Contoso's customer support experience.
 
-To achieve this, you'll start by cloning a provided repository and establishing the foundation with Azure AI Search and a storage account. The process involves customizing the document uploading script, setting up Azure AI Search, connecting it with Azure AI Services, and building a powerful indexer for advanced search features. Finally, you'll refine queries, define search components, and kickstart the development of the search app.
+In this challenge, you'll clone a provided repository to set the groundwork with Azure AI Search, integrate it with Azure AI Services, and create a powerful indexer for advanced search capabilities. Finally, you'll work on refining search queries and kickstart the development of a search application that leverages both Azure AI Search and OpenAI's language model.
 
 ## Challenge Objectives:
 
@@ -17,35 +17,41 @@ To achieve this, you'll start by cloning a provided repository and establishing 
 1. **Clone the Repository:**
    - Clone the repository within Visual Studio Code: `https://github.com/MicrosoftLearning/AI-102-AIEngineer`.
 
-2. Create an **Azure AI Search resource** with  Standard S0 SKU and **Azure AI Service** with basic pricing and an **Azure Storage Account** with Standard tier.
-
-3. In Visual Studio Code, in the Explorer pane which contains the folder of the cloned repository `https://github.com/MicrosoftLearning/AI-102-AIEngineer`, expand the 22-create-a-search-solution folder and edit the batch file, **UploadDocs.cmd** with the required values.
-
-4. open and explore the **UploadDocs.cmd** batch file using VS Code and later execute it. Make sure that the required resources and files are created in Azure.
-    > Hint: Make sure to log in to Azure in cmd to execute the file.
-     
-1. Import data for AI Search, opting for Blob Storage. Establish a link with Azure AI Services, customize the index, and create an indexer for smooth integration.
+2. Setup Azure Resources
+   - Create an Azure AI Search resource with the Standard S0 SKU.
+   - Create an Azure AI Service with basic pricing.
+   - Create an Azure Storage Account with the Standard tier.
+3. Prepare Document Upload:
+   - In Visual Studio Code, within the cloned repository, navigate to the 22-create-a-search-solution folder.
+   - Edit the UploadDocs.cmd batch file with the required values.
+4. Execute Upload Script:
+   - Open and examine the UploadDocs.cmd batch file using VS Code.
+   - Execute the batch file to ensure that the necessary resources and files are created in Azure.
+   - Hint: Ensure you are logged into Azure in the command prompt to execute the file.
+5. Data Import and Indexing:
+   - Import data for AI Search using Blob Storage.
+   - Link with Azure AI Services and customize the index.
+   - Create an indexer for seamless data integration.
+6.Query Indexed Documents:
+   - Tweak queries to include counts and specific fields.
+   - Define search components.
+   - Query the modified index to retrieve refined and targeted information.
+7. Deploy & test a Search Client Application:
+   - Update application settings and configure the web app.
+   - Run the application locally to test the search functionality.
+   - Hint: The app is available in two languages; use the one that aligns with your scope.
    
-1. **Interact and search queries with indexed documents**
-
-   - Adjust queries for counts and specific fields, define search components, and query the modified index for refined and targeted information retrieval.
-
-1. **Create Search Client Application** 
-
-   - Update the application settings, configure the web app, and then run it to explore search functionality.
-
-      > Hint: The app is available in two languages, use the one that is in your scope.
-
 ## Success criteria:
-To complete this challenge successfully:
+To successfully complete this challenge, you must:
 
-- Successfully deployed the Azure Search Service and the Azure Storage Account
-- Successfully added the data into the storage account.
-- Successfully indexed the documents in Azure AI Search using the Azure portal.
-- Successfully customized the index and configured the indexer in Azure AI Search.
-- Successfully modified and explored search components using JSON definitions.
-- Successfully utilized the Azure AI Search SDK to create a client application for search.
-- Successfully ran the web application locally, performed searches, and refined search results successfully.
+   - Deploy the Azure Search Service and Azure Storage Account.
+   - Add data into the storage account.
+   - Index the documents in Azure AI Search using the Azure portal.
+   - Customize the index and configure the indexer in Azure AI Search.
+   - Modify and explore search components using JSON definitions.
+   - Utilize the Azure AI Search SDK to create a client application for search.
+   - Run the web application locally, perform searches, and refine search results effectively.
+
 
 ## Additional Resources:
 
