@@ -4,9 +4,8 @@
 
 ## Introduction:
 
-In this challenge, your team will be focusing on ensuring a smooth experience for people using the chat app. You're team figuring out the best way for conversations to flow, adding interesting features, and making the app easy to navigate. Your team's aim is to craft a chat app that's not only simple and engaging but also something users genuinely enjoy using.
+Having successfully deployed the chat app using Terraform in the previous challenge, it's now time to delve into the user interaction aspect. Your focus will be on facilitating seamless interactions, enabling efficient queries, supporting multilingual conversations, and implementing advanced settings to elevate the user experience. In this challange, your focus is test the chat app, OpenAI capabilities and RAG to understand it's potential and make a business case for using these technologies for Contoso Ltd. 
 
-After successfully setting up the Chatapp using Terraform in the previous challenge, You will now diving into the chat app experience. You're team keen on making interactions effortless, enabling effective queries, supporting multilingual conversations, and exploring advanced settings to enhance the overall user experience. your goal is to make the chat app a delightful and user-friendly tool for everyone at Contoso!
 
 ## Challenge Objectives
 
@@ -56,10 +55,11 @@ After successfully setting up the Chatapp using Terraform in the previous challe
    ```
    What happens in a performance review?
    ```
-
+4. Similarly, test the potential of the OpenAI, AI Search capabilities using the chat interface through your own prompts and conversations. 
+5. 
 ## Success Criteria:
 
-  - Interacted with the chat application and accessed it successfully
+  - Interacted with the chat application and tried various conversations use-cases sucessfully. 
      
 > **Important**: In this challenge, we are not validating anything!
 
