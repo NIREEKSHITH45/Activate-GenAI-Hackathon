@@ -40,7 +40,14 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 **Using Doc Intelligence:**
 
-1) **Creating an Azure Document Intelligence (Form Recognizer) resource:**
+1) **Pre-requisites setup:**
+      - Click on the "Deploy to Azure" button (TODO).
+    
+    [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
+
+     - Verify the deployed Azure resources in the resource group
+
+1) **Using an Azure Document Intelligence (Form Recognizer) resource:**
     - Navigate to Azure AI services and set up an Azure Document Intelligence (Form Recognizer) resource.
     - Upload and label training documents to train the Azure Document Intelligence (Form Recognizer) model.
 
