@@ -5,11 +5,10 @@ Have you ever experienced a failure in Azure OpenAI Service (AOAI) because a pro
 This lab session proposes several approaches for load balancing of AOAI resources and provides step-by-step procedures.
 
 ## Prerequisites
-1. You have already created the AOAI (Azure OpenAI) resource named **endpoint-us1-<inject key="Deployment-id" enableCopy="false"></inject>** in the eastus region and its endpoint is https://endpoint-us1-<inject key="Deployment-id" enableCopy="false"></inject>.openai.azure.com/.
+1. You have already created the AOAI (Azure OpenAI) resources, we are using thhose in this challenge
 2. You have already deployed the **gpt-35-turbo** model with the same name `gpt-35-turbo`.
 3. You have already deployed the **text-embedding-ada-002** model with the same name `text-embedding-ada-002`.
 4. You already have one copy of the valid API key.
-5. You have already set up the HTTP client of your choice such as curl command.
 
 ## Solution Guide
 
