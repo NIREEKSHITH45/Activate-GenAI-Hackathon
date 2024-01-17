@@ -59,7 +59,7 @@ For this project, you need a source document uploaded to your source container. 
    
 1. Start Visual Studio.
 
-1. On the Get Started page, choose Create a new project.
+1. On the Get Started page, choose to Create a New Project.
 
    ![](../media/T-2.png)
 
@@ -108,7 +108,7 @@ Once you've added code sample to your application, choose the green Start button
 
 1. Enter the required details and select `Standard s0` pricing tier. and **check the box**
    
-1. Go to the Resource group, search, and select the **Azure AI services multi-service account** resource which you deployed earlier
+1. Go to the Resource group, search, and select the **Azure AI services multi-service account** resource that you deployed earlier
 
   ![](../media/c06-02.png)
 
