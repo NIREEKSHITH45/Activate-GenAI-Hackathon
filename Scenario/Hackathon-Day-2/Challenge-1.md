@@ -71,3 +71,7 @@ To complete this challenge successfully, you should be able to:
    ![](../media/validate04.png "Validation")
  
 1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you to troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.
+
+### Conclusion
+
+In this challenge, you’ve effectively validated the Azure OpenAI service and deployed LLM Models. Now, you can proceed to the subsequent challenge.
