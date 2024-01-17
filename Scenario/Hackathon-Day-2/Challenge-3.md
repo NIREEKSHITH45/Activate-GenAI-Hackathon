@@ -1,4 +1,4 @@
-# Challenge 03:  Deploy the chat App Solution.
+# Challenge 03:  Deploy the AI Chat App Solution.
 
 ### Estimated Time: 150 minutes
 
