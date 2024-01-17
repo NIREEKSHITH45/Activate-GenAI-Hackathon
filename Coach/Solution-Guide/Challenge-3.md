@@ -89,6 +89,8 @@ Deploy the Azure Search Index and upload the sample documents by running the fol
 ```
 
 
+The above script will create an index in AI search service and analyse and upload the PDF data to storage account and integrate it with Azure OpenAI with the help of Form Recogniser and Azure AI search.
+
 ## Additional Resources:
 
 -  Refer to the  [Azure Search OpenAI demo GitHub repository](https://github.com/cmendible/azure-search-openai-demo) for detailed information on the architecture.
