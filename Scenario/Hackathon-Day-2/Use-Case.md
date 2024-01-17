@@ -11,10 +11,14 @@ Your challenge, as the torchbearers of innovation, is to dive deep into the worl
     - Engineer innovative tools that allow for efficient indexing and searching of vast document repositories, enabling rapid retrieval of information and knowledge discovery, crucial for informed decision-making within GenTech.
 3. **Establish AI-Powered Chat Interactions**
     -  Deploy and refine conversational AI interfaces within Contoso's digital ecosystem, ensuring they can handle intricate, multilingual conversations with finesse, thereby elevating the user experience on our platforms.
-4. **Scale AI-Enabled Solutions**
+4. **Establish AI-Powered Personalized Chat Experience with Private Data**
+    - Enhance the conversational AI interfaces by equipping with personalize data, such as building a bot for employees to enquire about company's benefits.
+5. **Scale AI-Enabled Solutions**
     - Consider the scalability of the AI solutions you develop. Your applications should not only solve current problems but also have the capacity to grow and handle increased loads without compromising performance.
-5. **Enhanced Document Handling and Accessibility**
+6. **Enhanced Document Handling and Accessibility**
     - In the fast-paced environment at Contoso Ltd, the ability to quickly access and interpret a vast array of documents is paramount. By implementing AI-driven document indexing and searching, Contoso can vastly improve knowledge management and operational efficiency.
+7. **Opertionalizing the AI Solutions**
+    - Contoso would like to eveluate the technologies available to opertioanlize the solutions, with proper logging & monitoring to ensure continous avialablity and SLAs. .
 
 Throughout the challenges of this hackathon, you will interact with state-of-the-art technologies essential for realizing Contoso's objectives. You will be equipped with the necessary arsenal of tools and services to effectively bring these use-cases to fruition.
 
