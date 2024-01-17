@@ -41,7 +41,7 @@ Together, these services create a responsive chat application that combines AI f
    - Use Terraform to deploy the App Solution specified in the provided GitHub repository.
    - Configure Terraform scripts to provision Azure resources accurately.
 
-3. **Azure Search Index Deployment:**
+3. **Azure Search Index Deployment and Upload The Sample Data:**
    - Use the `prepdocs.ps1` from the scripts folder to analyze and upload the data to the storage account.
       > Note:- You will need to understand and update the script based on the requirements mentioned in the script.
 
