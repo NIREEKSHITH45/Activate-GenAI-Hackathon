@@ -6,7 +6,8 @@ For example, suppose *Margie's Travel* is a travel agency that specializes in or
 
 To address this challenge, Margie's Travel can use Azure AI Search to implement a solution in which the documents are indexed and enriched by using AI skills to make them easier to search.
 
-## Clone the repository for this course
+## Solution Guide
+### Task 1: Clone the repository for this course
 
 If you have not already cloned **AI-102-AIEngineer** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
 
@@ -17,8 +18,7 @@ If you have not already cloned **AI-102-AIEngineer** code repository to the envi
 
     > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
-## Solution Guide
-### Create Azure resources
+### Task 2: Create Azure resources
 
 The solution you will create for Margie's Travel requires the following resources in your Azure subscription:
 
@@ -28,7 +28,7 @@ The solution you will create for Margie's Travel requires the following resource
 
 > **Important**: Your Azure AI Search and Azure AI Services resources must be in the same location!
 
-### Create an Azure AI Search resource
+#### Task 2.1: Create an Azure AI Search resource
 
 1. In a web browser, open the Azure portal at `https://portal.azure.com`, and sign in using the Microsoft account associated with your Azure subscription.
 2. Select the **&#65291;Create a resource** button, search for *search*, and create an **Azure AI Search** resource with the following settings:
@@ -41,7 +41,7 @@ The solution you will create for Margie's Travel requires the following resource
 3. Wait for deployment to complete, and then go to the deployed resource.
 4. Review the **Overview** page on the blade for your Azure AI Search resource in the Azure portal. Here, you can use a visual interface to create, test, manage, and monitor the various components of a search solution; including data sources, indexes, indexers, and skillsets.
 
-### Create an Azure AI Services resource
+#### Task 2.2: Create an Azure AI Services resource
 
 If you don't already have one in your subscription, you'll need to provision an **Azure AI Services** resource. Your search solution will use this to enrich the data in the datastore with AI-generated insights.
 
@@ -54,7 +54,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 2. Select the required checkboxes and create the resource.
 3. Wait for deployment to complete, and then view the deployment details.
 
-### Create a storage account
+#### Task 2.3: Create a storage account
 
 1. Return to the home page of the Azure portal, and then select the **&#65291;Create a resource** button, search for *storage account*, and create a **Storage account** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
@@ -70,7 +70,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
     > **Tip**: Keep the **Storage Account** blade open - you will need the subscription ID and one of the keys in the next procedure.
 
-## Upload Documents to Azure Storage
+### Task 3 and Task 4: Upload Documents to Azure Storage and execute uploaded script
 
 Now that you have the required resources, you can upload some documents to your Azure Storage account.
 
@@ -83,7 +83,7 @@ Now that you have the required resources, you can upload some documents to your 
     az login
     ```
 
-A web browser tab will open and prompt you to sign into Azure. Do so, and then close the browser tab and return to Visual Studio Code.
+   > **Note**: A web browser tab will open and prompt you to sign into Azure. Do so, and then close the browser tab and return to Visual Studio Code.
 
 5. Enter the following command to run the batch file. This will create a blob container in your storage account and upload the documents in the **data** folder to it.
 
@@ -91,7 +91,7 @@ A web browser tab will open and prompt you to sign into Azure. Do so, and then c
     UploadDocs
     ```
 
-## Index the documents
+### Task 5: Index the documents
 
 Now that you have the documents in place, you can create a search solution by indexing them.
 
@@ -148,7 +148,7 @@ Now that you have the documents in place, you can create a search solution by in
     3. Maps the extracted fields to the index.
 16. In the bottom half of the **Overview** page for your Azure AI Search resource, view the **Indexers** tab, which should show the newly created **margies-indexer**. Wait a few minutes, and click **&orarr; Refresh** until the **Status** indicates success.
 
-## Search the index
+### Task 5: Search the index
 
 Now that you have an index, you can search it.
 
@@ -213,7 +213,7 @@ Now that you have an index, you can search it.
 
     This query returns the filename of any documents authored by *Reviewer* that mention "New York".
 
-## Explore and modify definitions of search components
+### Task 6: Explore and modify definitions of search components
 
 The components of the search solution are based on JSON definitions, which you can view and edit in the Azure portal.
 
@@ -307,7 +307,7 @@ The new skill is named **get-sentiment**, and for each **document** level in a d
     
     ```
 
-All of the other metadata and content fields in the source document are implicitly mapped to fields of the same name in the index.
+    > **Note**: All of the other metadata and content fields in the source document are implicitly mapped to fields of the same name in the index.
 
 4. Review the **ouputFieldMappings** section, which maps outputs from the skills in the skillset to index fields. Most of these reflect the choices you made in the user interface, but the following mapping has been added to map the **sentimentLabel** value extracted by your sentiment skill to the **sentiment** field you added to the index:
 
@@ -348,7 +348,7 @@ All of the other metadata and content fields in the source document are implicit
 
 3. Close the **Search explorer** page to return to the **Overview** page.
 
-## Create a search client application
+### Task 7: Create a search client application
 
 Now that you have a useful index, you can use it from a client application. You can do this by consuming the REST interface, submitting requests and receiving responses in JSON format over HTTP; or you can use the software development kit (SDK) for your preferred programming language. In this exercise, we'll use the SDK.
 
