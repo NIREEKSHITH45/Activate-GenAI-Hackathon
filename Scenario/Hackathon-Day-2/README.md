@@ -1,12 +1,10 @@
 # Activate Gen AI Challenge Lab - 2 Day Hackathon
 
-Welcome to the Activate Gen AI Challenge Lab! This event is designed to enhance your skills in the exciting field of AI. Below, you'll find essential information to get started.
+Welcome to the Activate Gen AI Hackathon. This two-day event is designed to immerse you in the world of AI application development, harnessing the power and versatility of Azure OpenAI Service.
 
 ## Introduction
 
-Welcome to Activate Gen AI, an immersive exploration into the world of Azure OpenAI. Activate Gen AI goes beyond the fundamentals, providing a hands-on experience to apply your knowledge and build practical solutions using Azure OpenAI models. This program serves as a comprehensive guide for those aiming to deepen their understanding and proficiency in creating AI-powered applications. Whether you're a newcomer or have some experience with OpenAI, Activate Gen AI is tailored to your learning journey. The content within this initiative offers valuable insights and skills to empower you in crafting intelligent and innovative solutions using Azure OpenAI.
-
-This hack consists of six challenges and is designed to be self-administered, so anyone can complete the material independently. Whether you have limited to no experience with Activate GenAI or have experimented with OpenAI before but want a deeper understanding of how to implement an AI solution, this hack is for you.
+Delve into the world of Azure OpenAI. This event is designed to enhance your AI application development skills, regardless of your current experience level. Through the self-administered challenges, you'll apply your knowledge, build practical solutions, and acquire a deeper understanding of implementing AI solutions using Azure OpenAI.
 
 ## Learning Objectives
 
@@ -25,7 +23,7 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 
 - Analyzing the problem statement.
 - Strategizing your approach to find the most effective solution.
-- Leveraging the provided lab environment and Azure Open AI Services.
+- Leveraging the provided lab environment and Azure Open AI tools.
 - Collaborating with peers to refine and implement your solutions.
 
 ## Challenges Overview
