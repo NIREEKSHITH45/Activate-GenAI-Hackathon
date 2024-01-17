@@ -116,9 +116,9 @@ Once you've added code sample to your application, choose the green Start button
 
    ![](../media/bpa2.png)
 
-3. In Document Intelligence Studio, scroll down to Custom Models and choose **Try it now**.
+3. In Document Intelligence Studio, scroll down to **Custom Extraction Models** and choose **Try it now**.
 
-   ![](../media/bpa3.png)
+   ![](../media/c06-03.png)
 
 4. Under My Project, click on **+ Create a project**.
 
