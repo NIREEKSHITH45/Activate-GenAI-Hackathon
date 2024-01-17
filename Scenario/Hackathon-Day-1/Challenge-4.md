@@ -4,7 +4,7 @@
 
 ## Introduction:
 
-In this challenge, your team will be focusing on ensuring a smooth experience for people using the chat app. You're team figuring out the best way for conversations to flow, adding interesting features, and making the app easy to navigate. Your team aim to craft a chat app that's not only simple and engaging but also something users genuinely enjoy using.
+In this challenge, your team will be focusing on ensuring a smooth experience for people using the chat app. You're team figuring out the best way for conversations to flow, adding interesting features, and making the app easy to navigate. Your team aim is to craft a chat app that's not only simple and engaging but also something users genuinely enjoy using.
 
 After successfully setting up the Chatapp using Terraform in the previous challenge, You will now diving into the chat app experience. You're team keen on making interactions effortless, enabling effective queries, supporting multilingual conversations, and exploring advanced settings to enhance the overall user experience. your goal is to make the chat app a delightful and user-friendly tool for everyone at Contoso!
 
