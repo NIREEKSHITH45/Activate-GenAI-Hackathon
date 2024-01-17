@@ -46,6 +46,15 @@ You will utilize the Form Recognizer Service and the Business Process Automation
       Source container. This container is where you upload your files for translation (required). <br>
       Target container. This container is where your translated files are stored (required).
 
+ 1. Required authentication
+The sourceUrl , targetUrl must include a **Shared Access Signature (SAS) token**, appended as a query string. The token can be assigned to your container or specific blobs.
+     - Your source container or blob must have designated **read** and **list** access.
+     - Your target container or blob must have designated **write** and **list** access.
+
+
+ 1. Sample document
+For this project, you need a source document uploaded to your source container. You can download our [document translation sample document](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fcognitive-services-REST-api-samples%2Fmaster%2Fcurl%2FTranslator%2Fdocument-translation-sample.docx&wdOrigin=BROWSELINK) for this quickstart. The source language is English.
+
 #### Task 1.3 - Set up your C#/.NET environment and Install Newtonsoft.Json
    
 1. Start Visual Studio.
@@ -86,17 +95,22 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 1. Copy and paste the document translation a [code sample](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) into the Program.cs file.
 
-1. Update {your-document-translation-endpoint} and {your-key} with values from your Azure portal Translator instance.
+1. Update **{your-document-translation-endpoint}** and **{your-key}** with values from your Azure portal Translator instance.
 
-1. Update {your-source-container-SAS-URL} and {your-target-container-SAS-URL} with values from your Azure portal Storage account containers instance
+1. Update **{your-source-container-SAS-URL}** and **{your-target-container-SAS-URL}** with values from your Azure portal Storage account containers instance
 
 Once you've added code sample to your application, choose the green Start button next to document-translation-qs to build and run your program, or press F5.
 
 ### Task 2: Creating a Form Recognizer Resource
+1. Navigate to **Azure AI services multi-service account** and from the left side menu and click on the **Create** button.
 
-1. Go to the Resource group, search, and select the **Azure AI services multi-service account** resource type with the name similar to **cogservicesbpa{suffix}**.
+    ![](../media/c06-01.png)
 
-   ![](../media/bpa1.png)
+1. Enter the required details and select `Standard s0` pricing tier. and **check the box**
+   
+1. Go to the Resource group, search, and select the **Azure AI services multi-service account** resource which you deployed earlier
+
+  ![](../media/c06-02.png)
 
 2. Click on the Document Intelligence tab and select **Go to studio**.
 
