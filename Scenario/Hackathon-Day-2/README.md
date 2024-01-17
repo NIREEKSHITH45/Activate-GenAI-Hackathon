@@ -2,12 +2,6 @@
 
 Welcome to the Activate Gen AI Challenge Lab! This event is designed to enhance your skills in the exciting field of AI. Below, you'll find essential information to get started.
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Learning Objectives](#learning-objectives)
-- [Challenges](#challenges)
-
 ## Introduction
 
 Welcome to Activate Gen AI, an immersive exploration into the world of Azure OpenAI. Activate Gen AI goes beyond the fundamentals, providing a hands-on experience to apply your knowledge and build practical solutions using Azure OpenAI models. This program serves as a comprehensive guide for those aiming to deepen their understanding and proficiency in creating AI-powered applications. Whether you're a newcomer or have some experience with OpenAI, Activate Gen AI is tailored to your learning journey. The content within this initiative offers valuable insights and skills to empower you in crafting intelligent and innovative solutions using Azure OpenAI.
