@@ -1,5 +1,5 @@
 # Challenge 01: Deploy Azure OpenAI Service
-
+### Estimated Time: 30 minutes
 ## Introduction
 
 Welcome to the Deploy Azure OpenAI Service Challenge! This challenge is designed to test your skills in deploying the Azure OpenAI Service and it's Large Language Models (LLM) . The goal is to set up the OpenAI Service, and deploy LLM models.
