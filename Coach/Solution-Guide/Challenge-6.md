@@ -1,5 +1,16 @@
 # Challenge 06: Serverless Document Batch Processing 
 
+## Introduction:
+
+Welcome to a pivotal challenge where Contoso Ltd aims to enhance their AI-powered chat app with a robust document processing system. This challenge focuses on creating a serverless solution for processing new documents, translating them as needed, and seamlessly storing them into Azure AI Search. This system will ensure that these documents are continuously available for consumption by Azure OpenAI, enhancing the chat app's knowledge base and response accuracy.
+
+Building on your previous achievements in load balancing Azure OpenAI resources, you will now embark on a journey to streamline document processing. This involves setting up a translation service, creating a serverless architecture for batch processing using Azure services, and leveraging technologies like Form Recognizer and Azure AI Search. Your task is to ensure that newly added documents are promptly processed, analyzed, and indexed, making them readily available for the chat app's AI to utilize.
+
+This challenge unfolds in three main stages: language translation, serverless document batch processing using Azure services, and leveraging advanced features like Form Recognizer and AI search. We kick things off by translating files to meet language requirements. Next, you deploy a serverless architecture, utilizing Azure services, for efficient batch processing of documents. You train and test our model, establish a pipeline to convert documents into a Form Recognizer format, and bring in Azure's AI search service to verify the presence of specific documents in the processed dataset from where they can be used by Azure OpenAI. 
+
+You will utilize the Form Recognizer Service and the Business Process Automation (BPA) Accelerator to build pipelines across various Azure services, creating a seamless document processing solution. This challenge is a step towards realizing an AI solution that can adapt and grow with Contoso's business needs.
+
+
 
 
 # Solution Guide
@@ -14,7 +25,7 @@
 
 1. Copy and paste your key and document translation endpoint in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
 
-1. You paste your key and document translation endpoint into the code samples to authenticate your request to the Document Translation service.
+1. You paste your key and document translation endpoint into the code samples to authenticate your request to the Document Translation Service.
 
       ![](../media/T-1.png)
    
@@ -29,7 +40,7 @@
    
 1. Start Visual Studio.
 
-1. On the Get started page, choose Create a new project.
+1. On the Get Started page, choose Create a new project.
 
    ![](../media/T-2.png)
 
