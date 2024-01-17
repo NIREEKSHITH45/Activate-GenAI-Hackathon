@@ -15,29 +15,15 @@ This lab session proposes several approaches for load balancing of AOAI resource
 
 ### Task 1: Setting up the prerequisites
 
-### Task 1.1: Provision an Azure OpenAI resource
+### Task 1.1: Use the Azure OpenAI resource
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
    ![](../media/azure-openai-1-new.png)
 
-2. On the Azure AI services | Azure OpenAI blade, click on the **+ Create** button.
+2. On the Azure AI services | Azure OpenAI blade, click on the Existing **OpenAI serive**
 
-   ![](../media/openai_create-1.png)
-
-3. Create an **Azure OpenAI** resource with the following settings:
-    - **Subscription**: Default - Pre-assigned subscription **(1)**
-    - **Resource group**: Default - Select the pre-created resource group **(2)**
-    - **Region**: Select **East US (3)**
-    - **Name**: endpoint-us1-<inject key="Deployment-id" enableCopy="false"></inject> **(4)**
-    - **Pricing tier**: Standard S0 **(5)**
-
-   ![](../media/openai_create-2.png)
-
-    >**Note:** Leave all the other configurations at default and click on **Create** within **Review + submit** tab.
-
-4. Wait for deployment to complete. Then navigate to the newly deployed Azure OpenAI resource in the Azure portal.
-
+ 
 5. To capture the values of the Azure OpenAI's key and endpoint, execute the following steps:
     - Select **Keys and Endpoints (1)** under the **Resource Management** section from the left navigation pane.
     - Click on **Show Keys (2)**.
@@ -46,68 +32,28 @@ This lab session proposes several approaches for load balancing of AOAI resource
 
    ![](../media/k&e.png "Create Azure OpenAI resource")
 
-### Task 1.2: Deploy OpenAI models
-Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
-
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
-
-   ![](../media/azure-openai-1-new.png)
-
-2. On **Azure AI Services | Azure OpenAI** blade, select **endpoint-us1-<inject key="Deployment-id" enableCopy="false"></inject>**.
-
-   ![](../media/endpoint-us1.png)
-
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
-
-   ![](../media/5-2.png)
-
-4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
-
-   ![](../media/create-deployment.png)
-
-5. In the **Deployments** page, click on **+ Create new deployment**.
-
-   ![](../media/create-deployment-1.png)
-
-6. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo **(1)**
-    - **Model version**: Auto-update to default **(2)**
-    - **Deployment name**: gpt-35-turbo **(3)**
-    - Click on **Advanced Settings** **(4)**
-    - **Tokens per Minute Rate Limit (thousands)**: 1K **(5)**
-    - **Enable dynamic quota**: Enabled **(6)**
-    - Click on **Create** **(7)**
-  
-   ![](../media/deploy-model-1.png "Deploy gpt-35-turbo model")
-
-7. Staying on the **Deployments** page, click on **+ Create new deployment** again to create a new model deployment.
-
-8. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: text-embedding-ada-002 **(1)**
-    - **Model version**: 2 (Default) **(2)**
-    - **Deployment name**: text-embedding-ada-002 **(3)**
-    - Click on **Advanced Settings** **(4)**
-    - **Tokens per Minute Rate Limit (thousands)**: 1K **(5)**
-    - **Enable dynamic quota**: Enabled **(6)**
-    - Click on **Create** **(7)**
-
-   ![](../media/deploy-model-2.png "Deploy text-embedding-ada-002 model")
-
-> **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
-
-### Task 1.3: Setting up API Management
+### Task 1.2: Setting up API Management
 
 API Management (APIM) is a managed API management service provided by Azure that combines various backends together to provide a unified interface for APIs. If properly configured, users only need to access the APIM’s endpoint, which can load balance multiple AOAI resources or switch backend in the event of errors.
 
-1. In the **Azure portal**, search for and select **API Management Services**.
+1. In the **Azure portal**, search for and select **API Management Services**. and create one
 
    ![](../media/apim-resource.png)
 
-2. Select **apim-service-<inject key="Deployment-id" enableCopy="false"></inject>**
+    - **Subscription**: Default - Pre-assigned subscription **(1)**
+    - **Resource group**: Default - Select the pre-created resource group **(2)**
+    - **Region**: Select **East US (3)**
+    - **Resource Name**: Name of your choice **(4)**
+    - **Organization Name**: Contoso **(5)**
+    - **Administrator email**: User name **<inject key="AzureAdUserEmail"></inject>>(6)**
+    - **Pricing tier**: Basic **(7)**
+    - Click on **Review + Create**
+      
+![](../media/APIM.jpg)
 
-   ![](../media/4-7.png)
+3. After Creating the **API Management service** noe we will add a New API to the service
 
-3. To add a new API into the API Management service, follow the steps below:
+4. To add a new API into the API Management service, follow the steps below:
     - Select **APIs (1)** under the **APIs** section within the left navigation pane of the APIM blade.
 
          >**Note:** Here you can define the API and configure how it will be forwarded to the backend and finally returned to the user. There is a pre-defined          “Echo API” that is very useful as a reference.
