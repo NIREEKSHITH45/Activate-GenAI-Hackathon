@@ -4,7 +4,7 @@
 
 ## Introduction:
 
-Contoso is leveraging Azure AI Search and Azure OpenAI (GPT-3.5-Turbo) to create a document search solution that not only makes support documents easily searchable but also uses OpenAI's powerful language model to understand and process customer queries effectively. This integration will enable Contoso to provide accurate and relevant responses, thereby streamlining their support services.
+Contoso is leveraging Azure AI Search and Azure OpenAI (GPT-3.5-Turbo) to create a document search solution that not only makes support documents easily searchable but also uses OpenAI's powerful language model to understand and process customer queries effectively. This integration will enable Contoso to provide accurate and relevant responses, thereby streamlining its support services.
 
 Azure AI Search will be used to organize and index Contoso's large volumes of support documents, while Azure OpenAI will interpret customer queries for semantic search, improving the search results' relevance. This fusion of technologies will assist in making informed decisions and extracting vital information from unstructured data, ultimately providing a seamless information retrieval system that enhances Contoso's customer support experience.
 
@@ -17,31 +17,33 @@ In this challenge, you'll clone a provided repository to set the groundwork with
 1. **Clone the Repository:**
    - Clone the repository within Visual Studio Code: `https://github.com/MicrosoftLearning/AI-102-AIEngineer`.
 
-2. Setup Azure Resources
+2. **Setup Azure Resources:**
    - Create an Azure AI Search resource with the Standard S0 SKU.
    - Create an Azure AI Service with basic pricing.
    - Create an Azure Storage Account with the Standard tier.
-3. Prepare Document Upload:
+3. **Prepare Document Upload:**
    - In Visual Studio Code, within the cloned repository, navigate to the 22-create-a-search-solution folder.
    - Edit the UploadDocs.cmd batch file with the required values.
-4. Execute Upload Script:
+4. **Execute Upload Script:**
    - Open and examine the UploadDocs.cmd batch file using VS Code.
    - Execute the batch file to ensure that the necessary resources and files are created in Azure.
    - Hint: Ensure you are logged into Azure in the command prompt to execute the file.
-5. Data Import and Indexing:
+5. **Data Import and Indexing:**
    - Import data for AI Search using Blob Storage.
    - Link with Azure AI Services and customize the index.
    - Create an indexer for seamless data integration.
-6.Query Indexed Documents:
+6. **Query Indexed Documents:**
    - Tweak queries to include counts and specific fields.
    - Define search components.
    - Query the modified index to retrieve refined and targeted information.
-7. Deploy & test a Search Client Application:
+7. **Deploy & test a Search Client Application:**
    - Update application settings and configure the web app.
    - Run the application locally to test the search functionality.
    - Hint: The app is available in two languages; use the one that aligns with your scope.
    
 ## Success criteria:
+
+
 To successfully complete this challenge, you must:
 
    - Deploy the Azure Search Service and Azure Storage Account.
