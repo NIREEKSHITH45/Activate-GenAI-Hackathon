@@ -4,9 +4,8 @@
 
 ## Introduction:
 
-In this challenge, your team will be focusing on ensuring a smooth experience for people using the chat app. You're figuring out the best way for conversations to flow, adding interesting features, and making the app easy to navigate. Your aim is to craft a chat app that's not only simple and engaging but also something users genuinely enjoy using.
+After successfully deploying the AI-enhanced chat app in the previous challenge, it's time to assess its capabilities. This challenge is centered around interacting with the app to understand its potential for real-world applications at Contoso Ltd. You will explore the efficiency of query responses, multilingual capabilities, and the impact of advanced settings, making a compelling business case for the integration of these technologies at Contoso.
 
-After successfully setting up the Chatapp using Terraform in the previous challenge, You will now diving into the chat app experience. You're team keen on making interactions effortless, enabling effective queries, supporting multilingual conversations, and exploring advanced settings to enhance the overall user experience. your goal is to make the chat app a delightful and user-friendly tool for everyone at Contoso!
 
 
 ## Challenge Objectives
@@ -42,7 +41,7 @@ After successfully setting up the Chatapp using Terraform in the previous challe
 - Let us make a slight change to the prompt to ask open AI to take any question that is not asked in English and respond in the language it was asked in. Go to **Developer Settings** and add the below message in the **Override prompt template** section. Click on **Close**.
 
   ```
-   convert prompts to English and respond when asked questions in a different language
+   convert prompts to English and respond when asked questions in different language
    ```
 
 - In this override, when we ask a question in a different language, behind the scenes, the prompt gets converted to English to perform the search, and then the model will respond in the same language it was asked in. Enter the below prompt in the chat section and observe it's taking the question, detecting that it's in French, converting it to English, executing it as before, and then returning the expected response like before.
@@ -52,17 +51,20 @@ After successfully setting up the Chatapp using Terraform in the previous challe
    ```
 
 **3. Advanced Settings Impact:** 
-- Go to **Developer Settings**, in the **Exclude category** section enable the check box for **Use query-contextual summaries instead of whole documents** and **Suggest follow-up questions**. Click on **Close** and observe how the responses for the prompt will change in the chat by giving the below prompt.
+- Go to **Developer Settings**, in the **Exclude category** section enable the check box for **Use query-contextual summaries instead of whole documents** and **Suggest follow-up questions**. Click on **Close** and observe how the responses for prompt will change in the chat by giving the below prompt.
 
    ```
    What happens in a performance review?
    ```
-
+4. OpenAI and AI Search Capabilities Exploration:
+  - Conduct your own tests using various prompts to assess the range and depth of the app's conversational and search capabilities.
+  - Focus on understanding how the app integrates OpenAI's model and AI Search for seamless user interactions.
 ## Success Criteria:
-
-  - Interacted with the chat application and accessed it successfully
+  - Successful interaction with the chat application, exploring a variety of conversational use-cases.
+  - Comprehensive understanding of the app's capabilities in handling multilingual queries, advanced settings, and its overall potential for Contoso's environment.
      
-> **Important**: In this challenge, we are not validating anything!
+> **Important**: There is no specific validation for this challenge, but your exploration and understanding are crucial.
+
 
 ## Additional Resources:
 
