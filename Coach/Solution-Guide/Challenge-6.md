@@ -102,7 +102,7 @@ For this project, you need a source document uploaded to your source container. 
 Once you've added code sample to your application, choose the green Start button next to document-translation-qs to build and run your program, or press F5.
 
 ### Task 2: Creating a Form Recognizer Resource
-1. Navigate to **Azure AI services multi-service account** and from the left side menu and click on the **Create** button.
+1. Navigate to **Azure AI services multi-service account** and click on the **Create** button.
 
     ![](../media/c06-01.png)
 
