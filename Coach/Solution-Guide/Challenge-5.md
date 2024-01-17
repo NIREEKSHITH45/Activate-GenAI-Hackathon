@@ -30,7 +30,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
    
 1. In the left rail, under Resource Management, select Keys and Endpoint.
 
-    ![](../media/ch6-2.png)
+    ![](../media/cha6-2.png)
    
 1. Copy and paste your key and document translation endpoint in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
 
