@@ -20,7 +20,7 @@ This lab session proposes several approaches for load balancing of AOAI resource
 
    ![](../media/azure-openai-1-new.png)
 
-2. On the Azure AI services | Azure OpenAI blade, click on the Existing **OpenAI serive**
+2. On the Azure AI services | Azure OpenAI blade, click on the Existing **OpenAI servive**
 
  
 5. To capture the values of the Azure OpenAI's key and endpoint, execute the following steps:
