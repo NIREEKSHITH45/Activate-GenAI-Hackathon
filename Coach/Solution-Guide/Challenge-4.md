@@ -1,12 +1,12 @@
 # Challenge 04: Interact with Chat App
 
+### Estimated Time: 30 minutes
+
 ## Introduction:
-Welcome to Implement a Chat App with Azure OpenAI LLM ! In this challenge, participants will dive into the world of conversational AI by interacting with a chat application infused with the power of the Azure OpenAI Large Language Model (LLM).
 
-## Description:
-In previous challenge you have successfully deployed the architecture.In this challenge we will integrate Azure OpenAI LLM into a chat application, allowing it to comprehend user input, generate context-aware responses, and create a more natural and personalized conversational experience.
+After successfully deploying the AI-enhanced chat app in the previous challenge, it's time to assess its capabilities. This challenge is centered around interacting with the app to understand its potential for real-world applications at Contoso Ltd. You will explore the efficiency of query responses, multilingual capabilities, and the impact of advanced settings, making a compelling business case for the integration of these technologies at Contoso.
 
-## Solution guide
+## Solution Guide
 
 ### Task 1: Interact with Chatapp with Azure OpenAI LLM
 
