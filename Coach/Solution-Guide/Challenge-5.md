@@ -14,7 +14,7 @@ This lab session proposes several approaches for load balancing of AOAI resource
 
 ### Task 1: Setting up the prerequisites
 
-### Task 1.1: Use the Azure OpenAI resource
+### Task 1.1: Use the Existing Azure OpenAI resources
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
