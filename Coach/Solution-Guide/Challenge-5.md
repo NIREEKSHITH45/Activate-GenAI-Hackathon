@@ -1,14 +1,14 @@
 # Challenge 05: Load Balancing Azure OpenAI Resources
 
-## Lab scenario
-Have you ever experienced a failure in Azure OpenAI Service (AOAI) because a provisioned AOAI resource is out of service or the API is unavailable due to Rate Limit? Fortunately, Azure allows multiple AOAI resources to be created in multiple regions, which can be used to load balance traffic and automatically remove non-functioning resources from the back end to provide redundancy. But how?
-This lab session proposes several approaches for load balancing of AOAI resources and provides step-by-step procedures.
+### Estimated Time: 90 minutes
 
-## Prerequisites
-1. You have already created the AOAI (Azure OpenAI) resources, we are using thhose in this challenge
-2. You have already deployed the **gpt-35-turbo** model with the same name `gpt-35-turbo`.
-3. You have already deployed the **text-embedding-ada-002** model with the same name `text-embedding-ada-002`.
-4. You already have one copy of the valid API key.
+## Introduction:
+
+In this challenge, your team is focused on smartly dividing the workload to ensure everything runs like clockwork. You need to figure out how to use our resources efficiently, adapt swiftly to changes, and keep costs in check. Your goal is to build a strong system that can handle a lot of users at the same time, providing them with a great experience without breaking the bank. You want to create a reliable system that performs well, even when many people are using it.
+
+Load balancing in Azure for OpenAI resources is crucial for optimizing performance and scalability. It ensures that incoming traffic is evenly distributed, preventing overloads, reducing delays, and using resources efficiently. This forms a sturdy foundation for a high-performing OpenAI infrastructure.
+
+After interacting with the Chat App and deploying OpenAI services in the previous challenge, your current focus is on using OpenAI instances with an API management service. You're systematically integrating named values, backend configurations, and API settings to enhance resilience and coverage. To ensure thorough testing and traceability, You're also incorporating an additional OpenAI service in an alternative region, recreating the initial configurations. This iterative process guarantees the robust performance of the OpenAI service across regions, implementing load balancing of AOAI (Artificial OpenAI) resources with defined policies in place.
 
 ## Solution Guide
 
