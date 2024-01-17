@@ -41,7 +41,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 **Using Doc Intelligence:**
 
 1) **Pre-requisites setup:**
-      - Click on the "Deploy to Azure" button (TODO).
+      - Click on the "Deploy to Azure" button to deploy the resources.
     
     [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
 
