@@ -45,7 +45,7 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 6. **Challenge 05: Serverless Document Batch Processing**
    - Embrace the power of serverless computing for batch processing documents. Analyze documents using Azure Document Intelligence Services and process them with OpenAI. 
      
-7. **Challenge 06: Implement Monitoring & Logging**
+7. **Challenge 06: Implement Monitoring and Logging of Azure OpenAI using API Management Service**
    - Operationalize your solution by setting up monitoring and logging. Use Azure Monitor, Log Analytics, and APIM to gain insights and maintain the robustness of your AI services.
 
 
