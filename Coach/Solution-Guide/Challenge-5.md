@@ -31,6 +31,8 @@ This lab session proposes several approaches for load balancing of AOAI resource
 
    ![](../media/k&e.png "Create Azure OpenAI resource")
 
+1. For both Open AI serives capture the  **key and endpoint** values.
+
 ### Task 1.2: Setting up API Management
 
 API Management (APIM) is a managed API management service provided by Azure that combines various backends together to provide a unified interface for APIs. If properly configured, users only need to access the APIM’s endpoint, which can load balance multiple AOAI resources or switch backend in the event of errors.
