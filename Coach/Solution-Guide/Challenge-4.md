@@ -27,7 +27,7 @@ One of the hottest themes at the moment is size models; users are particularly i
 
    ![](../media/lab03-04.png)
 
-1. In the chat application provide the below prompt and check the how responses are given by the ChatGPT and Azure cognitive search services by interacting to construct search queries, retrieve candidate information from the knowledge base.
+1. In the chat application provide the below prompt and check how responses are given by the ChatGPT and Azure cognitive search services by interacting to construct search queries and retrieve candidate information from the knowledge base.
 
    ```
    What does a Product Manager do?
@@ -47,7 +47,7 @@ One of the hottest themes at the moment is size models; users are particularly i
    
    ![](../media/3-6.png)
 
-1. As per our constructed our app, we can pass context from previous parts of the chat into the prompt behind the scenes, which enables ChatGPT to answer the question if the project manager manage the human resources team. Click on the citation and you'll see the part of the plan that covers the related information.
+1. As per our constructed app, we can pass context from previous parts of the chat into the prompt behind the scenes, which enables ChatGPT to answer the question if the project manager manages the human resources team. Click on the citation and you'll see the part of the plan that covers the related information.
 
    ![](../media/3-6.1.png)
    
@@ -56,7 +56,7 @@ One of the hottest themes at the moment is size models; users are particularly i
 1. Let us make a slight change to the prompt to ask open AI to take any question that is not asked in English and respond in the language it was asked in. Go to **Developer Settings** and add the below message in the **Override prompt template** section. Click on **Close**.
 
     ```
-   convert prompt to English and provide response when asked question in different language
+   convert prompts to English and respond when asked questions in different language
    ```
 
     ![](../media/lab03-09.png)
