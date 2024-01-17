@@ -42,7 +42,8 @@ If you have not already cloned **Activate GenAI** code repository to the environ
 ## Task 2: Deploying the solution using terraform
 
 1.**Deploying the infrastructure**
-   - Verify terraform installed in your machine by runnig the following command `terraform --version`
+
+Verify terraform installed in your machine by runnig the following command `terraform --version`
 
 Login to Azure:
 
