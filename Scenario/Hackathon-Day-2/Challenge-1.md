@@ -1,77 +1,88 @@
-# Challenge 01: Deploy Azure OpenAI Service and LLM Models
+# Challenge 1: Deploy Azure OpenAI Service and LLM Models
 
 ### Estimated Time: 30 minutes
 
 ## Introduction
 
-Welcome to the Challenge of Deploy Azure OpenAI Service and LLM Models! The objective of this challenge is to evaluate your proficiency in setting up and deploying Azure OpenAI Service along with its Large Language Models (LLM).
+**Azure OpenAI Service** provides REST API access to OpenAI's powerful language models including the GPT-4, GPT-4 Turbo with Vision, `gpt-35-turbo`, and Embeddings model series. In addition, the new `GPT-4` and `gpt-35-turbo` model series have now reached general availability.
 
-Contoso Ltd, a leading technological firm, is seeking to enhance its product support operations using AI technology. In this challenge, the team will learn how to use Azure OpenAI services and its large language models. They'll set up these tools, ask the AI questions, and see how it responds. The focus will be on using models like `gpt-3.5-turbo` and `text-embedding-ada-002` to make customer service better. The goal is to understand how to use these advanced tools well and make them work for Contoso's needs.
+A **Large Language Model (LLM)** is a deep learning algorithm that can perform a variety of natural language processing (NLP) tasks. Large language models use transformer models and are trained using massive datasets — hence, large. This enables them to recognize, translate, predict, or generate text or other content.
 
-As a Developer, your task is to assist Contoso Ltd in setting up and deploying the Azure OpenAI Service and the LLMs such as **gpt-35-turbo** and **text-embedding-ada-002**. 
+**Contoso Ltd**, a leading technological firm, is seeking to enhance its product support operations. They receive a vast number of queries daily, which results in longer waiting times and decreased customer satisfaction. To address this, Contoso is planning to implement an AI-powered solution that can handle customer inquiries effectively and efficiently.
 
-## Accessing Azure portal
+They have chosen to deploy Azure OpenAI Service along with its Large Language Models (LLM), like `gpt-35-turbo` and `text-embedding-ada-002`. These models are known for their capability in processing and generating human-like text, making them ideal for this application.
 
-1. To access the Azure portal, open the edge browser from inside the environment and navigate to **[Azure Portal](https://portal.azure.com)**.
+As a part of this challenge, your task is to create an Azure OpenAI service and deploy Large Language Models (LLM). The Large Language Models include **gpt-35-turbo** and **text-embedding-ada-002**.
 
-1. On the **Sign in to Microsoft Azure** tab, you will see a login screen. Enter the following email/username and then click on **Next**. 
-   * Email/Username: <inject key="AzureAdUserEmail"></inject>
-        
+### Accessing Azure portal
+
+1. To access the Azure portal, open a private/incognito window in your browser and navigate to Azure Portal.
+
+1. On the **Sign in to Microsoft Azure tab**, you will see a login screen. Enter the following email/username and then click on **Next**.
+
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
 1. Now enter the following password and click on **Sign in**.
-   * Password: <inject key="AzureAdUserPassword"></inject>
-     
+
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+
 1. If you see the pop-up **Stay Signed in?**, click No.
 
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue with the challenge.
 
 1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Maybe Later** to skip the tour.
-   
-1. Now you will see the Azure Portal Dashboard. Click on **Resource groups** from the Navigate panel to see the resource groups.
-  
-1. Confirm you have a resource group **Activate-GenAI** present, as shown in the below screenshot. You need to use the **<inject key="Resource Group Name"/>** resource group throughout this challenge.
 
-## Challenge Objectives
+## Prerequisites
+
+Make sure you have the following from the CloudLabs provided integrated environment:
+
+> Note: Pre-requisites are already set-up in the CloudLabs provided environment. If you're using your personal computer or laptop, please make sure that all necessary prerequisites are installed to complete this Hackathon.
+
+  - [Azure Subscription](https://azure.microsoft.com/en-us/free/)
+  - [Azure OpenAI](https://aka.ms/oai/access) access with the following models:
+    - gpt-35-turbo
+    - text-embedding-ada-002
+
+## Challenge Objectives:
 
 1. **Azure OpenAI Service Deployment:**
-   - Set up an Azure OpenAI Service instance with SKU size Standard `S0` in your Azure portal.
+   - Set up an Azure OpenAI Service instance with SKU size Standard `S0`
+   - Deploy it in the existing resource group named - **<inject key="Resource Group Name"/>**
    - Obtain the necessary Azure OpenAI Key and Endpoint.
 
-2. **Deploy Azure OpenAI's Large Language Models (LLM):**
+2. **Deploy Large Language Models (LLM):**
    - Azure OpenAI provides a web-based portal named **Azure OpenAI Studio** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
-   - Launch Azure OpeanAI Studio from the overview pane and deploy two OpenAI Models, i.e, `gpt-35-turbo` and `text-embedding-ada-002` with a TPM capacity of 40k.
+   - Launch Azure OpenAI Studio from the overview pane and deploy two OpenAI Models, i.e., `gpt-35-turbo` and `text-embedding-ada-002` with a TPM capacity of 20k.
 
-## Success Criteria
+## Success Criteria:
 
-To complete this challenge successfully, you should be able to:
-
-- Verify that Azure OpenAI Service is successfully deployed.
+- Verify that Azure OpenAI Service is successfully deployed in the existing resource group - <inject key="Resource Group Name"/>
 - Verify that the Large Language Models (LLM), `gpt-35-turbo` and `text-embedding-ada-002`, are successfully deployed with the Azure OpenAI Service.
 
-## Learning Resources
+## Additional Resources:
 
 - Refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for guidance on deploying the service.
 
-
-## Challenge Validation
+### Challenge Validation
  
 1. After completing the challenge, you need to visit the **Lab Validation (1)** tab and click on the **VALIDATE (2)** button under Actions to perform the validation steps. Verify that you have met the success criteria of the challenge. 
  
-    ![](../media/validate01.png "Validation")
+   ![azure](../media/validate01.png)
  
-1. If the validation status displays **Success** for all the validation steps, **congratulations!**. This means that you have completed the challenge and have unlocked the next challenge.
+1. If the validation status displays **Success** for all the validation steps, **congratulations!**. This means that you have successfully completed the challenge.
  
-     ![](../media/validate02.png "Validation")
-
+   ![azure](../media/validate02.png)
+   
 1. If the validation status displays **Fail**, **don't worry!** This could mean that you did not perform the challenge correctly.
  
-     ![](../media/validate03.png "Validation")
+   ![azure](../media/validate03.png)
  
 1. Hover your mouse over the `i` **(1)** icon to see the error message and determine the root cause of the failure. Based on the error message, revisit the challenge as necessary, and redo the validation by clicking on the **VALIDATE (3)** button again.
-
-   ![](../media/validate04.png "Validation")
- 
+   
+   ![azure](../media/validate04.png)
+   
 1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you to troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.
 
 ### Conclusion
 
-In this challenge, you’ve effectively validated the Azure OpenAI service and deployed LLM Models. Now, you can proceed to the subsequent challenge.
+In this challenge, you’ve effectively validated the Azure OpenAI service and deployed LLM Models. In next challenge, you will learn about Document Search.
