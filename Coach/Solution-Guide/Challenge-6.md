@@ -1,12 +1,6 @@
 # Challenge 06: Serverless Document Batch Processing 
 
-### Lab Scenario
-In this lab, we've equipped you with the essential artifacts to explore the capabilities of the Form Recognizer Service, OpenAI, and the Business Process Automation Accelerator. Our goal is to empower you to gain insights into utilizing the accelerator for building pipelines across various services, creating AI solutions tailored to your business requirements. 
 
-### Pre-requisites
-* The accelerator is deployed and ready in the resource group
-* You have an Azure subscription and permission to create a Form Recognizer Resource
-* You have access to the sample invoices folder with the invoices to upload
 
 # Solution Guide
 
