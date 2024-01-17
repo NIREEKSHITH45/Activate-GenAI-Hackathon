@@ -10,6 +10,10 @@ Building on your previous achievements in load balancing Azure OpenAI resources,
 
 This challenge unfolds in three main stages: language translation, serverless document batch processing using Azure services, and leveraging advanced features like Form Recognizer and AI search. We kick things off by translating files to meet language requirements. Next, you deploy a serverless architecture, utilizing Azure services, for efficient batch processing of documents. You train and test our model, establish a pipeline to convert documents into a Form Recognizer format, and bring in Azure's AI search service to verify the presence of specific documents in the processed dataset from where they can be used by Azure OpenAI. 
 
+You will utilize the Form Recognizer Service and the Business Process Automation (BPA) Accelerator to build pipelines across various Azure services, creating a seamless document processing solution. This challenge is a step towards realizing an AI solution that can adapt and grow with Contoso's business needs.
+
+
+
 ## Challenge Objectives:
 
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**  !
@@ -24,29 +28,37 @@ This challenge unfolds in three main stages: language translation, serverless do
 
 1) **Initialize C#/.NET Environment for Document Processing:**
 
-    - Begin a new Visual Studio project by selecting "Create a new project" and opting for the Console Application template. Specify a name for your project with .NET 6.0 before finalizing.
+    - Set up a C#/.NET project in Visual Studio for document translation, using .Net Version 6.
+    - Install necessary packages, including Newtonsoft.Json.
 
-1) **Install Newtonsoft.Json, Translate, and run your application.**
+1) **Translate Documents and Run Application:.**
 
-    - Add NewtonsoftJson to your project via NuGet Packages, replace code in Program.cs with the document translation sample, update URLs, and start the program by clicking the green button or pressing F5.
+    - Implement document translation code in the C#/.NET project.
+    - Execute the application to translate all documents in the storage container.
 
       >Note: You can find the documents in C:\LabFiles\Documents
 
 **Using Doc Intelligence:**
 
-1) Set up the Document Intelligent service, navigate to the studio, and confirm project creation and initiation by choosing "Doc Intelligence."
+1) Creating an Azure Document Intelligence (Form Recognizer) resource:
+    - Navigate to Azure AI services and set up an Azure Document Intelligence (Form Recognizer) resource.
+    - Upload and label training documents to train the Azure Document Intelligence (Form Recognizer) model.
 
-1) Forge a pipeline using a static web app, designate a document type for transformation into a Form Recognizer model, and guarantee smooth document ingestion for thorough processing.
+1) Build a New Pipeline with Custom Model Module in BPA:
+    - Utilize the trained Form Recognizer model to create a new pipeline in BPA.
+    - Configure the pipeline for efficient document processing and integration with Azure Cognitive Search.
 
-1) Optimize data import with advanced indexing in the search service. Utilize the BPA Accelerator's search app for precise document retrieval.
-
+1) Configure Azure AI Search:
+    - Connect to Azure Blob Storage and configure data import and indexing.
+    - Set up an indexer for organized data retrieval.
+1) Update Azure OpenAI Model to use the Azure AI Search
+    - Update your existing Azure OpenAI model deployemnt to connect to newly created AI Search index and test using Azure OpenAI Playground.
 ## Success Criteria:
 
-- Successfully executing the POST method yields a 202 Accepted response, indicating the service created the batch request. Translated documents are then available in your target container, with the Operation-Location value in response headers essential for subsequent GET request  
-- Make sure the project is established by configuring the service resource and linking the training data source effectively.
-- Successfully identified the respective field created in the preceding step, providing its confidence score.
-- Ensure the accurate selection of the "Select a stage to add it to your pipeline configuration" option to align with the specific requirements of your pipeline configured
-- The file retrieval operation was executed successfully, and the relevant document is displayed in the search results.
+- Successful translation of documents and storage in Azure Blob Storage target container.
+- Effective setup and utilization of Form Recognizer resource and BPA pipeline.
+- Proper configuration of Azure Cognitive Search for processed documents.
+- Validation of document processing and search functionality using the Sample Search Application in BPA.
 
 ## Additional Resources:
 
