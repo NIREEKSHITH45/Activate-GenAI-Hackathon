@@ -4,11 +4,11 @@
 
 ## Introduction:
 
-In this challenge, our team is focused on smartly dividing the workload to ensure everything runs like clockwork. We need to figure out how to use our resources efficiently, adapt swiftly to changes, and keep costs in check. Our goal is to build a strong system that can handle a lot of users at the same time, providing them with a great experience without breaking the bank. We want to create a reliable system that performs well, even when many people are using it.
+In this challenge, your team is focused on smartly dividing the workload to ensure everything runs like clockwork. You need to figure out how to use our resources efficiently, adapt swiftly to changes, and keep costs in check. Your goal is to build a strong system that can handle a lot of users at the same time, providing them with a great experience without breaking the bank. You want to create a reliable system that performs well, even when many people are using it.
 
 Load balancing in Azure for OpenAI resources is crucial for optimizing performance and scalability. It ensures that incoming traffic is evenly distributed, preventing overloads, reducing delays, and using resources efficiently. This forms a sturdy foundation for a high-performing OpenAI infrastructure.
 
-After interacting with the Chat App and deploying OpenAI services in the previous challenge, our current focus is on using OpenAI instances with an API management service. We're systematically integrating named values, backend configurations, and API settings to enhance resilience and coverage. To ensure thorough testing and traceability, we're also incorporating an additional OpenAI service in an alternative region, recreating the initial configurations. This iterative process guarantees the robust performance of the OpenAI service across regions, implementing load balancing of AOAI (Artificial OpenAI) resources with defined policies in place.
+After interacting with the Chat App and deploying OpenAI services in the previous challenge, your current focus is on using OpenAI instances with an API management service. You're systematically integrating named values, backend configurations, and API settings to enhance resilience and coverage. To ensure thorough testing and traceability, You're also incorporating an additional OpenAI service in an alternative region, recreating the initial configurations. This iterative process guarantees the robust performance of the OpenAI service across regions, implementing load balancing of AOAI (Artificial OpenAI) resources with defined policies in place.
 
 ## Challenge Objectives:
 
