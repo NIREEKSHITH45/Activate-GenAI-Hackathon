@@ -22,7 +22,7 @@ Utilizing Azure API Management (APIM), you'll set up a load balancing mechanism 
    
 2. Set up API Management as a proxy to manage traffic to Azure OpenAI resources.
     - Integrate POST operations for accessing the Completions API (GPT-3.5 Turbo) and the Embeddings API (Text Embedding Ada-002) within APIM.
-    - mplement load balancing across OpenAI resources with a failover mechanism for backend errors.
+    - Implement load balancing across OpenAI resources with a failover mechanism for backend errors.
     - Use APIM’s Named Values for dynamic configuration of OpenAI endpoints and keys, ensuring efficient routing and resource management.
 
 3. API Inbound Processing Policies:
