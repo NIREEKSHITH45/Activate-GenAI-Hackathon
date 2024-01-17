@@ -1,43 +1,46 @@
-# Activate Gen AI Challenge Lab - 1 Day Hackathon
+# Activate Generative AI - 1 Day Hackathon
 
-Welcome to the Active Gen AI Challenge Lab! This event is designed to enhance your skills in the exciting field of AI. Below, you'll find essential information to get started.
+Welcome to the Activate GenAI Hackathon! Today, you're set to dive into the transformative world of AI, with a focus on utilizing the power of Azure OpenAI services. Prepare yourself for a day of intense learning, innovation, and hands-on experience that will elevate your understanding of AI integration in application development.
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Learning Objectives](#learning-objectives)
-- [Challenges](#challenges)
 
 ## Introduction
 
-Welcome to Active Gen AI, an immersive exploration into the world of Azure OpenAI. Active Gen AI goes beyond the fundamentals, providing a hands-on experience to apply your knowledge and build practical solutions using Azure OpenAI models. This program serves as a comprehensive guide for those aiming to deepen their understanding and proficiency in creating AI-powered applications. Whether you're a newcomer or have some experience with OpenAI, Active Gen AI is tailored to your learning journey. The content within this initiative offers valuable insights and skills to empower you in crafting intelligent and innovative solutions using Azure OpenAI.
+Your quest is to innovate for the future at the fictitious enterprise, GenTech Inc. Your challenge? To integrate next-generation AI capabilities into GenTech's ecosystem, enhancing their operations and customer engagement through intelligent application development.
 
-This hack consists of four challenges and is designed to be self-administered, so anyone can complete the material independently. Whether you have limited to no experience with Active GenAI or have experimented with OpenAI before but want a deeper understanding of how to implement an AI solution, this hack is for you.
 
 ## Learning Objectives
 
 By participating in this hackathon, you will learn how to:
 
-- Understand Gen AI concepts and how they can be used to build chat applications.
-- Learn how to configure Azure OpenAI service and use Azure AI Search to build private Open AI with your own data.
-- Gain practical experience in implementing a chat app architecture with Terraform.
-- Explore features of chat apps, such as multilingual queries and advanced chat response settings.
+- Gain practical experience in deploying and managing Azure OpenAI services, including Large Language Models (LLMs).
+- Develop competencies in implementing intelligent document search capabilities using Azure AI.
+- Acquire the ability to set up and deploy a conversational AI interface with a sample chat application.
+- Enhance your problem-solving skills by addressing real-world scenarios with AI-driven solutions.
 - Collaborate with other participants to tackle challenges and share insights.
 
+## Hackathon Format: Challenge Based
+This hackathon adopts a challenge-based format, offering you a unique opportunity to learn while dealing with practical problems. Each challenge includes one or more self-contained tasks, designed to test and enhance your skills in specific aspects of AI app development. You will approach these challenges by:
+
+- Analyzing the problem statement.
+- Strategizing your approach to find the most effective solution.
+- Leveraging the provided lab environment and Azure AI services.
+- Collaborating with peers to refine and implement your solutions.
+- 
 ## Challenges
 
 1. **Challenge 01: Deploy Azure OpenAI Service and LLM Models**
-   - Deploy the Azure OpenAI Service and implement the deployment of a Large Language Model (LLM) within the OpenAI Service.
+   - Begin your journey by deploying the Azure OpenAI Service and integrating a Large Language Model (LLM). This will serve as the foundation for advanced linguistic intelligence in your applications.
      
 2. **Challenge 02: Implement Document Search with Azure AI Search**
-   - Create Azure AI Search, AI Services, storage, upload and index documents, and customize search using VS Code and Azure.
+   - Construct an Azure AI Search solution to enable sophisticated document handling. Upload, index, and tailor the search experience using VS Code and Azure. This prepares the groundwork for document-based questioning essential for Retriever-Augmented Generation (RAG) in OpenAI.
              
-3. **Challenge 03: Deploy the Sample Chat App with Terraform**
-   - Deploy the chatapp in Azure using Terraform.
+3. **Challenge 03: Deploy the Sample Chat App to Azure**
+   - Utilize Terraform to deploy a sample chat application on Azure, automating the provisioning of all necessary resources. This challenge will demonstrate your ability to get an application up and running in the cloud.
           
 4. **Challenge 04: Interact with Chat App**
-   - Navigate and explore the web app, interact adeptly with Chat App using insightful questions, showcase multilingual query proficiency, and implement advanced settings for comprehensive Azure OpenAI service understanding.
+   - Explore the deployed web app, engaging with the Chat App through well-constructed inquiries. Display your ability to handle multilingual queries and make use of advanced settings to deepen your understanding of the Azure OpenAI service's capabilities.
                     
+Each challenge is meticulously designed to push the boundaries of your AI application development skills. Gear up for a day filled with learning, innovation, and the thrill of overcoming real-world tech hurdles. 
 
 Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to your coach.
 
