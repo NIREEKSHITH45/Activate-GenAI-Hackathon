@@ -2,9 +2,9 @@
 
 ## Introduction:
 
-Contoso Ltd aims to improve product support with a user-friendly chat application, leveraging AI technology, and making sure everything runs smoothly.
+Building on the success of enhancing Contoso's AI-powered chat app with serverless document processing, your next objective is to operationalize these Azure OpenAI solutions with robust monitoring and logging mechanisms. In this challenge, you will delve into the intricacies of setting up and analyzing advanced monitoring systems using the Azure API Management Service and Log Analytics workspace. This is a crucial step in ensuring the smooth operation and maintenance of the AI solutions you've developed, providing valuable insights into system performance and user interactions.
 
-In this challenge, your team is diving into the details by using the Log Analytics workspace for a complete system check and performance analysis. You're starting by setting up an existing OpenAI service with diagnostic settings, making it easy to retrieve logs through Kusto queries. Simultaneously, You're establishing an API management service, adding essential values and configurations. This service connects with diagnostic settings, enabling Azure Monitor. Your next step is to analyze logs within the API management service using Kusto queries, ensuring effective monitoring and seamless integration with the OpenAI service. Your focus is on watching outputs and prompts to guarantee a well-integrated and monitored system.
+Your task is to implement comprehensive monitoring for the Azure OpenAI service, leveraging diagnostic settings and Kusto queries for in-depth log analysis. Additionally, you'll be integrating the API Management Service to oversee the chat message completions and further analyze the prompts and outputs. This level of monitoring is essential for Contoso to maintain a high-quality, efficient, and user-friendly AI chat application.
 
 ## Challenge Objectives:
 
