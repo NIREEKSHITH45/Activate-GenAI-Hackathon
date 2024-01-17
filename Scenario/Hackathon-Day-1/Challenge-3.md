@@ -4,22 +4,22 @@
 
 ## Introduction:
 
-In this challenge, the team will learn how to deploy the solution that configures and builds the AI App, focusing on user-friendliness, scalability, and easy customization for Contoso. The goal is to create a versatile chat app capable of handling various tasks, from assisting customers to sharing knowledge. Building on the success of deploying models in the Azure OpenAI service and creating a document search solution with Azure AI Search in previous challenges, this task involves deploying a solution for running a chat application using Terraform.
+In this challenge, the team will learn how to set up this chat app using Terraform, focusing on user-friendliness, scalability, and easy customization for Contoso. The goal is to create a versatile chat app capable of handling various tasks, from assisting customers to sharing knowledge based on the data provided. Building on the success of deploying models in the Azure OpenAI service and creating a document search solution with Azure AI Search in previous challenges, this task involves deploying a solution for running a chat application using Terraform.
 
 The Chat App should be able to provide a prompt response related to the data that we have added using the Form recognizer and analyzed using the Azure search service
 
 The chat application integrates seamlessly with different Azure services to provide an intelligent user experience. Here's a simple overview of each service:
 
-- **App Service:** This hosts the chat app, ensuring it can handle a large number of users effectively.
+- **App Service:** This hosts the chat app, ensuring it can respond to the prompts sent by users from the uploaded relatable data.
 - **Application Insights:** It proactively monitors the app's performance, taking care of issues before they become significant.
 - **Document Intelligence:** Using AI, it understands the content in uploaded documents, making user information more insightful.
 - **Azure OpenAI:** Enhances the app's capabilities with natural language understanding and responses.
 - **Shared Dashboard:** Acts as a central hub for team collaboration and data sharing.
 - **Smart Detector Alert Rule:** Monitors the app's health and notifies the team if any issues arise.
 - **Search Service:** Empowers users with dynamic and efficient search functionality within the app.
-- **Log Analytics Workspace:** Tracks and analyzes app activity, offering valuable insights.
+- **Log Analytics Workspace:** Tracks and analyzes app activity, offering valuable insights and logs.
 - **App Service Plan:** Optimizes resource allocation for optimal app performance.
-- **Storage Account:** Securely stores various data types, forming a robust foundation for the chat app.
+- **Storage Account:** Securely stores the data that will be used by the Azure AI Search service to provide the inputs to the chat app.
 
 Together, these services create a responsive chat application that combines AI features, monitoring capabilities, and efficient data management, providing Contoso with an exceptional user experience.
 
@@ -29,25 +29,25 @@ Together, these services create a responsive chat application that combines AI f
 ![](../media/appcomponents.png)
 
 
-## Challenge Objectives: (WIP)
+## Challenge Objectives:
 
-> **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>** !
+> **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**.  !
 
 1. **Clone the Repository:**
-   - Clone the Active Gen AI repository: `https://github.com/Azure/activate-genai`.
+   - Clone the Active Gen AI repository: `https://github.com/CloudLabs-MOC/activate-genai`.
    - Verify if Terraform is installed on your machine. If not, follow the [Terraform installation guide](https://developer.hashicorp.com/terraform/install)
 
 2. **Terraform Deployment:**
-   - Use Terraform to deploy the architecture specified in the provided GitHub repository.
+   - Use Terraform to deploy the App Solution specified in the provided GitHub repository.
    - Configure Terraform scripts to provision Azure resources accurately.
 
 3. **Azure Search Index Deployment:**
    - Use the `prepdocs.ps1` from the scripts folder to analyze and upload the data to the storage account.
       > Note:- You will need to understand and update the script based on the requirements mentioned in the script.
-      
+
 ## Success Criteria:
 
-- Successful deployment of the chat-app.
+- Successful deployment of the Chat App.
 - validate if the following services are successfully deployed in the RG (Resource Group).
   - App Service
   - Document Intelligence
@@ -59,6 +59,7 @@ Together, these services create a responsive chat application that combines AI f
   - App Service Plan
   - Storage Account
 - Validate if the data is populated into the storage container named `content`.
+- The Chat app should be accessible using the Azure App service.
 
 ## Additional Resources:
 
