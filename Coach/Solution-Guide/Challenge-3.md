@@ -72,8 +72,6 @@ terraform apply
 Run the following commands to deploy the Azure Search Index and upload the sample documents:
 
 ```bash
-
-export AZURE_PRINCIPAL_ID="<principal id>"
 export AZURE_RESOURCE_GROUP="<resource group>" 
 export AZURE_SUBSCRIPTION_ID="<subscription id>"
 export AZURE_TENANT_ID="<azure tenant id>"
