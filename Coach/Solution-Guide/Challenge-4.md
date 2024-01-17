@@ -56,7 +56,7 @@ One of the hottest themes at the moment is size models; users are particularly i
 1. Let us make a slight change to the prompt to ask open AI to take any question that is not asked in English and respond in the language it was asked in. Go to **Developer Settings** and add the below message in the **Override prompt template** section. Click on **Close**.
 
     ```
-   convert prompts to English and respond when asked questions in different language
+   convert prompts to English and respond when asked questions in a different language
    ```
 
     ![](../media/lab03-09.png)
@@ -71,7 +71,7 @@ One of the hottest themes at the moment is size models; users are particularly i
 
    ![](../media/3-8.png)
 
-1. Go to **Developer Settings**, in the **Exclude category** section enable the check box for **Use query-contextual summaries instead of whole documents** and **Suggest follow-up questions**. Click on **Close** and observe how the responses for prompt will change in the chat by giving the below prompt.
+1. Go to **Developer Settings**, in the **Exclude category** section enable the check box for **Use query-contextual summaries instead of whole documents** and **Suggest follow-up questions**. Click on **Close** and observe how the responses for the prompt will change in the chat by giving the below prompt.
 
    ```
    What happens in a performance review?
