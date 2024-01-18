@@ -41,7 +41,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 **Using Doc Intelligence:**
 
 1) **Pre-requisites setup:**
-      - Clone the repository `https://github.com/Azure/business-process-automation`
+      - Clone the repository `https://github.com/CloudLabs-MOC/business-process-automation`
       - Follow the instructions to **Deploy to Azure With OpenAI**
       - Verify the deployed Azure resources in the resource group
 
