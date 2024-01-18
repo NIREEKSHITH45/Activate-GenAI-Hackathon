@@ -208,7 +208,7 @@ In this step, you will upload 6 training documents to train the model.
 
      ![](../media/bpa2-12.png)
 
-### Using Doc INtelligence
+### Using Doc Intelligence
 1. Ensure your subscription has **Microsoft.DocumentDB enabled**  
 To confirm/enable:  
       - Navigate to your subscription within portal.azure.com  
