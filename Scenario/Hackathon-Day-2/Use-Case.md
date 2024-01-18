@@ -7,8 +7,6 @@ Your challenge, as the torchbearers of innovation, is to dive deep into the worl
 
 1. **Integrate Azure OpenAI into Contoso's Corporate Ecosystem**
     - Deploy and experiment with LLMs to enrich GenTech's communication channels, focusing on interpreting, analyzing, and summarizing internal and external communications for more streamlined and impactful exchanges.
-2. **Implement Intelligent Document Search**
-    - Engineer innovative tools that allow for efficient indexing and searching of vast document repositories, enabling rapid retrieval of information and knowledge discovery, crucial for informed decision-making within GenTech.
 3. **Establish AI-Powered Chat Interactions**
     -  Deploy and refine conversational AI interfaces within Contoso's digital ecosystem, ensuring they can handle intricate, multilingual conversations with finesse, thereby elevating the user experience on our platforms.
 4. **Establish AI-Powered Personalized Chat Experience with Private Data**
