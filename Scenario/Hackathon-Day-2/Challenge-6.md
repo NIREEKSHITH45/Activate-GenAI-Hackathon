@@ -31,7 +31,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
     - Set up a C#/.NET project in Visual Studio for document translation, using .Net Version 6.
     - Install necessary packages, including Newtonsoft.Json.
 
-1) **Translate Documents and Run Application:.**
+1) **Translate Documents and Run Application:**
 
     - Implement document translation code in the C#/.NET project.
     - Execute the application to translate all documents in the storage container.
@@ -40,9 +40,16 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 **Using Doc Intelligence:**
 
-1) **Creating an Azure Document Intelligence (Form Recognizer) resource:**
+1) **Pre-requisites setup:**
+      - Clone the repository `https://github.com/Azure/business-process-automation`
+      - Follow the instructions to **Deploy to Azure With OpenAI**
+      - Verify the deployed Azure resources in the resource group
+
+1) **Using an Azure Document Intelligence (Form Recognizer) resource:**
     - Navigate to Azure AI services and set up an Azure Document Intelligence (Form Recognizer) resource.
     - Upload and label training documents to train the Azure Document Intelligence (Form Recognizer) model.
+
+         >Note: You can find the documents in C:\LabFiles\Documents
 
 1) **Build a New Pipeline with Custom Model Module in BPA:**
     - Utilize the trained Form Recognizer model to create a new pipeline in BPA.
@@ -54,6 +61,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 1) **Update Azure OpenAI Model to use the Azure AI Search**
     - Update your existing Azure OpenAI model deployment to connect to the newly created AI Search index and test using Azure OpenAI Playground.
+      
 ## Success Criteria:
 
 - Successful translation of documents and storage in Azure Blob Storage target container.
@@ -63,8 +71,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 ## Additional Resources:
 
-- Refer to the provided [GitHub repository](https://github.com/MSUSAzureAccelerators/Azure-OpenAI-and-Form-Recognizer-Workshop/blob/main/README.md) for detailed information.
-- Refer [Github repository](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) for sample code that will be used for document translation using C#.
+- Refer [document translation](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) for sample code that will be used for document translation using C#.
 
 ## Challenge Validation
  
