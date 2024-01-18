@@ -208,7 +208,31 @@ In this step, you will upload 6 training documents to train the model.
 
      ![](../media/bpa2-12.png)
 
-### Task 4: Build a new pipeline with the custom model module in BPA
+### Using Doc INtelligence
+1. Ensure your subscription has **Microsoft.DocumentDB enabled**  
+To confirm/enable:  
+      - Navigate to your subscription within portal.azure.com  
+      - Select Resource Providers at bottom of left navigation pane  
+      - Within the Filter by name menu, search for Microsoft.DocumentDB  
+      - Once Microsoft.DocumentDB is found, check if the status is marked as "Registered". If marked as "NotRegistered", Select "Register"  
+      **Note**: *This process may take several seconds/minutes, be sure to refresh the entire browser periodically*
+2. Ensure that you have **accepted terms and conditions for Responsible AI**:  
+You must initiate the creation of a "Cognitive services multi-service account" from the Azure portal to review and acknowledge the terms and conditions. You can do so here: [Quickstart: Create a Cognitive Services resource using the Azure portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows).  
+Once accepted, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc) under the same Azure subscription.
+
+1. [Get a Workflow Level Token (Classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+2. Fork the repository to a git account of which you are the Admin. `https://github.com/Azure/business-process-automation`
+3. Click on the "Deploy to Azure" Button that corresponds to your environment.
+4. Only the Resource Group, Repo Token (from #2), and Forked Git Repo Url are needed.  The remaining parameters are filled in for you.
+
+### With OpenAI
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
+
+7. Verify all the resources are deployed with out any issues.
+   
+ ![](../media/d005.png)
+   
+**Build a new pipeline with the custom model module in BPA**
 
 After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
 
