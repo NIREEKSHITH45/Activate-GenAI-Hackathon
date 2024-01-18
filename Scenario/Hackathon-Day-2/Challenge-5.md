@@ -63,6 +63,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 1) **Update Azure OpenAI Model to use the Azure AI Search**
     - Update your existing Azure OpenAI model deployment to connect to the newly created AI Search index and test using Azure OpenAI Playground.
+      
 ## Success Criteria:
 
 - Successful translation of documents and storage in Azure Blob Storage target container.
