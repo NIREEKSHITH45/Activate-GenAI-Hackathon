@@ -34,7 +34,7 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
    - Deploy the Azure OpenAI Service and implement the deployment of a Large Language Model (LLM) within the OpenAI Service.
      
 2. **Challenge 02: Implement Document Search with Azure AI Search**
-   - Create Azure AI Search, AI Services, storage, upload and index documents, and c
+   - Construct an Azure AI Search solution to enable sophisticated document handling. Upload, index, and tailor the search experience using VS Code and Azure. This prepares the groundwork for document-based questioning essential for Retriever-Augmented Generation (RAG) in OpenAI.
              
 3. **Challenge 03: Deploy the Sample Chat App with Terraform**
    - Deploy the chatapp solution architecture in Azure using Terraform.
