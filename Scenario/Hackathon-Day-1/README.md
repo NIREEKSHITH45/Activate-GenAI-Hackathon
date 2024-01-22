@@ -1,4 +1,4 @@
-# Activate Generative AI - 1 Day Hackathon
+# Activate Gen AI - 1 Day Hackathon
 
 Welcome to the Activate GenAI Hackathon! Today, you're set to dive into the transformative world of AI, with a focus on utilizing the power of Azure OpenAI services. Prepare yourself for a day of intense learning, innovation, and hands-on experience that will elevate your understanding of AI integration in application development.
 
