@@ -69,7 +69,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
  
    ![azure](../media/validate01.png)
  
-1. If the validation status displays **Success** for all the validation steps, **congratulations!**. This means that you have successfully completed the challenge.
+1. If the validation status displays **Success** for all the validation steps, **congratulations!** This means that you have successfully completed the challenge.
  
    ![azure](../media/validate02.png)
    
