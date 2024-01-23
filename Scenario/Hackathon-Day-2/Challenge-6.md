@@ -8,7 +8,7 @@ Your task is to implement comprehensive monitoring for the Azure OpenAI service,
 
 ## Challenge Objectives:
 
-1. **Monitoring Azure OpenAI Service:**
+1. **Monitoring the Azure OpenAI Service:**
    - Set up diagnostic settings for the existing Azure OpenAI services.
    - Conduct log analysis utilizing Kusto Queries to monitor the service's performance and usage.
      
@@ -24,9 +24,9 @@ Participants will be evaluated based on the following criteria:
 
 ## Additional Resources:
 
-- Refer to the [how to configure Azure API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md) for detailed information.
-- Refer to this video about [Log & Monitor Everything in Azure OpenAI with API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md).
-- Refer to the [Kusto Queries Tutorial](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-tutorial) for detailed information
+- Refer to [How to Configure Azure API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md) for detailed information.
+- Refer to this video about [Logging & Monitoring Everything in Azure OpenAI with API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md).
+- Refer to the [Kusto Queries Tutorial](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-tutorial) for detailed information.
 
 ## Challenge Validation
  
@@ -34,7 +34,7 @@ Participants will be evaluated based on the following criteria:
  
     ![](../media/validate01.png "Validation")
  
-1. If the validation status displays **Success** for all the validation steps, **congratulations!**. This means that you have completed the challenge and have unlocked the next challenge.
+1. If the validation status displays **Success** for all the validation steps, **congratulations!** This means that you have completed the challenge and have unlocked the next challenge.
  
      ![](../media/validate02.png "Validation")
 
@@ -46,4 +46,4 @@ Participants will be evaluated based on the following criteria:
 
    ![](../media/validate04.png "Validation")
  
-1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you to troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.
+1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.

@@ -1,12 +1,12 @@
-# Challenge 03:  Deploy an AI-Powered Chat App. 
+# Challenge 03:  Deploy an AI-Powered Chat App 
 
 ### Estimated Time: 150 minutes
 
 ## Introduction:
 
-In this challenge, you'll deploy an AI-powered chat application specifically designed for Contoso Electronics. This app, built with React for the frontend and Python for the backend, showcases advanced features like Chat and Q&A interfaces, all augmented by AI capabilities. It's an excellent opportunity for you to explore the integration of Azure OpenAI Service with the GPT-3.5 Turbo model and Azure Cognitive Search for efficient data indexing and retrieval.
+In this challenge, you'll deploy an AI-powered chat application specifically designed for Contoso Electronics. This app, built with React for the frontend and Python for the backend, showcases advanced features like chat and Q&A interfaces, all augmented by AI capabilities. It's an excellent opportunity for you to explore the integration of Azure OpenAI Service with the GPT-3.5 Turbo model and Azure Cognitive Search for efficient data indexing and retrieval.
 
-This sample app is more than just a chat interface; it demonstrates the Retrieval-Augmented Generation pattern, offering a rich, ChatGPT-like experience over Contoso's own data. The app's features include trustworthiness evaluation of responses with citations, tracking of source content, data preparation, prompt construction, and orchestrative interaction between the ChatGPT model and Cognitive Search. You'll also find adjustable settings in the UX for experimentation, and optional performance tracing and monitoring with Application Insights.
+This sample app is more than just a chat interface; it demonstrates the Retrieval-Augmented Generation pattern, offering a rich, ChatGPT-like experience over Contoso's own data. The app's features include trustworthiness evaluation of responses with citations, tracking of source content, data preparation, prompt construction, and orchestrating interaction between the ChatGPT model and Cognitive Search. You'll also find adjustable settings in the UX for experimentation and optional performance tracing and monitoring with Application Insights.
 
 In this challenge, your task is to deploy this comprehensive chat solution for Contoso, allowing them to evaluate its capabilities and integrate it into their environment. The repository comes with sample data, representing a ready-to-use, end-to-end solution. This app is a valuable tool for Contoso's employees to inquire about company benefits, internal policies, job descriptions, and roles.
 
@@ -62,7 +62,7 @@ terraform init
 terraform apply
 ```
 
-## Task 3: Azure Search Index Deployment and Upload The Sample Data
+## Task 3: Azure Search Index Deployment and Uploading the Sample Data
 
 1. Run the following commands in the same terminal to deploy the Azure Search Index and upload the sample documents:
 

@@ -4,9 +4,9 @@
 
 ## Introduction:
 
-Welcome to a pivotal challenge where Contoso Ltd aims to enhance their AI-powered chat app with a robust document processing system. This challenge focuses on creating a serverless solution for processing new documents, translating them as needed, and seamlessly storing them into Azure AI Search. This system will ensure that these documents are continuously available for consumption by Azure OpenAI, enhancing the chat app's knowledge base and response accuracy.
+Welcome to a pivotal challenge where Contoso Ltd. aims to enhance its AI-powered chat app with a robust document processing system. This challenge focuses on creating a serverless solution for processing new documents, translating them as needed, and seamlessly storing them into Azure AI Search. This system will ensure that these documents are continuously available for consumption by Azure OpenAI, enhancing the chat app's knowledge base and response accuracy.
 
-Building on your previous achievements in load balancing Azure OpenAI resources, you will now embark on a journey to streamline document processing. This involves setting up a translation service, creating a serverless architecture for batch processing using Azure services, and leveraging technologies like Form Recognizer and Azure AI Search. Your task is to ensure that newly added documents are promptly processed, analyzed, and indexed, making them readily available for the chat app's AI to utilize.
+Building on your previous achievements in load-balancing Azure OpenAI resources, you will now embark on a journey to streamline document processing. This involves setting up a translation service, creating a serverless architecture for batch processing using Azure services, and leveraging technologies like Form Recognizer and Azure AI Search. Your task is to ensure that newly added documents are promptly processed, analyzed, and indexed, making them readily available for the chat app's AI to utilize.
 
 This challenge unfolds in three main stages: language translation, serverless document batch processing using Azure services, and leveraging advanced features like Form Recognizer and AI search. We kick things off by translating files to meet language requirements. Next, you deploy a serverless architecture, utilizing Azure services, for efficient batch processing of documents. You train and test our model, establish a pipeline to convert documents into a Form Recognizer format, and bring in Azure's AI search service to verify the presence of specific documents in the processed dataset from where they can be used by Azure OpenAI. 
 
@@ -22,37 +22,37 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
     - Implement a translation service to meet Contoso's multilingual document requirements.
 
-1) **Setup Azure Blob Storage  .**
+1) **Setup Azure Blob Storage.**
 
     - Create mandatory source and target containers in Azure Blob Storage for document processing.
 
-1) **Initialize C#/.NET Environment for Document Processing:**
+1) **Initialize the C#/.NET Environment for Document Processing:**
 
-    - Set up a C#/.NET project in Visual Studio for document translation, using .Net Version 6.
-    - Install necessary packages, including Newtonsoft.Json.
+    - Set up a C#/.NET project in Visual Studio for document translation using .Net Version 6.
+    - Install the necessary packages, including Newtonsoft.Json.
 
-1) **Translate Documents and Run Application:**
+1) **Translate Documents and Run the Application:**
 
     - Implement document translation code in the C#/.NET project.
     - Execute the application to translate all documents in the storage container.
 
-      >Note: You can find the documents in C:\LabFiles\Documents
+      >Note: You can find the documents in C:\LabFiles\Documents.
 
 **Using Doc Intelligence:**
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **Document-Processing-<inject key="Deployment ID"/>**  !
 
 1) **Pre-requisites setup:**
-      - Clone the repository `https://github.com/CloudLabs-MOC/business-process-automation`
-      - Follow the instructions to **Deploy to Azure With OpenAI**
-      - Verify the deployed Azure resources in the resource group
+      - Clone the repository: `https://github.com/CloudLabs-MOC/business-process-automation`.
+      - Follow the instructions to **Deploy to Azure with OpenAI**.
+      - Verify the deployed Azure resources in the resource group.
 
 1) **Using an Azure Document Intelligence (Form Recognizer) resource:**
     - Navigate to Azure AI services and set up an Azure Document Intelligence (Form Recognizer) resource.
     - Upload and label training documents to train the Azure Document Intelligence (Form Recognizer) model.
 
-         >Note: You can find the documents in C:\LabFiles\Documents
+         >Note: You can find the documents in C:\LabFiles\Documents.
 
-1) **Build a New Pipeline with Custom Model Module in BPA:**
+1) **Build a New Pipeline with a Custom Model Module in BPA:**
     - Utilize the trained Form Recognizer model to create a new pipeline in BPA.
     - Configure the pipeline for efficient document processing and integration with Azure Cognitive Search.
 
@@ -60,19 +60,19 @@ You will utilize the Form Recognizer Service and the Business Process Automation
     - Connect to Azure Blob Storage and configure data import and indexing.
     - Set up an indexer for organized data retrieval.
 
-1) **Update Azure OpenAI Model to use the Azure AI Search**
-    - Update your existing Azure OpenAI model deployment to connect to the newly created AI Search index and test using Azure OpenAI Playground.
+1) **Update the Azure OpenAI Model to use the Azure AI Search**
+    - Update your existing Azure OpenAI model deployment to connect to the newly created AI Search index and test using the Azure OpenAI Playground.
       
 ## Success Criteria:
 
-- Successful translation of documents and storage in Azure Blob Storage target container.
-- Effective setup and utilization of Form Recognizer resource and BPA pipeline.
+- Successful translation of documents and storage in the Azure Blob Storage target container.
+- Effective setup and utilization of the Form Recognizer resource and BPA pipeline.
 - Proper configuration of Azure Cognitive Search for processed documents.
 - Validation of document processing and search functionality using the Sample Search Application in BPA.
 
 ## Additional Resources:
 
-- Refer [document translation](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) for sample code that will be used for document translation using C#.
+- Refer to [document translation](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) for sample code that will be used for document translation using C#.
 
 ## Challenge Validation
  
@@ -80,7 +80,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
  
     ![](../media/validate01.png "Validation")
  
-1. If the validation status displays **Success** for all the validation steps, **congratulations!**. This means that you have completed the challenge and have unlocked the next challenge.
+1. If the validation status displays **Success** for all the validation steps, **congratulations!** This means that you have completed the challenge and have unlocked the next challenge.
  
      ![](../media/validate02.png "Validation")
 
@@ -92,4 +92,4 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
    ![](../media/validate04.png "Validation")
  
-1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you to troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.
+1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.
