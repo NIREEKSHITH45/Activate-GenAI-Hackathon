@@ -67,7 +67,7 @@ To successfully complete this challenge, you must:
  
     ![](../media/validate01.png "Validation")
  
-1. If the validation status displays **Success** for all the validation steps, **congratulations!**. This means that you have completed the challenge and have unlocked the next challenge.
+1. If the validation status displays **Success** for all the validation steps, **congratulations!** This means that you have completed the challenge and have unlocked the next challenge.
  
      ![](../media/validate02.png "Validation")
 
