@@ -4,7 +4,7 @@
 
 ## Introduction:
 
-All organizations rely on information to make decisions, answer questions, and function efficiently. The problem for most organizations is not a lack of information, but the challenge of finding and  extracting the information from the massive set of documents, databases, and other sources in which the information is stored.
+All organizations rely on information to make decisions, answer questions, and function efficiently. The problem for most organizations is not a lack of information but the challenge of finding and  extracting the information from the massive set of documents, databases, and other sources in which the information is stored.
 
 For example, suppose *Margie's Travel* is a travel agency that specializes in organizing trips to cities around the world. Over time, the company has amassed a huge amount of information in documents such as brochures as well as reviews of hotels submitted by customers. This data is a valuable source of insights for travel agents and customers as they plan trips, but the sheer volume of data can make it difficult to find relevant information to answer a specific customer question.
 
@@ -30,7 +30,7 @@ The solution you will create for Margie's Travel requires the following resource
 - An **Azure AI Services** resource that provides AI services for skills that your search solution can use to enrich the data in the data source with AI-generated insights.
 - A **Storage account** with a blob container in which the documents to be searched are stored.
 
-> **Important**: Your Azure AI Search and Azure AI Services resources must be in the same location!
+> **Important**: Your Azure AI Search and Azure AI Services resources must be in the same location.
 
 #### Task 2.1: Create an Azure AI Search resource
 
@@ -178,7 +178,9 @@ Now that you have the documents in place, you can create a search solution by in
 
 12. Change the **Indexer name** to **margies-indexer**.
 13. Leave the **Schedule** set to **Once**.
+
 14. Expand the **Advanced** options and ensure that the **Base-64 encode keys** option is selected (generally, encoding keys make the index more efficient).
+
 15. Select **Submit** to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
     1. Extracts the document metadata fields and content from the data source.
     2. Runs the skillset of cognitive skills to generate additional enriched fields.
@@ -340,7 +342,9 @@ The new skill is named **get-sentiment**, and for each **document** level in a d
 
 ### Review and modify the indexer
 
+
 1. In Visual Studio Code, in the **modify-search** folder, open **indexer.json**. This shows a JSON definition for **margies-indexer**, which maps fields extracted from document content and metadata (in the **fieldMappings** section) and values extracted by skills in the skillset (in the **outputFieldMappings** section) to fields in the index.
+
 3. In the **fieldMappings** list, note the mapping for the **metadata_storage_path** value to the base-64 encoded key field. This was created when you assigned the **metadata_storage_path** as the key and selected the option to encode the key in the Azure portal. Additionally, a new mapping explicitly maps the same value to the **url** field, but without the Base-64 encoding:
 
     ```
@@ -473,7 +477,9 @@ The web app already includes code to process and render the search results.
 
 ### Run the web app
 
+
  1. Return to the integrated terminal for the **margies-travel** folder and enter the following command to run the program:
+
 
     **C#**
     
@@ -500,7 +506,10 @@ The web app already includes code to process and render the search results.
     - **Tower of London** (observe that this term is identified as a *key phrase* in some documents).
     - **skyscraper** (observe that this word doesn't appear in the actual content of any documents but is found in the *image captions* and *image tags* that were generated for images in some documents).
     - **Mojave desert** (observe that this term is identified as a *location* in some documents).
+
+
 10. Close the browser tab containing Margie's Travel website and return to Visual Studio Code. Then, in the Python terminal for the **margies-travel** folder (where the dotnet or flask application is running), enter Ctrl+C to stop the app.
+
 
 ## More information
 

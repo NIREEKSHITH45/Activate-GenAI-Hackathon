@@ -1,4 +1,4 @@
-# Challenge 01: Deploy the Azure OpenAI Service
+# Challenge 01: Deploy Azure OpenAI Service and LLM Models
 ### Estimated Time: 30 minutes
 ## Introduction
 
@@ -22,7 +22,9 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 1. To access the Azure portal, open a private/incognito window in your browser and navigate to the Azure Portal.
 
+
 1. On the **Sign into Microsoft Azure tab**, you will see a login screen. Enter the following email/username, and then click on **Next**.
+
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
@@ -30,9 +32,11 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
+
 1. If you see the pop-up **Stay Signed in?**, click **No**.
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+
 
 1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Maybe Later** to skip the tour.
 
@@ -44,13 +48,17 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
   - text-embedding-ada-002
 
 ## Solution Guide
+
 ### Task 1: Deploy an Azure Open AI Service
+
 
 1. In the Azure Portal, search for **Azure OpenAI** and select it.
 
    ![](../media/azure-openai-1-new.png)
 
+
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**. Enter the details required and deploy the Azure Open AI service.
+
 
    ![](../media/challenge01.jpg)
 
@@ -72,7 +80,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
    ![](../media/create-deployment.png)
 
-5. In the **Deployments** page, click on **+ Create new deployment**.
+5. On the **Deployments** page, click on **+ Create new deployment**.
 
 6. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)**, followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
     - **Select a model**: gpt-35-turbo (1)
@@ -99,7 +107,9 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 ## Success Criteria:
 
 - Successful deployment of the Azure OpenAI Service.
+
 - Deploying Large Language Models (LLM) with the OpenAI Service.
+
 
 ## Additional Resources:
 

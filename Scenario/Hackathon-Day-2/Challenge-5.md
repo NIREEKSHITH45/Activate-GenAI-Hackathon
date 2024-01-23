@@ -39,6 +39,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
       >Note: You can find the documents in C:\LabFiles\Documents.
 
 **Using Doc Intelligence:**
+> **Important**: When deploying services in this challenge, please make sure to use the resource group named **Document-Processing-<inject key="Deployment ID"/>**  !
 
 1) **Pre-requisites setup:**
       - Clone the repository: `https://github.com/CloudLabs-MOC/business-process-automation`.
