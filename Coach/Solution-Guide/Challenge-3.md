@@ -36,7 +36,7 @@ Together, these services create a responsive chat application that combines AI f
 
 ## Task 1: Clone the repository for this Challenge
 
-If you have not already cloned **Activate GenAI** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
+If you have not already cloned the **Activate GenAI** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
 
 1. Start Visual Studio Code.
 2. Open the palette (SHIFT+CTRL+P) and run a **Git: Clone** command to clone the `https://github.com/CloudLabs-MOC/activate-genai` repository to a local folder.
@@ -46,7 +46,7 @@ If you have not already cloned **Activate GenAI** code repository to the environ
 
 **Deploying the infrastructure**
 
-1. Verify terraform is installed in your machine by running the following command `terraform --version`
+1. Verify Terraform is installed on your machine by running the following command: `terraform --version`
 
 2. Login to Azure:
 
@@ -87,7 +87,7 @@ export AZURE_SEARCH_INDEX="gptkbindex"
 ./scripts/prepdocs.ps1
 ```
 
-  > **Note**: The above script will create an index in the AI search service and analyze and upload the PDF data to the storage account and integrate it with Azure OpenAI with the help of Form Recogniser and Azure AI search.
+  > **Note**: The above script will create an index in the AI search service, analyze and upload the PDF data to the storage account, and integrate it with Azure OpenAI with the help of Form Recogniser and Azure AI search.
 
 ## Additional Resources:
 
