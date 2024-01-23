@@ -76,7 +76,7 @@ Together, these services create a responsive chat application that combines AI f
  
     ![](../media/validate01.png "Validation")
  
-1. If the validation status displays **Success** for all the validation steps, **congratulations!**. This means that you have successfully completed the challenge and have unlocked the next challenge.
+1. If the validation status displays **Success** for all the validation steps, **congratulations!** This means that you have successfully completed the challenge and have unlocked the next challenge.
  
      ![](../media/validate02.png "Validation")
 
