@@ -14,7 +14,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>** !
 
-1. **Clone the repository:**
+1. **Clone the Repository:**
    - Clone the repository within Visual Studio Code: `https://github.com/MicrosoftLearning/AI-102-AIEngineer`.
 
 2. **Setup Azure Resources:**
@@ -36,7 +36,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
    - Tweak queries to include counts and specific fields.
    - Define search components.
    - Query the modified index to retrieve refined and targeted information.
-7. **Deploy & test a Search Client Application:**
+7. **Deploy & Test a Search Client Application:**
    - Update application settings and configure the web app.
    - Run the application locally to test the search functionality.
    - Hint: The app is available in two languages; use the one that aligns with your scope.
