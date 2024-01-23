@@ -18,8 +18,8 @@ By participating in this hackathon, you will learn how to:
 - Enhance your problem-solving skills by addressing real-world scenarios with AI-driven solutions.
 - Collaborate with other participants to tackle challenges and share insights.
 
-## Hackathon Format: Challenge Based
-This hackathon adopts a challenge-based format, offering you a unique opportunity to learn while dealing with practical problems. Each challenge includes one or more self-contained tasks, designed to test and enhance your skills in specific aspects of AI app development. You will approach these challenges by:
+## Hackathon Format: Challenge-Based
+This hackathon adopts a challenge-based format, offering you a unique opportunity to learn while dealing with practical problems. Each challenge includes one or more self-contained tasks designed to test and enhance your skills in specific aspects of AI app development. You will approach these challenges by:
 
 - Analyzing the problem statement.
 - Strategizing your approach to find the most effective solution.
@@ -32,12 +32,12 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
    - Begin your journey by deploying the Azure OpenAI Service and integrating a Large Language Model (LLM). This will serve as the foundation for advanced linguistic intelligence in your applications.
      
 2. **Challenge 02: Implement Document Search with Azure AI Search**
-   - Construct an Azure AI Search solution to enable sophisticated document handling. Upload, index, and tailor the search experience using VS Code and Azure. This prepares the groundwork for document-based questioning essential for Retriever-Augmented Generation (RAG) in OpenAI.
+   - Construct an Azure AI Search solution to enable sophisticated document handling. Upload, index, and tailor the search experience using VS Code and Azure. This lays the groundwork for document-based questioning essential for Retriever-Augmented Generation (RAG) in OpenAI.
              
 3. **Challenge 03: Deploy an AI-Powered Chat App**
    - Utilize Terraform to deploy a sample chat application on Azure, automating the provisioning of all necessary resources. This challenge will demonstrate your ability to get an application up and running in the cloud.
           
-4. **Challenge 04: Interact with Chat App**
+4. **Challenge 04: Interact with the Chat App**
    - Explore the deployed web app, engaging with the Chat App through well-constructed inquiries. Display your ability to handle multilingual queries and make use of advanced settings to deepen your understanding of the Azure OpenAI service's capabilities.
                     
 Each challenge comes with its own set of tasks and objectives. Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to your coach.
