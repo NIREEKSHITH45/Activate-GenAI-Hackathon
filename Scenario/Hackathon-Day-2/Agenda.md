@@ -5,7 +5,7 @@
 | Time          | Agenda                                              | Remarks                                  |
 |---------------|-----------------------------------------------------|------------------------------------------|
 | 09:00 - 09:15 | **Welcome note**                                        |                                          |
-| 09:15 - 09:45 | **Hackathon Challenge Use-Case : Active GenAI Challenge Discussion** |    [Overview](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/overview.md)  |
+| 09:15 - 09:45 | **Hackathon Challenge Use-Case: Active GenAI Challenge Discussion** |    [Overview](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/overview.md)  |
 | 09:45 - 10:15 | **Challenge 01: Deploy Azure OpenAI Service and LLM Models - 30 min** | Complete [Challenge 01](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-1.md)        |
 | 10:15 - 10:30 | **Validate Challenge 01 Completion, Q&A** | Discussion, etc.                  |
 | 10:30 - 10:45 | **Break**                                           |                                     |
@@ -28,11 +28,11 @@
 | 09:15 - 10:45 | **Challenge 05: Serverless Document Batch Processing - 90 min** | Complete [Challenge 05](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-5.md)         |
 | 10:45 - 11:00 | **Validate Challenge 05 Completion, Q&A** | Discussion, etc.                         |
 | 11:00 - 11:15 | **Break**                                           |                                          |
-| 11:15 - 12:45 | **Challenge 06: Implement Monitoring and Logging of Azure OpenAI using API Management Service - 90 min** | Complete [Challenge 06](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-6.md)   |
+| 11:15 - 12:45 | **Challenge 06: Implement Monitoring and Logging of Azure OpenAI Using API Management Service - 90 min** | Complete [Challenge 06](https://github.com/CloudLabs-MOC/Active-GenAI-Challenge-lab/blob/main/Scenario/Hackathon-Day-2/Challenge-6.md)   |
 | 12:45 - 01:00 | **Validate Challenge 06 Completion, Q&A** | Discussion, etc.                         |
 | 01:00 - 02:00 | **Lunch Break**                                           |                                          |
-| 02:00 - 04:00 | **Open Time for Additional Work or pending Challenges** | pending challenges |
-| 04:00 - 04:15 | **Challenge Validation/Pending challenges completion**        | Validate any pending challenges |
-| 04:15 - 05:00  | **Closing and Submission & Next Steps/Future Collaboration**                      | Acknowledgment, submission, and closing      |
+| 02:00 - 04:00 | **Open Time for Additional Work or Pending Challenges** | pending challenges |
+| 04:00 - 04:15 | **Challenge Validation/Pending Challenges Completion**        | Validate any pending challenges |
+| 04:15 - 05:00  | **Closing Remarks, Submissions & Next Steps/Future Collaboration**                      | Acknowledgment, submission, and closing      |
 
 
