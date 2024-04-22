@@ -49,6 +49,8 @@ Together, these services create a responsive chat application that combines AI f
    - Use `prepdocs.ps1` from the scripts folder to analyze and upload the data to the storage account.
       > Note: You will need to understand and update the script based on the requirements mentioned in the script.
 
+   <validation step="9b4373a3-2a97-40ca-8c61-f1182e5eb2ce" />
+
 ## Success Criteria:
 
 - Successful deployment of the Chat App.
