@@ -22,23 +22,74 @@
      },
      {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Scenario/Hackathon-Day-2/Challenge-2.md",
-       "Order": 5
+       "Order": 5,
+       "UnlockingRules": [
+         {
+           "UnlockDependency": "Validations",
+           "UnlockCriteria": "Completion Percentage",
+           "UnlockPercentageThreshold": 50,
+           "DependentValidations": [
+             "ccff4a0f-eb81-479e-a774-00cc5a664eeb",
+             "32bbf48f-1030-4e8b-8dfe-a395a6746f1d"
+           ]
+         }
+       ]
      },
      {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Scenario/Hackathon-Day-2/Challenge-3.md",
-       "Order": 6
+       "Order": 6,
+       "UnlockingRules": [
+         {
+           "UnlockDependency": "Validations",
+           "UnlockCriteria": "Completion Percentage",
+           "UnlockPercentageThreshold": 50,
+           "DependentValidations": [
+             "15277a80-8b44-474a-ac19-0831c71d5fbd"
+           ]
+         }
+       ]
      },
      {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Scenario/Hackathon-Day-2/Challenge-4.md",
-       "Order": 7
+       "Order": 7,
+       "UnlockingRules": [
+         {
+           "UnlockDependency": "Validations",
+           "UnlockCriteria": "Completion Percentage",
+           "UnlockPercentageThreshold": 50,
+           "DependentValidations": [
+             "9b4373a3-2a97-40ca-8c61-f1182e5eb2ce"
+           ]
+         }
+       ]
      },
      {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Scenario/Hackathon-Day-2/Challenge-5.md",
-       "Order": 8
+       "Order": 8,
+       "UnlockingRules": [
+         {
+           "UnlockDependency": "Validations",
+           "UnlockCriteria": "Completion Percentage",
+           "UnlockPercentageThreshold": 50,
+           "DependentValidations": [
+             "9b4373a3-2a97-40ca-8c61-f1182e5eb2ce"
+           ]
+         }
+       ]
      },
      {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Scenario/Hackathon-Day-2/Challenge-6.md",
-       "Order": 9
+       "Order": 9,
+       "UnlockingRules": [
+         {
+           "UnlockDependency": "Validations",
+           "UnlockCriteria": "Completion Percentage",
+           "UnlockPercentageThreshold": 50,
+           "DependentValidations": [
+             "e7cc8d8f-1ac3-46be-9f16-d5a492ff6147"
+           ]
+         }
+       ]
      }
     
   ]
