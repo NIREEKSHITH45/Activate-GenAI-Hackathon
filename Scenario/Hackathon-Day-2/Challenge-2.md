@@ -40,6 +40,8 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
    - Update application settings and configure the web app.
    - Run the application locally to test the search functionality.
    - Hint: The app is available in two languages; use the one that aligns with your scope.
+
+   <validation step="15277a80-8b44-474a-ac19-0831c71d5fbd" />
    
 ## Success criteria:
 
