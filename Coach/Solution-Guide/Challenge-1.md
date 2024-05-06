@@ -22,7 +22,6 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 1. To access the Azure portal, open a private/incognito window in your browser and navigate to the Azure Portal.
 
-
 1. On the **Sign into Microsoft Azure tab**, you will see a login screen. Enter the following email/username, and then click on **Next**.
 
 
@@ -44,7 +43,9 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 - [Azure Subscription](https://azure.microsoft.com/en-us/free/)
 - [Azure OpenAI](https://aka.ms/oai/access) access is available with the following models:
+
   - gpt-35-turbo
+
   - text-embedding-ada-002
 
 ## Solution Guide
@@ -57,7 +58,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
    ![](../media/azure-openai-1-new.png)
 
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**. Enter the details required and deploy the Azure Open AI service.
+2. On **Azure AI Services | Azure OpenAI** blade, click on **+ Create**. Enter the details required and deploy the Azure Open AI service.
 
 
    ![](../media/challenge01.jpg)
