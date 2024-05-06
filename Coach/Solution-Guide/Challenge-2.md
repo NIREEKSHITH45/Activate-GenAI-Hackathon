@@ -383,8 +383,8 @@ The new skill is named **get-sentiment**, and for each **document** level in a d
 
 ### Query the modified index
 
-1. At the top of the blade for your Azure AI Search resource, select **Search explorer**.
-2. In Search explorer, in the **Query string** box, submit the following JSON query:
+1. At the top of the blade for your Azure AI Search resource, select **Search Explorer**.
+2. In Search Explorer, in the **Query string** box, submit the following JSON query:
 
     ```json
     {
@@ -394,7 +394,7 @@ The new skill is named **get-sentiment**, and for each **document** level in a d
     }
     ```
 
-    This query retrieves the **url**, **sentiment**, and **keyphrases** for all documents that mention *London* authored by *Reviewer* that has a positive **sentiment** label (in other words, positive reviews that mention London).
+    This query retrieves the **URL**, **sentiment**, and **keyphrases** for all documents that mention *London* authored by *Reviewer* that has a positive **sentiment** label (in other words, positive reviews that mention London).
 
 3. Close the **Search explorer** page to return to the **Overview** page.
 
