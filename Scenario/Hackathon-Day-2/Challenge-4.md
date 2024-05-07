@@ -6,8 +6,6 @@
 
 After successfully deploying the AI-enhanced chat app in the previous challenge, it's time to assess its capabilities. This challenge is centered around interacting with the app to understand its potential for real-world applications at Contoso Ltd. You will explore the efficiency of query responses, multilingual capabilities, and the impact of advanced settings, making a compelling business case for the integration of these technologies at Contoso.
 
-
-
 ## Challenge Objectives
 
 **1. Access Web Application and Query Construction and Response:**
@@ -33,7 +31,7 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
    Does the project manager manage the human resources team?
    ```
 
-- As per our constructed app, we can pass context from previous parts of the chat into the prompt behind the scenes, which enables ChatGPT to answer the question if the project manager manages the human resources team. Click on the citation, and you'll see the part of the plan that covers the related information.
+- As per our constructed app, we can pass context from previous parts of the chat into the prompt behind the scenes, which enables ChatGPT to answer the question of the project manager managing the human resources team. Click on the citation, and you'll see the part of the plan that covers the related information.
 
 
 **2. Multilingual Query Capability:**
@@ -51,15 +49,20 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
    ```
 
 **3. Advanced Settings Impact:** 
+
 - Go to **Developer Settings**, and in the **Exclude category** section, enable the check box for **Use query-contextual summaries instead of whole documents** and **Suggest follow-up questions**. Click on **Close** and observe how the responses to the prompt will change in the chat by giving the below prompt.
 
    ```
    What happens in a performance review?
    ```
+
 4. OpenAI and AI Search Capabilities Exploration:
+  
   - Conduct your own tests using various prompts to assess the range and depth of the app's conversational and search capabilities.
   - Focus on understanding how the app integrates OpenAI's model and AI Search for seamless user interactions.
+    
 ## Success Criteria:
+  
   - Successful interaction with the chat application, exploring a variety of conversational use cases.
   - Comprehensive understanding of the app's capabilities in handling multilingual queries, advanced settings, and its overall potential for Contoso's environment.
      
