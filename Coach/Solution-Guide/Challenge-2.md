@@ -11,6 +11,7 @@ For example, suppose *Margie's Travel* is a travel agency that specializes in or
 To address this challenge, Margie's Travel can use Azure AI Search to implement a solution in which the documents are indexed and enriched by using AI skills to make them easier to search.
 
 ## Solution Guide
+
 ### Task 1: Clone the repository for this course
 
 If you have not already cloned the **AI-102-AIEngineer** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
@@ -60,6 +61,7 @@ If you don't already have one in your subscription, you'll need to provision an 
     - **Region**: *The same location as your Azure AI Search resource*
     - **Name**: *Enter a unique name.*
     - **Pricing tier**: Standard S0
+      
 2. Select the required checkboxes and create the resource.
 
      ![](../media/aiservices.png)
@@ -84,11 +86,12 @@ If you don't already have one in your subscription, you'll need to provision an 
       ![](../media/search-storageaccount-01.png)
 
 2. Wait for deployment to complete, and then go to the deployed resource.
-3. On the **Overview** page, note the **Subscription ID**; this identifies the subscription for which the storage account is provisioned.
+   
+1. On the **Overview** page, note the **Subscription ID**; this identifies the subscription for which the storage account is provisioned.
 
    ![](../media/search-storageaccount-02.png)
 
-4. On the **Access keys** page, note that two keys have been generated for your storage account. Then select **Show keys** to view the keys.
+1. On the **Access keys** page, note that two keys have been generated for your storage account. Then select **Show keys** to view the keys.
 
    ![](../media/search-storageaccount-04.png)
 
@@ -342,15 +345,14 @@ The new skill is named **get-sentiment**, and for each **document** level in a d
 
 ### Review and modify the indexer
 
-
 1. In Visual Studio Code, in the **modify-search** folder, open **indexer.json**. This shows a JSON definition for **margies-indexer**, which maps fields extracted from document content and metadata (in the **fieldMappings** section) and values extracted by skills in the skillset (in the **outputFieldMappings** section) to fields in the index.
 
 3. In the **fieldMappings** list, note the mapping for the **metadata_storage_path** value to the base-64 encoded key field. This was created when you assigned the **metadata_storage_path** as the key and selected the option to encode the key in the Azure portal. Additionally, a new mapping explicitly maps the same value to the **url** field, but without the Base-64 encoding:
 
     ```
     {
-        "sourceFieldName" : "metadata_storage_path",
-        "targetFieldName" : "url"
+        "sourceFieldName": "metadata_storage_path",
+        "targetFieldName": "url"
     }
     
     ```
@@ -414,7 +416,8 @@ Now that you have a useful index, you can use it from a client application. You 
 ### Prepare to use the Azure AI Search SDK
 
 1. In Visual Studio Code, in the **Explorer** pane, browse to the **22-create-a-search-solution** folder and expand the **C-Sharp** or **Python** folder depending on your language preference.
-2. Right-click the **margies-travel** folder and open an integrated terminal. Then install the Azure AI Search SDK package by running the appropriate command for your language preference:
+   
+1. Right-click the **margies-travel** folder and open an integrated terminal. Then install the Azure AI Search SDK package by running the appropriate command for your language preference:
    > **Note**: Please ensure the necessary extensions are already installed in the VS Code.
 
     **C#**
@@ -429,7 +432,7 @@ Now that you have a useful index, you can use it from a client application. You 
     pip install azure-search-documents==11.0.0
     ```
     
-3. View the contents of the **margies-travel** folder, and note that it contains a file for configuration settings:
+4. View the contents of the **margies-travel** folder, and note that it contains a file for configuration settings:
     - **C#**: appsettings.json
     - **Python**: .env
 
@@ -477,9 +480,7 @@ The web app already includes code to process and render the search results.
 
 ### Run the web app
 
-
- 1. Return to the integrated terminal for the **margies-travel** folder and enter the following command to run the program:
-
+1. Return to the integrated terminal for the **margies-travel** folder and enter the following command to run the program:
 
     **C#**
     
@@ -497,14 +498,20 @@ The web app already includes code to process and render the search results.
 3. On the Margie's Travel website, enter **London hotel** into the search box and click **Search**.
 4. Review the search results. They include the file name (with a hyperlink to the file URL), an extract of the file content with the search terms (*London* and *hotel*) emphasized, and other attributes of the file from the index fields.
 5. Observe that the results page includes some user interface elements that enable you to refine the results. These include:
+    
     - A *filter* based on a facet value for the **metadata_author** field. This demonstrates how you can use *facetable* fields to return a list of *facets* - fields with a small set of discrete values that can be displayed as potential filter values in the user interface.
+    
     - The ability to *order* the results based on a specified field and sort direction (ascending or descending). The default order is based on *relevancy*, which is calculated as a **search.score()** value based on a *scoring profile* that evaluates the frequency and importance of search terms in the index fields.
+
 6. Select the **Reviewer** filter and the **Positive to negative** sort option, and then select **Refine Results**.
 7. Observe that the results are filtered to include only reviews and sorted based on the sentiment label.
 8. In the **Search** box, enter a new search for **quiet hotel in New York** and review the results.
 9. Try the following search terms:
+    
     - **Tower of London** (observe that this term is identified as a *key phrase* in some documents).
+    
     - **skyscraper** (observe that this word doesn't appear in the actual content of any documents but is found in the *image captions* and *image tags* that were generated for images in some documents).
+    
     - **Mojave desert** (observe that this term is identified as a *location* in some documents).
 
 
