@@ -24,18 +24,15 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 1. On the **Sign into Microsoft Azure tab**, you will see a login screen. Enter the following email/username, and then click on **Next**.
 
-
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
 1. Now enter the following password and click on **Sign in**.
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-
 1. If you see the pop-up **Stay Signed in?**, click **No**.
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
-
 
 1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Maybe Later** to skip the tour.
 
@@ -57,9 +54,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
    ![](../media/azure-openai-1-new.png)
 
-
 2. On **Azure AI Services | Azure OpenAI** blade, click on **+ Create**. Enter the details required and deploy the Azure Open AI service.
-
 
    ![](../media/challenge01.jpg)
 
@@ -84,6 +79,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 5. On the **Deployments** page, click on **+ Create new deployment**.
 
 6. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)**, followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
+    
     - **Select a model**: gpt-35-turbo (1)
     - **Model version**: *Use the default version* (2)
     - **Deployment name**: text-turbo
@@ -96,6 +92,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 8. In the **Deployments** page again, click on **+ Create new deployment**.
 
 9. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)**, followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
+    
     - **Select a model**: text-embedding-ada-002 (1)
     - **Model version**: *Use the default version* (2)
     - **Deployment name**: text-embedding-ada-002
@@ -111,8 +108,6 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 - Deploying Large Language Models (LLM) with the OpenAI Service.
 
-
 ## Additional Resources:
 
 - Refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for guidance on deploying the service.
-
