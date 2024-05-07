@@ -4,7 +4,7 @@
 
 ## Introduction:
 
-In this challenge, you'll deploy an AI-powered chat application specifically designed for Contoso Electronics. This app, built with React for the frontend and Python for the backend, showcases advanced features like chat and Q&A interfaces, all augmented by AI capabilities. It's an excellent opportunity for you to explore the integration of Azure OpenAI Service with the GPT-3.5 Turbo model and Azure Cognitive Search for efficient data indexing and retrieval.
+In this challenge, you'll deploy an AI-powered chat application specifically designed for Contoso Electronics. This app, built with React for the front end and Python for the back end, showcases advanced features like chat and Q&A interfaces, all augmented by AI capabilities. It's an excellent opportunity for you to explore the integration of Azure OpenAI Service with the GPT-3.5 Turbo model and Azure Cognitive Search for efficient data indexing and retrieval.
 
 This sample app is more than just a chat interface; it demonstrates the Retrieval-Augmented Generation pattern, offering a rich, ChatGPT-like experience over Contoso's own data. The app's features include trustworthiness evaluation of responses with citations, tracking of source content, data preparation, prompt construction, and orchestrating interaction between the ChatGPT model and Cognitive Search. You'll also find adjustable settings in the UX for experimentation and optional performance tracing and monitoring with Application Insights.
 
@@ -71,23 +71,3 @@ Together, these services create a responsive chat application that combines AI f
 
 -  Refer to the  [Azure Search OpenAI demo GitHub repository](https://github.com/cmendible/azure-search-openai-demo) for detailed information on the architecture.
 -  [Azure copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
-
-## Challenge Validation
- 
-1. After completing the challenge, you need to visit the **Lab Validation (1)** tab and click on the **VALIDATE (2)** button under Actions to perform the validation steps. Verify that you have met the success criteria of the challenge. 
- 
-    ![](../media/validate01.png "Validation")
- 
-1. If the validation status displays **Success** for all the validation steps, **congratulations!** This means that you have successfully completed the challenge and have unlocked the next challenge.
- 
-     ![](../media/validate02.png "Validation")
-
-1. If the validation status displays **Fail**, **don't worry!** This could mean that you did not perform the challenge correctly.
- 
-     ![](../media/validate03.png "Validation")
- 
-1. Hover your mouse over the `i` **(1)** icon to see the error message and determine the root cause of the failure. Based on the error message, revisit the challenge as necessary, and redo the validation by clicking on the **VALIDATE (3)** button again.
-
-   ![](../media/validate04.png "Validation")
- 
-1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.
