@@ -47,7 +47,7 @@ Together, these services create a responsive chat application that combines AI f
 
 3. **Azure Search Index Deployment and Uploading the Sample Data:**
    - Use `prepdocs.ps1` from the scripts folder to analyze and upload the data to the storage account.
-      > Note: You will need to understand and update the script based on the requirements mentioned in the script.
+      > Note: You will need to understand and update the script based on the requirements mentioned in the script also the script is using some ENV Variables that you will need to define to successfully run the script. 
 
 ## Success Criteria:
 
