@@ -105,7 +105,7 @@ export AZURE_SEARCH_INDEX="gptkbindex"
 ./scripts/prepdocs.ps1
 ```
 
-  > **Note**: The above script will create an index in the AI search service, analyze and upload the PDF data to the storage account, and integrate it with Azure OpenAI with the help of Form Recogniser and Azure AI search.
+  > **Note**: The above script will create an index in the AI search service, analyze and upload the PDF data to the storage account, and integrate it with Azure OpenAI and connect it to the Azure App service with the help of Form Recogniser and Azure AI search.
 
 ## Additional Resources:
 
