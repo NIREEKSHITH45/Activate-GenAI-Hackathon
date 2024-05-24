@@ -193,101 +193,102 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
    ![](../media/4-7.png)
 
-6. Select **Named Values (1)** under the **API** section in the left navigation pane of the API Management Service, and then click on **+ Add (2)**.
+6. In the API Management service, click on **APIs** **(1)** under APIs from the left menu and select **HTTP** **(2)** under Define a new API to create an HTTP API.
 
-   ![](../media/4-8.png)
+   ![](../media/lab3-t1-s2.png)
 
-7. Within the **Add named values** pane,
-    - **Name:** AOAI-key **(1)**
-    - **Display Name:** AOAI-key **(2)**
-    - **Type:** Select **Secret (3)**
-    - **Value:** Enter the Azure OpenAI key that you had earlier copied onto a notepad **(4)**.
-    - Click on **Save (4)**.
+7. Enter the following values in the Create an HTTP API pane:
+   
+   | **Parameter**           | **Values**           | 
+   | ----------------------- | -------------------- | 
+   | API Type **(1)**        | **Basic**            | 
+   | Display name **(2)**    | **miyagi-api**       |
+   | Name **(3)**            | **miyagi-api**       |
+   | Web service URL **(4)** | Enter the Endpoint of Azure OpenAI Endpoint |
+   | API URL suffix **(5)**  | **openai** |
+   | Click on  **(6)**       | **Create** |
 
-   ![](../media/named-values-apim-1.png)
+   ![](../media/apim1.png)
 
-8. Select **Backends (1)** under the **API** section in the left navigation pane of the API Management Service, and then click on **+ Add (2)**.
+8. In the API Management service, click on **APIs** **(1)**, click on the **three dots** **(2)** next to miyagi-api, select **Import** **(3)**, and click on **OpenAPI** **(4)**.
 
-   ![](../media/4-9.png)
+   ![](../media/api-openi-import.png)
 
-9. Within the **Backend** configuration pane, enter the following details:
-    -  **Name:** AOAI-endpoint **(1)**
-    -  **Type:** Ensure to select **Custom URL (2)**
-    -  **Runtime URL:** Enter the Azure OpenAI endpoint that you had earlier copied onto a notepad **(3)**.
-
-          > **Note**: Please ensure to add '/openai' towards the end of the URL.
-       
-    -  Under the **Headers** tab,
-        - **Name:** api-key **(4)**
-        - **Value:** Click on **Select named value (5)**.
-            - Within the **Specify value** pane that shows up, enter the following details:
-                - **Input type:** Select **Named value (6)**.
-                - **Name:** Select the **AOAI-key (7)** named value that you created earlier in this task. Notice that the **Value** field is automatically                        populated.
-                - Click on **OK (8)**.
-    - Click on **Create (9)**.
-
-      ![](../media/backends-apim-1.png)
-
-      ![](../media/backends-apim-2.png)
-
-10. To add a new API to the API Management service, follow the steps below:
-    -  Select **APIs (1)** under the **APIs** section within the left navigation pane of the APIM blade.
-    -  Select the **Import (2)** option from one of the existing APIs.
-    -  Within the **Import API** pane, select **OpenAPI (3)**.
-
-      ![](../media/4-10.png)
-
-      ![](../media/import-api-1.png)
-
-11. Within the **Import from OpenAPI specification** pop-up window, enter and configure the following details:
+9. Within the **Import from OpenAPI specification** pop-up window, enter and configure the following details:
     - **OpenAPI specification:** `https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/cognitiveservices/data-plane/AzureOpenAI/inference/stable/2023-05-15/inference.json` **(1)**
     - **Import method:** Select **Update (2)**
     - Click on **Import (3)** to update the existing API with the above OpenAPI specification.
 
-    ![](../media/import-api-2.png)
+      ![](../media/import-api-2.png)
 
->**Note:**  The OpenAPI specification is a JSON file that contains the API specifications of Azure OpenAI. You can have a detailed look at the specifications by accessing the above-provided link for a deeper understanding and clarity.
+         > **Note:**  The OpenAPI specification is a JSON file that contains the API specifications of Azure OpenAI. You can have a detailed look at the specifications by accessing the above-provided link for a deeper understanding and clarity.
 
-12. Notice that a new API named **Azure OpenAI Service API** has been added under the **All APIs** section.
+10. Click on the newly added API and observe the presence of multiple POST operations based on the OpenAPI specification that was provided earlier.
 
-13. Click on the newly added API and observe the presence of multiple POST operations based on the OpenAPI specification that was provided earlier.
+    ![](../media/post-operations.png)
 
-       ![](../media/post-operations.png)
+11. In the **Azure OpenAI Service API** API navigate to the **Settings** **(1)** tab and update the subscription key **Header Name** to **api-key** **(2)** and click on **Save** **(3)**.
 
-14. To create a new policy with specific parameters, follow the below instructions:
+    ![](../media/azure-open-api-setting.png)
+
+12. In the API Management service, click on **Products** **(1)** under APIs from the left menu and click on **+ Add** **(2)**.
+
+    ![](../media/api-product1.png) 
+
+13. In the **Add product** display name as **OpenAi** **(1)**, description as **OpenAI** **(2)**. Under the APIs menu click the **plus sign** **(3)** select the **Azure OpenAI Service API** **(4)** hit Enter and click on **Create** **(5)**.
+
+     ![](../media/api-product2.png)
+
+14. In the API Management service, click on **subscriptions** **(1)** under APIs from the left menu and click on **+ Add subscription** **(2)**.
+
+    ![](../media/api-product3.png)
+
+15. In the **Add subscription**, enter the Name as **aoai-test** **(1)**, enter Display name as **AOAI Test** **(2)**, and click on **Create** **(3)**.
+
+    ![](../media/api-product4.png)
+
+16. To create a new policy with specific parameters, follow the below instructions:
+    
     - Select **All Operations (1)**.
     - Within the Inbound processing tile, click on the ellipses **(2)** adjacent to the **base** policy.
     - Click on **Code editor (3)**.
    
       ![](../media/allop.png)
 
-15. Within the code editor, create a new inbound policy by adding the following code at line 16:
+17. In the code editor copy the below policy to overwrite the **inbound** **(1)** tags only, replace **&lt;&lt;Azure_OpenAI_Endpoint&gt;&gt;** **(2)** of API manager which you copen in Task 1 Step 4 and click on **Save** **(3)**.
 
-    ```html
-    <set-backend-service backend-id="AOAI-endpoint" />
-    ```
+      ```
+      <inbound>
+         <base />
+         <set-header name="api-key" exists-action="delete" />
+         <authentication-managed-identity resource="https://cognitiveservices.azure.com" output-token-variable-name="msi-access-token" ignore-error="false" />
+         <set-header name="Authorization" exists-action="override">
+            <value>@("Bearer " + (string)context.Variables["msi-access-token"])</value>
+         </set-header>
+         <set-backend-service base-url="https://<<Azure_OpenAI_Endpoint>>/openai" />
+      </inbound>
+      ```
 
-    The final policy code should now be similar to the below screenshot:
+      ![](../media/api-inbound.png)
 
-       ![](../media/op2.png)
+      > **Note**: Please ensure to paste the **OpenAIEndpoint** values and eliminate any duplication of **https://**.
     
-   >**Note:** Here the value **AOAI-endpoint** refers to the newly created backend, pointing to the runtime URL—the Azure OpenAI endpoint.
-
-16. Click on **Save**. Notice that a new policy named **set-backend-service** has been added within the inbound processing tile.
+18. Click on **Save**. Notice that a new policy named **set-backend-service** has been added within the inbound processing tile.
     
-17. Navigate to **Diagnostic settings** in the left pane of the API management service.
+19. Navigate to **Diagnostic settings** in the left pane of the API management service.
 
-    ![](../media/diag1.png)
+    ![](../media/diag3.png)
 
-18. - Keep the category groups checked (1). <br>
-    - Keep the **All metrics** checked(2). <br>
-    - Keep the **Destination details** checked(3). <br>
-    - Make sure the log analytics workspace is selected(4). <br>
-    - Click on **Save (5)**.
+    - Provide a **Diagnostic setting name** (1)
+    - Keep the category groups checked (2). <br>
+    - Keep the **All metrics** checked(3). <br>
+    - Keep the **Destination details** checked(4). <br>
+    - Make sure the **log analytics workspace** is selected (5). <br>
+    - Click on **Save (6)**.
 
       ![](../media/diag2.png)
     
-19. Now that the API has been successfully added, it requires configuration to call the OpenAI API through the API Management Service, which can be done by following the below steps:
+20. Now that the API has been successfully added, it requires configuration to call the OpenAI API through the API Management Service, which can be done by following the below steps:
 
     - Select the newly added API **(1)**.
     - Click on the **Settings (2)** tab.
@@ -299,12 +300,6 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
       
          ![](../media/diag-logs-configs-1.png)
       
-      >**Note:** Here the value **AOAI-endpoint** refers to the newly created backend, pointing to the runtime URL—the Azure OpenAI endpoint.
-
-20. Also, be sure to keep the **Subscription required** unchecked.
-
-      ![](../media/uncheck.png)   
-
 ### Task 3.2: Test the API to create completions for chat message
 
 1. To run a POST operation to test the functionality of the added API:
@@ -321,8 +316,8 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
         ```
     - Click on **Send (7)**.
 
-    ![](../media/test-api-1.png)
-    ![](../media/test-api-2.png)
+      ![](../media/test-api-1.png)
+      ![](../media/test-api-2.png)
 
 2. Notice the **HTTP response** that is generated with the reply under the **message** tab:
 
