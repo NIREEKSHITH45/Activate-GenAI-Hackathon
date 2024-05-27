@@ -105,7 +105,7 @@ Once you've added the code sample to your application, choose the green Start bu
    
 1. Go to the Resource group, search, and select the **Azure AI Services multi-service account** resource that you deployed earlier.
 
-  ![](../media/c06-02.png)
+   ![](../media/c06-02.png)
 
 2. Click on the Document Intelligence tab and select **Go to studio**.
 
@@ -227,7 +227,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
 7. Verify that all the resources are deployed without any issues.
    
- ![](../media/d005.png)
+   ![](../media/d005.png)
    
 **Build a new pipeline with the custom model module in BPA**
 
