@@ -10,9 +10,6 @@ This challenge unfolds in three main stages: language translation, serverless do
 
 You will utilize the Form Recognizer Service and the Business Process Automation (BPA) Accelerator to build pipelines across various Azure services, creating a seamless document processing solution. This challenge is a step towards realizing an AI solution that can adapt and grow with Contoso's business needs.
 
-
-
-
 # Solution Guide
 
 ### Task 1 - Translate the documents using Translate
@@ -162,7 +159,7 @@ In this step, you will upload 6 training documents to train the model.
 
      ![](../media/bpa2-1.png)
 
-2.  On the file explorer, enter the following `C:\LabFiles\Data\Custom Model Sample` **(1)** path, hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and hit **Open** **(3)**.
+2.  On the file explorer, enter the following `C:\LabFiles\Documents\Custom Model Sample` **(1)** path, hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and hit **Open** **(3)**.
 
      ![](../media/bpa2-2.png)
 
