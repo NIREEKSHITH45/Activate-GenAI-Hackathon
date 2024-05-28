@@ -67,19 +67,19 @@ terraform apply
 1. Run the following commands in the same terminal to deploy the Azure Search Index and upload the sample documents:
 
 ```bash
-$echo:AZURE_RESOURCE_GROUP="" 
-$echo:AZURE_SUBSCRIPTION_ID="<subscription id>"
-$echo:AZURE_TENANT_ID="<azure tenant id>"
-$echo:AZURE_STORAGE_ACCOUNT="<storage account name>"
-$echo:AZURE_STORAGE_CONTAINER="content"
-$echo:AZURE_SEARCH_SERVICE="<search service name>"
-$echo:OPENAI_HOST="azure"
-$echo:AZURE_FORMRECOGNIZER_SERVICE="<your form recognizer name>"
-$echo:AZURE_OPENAI_SERVICE="<openai service name>"
-$echo:OPENAI_API_KEY=""
-$echo:AZURE_OPENAI_EMB_DEPLOYMENT="text-embedding-ada-002"
-$echo:AZURE_OPENAI_EMB_MODEL_NAME="text-embedding-ada-002"
-$echo:AZURE_SEARCH_INDEX="gptkbindex"
+$env:AZURE_RESOURCE_GROUP="" 
+$env:AZURE_SUBSCRIPTION_ID="<subscription id>"
+$env:AZURE_TENANT_ID="<azure tenant id>"
+$env:AZURE_STORAGE_ACCOUNT="<storage account name>"
+$env:AZURE_STORAGE_CONTAINER="content"
+$env:AZURE_SEARCH_SERVICE="<search service name>"
+$env:OPENAI_HOST="azure"
+$env:AZURE_FORMRECOGNIZER_SERVICE="<your form recognizer name>"
+$env:AZURE_OPENAI_SERVICE="<openai service name>"
+$env:OPENAI_API_KEY=""
+$env:AZURE_OPENAI_EMB_DEPLOYMENT="text-embedding-ada-002"
+$env:AZURE_OPENAI_EMB_MODEL_NAME="text-embedding-ada-002"
+$env:AZURE_SEARCH_INDEX="gptkbindex"
 ```
 
 ```pwsh
