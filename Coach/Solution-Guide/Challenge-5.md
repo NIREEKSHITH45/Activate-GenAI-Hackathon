@@ -218,12 +218,12 @@ You must initiate the creation of a "Cognitive Services multi-service account" f
 Once accepted, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc.) under the same Azure subscription.
 
 1. [Get a Workflow Level Token (Classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-2. Fork the repository to a git account for which you are the Admin. `https://github.com/Azure/business-process-automation`
+2. Fork the repository to a git account for which you are the Admin. `https://github.com/CloudLabs-MOC/business-process-automation`
 3. Click on the "Deploy to Azure" button that corresponds to your environment.
 4. Only the Resource Group, Repo Token (from #2), and Forked Git Repo Url are needed.  The remaining parameters are filled in for you.
 
 ### With OpenAI
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
 
 7. Verify that all the resources are deployed without any issues.
    
