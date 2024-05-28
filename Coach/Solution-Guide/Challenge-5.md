@@ -310,7 +310,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
      ![](../media/bpa4-5.png)
   
-6. On the **Connect to your data** page, enter the **workshop** **(1)** as the **Blob folder** and click on **Next : Add cognitive skills (Optional) (2)**.
+6. On the **Connect to your data** page, click on **Next : Add cognitive skills (Optional)**.
 
    ![](../media/bpa4-6.png)
 
@@ -320,7 +320,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
       ![](../media/bpa4-8.png)
 
-9. Expand the **aggregatedResults** **(1)** > **customFormRec** **(2)** > **documents** **(3)** > **fields** **(4)**. Under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString, & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
+9. Expand the **analyzeResults** **(1)** > **documents** **(2)** > **fields** **(3)**. Under it, expand **Organization_sample (4)**. Make the three fields Facetable **(type, valueString, & content)** **(5)** and click on **Next: Create an indexer** **(6)**.
 
    ![](../media/bpa4-9.png)
 
