@@ -255,7 +255,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
    
       ![](../media/allop.png)
 
-17. In the code editor copy the below policy to overwrite the **inbound** **(1)** tags only, replace **&lt;&lt;Azure_OpenAI_Endpoint&gt;&gt;** **(2)** of API manager which you copen in Task 1 Step 4 and click on **Save** **(3)**.
+17. In the code editor copy the below policy to overwrite the **inbound** **(1)** tags only, replace **&lt;&lt;Azure_OpenAI_Endpoint&gt;&gt;** **(2)** of API manager which you copy in Task 1 Step 4 and click on **Save** **(3)**.
 
       ```
       <inbound>
@@ -379,13 +379,14 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
    ![](../media/apim-result-2.png)
 
 6. To view the logged prompts, <br>
-       - Under the **Results** tab, click on the arrow adjacent to the result that was generated using the above query to log prompts.<br>
-       - Scroll down and observe the Key-Value pairs of **RequestBody** and **ResponseBody**.
+
+- Under the **Results** tab, click on the arrow adjacent to the result that was generated using the above query to log prompts.<br>
+- Scroll down and observe the Key-Value pairs of **RequestBody** and **ResponseBody**.
 
    ![](../media/apim-result-3.png)
    
    ![](../media/apim-result-4.png)
 
->**Note:** If you get the following error, please proceed to the next lab and ensure to come back and check if the logs have come up.
+    >**Note:** If you get the following error, It will take some time to reflect.
 
-![](../media/image.png)
+  ![](../media/image.png)
