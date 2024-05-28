@@ -54,6 +54,8 @@ If you have not already cloned the **Activate GenAI** code repository to the env
 az login 
 ```
 
+  >**Note**: Use the command `az login --username <your-username> --password <your-password>` if above command is not work.
+
 3. Run the following commands to deploy the infrastructure:
 
 ```bash
