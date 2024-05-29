@@ -232,7 +232,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
 After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
 
-1. Navigate back to the Resource groups and select the resource group**<inject key="Resource Group Name"/>**.
+1. Navigate back to the Resource groups and select the resource group<inject key="Resource Group Name"/>.
 
 2. Go to the Resource group, search, and select the **Static Web App** resource type with a name similar to **webappbpa{suffix}**.
 
