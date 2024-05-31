@@ -171,13 +171,25 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
 
 Creating a diagnostic setting and linking Azure OpenAI to a log analytics workspace does help in capturing native logs; however, the Log Analytics workspace is incapable of logging the user request and OpenAI model response prompts. In such scenarios, the Azure API Management Service comes in handy.
 
-1. In the **Azure portal**, search for **OpenAI** and select it.
+1. Within the global search bar, search for and select the **API Management Services**, and create one new APIM service by giving the required values.
+
+    ![](../media/apim-resource.png)
+
+2. Select the deployed **APIM service.**
+
+    ![](../media/4-7.png)
+
+3. Navigate to the **Managed identities**, change the status to **On** and click on **Save** button.
+
+    ![](../media/apmi.png)
+
+4. In the **Azure portal**, search for **OpenAI** and select it.
 
    ![](../media/azure-openai-1-new.png)
 
-2. Select the **OpenAI Service** deployed in the previous challenge.
+5. Select the **OpenAI Service** deployed in the previous challenge.
 
-3. To capture the values of Azure OpenAI's key and endpoint, execute the following steps:
+6. To capture the values of Azure OpenAI's key and endpoint, execute the following steps:
     - Select **Keys and Endpoints (1)** under the **Resource Management** section from the left navigation pane.
     - Click on **Show Keys (2)**.
     - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
@@ -185,31 +197,19 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
          ![](../media/k&e.png "Create Azure OpenAI resource")
 
-4. In the **OpenAI**, select **Access control (IAM)** **(1)**, click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
+7. In the **OpenAI**, select **Access control (IAM)** **(1)**, click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
 
    ![](../media/apinew2.png)   
 
-5. In **Add role assignment** tab in the search bar search and select **Cognitive Services User** and click on **Next**.
+8. In **Add role assignment** tab in the search bar search and select **Cognitive Services User** and click on **Next**.
 
    ![](../media/apinew3.png)
 
-6. In the **Members** tab, select **Managed identity** **(1)**, click on **+ Select Members** **(2)** in the select managed identity pop-up under Managed identity the drop-down select **API Management service** **(3)**, select the **apim** **(4)**, then click-on **Select** **(5)** and click on **Next** **(6)**.
+9. In the **Members** tab, select **Managed identity** **(1)**, click on **+ Select Members** **(2)** in the select managed identity pop-up under Managed identity the drop-down select **API Management service** **(3)**, select the **apim** **(4)**, then click-on **Select** **(5)** and click on **Next** **(6)**.
 
    ![](../media/apim-role.png)
 
-7. In the **Review + assign** tab click on **Review + assign**.
-
-8. Within the global search bar, search for and select the **API Management Services**, and create one new APIM service by giving the required values.
-
-    ![](../media/apim-resource.png)
-
-9. Select the deployed **APIM service.**
-
-    ![](../media/4-7.png)
-
-10. Navigate to the **Managed identities**, change the status to **On** and click on **Save** button.
-
-    ![](../media/apmi.png)
+10. In the **Review + assign** tab click on **Review + assign**.
 
 11. In the API Management service, click on **APIs** **(1)** under APIs from the left menu and select **HTTP** **(2)** under Define a new API to create an HTTP API.
 
@@ -217,16 +217,16 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
 12. Enter the following values in the Create an HTTP API pane:
    
-   | **Parameter**           | **Values**           | 
-   | ----------------------- | -------------------- | 
-   | API Type **(1)**        | **Basic**            | 
-   | Display name **(2)**    | **miyagi-api**       |
-   | Name **(3)**            | **miyagi-api**       |
-   | Web service URL **(4)** | Enter the Endpoint of Azure OpenAI Endpoint |
-   | API URL suffix **(5)**  | **openai** |
-   | Click on  **(6)**       | **Create** |
+      | **Parameter**           | **Values**           | 
+      | ----------------------- | -------------------- | 
+      | API Type **(1)**        | **Basic**            | 
+      | Display name **(2)**    | **miyagi-api**       |
+      | Name **(3)**            | **miyagi-api**       |
+      | Web service URL **(4)** | Enter the Endpoint of Azure OpenAI Endpoint |
+      | API URL suffix **(5)**  | **openai** |
+      | Click on  **(6)**       | **Create** |
 
-   ![](../media/apim1.png)
+    ![](../media/apim1.png)
 
 13. In the API Management service, click on **APIs** **(1)**, click on the **three dots** **(2)** next to miyagi-api, select **Import** **(3)**, and click on **OpenAPI** **(4)**.
 
