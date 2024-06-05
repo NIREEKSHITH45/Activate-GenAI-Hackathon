@@ -95,7 +95,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
     
     - **Select a model**: text-embedding-ada-002 (1)
     - **Model version**: *Use the default version* (2)
-    - **Deployment name**: text-embedding-ada-002
+    - **Deployment name**: text-ada-002
     - **Tokens per Minute Rate Limit (thousands)**: 40K
   
          ![](../media/text-ada.png)
