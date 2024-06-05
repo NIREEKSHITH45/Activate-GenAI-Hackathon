@@ -142,6 +142,9 @@ Now that you have the documents in place, you can create a search solution by in
    ![](../media/importdata.png)
 
 4. In the **Attach Azure AI Services** section, select your Azure AI Services resource.
+
+    ![](../media/2.png)
+
 5. In the **Add enrichments** section:
     - Change the **Skillset name** to **margies-skillset**.
     - Select the option **Enable OCR and merge all text into merged_content field**.
