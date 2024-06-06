@@ -486,13 +486,13 @@ The web app already includes code to process and render the search results.
 1. Return to the integrated terminal for the **margies-travel** folder and enter the following command to run the program:
 
     **C#**
-    
+        
     ```
     dotnet run
     ```
-    
+        
     **Python**
-    
+        
     ```
     flask run
     ```
