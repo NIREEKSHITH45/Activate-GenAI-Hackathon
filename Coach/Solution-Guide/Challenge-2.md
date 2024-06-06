@@ -377,7 +377,7 @@ The new skill is named **get-sentiment**, and for each **document** level in a d
 2. In the terminal pane for the **modify-search** folder, enter the following command to run the **modify-search.cmd** script, which submits the JSON definitions to the REST interface and initiates the indexing.
 
     ```
-    modify-search
+    .\modify-search
     ```
 
 3. When the script has finished, return to the **Overview** page for your Azure AI Search resource in the Azure portal and view the **Indexers** page. Then periodically select **Refresh** to track the progress of the indexing operation. It may take a minute or so to complete.
