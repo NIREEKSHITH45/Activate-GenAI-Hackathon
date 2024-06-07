@@ -143,6 +143,9 @@ Now that you have the documents in place, you can create a search solution by in
    ![](../media/importdata.png)
 
 4. In the **Attach Azure AI Services** section, select your Azure AI Services resource.
+
+    ![](../media/2.png)
+   
 5. In the **Add enrichments** section:
     - Change the **Skillset name** to **margies-skillset**.
     - Select the option **Enable OCR and merge all text into merged_content field**.
@@ -158,13 +161,13 @@ Now that you have the documents in place, you can create a search solution by in
         | Generate tags from images | | imageTags |
         | Generate captions from images | | imageCaption |
 
-6. Double-check your selections (it can be difficult to change them later). Then proceed to the next step (*Customize target index*).
+7. Double-check your selections (it can be difficult to change them later). Then proceed to the next step (*Customize target index*).
 
    ![](../media/importdata-01.png)
   
-7. Change the **Index name** to **margies-index**.
-8. Ensure that the **Key** is set to **metadata_storage_path** and leave the **Suggester name** blank and **Search mode** at its default.
-9. Make the following changes to the index fields, leaving all other fields with their default settings (**IMPORTANT**: you may need to scroll to the right to see the entire table):
+8. Change the **Index name** to **margies-index**.
+9. Ensure that the **Key** is set to **metadata_storage_path** and leave the **Suggester name** blank and **Search mode** at its default.
+10. Make the following changes to the index fields, leaving all other fields with their default settings (**IMPORTANT**: you may need to scroll to the right to see the entire table):
 
     | Field name | Retrievable | Filterable | Sortable | Facetable | Searchable |
     | ---------- | ----------- | ---------- | -------- | --------- | ---------- |
