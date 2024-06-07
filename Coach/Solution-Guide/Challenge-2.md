@@ -480,22 +480,21 @@ The web app already includes code to process and render the search results.
 
 ### Run the web app
 
-
  1. Return to the integrated terminal for the **margies-travel** folder and enter the following command to run the program:
     
-     **C#**
+    **C#**
     
-     ```
-      dotnet run
-      ```
-      >**Note:** If the command fails, click on the provided link in the error message to download the latest version of the Microsoft ASP.NET Core Shared Framework. After that, download and install .NET Core, and then run the command again.
+    ```
+    dotnet run
+    ```
+    > **Note:** If the command fails, click on the provided link in the error message to download the latest version of the Microsoft ASP.NET Core Shared Framework. After that, download and install .NET Core, and then run the command again.
         
     **Python**
      
-     ```
-      flask run
-     ```
-      >**Note:** If the command fails, **run pip Install python-dotenv** command and then run the command again.
+    ```
+    flask run
+    ```
+    > **Note:** If the command fails, **run pip Install python-dotenv** command and then run the command again.
 
 3. In the message that is displayed when the app starts successfully, follow the link to the running web application (*http://localhost:5000/* or *http://127.0.0.1:5000/*) to open the Margies Travel site in a web browser.
 4. On the Margie's Travel website, enter **London hotel** into the search box and click **Search**.
