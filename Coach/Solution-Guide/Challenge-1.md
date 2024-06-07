@@ -97,7 +97,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 9. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)**, followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
     - **Select a model**: text-embedding-ada-002 (1)
     - **Model version**: *Use the default version* (2)
-    - **Deployment name**: text-embedding-ada-002
+    - **Deployment name**: text-ada-002
     - **Tokens per Minute Rate Limit (thousands)**: 20K
   
          ![](../media/text-ada.png)
