@@ -230,7 +230,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
 7. Verify that all the resources are deployed without any issues.
    
- ![](../media/d005.png)
+   ![](../media/d005.png)
    
 **Build a new pipeline with the custom model module in BPA**
 
