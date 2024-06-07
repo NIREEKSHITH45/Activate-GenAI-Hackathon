@@ -426,7 +426,6 @@ Now that you have a useful index, you can use it from a client application. You 
     ```
     dotnet add package Azure.Search.Documents --version 11.1.1
     ```
-    
     **Python**
     
     ```
@@ -491,7 +490,7 @@ The web app already includes code to process and render the search results.
         ```
        >**Note:** If the command fails, click on the provided link in the error message to download the latest version of the Microsoft ASP.NET Core Shared Framework. After that, download and install .NET Core, and then run the command again.
         
-        **Python**
+       **Python**
         
         ```
         flask run
