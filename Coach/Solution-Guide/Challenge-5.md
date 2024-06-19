@@ -14,24 +14,34 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 ### Task 1 - Translate the documents using Translate
 
-#### Task 1.1 - Create your Azure AI Translator and retrieve the key and document translation endpoint
+1. Ensure your subscription has **Microsoft.DocumentDB enabled**  
+To confirm/enable:  
+      - Navigate to your subscription within portal.azure.com.  
+      - Select Resource Providers at the bottom of the left navigation pane. 
+      - Within the Filter by name menu, search for Microsoft.DocumentDB  
+      - Once Microsoft.DocumentDB is found, check if the status is marked as "Registered". If marked as "NotRegistered", select "Register."  
+      **Note**: *This process may take several seconds or minutes; be sure to refresh the entire browser periodically.*
+        
+1. Ensure that you have **accepted the terms and conditions for Responsible AI**:  
+You must initiate the creation of a "Cognitive Services multi-service account" from the Azure portal to review and acknowledge the terms and conditions. You can do so here: [Quickstart: Create a Cognitive Services resource using the Azure portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows).  
+Once accepted, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc.) under the same Azure subscription.
 
-1. Navigate to Azure AI Services, select Translator from the left-side menu, and click on the **Create** button.
-
-    ![](../media/ch6-1.png)
-
-1. Enter the required details and select the `S1` pricing tier.
-
-1. Once the Translator resource is created, please get the resource keys by following the next step.
+1. [Get a Workflow Level Token (Classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
    
-1. On the left rail, under Resource Management, select Keys and Endpoint.
-
-    ![](../media/cha6-2.png)
+1. Fork the repository to a git account for which you are the Admin. `https://github.com/CloudLabs-MOC/business-process-automation`
    
-1. Copy and paste your key and document translation endpoint in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
-
-1. You will be using your key and document translation endpoint in the code samples to authenticate your request to the Document Translation Service.
+1. Click on the "Deploy to Azure" button that corresponds to your environment.
    
+1. Only the Resource Group, Repo Token (from #2), and Forked Git Repo Url are needed.  The remaining parameters are filled in for you.
+
+### With OpenAI
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
+
+1. Verify that all the resources are deployed without any issues.
+   
+   ![](../media/d005.png)
+
+
    
 #### Task 1.2 - Create Azure Blob Storage containers
 
@@ -83,6 +93,14 @@ For this project, you need a source document uploaded to your source container. 
 
 #### Task 1.4 -Translate all documents into a storage container and run your application
 
+1. Go to the Translator resource that is created, please get the resource keys by following the next step.
+   
+1. On the left rail, under Resource Management, select Keys and Endpoint.
+
+    ![](../media/cha6-2.png)
+   
+1. Copy and paste your key and document translation endpoint in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
+
 1. Open the Program.cs file.
 
 1. Delete the pre-existing code, including the line Console.WriteLine("Hello World!").
@@ -96,36 +114,27 @@ For this project, you need a source document uploaded to your source container. 
 Once you've added the code sample to your application, choose the green Start button next to document-translation-qs to build and run your program, or press F5.
 
 ### Task 2: Creating a Form Recognizer Resource
-1. Navigate to the **Azure AI Services multi-service account** and click on the **Create** button.
 
-    ![](../media/c06-01.png)
-
-1. Enter the required details, select the `Standard s0` pricing tier, and **check the box**.
-   
-1. Go to the Resource group, search, and select the **Azure AI Services multi-service account** resource that you deployed earlier.
-
-   ![](../media/c06-02.png)
-
-2. Click on the Document Intelligence tab and select **Go to studio**.
+1. Click on the Document Intelligence tab and select **Go to studio**.
 
    ![](../media/bpa2.png)
 
-3. In Document Intelligence Studio, scroll down to **Custom Extraction Models** and choose **Try it now**.
+1. In Document Intelligence Studio, scroll down to **Custom Extraction Models** and choose **Try it now**.
 
    ![](../media/c06-03.png)
 
-4. Under My Project, click on **+ Create a project**.
+1. Under My Project, click on **+ Create a project**.
 
    ![](../media/bpa4.png)
 
-5. Enter the following details and click on **Continue**  **(3)**.
+1. Enter the following details and click on **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
 
      ![](../media/bpa5.png)
 
-6. Enter the following details under **Configure service resource** and click on **Continue** **(5)**.
+1. Enter the following details under **Configure service resource** and click on **Continue** **(5)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **<inject key="Resource Group Name"/>** **(2)**.
@@ -134,7 +143,7 @@ Once you've added the code sample to your application, choose the green Start bu
 
      ![](../media/bpa6.png)
 
-7. Enter the following details under **Connect training data source** and click on **Continue** **(8)**.
+1. Enter the following details under **Connect training data source** and click on **Continue** **(8)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **<inject key="Resource Group Name"/>** **(2)**.
@@ -146,7 +155,7 @@ Once you've added the code sample to your application, choose the green Start bu
    
         ![](../media/bpa7.png)
 
-8. Validate the information and choose **Create project**.
+1. Validate the information and choose **Create project**.
 
      ![](../media/bpa8.png)
 
@@ -203,30 +212,6 @@ In this step, you will upload 6 training documents to train the model.
 12. Once uploaded, select one test model and click on **Run analysis** **(1)**. Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(2)** we created in the last step, along with its confidence score.
 
      ![](../media/bpa2-12.png)
-
-### Using Doc Intelligence
-1. Ensure your subscription has **Microsoft.DocumentDB enabled**  
-To confirm/enable:  
-      - Navigate to your subscription within portal.azure.com.  
-      - Select Resource Providers at the bottom of the left navigation pane. 
-      - Within the Filter by name menu, search for Microsoft.DocumentDB  
-      - Once Microsoft.DocumentDB is found, check if the status is marked as "Registered". If marked as "NotRegistered", select "Register."  
-      **Note**: *This process may take several seconds or minutes; be sure to refresh the entire browser periodically.*
-2. Ensure that you have **accepted the terms and conditions for Responsible AI**:  
-You must initiate the creation of a "Cognitive Services multi-service account" from the Azure portal to review and acknowledge the terms and conditions. You can do so here: [Quickstart: Create a Cognitive Services resource using the Azure portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows).  
-Once accepted, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc.) under the same Azure subscription.
-
-1. [Get a Workflow Level Token (Classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-2. Fork the repository to a git account for which you are the Admin. `https://github.com/CloudLabs-MOC/business-process-automation`
-3. Click on the "Deploy to Azure" button that corresponds to your environment.
-4. Only the Resource Group, Repo Token (from #2), and Forked Git Repo Url are needed.  The remaining parameters are filled in for you.
-
-### With OpenAI
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
-
-7. Verify that all the resources are deployed without any issues.
-   
-   ![](../media/d005.png)
    
 **Build a new pipeline with the custom model module in BPA**
 
