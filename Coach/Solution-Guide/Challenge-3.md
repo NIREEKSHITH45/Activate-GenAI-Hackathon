@@ -50,7 +50,7 @@ Together, these services create a responsive chat application that combines AI f
    azd auth login
    ```
 
-  >**Note**: A web browser tab will open and prompt you to sign into Azure. Do so, and then close the browser tab
+   >**Note**: A web browser tab will open and prompt you to sign into Azure. Do so, and then close the browser tab
 
 2. Run this command to download the project code:
 
