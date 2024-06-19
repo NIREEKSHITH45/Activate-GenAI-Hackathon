@@ -34,13 +34,13 @@ Together, these services create a responsive chat application that combines AI f
 
 ## Solution Guide:
 
-## Task 1: Clone the repository for this Challenge
-
+## Prerequisite
+   
 1. Start Powershell 7 +.
    
 2. Ensure you run `pwsh.exe` from a PowerShell terminal. If this fails, you likely need to upgrade PowerShell.
 
-## Task 2: Deploy the  AI-Powered Chat App.
+## Task 1: Deploy the  AI-Powered Chat App.
 
 **Deploying the infrastructure**
 
@@ -76,7 +76,8 @@ Together, these services create a responsive chat application that combines AI f
 
 6. After the application has been successfully deployed you will see a URL printed to the console. Click that URL to interact with the application in your browser. It will look like the following:
 
-
+   ![](../media/endpoint.png)
+ 
 >**Note**: It may take 5-10 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
 
 
