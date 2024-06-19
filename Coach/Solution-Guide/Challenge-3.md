@@ -36,77 +36,49 @@ Together, these services create a responsive chat application that combines AI f
 
 ## Task 1: Clone the repository for this Challenge
 
-If you have not already cloned the **Activate GenAI** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
-
-1. Start Visual Studio Code.
-2. Open the palette (SHIFT+CTRL+P) and run a **Git: Clone** command to clone the `https://github.com/CloudLabs-MOC/activate-genai` repository to a local folder.
-3. When the repository has been cloned, open the folder in Visual Studio Code.
+1. Start Powershell 7 +.
+   
+2. Ensure you run `pwsh.exe` from a PowerShell terminal. If this fails, you likely need to upgrade PowerShell.
 
 ## Task 2: Deploy the  AI-Powered Chat App.
 
 **Deploying the infrastructure**
 
-1. Verify Terraform is installed on your machine by running the following command: `terraform --version`
+1. Login to Azure:
 
-2. Login to Azure:
+   ```
+   azd auth login
+   ```
 
-```bash
-az login 
-```
+  >**Note**: A web browser tab will open and prompt you to sign into Azure. Do so, and then close the browser tab
 
-  >**Note**: Use the command `az login --username <your-username> --password <your-password>` if above command is not work.
+2. Run this command to download the project code:
 
-3. Run the following commands to deploy the infrastructure:
+   ```
+   azd init -t azure-search-openai-demo
+   ```
+   
+   >**Note**: the above command will initialize a git repository, so you do not need to clone this repository.
 
-```bash
-cd infra
-terraform init
-terraform apply
-```
+3. Create a new azd environment , Enter a name that will be used for the resource group. This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
 
-## Task 3: Azure Search Index Deployment and Uploading the Sample Data
+   ```
+   azd env new
+   ```
 
-1. Run the following commands in the same terminal to deploy the Azure Search Index and upload the sample documents:
+4. Run the Below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
 
-```bash
-$env:AZURE_RESOURCE_GROUP="" 
-$env:AZURE_SUBSCRIPTION_ID="<subscription id>"
-$env:AZURE_TENANT_ID="<azure tenant id>"
-$env:AZURE_STORAGE_ACCOUNT="<storage account name>"
-$env:AZURE_STORAGE_CONTAINER="content"
-$env:AZURE_SEARCH_SERVICE="<search service name>"
-$env:OPENAI_HOST="azure"
-$env:AZURE_FORMRECOGNIZER_SERVICE="<your form recognizer name>"
-$env:AZURE_OPENAI_SERVICE="<openai service name>"
-$env:OPENAI_API_KEY=""
-$env:AZURE_OPENAI_EMB_DEPLOYMENT="text-embedding-ada-002"
-$env:AZURE_OPENAI_EMB_MODEL_NAME="text-embedding-ada-002"
-$env:AZURE_SEARCH_INDEX="gptkbindex"
-```
+   ```
+   azd up
+   ```
 
-```pwsh
+5. You will be prompted to select two locations, one for the majority of resources and one for the OpenAI resource, which is currently a short list. That location list is based on the OpenAI model availability table and may become outdated as availability changes.
 
-[System.Environment]::SetEnvironmentVariable("AZURE_RESOURCE_GROUP", "<resource group>", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_SUBSCRIPTION_ID", "<subscription id>", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_TENANT_ID", "<azure tenant id>", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_STORAGE_ACCOUNT", "<storage account name>", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_STORAGE_CONTAINER", "content", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_SEARCH_SERVICE", "<search service name>", "Machine")
-[System.Environment]::SetEnvironmentVariable("OPENAI_HOST", "azure", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_FORMRECOGNIZER_SERVICE", "<your form recognizer name>", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_OPENAI_SERVICE", "<openai service name>", "Machine")
-[System.Environment]::SetEnvironmentVariable("OPENAI_API_KEY", "514951b5e91a4bca85c1f1240ace5cb4", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_OPENAI_EMB_DEPLOYMENT", "text-embedding-ada-002", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_OPENAI_EMB_MODEL_NAME", "text-embedding-ada-002", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_SEARCH_INDEX", "gptkbindex", "Machine")
-```
-2. Deploy the Azure Search Index and upload the sample documents by running the following command:
+6. After the application has been successfully deployed you will see a URL printed to the console. Click that URL to interact with the application in your browser. It will look like the following:
 
-```bash
-../scripts/prepdocs.ps1
-```
 
-  > **Note**: The above script will create an index in the AI search service, analyze and upload the PDF data to the storage account, and integrate it with Azure OpenAI and connect it to the Azure App service with the help of Form Recogniser and Azure AI search.
+>**Note**: It may take 5-10 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
+
 
 ## Additional Resources:
 
