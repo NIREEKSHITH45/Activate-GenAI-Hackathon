@@ -92,7 +92,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 1. Click on **Chat** under the **Playgronund** tab in the left pane.
    
-1. In the **Playground** section, select the **chat** page, and ensure that the **text turbo** deployment is selected in the configuration pane.
+1. In the **Playground** section, select the **chat** page, and ensure that the **chat** deployment is selected in the configuration pane.
 
    ![](../media/chat.png)
 
