@@ -71,7 +71,7 @@ One of the hottest themes at the moment is size models; users are particularly i
 
    ![](../media/3-8.png)
 
-1. Go to **Developer Settings**, and in the **Exclude category** section, enable the check box for **Use query-contextual summaries instead of whole documents** and **Suggest follow-up questions**. Click on **Close** and observe how the responses to the prompt will change in the chat by giving the below prompt.
+1. Go to **Developer Settings**, and in the **Exclude category** section, enable the check box for **Use semantic options** and **Suggest follow-up questions**. Click on **Close** and observe how the responses to the prompt will change in the chat by giving the below prompt.
 
    ```
    What happens in a performance review?
