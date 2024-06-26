@@ -27,7 +27,6 @@ The chat application integrates seamlessly with different Azure services to prov
 
 Together, these services create a responsive chat application that combines AI features, monitoring capabilities, and efficient data management, providing Contoso with an exceptional user experience.
 
-
 ## Architecture diagram:
 
 ![](../media/appcomponents.png)
@@ -44,62 +43,53 @@ Together, these services create a responsive chat application that combines AI f
 
 **Deploying the infrastructure**
 
-1. Login to Azure:
+1. In the LabVM, type **Powershell 7** in the Windows Search bar.
+
+1. Select it and **Run as Administrator**.
+   
+1. Run the following command to login to Azure:
 
    ```
    azd auth login
    ```
-2. On the **Sign into Microsoft Azure** tab you will see the login screen, in that enter the following email/username and then click on **Next**. 
-   * Email/Username: <inject key="AzureAdUserEmail"></inject>
-   
-     ![](../media/image7.png "Enter Email")
-     
-3. Now enter the following password and click on **Sign in**.
-   * Password: <inject key="AzureAdUserPassword"></inject>
-   
-     ![](../media/image8.png "Enter Password")
-     
-   >**Note**: A web browser tab will open and prompt you to sign into Azure. Do so, and then close the browser tab
 
-4. Run this command to download the project code:
+   >**Note**: A web browser tab will open and prompt you to sign into Azure. Select the Azure Account you had previously logged in with. Close the browser tab once prompted.
+
+1. Once successfully logged in ,run the below command to download the project code:
 
    ```
    azd init -t azure-search-openai-demo
    ```
-5. When it prompts you to enter an environment name, provide the desired name.
+   >**Note**: The above command will initialize a git repository, eliminating the need to clone it afterwards.
 
-   ![](../media/env1.png)
+1. When prompted with **Continue iniatializing an app in `C:\Users\demouser`**, type y / yes.
+
+1. Once presented with **What would you like to do with these files?**, choose **Overwrite with versions from template**.
+
+1. Enter a new environment name, provide the name as **activategenai**. This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
+
+1. Verify the new project initilized is successful.
    
-   >**Note**: the above command will initialize a git repository, so you do not need to clone this repository.
-
-6. Create a new azd environment , Enter a name that will be used for the resource group. This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
-   
-   ```
-   azd env new
-   ```
-
-   - `Choose the Subscription`**(1)**
-   - `Select the location to use`**(2)**
-   - `Choose the location for Document Intelligent Resource Group`**(3)**
-   - `Choose the location for OpenAI Resource Group`**(4)**
-
-   ![](../media/env2.0.png)
-
-   
-7. Run the Below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
+1. Run the below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
 
    ```
    azd up
    ```
+   >**Note**: In case you are prompted with the **ERROR: not logged in, run azd auth login to login** and select your **Azure Account** again.
 
-8. You will be prompted to select two locations, one for the majority of resources and one for the OpenAI resource, which is currently a short list. That location list is based on the OpenAI model availability table and may become outdated as availability changes.
+1. Add the following details when prompted:
 
-9. After the application has been successfully deployed you will see a URL printed to the console. Click that URL to interact with the application in your browser. It will look like the following:
+   - Select an Azure Subscription to use: **Select the default subscription (1)**
+   - Select an Azure Location to use: **Select any location you would like to use (2)**
+   - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter : **Select any location you would like to use (3)**
+   - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select any location you would like to use(4)**
+     
+
+1. After the application has been successfully deployed you will see a URL printed to the console. Click that URL to interact with the application in your browser. It will look like the following:
 
    ![](../media/endpoint.png)
  
 >**Note**: It may take 5-10 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
-
 
 ## Additional Resources:
 
