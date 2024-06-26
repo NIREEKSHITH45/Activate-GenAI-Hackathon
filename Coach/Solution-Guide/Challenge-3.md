@@ -77,7 +77,7 @@ Together, these services create a responsive chat application that combines AI f
 
       ![](../media/gen4.png)
 
-1. Verify the new project initilized is successful.
+1. Verify the new project initialized is successful.
    
 1. Run the below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
 
