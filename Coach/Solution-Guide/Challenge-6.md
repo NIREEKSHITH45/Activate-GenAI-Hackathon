@@ -86,6 +86,12 @@ Azure OpenAI collects the same kinds of monitoring data as other Azure resources
 
 The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models. It uses the *ChatCompletions* API rather than the older *Completions* API.
 
+1. Navigate back to the Azure OpenAI service that was previously created.
+
+1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio**; it will navigate to **Azure AI Studio**.
+
+1. Click on **Chat** under the **Playgronund** tab in the left pane.
+   
 1. In the **Playground** section, select the **chat** page, and ensure that the **text turbo** deployment is selected in the configuration pane.
 
    ![](../media/chat.png)
