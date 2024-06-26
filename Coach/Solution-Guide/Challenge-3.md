@@ -66,7 +66,9 @@ Together, these services create a responsive chat application that combines AI f
 
 1. Once presented with **What would you like to do with these files?**, choose **Overwrite with versions from template**.
 
-1. Enter a new environment name, provide the name as **activategenai**. This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
+1. Enter a new environment name:  **activategenai**
+
+    >**Note**: This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
 
 1. Verify the new project initilized is successful.
    
