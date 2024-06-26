@@ -57,24 +57,30 @@ Together, these services create a responsive chat application that combines AI f
    ```
    azd init -t azure-search-openai-demo
    ```
+3. When it prompts you to enter an environment name, provide the desired name.
+
+   ![](../media/env1.png)
    
    >**Note**: the above command will initialize a git repository, so you do not need to clone this repository.
 
-3. Create a new azd environment , Enter a name that will be used for the resource group. This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
+5. Create a new azd environment , Enter a name that will be used for the resource group. This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
 
    ```
    azd env new
    ```
 
-4. Run the Below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
+   ![](../media/env2.0.png)
+
+   
+6. Run the Below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
 
    ```
    azd up
    ```
 
-5. You will be prompted to select two locations, one for the majority of resources and one for the OpenAI resource, which is currently a short list. That location list is based on the OpenAI model availability table and may become outdated as availability changes.
+7. You will be prompted to select two locations, one for the majority of resources and one for the OpenAI resource, which is currently a short list. That location list is based on the OpenAI model availability table and may become outdated as availability changes.
 
-6. After the application has been successfully deployed you will see a URL printed to the console. Click that URL to interact with the application in your browser. It will look like the following:
+8. After the application has been successfully deployed you will see a URL printed to the console. Click that URL to interact with the application in your browser. It will look like the following:
 
    ![](../media/endpoint.png)
  
