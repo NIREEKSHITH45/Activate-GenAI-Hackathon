@@ -64,10 +64,15 @@ Together, these services create a responsive chat application that combines AI f
    >**Note**: the above command will initialize a git repository, so you do not need to clone this repository.
 
 5. Create a new azd environment , Enter a name that will be used for the resource group. This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
-
+   
    ```
    azd env new
    ```
+
+   - `Choose the Subscription`**(1)**
+   - `Select the location to use`**(2)**
+   - `Choose the location for Document Intelligent Resource Group`**(3)**
+   - `Choose the location for OpenAI Resource Group`**(4)**
 
    ![](../media/env2.0.png)
 
