@@ -61,7 +61,7 @@ One of the hottest themes at the moment is size models; users are particularly i
 
     ![](../media/lab03-09.png)
 
-    ![](../media/lab03-10.png)
+    ![](../media/gen7.png)
 
 1. In this override, when we ask a question in a different language, behind the scenes, the prompt gets converted to English to perform the search, and then the model will respond in the same language it was asked in. Enter the below prompt in the chat section and observe that it's taking the question, detecting that it's in French, converting it to English, executing it as before, and then returning the expected response like before.
 
@@ -77,7 +77,7 @@ One of the hottest themes at the moment is size models; users are particularly i
    What happens in a performance review?
    ```
 
-   ![](../media/lab03-12.png)
+   ![](../media/gen8.png)
 
    ![](../media/3-10.png)
 
