@@ -189,6 +189,8 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
     ![](../media/apmi.png)
 
+      > **Note:** Click on **Yes** when prompted to **Enable system assigned managed identity**.
+      
 4. In the **Azure portal**, search for **OpenAI** and select it.
 
    ![](../media/azure-openai-1-new.png)
