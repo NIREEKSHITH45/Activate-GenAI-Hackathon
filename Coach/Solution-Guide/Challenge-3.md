@@ -55,6 +55,7 @@ Together, these services create a responsive chat application that combines AI f
 
    >**Note**: A web browser tab will open and prompt you to sign into Azure. Select the Azure Account you had previously logged in with. Close the browser tab once prompted.
 
+   ![](../media/gen1.png)
 1. Once successfully logged in ,run the below command to download the project code:
 
    ```
@@ -62,13 +63,19 @@ Together, these services create a responsive chat application that combines AI f
    ```
    >**Note**: The above command will initialize a git repository, eliminating the need to clone it afterwards.
 
-1. When prompted with **Continue iniatializing an app in `C:\Users\demouser`**, type y / yes.
+1. When prompted with **Continue iniatializing an app in `C:\Users\demouser`**, type **y / yes (1)**.
+
+   ![](../media/gen2.png)
 
 1. Once presented with **What would you like to do with these files?**, choose **Overwrite with versions from template**.
+
+   ![](../media/gen3.png)
 
 1. Enter a new environment name:  **activategenai**
 
     >**Note**: This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
+
+      ![](../media/gen4.png)
 
 1. Verify the new project initilized is successful.
    
@@ -87,9 +94,11 @@ Together, these services create a responsive chat application that combines AI f
    - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select any location you would like to use(4)**
      
 
+        ![](../media/gen5.png)
+
 1. After the application has been successfully deployed you will see a URL printed to the console. Click that URL to interact with the application in your browser. It will look like the following:
 
-   ![](../media/endpoint.png)
+   ![](../media/gen6.png)
  
 >**Note**: It may take 5-10 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
 
