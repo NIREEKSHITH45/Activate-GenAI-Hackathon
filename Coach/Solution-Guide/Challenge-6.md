@@ -98,9 +98,9 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 2. In the **Assistant setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-   ![](../media/chat-playground-2.png)
+   ![](../media/gen21.png)
 
-3. To add a new example:
+3. Scroll down to add a new example:
     - Click on **Add an example** under the **Examples** section of the **Assistant setup** pane.
     - Enter the following message and response in the designated boxes:
         - **User**: `What are different types of artificial intelligence?` **(2)**
@@ -109,19 +109,24 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
           
         - Click on **Save changes (4)** to start a new session and set the behavioral context of the chat system.
 
-             ![](../media/chat-playground-3.png)
+             ![](../media/gen22.png)
    
-             ![](../media/chat-playground-4.png)
+             ![](../media/gen23.png)
+     
+             ![](../media/gen24.png)
 
-             > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to                reflect the tone and style of the examples in its own responses.
+             > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+             > **Note**: Click on **Continue** when prompted with **Update system message?**.
 
+             ![](../media/gen25.png)
+          
 5. Within the query box of the chat session pane, enter the text `What is artificial intelligence?`
    
 7. Use the **Send** button to submit the message and view the response.
 
       > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
-      > Any text that you enter in the **Completions playground** or the **Chat Completions playground** generates metrics and log data for your Azure OpenAI         resource. In the Log Analytics workspace for your resource, you can query the monitoring data by using the Kusto query language.
+      > Any text that you enter in the **Completions playground** or the **Chat Completions playground** generates metrics and log data for your Azure OpenAI resource. In the Log Analytics workspace for your resource, you can query the monitoring data by using the Kusto query language.
 
 ### Task 2.3: Analyze logs using Kusto Queries
 
@@ -177,7 +182,7 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
 
 Creating a diagnostic setting and linking Azure OpenAI to a log analytics workspace does help in capturing native logs; however, the Log Analytics workspace is incapable of logging the user request and OpenAI model response prompts. In such scenarios, the Azure API Management Service comes in handy.
 
-1. Within the global search bar, search for and select the **API Management Services**, and create one new APIM service by giving the required values.
+1. Within the global search bar, search for and select the **API Management Services**, and select it
 
     ![](../media/apim-resource.png)
 
