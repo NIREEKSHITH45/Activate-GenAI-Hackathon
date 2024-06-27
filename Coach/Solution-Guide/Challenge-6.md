@@ -116,6 +116,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
              ![](../media/gen24.png)
 
              > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+             
              > **Note**: Click on **Continue** when prompted with **Update system message?**.
 
              ![](../media/gen25.png)
@@ -186,16 +187,23 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
     ![](../media/apim-resource.png)
 
-2. Select the deployed **APIM service.**
+2. Click on Create.
 
-    ![](../media/4-7.png)
+    ![](../media/gen26.png)
 
-3. Navigate to the **Managed identities**, change the status to **On** and click on **Save** button.
+3. Add the following details in the **Create API Management Service** page and click on **Review + Create**:
 
-    ![](../media/apmi.png)
+      - Subscription: **Select the default subscription (1)**
+      - Resource Group: Select **rg-activategenai (2)**
+      - Region: **(US) East US (3)**
+      - Resource Name: **apim-<inject key="Deployment ID" enableCopy="false"/> (4)**
+      - Organization Name: **Windows (5)**
+      - Administrator email: * **Email/Username**: <inject key="AzureAdUserEmail"></inject> (6)
+      - Pricing Tier: Select **Standard (99.95% SLA) (7)**
+      - Unit(s): **1 (8)**
 
-      > **Note:** Click on **Yes** when prompted to **Enable system assigned managed identity**.
-      
+          ![](../media/gen27.png)
+
 4. In the **Azure portal**, search for **OpenAI** and select it.
 
    ![](../media/azure-openai-1-new.png)
