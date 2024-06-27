@@ -308,13 +308,15 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
       </inbound>
       ```
 
-      ![](../media/api-inbound.png)
+      ![](../media/gen28.png)
+
+      ![](../media/gen29.png)
 
       > **Note**: Please ensure to paste the **OpenAIEndpoint** values and eliminate any duplication of **https://**.
     
-23. Click on **Save**. Notice that a new policy named **set-backend-service** has been added within the inbound processing tile.
+24. Click on **Save**. Notice that a new policy named **set-backend-service** has been added within the inbound processing tile.
     
-24. Navigate to **Diagnostic settings** in the left pane of the API management service.
+25. Navigate to **Diagnostic settings** in the left pane of the API management service.
 
     ![](../media/diag3.png)
 
@@ -327,7 +329,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
       ![](../media/diag2.png)
     
-25. Now that the API has been successfully added, it requires configuration to call the OpenAI API through the API Management Service, which can be done by following the below steps:
+26. Now that the API has been successfully added, it requires configuration to call the OpenAI API through the API Management Service, which can be done by following the below steps:
 
     - Select the newly added API **(1)**.
     - Click on the **Settings (2)** tab.
