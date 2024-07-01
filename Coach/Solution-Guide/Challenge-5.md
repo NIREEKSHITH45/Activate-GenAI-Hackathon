@@ -63,6 +63,8 @@ For this project, you need a source document uploaded to your source container. 
    
 1. Start Visual Studio.
 
+   > **Note**: When prompted to sign in, select **Skip for now** and proceed.
+
 1. On the **Get Started** page, choose to **Create a New Project**.
 
    ![](../media/T-2.png)
