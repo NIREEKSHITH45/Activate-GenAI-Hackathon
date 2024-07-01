@@ -107,7 +107,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
           
         - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).` **(3)**
           
-        - Click on **Save changes (4)** to start a new session and set the behavioral context of the chat system.
+        - Click on **Apply changes (4)** to start a new session and set the behavioral context of the chat system.
 
              ![](../media/gen22.png)
    
@@ -349,7 +349,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     - Click on the **Test (2)** tab.
     - Click on the POST operation that **Creates a completion for the chat message (3)**.
     - Under the **Template parameters** section, enter the following details:
-        - **deployment-id:** gpt-35-turbo **(4)**
+        - **deployment-name:** Provide the name you had provided earlier for **gpt-35-turbo** model **(4)**
         - **api-version:** 2023-03-15-preview **(5)**
     - Within the **Request body** section, edit the content **(6)** of the sample with the following prompt:
         ```
