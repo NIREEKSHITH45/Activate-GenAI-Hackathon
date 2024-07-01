@@ -16,10 +16,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**  !
 
-1) **Pre-requisites setup:**
-      - Clone the repository: `https://github.com/CloudLabs-MOC/business-process-automation`.
-      - Follow the instructions to **Deploy to Azure with OpenAI**.
-      - Verify the deployed Azure resources in the resource group.
+
 
 1) **Set up a translator within Azure AI services.**
 
@@ -46,7 +43,10 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 **Using Doc Intelligence:**
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**  !
 
-
+1) **Pre-requisites setup:**
+      - Clone the repository: `https://github.com/CloudLabs-MOC/business-process-automation`.
+      - Follow the instructions to **Deploy to Azure with OpenAI**.
+      - Verify the deployed Azure resources in the resource group.
 
 1) **Using an Azure Document Intelligence (Form Recognizer) resource:**
     - Navigate to Azure AI services and set up an Azure Document Intelligence (Form Recognizer) resource.
