@@ -91,6 +91,8 @@ For this project, you need a source document uploaded to your source container. 
 
    ![](../media/T-8.png)
 
+1. Click on **Apply**.
+
 #### Task 1.4 -Translate all documents into a storage container and run your application
 
 1. Go to the Translator resource that is created, please get the resource keys by following the next step.
