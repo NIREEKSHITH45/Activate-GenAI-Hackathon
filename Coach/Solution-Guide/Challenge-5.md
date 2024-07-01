@@ -61,7 +61,7 @@ For this project, you need a source document uploaded to your source container. 
 
 #### Task 1.3 - Set up your C#/.NET environment and install Newtonsoft.Json
    
-1. Start Visual Studio.
+1. Start Visual Studio 2022.
 
    > **Note**: When prompted to sign in, select **Skip for now** and proceed.
 
@@ -103,7 +103,7 @@ For this project, you need a source document uploaded to your source container. 
    
 1. Copy and paste your key and document translation endpoint in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
 
-1. Open the Program.cs file.
+1. Navigate back to Visual Studio 2022 and open the **Program.cs** file.
 
 1. Delete the pre-existing code, including the line Console.WriteLine("Hello World!").
 
