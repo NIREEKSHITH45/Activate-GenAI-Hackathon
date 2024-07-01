@@ -77,9 +77,7 @@ For this project, you need a source document uploaded to your source container. 
 
    ![](../media/T-4.png)
 
-1. In the **Additional information** dialog window, select **.NET 6.0 (Long-term support)**, and then select **Create**.
-
-   ![](../media/T-5.png)
+1. In the **Additional information** dialog window, select **.NET 8.0 (Long-term support)**, and then select **Create**.
 
 1. Right-click on your **document-translation-qs** project and select **Manage NuGet Packages**.
 
