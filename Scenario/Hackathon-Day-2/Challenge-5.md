@@ -47,7 +47,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**  !
 
 1) **Using an Azure Document Intelligence (Form Recognizer) resource:**
-    - Navigate to Azure AI services and set up an Azure Document Intelligence (Form Recognizer) resource.
+    - Navigate to Azure AI services and utilize the Azure Document Intelligence (Form Recognizer) resource.
     - Upload and label training documents to train the Azure Document Intelligence (Form Recognizer) model.
 
          >Note: You can find the documents in C:\LabFiles\Documents.
