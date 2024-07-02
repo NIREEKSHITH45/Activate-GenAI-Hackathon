@@ -31,7 +31,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 1) **Initialize the C#/.NET Environment for Document Processing:**
 
-    - Set up a C#/.NET project in Visual Studio for document translation using .Net Version 6.
+    - Set up a C#/.NET project in Visual Studio for document translation using .Net Version 7.
     - Install the necessary packages, including Newtonsoft.Json.
 
 1) **Translate Documents and Run the Application:**
