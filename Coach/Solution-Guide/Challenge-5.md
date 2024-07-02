@@ -137,7 +137,7 @@ For this project, you need a source document uploaded to your source container. 
 
    ![](../media/T-4.png)
 
-1. In the **Additional information** dialog window, select **.NET 8.0 (Long-term support)**, and then select **Create**.
+1. In the **Additional information** dialog window, select **.NET 7.0**, and then select **Create**.
 
 1. Right-click on your **document-translation-qs** project and select **Manage NuGet Packages**.
 
@@ -171,7 +171,9 @@ For this project, you need a source document uploaded to your source container. 
 
 1. Update **{your-document-translation-endpoint}** and **{your-key}** with values from your Azure portal Translator instance.
 
-1. Update **{your-source-container-SAS-URL}** and **{your-target-container-SAS-URL}** with values from your Azure portal Storage account container instance.
+1. Update **?api-version={date}** with **?api-version=2024-05-01**.
+   
+1. Also, update **{your-source-container-SAS-URL}** and **{your-target-container-SAS-URL}** with values from your Azure portal Storage account container instance.
 
 Once you've added the code sample to your application, choose the green Start button next to document-translation-qs to build and run your program, or press F5.
 
