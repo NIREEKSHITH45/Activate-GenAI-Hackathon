@@ -12,36 +12,87 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 # Solution Guide
 
-### Task 1 - Translate the documents using Translate
+### Task 1: Translate the documents using Translate
 
-1. Ensure your subscription has **Microsoft.DocumentDB enabled**  
-To confirm/enable:  
-      - Navigate to your subscription within portal.azure.com.  
-      - Select Resource Providers at the bottom of the left navigation pane. 
-      - Within the Filter by name menu, search for Microsoft.DocumentDB  
-      - Once Microsoft.DocumentDB is found, check if the status is marked as "Registered". If marked as "NotRegistered", select "Register."  
-      **Note**: *This process may take several seconds or minutes; be sure to refresh the entire browser periodically.*
+1. Search for **subscriptions** and select **subscriptions**.
+
+      ![](../media/gen30.png)
+
+1. Select the **existing subscription (1)** , click on **Resource Providers (2)** at the bottom of the left navigation pane and check if the status is marked as **"Registered" (3)**. If marked as "NotRegistered", select "Register."  
+
+   **Note**: *This process may take several seconds or minutes; be sure to refresh the entire browser periodically.*
+
+      ![](../media/gen31.png)
         
 1. Ensure that you have **accepted the terms and conditions for Responsible AI**:  
 You must initiate the creation of a "Cognitive Services multi-service account" from the Azure portal to review and acknowledge the terms and conditions. You can do so here: [Quickstart: Create a Cognitive Services resource using the Azure portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows).  
 Once accepted, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc.) under the same Azure subscription.
 
+1. Search for **Azure AI services multi-servic**e account and select it.
+
+1. Provide the follwing details and click on **Review + Create** :
+
+   - Subscription: Select the deafault subscription (1)
+   - Resource Group: (2)
+   - Region: Select the default region (3)
+   - Name: Provide any name. (4)
+   - Pricing Tier: Select Standard SO (5)
+   - Ensure to check the box which acknowledges the terms and conditions (6)
+
+       ![](../media/gen40.png)
+
+1. Ensure that you have **accepted the terms and conditions for Responsible AI**:  
+You must initiate the creation of a "Cognitive Services multi-service account" from the Azure portal to review and acknowledge the terms and conditions. You can do so here: [Quickstart: Create a Cognitive Services resource using the Azure portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows).  
+Once accepted, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc.) under the same Azure subscription.
+
 1. [Get a Workflow Level Token (Classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+1. Navigate to `https://github.com/CloudLabs-MOC/business-process-automation` and click on **Sign in**.
+
+      ![](../media/gen32.png)
    
-1. Fork the repository to a git account for which you are the Admin. `https://github.com/CloudLabs-MOC/business-process-automation`
+1. Once signed in, fork the repository to a git account for which you are the Admin. 
+
+      ![](../media/gen38.png)
+
+1. Click on your **profile** which is at the top of your right hand, and then select **Settings**.
+
+1. Scroll down to the complete bottom and select **Developer settings**.
+
+      ![](../media/gen34.png)
+
+1. Click on **Tokens (classic)** from the left pane and select **Generate new token (classic)**.
+
+      ![](../media/gen35.png)
+
+1. Provide the following details:
+
+   - Note: PAT (1)
+   - Expiration: 7 days (2)
+   - Select scopes: Select all the main scopes (3)
+
+      ![](../media/gen36.png)
+
+1. Copy the PAT token and paste it in a notepad.
+
+      ![](../media/gen37.png)
    
 1. Click on the "Deploy to Azure" button that corresponds to your environment.
-   
+
+   ### With OpenAI
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
+
 1. Only the Resource Group, Repo Token (from #2), and Forked Git Repo Url are needed.  The remaining parameters are filled in for you.
 
-### With OpenAI
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
+      ![](../media/gen39.png)
+
+      > **Note:** Ensure the primary region is set to EASTUS2
+
+   ![](../media/gen41.png)
 
 1. Verify that all the resources are deployed without any issues.
    
    ![](../media/d005.png)
-
-
    
 #### Task 1.2 - Create Azure Blob Storage containers
 
