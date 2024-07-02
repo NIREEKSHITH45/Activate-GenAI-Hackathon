@@ -88,7 +88,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
       > **Note:** Ensure the primary region is set to EASTUS2
 
-   ![](../media/gen41.png)
+   ![](../media/gen47.png)
 
 1. Verify that all the resources are deployed without any issues.
    
@@ -112,9 +112,15 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
 1. Copy the URLs in a notepad.
 
-1. Navigate to the source container and click on Upload.
+1. Navigate to the source container and click on **Upload**.
 
-1. Redirect to C:\LabFiles\Documents and upload
+   ![](../media/gen46.png)
+
+1. Click on **Browse for files**.
+
+      ![](../media/gen45.png)
+
+1. Redirect to C:\LabFiles\Documents and upload the **document-translation-sample** file.
    
 1. Upload this Sample document
 For this project, you need a source document uploaded to your source container. You can download our [document translation sample document](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fcognitive-services-REST-api-samples%2Fmaster%2Fcurl%2FTranslator%2Fdocument-translation-sample.docx&wdOrigin=BROWSELINK) for this quickstart. The source language is English.
@@ -212,9 +218,9 @@ Once you've added the code sample to your application, choose the green Start bu
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **<inject key="Resource Group Name"/>** **(2)**.
    - Storage account name: **Select the existing storage account (3)**.
-   - Blob container name: **custommoduletext** **(4)**.
+   - Blob container name: Click on **Create new** and provide the name as **custommoduletext** **(4)**.
    
-        ![](../media/bpa7.png)
+        ![](../media/gen48.png)
 
 1. Validate the information and choose **Create project**.
 
