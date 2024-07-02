@@ -108,7 +108,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
       ![](../media/gen43.png)
 
-1. Repeat the same steps by creating another container with name target by giving Write and Liat permissions.
+1. Repeat the same steps by creating another container with name **target** by giving **Write** and **List** permissions.
 
 1. Copy the URLs in a notepad.
 
