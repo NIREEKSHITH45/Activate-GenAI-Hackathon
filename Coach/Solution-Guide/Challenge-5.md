@@ -32,12 +32,12 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
 1. Provide the follwing details and click on **Review + Create** :
 
-   - Subscription: Select the deafault subscription (1)
-   - Resource Group: (2)
-   - Region: Select the default region (3)
-   - Name: Provide any name. (4)
-   - Pricing Tier: Select Standard SO (5)
-   - Ensure to check the box which acknowledges the terms and conditions (6)
+   - Subscription: **Select the default subscription (1)**.
+   - Resource Group: **<inject key="Resource Group Name"/>**(2)
+   - Region: **Select the default region (3)**.
+   - Name: **Provide any name (4)**.
+   - Pricing Tier: **Select Standard SO (5)**
+   - Ensure to **check the box** which acknowledges the terms and conditions **(6)**.
 
        ![](../media/gen40.png)
 
@@ -67,9 +67,9 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
 1. Provide the following details:
 
-   - Note: PAT (1)
-   - Expiration: 7 days (2)
-   - Select scopes: Select all the main scopes (3)
+   - Note: **PAT (1)**
+   - Expiration: **7 days (2)**
+   - Select scopes: Select all the **main scopes (3)**
 
       ![](../media/gen36.png)
 
@@ -96,18 +96,27 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
    
 #### Task 1.2 - Create Azure Blob Storage containers
 
-1. You need to create containers in your Azure Blob Storage account for source and target files.
+1. Select the storage account that is created from the resources that were deployed in the previous task.
 
-      Source container: This container is where you upload your files for translation (required). <br>
-      Target container: This container is where your translated files are stored (required).
+1. Click on **Containers (1)** from the left navigation pane, select **+Container (2)** and provide the name as **source (3)**.
 
- 1. Required authentication:
-The sourceUrl and targetUrl must include a **Shared Access Signature (SAS) token**, appended as a query string. The token can be assigned to your container or specific blobs.
-     - Your source container or blob must have designated **read** and **list** access.
-     - Your target container or blob must have designated **write** and **list** access.
+      ![](../media/gen42.png)
 
+1. Click on the source container.
 
- 1. Sample document
+1. Select Shared Access Tokens from the left navigation pane, provide the permissions as Read and List and click on Generate SAS Token and URL.
+
+      ![](../media/gen43.png)
+
+1. Repeat the same steps by creating another container with name target by giving Write and Liat permissions.
+
+1. Copy the URLs in a notepad.
+
+1. Navigate to the source container and click on Upload.
+
+1. Redirect to C:\LabFiles\Documents and upload
+   
+1. Upload this Sample document
 For this project, you need a source document uploaded to your source container. You can download our [document translation sample document](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fcognitive-services-REST-api-samples%2Fmaster%2Fcurl%2FTranslator%2Fdocument-translation-sample.docx&wdOrigin=BROWSELINK) for this quickstart. The source language is English.
 
 #### Task 1.3 - Set up your C#/.NET environment and install Newtonsoft.Json
@@ -200,11 +209,8 @@ Once you've added the code sample to your application, choose the green Start bu
 
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **<inject key="Resource Group Name"/>** **(2)**.
-   - Check the box to **Create new storage account** **(3)**.
-   - Storage account name: **formrecognizer<inject key="Deployment ID" enableCopy="false"/>** **(4)**.
-   - Location: **East US** **(5)**.
-   - Pricing tier: **Standard_LRS Standard** **(6)**.
-   - Blob container name: **custommoduletext** **(7)**.
+   - Storage account name: **Select the existing storage account (3)**.
+   - Blob container name: **custommoduletext** **(4)**.
    
         ![](../media/bpa7.png)
 
@@ -282,7 +288,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 4. Once the **Business Process Automation Accelerator** page is loaded successfully, click on **Create/Update/Delete Pipelines**. 
 
-   ![](../media/bpa3-4.png)
+   ![](../media/bpa3-4-1.png)
 
 5. On the **Create Or Select A Pipeline** page, enter the New Pipeline Name as **workshop** **(1)**, and click on the **Create Custom Pipeline** **(2)**. 
 
