@@ -49,12 +49,9 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 ## Challenge Objectives:
 
-> **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**.  !
+> **Note**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**.  !
 
-1. **Prerequisite**
-
-   - Start Powershell 7 +.
-   - Ensure you run pwsh.exe from a PowerShell terminal. If this fails, you likely need to upgrade PowerShell.
+> **Imported** : Start Powershell 7 +.
 
 1. **Clone the Repository:**
    - Clone the Active Gen AI repository: `https://github.com/Azure-Samples/azure-search-openai-demo`.
