@@ -73,6 +73,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 ## Additional Resources:
 
 - Refer to [document translation](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) for sample code that will be used for document translation using C#.
+- Refer to [Document Translation operations](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/reference/rest-api-guide) to understand the REST APIs that we utilize for document translation.
 
 ## Challenge Validation
  
