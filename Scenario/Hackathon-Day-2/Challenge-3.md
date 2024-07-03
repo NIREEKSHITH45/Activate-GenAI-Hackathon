@@ -32,14 +32,14 @@ Together, these services create a responsive chat application that combines AI f
 
 ![](../media/appcomponents.png)
 
-
-1. **Prerequisite**
-   - Start Powershell 7 +.
-   - Ensure you run pwsh.exe from a PowerShell terminal. If this fails, you likely need to upgrade PowerShell.
-
 ## Challenge Objectives:
 
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**.  !
+
+1. **Prerequisite**
+
+   - Start Powershell 7 +.
+   - Ensure you run pwsh.exe from a PowerShell terminal. If this fails, you likely need to upgrade PowerShell.
 
 1. **Clone the Repository:**
    - Clone the Active Gen AI repository: `https://github.com/Azure-Samples/azure-search-openai-demo`.
@@ -48,6 +48,7 @@ Together, these services create a responsive chat application that combines AI f
 1. **Deploy the AI-Powered Chat App:**
 
     - Deploy an AI-powered chat application on Azure, integrating Azure AI services and Azure Search, and ensuring it's accessible and functional post-deployment.
+    
     - Hint Use command which is used with the Azure Developer CLI (azd) to authenticate a user with their Azure account.
 azd init -t azure-search-openai-demo -> To start a new project using a predefined template in the Azure Developer CLI, look for a command that initializes the project and specifies the template name.
     
