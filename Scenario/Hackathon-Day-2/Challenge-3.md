@@ -64,12 +64,11 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
     - Deploy an AI-powered chat application on Azure, integrating Azure AI services and Azure Search, and ensuring it's accessible and functional post-deployment.
     
-    - Hint Use command which is used with the Azure Developer CLI to authenticate a user with their Azure account.
-azd init -t azure-search-openai-demo -> To start a new project using a predefined template in the Azure Developer CLI, look for a command that initializes the project and specifies the template name.
+    - Hint Use a command which is used with the Azure Developer CLI to authenticate a user with their Azure account.
     
-    - Hint To start a new project using a predefined template in the Azure Developer CLI, look for a command that initializes the project and specifies the template name. 
+    - Hint Use a command to start a new project using a predefined template in the Azure Developer CLI, look for a command that initializes the project and specifies the template name. 
 
-    - Hint Use the command in the Azure Developer CLI (azd) which is used to provision azure resources and deploy your project with a single command.
+    - Hint Use a command in the Azure Developer CLI (azd) which is used to provision azure resources and deploy your project with a single command.
 
 
    <validation step="9b4373a3-2a97-40ca-8c61-f1182e5eb2ce" />
