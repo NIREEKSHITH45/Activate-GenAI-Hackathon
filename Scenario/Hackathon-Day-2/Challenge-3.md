@@ -33,21 +33,27 @@ Together, these services create a responsive chat application that combines AI f
 ![](../media/appcomponents.png)
 
 
+1. **Prerequisite**
+   - Start Powershell 7 +.
+   - Ensure you run pwsh.exe from a PowerShell terminal. If this fails, you likely need to upgrade PowerShell.
+
 ## Challenge Objectives:
 
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**.  !
 
 1. **Clone the Repository:**
-   - Clone the Active Gen AI repository: `https://github.com/CloudLabs-MOC/activate-genai`.
-   - Verify if Terraform is installed on your machine. If not, follow the [Terraform installation guide](https://developer.hashicorp.com/terraform/install).
+   - Clone the Active Gen AI repository: `https://github.com/Azure-Samples/azure-search-openai-demo`.
+   - Verify if Bicep is installed on your machine. If not, follow the [Bicep installation guide](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)).
 
-2. **Terraform Deployment:**
-   - Use Terraform to deploy the App Solution specified in the provided GitHub repository.
-   - Configure Terraform scripts to provision Azure resources accurately.
+1. **Deploy the AI-Powered Chat App:**
 
-3. **Azure Search Index Deployment and Uploading the Sample Data:**
-   - Use `prepdocs.ps1` from the scripts folder to analyze and upload the data to the storage account.
-      > Note: You will need to understand and update the script based on the requirements mentioned in the script.
+    - Hint Use command is used with the Azure Developer CLI (azd) to authenticate a user with their Azure account.
+azd init -t azure-search-openai-demo -> To start a new project using a predefined template in the Azure Developer CLI, look for a command that initializes the project and specifies the template name.
+    
+    - Hint To start a new project using a predefined template in the Azure Developer CLI, look for a command that initializes the project and specifies the template name. 
+
+    - Hint Use the command in the Azure Developer CLI (azd) which is used to provision azure resources and deploy your project with a single command.
+
 
    <validation step="9b4373a3-2a97-40ca-8c61-f1182e5eb2ce" />
 
