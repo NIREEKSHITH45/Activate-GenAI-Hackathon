@@ -20,10 +20,6 @@ You will utilize the Form Recognizer Service and the Business Process Automation
       - Fork the repository: `https://github.com/CloudLabs-MOC/business-process-automation`.
       - Follow the instructions to **Deploy to Azure with OpenAI**.
       - Verify the deployed Azure resources in the resource group.
-
-1) **Set up a translator within Azure AI services.**
-
-    - Implement a translation service to meet Contoso's multilingual document requirements.
     
 1) **Setup Azure Blob Storage.**
 
