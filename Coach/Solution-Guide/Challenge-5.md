@@ -98,9 +98,13 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
 1. Select the storage account that is created from the resources that were deployed in the previous task.
 
-1. Click on **Containers (1)** from the left navigation pane, select **+Container (2)** and provide the name as **source (3)**.
+1. In the storage account ,navigate to **Configuration (1)** under the settings tab, ensure the blob anonymous access is **enabled (2)** and click on **Save (3)**.
 
-      ![](../media/gen42.png)
+      ![](../media/gen51.png)
+
+1. Click on **Containers (1)** from the left navigation pane, select **+Container (2)** ,add the name as **source (3)** by providing **blob access (4)** and click on **Create (5)**.
+
+      ![](../media/gen50.png)
 
 1. Click on the source container.
 
