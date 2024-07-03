@@ -47,7 +47,7 @@ Together, these services create a responsive chat application that combines AI f
 
 1. **Deploy the AI-Powered Chat App:**
 
-    - Hint Use command is used with the Azure Developer CLI (azd) to authenticate a user with their Azure account.
+    - Hint Use command which is used with the Azure Developer CLI (azd) to authenticate a user with their Azure account.
 azd init -t azure-search-openai-demo -> To start a new project using a predefined template in the Azure Developer CLI, look for a command that initializes the project and specifies the template name.
     
     - Hint To start a new project using a predefined template in the Azure Developer CLI, look for a command that initializes the project and specifies the template name. 
