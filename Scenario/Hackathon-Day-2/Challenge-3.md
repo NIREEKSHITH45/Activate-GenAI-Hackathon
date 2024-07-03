@@ -49,7 +49,7 @@ Together, these services create a responsive chat application that combines AI f
 
     - Deploy an AI-powered chat application on Azure, integrating Azure AI services and Azure Search, and ensuring it's accessible and functional post-deployment.
     
-    - Hint Use command which is used with the Azure Developer CLI (azd) to authenticate a user with their Azure account.
+    - Hint Use command which is used with the Azure Developer CLI to authenticate a user with their Azure account.
 azd init -t azure-search-openai-demo -> To start a new project using a predefined template in the Azure Developer CLI, look for a command that initializes the project and specifies the template name.
     
     - Hint To start a new project using a predefined template in the Azure Developer CLI, look for a command that initializes the project and specifies the template name. 
