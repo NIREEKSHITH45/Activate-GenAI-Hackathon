@@ -27,10 +27,25 @@ The chat application integrates seamlessly with different Azure services to prov
 
 Together, these services create a responsive chat application that combines AI features, monitoring capabilities, and efficient data management, providing Contoso with an exceptional user experience.
 
-
 ## Architecture diagram:
 
 ![](../media/appcomponents.png)
+
+
+## Prerequisites
+
+Make sure you have the following from the CloudLabs-provided integrated environment:
+
+> Note: Prerequisites are already set up in the CloudLabs-provided environment. If you're using your personal computer or laptop, please make sure that all necessary prerequisites are installed to complete this hackathon.
+
+
+  - [Azure Subscription](https://azure.microsoft.com/en-us/free/)
+  - [Azure OpenAI](https://aka.ms/oai/access) access is available with the following models:
+    - gpt-35-turbo
+    - text-embedding-ada-002
+   - Bicep 
+   - Azd 
+   - Poweshell 7 
 
 ## Challenge Objectives:
 
