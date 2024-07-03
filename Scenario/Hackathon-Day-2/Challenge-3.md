@@ -51,7 +51,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 > **Note**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**.  !
 
-> **Imported** : Start Powershell 7 +.
+> **Important** : Start Powershell 7 +.
 
 1. **Clone the Repository:**
    - Clone the Active Gen AI repository: `https://github.com/Azure-Samples/azure-search-openai-demo`.
