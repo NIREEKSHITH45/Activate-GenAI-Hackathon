@@ -120,11 +120,8 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
       ![](../media/gen45.png)
 
-1. Redirect to C:\LabFiles\Documents and upload the **document-translation-sample** file.
+1. Redirect to `C:\LabFiles\Documents` and upload the **document-translation-sample** file.
    
-1. Upload this Sample document
-For this project, you need a source document uploaded to your source container. You can download our [document translation sample document](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fcognitive-services-REST-api-samples%2Fmaster%2Fcurl%2FTranslator%2Fdocument-translation-sample.docx&wdOrigin=BROWSELINK) for this quickstart. The source language is English.
-
 #### Task 1.3 - Set up your C#/.NET environment and install Newtonsoft.Json
    
 1. Start Visual Studio 2022.
