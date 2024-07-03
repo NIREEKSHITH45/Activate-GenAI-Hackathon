@@ -64,7 +64,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
     - Deploy an AI-powered chat application on Azure, integrating Azure AI services and Azure Search, and ensuring it's accessible and functional post-deployment.
     
-    - Hint Use a command which is used with the Azure Developer CLI to authenticate a user with their Azure account.
+      >**Note**: Use a command in the Azure Developer CLI to log in and authenticate with your Azure account.
     
     - Hint Use a command to start a new project using a predefined template in the Azure Developer CLI, look for a command that initializes the project and specifies the template name. 
 
