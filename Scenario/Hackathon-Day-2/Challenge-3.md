@@ -68,7 +68,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
     
     - Hint Use a command to start a new project using a predefined template in the Azure Developer CLI, look for a command that initializes the project and specifies the template name. 
 
-    - Hint Use a command in the Azure Developer CLI (azd) which is used to provision azure resources and deploy your project with a single command.
+    - Hint Use a command in the Azure Developer CLI which is used to provision azure resources and deploy your project with a single command.
 
 
    <validation step="9b4373a3-2a97-40ca-8c61-f1182e5eb2ce" />
