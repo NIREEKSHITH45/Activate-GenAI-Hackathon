@@ -27,7 +27,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 1) **Setup Azure Blob Storage.**
 
-    - Create mandatory source and target containers in Azure Blob Storage for document processing.
+    - Create mandatory source and target containers in Azure Blob Storage for document processing by granting blob access.
 
 1) **Initialize the C#/.NET Environment for Document Processing:**
 
