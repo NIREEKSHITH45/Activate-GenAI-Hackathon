@@ -29,7 +29,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 4. **Execute the Upload Script:**
    - Open and examine the UploadDocs.cmd batch file using VS Code.
    - Execute the batch file to ensure that the necessary resources and files are created in Azure.
-   - Hint: Ensure you are logged into Azure at the command prompt to execute the file.
+      > Hint: Hint : Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure CLI
 5. **Data Import and Indexing:**
    - Import data for AI Search using Blob Storage.
    - Link with Azure AI Services and customize the index.
