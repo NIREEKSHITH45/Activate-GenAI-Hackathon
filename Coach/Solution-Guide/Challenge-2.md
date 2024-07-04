@@ -15,10 +15,19 @@ To address this challenge, Margie's Travel can use Azure AI Search to implement 
 
 If you have not already cloned the **AI-102-AIEngineer** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
 
-1. Start Visual Studio Code.
-2. Clone the `https://github.com/MicrosoftLearning/AI-102-AIEngineer` repository to a local folder (it doesn't matter which folder).
-3. When the repository has been cloned, open the folder in Visual Studio Code.
-4. Wait while additional files are installed to support the C# code projects in the repo.
+1. Within the **LabVM** on desktop open **Visual Studio Code**.
+1. In **Visual Studio Code** from the left top menu select **(...) (1)** ellipics > **Terminal (2)** then choose **New Terminal (3)**
+
+   ![](../media/Active-image42.png)
+
+1. Run the following command to clone the repository to a local folder (it doesn't matter which folder).
+
+   `git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer`
+
+    ![](../media/Active-image43.png)
+
+1. Wait while additional files are installed to support the C# code projects in the repo.
+1. When the repository has been cloned, open the folder in Visual Studio Code.
 
     > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
