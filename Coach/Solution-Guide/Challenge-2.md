@@ -410,16 +410,26 @@ While you can use the portal to create and modify search solutions, it's often d
 
     ![](../media/Active-image72.png)
    
-2. In Visual Studio Code, in the Explorer pane, expand the **22-create-a-search-solution** folder and its **modify-search** subfolder, and select **modify-search.cmd** to open it. You will use this script file to run *CURL* commands that submit JSON to the Azure AI Service REST interface.
+1. In Visual Studio Code, in the Explorer pane, expand the **22-create-a-search-solution (1)** folder and its **modify-search (2)** subfolder, and select **modify-search.cmd (3)** to open it. You will use this script file to run *CURL* commands that submit JSON to the Azure AI Service REST interface.
 
-3. In **modify-search.cmd**, replace the **YOUR_SEARCH_URL** placeholder with the URL you copied to the clipboard.
+     ![](../media/Active-image73.png)
+   
+1. In **modify-search.cmd**, replace the **YOUR_SEARCH_URL** placeholder with the URL you copied to the clipboard.
 
-4. In the Azure portal, view the **Keys** page for your Azure AI Search resource, and copy the **Primary admin key** to the clipboard.
+     ![](../media/Active-image76.png)
+     
+1. In the Azure portal, back to **Overview** page for your **Azure AI Search** resource expand **Settings** and select **Keys** and copy the **Primary admin key** to the clipboard.
 
-5. In Visual Studio Code, replace the **YOUR_ADMIN_KEY** placeholder with the key you copied to the clipboard.
+    ![](../media/Active-image74.png)
+   
+1. Back  to **Visual Studio Code**, replace the **YOUR_ADMIN_KEY** placeholder with the key you copied to the clipboard.
 
-6. Save the changes to **modify-search.cmd** (but don't run it yet!)
+      ![](../media/Active-image77.png)
+   
+1. Save the changes to **modify-search.cmd** (but don't run it yet!)
 
+     ![](../media/Active-image75.png)
+   
 ### Review and modify the skillset
 
 1. In Visual Studio Code, in the **modify-search** folder, open **skillset.json**. This shows a JSON definition for **margies-skillset**.
