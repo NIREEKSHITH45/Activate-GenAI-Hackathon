@@ -205,17 +205,17 @@ Now that you have the required resources, you can upload some documents to your 
     az login
     ```
 
-   >**Note**: Use the command `az login --username <your-username> --password <your-password>` if above command is not work.
+   >**Note**: Use the command `az login --username <your-username> --password <your-password>` if above command is not work and make sure to replace <your-username> <your-password> with **Azure username** and **password** which you using from challenge-1 .
 
    > **Note**: A web browser tab will open and prompt you to sign into Azure. Do so, and then close the browser tab and return to Visual Studio Code.
 
 8. Enter the following command to run the batch file. This will create a blob container in your storage account and upload the documents in the **data** folder to it.
 
     ```
-    UploadDocs
+    .\UploadDocs
     ```
 
-   >**Note:** Use `.\UploadDocs` if above command is not work
+   ![](../media/Active-image53.png)
 
 ### Task 5: Data Import and Indexing:
 #### Task 5.1: Index the documents
