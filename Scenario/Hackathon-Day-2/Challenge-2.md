@@ -17,6 +17,8 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 1. **Clone the Repository:**
    - Clone the repository within Visual Studio Code: `https://github.com/MicrosoftLearning/AI-102-AIEngineer`.
 
+     > Hint : You can utilize the following repository, https://github.com/MicrosoftLearning/AI-102-AIEngineer, to explore and perform the scenarios listed below.
+
 2. **Setup Azure Resources:**
    - Create an Azure AI Search resource with basic pricing.
    - Create an Azure AI Service with the Standard S0 SKU.
