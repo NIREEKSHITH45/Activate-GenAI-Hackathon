@@ -76,19 +76,37 @@ The solution you will create for Margie's Travel requires the following resource
 
 If you don't already have one in your subscription, you'll need to provision an **Azure AI Services** resource. Your search solution will use this to enrich the data in the datastore with AI-generated insights.
 
-1. Return to the home page of the Azure portal, and then select the **&#65291;Create a resource** button, search for *Azure AI Services*, and create an **Azure AI Services** resource with the following settings:
-    - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *The same resource group as your Azure AI Search resource*
-    - **Region**: *The same location as your Azure AI Search resource*
-    - **Name**: *Enter a unique name.*
-    - **Pricing tier**: Standard S0
-2. Select the required checkboxes and create the resource.
 
-     ![](../media/aiservices.png)
+1. Return to the home page of the Azure portal, and then select the **&#65291;Create a resource** button.
 
-3. Wait for deployment to complete, and then view the deployment details.
+    ![](../media/Active-image21.png)
+     
+1. Search for and select **Azure AI Services** from the list then from the available list, select **Azure AI Services**.
 
-   ![](../media/aiservices-01.png)
+   ![](../media/Active-image28.png)
+
+   ![](../media/Active-image29.png)
+    
+1. On the **Azure AI Services** page Click on **Create**. 
+
+   ![](../media/Active-image30.png)
+   
+1. Specify the following details to create an Azure AI Search service then click on **Review + Create** tab.
+   
+   | **Option**         | **Value**                                              |
+   | ------------------ | -----------------------------------------------------  |
+   | Subscription       | Leave default                                          |
+   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**                 |
+   | Name               | *Enter a unique name* for your search service or use the format **challengeservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) |
+   | Location           | Use the same location as the resource group            |
+   | Pricing tier       | Standard S0                                            |
+   | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** | 
+
+    >**Note**: Here, xxxxxx refers to the deployment ID
+    
+    ![](../media/Active-image31.png)
+   
+1. Once validation is successful on the **Review + Create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
 
 #### Task 2.3: Create a storage account
 
