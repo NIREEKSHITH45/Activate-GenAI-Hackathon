@@ -148,3 +148,4 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can
 
 - Refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for guidance on deploying the service.
 
+## Proceed with the next Challenge by clicking on **Next**>>.
