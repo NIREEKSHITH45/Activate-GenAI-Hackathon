@@ -278,9 +278,11 @@ Now that you have the documents in place, you can create a search solution by in
 
    ![](../media/Active-image62.png)
   
-1. On **Customize target index** tab change the **Index name** to **margies-index**.
+1. On **Customize target index** tab change the **Index name** to **margies-index (1)**.
    
-1. Ensure that the **Key** is set to **metadata_storage_path** and leave the **Suggester name** blank and **Search mode** at its default.
+1. Ensure that the **Key** is set to **metadata_storage_path (2)** and leave the **Suggester name** blank and **Search mode (3)** at its default value.
+
+    ![](../media/Active-image63.png)
    
 1. Make the following changes to the index fields, leaving all other fields with their default settings (**IMPORTANT**: you may need to scroll to the right to see the entire table):
 
@@ -294,25 +296,29 @@ Now that you have the documents in place, you can create a search solution by in
     | keyphrases | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
     | language | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | |
 
+
+    ![](../media/Active-image64.png)
+   
 1. Double-check your selections, paying particular attention to ensure that the correct **Retrievable**, **Filterable**, **Sortable**, **Facetable**, and **Searchable** options are selected for each field  (it can be difficult to change them later). Then proceed to the next step (*Create an indexer*).
 
-    ![](../media/importdata-02.png)
+1. Change the **Indexer name** to **margies-indexer**.
+1. Leave the **Schedule** set to **Once**.
+1. Expand the **Advanced** options and ensure that the **Base-64 encode keys** option is selected (generally, encoding keys make the index more efficient).
 
-12. Change the **Indexer name** to **margies-indexer**.
-13. Leave the **Schedule** set to **Once**.
-
-14. Expand the **Advanced** options and ensure that the **Base-64 encode keys** option is selected (generally, encoding keys make the index more efficient).
-
-15. Select **Submit** to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
+1. Select **Submit** to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
     1. Extracts the document metadata fields and content from the data source.
     2. Runs the skillset of cognitive skills to generate additional enriched fields.
     3. Maps the extracted fields to the index.
 
-    ![](../media/importdata-03.png)  
+    ![](../media/Active-image65.png)  
 
-16. In the bottom half of the **Overview** page for your Azure AI Search resource, view the **Indexers** tab, which should show the newly created **margies-indexer**. Wait a few minutes, and click **&orarr; Refresh** until the **Status** indicates success.
+1. On **Azure AI Search** resource page, expand **Search management** select **Indexers** which should show the newly created **margies-indexer**.
 
-    ![](../media/indexer.png) 
+   ![](../media/Active-image66.png)  
+
+1. Select **margies-indexer** . Wait a few minutes, and click **&orarr; Refresh** until the **Status** indicates success.
+
+    ![](../media/Active-image67.png) 
 
 #### Task 5.2: Search the index
 
