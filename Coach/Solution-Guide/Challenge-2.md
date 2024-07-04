@@ -35,20 +35,42 @@ The solution you will create for Margie's Travel requires the following resource
 #### Task 2.1: Create an Azure AI Search resource
 
 1. In a web browser, open the Azure portal at `https://portal.azure.com` and sign in using the Microsoft account associated with your Azure subscription.
-2. Select the **&#65291;Create a resource** button, search for *search*, and create an **Azure AI Search** resource with the following settings:
-    - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Create a new resource group (if you are using a restricted subscription, you may not have permission to create a new resource group - use the one provided).*
-    - **Service name**: *Enter a unique name.*
-    - **Location**: *Select a location - note that your Azure AI Search and Azure AI Services resources must be in the same location.*
-    - **Pricing tier**: Basic
 
-3. Wait for deployment to complete, and then go to the deployed resource.
+1. Select the **&#65291;Create a resource** button on the portal home page.
+
+    ![](../media/Active-image21.png)
+     
+1. Search for and select **Azure AI Search** from the list then from the available list, select **Azure AI Search**.
+
+   ![](../media/Active-image22.png)
+
+   ![](../media/Active-image23.png)
+    
+1. On the **Azure AI Search** page Click on **Create**. 
+
+   ![](../media/Active-image24.png)
    
-   ![](../media/searchservices.png)
+1. Specify the following details to create an Azure AI Search service then click on **Review + Create** tab.
+   
+   | **Option**         | **Value**                                              |
+   | ------------------ | -----------------------------------------------------  |
+   | Subscription       | Leave default                                          |
+   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**                 |
+   | Name               | *Enter a unique name* for your search service or use the format **searchservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) |
+   | Location           | Use the same location as the resource group            |
+   | Pricing tier       | Basic                                                  | 
 
-4. Review the **Overview** page on the blade for your Azure AI Search resource in the Azure portal. Here, you can use a visual interface to create, test, manage, and monitor the various components of a search solution, including data sources, indexes, indexers, and skillsets.
+    >**Note**: Here, xxxxxx refers to the deployment ID
+    
+    ![](../media/Active-image25.png)
+   
+1. Once validation is successful on the **Review + Create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
 
-   ![](../media/searchservices-01.png)
+   ![](../media/Active-image26.png)
+
+   ![](../media/Active-image27.png)
+
+1. Review the **Overview** page on the blade for your Azure AI Search resource in the Azure portal. Here, you can use a visual interface to create, test, manage, and monitor the various components of a search solution, including data sources, indexes, indexers, and skillsets.
 
 #### Task 2.2: Create an Azure AI Services resource
 
