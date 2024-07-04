@@ -94,7 +94,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
    ![](../media/Active-image30.png)
    
-1. Specify the following details to create an Azure AI Search service then click on **Review + Create** tab.
+1. Specify the following details to create an **Azure AI service** then click on **Review + Create** tab.
    
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
@@ -113,27 +113,44 @@ If you don't already have one in your subscription, you'll need to provision an 
 
 #### Task 2.3: Create a storage account
 
-1. Return to the home page of the Azure portal, and then select the **&#65291;Create a resource** button, search for *storage account*, and create a **Storage account** resource with the following settings:
-    - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *The same resource group as your Azure AI Search and Azure AI Services resources*
-    - **Storage account name**: *Enter a unique name.*
-    - **Region**: *Choose any available region.*
-    - **Performance**: Standard
-    - **Replication**: Locally redundant storage (LRS)
-    - On the **Advanced** tab, check the box next to *Allow enabling anonymous access on individual containers.*
 
-      ![](../media/search-storageaccount.png)
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Storage account** **(1)**, and then select **Storage account** **(2)** under services.
 
-      ![](../media/search-storageaccount-01.png)
+    ![](../media/Active-image34.png)
 
-2. Wait for deployment to complete, and then go to the deployed resource.
-3. On the **Overview** page, note the **Subscription ID**; this identifies the subscription for which the storage account is provisioned.
+1. Click on **Create**.
 
-   ![](../media/search-storageaccount-02.png)
+    ![](../media/Active-image35.png)
+   
+1. Specify the following details to create an Azure **Storage account** then click on **Next** tab.
+   
+   | **Option**            | **Value**                                              |
+   | ------------------    | -----------------------------------------------------  |
+   | Subscription          | Leave default                                          |
+   | Resource Group        | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**                 |
+   | Storage account name  | *Enter a unique name* for your search service or use the format **storagexxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) |
+   | Region                | Use the same location as the resource group            |
+   | Performance           | Standard                                            |
+   | Replication           | Locally redundant storage (LRS) | 
 
-4. On the **Access keys** page, note that two keys have been generated for your storage account. Then select **Show keys** to view the keys.
+   ![](../media/Active-image36.png)
 
-   ![](../media/search-storageaccount-04.png)
+1. On the **Advanced** tab, check the box next to **Allow enabling anonymous access on individual containers** and click on **Review + Create**
+
+   ![](../media/Active-image37.png)
+
+1. Once validation is successful on  **Review + Create** click **Create** and wait for the deployment to complete click on **Go to the resource**.
+      ![](../media/Active-image38.png)
+   
+      ![](../media/Active-image39.png)
+   
+1. On the **Overview** page, note the **Subscription ID**; this identifies the subscription for which the storage account is provisioned.
+
+   ![](../media/Active-image40.png)
+
+1. On the **Access keys** page, note that two keys have been generated for your storage account. Then select **Show keys** to view the keys.
+
+    ![](../media/Active-image41.png)
 
     > **Tip**: Keep the **Storage Account** blade open; you will need the subscription ID and one of the keys in the next procedure.
 
