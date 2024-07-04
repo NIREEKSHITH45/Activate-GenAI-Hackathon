@@ -20,10 +20,17 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 ### Accessing the Azure portal
 
+>**Important**: You can find the Username and Password within the environment by navigating to the **Environment** tab in the left pane then copy the **Username** and **Password**, which will be required for signing into the Azure portal in later steps and make sure to record the **Deployement Id** which is required in next up coming tasks. 
+
+  ![](../media/Active-image19.png)
+  ![](../media/Active-image20.png)
+
+>**Important**: You can find the **Deployement Id** within the username kindly record the Deployement which is requied in later steps.
+
 1. To access the Azure portal, open a private/incognito window in your browser and navigate to the [Azure Portal](https://portal.azure.com/).
 
 1. On the **Sign into Microsoft Azure tab**, you will see a login screen. Enter the following email/username, and then click on **Next**.
-
+   
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
      ![](../media/Active-image1.png)
