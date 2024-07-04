@@ -183,9 +183,16 @@ Now that you have the required resources, you can upload some documents to your 
 
    ![](../media/Active-image47.png)
    
-3. Edit the batch file to replace the **YOUR_SUBSCRIPTION_ID**, **YOUR_AZURE_STORAGE_ACCOUNT_NAME**, and **YOUR_AZURE_STORAGE_KEY** placeholders with the appropriate subscription ID, Azure storage account name, and Azure storage account key values for the storage account you created previously.
-4. Save your changes, and then right-click the **22-create-a-search-solution** folder and open an integrated terminal.
-5. Enter the following command to sign into your Azure subscription by using the Azure CLI:
+1. Navigate back to browser tab displaying **Azure portal**, retrieve the **subscription ID (1)**, **Azure storage account name (2)**, and **Azure storage account key** by clicking **Show** > **Clipboard (3)** option from the recently created storage account and record the values in notepad.
+
+      ![](../media/Active-image48.png)
+   
+      ![](../media/Active-image49.png)
+   
+1. Return to VS code and edit the batch file to replace placeholders YOUR_SUBSCRIPTION_ID, YOUR_AZURE_STORAGE_ACCOUNT_NAME, and YOUR_AZURE_STORAGE_KEY with the corresponding values which you recorded in previous step.
+
+5. Save your changes, and then right-click the **22-create-a-search-solution** folder and open an integrated terminal.
+6. Enter the following command to sign into your Azure subscription by using the Azure CLI:
 
    > **Note**: Ensure we have installed the Azure CLI and the Azure CLI Tools extension in Visual Studio Code.
 
@@ -197,7 +204,7 @@ Now that you have the required resources, you can upload some documents to your 
 
    > **Note**: A web browser tab will open and prompt you to sign into Azure. Do so, and then close the browser tab and return to Visual Studio Code.
 
-6. Enter the following command to run the batch file. This will create a blob container in your storage account and upload the documents in the **data** folder to it.
+7. Enter the following command to run the batch file. This will create a blob container in your storage account and upload the documents in the **data** folder to it.
 
     ```
     UploadDocs
