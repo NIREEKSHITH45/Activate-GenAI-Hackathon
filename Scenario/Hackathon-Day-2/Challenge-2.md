@@ -48,7 +48,8 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 7. **Deploy & Test a Search Client Application:**
    - Update application settings and configure the web app.
    - Run the application locally to test the search functionality.
-   - Hint: The app is available in two languages; use the one that aligns with your scope.
+
+     > Hint: The application supports multiple languages; choose the one that suits your project's requirements. Adjust your application settings and configure the web application as needed. Then, run the application locally to test the search functionality before proceeding with deployment. 
 
    <validation step="15277a80-8b44-474a-ac19-0831c71d5fbd" />
    
