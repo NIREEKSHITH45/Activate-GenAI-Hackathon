@@ -106,7 +106,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
     >**Note**: Here, xxxxxx refers to the deployment ID
     
-    ![](../media/Active-image31.png)
+    ![](../media/Active-image(31).png)
    
 1. Once validation is successful on the **Review + Create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
 
