@@ -22,23 +22,29 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 1. To access the Azure portal, open a private/incognito window in your browser and navigate to the [Azure Portal](https://portal.azure.com/).
 
-
 1. On the **Sign into Microsoft Azure tab**, you will see a login screen. Enter the following email/username, and then click on **Next**.
 
-
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+     ![](../media/Active-image1.png)
 
 1. Now enter the following password and click on **Sign in**.
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
+      ![](../media/Active-image2.png)
 
+1. When **Action Required window pop up click on **Ask Later**.
+
+    ![](../media/Active-image3.png)
+   
 1. If you see the pop-up **Stay Signed in?**, click **No**.
 
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+    ![](../media/Active-image4.png)
 
+1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
 
-1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Maybe Later** to skip the tour.
+    ![](../media/Active-image5.png)
 
 ## Prerequisites
 
@@ -53,7 +59,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 In this task you'll learn the process of setting up and deploying the Azure OpenAI service within the Azure Portal.
 
-1. In the Azure Portal, search for **Azure OpenAI** and select it.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI**, and then select **Azure OpenAI** under services.
 
    ![](../media/azure-openai-1-new.png)
 
