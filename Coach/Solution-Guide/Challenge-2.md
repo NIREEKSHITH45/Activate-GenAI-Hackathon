@@ -113,7 +113,6 @@ If you don't already have one in your subscription, you'll need to provision an 
 
 #### Task 2.3: Create a storage account
 
-
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Storage account** **(1)**, and then select **Storage account** **(2)** under services.
 
     ![](../media/Active-image34.png)
@@ -148,7 +147,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
    ![](../media/Active-image40.png)
 
-1. On the **Access keys** page, note that two keys have been generated for your storage account. Then select **Show keys** to view the keys.
+1. On the **Access keys** page, note that two keys have been generated for your storage account. Then select **Show** to view the keys.
 
     ![](../media/Active-image41.png)
 
