@@ -88,17 +88,15 @@ In this task you'll learn the process of setting up and deploying the Azure Open
 
 Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
 
-1. In the Azure Portal, search for **Azure OpenAI** and select it.
-
-    ![](../media/azure-openai-1-new.png)
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject>**.
 
-    ![](../media/challenge01.01.jpg)
+    ![](../media/Active-image12.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio**. It will navigate to **Azure AI Studio**.
 
-   ![](../media/challenge01.02.jpg)
+   ![](../media/Active-image11.png)
 
 4. On the **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
