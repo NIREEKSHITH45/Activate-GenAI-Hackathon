@@ -40,9 +40,11 @@ The solution you will create for Margie's Travel requires the following resource
 
     ![](../media/Active-image21.png)
      
-1. Search for and select **Azure AI Search** from the list then from the available list, select **Azure AI Search**.
+1. Search for and select **Azure AI Search** from the list.
 
    ![](../media/Active-image22.png)
+
+1. On the **Marketplace** page select **Azure AI Search**.
 
    ![](../media/Active-image33.png)
     
@@ -81,7 +83,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
     ![](../media/Active-image21.png)
      
-1. Search for and select **Azure AI Services** from the list then from the available list, select **Azure AI Services**.
+1. Search for and select **Azure AI Services** from the list then on the **Marketplace** page, select **Azure AI Services**.
 
    ![](../media/Active-image28.png)
 
