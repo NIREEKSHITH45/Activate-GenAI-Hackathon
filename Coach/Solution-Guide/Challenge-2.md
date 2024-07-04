@@ -225,30 +225,43 @@ Now that you have the required resources, you can upload some documents to your 
 Now that you have the documents in place, you can create a search solution by indexing them.
 
 1. In the Azure portal, browse to your **Azure AI Search** resource. Then, on its **Overview** page, select **Import data**.
-2. On the **Connect to your data** page, in the **Data Source** list, select **Azure Blob Storage**. Then complete the data store details with the following values:
-    - **Data Source**: Azure Blob Storage
-    - **Data source name**: margies-data
-    - **Data to extract**: Content and metadata
-    - **Parsing mode**: Default
-    - **Connection string**: *Select **Choose an existing connection**. Then select your storage account, and finally select the **margies** container that was created by the UploadDocs.cmd script.*
-    - **Managed identity authentication**: None
-    - **Container name**: margies
-    - **Blob folder**: *Leave this blank.*
-    - **Description**: Brochures and reviews in Margie's Travel web site.
+
+   ![](../media/Active-image54.png)
+
+1. On the **Connect to your data** page, in the **Data Source** list, select **Azure Blob Storage**. Then complete the data store details with the following values:
+    
+    - **Data Source**: Azure Blob Storage (1)
+    - **Data source name**: margies-data  (2)
+    - **Data to extract**: Content and metadata (3)
+    - **Parsing mode**: Default (4)
+    - **Subscription**: Leave default (5)  
+    - **Connection string**: *Select **Choose an existing connection (6)**. Then select your storage account (7), and finally select the **margies (8)** container that was created by the UploadDocs.cmd script. then click on **Select (9)**.
+        ![](../media/Active-image55.png)
+
+        ![](../media/Active-image56.png)
+
+        ![](../media/Active-image57.png)
+      
+    - **Managed identity authentication**: None (10)
+    - **Container name**: margies (11)
+    - **Blob folder**: *Leave this blank.* (12)
+    - **Description**: Brochures and reviews in Margie's Travel web site. (13)
+    - Click on **Add cognitive skills(Optional)**
+
+       ![](../media/Active-image58.png)
+
+1. On **Add cognitive skills (Optional)** tab expand **Attach AI Services(1)**, within the section  select your **Azure AI Services (2)** resource.
+
+     ![](../media/Active-image59.png)
    
-3. Proceed to the next step (*Add cognitive skills*).
+1. Scroll dowm and expand **Add enrichments** section and specify the following :
+    - Change the **Skillset name** to **margies-skillset (1)**.
+    - Select the checkbox for **Enable OCR and merge all text into merged_content field (2)**.
+    - Ensure that the **Source data field** is set to **merged_content (3) **.
+    - Leave the **Enrichment granularity level** as the **Source field (4)**, which sets the entire contents of the document being indexed, but note that you can change this to extract information at more granular levels, like pages or sentences.
+  
+      ![](../media/Active-image60.png)
 
-   ![](../media/importdata.png)
-
-4. In the **Attach Azure AI Services** section, select your Azure AI Services resource.
-
-    ![](../media/2.png)
-   
-5. In the **Add enrichments** section:
-    - Change the **Skillset name** to **margies-skillset**.
-    - Select the option **Enable OCR and merge all text into merged_content field**.
-    - Ensure that the **Source data field** is set to **merged_content**.
-    - Leave the **Enrichment granularity level** as the **Source field**, which sets the entire contents of the document being indexed, but note that you can change this to extract information at more granular levels, like pages or sentences.
     - Select the following enriched fields:
 
         | Cognitive Skill | Parameter | Field name |
@@ -259,13 +272,17 @@ Now that you have the documents in place, you can create a search solution by in
         | Generate tags from images | | imageTags |
         | Generate captions from images | | imageCaption |
 
-7. Double-check your selections (it can be difficult to change them later). Then proceed to the next step (*Customize target index*).
+        ![](../media/Active-image61.png)
+      
+1. Double-check your selections (it can be difficult to change them later). Then proceed to the next step (*Customize target index*).
 
-   ![](../media/importdata-01.png)
+   ![](../media/Active-image62.png)
   
-8. Change the **Index name** to **margies-index**.
-9. Ensure that the **Key** is set to **metadata_storage_path** and leave the **Suggester name** blank and **Search mode** at its default.
-10. Make the following changes to the index fields, leaving all other fields with their default settings (**IMPORTANT**: you may need to scroll to the right to see the entire table):
+1. On **Customize target index** tab change the **Index name** to **margies-index**.
+   
+1. Ensure that the **Key** is set to **metadata_storage_path** and leave the **Suggester name** blank and **Search mode** at its default.
+   
+1. Make the following changes to the index fields, leaving all other fields with their default settings (**IMPORTANT**: you may need to scroll to the right to see the entire table):
 
     | Field name | Retrievable | Filterable | Sortable | Facetable | Searchable |
     | ---------- | ----------- | ---------- | -------- | --------- | ---------- |
@@ -277,7 +294,7 @@ Now that you have the documents in place, you can create a search solution by in
     | keyphrases | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
     | language | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | |
 
-11. Double-check your selections, paying particular attention to ensure that the correct **Retrievable**, **Filterable**, **Sortable**, **Facetable**, and **Searchable** options are selected for each field  (it can be difficult to change them later). Then proceed to the next step (*Create an indexer*).
+1. Double-check your selections, paying particular attention to ensure that the correct **Retrievable**, **Filterable**, **Sortable**, **Facetable**, and **Searchable** options are selected for each field  (it can be difficult to change them later). Then proceed to the next step (*Create an indexer*).
 
     ![](../media/importdata-02.png)
 
