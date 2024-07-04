@@ -63,9 +63,26 @@ In this task you'll learn the process of setting up and deploying the Azure Open
 
     ![](../media/Active-image6.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**. Enter the details required and deploy the Azure Open AI service.
+1. On **Azure AI Services | Azure OpenAI** blade, click on **Create**. Enter the details required and deploy the Azure Open AI service.
 
-   ![](../media/challenge01.jpg)
+   ![](../media/Active-image7.png)
+
+1. Specify the following details to deploy the Azure Open AI service and click **Next** twice.
+
+   | **Option**         | **Value**                                              |
+   | ------------------ | -----------------------------------------------------  |
+   | Subscription       | Leave default                                          |
+   | Resource Group     | **<inject key="Resource Group Name"/>**                |
+   | Region             | **<inject key="Region" enableCopy="false"/>**          |
+   | Name               | **OpenAi-<inject key="DeploymentID" enableCopy="false"/>** |
+   | Pricing tier       | **Standard S0**                                        | 
+
+
+    ![](../media/Active-image9.png)
+
+1. Once validation is successful on the **Review + submit** tab, click **Create** and wait for the deployment to complete.
+
+     ![](../media/Active-image10.png)
 
 ### Task 2: Deploy a model
 
