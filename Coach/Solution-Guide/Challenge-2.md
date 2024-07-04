@@ -63,6 +63,7 @@ The solution you will create for Margie's Travel requires the following resource
    | Pricing tier       | Basic                                                  | 
 
     >**Note**: Here, xxxxxx refers to the deployment ID
+    >**Note**: If you encounter **Cannot get costs for subscription** please ignore the error and procced with next step.
     
     ![](../media/Active-image25.png)
    
