@@ -34,7 +34,7 @@ The solution you will create for Margie's Travel requires the following resource
 
 #### Task 2.1: Create an Azure AI Search resource
 
-1. In a web browser, open the Azure portal at `https://portal.azure.com` and sign in using the Microsoft account associated with your Azure subscription.
+1. In a web browser, sign in to Azure portal using `https://portal.azure.com`.
 
 1. Select the **&#65291;Create a resource** button on the portal home page.
 
@@ -52,15 +52,15 @@ The solution you will create for Margie's Travel requires the following resource
 
    ![](../media/Active-image24.png)
    
-1. Specify the following details to create an Azure AI Search service then click on **Review + Create** tab.
+1. Specify the following details to create an Azure AI Search service then click on **Review + Create (6)** tab.
    
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
-   | Subscription       | Leave default                                          |
-   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**                 |
-   | Name               | *Enter a unique name* for your search service or use the format **searchservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) |
-   | Location           | Use the same location as the resource group            |
-   | Pricing tier       | Basic                                                  | 
+   | Subscription       | Leave default  **(1)**                                 |
+   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**                |
+   | Name               | *Enter a unique name* for your search service or use the format **searchservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
+   | Location           | Use the same location as the resource group **(4)**           |
+   | Pricing tier       | Basic   **(5)**                                               | 
 
     >**Note**: Here, xxxxxx refers to the deployment ID
     >**Note**: If you encounter **Cannot get costs for subscription** please ignore the error and procced with next step.
@@ -94,16 +94,16 @@ If you don't already have one in your subscription, you'll need to provision an 
 
    ![](../media/Active-image30.png)
    
-1. Specify the following details to create an **Azure AI service** then click on **Review + Create** tab.
+1. Specify the following details to create an **Azure AI service** then click on **Review + Create (7)** tab.
    
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
-   | Subscription       | Leave default                                          |
-   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**                 |
-   | Name               | *Enter a unique name* for your search service or use the format **challengeservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) |
-   | Location           | Use the same location as the resource group            |
-   | Pricing tier       | Standard S0                                            |
-   | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** | 
+   | Subscription       | Leave default  **(1)**                                 |
+   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
+   | Name               | *Enter a unique name* for your search service or use the format **challengeservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
+   | Location           | Use the same location as the resource group  **(4)**          |
+   | Pricing tier       | Standard S0     **(5)**                                        |
+   | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 
 
     >**Note**: Here, xxxxxx refers to the deployment ID
     
@@ -121,16 +121,16 @@ If you don't already have one in your subscription, you'll need to provision an 
 
     ![](../media/Active-image35.png)
    
-1. Specify the following details to create an Azure **Storage account** then click on **Next** tab.
+1. Specify the following details to create an Azure **Storage account** then click on **Next** **(7)**  tab.
    
    | **Option**            | **Value**                                              |
    | ------------------    | -----------------------------------------------------  |
-   | Subscription          | Leave default                                          |
-   | Resource Group        | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**                 |
-   | Storage account name  | *Enter a unique name* for your search service or use the format **storagexxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) |
-   | Region                | Use the same location as the resource group            |
-   | Performance           | Standard                                            |
-   | Replication           | Locally redundant storage (LRS) | 
+   | Subscription          | Leave default **(1)**                                  |
+   | Resource Group        | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**         |
+   | Storage account name  | *Enter a unique name* for your search service or use the format **storagexxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
+   | Region                | Use the same location as the resource group **(4)**    |
+   | Performance           | Standard **(5)**                                       |
+   | Replication           | Locally redundant storage (LRS) **(6)**                | 
 
    ![](../media/Active-image36.png)
 
