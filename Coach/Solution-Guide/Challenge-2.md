@@ -191,8 +191,13 @@ Now that you have the required resources, you can upload some documents to your 
    
 1. Return to VS code and edit the batch file to replace placeholders YOUR_SUBSCRIPTION_ID, YOUR_AZURE_STORAGE_ACCOUNT_NAME, and YOUR_AZURE_STORAGE_KEY with the corresponding values which you recorded in previous step.
 
-5. Save your changes, and then right-click the **22-create-a-search-solution** folder and open an integrated terminal.
-6. Enter the following command to sign into your Azure subscription by using the Azure CLI:
+    ![](../media/Active-image50.png)
+   
+1. Save your changes, and then right-click the **22-create-a-search-solution (1)** folder > **open an integrated terminal (2)**.
+
+    ![](../media/Active-image51.png)
+
+1. Enter the following command to sign into your Azure subscription by using the Azure CLI:
 
    > **Note**: Ensure we have installed the Azure CLI and the Azure CLI Tools extension in Visual Studio Code.
 
@@ -204,7 +209,7 @@ Now that you have the required resources, you can upload some documents to your 
 
    > **Note**: A web browser tab will open and prompt you to sign into Azure. Do so, and then close the browser tab and return to Visual Studio Code.
 
-7. Enter the following command to run the batch file. This will create a blob container in your storage account and upload the documents in the **data** folder to it.
+8. Enter the following command to run the batch file. This will create a blob container in your storage account and upload the documents in the **data** folder to it.
 
     ```
     UploadDocs
