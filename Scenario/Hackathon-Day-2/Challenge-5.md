@@ -52,7 +52,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
     - Utilize the trained Azure Document Intelligence  to create a new pipeline in BPA.
     - Configure the pipeline for efficient document processing and integration with Azure Cognitive Search.
 
-      > Hind : Utilize static web app.
+      > Hint : Utilize static web app.
 
 1) **Configure Azure AI Search:**
     - Connect to Azure Blob Storage and configure data import and indexing.
