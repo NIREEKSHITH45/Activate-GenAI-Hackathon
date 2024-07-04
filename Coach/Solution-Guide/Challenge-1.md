@@ -59,9 +59,9 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 In this task you'll learn the process of setting up and deploying the Azure OpenAI service within the Azure Portal.
 
-1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI**, and then select **Azure OpenAI** under services.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-   ![](../media/azure-openai-1-new.png)
+    ![](../media/Active-image6.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**. Enter the details required and deploy the Azure Open AI service.
 
