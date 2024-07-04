@@ -25,7 +25,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 >**Note**: Numbers and ID's values may vary kindly ignore values in screenshots and copy values from **Environment** tab.
 
  ![](../media/Active-image19.png)
-  ![](../media/Active-image20.png)
+  ![](../media/Active-image(20).png)
 
 >**Important**: You can find the **Deployement Id** within the username kindly record the Deployement which is requied in later steps.
 
