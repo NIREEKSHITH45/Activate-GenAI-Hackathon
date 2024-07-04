@@ -27,7 +27,20 @@ If you have not already cloned the **AI-102-AIEngineer** code repository to the 
     ![](../media/Active-image43.png)
 
 1. Wait while additional files are installed to support the C# code projects in the repo.
-1. When the repository has been cloned, open the folder in Visual Studio Code.
+
+1. When the repository has been cloned, open the folder in Visual Studio Code by following below steps:
+
+    - From the top left corncer menu select **File** >  **Open Folder**.
+
+       ![](../media/Active-image44.png)
+      
+    - Within the file explorer in **Quick access** select **AI-102-AIEngineer** then click on **Select folder**.
+
+       ![](../media/Active-image45.png)
+      
+    - If **Do you trust the authors of the files in this folder?** prompted click on **Yes, I trust the authors**.
+
+         ![](../media/Active-image46.png)
 
     > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
