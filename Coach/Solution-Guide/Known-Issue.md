@@ -2,5 +2,5 @@
 
 ## Challenge- 03 
 
-While running the following command if you encounter error can be ignore and kindly proceed with next steps
+1. While deploying Azure resources if you encounter the following error can be ignored and kindly proceed with next steps.
 
