@@ -44,7 +44,7 @@ The solution you will create for Margie's Travel requires the following resource
 
    ![](../media/Active-image22.png)
 
-   ![](../media/Active-image23.png)
+   ![](../media/Active-image33.png)
     
 1. On the **Azure AI Search** page Click on **Create**. 
 
