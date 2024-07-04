@@ -34,7 +34,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
       ![](../media/Active-image2.png)
 
-1. When **Action Required window pop up click on **Ask Later**.
+1. When **Action Required** window pop up click on **Ask Later**.
 
     ![](../media/Active-image3.png)
    
