@@ -17,6 +17,7 @@ To address this challenge, Margie's Travel can use Azure AI Search to implement 
 If you have not already cloned the **AI-102-AIEngineer** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
 
 1. Within the **LabVM** on desktop open **Visual Studio Code**.
+
 1. In **Visual Studio Code** from the left top menu select **(...) (1)** ellipics > **Terminal (2)** then choose **New Terminal (3)**
 
    ![](../media/Active-image42.png)
@@ -43,7 +44,7 @@ If you have not already cloned the **AI-102-AIEngineer** code repository to the 
 
          ![](../media/Active-image46.png)
 
-    > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
+       > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
 ### Task 2: Create Azure resources
 
@@ -53,7 +54,7 @@ The solution you will create for Margie's Travel requires the following resource
 - An **Azure AI Services** resource that provides AI services for skills that your search solution can use to enrich the data in the data source with AI-generated insights.
 - A **Storage account** with a blob container in which the documents to be searched are stored.
 
-> **Important**: Your Azure AI Search and Azure AI Services resources must be in the same location.
+  > **Important**: Your Azure AI Search and Azure AI Services resources must be in the same location.
 
 #### Task 2.1: Create an Azure AI Search resource
 
@@ -86,7 +87,7 @@ The solution you will create for Margie's Travel requires the following resource
    | Pricing tier       | Basic   **(5)**                                               | 
 
     >**Note**: Here, xxxxxx refers to the deployment ID
-    >**Note**: If you encounter **Cannot get costs for subscription** please ignore the error and procced with next step.
+    >**Note**: If you encounter the error **Cannot get costs for subscription**, please ignore it and proceed with the next step.
     
     ![](../media/Active-image25.png)
    
@@ -192,7 +193,7 @@ Now that you have the required resources, you can upload some documents to your 
    
 1. Return to VS code and edit the batch file to replace placeholders YOUR_SUBSCRIPTION_ID, YOUR_AZURE_STORAGE_ACCOUNT_NAME, and YOUR_AZURE_STORAGE_KEY with the corresponding values which you recorded in previous step.
 
-    ![](../media/Active-image50.png)
+    ![](../media/Active-image85.png)
    
 1. Save your changes, and then right-click the **22-create-a-search-solution (1)** folder > **open an integrated terminal (2)**.
 
