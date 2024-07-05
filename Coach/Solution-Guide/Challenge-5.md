@@ -22,7 +22,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
     ![](../media/Active-image122.png)
 
-1. From the left navigation pane expand **Settings (1)** then select **Resource Providers (2)** check **Microsoft DocumentDB** status is marked as **"Registered" (3)**. If marked as "NotRegistered", select **Microsoft DocumentDB** then click **Register**  from the top menu.
+1. From the left navigation pane expand **Settings (1)** then select **Resource Providers (2)** check **Microsoft DocumentDB** status is marked as **"Registered" (3)**. If marked as **NotRegistered**, select **Microsoft DocumentDB** then click **Register** from the top menu.
 
    **Note**: *This process may take several seconds or minutes; be sure to refresh the entire browser periodically.*
 
