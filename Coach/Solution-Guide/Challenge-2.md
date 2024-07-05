@@ -715,7 +715,7 @@ The web app already includes code to process and render the search results.
 1. Observe that the results are filtered to include only reviews and sorted based on the sentiment label.
    ![](../media/Active-image98.png)
    
-1. In the **Search** box, enter a new search for **quiet hotel in New York** and review the results.
+1. On the **Margie's Travel** website, enter **quiet hotel in New York (1)** into the search box and click **Search (2)**.
 
     ![](../media/Active-image99.png)
    
