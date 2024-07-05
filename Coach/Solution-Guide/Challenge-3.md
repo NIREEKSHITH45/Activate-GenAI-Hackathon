@@ -43,9 +43,9 @@ Together, these services create a responsive chat application that combines AI f
 
 **Deploying the infrastructure**
 
-1. In the LabVM, type **Powershell 7** in the Windows Search bar.
+1. In the **LabVM**, in the Windows Search bar type **Powershell** and select **PowerShell 7-preview (x64)** then **Run as Administrator**.
 
-1. Select it and **Run as Administrator**.
+    ![](../media/Active-image102.png)
    
 1. Run the following command to login to Azure:
 
@@ -53,9 +53,12 @@ Together, these services create a responsive chat application that combines AI f
    azd auth login
    ```
 
-   >**Note**: A web browser tab will open and prompt you to sign into Azure. Select the Azure Account you had previously logged in with. Close the browser tab once prompted.
+   - After running the above command, a web browser tab will open and prompt you to sign into Azure. Select the Azure account you had previously logged into, or if prompted, provide your Azure username and password. Once authentication is complete, you can return to PowerShell 7.
 
-   ![](../media/gen1.png)
+   - Return to PowerShell 7, where you should see the message **Logged in to Azure**.
+
+     ![](../media/Active-image104.png)
+
 1. Once successfully logged in ,run the below command to download the project code:
 
    ```
