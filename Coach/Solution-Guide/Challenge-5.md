@@ -18,11 +18,13 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
       ![](../media/gen30.png)
 
-1. Select the **existing subscription (1)** , click on **Resource Providers (2)** at the bottom of the left navigation pane and check if the status is marked as **"Registered" (3)**. If marked as "NotRegistered", select "Register."  
+1. Select the existing **Subscription (1)** ,
+
+1. From the left navigation pane expand **Settings (1)** then select **Resource Providers (2)** check **Microsoft DocumentDB** status is marked as **"Registered" (3)**. If marked as "NotRegistered", select **Microsoft DocumentDB** then click **Register**  from the top menu.
 
    **Note**: *This process may take several seconds or minutes; be sure to refresh the entire browser periodically.*
 
-      ![](../media/gen31.png)
+      ![](../media/Active-image123.png)
         
 1. Ensure that you have **accepted the terms and conditions for Responsible AI**:  
 You must initiate the creation of a "Cognitive Services multi-service account" from the Azure portal to review and acknowledge the terms and conditions. You can do so here: [Quickstart: Create a Cognitive Services resource using the Azure portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows).  
