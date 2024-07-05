@@ -587,14 +587,14 @@ Now that you have a useful index, you can use it from a client application. You 
 
     ![](../media/Active-image86.png)
    
-1. From the left navigation expand **Settings** select **Keys**, note that there are two **admin** keys and a single **query** key.
+1. From the left navigation expand **Settings** select **Keys**, note that there are two **admin** keys and a single **Manage query keys** key.
 
    >**Note**: An *admin* key is used to create and manage search resources
-   >**Note**: An *query* key is used by client applications that only need to perform search queries.
+   >**Note**: An *Manage query keys* key is used by client applications that only need to perform search queries.
 
     ![](../media/Active-image87.png)
 
-1.  Please copy the query key to the clipboard and record it in Notepad, as it will be needed for upcoming tasks.
+1.  Please copy the **Manage query keys** to the clipboard and record it in Notepad, as it will be needed for upcoming tasks.
 
      ![](../media/Active-image88.png)
     
@@ -615,11 +615,19 @@ Now that you have a useful index, you can use it from a client application. You 
     pip install azure-search-documents==11.0.0
     ```
     
-3. View the contents of the **margies-travel** folder, and note that it contains a file for configuration settings:
+1. View the contents of the **margies-travel** folder, and note that it contains a file for configuration settings:
     - **C#**: appsettings.json
     - **Python**: .env
 
-    Open the configuration file and update the configuration values it contains to reflect the **endpoint** and **query key** for your Azure AI Search resource. Save your changes.
+1. Open the configuration file and update the **YOUR_SEARCH_ENDPOINT**  with the **Azure AI Search** *Endpoint URL* link and  **YOUR_SEARCH_QUERY_KEY** values with **Manage query keys** which you recorded in previous tasks and save the changes.
+
+    - **C#**: appsettings.json
+
+       ![](../media/Active-image93.png)
+
+    - **Python**: .env
+  
+      ![](../media/Active-image94.png)
 
 ### Explore code to search an index
 
@@ -628,9 +636,12 @@ The **margies-travel** folder contains code files for a web application (a Micro
 1. Open the following code file in the web application, depending on your choice of programming language:
     - **C#**:Pages/Index.cshtml.cs
     - **Python**: app.py
-2. Near the top of the code file, find the comment **Import search namespaces**, and note the namespaces that have been imported to work with the Azure AI Search SDK:
-3. In the **search_query** function, find the comment **Create a search client**, and note that the code creates a **SearchClient** object using the endpoint and query key for your Azure AI Search resource:
-4. In the **search_query** function, find the comment **Submit search query** and review the code to submit a search for the specified text with the following options:
+
+1. Near the top of the code file, find the comment **Import search namespaces**, and note the namespaces that have been imported to work with the Azure AI Search SDK:
+
+1. In the **search_query** function, find the comment **Create a search client**, and note that the code creates a **SearchClient** object using the endpoint and query key for your Azure AI Search resource:
+   
+1. In the **search_query** function, find the comment **Submit search query** and review the code to submit a search for the specified text with the following options:
     - A *search mode* that requires **all** of the individual words in the search text to be found.
     - The total number of documents found by the search is included in the results.
     - The results are filtered to include only documents that match the provided filter expression.
