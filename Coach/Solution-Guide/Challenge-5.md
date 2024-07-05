@@ -131,14 +131,6 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
      
      ![](../media/Active-image141.png)
 
-1. Only the Resource Group, Repo Token (from #2), and **Forked GitHub** Repo **Url** are needed.  The remaining parameters are filled in for you.
-
-      ![](../media/gen39.png)
-
-      > **Note:** Ensure the primary region is set to EASTUS2
-
-   ![](../media/gen47.png)
-
 1. Verify that all the resources are deployed without any issues.
    
    ![](../media/d005.png)
