@@ -81,10 +81,10 @@ In this task you'll learn the process of setting up and deploying the Azure Open
    | Subscription       | Leave default                                          |
    | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**                 |
    | Region             | Use the same location as the resource group            |
-   | Name               | **OpenAi-<inject key="DeploymentID" enableCopy="false"/>** |
+   | Name               | *Enter a unique name* or use the format **OpenAi-xxxxxx** (replace **xxxxxx** with the **Deployment ID** |
    | Pricing tier       | **Standard S0**                                        | 
 
-   >**Note**: Here, xxxxxx refers to the deployment ID
+   >**Note**: Here, xxxxxx refers to the **deployment ID** which you recorded in last task.
 
     ![](../media/Active-image9.png)
 
