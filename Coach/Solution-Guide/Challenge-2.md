@@ -585,18 +585,18 @@ Now that you have a useful index, you can use it from a client application. You 
 
 1. In the Azure portal, navigate back to **Azure AI Search**. On the Overview page for the **Azure AI Search** resource, note the url value, which should be similar to **https://your_resource_name.search.windows.net**. Please record this value in Notepad as it will be required in upcoming tasks.
 
-    ![](../media/Active-image85.png)
+    ![](../media/Active-image86.png)
    
 1. From the left navigation expand **Settings** select **Keys**, note that there are two **admin** keys and a single **query** key.
 
    >**Note**: An *admin* key is used to create and manage search resources
    >**Note**: An *query* key is used by client applications that only need to perform search queries.
 
-    ![](../media/Active-image86.png)
+    ![](../media/Active-image87.png)
 
 1.  Please copy the query key to the clipboard and record it in Notepad, as it will be needed for upcoming tasks.
 
-     ![](../media/Active-image87.png)
+     ![](../media/Active-image88.png)
     
 ### Prepare to use the Azure AI Search SDK
 
