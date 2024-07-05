@@ -65,33 +65,46 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 You must initiate the creation of a "Cognitive Services multi-service account" from the Azure portal to review and acknowledge the terms and conditions. You can do so here: [Quickstart: Create a Cognitive Services resource using the Azure portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows).  
 Once accepted, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc.) under the same Azure subscription.
 
-1. [Get a Workflow Level Token (Classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+1. Navigate to `https://github.com/CloudLabs-MOC/business-process-automation` and click on **Sign in** then provide your personal **GitHub Username** and **Password** then click **Sign in**.
 
-1. Navigate to `https://github.com/CloudLabs-MOC/business-process-automation` and click on **Sign in**.
+    ![](../media/Active-image128.png)
 
-      ![](../media/gen32.png)
+    ![](../media/Active-image129.png)
+    
+1. Once signed in, select **fork (1)** to fork the repository then on **Create a new fork** click **Create fork (2)**.
    
-1. Once signed in, fork the repository to a git account for which you are the Admin. 
+    ![](../media/Active-image130.png)
 
-      ![](../media/gen38.png)
+   ![](../media/Active-image131.png)
 
 1. Click on your **profile** which is at the top of your right hand, and then select **Settings**.
 
+    ![](../media/Active-image132.png)
+   
 1. Scroll down to the complete bottom and select **Developer settings**.
 
-      ![](../media/gen34.png)
+    ![](../media/Active-image133.png)
 
-1. Click on **Tokens (classic)** from the left pane and select **Generate new token (classic)**.
+1. From the left navigation pane, expand **Personal access tokens (1)** and select **Tokens (classic) (2)**. On the **Personal access tokens** page, click **Generate new token (3)** and then choose **Generate new token (classic) (4)**.
 
-      ![](../media/gen35.png)
+      ![](../media/Active-image134.png)
 
 1. Provide the following details:
 
    - Note: **PAT (1)**
    - Expiration: **7 days (2)**
-   - Select scopes: Select all the **main scopes (3)**
+     
+     ![](../media/Active-image135.png)
 
-      ![](../media/gen36.png)
+   - Select scopes: Select all the scopes **repo, workflow, write:packages, delete:packages, admin:org, admin:public_key, admin:repo_hook, admin:org_hook, gist,notifications, user, delete_repo, write:discussion, admin:enterprise, audit_log, codespace, copilot, project, admin:gpg_key, admin:ssh_signing_key** and click on **Genearte token**.
+
+      ![](../media/Active-image138.png)
+
+      ![](../media/Active-image139.png)
+
+      ![](../media/Active-image140.png)
+
+   >**Reference link**: [Get a Workflow Level Token (Classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
 1. Copy the PAT token and paste it in a notepad.
 
