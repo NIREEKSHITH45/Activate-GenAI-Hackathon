@@ -149,7 +149,7 @@ If you don't already have one in your subscription, you'll need to provision an 
    | ------------------    | -----------------------------------------------------  |
    | Subscription          | Leave default **(1)**                                  |
    | Resource Group        | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**         |
-   | Storage account name  | *Enter a unique name* for your search service or use the format **storagexxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
+   | Storage account name  | *Enter a unique name* for your Storage account or use the format **storagexxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Region                | Use the same location as the resource group **(4)**    |
    | Performance           | Standard **(5)**                                       |
    | Replication           | Locally redundant storage (LRS) **(6)**                | 
