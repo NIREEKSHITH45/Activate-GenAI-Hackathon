@@ -131,9 +131,23 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
      
      ![](../media/Active-image141.png)
 
+1. Click on **Review + Create**, if you encounter issue while deploying the resource follow the below steps
+
+   - Open another tab in edge browser and sign in to **Azure portal** and search for **OpenAI**.
+   - Select the existing **OpenAI** recourse and click on **Manage deleted resources**.
+
+      ![](../media/Active-image142.png)
+
+    - On **Manage deleted resources** blade, select **Subscription** > **OpenAi resources** click on **Purge**.
+
+    - Back to Azure portal where Custom deployemnt page is open click on **Previous** and select **Create**.
+
+1. Wait for the deployment to get complete     
+
 1. Verify that all the resources are deployed without any issues.
    
    ![](../media/d005.png)
+
    
 #### Task 1.2 - Create Azure Blob Storage containers
 
