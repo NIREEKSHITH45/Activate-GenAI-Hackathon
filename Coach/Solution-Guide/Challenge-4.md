@@ -12,7 +12,7 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
 
 One of the hottest themes at the moment is size models; users are particularly interested in conversation GPT. The most intriguing thing about all those basic models—Chat GPT included—is that while they perform admirably on their own, they perform even better when combined with your own data.
 
-1. In Azure Portal, search for and select the **App Services**. 
+1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **App Services (1)**, and then select **App Services (2)** under services.
 
    ![](../media/Active-image112.png)
 
