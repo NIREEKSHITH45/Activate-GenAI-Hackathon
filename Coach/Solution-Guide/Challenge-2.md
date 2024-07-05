@@ -690,22 +690,42 @@ The web app already includes code to process and render the search results.
     ```
     > **Note:** If the command fails, **run pip Install python-dotenv** command and then run the command again.
 
-3. In the message that is displayed when the app starts successfully, follow the link to the running web application (*http://localhost:5000/* or *http://127.0.0.1:5000/*) to open the Margies Travel site in a web browser.
-4. On the Margie's Travel website, enter **London hotel** into the search box and click **Search**.
-5. Review the search results. They include the file name (with a hyperlink to the file URL), an extract of the file content with the search terms (*London* and *hotel*) emphasized, and other attributes of the file from the index fields.
-6. Observe that the results page includes some user interface elements that enable you to refine the results. These include:
-    - A *filter* based on a facet value for the **metadata_author** field. This demonstrates how you can use *facetable* fields to return a list of *facets* - fields with a small set of discrete values that can be displayed as potential filter values in the user interface.
-    - The ability to *order* the results based on a specified field and sort direction (ascending or descending). The default order is based on *relevancy*, which is calculated as a **search.score()** value based on a *scoring profile* that evaluates the frequency and importance of search terms in the index fields.
-7. Select the **Reviewer** filter and the **Positive to negative** sort option, and then select **Refine Results**.
-8. Observe that the results are filtered to include only reviews and sorted based on the sentiment label.
-9. In the **Search** box, enter a new search for **quiet hotel in New York** and review the results.
-10. Try the following search terms:
+1. Open the another tab in edge browse following the link (*http://localhost:5000/* or *http://127.0.0.1:5000/*) to open the **Margie's Travel** site in a web browser.
+
+    ![](../media/Active-image101.png)
+   
+1. On the **Margie's Travel** website, enter **London hotel (1)** into the search box and click **Search (2)**.
+
+    ![](../media/Active-image95.png)
+   
+1. Review the search results. They include the file name (with a hyperlink to the file URL), an extract of the file content with the search terms (*London* and *hotel*) emphasized, and other attributes of the file from the index fields.
+
+    ![](../media/Active-image96.png)
+   
+1. Observe that the results page includes some user interface elements that enable you to refine the results. These include:
+    
+    - A *Filter by author* based on a facet value for the **metadata_author** field. This demonstrates how you can use *facetable* fields to return a list of *facets* - fields with a small set of discrete values that can be displayed as potential filter values in the user interface.
+    
+    - A **Sort by** ability to *order* the results based on a specified field and sort direction (ascending or descending). The default order is based on *relevancy*, which is calculated as a **search.score()** value based on  a *scoring profile* that evaluates the frequency and importance of search terms in the index fields.
+
+1. Select the **Reviewer** filter and the **Positive to negative** sort option, and then select **Refine Results**.
+
+     ![](../media/Active-image97.png)
+   
+1. Observe that the results are filtered to include only reviews and sorted based on the sentiment label.
+   ![](../media/Active-image98.png)
+   
+1. In the **Search** box, enter a new search for **quiet hotel in New York** and review the results.
+
+    ![](../media/Active-image99.png)
+   
+1. Try the following search terms:
     - **Tower of London** (observe that this term is identified as a *key phrase* in some documents).
     - **skyscraper** (observe that this word doesn't appear in the actual content of any documents but is found in the *image captions* and *image tags* that were generated for images in some documents).
     - **Mojave desert** (observe that this term is identified as a *location* in some documents).
 
 
-11. Close the browser tab containing Margie's Travel website and return to Visual Studio Code. Then, in the Python terminal for the **margies-travel** folder (where the dotnet or flask application is running), enter Ctrl+C to stop the app.
+1. Close the browser tab containing Margie's Travel website and return to Visual Studio Code. Then, in the Python terminal for the **margies-travel** folder (where the dotnet or flask application is running), enter Ctrl+C to stop the app.
 
 
 ## More information
