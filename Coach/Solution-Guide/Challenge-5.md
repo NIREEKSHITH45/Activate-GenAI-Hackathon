@@ -28,22 +28,37 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
       ![](../media/Active-image123.png)
         
-1. Ensure that you have **accepted the terms and conditions for Responsible AI**:  
-You must initiate the creation of a "Cognitive Services multi-service account" from the Azure portal to review and acknowledge the terms and conditions. You can do so here: [Quickstart: Create a Cognitive Services resource using the Azure portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows).  
-Once accepted, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc.) under the same Azure subscription.
+1. To make sure that we have **Accepted the terms and conditions for Responsible AI**:  We must initiate the creation of a **Azure AI Services multi-service account** from the Azure portal to review and acknowledge the terms and conditions. In next step will start creating a **Azure AI Services multi-service account**. 
 
-1. Search for **Azure AI services multi-servic**e account and select it.
+    >**Note**: Reference doc: [Quickstart: Create a Cognitive Services resource using the Azure portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows). Once accepted, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc.) under the same Azure subscription.
 
-1. Provide the follwing details and click on **Review + Create** :
+1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI services multi-service (1)**, and then select **Azure AI services multi-service (2)** under services.
 
-   - Subscription: **Select the default subscription (1)**.
-   - Resource Group: **<inject key="Resource Group Name"/>**(2)
-   - Region: **Select the default region (3)**.
-   - Name: **Provide any name (4)**.
-   - Pricing Tier: **Select Standard SO (5)**
-   - Ensure to **check the box** which acknowledges the terms and conditions **(6)**.
+   ![](../media/Active-image124.png)
 
-       ![](../media/gen40.png)
+1. On
+
+   ![](../media/Active-image125.png)
+
+1. Specify the following details to create an **Azure AI service** then click on **Review + Create (7)** tab.
+   
+   | **Option**         | **Value**                                              |
+   | ------------------ | -----------------------------------------------------  |
+   | Subscription       | Leave default  **(1)**                                 |
+   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
+   | Name               | *Enter a unique name* for your search service or use the format **AI-Service-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
+   | Location           | Use the same location as the resource group  **(4)**          |
+   | Pricing tier       | Standard S0     **(5)**                                        |
+   | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 
+
+    >**Note**: Here, xxxxxx refers to the deployment ID
+
+
+   ![](../media/Active-image126.png)
+
+1. Once validation is successful on the **Review + Create** tab, click **Create** and wait for the deployment to complete.
+
+   ![](../media/Active-image127.png)
 
 1. Ensure that you have **accepted the terms and conditions for Responsible AI**:  
 You must initiate the creation of a "Cognitive Services multi-service account" from the Azure portal to review and acknowledge the terms and conditions. You can do so here: [Quickstart: Create a Cognitive Services resource using the Azure portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows).  
