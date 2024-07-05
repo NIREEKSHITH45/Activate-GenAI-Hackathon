@@ -14,7 +14,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 ### Task 1: Translate the documents using Translate
 
-1. Search for **subscriptions** and select **subscriptions**.
+1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Subscriptions (1)**, and then select **Subscriptions (2)** under services.
 
       ![](../media/gen30.png)
 
