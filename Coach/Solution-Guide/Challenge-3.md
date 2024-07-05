@@ -68,19 +68,21 @@ Together, these services create a responsive chat application that combines AI f
 
 1. When prompted with **Continue iniatializing an app in `C:\Users\demouser`**, type **y / yes (1)**.
 
-   ![](../media/gen2.png)
+   ![](../media/Active-image105.png)
 
-1. Once presented with **What would you like to do with these files?**, choose **Overwrite with versions from template**.
+1. If **What would you like to do with these files?** prompted, choose **Overwrite with versions from template**.
 
    ![](../media/gen3.png)
 
 1. Enter a new environment name:  **activategenai**
 
-    >**Note**: This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
+   >**Note**: This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
 
-      ![](../media/gen4.png)
+   ![](../media/Active-image106.png)
 
 1. Verify the new project initialized is successful.
+
+   ![](../media/Active-image107.png)
    
 1. Run the below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
 
