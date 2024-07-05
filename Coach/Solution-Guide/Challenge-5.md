@@ -16,9 +16,11 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Subscriptions (1)**, and then select **Subscriptions (2)** under services.
 
-      ![](../media/gen30.png)
+      ![](../media/Active-image121.png)
 
-1. Select the existing **Subscription (1)** ,
+1. Select the existing **Subscription**.
+
+    ![](../media/Active-image122.png)
 
 1. From the left navigation pane expand **Settings (1)** then select **Resource Providers (2)** check **Microsoft DocumentDB** status is marked as **"Registered" (3)**. If marked as "NotRegistered", select **Microsoft DocumentDB** then click **Register**  from the top menu.
 
