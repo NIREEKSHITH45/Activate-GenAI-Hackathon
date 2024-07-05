@@ -107,7 +107,7 @@ Together, these services create a responsive chat application that combines AI f
     ![](../media/Active-image108.png)
     ![](../media/Active-image109.png)
  
->**Note**: It may take 30 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
+    >**Note**: It may take 30 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
 
 ## Additional Resources:
 
