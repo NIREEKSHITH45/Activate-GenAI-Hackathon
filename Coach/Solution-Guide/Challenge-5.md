@@ -30,7 +30,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI services multi-service (1)**, and then select **Azure AI services multi-service (2)** under services.
 
-   ![](../media/Active-image124.png)
+   ![](../media/Active-image(124).png)
 
 1. On **Azure Al services Azure Al services multi-service account** blade, click on **Create**.
 
