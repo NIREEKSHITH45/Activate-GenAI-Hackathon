@@ -93,19 +93,21 @@ Together, these services create a responsive chat application that combines AI f
 
 1. Add the following details when prompted:
 
-   - Select an Azure Subscription to use: **Select the default subscription (1)**
+   - Select an Azure Subscription to use: Press **Enter** to choose the default **subscription (1)**
    - Select an Azure Location to use: **Select any location you would like to use (2)**
    - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter : **Select any location you would like to use (3)**
    - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select any location you would like to use(4)**
      
+      ![](../media/Active-image110.png)
 
-        ![](../media/gen5.png)
+      ![](../media/Active-image111.png)
 
-1. After the application has been successfully deployed you will see a URL printed to the console. Click that URL to interact with the application in your browser. It will look like the following:
+1. After the application has been successfully deployed you will see a URL printed to the console. Copy browse the URL to interact with the application in your browser. It will look like the following:
 
-   ![](../media/gen6.png)
+    ![](../media/Active-image108.png)
+    ![](../media/Active-image109.png)
  
->**Note**: It may take 5-10 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
+>**Note**: It may take 30 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
 
 ## Additional Resources:
 
