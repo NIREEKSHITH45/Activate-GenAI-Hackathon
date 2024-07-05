@@ -115,7 +115,23 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
      ### With OpenAI
       [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
 
-1. Only the Resource Group, Repo Token (from #2), and Forked Git Repo Url are needed.  The remaining parameters are filled in for you.
+1. Custom deployment blade, specify the following and others parameters can keep default values.
+
+   - Resource Group : **ODL-GenAI-CL-xxxxxx-Activate-GenAI**
+   - Repository Token : Paste the PAT token which you created and recorded in previous step.
+   - Repository Url : Paste the **Forked Github account** url
+
+      ![](../media/gen39.png)
+  
+      >**Note**: Ensure the primary region is set to EASTUS2
+      
+       ![](../media/gen47.png)
+     
+     >**Note**: (you can get URL by click on profile from right corner then select **Your repositories** click on **business-process-automation** and from top bar copy the **Github account** url)
+     
+     ![](../media/Active-image141.png)
+
+1. Only the Resource Group, Repo Token (from #2), and **Forked GitHub** Repo **Url** are needed.  The remaining parameters are filled in for you.
 
       ![](../media/gen39.png)
 
