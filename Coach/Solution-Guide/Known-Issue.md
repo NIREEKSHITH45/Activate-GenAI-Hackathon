@@ -2,7 +2,7 @@
 
 ## Challenge- 03 
 
-1. While deploying Azure resources if you encounter the following error can be ignored wait for the deployement to get completed.
+1. While deploying Azure resources, if you encounter the following error, it can be ignored. Wait for the deployment to complete.
 
    ![](../media/Active-image120.png)
    
