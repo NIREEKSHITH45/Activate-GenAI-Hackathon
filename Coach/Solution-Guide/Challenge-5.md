@@ -36,7 +36,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
    ![](../media/Active-image124.png)
 
-1. On
+1. On **Azure Al services Azure Al services multi-service account** blade, click on **Create**.
 
    ![](../media/Active-image125.png)
 
