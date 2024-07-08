@@ -147,7 +147,6 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 1. Verify that all the resources are deployed without any issues.
    
    ![](../media/d005.png)
-
    
 #### Task 1.2 - Create Azure Blob Storage containers
 
@@ -195,7 +194,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
    
 1. Start Visual Studio 2022.
 
-   > **Note**: When prompted to sign in, select **Skip for now** and proceed.
+   > **Note**: When prompted to sign in, select **Skip for now** then on the **Developement settings** click **Start Visual Studio**.
 
 1. On the **Get Started** page, choose to **Create a New Project**.
 
