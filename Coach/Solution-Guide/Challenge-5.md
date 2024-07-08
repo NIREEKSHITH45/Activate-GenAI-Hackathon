@@ -155,7 +155,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
 1. Select the storage account that is created from the resources that were deployed in the previous task.
 
-1. In the storage account overview blade, expand **Settings(1)** select **Configuration (2)**, ensure **Allow the blob anonymous access** is **Enabled (3)** and click on **Save (4)**.
+1. In the storage account overview blade, expand **Settings(1)** select **Configuration (2)**, **Enabled** the **Allow the blob anonymous access (3)** and click on **Save (4)**.
 
       ![](../media/Active-image146.png)
 
