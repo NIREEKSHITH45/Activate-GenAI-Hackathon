@@ -151,23 +151,35 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
    
 #### Task 1.2 - Create Azure Blob Storage containers
 
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage account**, and then select **Storage account** under services.
+
 1. Select the storage account that is created from the resources that were deployed in the previous task.
 
-1. In the storage account ,navigate to **Configuration (1)** under the settings tab, ensure the blob anonymous access is **enabled (2)** and click on **Save (3)**.
+1. In the storage account overview blade, expand **Settings** select **Configuration (1)**, ensure the blob anonymous access is **Enabled (2)** and click on **Save (3)**.
 
-      ![](../media/gen51.png)
+      ![](../media/Active-image146.png)
 
-1. Click on **Containers (1)** from the left navigation pane, select **+Container (2)** ,add the name as **source (3)** by providing **blob access (4)** and click on **Create (5)**.
+1. Expand **Data Storage (1)** select on **Containers (2)** from the left navigation pane, select **+ Container (3)**.
 
-      ![](../media/gen50.png)
+    ![](../media/Active-image147.png)
+  
+1. On the **New container** blade provide the name as **source (1)** then for **Anonymous access level** select **Blob (anonymous read access for blobs only) (2)** and click on **Create (3)**.
+
+     ![](../media/Active-image148.png)
 
 1. Click on the source container.
 
-1. Select Shared Access Tokens from the left navigation pane, provide the permissions as Read and List and click on Generate SAS Token and URL.
+     ![](../media/Active-image149.png)
+   
+1. from the left navigation pane expand **Settings(1)** then select **Shared Access Tokens(2)**. From the permission drop down select **Read(3)** and **List(4)** then click on **Generate SAS token and URL(5)**.
 
-      ![](../media/gen43.png)
+      ![](../media/Active-image150.png)
 
-1. Repeat the same steps by creating another container with name **target** by giving **Write** and **List** permissions.
+1. After clicking **Generate SAS token and URL** scroll down then copy the **Blob SAS URL**.
+
+    ![](../media/Active-image151.png)
+   
+1. Repeat the same steps number from 1 - 7 by creating another container with name **target** by giving **Write** and **List** permissions.
 
 1. Copy the URLs in a notepad.
 
