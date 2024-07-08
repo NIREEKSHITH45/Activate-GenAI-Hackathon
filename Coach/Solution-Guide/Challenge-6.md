@@ -126,7 +126,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
    ![](../media/gen21.png)
 
 3. Scroll down to add a new example:
-    - Click on **Add an example** under the **Examples** section of the **Assistant setup** pane.
+    - Click on **+ Add (1)** under the **Examples** section of the **Assistant setup** pane.
     - Enter the following message and response in the designated boxes:
         - **User**: `What are different types of artificial intelligence?` **(2)**
           
@@ -134,17 +134,17 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
           
         - Click on **Apply changes (4)** to start a new session and set the behavioral context of the chat system.
 
-             ![](../media/gen22.png)
+             ![](../media/Active-image227.png)
    
-             ![](../media/gen23.png)
+             ![](../media/Active-image228.png)
      
-             ![](../media/gen24.png)
+             ![](../media/Active-image229.png)
 
              > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
              
              > **Note**: Click on **Continue** when prompted with **Update system message?**.
 
-             ![](../media/gen25.png)
+             ![](../media/Active-image230.png)
           
 5. Within the query box of the chat session pane, enter the text `What is artificial intelligence?`
    
@@ -158,21 +158,21 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 Data in Azure Monitor Logs is stored in tables, where each table has its own set of unique properties. The activity log is a type of platform log in Azure that provides insight into subscription-level events. You can view this log independently or route it to Azure Monitor Logs. In the Azure portal, you can use the activity log in Azure Monitor Logs to run complex queries with Log Analytics.
 
-1. In the **Azure portal**, search for **OpenAI** and select it.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-   ![](../media/azure-openai-1-new.png)
+    ![](../media/Active-image6.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
    
 4. From your Azure OpenAI resource page, under **Monitoring** on the left pane, select **Logs (1)**, and then click on the pre-created Log Analytics workspace **(2)** that was used to configure diagnostics for your Azure OpenAI resource.
 
-   ![](../media/4-4.png)
+  ![](../media/Active-image231.png)
 
 5. Within the **Log Analytics workspace** page, under Overview on the left pane, select **Logs**.
 
    ![](../media/4-5.png)
 
-> The Azure portal displays a Queries window with sample queries and suggestions by default. You can close this window.
+   > The Azure portal displays a Queries window with sample queries and suggestions by default. You can close this window.
 
 5. For the following examples, enter the Kusto query into the edit region at the top of the Query window, and then select Run. The query results are displayed below the query text.
 
@@ -188,7 +188,7 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
 
 6. In the query results, you can select the arrow next to the table name to view all available columns and associated data types.
 
-   ![](../media/query-results.png)
+   ![](../media/Active-image232.png)
 
 7. To see all available columns of data, you can remove the scoping parameters line `| project ...` from the query:
 
@@ -200,7 +200,7 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
 
 8. You can also expand the results and check for the details provided under each for more information.
 
-   ![](../media/4-6.png)
+   ![](../media/Active-image233.png)
 
 ## Task 3: Monitoring OpenAI prompts using Azure API Management
 
