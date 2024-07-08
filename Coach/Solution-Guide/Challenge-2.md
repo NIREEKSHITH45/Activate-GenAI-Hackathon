@@ -129,7 +129,7 @@ If you don't already have one in your subscription, you'll need to provision an 
     
     ![](../media/Active-image(31).png)
    
-1. Once validation is successful on the **Review + Create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
+1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
 
 #### Task 2.3: Create a storage account
 
@@ -154,11 +154,11 @@ If you don't already have one in your subscription, you'll need to provision an 
 
    ![](../media/Active-image36.png)
 
-1. On the **Advanced** tab, check the box next to **Allow enabling anonymous access on individual containers** and click on **Review + Create**
+1. On the **Advanced** tab, check the box next to **Allow enabling anonymous access on individual containers** and click on **Review + create**
 
    ![](../media/Active-image37.png)
 
-1. Once validation is successful on  **Review + Create** click **Create** and wait for the deployment to complete click on **Go to the resource**.
+1. Once validation is successful on  **Review + create**, click **Create** and wait for the deployment to complete click on **Go to resource**.
       ![](../media/Active-image38.png)
    
       ![](../media/Active-image39.png)
@@ -177,7 +177,7 @@ If you don't already have one in your subscription, you'll need to provision an 
 
 Now that you have the required resources, you can upload some documents to your Azure Storage account.
 
-1. In Visual Studio Code, under the **Explorer** pane, expand the **22-create-a-search-solution (1)** folder and select **UploadDocs.cmd (2)**.
+1. Navigate back to Visual Studio Code, under the **Explorer** pane, expand the **22-create-a-search-solution (1)** folder and select **UploadDocs.cmd (2)**.
 
     ![](../media/Active-image47.png)
    
@@ -187,7 +187,7 @@ Now that you have the required resources, you can upload some documents to your 
    
       ![](../media/Active-image49.png)
    
-1. Return to VS code and edit the batch file to replace placeholders YOUR_SUBSCRIPTION_ID, YOUR_AZURE_STORAGE_ACCOUNT_NAME, and YOUR_AZURE_STORAGE_KEY with the corresponding values which you recorded in previous step.
+1. Return to VS code and edit the batch file to replace placeholders **YOUR_SUBSCRIPTION_ID**, **YOUR_AZURE_STORAGE_ACCOUNT_NAME**, and **YOUR_AZURE_STORAGE_KEY** with the corresponding values which you recorded in previous step.
 
     ![](../media/Active-image85.png)
    
@@ -199,14 +199,14 @@ Now that you have the required resources, you can upload some documents to your 
 
    > **Note**: Ensure we have installed the Azure CLI and the Azure CLI Tools extension in Visual Studio Code.
 
+   >**Note**: Make sure to replace <your-username> <your-password> with **Azure username** and **password** which you using from challenge-1.
+   
     ```
     az login --username <your-username> --password <your-password>
     ```
 
     ![](../media/Active-image52.png)
-   
-   >**Note**: Make sure to replace <your-username> <your-password> with **Azure username** and **password** which you using from challenge-1.
-
+      
    > **Note**: A web browser tab will open and prompt you to sign into Azure. Do so, and then close the browser tab and return to Visual Studio Code.
 
 1. Enter the following command to run the batch file. This will create a blob container in your storage account and upload the documents in the **data** folder to it.
