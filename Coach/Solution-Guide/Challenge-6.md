@@ -114,6 +114,8 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio**; it will navigate to **Azure AI Studio**.
 
 1. Click on **Chat** under the **Playgronund** tab in the left pane.
+
+    ![](../media/Active-image226.png)
    
 1. In the **Playground** section, select the **chat** page, and ensure that the **chat** deployment is selected in the configuration pane.
 
