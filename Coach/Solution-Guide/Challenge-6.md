@@ -232,7 +232,15 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
           ![](../media/Active-image237.png)
 
 1. On **Review + install** tab once validation passed click on **Create**.
-   
+
+      > **Note**: Before proceeding with next step make sure **API Management Service** deployed successfully
+
+1. Once **API Management Service** deployed successfully, click on **Go to resource**.
+
+1. On **API Management service** blade, from left navigation pane under **Security** select **Managed identities** then on **System assigned** tab set the status to **On** and click on **Save**.
+
+1. Please sign out and then sign back in to the Azure portal before proceeding with the next steps.
+      
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
     ![](../media/Active-image6.png)
@@ -246,8 +254,6 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     - Finally, copy the **Endpoint (4)** API URL by clicking on **Copy to clipboard**. Paste it in a text editor such as Notepad for later use.
 
          ![](../media/k&e.png "Create Azure OpenAI resource")
-
-1. Before proceeding with next step make sure **API Management Service** deployed successfully.
    
 1. In the **OpenAI**, select **Access control (IAM)** **(1)**, click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
 
