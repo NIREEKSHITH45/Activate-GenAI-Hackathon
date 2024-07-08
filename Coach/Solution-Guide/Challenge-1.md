@@ -27,7 +27,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
  ![](../media/Active-image19.png)
  ![](../media/Active-image(20).png)
 
-1. To access the Azure portal, open a private/incognito window in your browser and navigate to the [Azure Portal](https://portal.azure.com/).
+1. To access the Azure portal, within labvm open **Microsoft Edge** and browser to the [Azure Portal](https://portal.azure.com/).
 
 1. On the **Sign into Microsoft Azure tab**, you will see a login screen. Enter the following email/username, and then click on **Next**.
    
@@ -70,7 +70,7 @@ In this task you'll learn the process of setting up and deploying the Azure Open
 
     ![](../media/Active-image6.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, click on **Create**. Enter the details required and deploy the Azure Open AI service.
+1. On **Azure AI Services | Azure OpenAI** blade, click on **+ Create**.
 
    ![](../media/Active-image7.png)
 
@@ -123,7 +123,7 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can
   
          ![](../media/Active-image15.png)
       
-1. Click on the **Create** button to deploy a model that you will be playing around with as you proceed.
+1. Click on the **Create** button to deploy a model.
 
 1. Back on the **Deployments** page again, click on **+ Create new deployment**.
 
@@ -138,7 +138,7 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can
   
          ![](../media/Active-image17.png)
 
-1. Click on the **Create** button to deploy a model that you will be playing around with as you proceed.
+1. Click on the **Create** button to deploy a model.
 
 1. Back on the Deployments page, you should see the deployment models **text-turbo** and **text-ada-002** created.
 
