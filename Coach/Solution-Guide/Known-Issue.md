@@ -15,7 +15,16 @@
 
     1.  Decrease Azure OpenAI resource - model token Per mintue(TPM)  
 
-         - Open another tab in edge browser and sign in to **Azure portal** and search for **OpenAI**.
+         - On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
+      
+         - On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject>**.
+      
+         - In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio**. It will navigate to **Azure AI Studio**.
+      
+         - Under **Management** select **Deployements** select **text-turbo** and scale down the **Tokens per Minute Rate Limit (thousands)**: **10K** then click on **Save**.
+         - On the **Deployements** page, select  **text-ada-002** and scale down the **Tokens per Minute Rate Limit (thousands)**: **10K** then click on **Save**.
+
+         - Back to Azure portal where Custom deployemnt page is open click on **Previous** and select **Create**.
 
     2.  Delete the existing OpenAI resource make sure to purge the OpenAI resource  
 
