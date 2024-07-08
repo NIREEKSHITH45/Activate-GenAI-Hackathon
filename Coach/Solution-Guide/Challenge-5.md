@@ -335,15 +335,15 @@ In this step, you will upload 6 training documents to train the model.
 
       ![](../media/Active-image184.png)
 
-2.  On the file explorer, navigate to `C:\LabFiles\Documents\Custom Model Sample` path, select all train JPEG files **train1 to train6 (1)** **(2)**, and hit **Open** **(2)**.
+1.  On the file explorer, navigate to `C:\LabFiles\Documents\Custom Model Sample` path, select all train JPEG files **train1 to train6 (1)** **(2)**, and hit **Open** **(2)**.
 
       ![](../media/Active-image185.png)
 
-3. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
+1. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
 
      ![](../media/Active-image186.png)
 
-4. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization_sample** **(3)**, and hit **enter**.
+1. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization_sample** **(3)**, and hit **enter**.
 
       ![](../media/Active-image187.png)
 
@@ -351,23 +351,23 @@ In this step, you will upload 6 training documents to train the model.
 
    ![](../media/Active-image188.png)
 
-5. Label the new field added by selecting **CONTOSO LTD** in the top left of each document uploaded. Do this for all six documents.
+1. Label the new field added by selecting **CONTOSO LTD** in the top left of each document uploaded. Do this for all six documents.
 
     ![](../media/Active-image189.png)
    
-7. Once all the documents are labeled, click on **Train** in the top-right corner.
+1. Once all the documents are labeled, click on **Train** in the top-right corner.
 
      ![](../media/Active-image190.png)
 
-8. Specify the model ID as **customfrs** **(1)**, the model description as **custom model** **(2)**, and from the drop-down, select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
+1. Specify the model ID as **customfrs** **(1)**, the model description as **custom model** **(2)**, and from the drop-down, select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
 
     ![](../media/Active-image191.png)
 
-9. Click on **Go to Models**. 
+1. Click on **Go to Models**. 
 
    ![](../media/Active-image192.png)
 
-10. Wait until the model status shows **succeeded**. Once the status is achieved, select the model **customfrs** **(2)** you created and choose **Test** **(3)**.
+1. Wait until the model status shows **succeeded**. Once the status is achieved, select the model **customfrs** **(2)** you created and choose **Test** **(3)**.
 
      ![](../media/Active-image193.png)
 
@@ -375,15 +375,15 @@ In this step, you will upload 6 training documents to train the model.
 
       ![](../media/Active-image194.png)
    
-11. On the **Test model** window, click on **Browse for files**. 
+1. On the **Test model** window, click on **Browse for files**. 
 
       ![](../media/Active-image195.png)
 
-12. On the file explorer, navigate to `C:\LabFiles\Document\Custom Model Sample` **(1)** path, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
+1. On the file explorer, navigate to `C:\LabFiles\Document\Custom Model Sample` **(1)** path, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
 
      ![](../media/Active-image196.png)
 
-13. Once uploaded, select **one test model (1)** and click on **Run analysis** **(2)**. 
+1. Once uploaded, select **one test model (1)** and click on **Run analysis** **(2)**. 
 
      ![](../media/Active-image197.png)
 
@@ -397,51 +397,51 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 1. Navigate back to the Resource groups and select the resource group **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.    
 
-2. Go to the Resource group, search, and select the **Static Web App** resource type with a name similar to **webappbpa{suffix}**.
+1. Go to the Resource group, search, and select the **Static Web App** resource type with a name similar to **webappbpa{suffix}**.
 
     ![](../media/Active-image199.png)
 
-3. On the **Static Web App** page, click on **View app in browser**.
+1. On the **Static Web App** page, click on **View app in browser**.
 
      ![](../media/Active-image200.png)
 
-4. Once the **Business Process Automation Accelerator** page is loaded successfully, click on **Create/Update/Delete Pipelines**. 
+1. Once the **Business Process Automation Accelerator** page is loaded successfully, click on **Create/Update/Delete Pipelines**. 
 
    ![](../media/Active-image201.png)
 
-5. On the **Create Or Select A Pipeline** page, enter the New Pipeline Name as **workshop** **(1)**, and click on the **Create Custom Pipeline** **(2)**. 
+1. On the **Create Or Select A Pipeline** page, enter the New Pipeline Name as **workshop** **(1)**, and click on the **Create Custom Pipeline** **(2)**. 
 
     ![](../media/Active-image202.png)
 
-6. On the **Select a document type to get started** page, select **PDF Document**.
+1. On the **Select a document type to get started** page, select **PDF Document**.
 
    ![](../media/Active-image203.png)
 
-7. On the **Select a stage to add it to your pipeline configuration** page, search for and select **Form Recognizer Custom Model (Batch)**.
+1. On the **Select a stage to add it to your pipeline configuration** page, search for and select **Form Recognizer Custom Model (Batch)**.
 
    ![](../media/Active-image204.png)
    
-9. On the pop-up, enter the model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
+1. On the pop-up, enter the model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
 
    ![](../media/Active-image205.png)
 
-10. On the **Select a stage to add it to your pipeline configuration** page, scroll down to review the **Pipeline Preview** and click on **Done**.
+1. On the **Select a stage to add it to your pipeline configuration** page, scroll down to review the **Pipeline Preview** and click on **Done**.
 
   ![](../media/Active-image206.png)
 
-11. On the **Pipelines workshop** page, click on **Home**. 
+1. On the **Pipelines workshop** page, click on **Home**. 
 
       ![](../media/Active-image207.png)
 
-12. On the **Business Process Automation Accelerator** page, click on **Ingest Documents**.
+1. On the **Business Process Automation Accelerator** page, click on **Ingest Documents**.
 
      ![](../media/Active-image208.png)
 
-13. On the **Upload a document to Blob Storage** page, from the drop-down, select a pipeline with the name **workshop** **(1)** and click on **Upload or drop a file right here**.
+1. On the **Upload a document to Blob Storage** page, from the drop-down, select a pipeline with the name **workshop** **(1)** and click on **Upload or drop a file right here**.
 
       ![](../media/Active-image209.png)
 
-14. For documents, enter the following `C:\LabFiles\Document\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
+1. For documents, enter the following `C:\LabFiles\Document\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
 
       ![](../media/Active-image215.png)
 
@@ -451,11 +451,11 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
    ![](../media/bpa4-1.png)
 
-2. On the **Search service** page, click on **Import data**.
+1. On the **Search service** page, click on **Import data**.
 
    ![](../media/Active-image216.png)
 
-3. Enter the following details for **Connect to your data**.
+1. Enter the following details for **Connect to your data**.
 
    - Data Source: Select **Azure Blob Storage** **(1)**
    - Data Source Name: Enter **workshop** **(2)**.
@@ -465,28 +465,28 @@ After you are satisfied with the custom model performance, you can retrieve the 
   
      ![](../media/Active-image210.png)
 
-4. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix} (6)**. 
+1. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix} (6)**. 
 
     ![](../media/Active-image211.png)
 
-5. Select **results** **(7)** from the **Containers** page and click on **Select** **(8)**. It will redirect back to **Connect to your data** page.
+1. Select **results** **(7)** from the **Containers** page and click on **Select** **(8)**. It will redirect back to **Connect to your data** page.
 
      ![](../media/Active-image212.png)
   
-6. On the **Connect to your data** page, for **Blob folder** enter  **workshop** **(9)** click on **Next : Add cognitive skills (Optional) (10)**.
+1. On the **Connect to your data** page, for **Blob folder** enter  **workshop** **(9)** click on **Next : Add cognitive skills (Optional) (10)**.
 
    ![](../media/Active-image217.png)
 
-7. On the **Add cognitive skills (Optional)**, click on **Skip to : Customize target index**.
+1. On the **Add cognitive skills (Optional)**, click on **Skip to : Customize target index**.
 
-8. On the **Customize target index**, enter the index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
+1. On the **Customize target index**, enter the index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
 
       ![](../media/Active-image214.png)
 
-9. Expand the **aggregatedResults** **(1)** > **customFormRec (2)** > **documents** **(3)** > **fields** **(4)**. Under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString, & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
+1. Expand the **aggregatedResults** **(1)** > **customFormRec (2)** > **documents** **(3)** > **fields** **(4)**. Under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString, & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
 
    ![](../media/Active-image218.png)
 
-10. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
+1. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
    
     ![](../media/bpa4-10.png)
