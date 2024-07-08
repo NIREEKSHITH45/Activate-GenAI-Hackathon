@@ -182,48 +182,60 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
 1. Navigate to the source container and click on **Upload**.
 
-   ![](../media/gen46.png)
+   ![](../media/Active-image153.png)
 
 1. Click on **Browse for files**.
 
-      ![](../media/gen45.png)
+    ![](../media/Active-image154.png)
 
-1. Redirect to `C:\LabFiles\Documents` and upload the **document-translation-sample** file.
-   
+1. Within in **File Explorer** navigate to `C:\LabFiles\Documents` and select **document-translation-sample** file click on **Open** to upload the file.
+
+    ![](../media/Active-image155.png)
+
+1. Back on **Upload blob** blade make sure **document-translation-sample** file is selected then click on **Upload**.
+
+    ![](../media/Active-image156.png)
+
 #### Task 1.3 - Set up your C#/.NET environment and install Newtonsoft.Json
    
 1. Start Visual Studio 2022.
+
+   ![](../media/Active-image165.png)
 
    > **Note**: When prompted to sign in, select **Skip for now** then on the **Developement settings** click **Start Visual Studio**.
 
 1. On the Visual studio **Get Started** page, select **Create a New Project**.
 
-   ![](../media/T-2.png)
+   ![](../media/Active-image157.png)
 
 1. On the **Create a new project** page, enter **console** in the search box. Choose the **Console Application** template, then choose **Next**.
 
-   ![](../media/T-3.png)
+    ![](../media/Active-image158.png)
 
 1. In the **Configure your new project** dialog window, enter **document-translation-qs** in the Project name box. Then, choose **Next**.
 
-   ![](../media/T-4.png)
+    ![](../media/Active-image159.png)
 
 1. In the **Additional information** dialog window, select **.NET 7.0**, and then select **Create**.
 
+     ![](../media/Active-image160.png)
+    
 1. Right-click on your **document-translation-qs** project and select **Manage NuGet Packages**.
 
-   ![](../media/T-6.png)
+    ![](../media/Active-image161.png)
 
 1. Select the **Browse** tab and type **NewtonsoftJson**.
 
-   ![](../media/T-7.png)
+    ![](../media/Active-image162.png)
    
 1. Select the latest stable version from the drop-down menu and install the package in your project.
 
-   ![](../media/T-8.png)
+    ![](../media/Active-image163.png)
 
 1. Click on **Apply**.
 
+    ![](../media/Active-image164.png)
+   
 #### Task 1.4 -Translate all documents into a storage container and run your application
 
 1. Go to the Translator resource that is created, please get the resource keys by following the next step.
