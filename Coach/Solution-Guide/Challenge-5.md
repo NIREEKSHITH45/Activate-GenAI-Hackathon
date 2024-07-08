@@ -179,7 +179,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
     ![](../media/Active-image151.png)
    
-1. Repeat the same steps number from 1 - 7 by creating another container with name **target** by giving **Write** and **List** permissions.
+1. Repeat the same steps number from 1 - 8 by creating another container with name **target** by giving **Write** and **List** permissions.
 
 1. Navigate to the source container and click on **Upload**.
 
