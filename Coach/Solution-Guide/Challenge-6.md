@@ -138,7 +138,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
    
              ![](../media/Active-image228.png)
      
-             ![](../media/Active-image229.png)
+             ![](../media/Active-image(229).png)
 
              > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
              
