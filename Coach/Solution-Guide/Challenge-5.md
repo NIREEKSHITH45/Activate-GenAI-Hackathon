@@ -36,7 +36,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
    ![](../media/Active-image125.png)
 
-1. Specify the following details to create an **Azure AI service** then click on **Review + Create (7)** tab.
+1. Specify the following details to create an **Azure AI service** then click on **Review + create (7)** tab.
    
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
@@ -52,7 +52,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
    ![](../media/Active-image126.png)
 
-1. Once validation is successful on the **Review + Create** tab, click **Create** and wait for the deployment to complete.
+1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete.
 
    ![](../media/Active-image127.png)
 
