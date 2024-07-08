@@ -46,12 +46,11 @@ If you have not already cloned the **AI-102-AIEngineer** code repository to the 
 
 ### Task 2: Create Azure resources
 
-The solution you will create for Margie's Travel requires the following resources in your Azure subscription:
+To create the solution for Margie's Travel, you will need the following resources in your Azure subscription:
 
 - An **Azure AI Search** resource that will manage indexing and querying.
 - An **Azure AI Services** resource that provides AI services for skills that your search solution can use to enrich the data in the data source with AI-generated insights.
 - A **Storage account** with a blob container in which the documents to be searched are stored.
-
   > **Important**: Your Azure AI Search and Azure AI Services resources must be in the same location.
 
 #### Task 2.1: Create an Azure AI Search resource
@@ -62,19 +61,19 @@ The solution you will create for Margie's Travel requires the following resource
 
     ![](../media/Active-image21.png)
      
-1. Search for and select **Azure AI Search** from the list.
+1. Search for and select **Azure AI Search** from the list on Create a resource page.
 
    ![](../media/Active-image22.png)
 
-1. On the **Marketplace** page select **Azure AI Search**.
+1. On the **Marketplace** page, select **Azure AI Search**.
 
    ![](../media/Active-image33.png)
     
-1. On the **Azure AI Search** page Click on **Create**. 
+1. On the **Azure AI Search** page, click on **Create**. 
 
    ![](../media/Active-image24.png)
    
-1. Specify the following details to create an Azure AI Search service then click on **Review + Create (6)** tab.
+1. Specify the following details to create an **Azure AI Search** service then click on **Review + Create (6)** tab.
    
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
@@ -106,17 +105,17 @@ If you don't already have one in your subscription, you'll need to provision an 
 
     ![](../media/Active-image21.png)
      
-1. Search for and select **Azure AI Services** from the list then on the **Marketplace** page, select **Azure AI Services**.
+1. Search for and select **Azure AI Services (1) (2)** from the list then on the **Marketplace** page, select **Azure AI Services (3)**.
 
    ![](../media/Active-image28.png)
 
    ![](../media/Active-image29.png)
     
-1. On the **Azure AI Services** page Click on **Create**. 
+1. On the **Azure AI Services** page, click on **Create**. 
 
    ![](../media/Active-image30.png)
    
-1. Specify the following details to create an **Azure AI service** then click on **Review + Create (7)** tab.
+1. Specify the following details to create an **Azure AI Service** then click on **Review + Create (7)** tab.
    
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
@@ -179,9 +178,9 @@ If you don't already have one in your subscription, you'll need to provision an 
 
 Now that you have the required resources, you can upload some documents to your Azure Storage account.
 
-1. In Visual Studio Code, in the **Explorer** pane, expand the **22-create-a-search-solution (1)** folder and select **UploadDocs.cmd (2)**.
+1. In Visual Studio Code, under the **Explorer** pane, expand the **22-create-a-search-solution (1)** folder and select **UploadDocs.cmd (2)**.
 
-   ![](../media/Active-image47.png)
+    ![](../media/Active-image47.png)
    
 1. Navigate back to browser tab displaying **Azure portal**, retrieve the **subscription ID (1)**, **Azure storage account name (2)**, and **Azure storage account key** by clicking **Show** > **Clipboard (3)** option from the recently created storage account and record the values in notepad.
 
@@ -235,7 +234,7 @@ Now that you have the documents in place, you can create a search solution by in
     - **Data to extract**: Content and metadata (3)
     - **Parsing mode**: Default (4)
     - **Subscription**: Leave default (5)  
-    - **Connection string**: *Select **Choose an existing connection (6)**. Then select your storage account (7), and finally select the **margies (8)** container that was created by the UploadDocs.cmd script. then click on **Select (9)**.
+    - **Connection string**: Select **Choose an existing connection (6)**. Then select your storage account (7), and finally select the **margies (8)** container that was created by the UploadDocs.cmd script. then click on **Select (9)**.
         ![](../media/Active-image55.png)
 
         ![](../media/Active-image56.png)
@@ -246,7 +245,7 @@ Now that you have the documents in place, you can create a search solution by in
     - **Container name**: margies (11)
     - **Blob folder**: *Leave this blank.* (12)
     - **Description**: Brochures and reviews in Margie's Travel web site. (13)
-    - Click on **Add cognitive skills(Optional)**
+    - Click on **Add cognitive skills(Optional) (14)**
 
        ![](../media/Active-image58.png)
 
@@ -254,11 +253,11 @@ Now that you have the documents in place, you can create a search solution by in
 
      ![](../media/Active-image59.png)
    
-1. Scroll dowm and expand **Add enrichments** section and specify the following :
-    - Change the **Skillset name** to **margies-skillset (1)**.
-    - Select the checkbox for **Enable OCR and merge all text into merged_content field (2)**.
-    - Ensure that the **Source data field** is set to **merged_content (3) **.
-    - Leave the **Enrichment granularity level** as the **Source field (4)**, which sets the entire contents of the document being indexed, but note that you can change this to extract information at more granular levels, like pages or sentences.
+1. Scroll down and expand **Add enrichments (1)** section and specify the following :
+    - Change the **Skillset name** to **margies-skillset (2)**.
+    - Select the checkbox for **Enable OCR and merge all text into merged_content field (3)**.
+    - Ensure that the **Source data field** is set to **merged_content (4)**.
+    - Leave the **Enrichment granularity level** as the **Source field (5)**, which sets the entire contents of the document being indexed, but note that you can change this to extract information at more granular levels, like pages or sentences.
   
       ![](../media/Active-image60.png)
 
@@ -299,20 +298,22 @@ Now that you have the documents in place, you can create a search solution by in
 
     ![](../media/Active-image64.png)
    
-1. Double-check your selections, paying particular attention to ensure that the correct **Retrievable**, **Filterable**, **Sortable**, **Facetable**, and **Searchable** options are selected for each field  (it can be difficult to change them later). Then proceed to the next step (*Create an indexer*).
+1. Double-check your selections, paying particular attention to ensure that the correct **Retrievable**, **Filterable**, **Sortable**, **Facetable**, and **Searchable** options are selected for each field  (it can be difficult to change them later). Then proceed to the next step by clicking on **Next: Customize target index**.
 
-1. Change the **Indexer name** to **margies-indexer**.
-1. Leave the **Schedule** set to **Once**.
-1. Expand the **Advanced** options and ensure that the **Base-64 encode keys** option is selected (generally, encoding keys make the index more efficient).
+1. On the **Create an indexer** tab specify the following
+      - Change the **Indexer name** to **margies-indexer (1)**.
+      - Leave the **Schedule** set to **Once (2)**.
+      - Expand the **Advanced options (3)** and ensure that the **Base-64 encode keys (4)** option is selected (generally, encoding keys make the index more efficient).
+      
+      - Select **Submit (5)** to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
+          
+          1. Extracts the document metadata fields and content from the data source.
+          2. Runs the skillset of cognitive skills to generate additional enriched fields.
+          3. Maps the extracted fields to the index.
+      
+          ![](../media/Active-image65.png)  
 
-1. Select **Submit** to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
-    1. Extracts the document metadata fields and content from the data source.
-    2. Runs the skillset of cognitive skills to generate additional enriched fields.
-    3. Maps the extracted fields to the index.
-
-    ![](../media/Active-image65.png)  
-
-1. On **Azure AI Search** resource page, expand **Search management** select **Indexers** which should show the newly created **margies-indexer**.
+1. On **Azure AI Search** resource page, expand **Search management (1)** select **Indexers (2)** which should show the newly created **margies-indexer (3)**.
 
    ![](../media/Active-image66.png)  
 
