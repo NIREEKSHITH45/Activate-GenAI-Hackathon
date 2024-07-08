@@ -10,9 +10,9 @@ Explore monitoring data collection, including activity logs and platform metrics
 
 Content filters are applied to prompts and completions to prevent potentially harmful or offensive language from being generated.
 
-1. In the Azure Portal, search for **Azure OpenAI** and select it.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-      ![](../media/azure-openai-1-new.png)
+    ![](../media/Active-image6.png)
 
 1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** created in the previous challenges.
 
