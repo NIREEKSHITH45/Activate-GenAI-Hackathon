@@ -181,8 +181,6 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
    
 1. Repeat the same steps number from 1 - 7 by creating another container with name **target** by giving **Write** and **List** permissions.
 
-1. Copy the URLs in a notepad.
-
 1. Navigate to the source container and click on **Upload**.
 
    ![](../media/gen46.png)
