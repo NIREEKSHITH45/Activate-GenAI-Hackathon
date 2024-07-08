@@ -142,7 +142,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
     - Back to Azure portal where Custom deployemnt page is open click on **Previous** and select **Create**.
 
-1. Wait for the deployment to get complete     
+1. Wait for the deployment to get complete and click on **Go to resource group**.    
 
 1. Verify that all the resources are deployed without any issues.
    
