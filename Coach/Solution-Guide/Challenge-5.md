@@ -196,7 +196,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
    > **Note**: When prompted to sign in, select **Skip for now** then on the **Developement settings** click **Start Visual Studio**.
 
-1. On the **Get Started** page, choose to **Create a New Project**.
+1. On the Visual studio **Get Started** page, select **Create a New Project**.
 
    ![](../media/T-2.png)
 
