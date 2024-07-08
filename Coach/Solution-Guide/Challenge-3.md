@@ -41,7 +41,7 @@ Together, these services create a responsive chat application that combines AI f
 
 ## Task 1: Deploy the  AI-Powered Chat App.
 
-**Deploying the infrastructure**
+In this task, you'll learn the process of Deploying the Infrastructure.
 
 1. In the **LabVM**, in the Windows Search bar type **Powershell** and select **PowerShell 7-preview (x64)** then **Run as Administrator**.
 
