@@ -333,54 +333,64 @@ In this step, you will upload 6 training documents to train the model.
 
 1. Click on **Browse for files**.
 
-     ![](../media/bpa2-1.png)
+      ![](../media/Active-image184.png)
 
-2.  On the file explorer, enter the following `C:\LabFiles\Documents\Custom Model Sample` **(1)** path, hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and hit **Open** **(3)**.
+2.  On the file explorer, navigate to `C:\LabFiles\Documents\Custom Model Sample` path, select all train JPEG files **train1 to train6 (1)** **(2)**, and hit **Open** **(2)**.
 
-     ![](../media/bpa2-2.png)
+      ![](../media/Active-image185.png)
 
 3. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
 
-     ![](../media/bpa2-3.png)
+     ![](../media/Active-image186.png)
 
 4. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization_sample** **(3)**, and hit **enter**.
 
-     ![](../media/bpa2-4.png)
+      ![](../media/Active-image187.png)
 
-     ![](../media/bpa2-4.1.png)
+1. Enter the field name as **Organization_sample**, and hit **enter**.
+
+   ![](../media/Active-image188.png)
 
 5. Label the new field added by selecting **CONTOSO LTD** in the top left of each document uploaded. Do this for all six documents.
 
-     ![](../media/bpa2-5.png)
-
-6. Once all the documents are labeled, click on **Train** in the top-right corner.
-
-     ![](../media/bpa2-6.png)
-
-7. Specify the model ID as **customfrs** **(1)**, the model description as **custom model** **(2)**, and from the drop-down, select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
-
-     ![](../media/bpa2-7.png)
-
-8. Click on **Go to Models**. 
-
-   ![](../media/bpa2-8.png)
-
-9. Wait until the model status shows **succeeded** **(1)**. Once the status is achieved, select the model **customfrs** **(2)** you created and choose **Test** **(3)**.
-
-     ![](../media/bpa2-9.png)
-
-10. On the **Test model** window, click on **Browse for files**. 
-
-     ![](../media/bpa2-10.png)
-
-11. On the file explorer, enter the following `C:\LabFiles\Data\Custom Model Sample` **(1)** path, hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
-
-     ![](../media/bpa2-11.png)
-
-12. Once uploaded, select one test model and click on **Run analysis** **(1)**. Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(2)** we created in the last step, along with its confidence score.
-
-     ![](../media/bpa2-12.png)
+    ![](../media/Active-image189.png)
    
+7. Once all the documents are labeled, click on **Train** in the top-right corner.
+
+     ![](../media/Active-image190.png)
+
+8. Specify the model ID as **customfrs** **(1)**, the model description as **custom model** **(2)**, and from the drop-down, select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
+
+    ![](../media/Active-image191.png)
+
+9. Click on **Go to Models**. 
+
+   ![](../media/Active-image192.png)
+
+10. Wait until the model status shows **succeeded**. Once the status is achieved, select the model **customfrs** **(2)** you created and choose **Test** **(3)**.
+
+     ![](../media/Active-image193.png)
+
+1. Select the model **customfrs** **(1)** you created and choose **Test** **(2)**.
+
+      ![](../media/Active-image194.png)
+   
+11. On the **Test model** window, click on **Browse for files**. 
+
+      ![](../media/Active-image195.png)
+
+12. On the file explorer, navigate to `C:\LabFiles\Document\Custom Model Sample` **(1)** path, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
+
+     ![](../media/Active-image196.png)
+
+13. Once uploaded, select **one test model (1)** and click on **Run analysis** **(2)**. 
+
+     ![](../media/Active-image197.png)
+
+1. Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** we created in the last step, along with its confidence score.
+
+    ![](../media/Active-image198.png)
+
 **Build a new pipeline with the custom model module in BPA**
 
 After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
