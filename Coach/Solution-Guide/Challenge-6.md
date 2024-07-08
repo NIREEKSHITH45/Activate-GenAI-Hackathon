@@ -24,7 +24,7 @@ Content filters are applied to prompts and completions to prevent potentially ha
 
 1. In Azure OpenAI Studio, view the **Content filters (1)** page from the left navigation menu and select **Create customized content filter (2)**.
 
-      ![](../media/4-1.png)
+    ![](../media/Active-image219.png)
    
 1. Review the default settings for a content filter.
 
@@ -35,15 +35,17 @@ Content filters are applied to prompts and completions to prevent potentially ha
     - **Violence**: Language that describes, advocates, or glorifies violence.
     - **Self-harm**: Language that describes or encourages self-harm.
 
+      ![](../media/Active-image220.png)
+      
     Filters are applied for each of these categories to prompts and completions, with a severity setting of **safe**, **low**, **medium**, and **high** used to determine what specific kinds of language are intercepted and prevented by the filter.
-
+   
 1. Observe that the default settings (which are applied when no custom content filter is present) allow **low** severity language for each category. You can create a more restrictive custom filter by applying filters to one or more **low** severity levels. You cannot, however, make the filters less restrictive (by allowing **medium** or **high** severity language) unless you have applied for and received permission to do so in your subscription. Permission to do so is based on the requirements of your specific generative AI scenario.
 
     > **Tip**: For more details about the categories and severity levels used in content filters, see [Content filtering](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/content-filter) in the Azure OpenAI service documentation.
 
 ## Task 2: Monitoring the Azure OpenAI Service
 
-When your crucial applications and business processes depend on Azure resources, it's essential to monitor their availability, performance, and operation. Azure OpenAI provides out-of-box dashboards for each of your Azure OpenAI resources. To access the monitoring dashboards, select the overview pane for one of your Azure OpenAI resources.
+When your crucial applications and business processes depend on Azure resources, it's essential to monitor their availability, performance, and operation. Azure OpenAI provides out-of-box dashboards for each of your Azure OpenAI resources. To access the monitoring dashboards, navigate to azure portal search and select the OpenAI and select one the OpenAI resource. On the overview Azure OpenAI resources you get  monitoring dashboards by clicking on **Monitor** tab.
 
    ![](../media/dashboard.png)
 
