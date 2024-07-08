@@ -275,7 +275,6 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
    
 ### Task 2: Creating a Form Recognizer Resource
 
-
 1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI services multi-service account (1)**, and then select **Azure AI services multi-service account(2)** under services.
 
    ![](../media/Active-image(124).png)
