@@ -210,13 +210,13 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
 1. Within the global search bar, search for and select the **API Management Services**, and select it
 
-    ![](../media/apim-resource.png)
+    ![](../media/Active-image234.png)
 
-2. Click on Create.
+1. Click on Create.
 
-    ![](../media/gen26.png)
+   ![](../media/Active-image235.png)
 
-3. Add the following details in the **Create API Management Service** page and click on **Review + Create**:
+1. Add the following details in the **Create API Management Service** page and click on **Review + install**:
 
       - Subscription: **Select the default subscription (1)**
       - Resource Group: Select **rg-activategenai (2)**
@@ -226,14 +226,18 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
       - Administrator email: * **Email/Username**: <inject key="AzureAdUserEmail"></inject> (6)
       - Pricing Tier: Select **Standard (99.95% SLA) (7)**
       - Unit(s): **1 (8)**
+    
+          ![](../media/Active-image236.png)
 
-          ![](../media/gen27.png)
+          ![](../media/Active-image237.png)
 
-4. In the **Azure portal**, search for **OpenAI** and select it.
+1. On **Review + install** tab once validation passed click on **Create**.
+   
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-   ![](../media/azure-openai-1-new.png)
+    ![](../media/Active-image6.png)
 
-5. Select the **OpenAI Service** deployed in the previous challenge.
+1. Select the **OpenAI Service** deployed in the previous challenge.
 
 6. To capture the values of Azure OpenAI's key and endpoint, execute the following steps:
     - Select **Keys and Endpoints (1)** under the **Resource Management** section from the left navigation pane.
