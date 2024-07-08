@@ -59,9 +59,9 @@ The dashboards are grouped into four categories: HTTP Requests, Tokens-Based Usa
 
 Azure OpenAI collects the same kinds of monitoring data as other Azure resources. You can configure Azure Monitor to generate data in activity logs, resource logs, virtual machine logs, and platform metrics. Platform metrics and the Azure Monitor activity log are collected and stored automatically, which can be routed to other locations by using a diagnostic setting. Azure Monitor resource logs aren't collected and stored until you create a diagnostic setting and a Log Analytics workspace.
 
-1. In the Azure Portal, search for **Azure OpenAI** and select it.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-   ![](../media/azure-openai-1-new.png)
+    ![](../media/Active-image6.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
 
