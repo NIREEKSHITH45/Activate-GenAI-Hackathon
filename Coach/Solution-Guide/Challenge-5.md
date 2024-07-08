@@ -275,24 +275,33 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
    
 ### Task 2: Creating a Form Recognizer Resource
 
-1. Click on the Document Intelligence tab and select **Go to studio**.
 
-   ![](../media/bpa2.png)
+1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI services multi-service account (1)**, and then select **Azure AI services multi-service account(2)** under services.
 
-1. In Document Intelligence Studio, scroll down to **Custom Extraction Models** and choose **Try it now**.
+   ![](../media/Active-image(124).png)
 
-   ![](../media/c06-03.png)
+1. On **Azure Al services Azure Al services multi-service account** blade, select the service which deployed via custom template.
+
+     ![](../media/Active-image174.png)
+   
+1. On **Azure Al services Azure Al services multi-service account** blade, click on the **Document Intelligence (1)** tab and select **Go to studio (2)**.
+
+    ![](../media/Active-image175.png)
+
+1. In Document Intelligence Studio, scroll down to **Custom extraction models** and select **Get started**.
+
+   ![](../media/Active-image176.png)
 
 1. Under My Project, click on **+ Create a project**.
 
-   ![](../media/bpa4.png)
+    ![](../media/Active-image177.png)
 
 1. Enter the following details and click on **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
 
-     ![](../media/bpa5.png)
+      ![](../media/Active-image178.png)
 
 1. Enter the following details under **Configure service resource** and click on **Continue** **(5)**.
 
@@ -301,20 +310,23 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
    - Form Recognizer or Cognitive Service Resource: Select the available Cognitive Service Form Recognizer name similar to **cogservicesbpass{suffix}** **(3)**.
    - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
 
-     ![](../media/bpa6.png)
+     ![](../media/Active-image179.png)
 
-1. Enter the following details under **Connect training data source** and click on **Continue** **(8)**.
+1. Enter the following details under **Connect training data source**. and click on **Continue** **(8)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **<inject key="Resource Group Name"/>** **(2)**.
    - Storage account name: **Select the existing storage account (3)**.
-   - Blob container name: Click on **Create new** and provide the name as **custommoduletext** **(4)**.
+   - Blob container name: Click on **Create new (4)** and provide the name as **custommoduletext** **(5)** then click on **OK** **(6)**.
+   - Review the settings then click on **Continue** **(7)**.
    
-        ![](../media/gen48.png)
+       ![](../media/Active-image180.png)
+       ![](../media/Active-image181.png)
+       ![](../media/Active-image182.png)
 
 1. Validate the information and choose **Create project**.
 
-     ![](../media/bpa8.png)
+      ![](../media/Active-image183.png)
 
 ### Task 3: Train and label data
 
