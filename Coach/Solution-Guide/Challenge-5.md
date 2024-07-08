@@ -238,14 +238,18 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
    
 #### Task 1.4 -Translate all documents into a storage container and run your application
 
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Translator**, and then select **Translator** under services.
+
+   ![](../media/Active-image166.png)
+
 1. Go to the Translator resource that is created, please get the resource keys by following the next step.
    
-1. On the left rail, under Resource Management, select Keys and Endpoint.
-
-    ![](../media/cha6-2.png)
+      ![](../media/Active-image167.png)
    
-1. Copy and paste your key and document translation endpoint in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
+1. On the left navigation pane, under **Resource Management** section, select **Keys and Endpoint (1)**. Copy and paste your **Key 1 (2)** and **Document Translation (3)** endpoint in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
 
+     ![](../media/Active-image168.png)
+   
 1. Navigate back to Visual Studio 2022 and open the **Program.cs** file.
 
 1. Delete the pre-existing code, including the line Console.WriteLine("Hello World!").
