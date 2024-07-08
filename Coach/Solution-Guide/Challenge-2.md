@@ -57,7 +57,7 @@ To create the solution for Margie's Travel, you will need the following resource
 
 1. In a web browser, sign in to Azure portal using `https://portal.azure.com`.
 
-1. Select the **&#65291;Create a resource** button on the portal home page.
+1. Return to the Azure portal home page, and then click the **&#65291;Create a resource** button.
 
     ![](../media/Active-image21.png)
      
@@ -88,7 +88,7 @@ To create the solution for Margie's Travel, you will need the following resource
     
     ![](../media/Active-image25.png)
    
-1. Once validation is successful on the **Review + Create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
+1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
 
    ![](../media/Active-image26.png)
 
@@ -100,8 +100,7 @@ To create the solution for Margie's Travel, you will need the following resource
 
 If you don't already have one in your subscription, you'll need to provision an **Azure AI Services** resource. Your search solution will use this to enrich the data in the datastore with AI-generated insights.
 
-
-1. Return to the home page of the Azure portal, and then select the **&#65291;Create a resource** button.
+1. Return to the Azure portal home page, and then click the **&#65291;Create a resource** button.
 
     ![](../media/Active-image21.png)
      
