@@ -198,7 +198,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
 #### Task 1.3 - Set up your C#/.NET environment and install Newtonsoft.Json
    
-1. Start Visual Studio 2022.
+1. In the LabVM, in the Windows Search bar type Visual and select **Visual Studio 2022**.
 
    ![](../media/Active-image165.png)
 
@@ -228,7 +228,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
     ![](../media/Active-image162.png)
    
-1. Click on install to install the package in your project.
+1. Click on **install** to install the package in your project.
 
     ![](../media/Active-image163.png)
 
@@ -250,11 +250,11 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
      ![](../media/Active-image168.png)
    
-1. Navigate back to Visual Studio 2022 and open the **Program.cs** file. Delete the pre-existing code, including the line Console.WriteLine("Hello World!").
+1. Navigate back to Visual Studio 2022 and open the **Program.cs (1)** file. Delete the pre-existing code, including the line **Console.WriteLine("Hello World!") (2)**.
 
    ![](../media/Active-image169.png)
 
-1. Open another tab in edge browse for [code sample](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) then navigate to **Start asynchronous batch translation** section copy the code
+1. Open another tab in edge browse for [code sample](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) then navigate to **Start asynchronous batch translation** section copy the code.
 
     ![](../media/Active-image170.png)
 
@@ -279,11 +279,11 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
    ![](../media/Active-image(124).png)
 
-1. On **Azure Al services Azure Al services multi-service account** blade, select the service which deployed via custom template.
+1. On the **Azure AI services multi-service account** blade, select the service that was deployed using the custom template.
 
      ![](../media/Active-image174.png)
    
-1. On **Azure Al services Azure Al services multi-service account** blade, click on the **Document Intelligence (1)** tab and select **Go to studio (2)**.
+1. On **Azure AI services multi-service account** blade, click on the **Document Intelligence (1)** tab and select **Go to studio (2)**.
 
     ![](../media/Active-image175.png)
 
@@ -305,7 +305,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 1. Enter the following details under **Configure service resource** and click on **Continue** **(5)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **<inject key="Resource Group Name"/>** **(2)**.
+   - Resource group: **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.
    - Form Recognizer or Cognitive Service Resource: Select the available Cognitive Service Form Recognizer name similar to **cogservicesbpass{suffix}** **(3)**.
    - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
 
@@ -314,7 +314,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 1. Enter the following details under **Connect training data source**. and click on **Continue** **(8)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **<inject key="Resource Group Name"/>** **(2)**.
+   - Resource group: **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**.
    - Storage account name: **Select the existing storage account (3)**.
    - Blob container name: Click on **Create new (4)** and provide the name as **custommoduletext** **(5)** then click on **OK** **(6)**.
    - Review the settings then click on **Continue** **(7)**.
@@ -335,7 +335,7 @@ In this step, you will upload 6 training documents to train the model.
 
       ![](../media/Active-image184.png)
 
-1.  On the file explorer, navigate to `C:\LabFiles\Documents\Custom Model Sample` path, select all train JPEG files **train1 to train6 (1)** **(2)**, and hit **Open** **(2)**.
+1.  On the file explorer, navigate to `C:\LabFiles\Documents\Custom Model Sample` (1) path, select all train JPEG files **train1 to train6 (2)**, and hit **Open** **(3)**.
 
       ![](../media/Active-image185.png)
 
@@ -347,9 +347,7 @@ In this step, you will upload 6 training documents to train the model.
 
       ![](../media/Active-image187.png)
 
-1. Enter the field name as **Organization_sample**, and hit **enter**.
-
-   ![](../media/Active-image188.png)
+      ![](../media/Active-image188.png)
 
 1. Label the new field added by selecting **CONTOSO LTD** in the top left of each document uploaded. Do this for all six documents.
 
