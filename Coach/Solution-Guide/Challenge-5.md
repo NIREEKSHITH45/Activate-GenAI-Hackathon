@@ -395,55 +395,55 @@ In this step, you will upload 6 training documents to train the model.
 
 After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
 
-1. Navigate back to the Resource groups and select the resource group<inject key="Resource Group Name"/>.
+1. Navigate back to the Resource groups and select the resource group **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.    
 
 2. Go to the Resource group, search, and select the **Static Web App** resource type with a name similar to **webappbpa{suffix}**.
 
-   ![](../media/bpa3-2.png)
+    ![](../media/Active-image199.png)
 
 3. On the **Static Web App** page, click on **View app in browser**.
 
-      ![](../media/bpa3-3.png)
+     ![](../media/Active-image200.png)
 
 4. Once the **Business Process Automation Accelerator** page is loaded successfully, click on **Create/Update/Delete Pipelines**. 
 
-   ![](../media/bpa3-4-1.png)
+   ![](../media/Active-image201.png)
 
 5. On the **Create Or Select A Pipeline** page, enter the New Pipeline Name as **workshop** **(1)**, and click on the **Create Custom Pipeline** **(2)**. 
 
-   ![](../media/bpa3-5.png)
+    ![](../media/Active-image202.png)
 
 6. On the **Select a document type to get started** page, select **PDF Document**.
 
-   ![](../media/bpa3-6.png)
+   ![](../media/Active-image203.png)
 
 7. On the **Select a stage to add it to your pipeline configuration** page, search for and select **Form Recognizer Custom Model (Batch)**.
 
-   ![](../media/bpa3-7.png)
+   ![](../media/Active-image204.png)
+   
+9. On the pop-up, enter the model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
 
-8. On the pop-up, enter the model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
+   ![](../media/Active-image205.png)
 
-   ![](../media/bpa3-8.png)
+10. On the **Select a stage to add it to your pipeline configuration** page, scroll down to review the **Pipeline Preview** and click on **Done**.
 
-9. On the **Select a stage to add it to your pipeline configuration** page, scroll down to review the **Pipeline Preview** and click on **Done**.
+  ![](../media/Active-image206.png)
 
-   ![](../media/bpa3-9.png)
+11. On the **Pipelines workshop** page, click on **Home**. 
 
-10. On the **Pipelines workshop** page, click on **Home**. 
+      ![](../media/Active-image207.png)
 
-      ![](../media/bpa3-10.png)
+12. On the **Business Process Automation Accelerator** page, click on **Ingest Documents**.
 
-11. On the **Business Process Automation Accelerator** page, click on **Ingest Documents**.
+     ![](../media/Active-image208.png)
 
-      ![](../media/bpa3-11.png)
+13. On the **Upload a document to Blob Storage** page, from the drop-down, select a pipeline with the name **workshop** **(1)** and click on **Upload or drop a file right here**.
 
-12. On the **Upload a document to Blob Storage** page, from the drop-down, select a pipeline with the name **workshop** **(1)** and click on **Upload or drop a file right here**.
+      ![](../media/Active-image209.png)
 
-      ![](../media/bpa3-12.png)
+14. For documents, enter the following `C:\LabFiles\Document\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
 
-13. For documents, enter the following `C:\LabFiles\Data\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
-
-      ![](../media/bpa3-13.png)
+      ![](../media/Active-image215.png)
 
 ### Task 5: Configure Azure Cognitive Search 
 
@@ -453,7 +453,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 2. On the **Search service** page, click on **Import data**.
 
-   ![](../media/bpa4-2.png)
+   ![](../media/Active-image216.png)
 
 3. Enter the following details for **Connect to your data**.
 
@@ -462,19 +462,19 @@ After you are satisfied with the custom model performance, you can retrieve the 
    - Parsing mode: Select **JSON** **(3)**.
    - Click on **Choose an existing connection** **(4)** under the Connection string.
   
-     ![](../media/bpa4-3.png)
+     ![](../media/Active-image210.png)
 
 4. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix}**. 
 
-     ![](../media/bpa4-4.png)
+    ![](../media/Active-image211.png)
 
 5. Select **results** **(1)** from the **Containers** page and click on **Select** **(2)**. It will redirect back to **Connect to your data** page.
 
-     ![](../media/bpa4-5.png)
+     ![](../media/Active-image212.png)
   
 6. On the **Connect to your data** page, click on **Next : Add cognitive skills (Optional)**.
 
-   ![](../media/bpa4-6.png)
+   ![](../media/Active-image213.png)
 
 7. On the **Add cognitive skills (Optional)**, click on **Skip to : Customize target index**.
 
