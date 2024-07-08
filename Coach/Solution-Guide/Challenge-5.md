@@ -171,7 +171,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
      ![](../media/Active-image149.png)
    
-1. from the left navigation pane expand **Settings(1)** then select **Shared Access Tokens(2)**. From the permission drop down select **Read(3)** and **List(4)** then click on **Generate SAS token and URL(5)**.
+1. from the left navigation pane expand **Settings(1)** then select **Shared Access Tokens(2)**. From the **Permission** drop down select **Read(3)** and **List(4)** then click on **Generate SAS token and URL(5)**.
 
       ![](../media/Active-image150.png)
 
