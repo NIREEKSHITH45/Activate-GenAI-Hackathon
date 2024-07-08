@@ -36,3 +36,9 @@
         - On **Manage deleted resources** blade, select **Subscription** > **OpenAi resources** click on **Purge**.
 
         - Back to Azure portal where Custom deployemnt page is open click on **Previous** and select **Create**.
+
+## Challenge- 06
+
+1. If you encounter issue  while Uploading a document to Blob Storage, please make sure you have given correct **model ID** as **customfrs**. 
+
+    ![](../media/Active-image239.png)
