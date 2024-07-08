@@ -80,12 +80,13 @@ Azure OpenAI collects the same kinds of monitoring data as other Azure resources
    - Under **Metrics**, select **allMetrics (6)**.
    - To save the configuration, click on **Save (7)**.
 
-   ![](../media/azure-openai-3.png)
+   ![](../media/Active-image225.png)
 
     >**Note**: If you're not able to see or select **Log Analytics Workspace** please follow the below steps to create a one new **Log Analytics Workspace**
       - On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Log Analytics Workspace**, and then select **Log Analytics Workspace** under services.
 
            ![](../media/Active-image222.png)
+        
       - On **Log Analytics Workspace** select **+ create**.
   
       - Specify the following details to create an **Log Analytics Workspace** service then click on **Review + Create (5)** tab.
