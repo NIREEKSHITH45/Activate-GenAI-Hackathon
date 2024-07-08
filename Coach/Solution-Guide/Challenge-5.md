@@ -250,20 +250,29 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
      ![](../media/Active-image168.png)
    
-1. Navigate back to Visual Studio 2022 and open the **Program.cs** file.
+1. Navigate back to Visual Studio 2022 and open the **Program.cs** file. Delete the pre-existing code, including the line Console.WriteLine("Hello World!").
 
-1. Delete the pre-existing code, including the line Console.WriteLine("Hello World!").
+   ![](../media/Active-image169.png)
 
-1. Copy and paste the [code sample](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) for document translation into the Program.cs file.
+1. Open another tab in edge browse for [code sample](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) then navigate to **Start asynchronous batch translation** section copy the code
 
-1. Update **{your-document-translation-endpoint}** and **{your-key}** with values from your Azure portal Translator instance.
+    ![](../media/Active-image170.png)
 
-1. Update **?api-version={date}** with **?api-version=2024-05-01**.
+1. Paste the copied code into the Program.cs file.
+    ![](../media/Active-image173.png)
+
+1. Within Program.cs file. make the following update  
+
+    - Update **?api-version={date}** with **?api-version=2024-05-01**.
+    - Update **{your-document-translation-endpoint}** and **{your-api-key}** with values of Translator instance which you recorded in the notepad.   
+    - Also, update **"https://YOUR-SOURCE-URL-WITH-READ-LIST-ACCESS-SAS\"** and **"https://YOUR-TARGET-URL-WITH-WRITE-LIST-ACCESS-SAS\"** with values from your Storage account container instance which you recorded in notepad.
+      
+      ![](../media/Active-image171.png)
+      
+1. Once you've added the code sample to your application, choose the green Start button next to document-translation-qs to build and run your program, or press F5.
    
-1. Also, update **{your-source-container-SAS-URL}** and **{your-target-container-SAS-URL}** with values from your Azure portal Storage account container instance.
-
-Once you've added the code sample to your application, choose the green Start button next to document-translation-qs to build and run your program, or press F5.
-
+    ![](../media/Active-image172.png)
+   
 ### Task 2: Creating a Form Recognizer Resource
 
 1. Click on the Document Intelligence tab and select **Go to studio**.
