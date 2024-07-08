@@ -224,11 +224,11 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
     ![](../media/Active-image161.png)
 
-1. Select the **Browse** tab and type **NewtonsoftJson**.
+1. Select the **Browse** tab and type **NewtonsoftJson**.  Select the latest stable version from the drop-down menu
 
     ![](../media/Active-image162.png)
    
-1. Select the latest stable version from the drop-down menu and install the package in your project.
+1. Click on install to install the package in your project.
 
     ![](../media/Active-image163.png)
 
