@@ -41,4 +41,4 @@
 
 1. If you encounter issue  while Uploading a document to Blob Storage, please make sure you have given correct **model ID** as **customfrs**. 
 
-    ![](../media/Active-image239.png)
+    ![](../media/Active-image(239).png)
