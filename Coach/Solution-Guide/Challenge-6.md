@@ -239,8 +239,14 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
 1. On **API Management service** blade, from left navigation pane under **Security** select **Managed identities** then on **System assigned** tab set the status to **On** and click on **Save**.
 
+    ![](../media/Active-image240.png)
+
+1. Click on **Yes** when **Enable system assigned managed identity** when prompted.
+
+   ![](../media/Active-image241.png)
+   
 1. Please sign out and then sign back in to the Azure portal before proceeding with the next steps.
-      
+        
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
     ![](../media/Active-image6.png)
