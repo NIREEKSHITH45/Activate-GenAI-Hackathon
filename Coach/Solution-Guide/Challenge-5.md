@@ -460,31 +460,32 @@ After you are satisfied with the custom model performance, you can retrieve the 
    - Data Source: Select **Azure Blob Storage** **(1)**
    - Data Source Name: Enter **workshop** **(2)**.
    - Parsing mode: Select **JSON** **(3)**.
-   - Click on **Choose an existing connection** **(4)** under the Connection string.
+   - Subscription: Select the **existing one (4)**
+   - Click on **Choose an existing connection** **(5)** under the Connection string.
   
      ![](../media/Active-image210.png)
 
-4. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix}**. 
+4. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix} (6)**. 
 
     ![](../media/Active-image211.png)
 
-5. Select **results** **(1)** from the **Containers** page and click on **Select** **(2)**. It will redirect back to **Connect to your data** page.
+5. Select **results** **(7)** from the **Containers** page and click on **Select** **(8)**. It will redirect back to **Connect to your data** page.
 
      ![](../media/Active-image212.png)
   
-6. On the **Connect to your data** page, click on **Next : Add cognitive skills (Optional)**.
+6. On the **Connect to your data** page, for **Blob folder** enter  **workshop** **(9)** click on **Next : Add cognitive skills (Optional) (10)**.
 
-   ![](../media/Active-image213.png)
+   ![](../media/Active-image217.png)
 
 7. On the **Add cognitive skills (Optional)**, click on **Skip to : Customize target index**.
 
 8. On the **Customize target index**, enter the index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
 
-      ![](../media/bpa4-8.png)
+      ![](../media/Active-image214.png)
 
-9. Expand the **analyzeResults** **(1)** > **documents** **(2)** > **fields** **(3)**. Under it, expand **Organization_sample (4)**. Make the three fields Facetable **(type, valueString, & content)** **(5)** and click on **Next: Create an indexer** **(6)**.
+9. Expand the **aggregatedResults** **(1)** > **customFormRec (2)** > **documents** **(3)** > **fields** **(4)**. Under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString, & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
 
-   ![](../media/bpa4-9.png)
+   ![](../media/Active-image218.png)
 
 10. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
    
