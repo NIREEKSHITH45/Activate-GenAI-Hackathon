@@ -128,16 +128,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
      
      ![](../media/Active-image141.png)
 
-1. Click on **Review + Create**, if you encounter issue while deploying the resource follow the below steps
-
-   - Open another tab in edge browser and sign in to **Azure portal** and search for **OpenAI**.
-   - Select the existing **OpenAI** recourse and click on **Manage deleted resources**.
-
-      ![](../media/Active-image142.png)
-
-    - On **Manage deleted resources** blade, select **Subscription** > **OpenAi resources** click on **Purge**.
-
-    - Back to Azure portal where Custom deployemnt page is open click on **Previous** and select **Create**.
+1. Click on **Review + Create**.
 
 1. Wait for the deployment to get complete and click on **Go to resource group**.    
 
