@@ -363,14 +363,15 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
     ![](../media/diag3.png)
 
-    - Provide a **Diagnostic setting name** (1)
-    - Keep the category groups checked (2). <br>
-    - Keep the **All metrics** checked(3). <br>
-    - Keep the **Destination details** checked(4). <br>
-    - Make sure the **log analytics workspace** is selected (5). <br>
-    - Click on **Save (6)**.
+    - **Diagnostic setting name** :  Provide any Unquie name **(1)**
+    - **Category groups** : Select check box for both **Audit** and **allLogs** **(2)**.
+    - **Metrics** : Select check box for **AllMetrics** **(3)**
+    - **Destination details** : Select check box **Send to Log Analytics workspace** **(4)**
+    - **Subscription** : Select existing **Subscription** **(5)** make sure to select log Analytics workspace
+    - **Log analytics workspace** : make sure to select **log Analytics workspace** **(6)**
+    - Click on **Save (7)**.
 
-      ![](../media/diag2.png)
+      ![](../media/Active-image256.png)
     
 1. Now that the API has been successfully added, it requires configuration to call the OpenAI API through the API Management Service, which can be done by following the below steps:
 
