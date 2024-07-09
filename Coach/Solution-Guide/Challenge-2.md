@@ -411,7 +411,9 @@ The components of the search solution are based on JSON definitions, which you c
 
 While you can use the portal to create and modify search solutions, it's often desirable to define the search objects in JSON and use the Azure AI Service REST interface to create and modify them.
 
-### Get the endpoint and key for your Azure AI Search resource
+#### Task 6.1: Get the endpoint and key for your Azure AI Search resource
+
+In this task, you're preparing to execute CURL commands in Visual Studio Code to interact with Azure AI Service's REST interface:
 
 1. In the Azure portal, return to the **Overview** page for your **Azure AI Search** resource, and in the top section of the page, find the **Url** for your resource (which looks like **https://resource_name.search.windows.net**) and copy it to the clipboard.
 
@@ -437,7 +439,9 @@ While you can use the portal to create and modify search solutions, it's often d
 
      ![](../media/Active-image75.png)
    
-### Review and modify the skillset
+#### Task 6.2: Review and modify the skillset
+
+In this task, you will be configuring a skillset (skillset.json) in Visual Studio Code to integrate Azure AI Services with Azure AI Search:
 
 1. In Visual Studio Code, in the **modify-search** folder, open **skillset.json**. This shows a JSON definition for **margies-skillset**.
 
@@ -487,7 +491,9 @@ While you can use the portal to create and modify search solutions, it's often d
 
 6. Save the changes you've made to **skillset.json**.
 
-### Review and modify the index
+#### 6.3 : Review and modify the index
+
+In this task, you will review the index.json file in Visual Studio Code which shows a JSON definition for **margies-index**
 
 1. In Visual Studio Code, in the **modify-search** folder, open **index.json**. This shows a JSON definition for **margies-index**.
 
@@ -518,8 +524,9 @@ While you can use the portal to create and modify search solutions, it's often d
 
 1. The **sentiment** field will be used to add the output from the **get-sentiment** skill that was added to the skillset. The **url** field will be used to add the URL for each indexed document to the index, based on the **metadata_storage_path** value extracted from the data source. Note that the index already includes the **metadata_storage_path** field, but it's used as the index key and Base-64 encoded, making it efficient as a key but requiring client applications to decode it if they want to use the actual URL value as a field. Adding a second field for the unencoded value resolves this problem.
 
-### Review and modify the indexer
+#### Task 6.4: Review and modify the indexer
 
+In this task, you will review the **indexer.json** file in Visual Studio Code which shows a JSON definition for **margies-index**
 
 1. In Visual Studio Code, in the **modify-search** folder, open **indexer.json**. This shows a JSON definition for **margies-indexer**, which maps fields extracted from document content and metadata (in the **fieldMappings** section) and values extracted by skills in the skillset (in the **outputFieldMappings** section) to fields in the index.
 
@@ -546,7 +553,7 @@ While you can use the portal to create and modify search solutions, it's often d
     }
     ```
 
-### Use the REST API to update the search solution
+#### Task 6.5 : Use the REST API to update the search solution
 
 1. Right-click the **modify-search** folder and select **open an integrated terminal**.
 
@@ -564,7 +571,7 @@ While you can use the portal to create and modify search solutions, it's often d
 
     >**Note**: There may be some warnings for a few documents that are too large to evaluate sentiment. Often, sentiment analysis is performed at the page or sentence level rather than the full document, but in this scenario, most of the documents, particularly the hotel reviews, are short enough for useful document-level sentiment scores to be evaluated.
 
-### Query the modified index
+#### Task 6.6 : Query the modified index
 
 1. At the top of the blade for your Azure AI Search resource, select **Search explorer**.
 2. In Search explorer, in the **Query string** box, submit the following JSON query:
