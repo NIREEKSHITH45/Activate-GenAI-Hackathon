@@ -226,7 +226,9 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
 ### Task 5: Data Import and Indexing:
 #### Task 5.1: Index the documents
 
-Now that you have the documents in place, you can create a search solution by indexing them.
+In this task, you'll learn how to create a search solution by indexing documents that are already in place. Navigating to your Azure AI Search resource in the Azure portal, configure the data source to utilize Azure Blob Storage, integrate cognitive skills for enrichment, customize the target index, and set up an indexer to process and index the documents effectively.
+
+>**Note**: Now that you have the documents in place, you can create a search solution by indexing them.
 
 1. In the Azure portal, browse to your **Azure AI Search** resource. Then, on its **Overview** page, select **Import data**.
 
@@ -328,7 +330,7 @@ Now that you have the documents in place, you can create a search solution by in
 
 #### Task 5.2: Search the index
 
-Now that you have an index, you can search it.
+In this task, you'll learn to search and query the index created earlier:
 
 1. At the top of the **Overview** page for your Azure AI Search resource, select **Search explorer**.
 
