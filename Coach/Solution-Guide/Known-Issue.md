@@ -44,6 +44,6 @@
 
 ## Challenge- 06
 
-1. If you encounter issue  while Uploading a document to Blob Storage, please make sure you have given correct **model ID** as **customfrs**. 
+1. While **uploading a document to Blob Storage**, if you notice a **Failed** count in the **Request Queue**, please ensure you have correctly set the **model ID** to **customfrs**.
 
     ![](../media/Active-image(239).png)
