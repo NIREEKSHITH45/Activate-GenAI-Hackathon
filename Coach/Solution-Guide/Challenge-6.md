@@ -227,7 +227,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
       - Pricing Tier: Select **Standard (99.95% SLA) (7)**
       - Unit(s): **1 (8)**
     
-          ![](../media/Active-image236.png)
+          ![](../media/Active-image257.png)
 
           ![](../media/Active-image237.png)
 
