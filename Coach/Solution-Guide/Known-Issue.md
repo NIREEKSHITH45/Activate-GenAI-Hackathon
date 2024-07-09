@@ -13,7 +13,7 @@
 1. If you encounter an validation issue in Azure OpenAI model due to Token Per mintue (TPM) quota issue please follow any one the below mentioned steps and try to re-deploy the ARM template.
 
 
-    1.  Decrease Azure OpenAI resource - model token Per mintue(TPM)  
+    - Decrease **Azure OpenAI resource** - model token Per mintue(TPM).  
 
          - On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
       
@@ -25,15 +25,16 @@
          - On the **Deployements** page, select  **text-ada-002** and scale down the **Tokens per Minute Rate Limit (thousands)**: **10K** then click on **Save**.
 
          - Back to Azure portal where Custom deployemnt page is open click on **Previous** and select **Create**.
-
-    2.  Delete the existing OpenAI resource make sure to purge the OpenAI resource  
+         - Wait for the deployemnt to complete.
+  
+    - Delete the existing **OpenAI** resource make sure to purge the OpenAI resource.  
 
         - Open another tab in edge browser and sign in to **Azure portal** and search and select for **OpenAI**.
 
-         - On the **Azure AI services | Azure OpenAI** blade, click on **Manage deleted resources**. Then on **Manage deleted resources** pop up window select the existing **Subscription** > **OpenAI** resources and 
+        - On the **Azure AI services | Azure OpenAI** blade, click on **Manage deleted resources**. Then on **Manage deleted resources** pop up window select the existing **Subscription** > **OpenAI** resources and 
             click on **Purge**.
 
-          ![](../media/Active-image253.png)
+             ![](../media/Active-image253.png)
 
         - Back to Azure portal where Custom deployemnt page is open click on **Previous** and select **Create**.
         - Wait for the deployemnt to complete.
