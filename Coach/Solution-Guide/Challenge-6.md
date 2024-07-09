@@ -82,27 +82,6 @@ Azure OpenAI collects the same kinds of monitoring data as other Azure resources
 
    ![](../media/Active-image225.png)
 
-    >**Note**: If you're not able to see or select **Log Analytics Workspace** please follow the below steps to create a one new **Log Analytics Workspace**
-      - On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Log Analytics Workspace**, and then select **Log Analytics Workspace** under services.
-
-           ![](../media/Active-image222.png)
-        
-      - On **Log Analytics Workspace** select **+ create**.
-  
-      - Specify the following details to create an **Log Analytics Workspace** service then click on **Review + Create (5)** tab.
-   
-           | **Option**         | **Value**                                              |
-           | ------------------ | -----------------------------------------------------  |
-           | Subscription       | Leave default  **(1)**                                 |
-           | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**                |
-           | Name               | *Enter a unique name* for your search service or use the format **Loganalytics-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
-           | Location           | Use the same location as the resource group **(4)**           |
-   
-          ![](../media/Active-image224.png)
-
-        -  Once validation is successful on the **Review + Create** tab, click **Create** and wait for the deployment to complete.
-        -  Once **Log Analytics Workspace** is deployed re-perform the above steps.
-
 > After the successful configuration of the diagnostic settings, you can work with metrics and log data for your Azure OpenAI resource in your Log Analytics workspace.
 
 ### Task 2.2: Use the Chat Playground to ingest additional logs
