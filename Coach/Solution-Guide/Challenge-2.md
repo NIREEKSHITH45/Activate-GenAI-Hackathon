@@ -599,6 +599,8 @@ Now that you have a useful index, you can use it from a client application. You 
 
 #### Task 7.1 : Get the endpoint and keys for your search resource
 
+In this task, you'll retrieve the endpoint URL and keys for your Azure AI Search resource from the Azure portal, essential for managing and querying your search resources in upcoming tasks.
+
 1. In the Azure portal, navigate back to **Azure AI Search**. On the Overview page for the **Azure AI Search** resource, note the url value, which should be similar to **https://your_resource_name.search.windows.net**. Please record this value in Notepad as it will be required in upcoming tasks.
 
     ![](../media/Active-image86.png)
@@ -616,8 +618,10 @@ Now that you have a useful index, you can use it from a client application. You 
     
 #### Task 7.2 : Prepare to use the Azure AI Search SDK
 
+In this task, you'll prepare your development environment in Visual Studio Code to integrate with Azure AI Search SDK by installing the necessary packages (Azure.Search.Documents for C# or azure-search-documents for Python) and configuring endpoint URL and query key in the respective configuration files.
+
 1. In Visual Studio Code, in the **Explorer** pane, browse to the **22-create-a-search-solution** folder and expand the **C-Sharp** or **Python** folder depending on your language preference.
-2. Right-click the **margies-travel** folder and open an integrated terminal. Then install the Azure AI Search SDK package by running the appropriate command for your language preference:
+1. Right-click the **margies-travel** folder and open an integrated terminal. Then install the Azure AI Search SDK package by running the appropriate command for your language preference:
    > **Note**: Please ensure the necessary extensions are already installed in the VS Code.
 
     **C#**
@@ -647,6 +651,8 @@ Now that you have a useful index, you can use it from a client application. You 
 
 #### Task 7.3 : Explore code to search an index
 
+In this task, you'll explore the code for a web application (C# ASP.NET Razor or Python Flask) within the margies-travel folder. You'll review how it interacts with Azure AI Search SDK to perform search queries, configure search clients, and manage search results, including filtering, sorting, and highlighting content fields.
+
 The **margies-travel** folder contains code files for a web application (a Microsoft C# *ASP.NET Razor* web application or a Python *Flask* application), which includes search functionality.
 
 1. Open the following code file in the web application, depending on your choice of programming language:
@@ -667,6 +673,8 @@ The **margies-travel** folder contains code files for a web application (a Micro
     - The results include only the fields specified.
 
 #### Task 7.4 : Explore code to render search results
+
+In this task, you'll delve into the web application's code (either C# ASP.NET Razor or Python Flask) to understand how it presents search results:
 
 The web app already includes code to process and render the search results.
 
@@ -689,6 +697,9 @@ The web app already includes code to process and render the search results.
         - Display the first five **imageTags** (if any).
 
 #### Task 7.5 : Run the web app
+
+In this task, you'll be running the Margie's Travel web application locally, searching for specific terms like "London hotel" and "quiet hotel in New York", refining search results using filters and sorting options based on sentiment, observing keyword and location identification in documents.
+
 
  1. Return to the integrated terminal for the **margies-travel** folder and enter the following command to run the program:
     
