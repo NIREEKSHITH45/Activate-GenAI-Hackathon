@@ -8,7 +8,7 @@ Explore monitoring data collection, including activity logs and platform metrics
 
 ## Task 1: Explore content filters
 
-Content filters are applied to prompts and completions to prevent potentially harmful or offensive language from being generated.
+In this task you'll explore the affect of the default content filters in Azure OpenAI. Content filters are applied to prompts and completions to prevent potentially harmful or offensive language from being generated.
 
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
