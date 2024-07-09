@@ -2,11 +2,11 @@
 
 ## Challenge- 03 
 
- **Issue**:  While deploying Azure resources, if you encounter the following error, it can be ignored. Wait for the deployment to complete.
+ **Issue**:  While deploying Azure resources, if you encounter the following error.
 
    ![](../media/Active-image120.png)
 
-  **Resolution** : The error can be ignored as it is a temporary issue.
+  **Resolution** : The error can be ignored as it is a temporary issue and wait for the deployment to complete.
    
 ## Challenge- 05
 
