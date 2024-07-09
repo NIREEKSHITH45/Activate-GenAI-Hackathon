@@ -10,7 +10,9 @@
    
 ## Challenge- 05
 
-1. If you encounter validation issue in **Translator** due to **Region Constrain** kindly change the primary region to **EastUS2** and procced with next step.
+**Issue**: If you encounter validation issue in **Translator** due to **Region Constrain**.
+
+**Resolution**: Kindly change the primary region to **EastUS2** and procced with next step. 
 
 1. If you encounter an validation issue in Azure OpenAI model due to Token Per mintue (TPM) quota issue please follow any one the below mentioned steps and try to re-deploy the ARM template.
 
