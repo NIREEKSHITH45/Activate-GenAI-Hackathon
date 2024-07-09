@@ -555,6 +555,8 @@ In this task, you will review the **indexer.json** file in Visual Studio Code wh
 
 #### Task 6.5 : Use the REST API to update the search solution
 
+In this task, you will update JSON definitions in Visual Studio Code for Azure AI Search to include new fields like sentiment analysis results and document URLs. Run modify-search.cmd to apply changes and start indexing. Monitor progress in Azure portal's Indexers section for completion and document size warnings during sentiment analysis.
+
 1. Right-click the **modify-search** folder and select **open an integrated terminal**.
 
      ![](../media/Active-image83.png)
@@ -572,6 +574,7 @@ In this task, you will review the **indexer.json** file in Visual Studio Code wh
     >**Note**: There may be some warnings for a few documents that are too large to evaluate sentiment. Often, sentiment analysis is performed at the page or sentence level rather than the full document, but in this scenario, most of the documents, particularly the hotel reviews, are short enough for useful document-level sentiment scores to be evaluated.
 
 #### Task 6.6 : Query the modified index
+In this task, you'll perform a query in Azure AI Search to retrieve URLs, sentiment, and key phrases for documents mentioning "London" with positive sentiment, authored by "Reviewer".
 
 1. At the top of the blade for your Azure AI Search resource, select **Search explorer**.
 2. In Search explorer, in the **Query string** box, submit the following JSON query:
@@ -594,7 +597,7 @@ Now that you have a useful index, you can use it from a client application. You 
 
 > **Note**: You can choose to use the SDK for either **C#** or **Python**. In the steps below, perform the actions appropriate for your preferred language.
 
-### Get the endpoint and keys for your search resource
+#### Task 7.1 : Get the endpoint and keys for your search resource
 
 1. In the Azure portal, navigate back to **Azure AI Search**. On the Overview page for the **Azure AI Search** resource, note the url value, which should be similar to **https://your_resource_name.search.windows.net**. Please record this value in Notepad as it will be required in upcoming tasks.
 
@@ -611,7 +614,7 @@ Now that you have a useful index, you can use it from a client application. You 
 
      ![](../media/Active-image88.png)
     
-### Prepare to use the Azure AI Search SDK
+#### Task 7.2 : Prepare to use the Azure AI Search SDK
 
 1. In Visual Studio Code, in the **Explorer** pane, browse to the **22-create-a-search-solution** folder and expand the **C-Sharp** or **Python** folder depending on your language preference.
 2. Right-click the **margies-travel** folder and open an integrated terminal. Then install the Azure AI Search SDK package by running the appropriate command for your language preference:
@@ -642,7 +645,7 @@ Now that you have a useful index, you can use it from a client application. You 
   
       ![](../media/Active-image94.png)
 
-### Explore code to search an index
+#### Task 7.3 : Explore code to search an index
 
 The **margies-travel** folder contains code files for a web application (a Microsoft C# *ASP.NET Razor* web application or a Python *Flask* application), which includes search functionality.
 
@@ -663,7 +666,7 @@ The **margies-travel** folder contains code files for a web application (a Micro
     - Up to three extracts of the **merged_content** and **imageCaption** fields with the search terms highlighted are included in the results.
     - The results include only the fields specified.
 
-### Explore code to render search results
+#### Task 7.4 : Explore code to render search results
 
 The web app already includes code to process and render the search results.
 
@@ -685,7 +688,7 @@ The web app already includes code to process and render the search results.
         - Display the first five **locations** (if any).
         - Display the first five **imageTags** (if any).
 
-### Run the web app
+#### Task 7.5 : Run the web app
 
  1. Return to the integrated terminal for the **margies-travel** folder and enter the following command to run the program:
     
