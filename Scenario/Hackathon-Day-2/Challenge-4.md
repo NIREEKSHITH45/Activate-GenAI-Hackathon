@@ -16,7 +16,7 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
    - Click on **"Browse"** to open your web application.
  You will be prompted with the **Northwind Health chat application** as below. 
 
-   ![](../media/lab03-04.png)
+     ![](../media/lab03-04.png)
 
 - In the chat application, provide the below prompt and check how responses are given by the ChatGPT and Azure cognitive search services by interacting to construct search queries and retrieve candidate information from the knowledge base.
 
