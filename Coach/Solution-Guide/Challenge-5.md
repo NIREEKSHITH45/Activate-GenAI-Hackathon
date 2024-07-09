@@ -283,6 +283,8 @@ In this task, you'll set up a Translator resource in Azure Portal, obtain its ke
    
 ### Task 2: Creating a Form Recognizer Resource
 
+In this task, you'll create a Form Recognizer resource in Azure Portal by setting up a new project in Document Intelligence Studio. This involves configuring project details, connecting to a training data source stored in an Azure Storage account, and validating your settings before creating the project.
+
 1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI services multi-service account (1)**, and then select **Azure AI services multi-service account(2)** under services.
 
    ![](../media/Active-image(124).png)
