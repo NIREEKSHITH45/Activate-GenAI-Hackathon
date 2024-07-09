@@ -21,8 +21,11 @@
       
          - In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio**. It will navigate to **Azure AI Studio**.
       
-         - Under **Management** select **Deployements** select **text-turbo** and scale down the **Tokens per Minute Rate Limit (thousands)**: **10K** then click on **Save**.
-         - On the **Deployements** page, select  **text-ada-002** and scale down the **Tokens per Minute Rate Limit (thousands)**: **10K** then click on **Save**.
+         - Under **Management** select **Deployements** select **text-turbo** and scale down the **Tokens per Minute Rate Limit (thousands)**: **10K** then click on **Save and close**.
+
+            ![](../media/Active-image254.png)
+
+         - On the **Deployements** page, select  **text-ada-002** and scale down the **Tokens per Minute Rate Limit (thousands)**: **10K** then click on **Save and close**.
 
          - Back to Azure portal where Custom deployemnt page is open click on **Previous** and select **Create**.
          - Wait for the deployemnt to complete.
