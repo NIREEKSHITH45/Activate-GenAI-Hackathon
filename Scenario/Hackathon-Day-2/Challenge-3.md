@@ -29,7 +29,7 @@ Together, these services create a responsive chat application that combines AI f
 
 ## Architecture diagram:
 
-![](../media/appcomponents.png)
+![](../media/Active-image258.png)
 
 
 ## Prerequisites
