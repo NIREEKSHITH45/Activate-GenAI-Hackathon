@@ -14,6 +14,8 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 ### Task 1: Translate the documents using Translate
 
+In this task, you'll set up Azure resources for Azure AI Services. It includes registering providers, creating a new Azure AI service, accepting Responsible AI terms, forking a GitHub repository, generating a Personal Access Token (PAT), and deploying resources to Azure via the GitHub repository using specified parameters and configurations. 
+
 1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Subscriptions (1)**, and then select **Subscriptions (2)** under services.
 
       ![](../media/Active-image121.png)
@@ -150,6 +152,8 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
    
 #### Task 1.2 - Create Azure Blob Storage containers
 
+In this task, you'll learn how to create a container in an existing storage account where the documents that need to be searched are stored.
+
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage account**, and then select **Storage account** under services.
 
 1. Select the storage account that is created from the resources that were deployed in the previous task.
@@ -198,7 +202,7 @@ Once accepted, you can create subsequent resources using any deployment tool (SD
 
 #### Task 1.3 - Set up your C#/.NET environment and install Newtonsoft.Json
    
-1. In the LabVM, in the Windows Search bar type Visual and select **Visual Studio 2022**.
+1. In the **LabVM**, in the Windows Search bar type Visual and select **Visual Studio 2022**.
 
    ![](../media/Active-image165.png)
 
