@@ -201,6 +201,8 @@ In this task, you'll learn how to create a container in an existing storage acco
     ![](../media/Active-image156.png)
 
 #### Task 1.3 - Set up your C#/.NET environment and install Newtonsoft.Json
+
+In this task, we will set up a C#/.NET environment in Visual Studio 2022. We'll create a new console application named "document-translation-qs" using .NET 7.0 and install the Newtonsoft.Json package via NuGet for managing JSON operations within our project.
    
 1. In the **LabVM**, in the Windows Search bar type Visual and select **Visual Studio 2022**.
 
@@ -241,6 +243,8 @@ In this task, you'll learn how to create a container in an existing storage acco
     ![](../media/Active-image164.png)
    
 #### Task 1.4 -Translate all documents into a storage container and run your application
+
+In this task, you'll set up a Translator resource in Azure Portal, obtain its keys and endpoint, and integrate them into a C# console application in Visual Studio 2022. This application will be configured to batch-translate documents stored in an Azure Storage container using Translator service APIs.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Translator**, and then select **Translator** under services.
 
