@@ -42,13 +42,11 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
    - Tweak queries to include counts and specific fields.
    - Define search components.
    - Query the modified index to retrieve refined and targeted information.
-
      > Hint: Refine your queries to count results, choose specific fields, configure search components, and use the updated index for detailed and focused information retrieval.
 
 7. **Deploy & Test a Search Client Application:**
    - Update application settings and configure the web app.
    - Run the application locally to test the search functionality.
-
      > Hint: The application supports multiple languages; choose the one that suits your project's requirements. Adjust your application settings and configure the web application as needed. Then, run the application locally to test the search functionality before proceeding with deployment. 
 
    <validation step="15277a80-8b44-474a-ac19-0831c71d5fbd" />
