@@ -2,9 +2,11 @@
 
 ## Challenge- 03 
 
-1. While deploying Azure resources, if you encounter the following error, it can be ignored. Wait for the deployment to complete.
+  Issue:  While deploying Azure resources, if you encounter the following error, it can be ignored. Wait for the deployment to complete.
 
    ![](../media/Active-image120.png)
+
+  Resolution : The error can be ignored as it is a temporary issue.
    
 ## Challenge- 05
 
@@ -41,9 +43,3 @@
 
         - Back to Azure portal where Custom deployemnt page is open click on **Previous** and select **Create**.
         - Wait for the deployemnt to complete.
-
-## Challenge- 06
-
-1. While **uploading a document to Blob Storage**, if you notice a **Failed** count in the **Request Queue**, please ensure you have correctly set the **model ID** to **customfrs**.
-
-    ![](../media/Active-image(239).png)
