@@ -55,6 +55,8 @@ To create the solution for Margie's Travel, you will need the following resource
 
 #### Task 2.1: Create an Azure AI Search resource
 
+In this task, you'll learn how to create an **Azure AI Search** resource in the Azure portal.
+
 1. In a web browser, sign in to Azure portal using `https://portal.azure.com`.
 
 1. Return to the Azure portal home page, and then click the **&#65291;Create a resource** button.
@@ -98,7 +100,7 @@ To create the solution for Margie's Travel, you will need the following resource
 
 #### Task 2.2: Create an Azure AI Services resource
 
-If you don't already have one in your subscription, you'll need to provision an **Azure AI Services** resource. Your search solution will use this to enrich the data in the datastore with AI-generated insights.
+In this task, you'll learn how to create an Azure AI Search resource in the Azure portal. Your search solution will use this resource to enrich the data in the datastore with AI-generated insights.
 
 1. Return to the Azure portal home page, and then click the **&#65291;Create a resource** button.
 
@@ -132,6 +134,8 @@ If you don't already have one in your subscription, you'll need to provision an 
 1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
 
 #### Task 2.3: Create a storage account
+
+In this task, you'll learn how to create a **Storage account** resource in the Azure portal, and in next steps will be creating blob container where the documents to be searched are stored.
 
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Storage account** **(1)**, and then select **Storage account** **(2)** under services.
 
