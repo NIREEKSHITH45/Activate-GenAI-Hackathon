@@ -339,7 +339,7 @@ In this task, you'll create a Form Recognizer resource in Azure Portal by settin
 
 ### Task 3: Train and label data
 
-In this step, you will upload 6 training documents to train the model.
+In this task, you'll train a Form Recognizer model by uploading, labeling, training, and testing with sample data comprising 6 training documents.
 
 1. Click on **Browse for files**.
 
@@ -399,7 +399,9 @@ In this step, you will upload 6 training documents to train the model.
 
     ![](../media/Active-image198.png)
 
-**Build a new pipeline with the custom model module in BPA**
+### Task 4 : Build a new pipeline with the custom model module in BPA
+
+In this task, you'll configure a new pipeline in the Business Process Automation Accelerator (BPA) to utilize a custom Form Recognizer model. This involves setting up the model ID within the pipeline stages and configuring document ingestion from specified file paths.
 
 After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
 
@@ -423,19 +425,19 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 1. On the **Select a document type to get started** page, select **PDF Document**.
 
-   ![](../media/Active-image203.png)
+    ![](../media/Active-image203.png)
 
 1. On the **Select a stage to add it to your pipeline configuration** page, search for and select **Form Recognizer Custom Model (Batch)**.
 
-   ![](../media/Active-image204.png)
+    ![](../media/Active-image204.png)
    
 1. On the pop-up, enter the model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
 
-   ![](../media/Active-image205.png)
+    ![](../media/Active-image205.png)
 
 1. On the **Select a stage to add it to your pipeline configuration** page, scroll down to review the **Pipeline Preview** and click on **Done**.
 
-  ![](../media/Active-image206.png)
+    ![](../media/Active-image206.png)
 
 1. On the **Pipelines workshop** page, click on **Home**. 
 
@@ -454,6 +456,8 @@ After you are satisfied with the custom model performance, you can retrieve the 
       ![](../media/Active-image215.png)
 
 ### Task 5: Configure Azure Cognitive Search 
+
+In this task, you'll configure Azure Cognitive Search to connect with Azure Blob Storage. This includes setting up a data source, defining parsing options for JSON files, customizing a search index for data fields, and creating an indexer to automate data ingestion and indexing processes.
 
 1. Navigate back to the resource group window, search, and select **Search Service** with a name similar to **bpa{suffix}**.
 
@@ -483,7 +487,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
   
 1. On the **Connect to your data** page, for **Blob folder** enter  **workshop** **(9)** click on **Next : Add cognitive skills (Optional) (10)**.
 
-   ![](../media/Active-image217.png)
+    ![](../media/Active-image217.png)
 
 1. On the **Add cognitive skills (Optional)**, click on **Skip to : Customize target index**.
 
