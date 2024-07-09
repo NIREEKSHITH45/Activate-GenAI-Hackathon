@@ -1,6 +1,6 @@
 # Challenge 06: Implement Monitoring and Logging of Azure OpenAI Using API Management Service
 
-## Lab scenario
+## Introduction
 
 Explore monitoring data collection, including activity logs and platform metrics. Configure Azure Monitor for log generation, customize data routing with diagnostic settings and initiate resource log collection. Discover Log Analytics Workspace limitations in logging user requests and model responses. Mitigate this by integrating the Azure API Management Service for comprehensive logging in the Azure OpenAI environment.
 
