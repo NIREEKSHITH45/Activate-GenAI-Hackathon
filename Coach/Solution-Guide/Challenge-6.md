@@ -202,7 +202,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
       - Region: **(US) East US (3)**
       - Resource Name: **apim-<inject key="Deployment ID" enableCopy="false"/> (4)**
       - Organization Name: **Windows (5)**
-      - Administrator email: * **Email/Username**: <inject key="AzureAdUserEmail"></inject> (6)
+      - Administrator email: **Email/Username**: <inject key="AzureAdUserEmail"></inject> (6)
       - Pricing Tier: Select **Standard (99.95% SLA) (7)**
       - Unit(s): **1 (8)**
     
