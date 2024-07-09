@@ -171,10 +171,6 @@ In this task, you'll learn how to create a **Storage account** resource in the A
 
    ![](../media/Active-image40.png)
 
-1. On the **Access keys** page, note that two keys have been generated for your storage account. Then select **Show** to view the keys.
-
-    ![](../media/Active-image41.png)
-
     > **Tip**: Keep the **Storage Account** blade open; you will need the subscription ID and one of the keys in the next procedure.
 
 ### Task 3 and Task 4: Upload documents to Azure Storage and execute the uploaded script
