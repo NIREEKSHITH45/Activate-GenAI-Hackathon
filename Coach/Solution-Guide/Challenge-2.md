@@ -179,7 +179,9 @@ In this task, you'll learn how to create a **Storage account** resource in the A
 
 ### Task 3 and Task 4: Upload documents to Azure Storage and execute the uploaded script
 
-Now that you have the required resources, you can upload some documents to your Azure Storage account.
+In this task, you'll navigate between Visual Studio Code and the Azure portal to retrieve necessary credentials, update a batch file, and use the Azure CLI to upload documents to a blob container in your storage account.
+
+>**Important**: Now that you have the required resources, you can upload some documents to your Azure Storage account.
 
 1. Navigate back to Visual Studio Code, under the **Explorer** pane, expand the **22-create-a-search-solution (1)** folder and select **UploadDocs.cmd (2)**.
 
