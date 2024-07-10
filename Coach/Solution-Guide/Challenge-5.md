@@ -103,7 +103,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
    >**Reference link**: [Get a Workflow Level Token (Classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
-1. Copy the PAT token and paste it in a notepad.
+1. Copy the **PAT token** and paste it in a notepad.
 
       ![](../media/gen37.png)
    
@@ -156,11 +156,11 @@ In this task, you'll learn how to create a container in an existing storage acco
 
      ![](../media/Active-image148.png)
 
-1. Click on the source container.
+1. Click on the **source** container.
 
      ![](../media/Active-image149.png)
    
-1. from the left navigation pane expand **Settings(1)** then select **Shared Access Tokens(2)**. From the **Permission** drop down select **Read(3)** and **List(4)** then click on **Generate SAS token and URL(5)**.
+1. From the left navigation pane expand **Settings(1)** then select **Shared Access Tokens(2)**. From the **Permission** drop down select **Read(3)** and **List(4)** then click on **Generate SAS token and URL(5)**.
 
       ![](../media/Active-image150.png)
 
