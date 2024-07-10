@@ -10,7 +10,7 @@ A **Large Language Model (LLM)** is a deep learning algorithm that can perform a
 
 **Contoso Ltd.**, a leading technological firm, is seeking to enhance its product support operations. They receive a vast number of queries daily, which results in longer waiting times and decreased customer satisfaction. To address this, Contoso is planning to implement an AI-powered solution that can handle customer inquiries effectively and efficiently.
 
-They have chosen to deploy Azure OpenAI Service along with its Large Language Models (LLM), like `gpt-35-turbo` and `text-embedding-ada-002`. These models are known for their capability of processing and generating human-like text, making them ideal for this application.
+They have chosen to deploy Azure OpenAI Service along with its Large Language Models (LLM), like `gpt-35-turbo` and `text-embedding-ada-002`. These models are known for their capability in processing and generating human-like text, making them ideal for this application.
 
 As a part of this challenge, your task is to create an Azure OpenAI service and deploy Large Language Models (LLM). The LLMs include **gpt-35-turbo** and **text-embedding-ada-002**.
 
@@ -47,12 +47,16 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 1. **Azure OpenAI Service Deployment:**
    - Set up an Azure OpenAI Service instance with SKU size Standard `S0`.
-   - Deploy it in the existing resource group named - **<inject key="Resource Group Name"/>**.
+   - Deploy it in the existing resource group named - **<inject key="Resource Group Name"/>**
    - Obtain the necessary Azure OpenAI Key and Endpoint.
+
+   <validation step="ccff4a0f-eb81-479e-a774-00cc5a664eeb" />
 
 2. **Deploy Large Language Models (LLM):**
    - Azure OpenAI provides a web-based portal named **Azure OpenAI Studio** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
    - Launch Azure OpenAI Studio from the overview pane and deploy two OpenAI models, i.e., `gpt-35-turbo` and `text-embedding-ada-002`, with a TPM capacity of 20k.
+
+   <validation step="32bbf48f-1030-4e8b-8dfe-a395a6746f1d" />
 
 ## Success Criteria:
 
