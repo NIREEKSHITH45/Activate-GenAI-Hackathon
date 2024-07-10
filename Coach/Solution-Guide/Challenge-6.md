@@ -102,7 +102,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 1. In the **Assistant setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-   ![](../media/gen21.png)
+   ![](../media/Active-image259.png)
 
 1. Scroll down to add a new example:
     - Click on **+ Add (1)** under the **Examples** section of the **Assistant setup** pane.
