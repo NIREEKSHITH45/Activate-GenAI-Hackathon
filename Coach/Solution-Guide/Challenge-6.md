@@ -454,3 +454,16 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     >**Note:** If you get the following error, It will take some time to reflect.
 
   ![](../media/image.png)
+
+## Success Criteria:
+
+Participants will be evaluated based on the following criteria:
+
+1. Successfully configure the Azure OpenAI service with appropriate diagnostic settings and analyze its logs using Kusto Queries.
+2. Effectively create and configure Azure API Management, ensuring clear visibility of logs and OpenAI prompts through detailed Kusto Query analysis.
+
+## Additional Resources:
+
+- Refer to [How to Configure Azure API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md) for detailed information.
+- Refer to this video about [Logging & Monitoring Everything in Azure OpenAI with API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md).
+- Refer to the [Kusto Queries Tutorial](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-tutorial) for detailed information.
