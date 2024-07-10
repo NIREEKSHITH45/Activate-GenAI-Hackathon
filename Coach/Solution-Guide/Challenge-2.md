@@ -772,3 +772,5 @@ To successfully complete this challenge, you must:
 - [Searching document text at scale using Azure Cognitive Search](https://benalexkeen.com/searching-document-text-at-scale-using-azure-cognitive-search/)
 
 To learn more about Azure AI Search, see the [Azure AI Search documentation](https://docs.microsoft.com/azure/search/search-what-is-azure-search).
+
+## Proceed with the next Challenge by clicking on **Next**>>.
