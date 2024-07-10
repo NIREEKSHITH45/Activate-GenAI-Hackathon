@@ -751,6 +751,24 @@ In this task, you'll be running the Margie's Travel web application locally, sea
 1. Close the browser tab containing Margie's Travel website and return to Visual Studio Code. Then, in the Python terminal for the **margies-travel** folder (where the dotnet or flask application is running), enter Ctrl+C to stop the app.
 
 
-## More information
+## Success criteria:
+
+
+To successfully complete this challenge, you must:
+
+   - Deploy the Azure Search Service and Azure Storage Account.
+   - Add data to the storage account.
+   - Index the documents in Azure AI Search using the Azure portal.
+   - Customize the index and configure the indexer in Azure AI Search.
+   - Modify and explore search components using JSON definitions.
+   - Utilize the Azure AI Search SDK to create a client application for search.
+   - Run the web application locally, perform searches, and refine search results effectively.
+
+
+## Additional Resources:
+
+- Refer to [What is Azure AI Search](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search) for reference.
+- [What are Indexes in Azure AI Search?](https://learn.microsoft.com/en-us/azure/search/search-what-is-an-index)
+- [Searching document text at scale using Azure Cognitive Search](https://benalexkeen.com/searching-document-text-at-scale-using-azure-cognitive-search/)
 
 To learn more about Azure AI Search, see the [Azure AI Search documentation](https://docs.microsoft.com/azure/search/search-what-is-azure-search).
