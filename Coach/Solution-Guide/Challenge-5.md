@@ -488,3 +488,15 @@ In this task, you'll configure Azure Cognitive Search to connect with Azure Blob
 1. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
    
     ![](../media/bpa4-10.png)
+
+## Success Criteria:
+
+- Successful translation of documents and storage in the Azure Blob Storage target container.
+- Effective setup and utilization of the Form Recognizer resource and BPA pipeline.
+- Proper configuration of Azure Cognitive Search for processed documents.
+- Validation of document processing and search functionality using the Sample Search Application in BPA.
+
+## Additional Resources:
+
+- Refer to [document translation](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) for sample code that will be used for document translation using C#.
+- Refer to [Document Translation operations](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/reference/rest-api-guide) to understand the REST APIs that we utilize for document translation.
