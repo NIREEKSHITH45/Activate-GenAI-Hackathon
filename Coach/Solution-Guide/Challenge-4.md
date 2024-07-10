@@ -89,7 +89,7 @@ One of the hottest themes at the moment is size models; users are particularly i
   - Successful interaction with the chat application, exploring a variety of conversational use cases.
   - Comprehensive understanding of the app's capabilities in handling multilingual queries, advanced settings, and its overall potential for Contoso's environment.
      
-> **Important**: There is no specific validation for this challenge, but your exploration and understanding are crucial.
+    > **Important**: There is no specific validation for this challenge, but your exploration and understanding are crucial.
 
 
 ## Additional Resources:
