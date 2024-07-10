@@ -500,3 +500,5 @@ In this task, you'll configure Azure Cognitive Search to connect with Azure Blob
 
 - Refer to [document translation](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) for sample code that will be used for document translation using C#.
 - Refer to [Document Translation operations](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/reference/rest-api-guide) to understand the REST APIs that we utilize for document translation.
+
+## Proceed with the next Challenge by clicking on **Next**>>.
