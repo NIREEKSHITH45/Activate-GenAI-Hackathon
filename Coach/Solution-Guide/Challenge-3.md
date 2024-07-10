@@ -109,8 +109,25 @@ In this task, you'll learn the process of Deploying the Infrastructure.
  
     >**Note**: It may take 30 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
 
+## Success Criteria:
+
+- Successful deployment of the Chat App.
+- validate if the following services are successfully deployed in the RG (Resource Group).
+  - App Service
+  - Document Intelligence
+  - Azure OpenAI
+  - Shared Dashboard
+  - Smart Detector Alert Rule
+  - Search Service
+  - Log Analytics Workspace
+  - App Service Plan
+  - Storage Account
+- Validate if the data is populated into the storage container named `content`.
+- The Chat app should be accessible using the Azure App service.
+
 ## Additional Resources:
 
 -  Refer to the  [Azure Search OpenAI demo GitHub repository](https://github.com/cmendible/azure-search-openai-demo) for detailed information on the architecture.
 -  [Azure copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
+
 
