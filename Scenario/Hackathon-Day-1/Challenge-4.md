@@ -6,8 +6,6 @@
 
 After successfully deploying the AI-enhanced chat app in the previous challenge, it's time to assess its capabilities. This challenge is centered around interacting with the app to understand its potential for real-world applications at Contoso Ltd. You will explore the efficiency of query responses, multilingual capabilities, and the impact of advanced settings, making a compelling business case for the integration of these technologies at Contoso.
 
-
-
 ## Challenge Objectives
 
 **1. Access Web Application and Query Construction and Response:**
@@ -16,7 +14,7 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
    - Click on **"Browse"** to open your web application.
  You will be prompted with the **Northwind Health chat application** as below. 
 
-   ![](../media/lab03-04.png)
+     ![](../media/lab03-04.png)
 
 - In the chat application, provide the below prompt and check how responses are given by the ChatGPT and Azure cognitive search services by interacting to construct search queries and retrieve candidate information from the knowledge base.
 
@@ -56,7 +54,7 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
    ```
    What happens in a performance review?
    ```
-**4. OpenAI and AI Search Capabilities Exploration:**
+4. OpenAI and AI Search Capabilities Exploration:
   - Conduct your own tests using various prompts to assess the range and depth of the app's conversational and search capabilities.
   - Focus on understanding how the app integrates OpenAI's model and AI Search for seamless user interactions.
 ## Success Criteria:
