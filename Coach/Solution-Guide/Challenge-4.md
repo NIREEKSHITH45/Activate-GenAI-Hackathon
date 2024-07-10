@@ -96,3 +96,4 @@ One of the hottest themes at the moment is size models; users are particularly i
 
 - Refer to the  [azure-search-openai-demo](https://github.com/Azure-Samples/azure-search-openai-demo) for detailed information.
 
+## Proceed with the next Challenge by clicking on **Next**>>.
