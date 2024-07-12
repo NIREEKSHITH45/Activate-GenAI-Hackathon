@@ -69,10 +69,9 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 ### Challenge Validation
  
-1. After completing the challenge, you need to visit the **Lab Validation (1)** tab and click on the **VALIDATE (2)** button under Actions to perform the validation steps. Verify that you have met the success criteria of the challenge. 
-
- 
-   ![azure](../media/validate01.png)
+1. After completing the challenge, you need to visit the **Lab Validation (1)** tab and click on the **VALIDATE (2)** button under Actions to perform the validation steps. Verify that you have met the success criteria of the challenge.
+   
+     ![azure](../media/validate01.png)
  
 1. If the validation status displays **Success** for all the validation steps, **congratulations!** This means that you have successfully completed the challenge.
  
