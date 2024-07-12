@@ -16,11 +16,6 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**  !
 
-1) **Pre-requisites setup:**
-      - Fork the repository: `https://github.com/CloudLabs-MOC/business-process-automation`.
-      - Follow the instructions to **Deploy to Azure with OpenAI**.
-      - Verify the deployed Azure resources in the resource group.
-    
 1) **Setup Azure Blob Storage.**
     - Create mandatory source and target containers in Azure Blob Storage for document processing by granting blob access.
 
