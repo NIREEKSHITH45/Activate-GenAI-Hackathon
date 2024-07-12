@@ -1,6 +1,6 @@
 # Challenge 06: Implement Monitoring and Logging of Azure OpenAI Using API Management Service
 
-## Lab scenario
+## Introduction
 
 Explore monitoring data collection, including activity logs and platform metrics. Configure Azure Monitor for log generation, customize data routing with diagnostic settings and initiate resource log collection. Discover Log Analytics Workspace limitations in logging user requests and model responses. Mitigate this by integrating the Azure API Management Service for comprehensive logging in the Azure OpenAI environment.
 
@@ -8,11 +8,11 @@ Explore monitoring data collection, including activity logs and platform metrics
 
 ## Task 1: Explore content filters
 
-Content filters are applied to prompts and completions to prevent potentially harmful or offensive language from being generated.
+In this task you'll explore the affect of the default content filters in Azure OpenAI. Content filters are applied to prompts and completions to prevent potentially harmful or offensive language from being generated.
 
-1. In the Azure Portal, search for **Azure OpenAI** and select it.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-      ![](../media/azure-openai-1-new.png)
+    ![](../media/Active-image6.png)
 
 1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** created in the previous challenges.
 
@@ -24,7 +24,7 @@ Content filters are applied to prompts and completions to prevent potentially ha
 
 1. In Azure OpenAI Studio, view the **Content filters (1)** page from the left navigation menu and select **Create customized content filter (2)**.
 
-      ![](../media/4-1.png)
+    ![](../media/Active-image219.png)
    
 1. Review the default settings for a content filter.
 
@@ -35,15 +35,17 @@ Content filters are applied to prompts and completions to prevent potentially ha
     - **Violence**: Language that describes, advocates, or glorifies violence.
     - **Self-harm**: Language that describes or encourages self-harm.
 
+      ![](../media/Active-image220.png)
+      
     Filters are applied for each of these categories to prompts and completions, with a severity setting of **safe**, **low**, **medium**, and **high** used to determine what specific kinds of language are intercepted and prevented by the filter.
-
+   
 1. Observe that the default settings (which are applied when no custom content filter is present) allow **low** severity language for each category. You can create a more restrictive custom filter by applying filters to one or more **low** severity levels. You cannot, however, make the filters less restrictive (by allowing **medium** or **high** severity language) unless you have applied for and received permission to do so in your subscription. Permission to do so is based on the requirements of your specific generative AI scenario.
 
     > **Tip**: For more details about the categories and severity levels used in content filters, see [Content filtering](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/content-filter) in the Azure OpenAI service documentation.
 
 ## Task 2: Monitoring the Azure OpenAI Service
 
-When your crucial applications and business processes depend on Azure resources, it's essential to monitor their availability, performance, and operation. Azure OpenAI provides out-of-box dashboards for each of your Azure OpenAI resources. To access the monitoring dashboards, select the overview pane for one of your Azure OpenAI resources.
+When your crucial applications and business processes depend on Azure resources, it's essential to monitor their availability, performance, and operation. Azure OpenAI provides out-of-box dashboards for each of your Azure OpenAI resources. To access the monitoring dashboards, navigate to azure portal search and select the OpenAI and select one the OpenAI resource. On the overview Azure OpenAI resources you get  monitoring dashboards by clicking on **Monitor** tab.
 
    ![](../media/dashboard.png)
 
@@ -57,19 +59,19 @@ The dashboards are grouped into four categories: HTTP Requests, Tokens-Based Usa
 
 Azure OpenAI collects the same kinds of monitoring data as other Azure resources. You can configure Azure Monitor to generate data in activity logs, resource logs, virtual machine logs, and platform metrics. Platform metrics and the Azure Monitor activity log are collected and stored automatically, which can be routed to other locations by using a diagnostic setting. Azure Monitor resource logs aren't collected and stored until you create a diagnostic setting and a Log Analytics workspace.
 
-1. In the Azure Portal, search for **Azure OpenAI** and select it.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-   ![](../media/azure-openai-1-new.png)
+    ![](../media/Active-image6.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
 
    ![](../media/1-2.png)
 
-4. From the Azure OpenAI resource page, under **Monitoring**, select **Diagnostic settings (1)** on the left pane. On the Diagnostic settings page, select **Add diagnostic setting (2)**.
+1. From the Azure OpenAI resource page, under **Monitoring**, select **Diagnostic settings (1)** on the left pane. On the Diagnostic settings page, select **Add diagnostic setting (2)**.
 
    ![](../media/4-2.png)
 
-5. To create a new Diagnostic Settings, on the **Diagnostic Settings** page, configure the following fields:
+1. To create a new Diagnostic Settings, on the **Diagnostic Settings** page, configure the following fields:
    - **Diagnostic settings name:** **OpenAI Diagnostic Setting (1)**
    - Select **Send to Log Analytics workspace (2)** - To be checked.
    - **Subscription**: Default - Pre-assigned subscription **(3)**
@@ -78,7 +80,7 @@ Azure OpenAI collects the same kinds of monitoring data as other Azure resources
    - Under **Metrics**, select **allMetrics (6)**.
    - To save the configuration, click on **Save (7)**.
 
-   ![](../media/azure-openai-3.png)
+   ![](../media/Active-image225.png)
 
 > After the successful configuration of the diagnostic settings, you can work with metrics and log data for your Azure OpenAI resource in your Log Analytics workspace.
 
@@ -86,58 +88,72 @@ Azure OpenAI collects the same kinds of monitoring data as other Azure resources
 
 The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models. It uses the *ChatCompletions* API rather than the older *Completions* API.
 
-1. In the **Playground** section, select the **chat** page, and ensure that the **text turbo** deployment is selected in the configuration pane.
+1. Navigate back to the Azure OpenAI service that was previously created.
+
+1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio**; it will navigate to **Azure AI Studio**.
+
+1. Click on **Chat** under the **Playgronund** tab in the left pane.
+
+    ![](../media/Active-image226.png)
+   
+1. In the **Playground** section, select the **chat** page, and ensure that the **chat** deployment is selected in the configuration pane.
 
    ![](../media/chat.png)
 
-2. In the **Assistant setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
+1. In the **Assistant setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-   ![](../media/chat-playground-2.png)
+   ![](../media/Active-image259.png)
 
-3. To add a new example:
-    - Click on **Add an example** under the **Examples** section of the **Assistant setup** pane.
+1. Scroll down to add a new example:
+    - Click on **+ Add (1)** under the **Examples** section of the **Assistant setup** pane.
     - Enter the following message and response in the designated boxes:
         - **User**: `What are different types of artificial intelligence?` **(2)**
           
         - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).` **(3)**
           
-        - Click on **Save changes (4)** to start a new session and set the behavioral context of the chat system.
+        - Click on **Apply changes (4)** to start a new session and set the behavioral context of the chat system.
 
-             ![](../media/chat-playground-3.png)
+             ![](../media/Active-image227.png)
    
-             ![](../media/chat-playground-4.png)
+             ![](../media/Active-image228.png)
+     
+             ![](../media/Active-image(229).png)
 
-             > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to                reflect the tone and style of the examples in its own responses.
+             > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+             
+             > **Note**: Click on **Continue** when prompted with **Update system message?**.
 
-5. Within the query box of the chat session pane, enter the text `What is artificial intelligence?`
+             ![](../media/Active-image230.png)
+          
+1. Within the query box of the chat session pane, enter the text `What is artificial intelligence?`
    
-7. Use the **Send** button to submit the message and view the response.
+1. Use the **Send** button to submit the message and view the response.
 
       > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
-      > Any text that you enter in the **Completions playground** or the **Chat Completions playground** generates metrics and log data for your Azure OpenAI         resource. In the Log Analytics workspace for your resource, you can query the monitoring data by using the Kusto query language.
+      > Any text that you enter in the **Completions playground** or the **Chat Completions playground** generates metrics and log data for your Azure OpenAI resource. In the Log Analytics workspace for your resource, you can query the monitoring data by using the Kusto query language.
 
 ### Task 2.3: Analyze logs using Kusto Queries
 
 Data in Azure Monitor Logs is stored in tables, where each table has its own set of unique properties. The activity log is a type of platform log in Azure that provides insight into subscription-level events. You can view this log independently or route it to Azure Monitor Logs. In the Azure portal, you can use the activity log in Azure Monitor Logs to run complex queries with Log Analytics.
 
-1. In the **Azure portal**, search for **OpenAI** and select it.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-   ![](../media/azure-openai-1-new.png)
+    ![](../media/Active-image6.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
    
-4. From your Azure OpenAI resource page, under **Monitoring** on the left pane, select **Logs (1)**, and then click on the pre-created Log Analytics workspace **(2)** that was used to configure diagnostics for your Azure OpenAI resource.
+1. From your Azure OpenAI resource page, under **Monitoring** on the left pane, select **Logs (1)**, and then click on the pre-created Log Analytics workspace **(2)** that was used to configure diagnostics for your Azure OpenAI resource.
 
-   ![](../media/4-4.png)
+  ![](../media/Active-image231.png)
 
-5. Within the **Log Analytics workspace** page, under Overview on the left pane, select **Logs**.
+1. Within the **Log Analytics workspace** page, under Overview on the left pane, select **Logs**.
 
    ![](../media/4-5.png)
 
-> The Azure portal displays a Queries window with sample queries and suggestions by default. You can close this window.
+   > The Azure portal displays a Queries window with sample queries and suggestions by default. You can close this window.
 
-5. For the following examples, enter the Kusto query into the edit region at the top of the Query window, and then select Run. The query results are displayed below the query text.
+1. For the following examples, enter the Kusto query into the edit region at the top of the Query window, and then select Run. The query results are displayed below the query text.
 
     - This Kusto query is useful for an initial analysis of Azure Diagnostics (AzureDiagnostics) data about your resource:
       
@@ -149,11 +165,11 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
        | project TimeGenerated, _ResourceId, Category, OperationName
         ```
 
-6. In the query results, you can select the arrow next to the table name to view all available columns and associated data types.
+1. In the query results, you can select the arrow next to the table name to view all available columns and associated data types.
 
-   ![](../media/query-results.png)
+   ![](../media/Active-image232.png)
 
-7. To see all available columns of data, you can remove the scoping parameters line `| project ...` from the query:
+1. To see all available columns of data, you can remove the scoping parameters line `| project ...` from the query:
 
    ```kusto
    AzureDiagnostics
@@ -161,9 +177,9 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
    ```
    > **Note:** If the logs don't reflect immediately, please wait for 10–15 minutes for them to come up.
 
-8. You can also expand the results and check for the details provided under each for more information.
+1. You can also expand the results and check for the details provided under each for more information.
 
-   ![](../media/4-6.png)
+   ![](../media/Active-image233.png)
 
 ## Task 3: Monitoring OpenAI prompts using Azure API Management
 
@@ -171,51 +187,78 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
 
 Creating a diagnostic setting and linking Azure OpenAI to a log analytics workspace does help in capturing native logs; however, the Log Analytics workspace is incapable of logging the user request and OpenAI model response prompts. In such scenarios, the Azure API Management Service comes in handy.
 
-1. Within the global search bar, search for and select the **API Management Services**, and create one new APIM service by giving the required values.
+1. Within the global search bar, search for and select the **API Management Services**, and select it
 
-    ![](../media/apim-resource.png)
+    ![](../media/Active-image234.png)
 
-2. Select the deployed **APIM service.**
+1. Click on Create.
 
-    ![](../media/4-7.png)
+   ![](../media/Active-image235.png)
 
-3. Navigate to the **Managed identities**, change the status to **On** and click on **Save** button.
+1. Add the following details in the **Create API Management Service** page and click on **Review + install**:
 
-    ![](../media/apmi.png)
+      - Subscription: **Select the default subscription (1)**
+      - Resource Group: Select **rg-activategenai (2)**
+      - Region: **(US) East US (3)**
+      - Resource Name: **apim-<inject key="Deployment ID" enableCopy="false"/> (4)**
+      - Organization Name: **Windows (5)**
+      - Administrator email: **Email/Username**: <inject key="AzureAdUserEmail"></inject> (6)
+      - Pricing Tier: Select **Standard (99.95% SLA) (7)**
+      - Unit(s): **1 (8)**
+    
+          ![](../media/Active-image257.png)
 
-4. In the **Azure portal**, search for **OpenAI** and select it.
+          ![](../media/Active-image237.png)
 
-   ![](../media/azure-openai-1-new.png)
+1. On **Review + install** tab once validation passed click on **Create**.
 
-5. Select the **OpenAI Service** deployed in the previous challenge.
+      > **Note**: Before proceeding with next step make sure **API Management Service** deployed successfully
 
-6. To capture the values of Azure OpenAI's key and endpoint, execute the following steps:
+1. Once **API Management Service** deployed successfully, click on **Go to resource**.
+
+1. On **API Management service** blade, from left navigation pane under **Security** select **Managed identities** then on **System assigned** tab set the status to **On** and click on **Save**.
+
+    ![](../media/Active-image240.png)
+
+1. Click on **Yes** when **Enable system assigned managed identity** when prompted.
+
+   ![](../media/Active-image241.png)
+   
+1. Please sign out and then sign back in to the Azure portal before proceeding with the next steps.
+        
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
+
+    ![](../media/Active-image6.png)
+
+1. Select the **OpenAI Service** deployed in the previous challenge.
+
+1. To capture the values of Azure OpenAI's key and endpoint, execute the following steps:
     - Select **Keys and Endpoints (1)** under the **Resource Management** section from the left navigation pane.
     - Click on **Show Keys (2)**.
     - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
     - Finally, copy the **Endpoint (4)** API URL by clicking on **Copy to clipboard**. Paste it in a text editor such as Notepad for later use.
 
          ![](../media/k&e.png "Create Azure OpenAI resource")
-
-7. In the **OpenAI**, select **Access control (IAM)** **(1)**, click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
+   
+1. In the **OpenAI**, select **Access control (IAM)** **(1)**, click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
 
    ![](../media/apinew2.png)   
 
-8. In **Add role assignment** tab in the search bar search and select **Cognitive Services User** and click on **Next**.
+1. In **Add role assignment** tab in the search bar search and select **Cognitive Services User** and click on **Next**.
 
    ![](../media/apinew3.png)
 
-9. In the **Members** tab, select **Managed identity** **(1)**, click on **+ Select Members** **(2)** in the select managed identity pop-up under Managed identity the drop-down select **API Management service** **(3)**, select the **apim** **(4)**, then click-on **Select** **(5)** and click on **Next** **(6)**.
+1. In the **Members** tab, select **Managed identity** **(1)**, click on **+ Select Members** **(2)** in the select managed identity pop-up under Managed identity the drop-down select **API Management service** **(3)**, select the **apim** **(4)**, then click-on **Select** **(5)** and click on **Next** **(6)**.
 
    ![](../media/apim-role.png)
 
-10. In the **Review + assign** tab click on **Review + assign**.
+1. In the **Review + assign** tab click on **Review + assign**.
 
-11. In the API Management service, click on **APIs** **(1)** under APIs from the left menu and select **HTTP** **(2)** under Define a new API to create an HTTP API.
+1. In the API Management service, click on **APIs** **(1)** under APIs from the left menu and select **HTTP** **(2)** under Define a new API to create an HTTP API.
 
     ![](../media/lab3-t1-s2.png)
 
-12. Enter the following values in the Create an HTTP API pane:
+1. Enter the following values in the Create an HTTP API pane:
    
       | **Parameter**           | **Values**           | 
       | ----------------------- | -------------------- | 
@@ -228,11 +271,11 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
     ![](../media/apim1.png)
 
-13. In the API Management service, click on **APIs** **(1)**, click on the **three dots** **(2)** next to miyagi-api, select **Import** **(3)**, and click on **OpenAPI** **(4)**.
+1. In the API Management service, click on **APIs** **(1)**, click on the **three dots** **(2)** next to miyagi-api, select **Import** **(3)**, and click on **OpenAPI** **(4)**.
 
     ![](../media/api-openi-import.png)
 
-14. Within the **Import from OpenAPI specification** pop-up window, enter and configure the following details:
+1. Within the **Import from OpenAPI specification** pop-up window, enter and configure the following details:
     - **OpenAPI specification:** `https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/cognitiveservices/data-plane/AzureOpenAI/inference/stable/2023-05-15/inference.json` **(1)**
     - **Import method:** Select **Update (2)**
     - Click on **Import (3)** to update the existing API with the above OpenAPI specification.
@@ -241,31 +284,31 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
          > **Note:**  The OpenAPI specification is a JSON file that contains the API specifications of Azure OpenAI. You can have a detailed look at the specifications by accessing the above-provided link for a deeper understanding and clarity.
 
-15. Click on the newly added API and observe the presence of multiple POST operations based on the OpenAPI specification that was provided earlier.
+1. Click on the newly added API and observe the presence of multiple POST operations based on the OpenAPI specification that was provided earlier.
 
     ![](../media/post-operations.png)
 
-16. In the **Azure OpenAI Service API** API navigate to the **Settings** **(1)** tab and update the subscription key **Header Name** to **api-key** **(2)** and click on **Save** **(3)**.
+1. In the **Azure OpenAI Service API** API navigate to the **Settings** **(1)** tab and update the subscription key **Header Name** to **api-key** **(2)** and click on **Save** **(3)**.
 
     ![](../media/azure-open-api-setting.png)
 
-17. In the API Management service, click on **Products** **(1)** under APIs from the left menu and click on **+ Add** **(2)**.
+1. In the API Management service, click on **Products** **(1)** under APIs from the left menu and click on **+ Add** **(2)**.
 
     ![](../media/api-product1.png) 
 
-18. In the **Add product** display name as **OpenAi** **(1)**, description as **OpenAI** **(2)**. Under the APIs menu click the **plus sign** **(3)** select the **Azure OpenAI Service API** **(4)** hit Enter and click on **Create** **(5)**.
+1. In the **Add product** display name as **OpenAi** **(1)**, description as **OpenAI** **(2)**. Under the APIs menu click the **plus sign** **(3)** select the **Azure OpenAI Service API** **(4)** hit Enter and click on **Create** **(5)**.
 
      ![](../media/api-product2.png)
 
-19. In the API Management service, click on **subscriptions** **(1)** under APIs from the left menu and click on **+ Add subscription** **(2)**.
+1. In the API Management service, click on **subscriptions** **(1)** under APIs from the left menu and click on **+ Add subscription** **(2)**.
 
     ![](../media/api-product3.png)
 
-20. In the **Add subscription**, enter the Name as **aoai-test** **(1)**, enter Display name as **AOAI Test** **(2)**, and click on **Create** **(3)**.
+1. In the **Add subscription**, enter the Name as **aoai-test** **(1)**, enter Display name as **AOAI Test** **(2)**, and click on **Create** **(3)**.
 
     ![](../media/api-product4.png)
 
-21. To create a new policy with specific parameters, follow the below instructions:
+1. To create a new policy with specific parameters, follow the below instructions:
     
     - Select **All Operations (1)**.
     - Within the Inbound processing tile, click on the ellipses **(2)** adjacent to the **base** policy.
@@ -273,7 +316,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
    
       ![](../media/allop.png)
 
-22. In the code editor copy the below policy to overwrite the **inbound** **(1)** tags only, replace **&lt;&lt;Azure_OpenAI_Endpoint&gt;&gt;** **(2)** of API manager which you copy in Task 1 Step 4 and click on **Save** **(3)**.
+1. In the code editor copy the below policy to overwrite the **inbound** **(1)** tags only, replace **&lt;&lt;Azure_OpenAI_Endpoint&gt;&gt;** **(2)** of API manager which you copy in Task 1 Step 4 and click on **Save** **(3)**.
 
       ```
       <inbound>
@@ -287,26 +330,29 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
       </inbound>
       ```
 
-      ![](../media/api-inbound.png)
+      ![](../media/gen28.png)
+
+      ![](../media/gen29.png)
 
       > **Note**: Please ensure to paste the **OpenAIEndpoint** values and eliminate any duplication of **https://**.
     
-23. Click on **Save**. Notice that a new policy named **set-backend-service** has been added within the inbound processing tile.
+1. Click on **Save**. Notice that a new policy named **set-backend-service** has been added within the inbound processing tile.
     
-24. Navigate to **Diagnostic settings** in the left pane of the API management service.
+1. Navigate to **Diagnostic settings** in the left pane of the API management service.
 
     ![](../media/diag3.png)
 
-    - Provide a **Diagnostic setting name** (1)
-    - Keep the category groups checked (2). <br>
-    - Keep the **All metrics** checked(3). <br>
-    - Keep the **Destination details** checked(4). <br>
-    - Make sure the **log analytics workspace** is selected (5). <br>
-    - Click on **Save (6)**.
+    - **Diagnostic setting name** :  Provide any Unquie name **(1)**
+    - **Category groups** : Select check box for both **Audit** and **allLogs** **(2)**.
+    - **Metrics** : Select check box for **AllMetrics** **(3)**
+    - **Destination details** : Select check box **Send to Log Analytics workspace** **(4)**
+    - **Subscription** : Select existing **Subscription** **(5)** make sure to select log Analytics workspace
+    - **Log analytics workspace** : make sure to select **log Analytics workspace** **(6)**
+    - Click on **Save (7)**.
 
-      ![](../media/diag2.png)
+      ![](../media/Active-image256.png)
     
-25. Now that the API has been successfully added, it requires configuration to call the OpenAI API through the API Management Service, which can be done by following the below steps:
+1. Now that the API has been successfully added, it requires configuration to call the OpenAI API through the API Management Service, which can be done by following the below steps:
 
     - Select the newly added API **(1)**.
     - Click on the **Settings (2)** tab.
@@ -326,7 +372,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     - Click on the **Test (2)** tab.
     - Click on the POST operation that **Creates a completion for the chat message (3)**.
     - Under the **Template parameters** section, enter the following details:
-        - **deployment-id:** gpt-35-turbo **(4)**
+        - **deployment-name:** Provide the name you had provided earlier for **gpt-35-turbo** model **(4)**
         - **api-version:** 2023-03-15-preview **(5)**
     - Within the **Request body** section, edit the content **(6)** of the sample with the following prompt:
         ```
@@ -408,3 +454,18 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     >**Note:** If you get the following error, It will take some time to reflect.
 
   ![](../media/image.png)
+
+## Success Criteria:
+
+Participants will be evaluated based on the following criteria:
+
+1. Successfully configure the Azure OpenAI service with appropriate diagnostic settings and analyze its logs using Kusto Queries.
+2. Effectively create and configure Azure API Management, ensuring clear visibility of logs and OpenAI prompts through detailed Kusto Query analysis.
+
+## Additional Resources:
+
+- Refer to [How to Configure Azure API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md) for detailed information.
+- Refer to this video about [Logging & Monitoring Everything in Azure OpenAI with API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md).
+- Refer to the [Kusto Queries Tutorial](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-tutorial) for detailed information.
+
+## Proceed with the next Challenge by clicking on **Next**>>.

@@ -16,26 +16,16 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**  !
 
-
-
-1) **Set up a translator within Azure AI services.**
-
-    - Implement a translation service to meet Contoso's multilingual document requirements.
-
 1) **Setup Azure Blob Storage.**
-
-    - Create mandatory source and target containers in Azure Blob Storage for document processing.
+    - Create mandatory source and target containers in Azure Blob Storage for document processing by granting blob access.
 
 1) **Initialize the C#/.NET Environment for Document Processing:**
-
-    - Set up a C#/.NET project in Visual Studio for document translation using .Net Version 6.
+    - Set up a C#/.NET project in Visual Studio for document translation using .Net Version 7.
     - Install the necessary packages, including Newtonsoft.Json.
 
 1) **Translate Documents and Run the Application:**
-
     - Implement document translation code in the C#/.NET project.
     - Execute the application to translate all documents in the storage container.
-
       >Note: You can find the documents in C:\LabFiles\Documents.
 
    <validation step="e7cc8d8f-1ac3-46be-9f16-d5a492ff6147" />
@@ -43,20 +33,15 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 **Using Doc Intelligence:**
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**  !
 
-1) **Pre-requisites setup:**
-      - Clone the repository: `https://github.com/CloudLabs-MOC/business-process-automation`.
-      - Follow the instructions to **Deploy to Azure with OpenAI**.
-      - Verify the deployed Azure resources in the resource group.
-
 1) **Using an Azure Document Intelligence (Form Recognizer) resource:**
-    - Navigate to Azure AI services and set up an Azure Document Intelligence (Form Recognizer) resource.
+    - Navigate to Azure AI services and utilize the Azure Document Intelligence (Form Recognizer) resource.
     - Upload and label training documents to train the Azure Document Intelligence (Form Recognizer) model.
-
-         >Note: You can find the documents in C:\LabFiles\Documents.
+      >Note: You can find the documents in C:\LabFiles\Documents.
 
 1) **Build a New Pipeline with a Custom Model Module in BPA:**
-    - Utilize the trained Form Recognizer model to create a new pipeline in BPA.
+    - Utilize the trained Azure Document Intelligence  to create a new pipeline in BPA.
     - Configure the pipeline for efficient document processing and integration with Azure Cognitive Search.
+      > Hint : Utilize static web app.
 
 1) **Configure Azure AI Search:**
     - Connect to Azure Blob Storage and configure data import and indexing.
@@ -75,6 +60,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 ## Additional Resources:
 
 - Refer to [document translation](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) for sample code that will be used for document translation using C#.
+- Refer to [Document Translation operations](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/reference/rest-api-guide) to understand the REST APIs that we utilize for document translation.
 
 ## Challenge Validation
  

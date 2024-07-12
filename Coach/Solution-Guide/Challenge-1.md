@@ -20,25 +20,38 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 ### Accessing the Azure portal
 
-1. To access the Azure portal, open a private/incognito window in your browser and navigate to the Azure Portal.
+>**Important**: You can find the Username and Password within the environment by navigating to the **Environment** **(1)** tab in the left pane then copy the **Azure Username** **(2)** and **Azure Password** **(3)**, which will be required for signing into the Azure portal in later steps and you can record the **Deployment Id** **(4)**, which can be used to provide a unique name to the resources during deployment.
 
+>**Note**: Numbers and ID's values may vary kindly ignore values in screenshots and copy values from **Environment** tab.
+
+ ![](../media/Active-image19.png)
+ ![](../media/Active-image(20).png)
+
+1. To access the Azure portal, within labvm open **Microsoft Edge** and browser to the [Azure Portal](https://portal.azure.com/).
 
 1. On the **Sign into Microsoft Azure tab**, you will see a login screen. Enter the following email/username, and then click on **Next**.
-
-
+   
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+     ![](../media/Active-image1.png)
 
 1. Now enter the following password and click on **Sign in**.
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
+      ![](../media/Active-image2.png)
 
+1. When **Action Required** window pop up click on **Ask Later**.
+
+    ![](../media/Active-image3.png)
+   
 1. If you see the pop-up **Stay Signed in?**, click **No**.
 
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+    ![](../media/Active-image4.png)
 
+1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
 
-1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Maybe Later** to skip the tour.
+    ![](../media/Active-image5.png)
 
 ## Prerequisites
 
@@ -51,58 +64,85 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 ### Task 1: Deploy an Azure Open AI Service
 
+In this task you'll learn the process of setting up and deploying the Azure OpenAI service within the Azure Portal.
 
-1. In the Azure Portal, search for **Azure OpenAI** and select it.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-   ![](../media/azure-openai-1-new.png)
+    ![](../media/Active-image6.png)
 
+1. On **Azure AI Services | Azure OpenAI** blade, click on **+ Create**.
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**. Enter the details required and deploy the Azure Open AI service.
+   ![](../media/Active-image7.png)
 
+1. Specify the following details to deploy the Azure Open AI service and click **Next** twice.
 
-   ![](../media/challenge01.jpg)
+   | **Option**         | **Value**                                              |
+   | ------------------ | -----------------------------------------------------  |
+   | Subscription       | Leave default                                          |
+   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**                 |
+   | Region             | Use the same location as the resource group            |
+   | Name               | *Enter a unique name* or use the format **OpenAi-xxxxxx** (replace **xxxxxx** with the **Deployment ID** |
+   | Pricing tier       | **Standard S0**                                        | 
+
+   >**Note**: Here, xxxxxx refers to the **deployment ID** which you recorded in last task.
+
+    ![](../media/Active-image9.png)
+
+1. Once validation is successful on the **Review + submit** tab, click **Create** and wait for the deployment to complete.
+
+     ![](../media/Active-image10.png)
 
 ### Task 2: Deploy a model
 
-1. In the Azure Portal, search for **Azure OpenAI** and select it.
+Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
 
-    ![](../media/azure-openai-1-new.png)
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject>**.
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject>**.
 
-    ![](../media/challenge01.01.jpg)
+    ![](../media/Active-image12.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio**. It will navigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio**. It will navigate to **Azure AI Studio**.
 
-   ![](../media/challenge01.02.jpg)
+   ![](../media/Active-image11.png)
 
-4. On the **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+1. On the **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
-   ![](../media/create-deployment.png)
+   ![](../media/Active-image13.png)
 
-5. On the **Deployments** page, click on **+ Create new deployment**.
+1. On the **Deployments** page, click on **+ Create new deployment**.
 
-6. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)**, followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
-    - **Select a model**: gpt-35-turbo (1)
-    - **Model version**: *Use the default version* (2)
-    - **Deployment name**: text-turbo
-    - **Tokens per Minute Rate Limit (thousands)**: 20K
+     ![](../media/Active-image14.png)
+   
+1. Within the **Deploy model** pop-up interface, enter the following details :
+    - **Select a model**: **gpt-35-turbo** **(1)**
+    - **Model version**: **Use the default version** **(2)**
+    - **Deployment name**: **text-turbo** **(3)**
+    - Expand **Advanced options (4)**
+    - Adjust **Tokens per Minute Rate Limit (thousands)**: **20K**
   
-         ![](../media/1-3.png)
+         ![](../media/Active-image15.png)
+      
+1. Click on the **Create** button to deploy a model.
 
-7. Click on the **Create** button to deploy a model that you will be playing around with as you proceed.
+1. Back on the **Deployments** page again, click on **+ Create new deployment**.
 
-8. In the **Deployments** page again, click on **+ Create new deployment**.
-
-9. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)**, followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
-    - **Select a model**: text-embedding-ada-002 (1)
-    - **Model version**: *Use the default version* (2)
-    - **Deployment name**: text-ada-002
-    - **Tokens per Minute Rate Limit (thousands)**: 20K
+     ![](../media/Active-image16.png)
+   
+1. Within the **Deploy model** pop-up interface, enter the following details:  and then click on **Advanced options (3)**, followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
+    - **Select a model**: **text-embedding-ada-002** **(1)**
+    - **Model version**: **Use the default version** **(2)**
+    - **Deployment name**: **text-ada-002** **(3)**
+    - Expand**Advanced options** **(4)**
+    - Adjust the **Tokens per Minute Rate Limit (thousands)**: **20K** **(5)**
   
-         ![](../media/text-ada.png)
+         ![](../media/Active-image17.png)
 
-10. Click on the **Create** button to deploy a model that you will be playing around with as you proceed.
+1. Click on the **Create** button to deploy a model.
+
+1. Back on the Deployments page, you should see the deployment models **text-turbo** and **text-ada-002** created.
+
+     ![](../media/Active-image18.png)
 
 ## Success Criteria:
 
@@ -115,3 +155,4 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 - Refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for guidance on deploying the service.
 
+## Proceed with the next Challenge by clicking on **Next**>>.

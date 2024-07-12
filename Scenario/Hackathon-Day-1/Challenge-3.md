@@ -10,7 +10,7 @@ This sample app is more than just a chat interface; it demonstrates the Retrieva
 
 In this challenge, your task is to deploy this comprehensive chat solution for Contoso, allowing them to evaluate its capabilities and integrate it into their environment. The repository comes with sample data, representing a ready-to-use, end-to-end solution. This app is a valuable tool for Contoso's employees to inquire about company benefits, internal policies, job descriptions, and roles.
 
-You will be using Terraform to deploy the chat app. 
+You will be using bicep to deploy the chat app. 
 
 The chat application integrates seamlessly with different Azure services to provide an intelligent user experience. Here's a simple overview of each service used by the app:
 
@@ -27,25 +27,47 @@ The chat application integrates seamlessly with different Azure services to prov
 
 Together, these services create a responsive chat application that combines AI features, monitoring capabilities, and efficient data management, providing Contoso with an exceptional user experience.
 
-
 ## Architecture diagram:
 
-![](../media/appcomponents.png)
+![](../media/Active-image258.png)
 
+
+## Prerequisites
+
+Make sure you have the following from the CloudLabs-provided integrated environment:
+
+> Note: Prerequisites are already set up in the CloudLabs-provided environment. If you're using your personal computer or laptop, please make sure that all necessary prerequisites are installed to complete this hackathon.
+
+
+  - [Azure Subscription](https://azure.microsoft.com/en-us/free/)
+  - [Azure OpenAI](https://aka.ms/oai/access) access is available with the following models:
+    - gpt-35-turbo
+    - text-embedding-ada-002
+   - Bicep 
+   - Azd 
+   - Poweshell 7 
 
 ## Challenge Objectives:
 
-1. **Clone the repository:**
-   - Clone the Active Gen AI repository: `https://github.com/CloudLabs-MOC/activate-genai`.
-   - Verify if Terraform is installed on your machine. If not, follow the [Terraform installation guide](https://developer.hashicorp.com/terraform/install).
+> **Note**: When deploying services in this challenge, please make sure to use the resource group named rg-activategenai.
 
-2. **Terraform Deployment:**
-   - Use Terraform to deploy the App Solution specified in the provided GitHub repository.
-   - Configure Terraform scripts to provision Azure resources accurately.
+> **Important** : Start Powershell 7 +.
 
-3. **Azure Search Index Deployment and Uploading the Sample Data:**
-   - Run `prepdocs.ps1` from the scripts folder to analyze and upload the data to the storage account.
-      > Note: You will need to understand and run the script with powershell core based on the requirements mentioned in the script. Also Powershell ISE is not supported with this script.
+1. **Clone the Repository:**
+   - Clone the Active Gen AI repository: `https://github.com/Azure-Samples/azure-search-openai-demo`.
+   - Verify if Bicep is installed on your machine. If not, follow the [Bicep installation guide](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)).
+
+1. **Deploy the AI-Powered Chat App:**
+
+    - Deploy an AI-powered chat application on Azure, integrating Azure AI services and Azure Search, and ensuring it's accessible and functional post-deployment.
+    
+      > Hint : Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure Developer CLI. Once authenticated, you'll have access to your Azure resources.
+    
+      > Hint : Initialize your project with a specific template. This command will help you set up your project environment
+
+      > Hint : Launch your project into action. This command will deploy your application to Azure, setting up all necessary resources and configurations automatically.
+
+   <validation step="9b4373a3-2a97-40ca-8c61-f1182e5eb2ce" />
 
 ## Success Criteria:
 

@@ -27,89 +27,107 @@ The chat application integrates seamlessly with different Azure services to prov
 
 Together, these services create a responsive chat application that combines AI features, monitoring capabilities, and efficient data management, providing Contoso with an exceptional user experience.
 
-
 ## Architecture diagram:
 
-![](../media/appcomponents.png)
+![](../media/Active-image258.png)
 
 ## Solution Guide:
 
-## Task 1: Clone the repository for this Challenge
+## Prerequisite
+   
+1. Start Powershell 7 +.
+   
+2. Ensure you run `pwsh.exe` from a PowerShell terminal. If this fails, you likely need to upgrade PowerShell.
 
-If you have not already cloned the **Activate GenAI** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
+## Task 1: Deploy the  AI-Powered Chat App.
 
-1. Start Visual Studio Code.
-2. Open the palette (SHIFT+CTRL+P) and run a **Git: Clone** command to clone the `https://github.com/CloudLabs-MOC/activate-genai` repository to a local folder.
-3. When the repository has been cloned, open the folder in Visual Studio Code.
+In this task, you'll learn the process of Deploying the Infrastructure.
 
-## Task 2: Deploy the  AI-Powered Chat App.
+1. In the **LabVM**, in the Windows Search bar type **Powershell** and select **PowerShell 7-preview (x64)** then **Run as Administrator**.
 
-**Deploying the infrastructure**
+    ![](../media/Active-image102.png)
+   
+1. Run the following command to login to Azure:
 
-1. Verify Terraform is installed on your machine by running the following command: `terraform --version`
+   ```
+   azd auth login
+   ```
 
-2. Login to Azure:
+   - After running the above command, a web browser tab will open and prompt you to sign into Azure. Select the Azure account you had previously logged into, or if prompted, provide your Azure username and password. Once authentication is complete, you can return to PowerShell 7.
 
-```bash
-az login 
-```
+   - Return to PowerShell 7, where you should see the message **Logged in to Azure**.
 
-  >**Note**: Use the command `az login --username <your-username> --password <your-password>` if above command is not work.
+     ![](../media/Active-image104.png)
 
-3. Run the following commands to deploy the infrastructure:
+1. Once successfully logged in ,run the below command to download the project code:
 
-```bash
-cd infra
-terraform init
-terraform apply
-```
+   ```
+   azd init -t azure-search-openai-demo
+   ```
+   >**Note**: The above command will initialize a git repository, eliminating the need to clone it afterwards.
 
-## Task 3: Azure Search Index Deployment and Uploading the Sample Data
+1. When prompted with **Continue iniatializing an app in `C:\Users\demouser`**, type **y / yes (1)**.
 
-1. Run the following commands in the same terminal to deploy the Azure Search Index and upload the sample documents:
+   ![](../media/Active-image105.png)
 
-```bash
-$env:AZURE_RESOURCE_GROUP="" 
-$env:AZURE_SUBSCRIPTION_ID="<subscription id>"
-$env:AZURE_TENANT_ID="<azure tenant id>"
-$env:AZURE_STORAGE_ACCOUNT="<storage account name>"
-$env:AZURE_STORAGE_CONTAINER="content"
-$env:AZURE_SEARCH_SERVICE="<search service name>"
-$env:OPENAI_HOST="azure"
-$env:AZURE_FORMRECOGNIZER_SERVICE="<your form recognizer name>"
-$env:AZURE_OPENAI_SERVICE="<openai service name>"
-$env:OPENAI_API_KEY=""
-$env:AZURE_OPENAI_EMB_DEPLOYMENT="text-embedding-ada-002"
-$env:AZURE_OPENAI_EMB_MODEL_NAME="text-embedding-ada-002"
-$env:AZURE_SEARCH_INDEX="gptkbindex"
-```
+1. If **What would you like to do with these files?** prompted, choose **Overwrite with versions from template**.
 
-```pwsh
+   ![](../media/gen3.png)
 
-[System.Environment]::SetEnvironmentVariable("AZURE_RESOURCE_GROUP", "<resource group>", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_SUBSCRIPTION_ID", "<subscription id>", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_TENANT_ID", "<azure tenant id>", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_STORAGE_ACCOUNT", "<storage account name>", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_STORAGE_CONTAINER", "content", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_SEARCH_SERVICE", "<search service name>", "Machine")
-[System.Environment]::SetEnvironmentVariable("OPENAI_HOST", "azure", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_FORMRECOGNIZER_SERVICE", "<your form recognizer name>", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_OPENAI_SERVICE", "<openai service name>", "Machine")
-[System.Environment]::SetEnvironmentVariable("OPENAI_API_KEY", "514951b5e91a4bca85c1f1240ace5cb4", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_OPENAI_EMB_DEPLOYMENT", "text-embedding-ada-002", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_OPENAI_EMB_MODEL_NAME", "text-embedding-ada-002", "Machine")
-[System.Environment]::SetEnvironmentVariable("AZURE_SEARCH_INDEX", "gptkbindex", "Machine")
-```
-2. Deploy the Azure Search Index and upload the sample documents by running the following command:
+1. Enter a new environment name:  **activategenai**
 
-```bash
-../scripts/prepdocs.ps1
-```
+   >**Note**: This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
 
-  > **Note**: The above script will create an index in the AI search service, analyze and upload the PDF data to the storage account, and integrate it with Azure OpenAI and connect it to the Azure App service with the help of Form Recogniser and Azure AI search.
+   ![](../media/Active-image106.png)
+
+1. Verify the new project initialized is successful.
+
+   ![](../media/Active-image107.png)
+   
+1. Run the below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
+
+   ```
+   azd up
+   ```
+   >**Note**: In case you are prompted with the **ERROR: not logged in, run azd auth login to login** and select your **Azure Account** again.
+
+1. Add the following details when prompted:
+
+   - Select an Azure Subscription to use: Press **Enter** to choose the default **subscription (1)**
+   - Select an Azure Location to use: **Select any location you would like to use (2)**
+   - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter : **Select any location you would like to use (3)**
+   - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select any location you would like to use(4)**
+     
+      ![](../media/Active-image110.png)
+
+      ![](../media/Active-image111.png)
+
+1. After the application has been successfully deployed you will see a URL printed to the console. Copy browse the URL to interact with the application in your browser. It will look like the following:
+
+    ![](../media/Active-image108.png)
+    ![](../media/Active-image109.png)
+ 
+    >**Note**: It may take 30 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
+
+## Success Criteria:
+
+- Successful deployment of the Chat App.
+- validate if the following services are successfully deployed in the RG (Resource Group).
+  - App Service
+  - Document Intelligence
+  - Azure OpenAI
+  - Shared Dashboard
+  - Smart Detector Alert Rule
+  - Search Service
+  - Log Analytics Workspace
+  - App Service Plan
+  - Storage Account
+- Validate if the data is populated into the storage container named `content`.
+- The Chat app should be accessible using the Azure App service.
 
 ## Additional Resources:
 
 -  Refer to the  [Azure Search OpenAI demo GitHub repository](https://github.com/cmendible/azure-search-openai-demo) for detailed information on the architecture.
 -  [Azure copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
 
+## Proceed with the next Challenge by clicking on **Next**>>.
