@@ -31,7 +31,6 @@ Together, these services create a responsive chat application that combines AI f
 
 ![](../media/Active-image258.png)
 
-
 ## Prerequisites
 
 Make sure you have the following from the CloudLabs-provided integrated environment:
@@ -64,7 +63,6 @@ Make sure you have the following from the CloudLabs-provided integrated environm
      authenticated, you'll have access to your Azure resources.
    > Hint : Initialize your project with a specific template. This command will help you set up your project environment
    > Hint : Launch your project into action. This command will deploy your application to Azure, setting up all necessary resources and configurations automatically.
-
 
 
    <validation step="9b4373a3-2a97-40ca-8c61-f1182e5eb2ce" />
