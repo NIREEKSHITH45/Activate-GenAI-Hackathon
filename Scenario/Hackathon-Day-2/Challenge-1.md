@@ -66,7 +66,3 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 ## Additional Resources:
 
 - Refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for guidance on deploying the service.
-
-### Conclusion
-
-In this challenge, you’ve effectively validated the Azure OpenAI service and deployed LLM models. In the next challenge, you will learn about Document Search.
