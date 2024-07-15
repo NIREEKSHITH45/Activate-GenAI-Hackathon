@@ -46,7 +46,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
     - Set up an indexer for organized data retrieval.
 
 1) **Update the Azure OpenAI Model to use the Azure AI Search**
-   - Update your existing Azure OpenAI model deployment to connect to the newly created AI Search index and test using the Azure OpenAI Playground.
+    - Update your existing Azure OpenAI model deployment to connect to the newly created AI Search index and test using the Azure OpenAI Playground.
       
 ## Success Criteria:
 
