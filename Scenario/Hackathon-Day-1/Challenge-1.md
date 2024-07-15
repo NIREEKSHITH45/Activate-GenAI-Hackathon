@@ -66,27 +66,3 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 ## Additional Resources:
 
 - Refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for guidance on deploying the service.
-
-### Challenge Validation
- 
-1. After completing the challenge, you need to visit the **Lab Validation (1)** tab and click on the **VALIDATE (2)** button under Actions to perform the validation steps. Verify that you have met the success criteria of the challenge.
-   
-     ![azure](../media/validate01.png)
- 
-1. If the validation status displays **Success** for all the validation steps, **congratulations!** This means that you have successfully completed the challenge.
- 
-   ![azure](../media/validate02.png)
-   
-1. If the validation status displays **Fail**, **don't worry!** This could mean that you did not perform the challenge correctly.
- 
-   ![azure](../media/validate03.png)
- 
-1. Hover your mouse over the `i` **(1)** icon to see the error message and determine the root cause of the failure. Based on the error message, revisit the challenge as necessary, and redo the validation by clicking on the **VALIDATE (3)** button again.
-   
-   ![azure](../media/validate04.png)
-   
-1. If you are still having trouble, you can reach out to the support team via `labs-support@spektrasystems.com` for further assistance. The support team is available to help you troubleshoot and resolve any technical issues or validation issues that may arise while the lab environment is live.
-
-### Conclusion
-
-In this challenge, you’ve effectively validated the Azure OpenAI service and deployed LLM models. In the next challenge, you will learn about Document Search.
