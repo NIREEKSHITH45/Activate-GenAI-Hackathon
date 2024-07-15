@@ -76,7 +76,6 @@ One of the hottest themes at the moment is size models; users are particularly i
 
    ![](../media/Active-image119.png)
 
-
 1. Enter the prompt and observe how the responses to the prompt will change in the chat by giving the below prompt.
 
    ```
