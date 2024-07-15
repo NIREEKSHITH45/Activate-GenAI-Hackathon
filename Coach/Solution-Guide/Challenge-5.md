@@ -41,23 +41,23 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
 1. Specify the following details to create an **Azure AI service** then click on **Review + create (7)** tab.
    
-   | **Option**         | **Value**                                              |
-   | ------------------ | -----------------------------------------------------  |
-   | Subscription       | Leave default  **(1)**                                 |
-   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
-   | Name               | *Enter a unique name* for your search service or use the format **AI-Service-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded 
-    in **Challenge 01**) **(3)** |
-   | Location           | Use the same location as the resource group  **(4)**          |
-   | Pricing tier       | Standard S0     **(5)**                                        |
-   | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 
+     | **Option**         | **Value**                                              |
+     | ------------------ | -----------------------------------------------------  |
+     | Subscription       | Leave default  **(1)**                                 |
+     | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
+     | Name               | *Enter a unique name* for your search service or use the format **AI-Service-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded 
+                            in **Challenge 01**) **(3)** |
+     | Location           | Use the same location as the resource group  **(4)**          |
+     | Pricing tier       | Standard S0     **(5)**                                        |
+     | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 
 
    >**Note**: Here, xxxxxx refers to the deployment ID
 
-      ![](../media/Active-image126.png)
+   ![](../media/Active-image126.png)
 
 1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete.
 
-   ![](../media/Active-image127.png)
+    ![](../media/Active-image127.png)
 
 1. To make sure that we have **Accepted the terms and conditions for Responsible AI**:  We must initiate the creation of a **Azure AI Services multi-service account** from the Azure portal to review and acknowledge the terms and conditions. 
 
