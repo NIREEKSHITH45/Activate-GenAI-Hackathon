@@ -50,6 +50,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
    - Deploy it in the existing resource group named - **<inject key="Resource Group Name"/>**
    - Obtain the necessary Azure OpenAI Key and Endpoint.
 
+
    <validation step="ccff4a0f-eb81-479e-a774-00cc5a664eeb" />
 
 
