@@ -259,6 +259,7 @@ In this task, you'll learn how to create a search solution by indexing documents
      ![](../media/Active-image59.png)
    
 1. Scroll down and expand **Add enrichments (1)** section and specify the following :
+    
     - Change the **Skillset name** to **margies-skillset (2)**.
     - Select the checkbox for **Enable OCR and merge all text into merged_content field (3)**.
     - Ensure that the **Source data field** is set to **merged_content (4)**.
@@ -301,7 +302,7 @@ In this task, you'll learn how to create a search solution by indexing documents
     | language | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | |
 
 
-    ![](../media/Active-image64.png)
+      ![](../media/Active-image64.png)
    
 1. Double-check your selections, paying particular attention to ensure that the correct **Retrievable**, **Filterable**, **Sortable**, **Facetable**, and **Searchable** options are selected for each field  (it can be difficult to change them later). Then proceed to the next step by clicking on **Next: Customize target index**.
 
