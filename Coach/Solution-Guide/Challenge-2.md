@@ -237,7 +237,9 @@ In this task, you'll learn how to create a search solution by indexing documents
     - **Data to extract**: Content and metadata (3)
     - **Parsing mode**: Default (4)
     - **Subscription**: Leave default (5)  
-    - **Connection string**: Select **Choose an existing connection (6)**. Then select your storage account (7), and finally select the **margies (8)** container that was created by the UploadDocs.cmd script. then click on **Select (9)**.
+    - **Connection string**: Select **Choose an existing connection (6)**. Then select your storage account (7), and finally select the **margies (8)** container that 
+       was created by the UploadDocs.cmd script. then click on **Select (9)**.
+
         ![](../media/Active-image55.png)
 
         ![](../media/Active-image56.png)
@@ -487,7 +489,7 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
 1. Save the changes you've made to **skillset.json**.
 
-#### 6.3 : Review and modify the index
+#### Task 6.3 : Review and modify the index
 
 In this task, you will review the index.json file in Visual Studio Code which shows a JSON definition for **margies-index**
 
