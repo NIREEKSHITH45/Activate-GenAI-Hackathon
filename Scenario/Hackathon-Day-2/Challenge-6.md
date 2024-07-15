@@ -18,7 +18,6 @@ Your task is to implement comprehensive monitoring for the Azure OpenAI service,
    - Utilize Kusto queries within API Management for comprehensive log analysis, focusing on chat message completions and prompt interactions.
 
 
-
    <validation step="bc6cc0b0-ab0e-4b2f-9e3a-1b1836b20e28" />
   
 ## Success Criteria:
