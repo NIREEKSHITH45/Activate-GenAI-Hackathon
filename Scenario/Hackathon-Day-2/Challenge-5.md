@@ -45,7 +45,6 @@ You will utilize the Form Recognizer Service and the Business Process Automation
     - Connect to Azure Blob Storage and configure data import and indexing.
     - Set up an indexer for organized data retrieval.
 
-
 1) **Update the Azure OpenAI Model to use the Azure AI Search**
    - Update your existing Azure OpenAI model deployment to connect to the newly created AI Search index and test using the Azure OpenAI Playground.
       
