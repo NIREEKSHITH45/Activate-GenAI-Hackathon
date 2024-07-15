@@ -16,12 +16,15 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**  !
 
+
 1) **Setup Azure Blob Storage.**
     - Create mandatory source and target containers in Azure Blob Storage for document processing by granting blob access.
+
 
 1) **Initialize the C#/.NET Environment for Document Processing:**
     - Set up a C#/.NET project in Visual Studio for document translation using .Net Version 7.
     - Install the necessary packages, including Newtonsoft.Json.
+
 
 1) **Translate Documents and Run the Application:**
     - Implement document translation code in the C#/.NET project.
@@ -46,6 +49,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 1) **Configure Azure AI Search:**
     - Connect to Azure Blob Storage and configure data import and indexing.
     - Set up an indexer for organized data retrieval.
+
 
 1) **Update the Azure OpenAI Model to use the Azure AI Search**
     - Update your existing Azure OpenAI model deployment to connect to the newly created AI Search index and test using the Azure OpenAI Playground.
