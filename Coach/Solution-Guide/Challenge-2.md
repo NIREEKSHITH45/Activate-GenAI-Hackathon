@@ -751,7 +751,6 @@ In this task, you'll be running the Margie's Travel web application locally, sea
     - **skyscraper** (observe that this word doesn't appear in the actual content of any documents but is found in the *image captions* and *image tags* that were generated for images in some documents).
     - **Mojave desert** (observe that this term is identified as a *location* in some documents).
 
-
 1. Close the browser tab containing Margie's Travel website and return to Visual Studio Code. Then, in the Python terminal for the **margies-travel** folder (where the dotnet or flask application is running), enter Ctrl+C to stop the app.
 
 
