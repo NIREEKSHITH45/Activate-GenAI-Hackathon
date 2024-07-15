@@ -53,7 +53,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
    >**Note**: Here, xxxxxx refers to the deployment ID
 
-   ![](../media/Active-image126.png)
+      ![](../media/Active-image126.png)
 
 1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete.
 
