@@ -1,6 +1,6 @@
 # Known Issues
 
-## Challenge- 03 
+## Challenge 03: Deploy an AI-Powered Chat App
 
  **Issue**:  While deploying Azure resources, if you encounter the following error.
 
@@ -8,7 +8,7 @@
 
   **Resolution** : The error can be ignored as it is a temporary issue and wait for the deployment to complete.
    
-## Challenge- 05
+## Challenge 05: Serverless Document Batch Processing
 
 1. **Issue**: If you encounter validation issue in **Translator** due to **Region Constrain**.
 
