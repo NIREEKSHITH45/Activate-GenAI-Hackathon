@@ -16,7 +16,7 @@ One of the hottest themes at the moment is size models; users are particularly i
 
    ![](../media/Active-image112.png)
 
-1. Select **webapp-<inject key="Deployment-id" enableCopy="false"></inject>**.
+1. Select **webapp**.
 
    ![](../media/Active-image113.png)
       
