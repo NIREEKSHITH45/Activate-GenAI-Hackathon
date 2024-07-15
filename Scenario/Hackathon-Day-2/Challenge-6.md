@@ -11,9 +11,13 @@ Your task is to implement comprehensive monitoring for the Azure OpenAI service,
 1. **Monitoring the Azure OpenAI Service:**
    - Set up diagnostic settings for the existing Azure OpenAI services.
    - Conduct log analysis utilizing Kusto Queries to monitor the service's performance and usage.
+
+
      
 2. **Monitoring OpenAI prompts using Azure API Management:**
    - Utilize Kusto queries within API Management for comprehensive log analysis, focusing on chat message completions and prompt interactions.
+
+
 
    <validation step="bc6cc0b0-ab0e-4b2f-9e3a-1b1836b20e28" />
   
