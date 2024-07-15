@@ -16,33 +16,44 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**  !
 
-1) **Setup Azure Blob Storage.**
+1. **Setup Azure Blob Storage.**
    - Create mandatory source and target containers in Azure Blob Storage for document processing by granting blob access.
-1) **Initialize the C#/.NET Environment for Document Processing:**
+
+
+2. **Initialize the C#/.NET Environment for Document Processing:**
    - Set up a C#/.NET project in Visual Studio for document translation using .Net Version 7.
    - Install the necessary packages, including Newtonsoft.Json.
-1) **Translate Documents and Run the Application:**
+
+
+3. **Translate Documents and Run the Application:**
    - Implement document translation code in the C#/.NET project.
    - Execute the application to translate all documents in the storage container.
    > Note: You can find the documents in C:\LabFiles\Documents.
+
 
    <validation step="e7cc8d8f-1ac3-46be-9f16-d5a492ff6147" />
 
 **Using Doc Intelligence:**
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**  !
 
-1) **Using an Azure Document Intelligence (Form Recognizer) resource:**
+1. **Using an Azure Document Intelligence (Form Recognizer) resource:**
     - Navigate to Azure AI services and utilize the Azure Document Intelligence (Form Recognizer) resource.
     - Upload and label training documents to train the Azure Document Intelligence (Form Recognizer) model.
     > Note: You can find the documents in C:\LabFiles\Documents.
-1) **Build a New Pipeline with a Custom Model Module in BPA:**
+
+
+2. **Build a New Pipeline with a Custom Model Module in BPA:**
     - Utilize the trained Azure Document Intelligence  to create a new pipeline in BPA.
     - Configure the pipeline for efficient document processing and integration with Azure Cognitive Search.
     > Hint : Utilize static web app.
-1) **Configure Azure AI Search:**
+
+
+3. **Configure Azure AI Search:**
     - Connect to Azure Blob Storage and configure data import and indexing.
     - Set up an indexer for organized data retrieval.
-1) **Update the Azure OpenAI Model to use the Azure AI Search**
+
+
+4. **Update the Azure OpenAI Model to use the Azure AI Search**
     - Update your existing Azure OpenAI model deployment to connect to the newly created AI Search index and test using the Azure OpenAI Playground.
       
 ## Success Criteria:
