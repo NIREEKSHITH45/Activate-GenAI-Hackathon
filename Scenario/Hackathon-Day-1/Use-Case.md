@@ -1,18 +1,19 @@
-# Hackathon Mission and Use-Case
-Welcome to the Activate GenAI Hackathon, an initiative brought to life by Contoso Ltd. Our mission is to unlock the capabilities of AI and Large Language Models (LLMs) to redefine the landscape of enterprise solutions. This hackathon is a critical milestone in our quest for AI innovation, pushing us to discover groundbreaking applications that resonate with our strategic vision. We inspire participants to think beyond the conventional, leverage AI technologies in transformative ways, and contribute to setting new benchmarks in AI-driven enterprise solutions.
+# Misión y Caso de Uso del Hackathon
+Bienvenido al Hackathon de Activate GenAI, una iniciativa llevada a cabo por Contoso Ltd. Nuestra misión es liberar las capacidades de la IA y los Modelos de Lenguaje Grande (LLMs) para redefinir el panorama de las soluciones empresariales. Este hackathon es un hito fundamental en nuestra búsqueda de innovación en IA, que nos impulsa a descubrir aplicaciones revolucionarias que encajen con nuestra visión estratégica. Inspiramos a los participantes a que piensen más allá de lo convencional, a que aprovechen las tecnologías de IA de forma transformadora y a que contribuyan a establecer nuevos puntos de referencia en las soluciones empresariales impulsadas por IA.
 
-As a forward-thinking entity in the tech sphere, Contoso Ltd. acknowledges the extraordinary impact that AI, particularly Azure OpenAI services, can have on business processes and customer interaction. Our ambition for this hackathon is to harness, experiment with, and execute AI-infused solutions that integrate flawlessly with our existing frameworks, boosting operational effectiveness and customer satisfaction.
+Como entidad con visión de futuro en el ámbito tecnológico, Contoso Ltd. reconoce el extraordinario impacto que la IA, en particular los servicios de Azure OpenAI, pueden tener en los procesos empresariales y la interacción con los clientes. Nuestra ambición para este hackathon es aprovechar, experimentar y ejecutar soluciones basadas en IA que se integren perfectamente con nuestros marcos de trabajo existentes, aumentando la eficacia operativa y la satisfacción del cliente.
 
-Your mandate, as avant-garde developers, is to navigate the vast expanse of AI, harnessing Azure OpenAI’s sophisticated tools. We are entrusting you with the task of ideating and developing applications that can:
-1. **Integrate Azure OpenAI into Contoso's Corporate Ecosystem**
-    - Deploy and experiment with LLMs to enrich GenTech's communication channels, focusing on interpreting, analyzing, and summarizing internal and external communications for more streamlined and impactful exchanges.
-2. **Implement Intelligent Document Search**
-    - Engineer innovative tools that allow for efficient indexing and searching of vast document repositories, enabling rapid retrieval of information and knowledge discovery, crucial for informed decision-making within GenTech.
-3. **Establish AI-Powered Chat Interactions**
-    -  Deploy and refine conversational AI interfaces within Contoso's digital ecosystem, ensuring they can handle intricate, multilingual conversations with finesse, thereby elevating the user experience on our platforms.
-4. **Establish AI-Powered Personalized Chat Experience with Private Data**
-    -  Enhance the conversational AI interfaces by equipping them with personalized data, such as building a bot for employees to inquire about the company's benefits.
+Su misión, como desarrolladores de vanguardia, es navegar por la vasta extensión de la IA, aprovechando las sofisticadas herramientas de Azure OpenAI. Le confiamos la tarea de idear y desarrollar aplicaciones que puedan:
 
-Throughout the challenges of this hackathon, you will interact with state-of-the-art technologies essential for realizing Contoso's objectives. You will be equipped with the necessary arsenal of tools and services to effectively bring these use cases to fruition.
+1. **Integrar Azure OpenAI en el Ecosistema Corporativo de Contoso**
+    - Implemente y experimente con LLMs para enriquecer los canales de comunicación de GenTech, enfocándose en interpretar, analizar y resumir las comunicaciones internas y externas para intercambios más ágiles e impactantes.
+2. **Implementar la Búsqueda Inteligente de Documentos**
+    - Diseñe herramientas innovadoras que permitan la indexación y búsqueda eficientes de vastos repositorios de documentos, permitiendo una rápida recuperación de información y el descubrimiento de conocimientos, cruciales para una toma de decisiones informadas dentro de GenTech.
+3. **Establecer Interacciones de Chat Impulsadas por IA**
+    - Implemente y perfeccione interfaces de IA conversacional en el ecosistema digital de Contoso, garantizando que puedan gestionar conversaciones complejas y multilingües con delicadeza, elevando así la experiencia del usuario en nuestras plataformas.
+4. **Establecer una Experiencia de Chat Personalizada Impulsada por IA con Datos Privados**
+    - Mejore las interfaces de IA conversacional equipándolas con datos personalizados, por ejemplo creando un bot para que los empleados se informen sobre los beneficios de la empresa.
 
-At Contoso Ltd., we are convinced that the integration of Azure OpenAI into our applications is not merely an enhancement of our workflow but a catalyst for delivering exceptional value to our stakeholders. This hackathon is more than a competition; it represents a pivotal leap towards an era where AI is an integral part of every solution we craft. Join us in this enthralling venture to extend the boundaries of what's achievable with AI in enterprise application development.
+A lo largo de los desafíos de este hackathon, interactuará con tecnologías de vanguardia esenciales para hacer realidad los objetivos de Contoso. Estará equipado con el arsenal necesario de herramientas y servicios para hacer realidad estos casos de uso de manera eficaz.
+
+En Contoso Ltd., estamos convencidos de que la integración de Azure OpenAI en nuestras aplicaciones no es simplemente una mejora de nuestro flujo de trabajo, sino un catalizador para ofrecer un valor excepcional a nuestras partes interesadas. Este hackathon es más que una competencia; representa un salto fundamental hacia una era en la que la IA es una parte integral de cada solución que creamos. Únase a nosotros en esta apasionante aventura para ampliar los límites de lo que se puede lograr con la IA en el desarrollo de aplicaciones empresariales.

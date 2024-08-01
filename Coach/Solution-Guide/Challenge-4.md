@@ -1,34 +1,34 @@
-# Challenge 04: Interact with the Chat App
+# Desafío 04: Interactuar con la Aplicación de Chat
 
-### Estimated Time: 30 minutes
+### Tiempo Estimado: 30 minutos
 
-## Introduction:
+## Introducción:
 
-After successfully deploying the AI-enhanced chat app in the previous challenge, it's time to assess its capabilities. This challenge is centered around interacting with the app to understand its potential for real-world applications at Contoso Ltd. You will explore the efficiency of query responses, multilingual capabilities, and the impact of advanced settings, making a compelling business case for the integration of these technologies at Contoso.
+Tras implementar con éxito la aplicación de chat mejorada con IA en el desafío anterior, ha llegado el momento de evaluar sus capacidades. Este desafío se centra en la interacción con la aplicación para comprender su potencial para aplicaciones del mundo real en Contoso Ltd. Explorará la eficiencia de las respuestas a consultas, las capacidades multilingües y el impacto de las configuraciones avanzadas, presentando un caso empresarial convincente para la integración de estas tecnologías en Contoso.
 
-## Solution Guide
+## Guía de Soluciones
 
-### Task 1: Interact with Chatapp with Azure OpenAI LLM
+### Tarea 1: Interactuar con Chatapp con Azure OpenAI LLM
 
-One of the hottest themes at the moment is size models; users are particularly interested in conversation GPT. The most intriguing thing about all those basic models—Chat GPT included—is that while they perform admirably on their own, they perform even better when combined with your own data.
+Uno de los temas más candentes del momento son los modelos de tamaño; los usuarios están particularmente interesados ​​en el GPT de conversación. Lo más intrigante de todos esos modelos básicos -incluido ChatGPT- es que, si bien funcionan admirablemente por sí solos, funcionan aún mejor cuando se combinan con sus propios datos.
 
-1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **App Services (1)**, and then select **App Services (2)** under services.
+1. En la página del Portal de Azure, en la caja de Búsqueda de recursos, servicios y documentos (G+/) en la parte superior del portal, ingrese **App Services (1)**, y luego seleccione **App Services (2)** en Servicios. 
 
    ![](../media/Active-image112.png)
 
-1. Select **webapp**.
+1. Seleccione **webapp**.
 
    ![](../media/Active-image113.png)
       
-1. Next, click on **Browse** to open your Web application.
+1. Haga clic en **"Examinar"** para abrir su aplicación web. 
 
    ![](../media/Active-image114.png)
    
-1. You will be prompted with the **Northwind Health chat application** as below. 
+1. Se le dirigirá a la **aplicación de chat de Northwind Health** como se muestra a continuación. 
 
    ![](../media/lab03-04.png)
 
-1. In the chat application, provide the below prompt and check how responses are given by the ChatGPT and Azure cognitive search services by interacting to construct search queries and retrieve candidate information from the knowledge base.
+1. En la aplicación de chat, proporcione el siguiente prompt y verifique cómo los servicios de búsqueda cognitiva de Azure y ChatGPT brindan respuestas al interactuar para crear consultas de búsqueda y recuperar información candidata de la base de conocimiento.
 
    ```
    What does a Product Manager do?
@@ -36,11 +36,11 @@ One of the hottest themes at the moment is size models; users are particularly i
 
    ![](../media/Active-image115.png)
 
-1. The response not only answered the question based on the content found in these documents, but it also included **citations** Select any one **citations (1)** to that content to validate the accuracy of the information. When you click on an annotation, the app jumps right to the page of the **document (2)** that goes into the comparison of the plans, so that we can read more or do additional validation on the accuracy of the answer under the **citation** section. 
+- La respuesta no solo respondió a la pregunta en función del contenido encontrado en estos documentos, sino que también incluyó **citas**. Seleccione cualquiera de las **cita (1)** de ese contenido para validar la precisión de la información. Al hacer clic en una anotación, la aplicación salta directamente a la página del **documento (2)** que contiene la comparación de los planes, a fin de que podamos leer más o hacer una validación adicional sobre la precisión de la respuesta en la sección **citas**.
 
    ![](../media/Active-image116.png)
 
-1. See how when we click on an annotation, the app jumps right to the page of the document that goes into the comparison of the plans, so that we can read more or do additional validation on the accuracy of the answer. 
+1. Observe cómo, cuando hacemos clic en una anotación, la aplicación salta directamente a la página del documento que contiene la comparación de los planes, a fin de que podamos leer más o hacer una validación adicional sobre la precisión de la respuesta. 
 
    ```
    Does the project manager manage the human resources team?
@@ -48,13 +48,13 @@ One of the hottest themes at the moment is size models; users are particularly i
    
    ![](../media/3-6.png)
 
-1. As per our constructed app, we can pass context from previous parts of the chat into the prompt behind the scenes, which enables ChatGPT to answer the question if the project manager manages the human resources team. Click on the citation, and you'll see the part of the plan that covers the related information.
+1. Según nuestra aplicación construida, podemos pasar el contexto de partes anteriores del chat al prompt en segundo plano, lo que permite a ChatGPT responder a la pregunta si el director del proyecto gestiona el equipo de recursos humanos. Haga clic en la cita y verá la parte del plan que cubre la información relacionada.
 
    ![](../media/3-6.1.png)
    
    ![](../media/3-7.png)
 
-1. Let us make a slight change to the prompt to ask open AI to take any question that is not asked in English and respond in the language it was asked in. From the right top corner select **Developer Settings** and add the below message in the **Override prompt template** section. Click on **Close**.
+1. Hagamos un pequeño cambio en el prompt para pedirle a Open AI que tome cualquier pregunta que no se haya hecho en Inglés y responda en el idioma en el que se hizo. En la esquina superior derecha, seleccione **Developer Settings** y agregue el siguiente mensaje en la sección **Override prompt template**. Haga clic en **Close**.
 
       ```
       convert prompts to English and respond when asked questions in a different language
@@ -64,7 +64,7 @@ One of the hottest themes at the moment is size models; users are particularly i
    
       ![](../media/Active-image118.png)
 
-1. In this override, when we ask a question in a different language, behind the scenes, the prompt gets converted to English to perform the search, and then the model will respond in the same language it was asked in. Enter the below prompt in the chat section and observe that it's taking the question, detecting that it's in French, converting it to English, executing it as before, and then returning the expected response like before.
+1. Por este reemplazo, cuando hacemos una pregunta en un idioma diferente, el prompt se convierte al Inglés, entre bastidores, para realizar la búsqueda y luego el modelo responderá en el mismo idioma en el que se le preguntó. Ingrese el prompt mostrado a continuación en la sección de chat y observe que toma la pregunta, detecta que está en Francés, la convierte al Inglés, la ejecuta como antes y luego devuelve la respuesta esperada como antes.
 
    ```
    Quelles sont les responsabilités du responsible marketing ?
@@ -72,11 +72,11 @@ One of the hottest themes at the moment is size models; users are particularly i
 
    ![](../media/3-8.png)
 
-1. Go to **Developer Settings**, and in the **Exclude category** section, enable the check box for **Use semantic options** and **Suggest follow-up questions**. Click on **Close**.
+1. Vaya a **Developer Settings** y, en la sección **Exclude category**, habilite la casilla de verificación **Use semantic options** y **Suggest follow-up questions**. Haga clic en **Cerrar**.
 
    ![](../media/Active-image119.png)
 
-1. Enter the prompt and observe how the responses to the prompt will change in the chat by giving the below prompt.
+1. Ingrese el siguiente prompt y observe cómo cambiarán las respuestas en el chat.
 
    ```
    What happens in a performance review?
@@ -84,15 +84,15 @@ One of the hottest themes at the moment is size models; users are particularly i
 
    ![](../media/3-10.png)
 
-## Success Criteria:
-  - Successful interaction with the chat application, exploring a variety of conversational use cases.
-  - Comprehensive understanding of the app's capabilities in handling multilingual queries, advanced settings, and its overall potential for Contoso's environment.
+## Criterios de Éxito:
+  - Interacción satisfactoria con la aplicación de chat, explorando una variedad de casos de uso conversacionales.
+  - Comprensión exhaustiva de las capacidades de la aplicación para manejar consultas multilingües, configuraciones avanzadas y su potencial general para el entorno de Contoso.
      
-    > **Important**: There is no specific validation for this challenge, but your exploration and understanding are crucial.
+    > **Importante**: No existe una validación específica para este desafío, pero su exploración y comprensión son cruciales.
 
 
-## Additional Resources:
+## Recursos Adicionales:
 
-- Refer to the  [azure-search-openai-demo](https://github.com/Azure-Samples/azure-search-openai-demo) for detailed information.
+- Consulte [azure-search-openai-demo](https://github.com/Azure-Samples/azure-search-openai-demo) para obtener información detallada.
 
-## Proceed with the next Challenge by clicking on **Next**>>.
+## Continúe con el próximo Desafío haciendo clic en **Siguiente**>>.

@@ -1,34 +1,34 @@
-# Challenge-06: Implement Monitoring and Logging of Azure OpenAI Using API Management Service
+# Desafío-06: Implementar el Monitoreo y el Registro de Azure OpenAI utilizando el Servicio API Management
 
-## Introduction:
+## Introducción:
 
-Building on the success of enhancing Contoso's AI-powered chat app with serverless document processing, your next objective is to operationalize these Azure OpenAI solutions with robust monitoring and logging mechanisms. In this challenge, you will delve into the intricacies of setting up and analyzing advanced monitoring systems using the Azure API Management Service and Log Analytics workspace. This is a crucial step in ensuring the smooth operation and maintenance of the AI solutions you've developed, providing valuable insights into system performance and user interactions.
+Basándose en el éxito de la mejora de la aplicación de chat de Contoso impulsada por IA con el procesamiento de documentos sin servidor, su próximo objetivo es poner en funcionamiento estas soluciones de Azure OpenAI con mecanismos de registro y monitoreo sólidos. En este desafío, profundizará en las complejidades de la configuración y el análisis de sistemas de monitoreo avanzados mediante el Servicio API Management de Azure y el área de trabajo de Log Analytics. Este es un paso crucial para garantizar el buen funcionamiento y mantenimiento de las soluciones de IA que ha desarrollado, proporcionando información valiosa sobre el rendimiento del sistema y las interacciones de los usuarios.
 
-Your task is to implement comprehensive monitoring for the Azure OpenAI service, leveraging diagnostic settings and Kusto queries for in-depth log analysis. Additionally, you'll be integrating the API Management Service to oversee the chat message completions and further analyze the prompts and outputs. This level of monitoring is essential for Contoso to maintain a high-quality, efficient, and user-friendly AI chat application.
+Su tarea consiste en implementar un monitoreo exhaustivo para el servicio Azure OpenAI, aprovechando la configuración de diagnóstico y las consultas de Kusto para realizar un análisis en profundidad de los registros. Además, integrará el servicio API Management para supervisar las respuestas de los prompts de chat y analizar más a fondo los prompts y los resultados. Este nivel de supervisión es esencial para que Contoso mantenga una aplicación de chat de IA de alta calidad, eficiente y fácil de usar.
 
-## Challenge Objectives:
+## Objetivos del Desafío:
 
-1. **Monitoring the Azure OpenAI Service:**
-   - Set up diagnostic settings for the existing Azure OpenAI services.
-   - Conduct log analysis utilizing Kusto Queries to monitor the service's performance and usage.
+1. **Monitorear el Servicio Azure OpenAI:**
+   - Establezca configuraciones de diagnóstico para los servicios de Azure OpenAI existentes.
+   - Realice análisis de registros utilizando Consultas Kusto para monitorear el rendimiento y el uso del servicio.
 
 
      
-2. **Monitoring OpenAI prompts using Azure API Management:**
-   - Utilize Kusto queries within API Management for comprehensive log analysis, focusing on chat message completions and prompt interactions.
+2. **Monitorear los prompts de OpenAI utilizando Azure API Management:**
+   - Utilice Consultas Kusto dentro de API Management para realizar un análisis de registros completo, centrándose en las respuestas de los mensajes de chat y las interacciones de los prompts.
 
 
    <validation step="bc6cc0b0-ab0e-4b2f-9e3a-1b1836b20e28" />
   
-## Success Criteria:
+## Criterios de Éxito:
 
-Participants will be evaluated based on the following criteria:
+Los participantes serán evaluados en función de los siguientes criterios:
 
-1. Successfully configure the Azure OpenAI service with appropriate diagnostic settings and analyze its logs using Kusto Queries.
-2. Effectively create and configure Azure API Management, ensuring clear visibility of logs and OpenAI prompts through detailed Kusto Query analysis.
+1. Configurar correctamente el servicio Azure OpenAI con la configuración de diagnóstico adecuada y analizar sus registros mediante Consultas Kusto.
+2. Crear y configurar eficazmente Azure API Management, garantizando una visibilidad clara de los registros y los prompts de OpenAI mediante un análisis detallado de Consultas Kusto.
 
-## Additional Resources:
+## Recursos Adicionales:
 
-- Refer to [How to Configure Azure API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md) for detailed information.
-- Refer to this video about [Logging & Monitoring Everything in Azure OpenAI with API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md).
-- Refer to the [Kusto Queries Tutorial](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-tutorial) for detailed information.
+- Consulte [Cómo configurar el Servicio Azure API Management](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md) para obtener información detallada.
+- Consulte este video sobre [Registro y Monitoreo de Todo en Azure OpenAI con el Servicio API Management](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md).
+- Consulte el [Tutorial de Consultas Kusto](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-tutorial) para obtener información detallada.

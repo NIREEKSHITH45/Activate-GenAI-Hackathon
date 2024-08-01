@@ -1,207 +1,207 @@
-# Challenge 02: Implement Document Search with Azure AI Search
+# Desafío 02: Implementar la Búsqueda de Documentos con Azure AI Search
 
-### Estimated Time: 120 minutes
+### Tiempo Estimado: 120 minutos
 
-## Introduction:
+## Introducción:
 
-All organizations rely on information to make decisions, answer questions, and function efficiently. The problem for most organizations is not a lack of information but the challenge of finding and  extracting the information from the massive set of documents, databases, and other sources in which the information is stored.
+Todas las organizaciones dependen de la información para tomar decisiones, responder preguntas y funcionar de manera eficiente. El problema para la mayoría de las organizaciones no es la falta de información, el reto de encontrarla y extraerla del enorme conjunto de documentos, bases de datos y otras fuentes en las que está almacenada.
 
-For example, suppose *Margie's Travel* is a travel agency that specializes in organizing trips to cities around the world. Over time, the company has amassed a huge amount of information in documents such as brochures as well as reviews of hotels submitted by customers. This data is a valuable source of insights for travel agents and customers as they plan trips, but the sheer volume of data can make it difficult to find relevant information to answer a specific customer question.
+Por ejemplo, supongamos que *Margie's Travel* es una agencia de viajes especializada en organizar viajes a ciudades de todo el mundo. Con el tiempo, la empresa ha acumulado una enorme cantidad de información en documentos como folletos y reseñas de hoteles enviadas por los clientes. Estos datos son una valiosa fuente de información para las agencias de viajes y los clientes a la hora de planificar sus viajes, pero el enorme volumen de datos puede dificultar la búsqueda de información relevante para responder a una pregunta concreta de un cliente.
 
-To address this challenge, Margie's Travel can use Azure AI Search to implement a solution in which the documents are indexed and enriched by using AI skills to make them easier to search.
+Para abordar este desafío, Margie's Travel puede usar Azure AI Search para implementar una solución en la que los documentos se indexan y enriquecen mediante el uso de aptitudes de IA para facilitar su búsqueda.
 
-## Solution Guide
+## Guía de Solucines
 
-### Task 1: Clone the repository for this course
+### Tarea 1: Clonar el repositorio para este curso
 
-If you have not already cloned the **AI-102-AIEngineer** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
+Si aún no ha clonado el repositorio de código **AI-102-AIEngineer** en el entorno en el que está trabajando en este laboratorio, siga estos pasos para hacerlo. De lo contrario, abra la carpeta clonada en Visual Studio Code.
 
-1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
+1. Abra **Visual Studio Code** desde el escritorio de Lab VM haciendo doble clic en él.
 
-1. In **Visual Studio Code**, from the top left menu, select the **(...) (1)** ellipses > **Terminal (2)**, then choose **New Terminal (3)**.
+1. En **Visual Studio Code**, en el menú superior izquierdo, seleccione los puntos suspensivos **(...) (1)** > **Terminal (2)** y, a continuación, elija **Nueva Terminal (3)**.
 
    ![](../media/Active-image42.png)
 
-1. Execute the following command in the terminal to clone the repository to a local folder: (it doesn't matter which folder).
+1. Ejecute el siguiente comando en la terminal para clonar el repositorio en una carpeta local: (no importa cuál sea la carpeta).
 
    `git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer`
 
     ![](../media/Active-image43.png)
 
-1. When the repository has been cloned, open the folder in Visual Studio Code by following these steps:
+1. Cuando se haya clonado el repositorio, abra la carpeta en Visual Studio Code siguiendo estos pasos:
 
-    - From the top left corncer menu select **File (1)** >  **Open Folder (2)**.
+    - En el menú de la esquina superior izquierda, seleccione **Archivo (1)** > **Abrir carpeta (2)**.
 
        ![](../media/Active-image44.png)
       
-    - Within the file explorer in **Quick access** select **AI-102-AIEngineer (1)** then click on **Select folder (2)**.
+    - En el explorador de archivos, en **Quick access**, seleccione **AI-102-AIEngineer (1)** y luego haga clic en **Seleccionar carpeta (2)**.
 
        ![](../media/Active-image45.png)
       
-    - If **Do you trust the authors of the files in this folder?** prompted click on **Yes, I trust the authors**.
+    - Si aparece el mensaje **¿Confía en los autores de los archivos de esta carpeta?**, haga clic en **Sí, confío en los autores**.
 
          ![](../media/Active-image46.png)
 
-       > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
+       > **Nota**: Si se le solicita que agregue los recursos necesarios para compilar y depurar, seleccione **Ahora no**.
 
-### Task 2: Create Azure resources
+### Tarea 2: Crear recursos de Azure
 
-To create the solution for Margie's Travel, you will need the following resources in your Azure subscription:
+Para crear la solución para Margie's Travel, necesitará los siguientes recursos en su suscripción de Azure:
 
-- An **Azure AI Search** resource that will manage indexing and querying.
-- An **Azure AI Services** resource that provides AI services for skills that your search solution can use to enrich the data in the data source with AI-generated insights.
-- A **Storage account** with a blob container in which the documents to be searched are stored.
-  > **Important**: Your Azure AI Search and Azure AI Services resources must be in the same location.
+- Un recurso de **Azure AI Search** que administrará la indexación y las consultas.
+- Un recurso de **Azure AI Services** que proporciona servicios de IA para las aptitudes que su solución de búsqueda puede usar para enriquecer los datos en los orígenes de datos con información generada por IA.
+- Una **Cuenta de almacenamiento** con un contenedor de blobs en el que se almacenan los documentos que se buscarán.
+  > **Importante**: Los recursos de Azure AI Search y Azure AI Services deben estar en la misma ubicación.
 
-#### Task 2.1: Create an Azure AI Search resource
+#### Tarea 2.1: Crear un recurso de Azure AI Search
 
-In this task, you'll learn how to create an **Azure AI Search** resource in the Azure portal.
+En esta tarea, aprenderá a crear un recurso de **Azure AI Search** en el portal de Azure.
 
-1. In a web browser, sign in to Azure portal using `https://portal.azure.com`.
+1. En un navegador web, inicie sesión en el portal de Azure visitando `https://portal.azure.com`.
 
-1. Return to the Azure portal home page, and then click the **&#65291;Create a resource** button.
+1. Regrese a la página de inicio del portal de Azure y haga clic en el botón **&#65291;Crear un recurso**.
 
     ![](../media/Active-image21.png)
      
-1. Search for and select **Azure AI Search** from the list on Create a resource page.
+1. Busque y seleccione **Azure AI Search** en la lista de la página Crear un recurso.
 
    ![](../media/Active-image22.png)
 
-1. On the **Marketplace** page, select **Azure AI Search**.
+1. En la página **Marketplace**, seleccione **Azure AI Search**.
 
    ![](../media/Active-image33.png)
     
-1. On the **Azure AI Search** page, click on **Create**. 
+1. En la página **Azure AI Search**, haga clic en **Crear**.
 
    ![](../media/Active-image24.png)
    
-1. Specify the following details to create an **Azure AI Search** service then click on **Review + Create (6)** tab.
+1. Especifique los siguientes detalles para crear un servicio **Azure AI Search** y luego haga clic en la pestaña **Revisar y crear (6)**.
    
-   | **Option**         | **Value**                                              |
+   | **Opción**         | **Valor**                                              |
    | ------------------ | -----------------------------------------------------  |
-   | Subscription       | Leave default  **(1)**                                 |
-   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**                |
-   | Name               | *Enter a unique name* for your search service or use the format **searchservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
-   | Location           | Use the same location as the resource group **(4)**           |
-   | Pricing tier       | Basic   **(5)**                                               | 
+   | Suscripción       | Deje el valor predeterminado  **(1)**                                 |
+   | Grupo de recursos     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**                |
+   | Nombre               | *Ingrese un nombre único* para su servicio de búsqueda o utilice el formato **searchservice-xxxxxx** (reemplace **xxxxxx** con el valor **Deployment ID** registrado en el **Desafío 01**) **(3)** |
+   | Ubicación           | Use la misma ubicación que el grupo de recursos **(4)**           |
+   | Plan de tarifa       | Básico   **(5)**                                               | 
 
-    >**Note**: Here, xxxxxx refers to the deployment ID
-    >**Note**: If you encounter the error **Cannot get costs for subscription**, please ignore it and proceed with the next step.
+    >**Nota**: Aquí, xxxxxx hace referencia al valor DeploymentID
+    >**Nota**: Si encuentra el error **No se pueden obtener los costos de la suscripción**, ignórelo y continúe con el siguiente paso.
     
     ![](../media/Active-image25.png)
    
-1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
+1. Una vez que la validación sea exitosa en la pestaña **Revisar y crear**, haga clic en **Crear** y espere a que se complete la implementación, luego, haga clic en **Ir al recurso**.
 
    ![](../media/Active-image26.png)
 
    ![](../media/Active-image27.png)
 
-1. Review the **Overview** page on the blade for your Azure AI Search resource in the Azure portal. Here, you can use a visual interface to create, test, manage, and monitor the various components of a search solution, including data sources, indexes, indexers, and skillsets.
+1. Revise la página **Información general** en la hoja correspondiente a su recurso de Azure AI Search en el portal de Azure. Aquí, puede usar una interfaz visual para crear, probar, administrar y supervisar los distintos componentes de una solución de búsqueda, incluidos los orígenes de datos, los índices, los indizadores y los conjuntos de aptitudes.
 
-#### Task 2.2: Create an Azure AI Services resource
+#### Tarea 2.2: Crear un recurso de Azure AI Services
 
-In this task, you'll learn how to create an Azure AI Search resource in the Azure portal. Your search solution will use this resource to enrich the data in the datastore with AI-generated insights.
+En esta tarea, aprenderá a crear un recurso de Azure AI Search en el portal de Azure. Su solución de búsqueda usará este recurso para enriquecer los datos del almacén de datos con información generada por IA.
 
-1. Return to the Azure portal home page, and then click the **&#65291;Create a resource** button.
+1. Regrese a la página de inicio del portal de Azure y haga clic en el botón **&#65291;Crear un recurso**.
 
     ![](../media/Active-image21.png)
      
-1. Search for and select **Azure AI Services (1) (2)** from the list then on the **Marketplace** page, select **Azure AI Services (3)**.
+1. Busque y seleccione **Azure AI Services (1) (2)** en la lista y, luego, en la página **Marketplace**, seleccione **Azure AI Services (3)**.
 
    ![](../media/Active-image28.png)
 
    ![](../media/Active-image29.png)
     
-1. On the **Azure AI Services** page, click on **Create**. 
+1. En la página **Azure AI Services**, haga clic en **Crear**. 
 
    ![](../media/Active-image30.png)
    
-1. Specify the following details to create an **Azure AI Service** then click on **Review + Create (7)** tab.
+1. Especifique los siguientes detalles para crear un recurso de **Azure AI Service**, luego haga clic en la pestaña **Revisar y crear (7)**.
    
-   | **Option**         | **Value**                                              |
+   | **Opción**         | **Valor**                                              |
    | ------------------ | -----------------------------------------------------  |
-   | Subscription       | Leave default  **(1)**                                 |
-   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
-   | Name               | *Enter a unique name* for your Azure AI Services or use the format **challengeservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
-   | Location           | Use the same location as the resource group  **(4)**          |
+   | Suscripción       | Deje el valor predeterminado  **(1)**                                 |
+   | Grupo de recursos     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
+   | Name               | *Ingrese un nombre único* para su recurso Azure AI Services o utilice el formato **challengeservice-xxxxxx** (reemplace **xxxxxx** con el valor **Deployment ID** registrado en el **Desafío 01**) **(3)** |
+   | Region           | Use la misma ubicación que el grupo de recursos  **(4)**          |
    | Pricing tier       | Standard S0     **(5)**                                        |
-   | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 
+   | By checking this box I acknowledge that I have read and understood all the terms below | Seleccione la **Casilla de verificación** **(6)**| 
 
-    >**Note**: Here, xxxxxx refers to the deployment ID
+    >**Nota**: Aquí, xxxxxx hace referencia al valor DeploymentID
     
     ![](../media/Active-image(31).png)
    
-1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
+1. Una vez que la validación sea exitosa en la pestaña **Revisar y crear**, haga clic en **Crear** y espere a que se complete la implementación; luego, haga clic en **Ir al recurso**.
 
-#### Task 2.3: Create a storage account
+#### Tarea 2.3: Crear una cuenta de almacenamiento
 
-In this task, you'll learn how to create a **Storage account** resource in the Azure portal, and in next steps will be creating blob container where the documents to be searched are stored.
+En esta tarea, aprenderá a crear un recurso de **Cuenta de almacenamiento** en el portal de Azure y, en los siguientes pasos, creará un contenedor de blobs donde se almacenarán los documentos a buscar.
 
-1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Storage account** **(1)**, and then select **Storage account** **(2)** under services.
+1. En la página del Portal de Azure, en el cuadro Buscar recursos, servicios y documentos (G+/) en la parte superior del portal, ingrese **Storage account** **(1)** y luego seleccione **Cuentas de almacenamiento** **(2)** en Servicios.
 
     ![](../media/Active-image34.png)
 
-1. Click on **Create**.
+1. Haga clic en **Crear**.
 
     ![](../media/Active-image35.png)
    
-1. Specify the following details to create an Azure **Storage account** then click on **Next** **(7)**  tab.
+1. Especifique los siguientes detalles para crear una **Cuenta de almacenamiento** de Azure y luego haga clic en la pestaña **Siguiente** **(7)**.
    
-   | **Option**            | **Value**                                              |
+   | **Opción**            | **Valor**                                              |
    | ------------------    | -----------------------------------------------------  |
-   | Subscription          | Leave default **(1)**                                  |
-   | Resource Group        | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**         |
-   | Storage account name  | *Enter a unique name* for your Storage account or use the format **storagexxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
-   | Region                | Use the same location as the resource group **(4)**    |
-   | Performance           | Standard **(5)**                                       |
-   | Replication           | Locally redundant storage (LRS) **(6)**                | 
+   | Suscripción          | Deje el valor predeterminado **(1)**                                  |
+   | Grupo de recursos        | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**         |
+   | Nombre de la cuenta de almacenamiento  | *Ingrese un nombre único* para su Cuenta de almacenamiento o utilice el formato **storagexxxxxx** (reemplace **xxxxxx** con el valor **Deployment ID** registrado en el **Desafío 01**) **(3)** |
+   | Región                | Use la misma ubicación que el grupo de recursos **(4)**    |
+   | Rendimiento           | Estándar **(5)**                                       |
+   | Redundancia           | Almacenamiento con redundancia local (LRS) **(6)**                | 
 
    ![](../media/Active-image36.png)
 
-1. On the **Advanced** tab, check the box next to **Allow enabling anonymous access on individual containers** and click on **Review + create**
+1. En la pestaña **Avanzado**, marque la casilla junto a **Permitir el acceso anónimo en contenedores individuales** y haga clic en **Revisar y crear**.
 
    ![](../media/Active-image37.png)
 
-1. Once validation is successful on  **Review + create**, click **Create** and wait for the deployment to complete click on **Go to resource**.
+1. Una vez que la validación sea exitosa en **Revisar y crear**, haga clic en **Crear** y espere a que se complete la implementación. Haga clic en **Ir al recurso**.
       ![](../media/Active-image38.png)
    
       ![](../media/Active-image39.png)
    
-1. On the **Overview** page, note the **Subscription ID**; this identifies the subscription for which the storage account is provisioned.
+1. En la página **Información general**, anote el **ID de suscripción**; éste identifica la suscripción para la que se aprovisiona la cuenta de almacenamiento. 
 
    ![](../media/Active-image40.png)
 
-    > **Tip**: Keep the **Storage Account** blade open; you will need the subscription ID and one of the keys in the next procedure.
+    > **Sugerencia**: Mantenga abierta la hoja **Cuenta de almacenamiento**; necesitará el ID de suscripción y una de las claves en el siguiente procedimiento.
 
-### Task 3 and Task 4: Upload documents to Azure Storage and execute the uploaded script
+### Tarea 3 y Tarea 4: Cargar documentos en Azure Storage y Ejecutar el script cargado
 
-In this task, you'll navigate between Visual Studio Code and the Azure portal to retrieve necessary credentials, update a batch file, and use the Azure CLI to upload documents to a blob container in your storage account.
+En esta tarea, navegará entre Visual Studio Code y el portal de Azure para recuperar las credenciales necesarias, actualizar un archivo por lotes y usar la CLI de Azure para cargar documentos en un contenedor de blobs en su cuenta de almacenamiento.
 
->**Important**: Now that you have the required resources, you can upload some documents to your Azure Storage account.
+>**Importante**: Ahora que tiene los recursos necesarios, puede cargar algunos documentos en su Cuenta de almacenamiento de Azure.
 
-1. Navigate back to Visual Studio Code, under the **Explorer** pane, expand the **22-create-a-search-solution (1)** folder and select **UploadDocs.cmd (2)**.
+1. Vuelva a Visual Studio Code, en el panel **Explorador**, expanda la carpeta **22-create-a-search-solution (1)** y seleccione **UploadDocs.cmd (2)**.
 
     ![](../media/Active-image47.png)
    
-1. Navigate back to browser tab displaying **Azure portal**, retrieve the **subscription ID (1)**, **Azure storage account name (2)**, and **Azure storage account key** by clicking **Show** > **Clipboard (3)** option from the recently created storage account and record the values in notepad.
+1. Vuelva a la pestaña del navegador que muestra **Portal de Azure**, recupere el **ID de suscripción (1)**, el **nombre de la Cuenta de almacenamiento de Azure (2)** y la **Clave de la cuenta de almacenamiento de Azure** haciendo clic en la opción **Mostrar** > **Portapapeles (3)** de la cuenta de almacenamiento creada recientemente, registre los valores en el bloc de notas.
 
       ![](../media/Active-image48.png)
    
       ![](../media/Active-image49.png)
    
-1. Return to VS code and edit the batch file to replace placeholders **YOUR_SUBSCRIPTION_ID**, **YOUR_AZURE_STORAGE_ACCOUNT_NAME**, and **YOUR_AZURE_STORAGE_KEY** with the corresponding values which you recorded in previous step.
+1. Regrese a VS Code y edite el archivo por lotes para reemplazar los marcadores de posición **YOUR_SUBSCRIPTION_ID**, **YOUR_AZURE_STORAGE_ACCOUNT_NAME** y **YOUR_AZURE_STORAGE_KEY** con los valores correspondientes que registró en el paso anterior.
 
     ![](../media/Active-image85.png)
    
-1. Save your changes, and then right-click the **22-create-a-search-solution (1)** folder > **open an integrated terminal (2)**.
+1. Guarde los cambios y, a continuación, haga clic con el botón derecho en la carpeta **22-create-a-search-solution (1)** > **Abrir en terminal integrado (2)**.
 
     ![](../media/Active-image51.png)
 
-1. Enter the following command to sign into your Azure subscription by using the Azure CLI:
+1. Ingrese el siguiente comando para iniciar sesión en su suscripción de Azure mediante la CLI de Azure:
 
-   > **Note**: Ensure we have installed the Azure CLI and the Azure CLI Tools extension in Visual Studio Code.
+   > **Nota**: Asegúrese de que hayamos instalado la CLI de Azure y la extensión Azure CLI Tools en Visual Studio Code.
 
-   >**Note**: Make sure to replace <your-username> <your-password> with **Azure username** and **password** which you using from challenge-1.
+   >**Nota**: Asegúrese de reemplazar <your-username> <your-password> con **Nombre de usuario de Azure** y **contraseña** que usó en el Desafío-1.
    
     ```
     az login --username <your-username> --password <your-password>
@@ -209,9 +209,9 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
 
     ![](../media/Active-image52.png)
       
-   > **Note**: A web browser tab will open and prompt you to sign into Azure. Do so, and then close the browser tab and return to Visual Studio Code.
+   > **Nota**: Se abrirá una pestaña del navegador web y le solicitará que inicie sesión en Azure. Hágalo y, a continuación, cierre la pestaña del navegador y regrese a Visual Studio Code.
 
-1. Enter the following command to run the batch file. This will create a blob container in your storage account and upload the documents in the **data** folder to it.
+1. Ingrese el siguiente comando para ejecutar el archivo por lotes. Esto creará un contenedor de blobs en su cuenta de almacenamiento y cargará los documentos en la carpeta **data**.
 
     ```
     .\UploadDocs
@@ -219,26 +219,25 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
 
    ![](../media/Active-image53.png)
 
-### Task 5: Data Import and Indexing:
-#### Task 5.1: Index the documents
+### Tarea 5: Importar e Indexar Datos:
+#### Tarea 5.1: Indexar los documentos
 
-In this task, you'll learn how to create a search solution by indexing documents that are already in place. Navigating to your Azure AI Search resource in the Azure portal, configure the data source to utilize Azure Blob Storage, integrate cognitive skills for enrichment, customize the target index, and set up an indexer to process and index the documents effectively.
+En esta tarea, aprenderá a crear una solución de búsqueda indexando documentos ya existentes. Navegue hasta su recurso de Azure AI Search en el portal de Azure, configure el origen de datos para utilizar Azure Blob Storage, integre aptitudes cognitivas para el enriquecimiento, personalice el índice de destino y configure un indizador para procesar e indexar los documentos de manera efectiva.
 
->**Note**: Now that you have the documents in place, you can create a search solution by indexing them.
+>**Nota**: Ahora que ya cuenta con los documentos almacenados, puede crear una solución de búsqueda indexándolos.
 
-1. In the Azure portal, browse to your **Azure AI Search** resource. Then, on its **Overview** page, select **Import data**.
+1. En el portal de Azure, navegue hasta el recurso **Azure AI Search**. Luego, en la página **Información general**, seleccione **Importación de datos**.
 
    ![](../media/Active-image54.png)
 
-1. On the **Connect to your data** page, in the **Data Source** list, select **Azure Blob Storage**. Then complete the data store details with the following values:
+1. En la página **Conectarse a sus datos**, en la lista **Origen de datos**, seleccione **Almacenamiento de blobs de Azure**. A continuación, complete los detalles del almacén de datos con los siguientes valores:
     
-    - **Data Source**: Azure Blob Storage (1)
-    - **Data source name**: margies-data  (2)
-    - **Data to extract**: Content and metadata (3)
-    - **Parsing mode**: Default (4)
-    - **Subscription**: Leave default (5)  
-    - **Connection string**: Select **Choose an existing connection (6)**. Then select your storage account (7), and finally select the **margies (8)** container that 
-       was created by the UploadDocs.cmd script. then click on **Select (9)**.
+    - **Origen de datos**: Almacenamiento de blobs de Azure (1)
+    - **Nombre del origen de datos**: margies-data  (2)
+    - **Datos que se extraerán**: Contenido y metadatos (3)
+    - **Modo de análisis**: Predeterminado (4)
+    - **Suscripción**: Deje el valor predeterminado (5)  
+    - **Cadena de conexión**: Seleccione **Elegir una conexión existente (6)**. Luego seleccione su cuenta de almacenamiento (7), y finalmente elija el contenedor **margies (8)** que fue creado por el script UploadDocs.cmd. Finalmente, haga clic en **Seleccionar (9)**.
 
         ![](../media/Active-image55.png)
 
@@ -246,52 +245,52 @@ In this task, you'll learn how to create a search solution by indexing documents
 
         ![](../media/Active-image57.png)
       
-    - **Managed identity authentication**: None (10)
-    - **Container name**: margies (11)
-    - **Blob folder**: *Leave this blank.* (12)
-    - **Description**: Brochures and reviews in Margie's Travel web site. (13)
-    - Click on **Add cognitive skills(Optional) (14)**
+    - **Autenticación de identidad administrada**: Ninguna (10)
+    - **Nombre del contenedor**: margies (11)
+    - **Carpeta de blobs**: *Deje este campo en blanco.* (12)
+    - **Descripción**: Brochures and reviews in Margie's Travel web site. (13)
+    - Haga clic en **Agregar aptitudes cognitivas (opcional) (14)**
 
        ![](../media/Active-image58.png)
 
-1. On **Add cognitive skills (Optional)** tab expand **Attach AI Services(1)**, within the section  select your **Azure AI Services (2)** resource.
+1. En la pestaña **Agregar aptitudes cognitivas (opcional)**, expanda **Asociación de servicios de IA (1)**, y, dentro de la sección, seleccione su recurso **Azure AI Services (2)**.
 
      ![](../media/Active-image59.png)
    
-1. Scroll down and expand **Add enrichments (1)** section and specify the following :
+1. Desplácese hacia abajo y expanda la sección **Agregar enriquecimientos (1)** y especifique lo siguiente:
     
-    - Change the **Skillset name** to **margies-skillset (2)**.
-    - Select the checkbox for **Enable OCR and merge all text into merged_content field (3)**.
-    - Ensure that the **Source data field** is set to **merged_content (4)**.
-    - Leave the **Enrichment granularity level** as the **Source field (5)**, which sets the entire contents of the document being indexed, but note that you can change this to extract information at more granular levels, like pages or sentences.
+    - Cambie el **Nombre del conjunto de aptitudes** a **margies-skillset (2)**.
+    - Seleccione la casilla de verificación **Habilitar OCR y combinar todo el texto en el campo merged_content (3)**.
+    - Asegúrese de que el **Campo de datos de origen** esté configurado en **merged_content (4)**.
+    - Deje el **Nivel de granularidad de enriquecimiento** como **Campo de origen (5)**, que establece todo el contenido del documento que se está indexando, pero tenga en cuenta que puede cambiarlo para extraer información en niveles más granulares, como páginas u oraciones.
   
       ![](../media/Active-image60.png)
 
-    - Select the following enriched fields:
+    - Seleccione los siguientes campos enriquecidos:
 
-        | Cognitive Skill | Parameter | Field name |
+        | Aptitud Cognitiva | Parámetro | Nombre del Campo |
         | --------------- | ---------- | ---------- |
-        | Extract location names | | locations |
-        | Extract key phrases | | keyphrases |
-        | Detect language | | language |
-        | Generate tags from images | | imageTags |
-        | Generate captions from images | | imageCaption |
+        | Extraer nombres de ubicaciones | | locations |
+        | Extraer frases clave | | keyphrases |
+        | Detectar idioma | | language |
+        | Generar etiquetas a partir de imágenes | | imageTags |
+        | Generar leyendas a partir de imágenes | | imageCaption |
 
         ![](../media/Active-image61.png)
       
-1. Double-check your selections (it can be difficult to change them later). Then proceed to the next step (*Customize target index*).
+1. Vuelva a verificar sus selecciones (puede ser difícil cambiarlas más tarde). Luego, proceda al siguiente paso (*Personalizar índice de destino*). 
 
    ![](../media/Active-image62.png)
   
-1. On **Customize target index** tab change the **Index name** to **margies-index (1)**.
+1. En la pestaña **Personalizar índice de destino**, cambie el **Nombre del índice** a **margies-index (1)**.
    
-1. Ensure that the **Key** is set to **metadata_storage_path (2)** and leave the **Suggester name** blank and **Search mode (3)** at its default value.
+1. Asegúrese de que la **Clave** esté configurada en **metadata_storage_path (2)** y deje el **Nombre del proveedor de sugerencias** en blanco y el **Modo de búsqueda (3)** en su valor predeterminado.
 
     ![](../media/Active-image63.png)
    
-1. Make the following changes to the index fields, leaving all other fields with their default settings (**IMPORTANT**: you may need to scroll to the right to see the entire table):
+1. Realice los siguientes cambios en los campos de índice, dejando todos los demás campos con sus configuraciones predeterminadas (**IMPORTANTE**: es posible que deba desplazarse hacia la derecha para ver la tabla completa):
 
-    | Field name | Retrievable | Filterable | Sortable | Facetable | Searchable |
+    | Nombre de campo | Recuperable | Filtrable | Ordenable | Clasificable | Buscable |
     | ---------- | ----------- | ---------- | -------- | --------- | ---------- |
     | metadata_storage_size | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | |
     | metadata_storage_last_modified | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | |
@@ -301,52 +300,52 @@ In this task, you'll learn how to create a search solution by indexing documents
     | keyphrases | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
     | language | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | |
 
-    Use the below image to cross verify the option. 
+    Utilice la siguiente imagen para verificar la opción.
 
      ![](../media/Active-image64.png)
    
-1. Double-check your selections, paying particular attention to ensure that the correct **Retrievable**, **Filterable**, **Sortable**, **Facetable**, and **Searchable** options are selected for each field  (it can be difficult to change them later). Then proceed to the next step by clicking on **Next: Customize target index**.
+1. Vuelva a verificar sus selecciones, prestando especial atención para asegurarse de que las opciones **Recuperable**, **Filtrable**, **Ordenable**, **Clasificable** y **Buscable** estén seleccionadas para cada campo (puede ser difícil cambiarlas más adelante). Luego, continúe con el siguiente paso haciendo clic en **Siguiente: Crear indizador**.
 
-1. On the **Create an indexer** tab specify the following
-      - Change the **Indexer name** to **margies-indexer (1)**.
-      - Leave the **Schedule** set to **Once (2)**.
-      - Expand the **Advanced options (3)** and ensure that the **Base-64 encode keys (4)** option is selected (generally, encoding keys make the index more efficient).
+1. En la pestaña **Crear indizador** especifique lo siguiente:
+      - Cambie el **Nombre del indizador** a **margies-indexer (1)**.
+      - Deje la **Programación** establecida en **Una vez (2)**.
+      - Expanda las **Opciones avanzadas (3)** y asegúrese de que la opción **Claves de codificación Base 64 (4)** esté seleccionada (por lo general, las claves de codificación hacen que el índice sea más eficiente).
       
-      - Select **Submit (5)** to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
+      - Seleccione **Enviar (5)** para crear el origen de datos, el conjunto de aptitudes, el índice y el indizador. El indizador se ejecuta automáticamente y ejecuta el pipeline de indexación, el cual:
           
-          1. Extracts the document metadata fields and content from the data source.
-          2. Runs the skillset of cognitive skills to generate additional enriched fields.
-          3. Maps the extracted fields to the index.
+          1. Extrae los campos de metadatos del documento y el contenido del origen de datos.
+          2. Ejecuta el conjunto de aptitudes cognitivas para generar campos enriquecidos adicionales.
+          3. Asigna los campos extraídos al índice.
       
           ![](../media/Active-image65.png)  
 
-1. On **Azure AI Search** resource page, expand **Search management (1)** select **Indexers (2)** which should show the newly created **margies-indexer (3)**.
+1. En la página de recursos de **Azure AI Search**, expanda **Administración de búsquedas (1)** y seleccione **Indizadores (2)**, el cual debería mostrar el indizador **margies-indexer (3)** recién creado.
 
    ![](../media/Active-image66.png)  
 
-1. Select **margies-indexer** . Wait a few minutes, and click **&orarr; Refresh** until the **Status** indicates success.
+1. Seleccione **margies-indexer** . Espere unos minutos y haga clic en **&orarr; Actualizar** hasta que el **Estado** indique que la operación se realizó correctamente.
 
     ![](../media/Active-image67.png) 
 
-#### Task 5.2: Search the index
+#### Tarea 5.2: Buscar en el índice
 
-In this task, you'll learn to search and query the index created earlier:
+En esta tarea, aprenderá a buscar y consultar el índice creado anteriormente:
 
-1. At the top of the **Overview** page for your Azure AI Search resource, select **Search explorer**.
+1. En la parte superior de la página **Información general** de su recurso de Azure AI Search, seleccione **Explorador de búsqueda**
 
     ![](../media/Active-image68.png)
    
-1. In Search explorer, in the **Query string** box, enter `*` (a single asterisk), and then select **Search**.
+1. En el Explorador de búsqueda, en el cuadro **Cadena de consulta**, ingrese `*` (un solo asterisco) y luego haga clic en **Buscar**.
 
     ![](../media/Active-image69.png)
 
-   >**Note**: This query retrieves all documents in the index in JSON format. Examine the results and note the fields for each document, which contain document content, metadata, and enriched data extracted by the cognitive skills you selected.
+   >**Nota**: Esta consulta recupera todos los documentos del índice en formato JSON. Examine los resultados y observe los campos de cada documento, que contienen el contenido del documento, metadatos y datos enriquecidos extraídos por las aptitudes cognitivas que haya seleccionado.
 
-1. In the **View** menu, select **JSON view**.
+1. En el menú **Ver**, seleccione **Vista JSON**.
 
    ![](../media/Active-image70.png)
 
-1. Note that the JSON request for the search is shown, like this:
+1. Observe que la solicitud JSON para la búsqueda se muestra de la siguiente manera:
 
     ```json
     {
@@ -355,7 +354,7 @@ In this task, you'll learn to search and query the index created earlier:
     ```
    ![](../media/Active-image71.png)
    
-1. Modify the JSON request to include the **count** parameter, as shown here:
+1. Modifique la solicitud JSON para incluir el parámetro **count**, tal como se muestra aquí:
 
     ```json
     {
@@ -364,9 +363,9 @@ In this task, you'll learn to search and query the index created earlier:
     }
     ```
 
-1. Submit the modified search. This time, the results include a **@odata.count** field at the top of the results that indicates the number of documents returned by the search.
+1. Envíe la búsqueda modificada. Esta vez, los resultados incluyen un campo **@odata.count** en la parte superior de los resultados que indica el número de documentos devueltos por la búsqueda.
 
-1. Try the following query:
+1. Pruebe la siguiente consulta:
 
     ```json
     {
@@ -376,9 +375,9 @@ In this task, you'll learn to search and query the index created earlier:
     }
     ```
 
-    >**Note**: This time, the results include only the file name, author, and any locations mentioned in the document content. The file name and author are in the **metadata_storage_name** and **metadata_author** fields, which were extracted from the source document. The **locations** field was generated by a cognitive skill.
+    >**Nota**: En esta ocasión, los resultados incluyen solo el nombre del archivo, el autor y las ubicaciones mencionadas en el contenido del documento. El nombre del archivo y el autor se encuentran en los campos **metadata_storage_name** y **metadata_author**, los cuales se extrajeron del documento fuente. El campo **locations** se generó mediante una aptitud cognitiva.
 
-1. Now try the following query string:
+1. Ahora, pruebe la siguiente cadena de consulta:
 
     ```json
     {
@@ -388,9 +387,9 @@ In this task, you'll learn to search and query the index created earlier:
     }
     ```
 
-    >**Note**: This search finds documents that mention "New York" in any of the searchable fields and returns the file name and key phrases in the document.
+    >**Nota**: Esta búsqueda encuentra documentos que mencionan "New York" en cualquiera de los campos buscables y devuelve el nombre del archivo y las frases clave del documento.
 
-1. Let's try one more query:
+1. Probemos una consulta más:
 
     ```json
     {
@@ -401,65 +400,65 @@ In this task, you'll learn to search and query the index created earlier:
     }
     ```
 
-    >**Note**: This query returns the filename of any documents authored by *Reviewer* that mention "New York".
+    >**Nota**: Esta consulta devuelve el nombre de archivo de cualquier documento creado por *Reviewer* que mencione "New York".
 
       ![](../media/search-explorer.png) 
   
-### Task 6: Explore and modify the definitions of search components
+### Tarea 6: Explorar y modificar las definiciones de los componentes de búsqueda
 
-The components of the search solution are based on JSON definitions, which you can view and edit in the Azure portal.
+Los componentes de la solución de búsqueda se basan en definiciones JSON, que usted puede ver y editar en el portal de Azure.
 
-While you can use the portal to create and modify search solutions, it's often desirable to define the search objects in JSON and use the Azure AI Service REST interface to create and modify them.
+Si bien puede usar el portal para crear y modificar soluciones de búsqueda, a menudo es conveniente definir los objetos de búsqueda en JSON y usar la interfaz REST de Azure AI Service para crearlos y modificarlos.
 
-#### Task 6.1: Get the endpoint and key for your Azure AI Search resource
+#### Tarea 6.1: Obtener el punto de conexión y la clave para su recurso de Azure AI Search
 
-In this task, you're preparing to execute CURL commands in Visual Studio Code to interact with Azure AI Service's REST interface:
+En esta tarea, se está preparando para ejecutar comandos CURL en Visual Studio Code a fin de interactuar con la interfaz REST de Azure AI Service:
 
-1. In the Azure portal, return to the **Overview** page for your **Azure AI Search** resource, and in the top section of the page, find the **Url** for your resource (which looks like **https://resource_name.search.windows.net**) and copy it to the clipboard.
+1. En el Portal de Azure, regrese a la página **Información general** de su recurso **Azure AI Search** y, en la sección superior de la página, busque la **URL** de su recurso (que tiene un aspecto similar a a **https://resource_name.search.windows.net**) y cópiela al portapapeles.
 
     ![](../media/Active-image72.png)
    
-1. In Visual Studio Code, in the Explorer pane, expand the **22-create-a-search-solution (1)** folder and its **modify-search (2)** subfolder, and select **modify-search.cmd (3)** to open it. You will use this script file to run *CURL* commands that submit JSON to the Azure AI Service REST interface.
+1. En Visual Studio Code, en el panel Explorador, expanda la carpeta **22-create-a-search-solution (1)** y su subcarpeta **modify-search (2)**, y seleccione **modify-search.cmd (3)** para abrirla. Usará este archivo de script para ejecutar comandos *CURL* que envían JSON a la interfaz REST de Azure AI Service.
 
      ![](../media/Active-image73.png)
    
-1. In **modify-search.cmd**, replace the **YOUR_SEARCH_URL** placeholder with the URL you copied to the clipboard.
+1. En **modify-search.cmd**, reemplace el marcador de posición **YOUR_SEARCH_URL** con la URL que copió al portapapeles.
 
      ![](../media/Active-image76.png)
      
-1. In the Azure portal, back to **Overview** page for your **Azure AI Search** resource expand **Settings** and select **Keys** and copy the **Primary admin key** to the clipboard.
+1. En el portal de Azure, vuelva a la página **Información general** de su recurso **Azure AI Search**, expanda **Configuración**, seleccione **Claves** y copie la **Clave de administrador principal** al portapapeles.
 
     ![](../media/Active-image74.png)
    
-1. Back  to **Visual Studio Code**, replace the **YOUR_ADMIN_KEY** placeholder with the key you copied to the clipboard.
+1. Vuelva a **Visual Studio Code**, reemplace el marcador de posición **YOUR_ADMIN_KEY** con la clave que copió al portapapeles.
 
       ![](../media/Active-image77.png)
    
-1. Save the changes to **modify-search.cmd** (but don't run it yet!)
+1. Guarde los cambios en **modify-search.cmd** (¡pero no lo ejecute todavía!)
 
      ![](../media/Active-image75.png)
    
-#### Task 6.2: Review and modify the skillset
+#### Tarea 6.2: Revisar y modificar el conjunto de aptitudes
 
-In this task, you will be configuring a skillset (skillset.json) in Visual Studio Code to integrate Azure AI Services with Azure AI Search:
+En esta tarea, configurará un conjunto de aptitudes (skillset.json) en Visual Studio Code para integrar Azure AI Services con Azure AI Search:
 
-1. In Visual Studio Code, in the **modify-search** folder, open **skillset.json**. This shows a JSON definition for **margies-skillset**.
+1. En Visual Studio Code, en la carpeta **modify-search**, abra **skillset.json**. Esto muestra una definición JSON para **margies-skillset**.
 
       ![](../media/Active-image78.png)
    
-1. At the top of the skillset definition, note the **cognitiveServices** object, which is used to connect your Azure AI Services resource to the skillset.
+1. En la parte superior de la definición del conjunto de aptitudes, observe el objeto **cognitiveServices**, el cual se usa para conectar su recurso de Azure AI Services con el conjunto de aptitudes.
 
-1. In the Azure portal, open your Azure AI Services resource (<u>not</u> your Azure AI Search resource!)
+1. En el portal de Azure, abra su recurso de Azure AI Services (¡<u>no</u> su recurso de Azure AI Search!).
 
-1. On **Azure AI Services** overview page, from the left navigation pane expand **Resource Management** select **Keys and Endpoints**. Then copy **Key 1** to the clipboard.
+1. En la página de Información general de **Azure AI Services**, en el panel de navegación izquierdo, expanda **Administración de recursos** y seleccione **Claves y puntos de conexión**. Luego, copie **Clave 1** al portapapeles.
 
     ![](../media/Active-image79.png)
    
-1. In Visual Studio Code, in **skillset.json**, replace the **YOUR_COGNITIVE_SERVICES_KEY** placeholder with the Azure AI Services key you copied to the clipboard.
+1. En Visual Studio Code, en **skillset.json**, reemplace el marcador de posición **YOUR_COGNITIVE_SERVICES_KEY** con la clave de Azure AI Services que copió al portapapeles.
 
    ![](../media/Active-image80.png)
    
-1. Scroll through the JSON file, noting that it includes definitions for the skills you created using the Azure AI Search user interface in the Azure portal. At the bottom of the list of skills, an additional skill has been added with the following definition:
+1. Desplácese por el archivo JSON y observe que incluye definiciones de las aptitudes que creó con la interfaz de usuario de Azure AI Search en el portal de Azure. En la parte inferior de la lista de aptitudes, se ha agregado una aptitud adicional con la siguiente definición:
 
     ```
     {
@@ -487,20 +486,20 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
     }
     ```
 
-   >**Note**: The new skill is named **get-sentiment**, and for each **document** level in a document, it will evaluate the text found in the **merged_content** field of the document being indexed (which includes the source content as well as any text extracted from images in the content). It uses the extracted **language** of the document (with a default of English) and evaluates a label for the sentiment of the content. Values for the sentiment label can be "positive", "negative", "neutral", or "mixed". This label is then output as a new field named **sentimentLabel**.
+   >**Nota**: La nueva aptitud se llama **get-sentiment**, y para cada nivel **document** en un documento, evaluará el texto encontrado en el campo **merged_content** del documento que se está indexando (el cual incluye la fuente de contenido, así como cualquier texto extraído de las imágenes en el contenido). Utiliza el **idioma** extraído del documento (con un valor predeterminado de Inglés) y evalúa una etiqueta para el sentimiento del contenido. Los valores para la etiqueta de sentimiento pueden ser "positivo", "negativo", "neutral" o "mixto". Esta etiqueta se genera como un nuevo campo llamado **sentimentLabel**.
 
-1. Save the changes you've made to **skillset.json**.
+1. Guarde los cambios que ha realizado en **skillset.json**.
 
-#### Task 6.3 : Review and modify the index
+#### Tarea 6.3: Revisar y modificar el índice
 
-In this task, you will review the index.json file in Visual Studio Code which shows a JSON definition for **margies-index**
+En esta tarea, revisará el archivo index.json en Visual Studio Code que muestra una definición JSON para **margies-index**
 
-1. In Visual Studio Code, in the **modify-search** folder, open **index.json**. This shows a JSON definition for **margies-index**.
+1. En Visual Studio Code, en la carpeta **modify-search**, abra **index.json**. Esto muestra una definición JSON para **margies-index**.
 
      ![](../media/Active-image81.png)
    
-1. Scroll through the index and view the field definitions. Some fields are based on metadata and content in the source document, and others are the results of skills in the skillset.
-1. At the end of the list of fields that you defined in the Azure portal, note that two additional fields have been added:
+1. Desplácese por el índice y vea las definiciones de los campos. Algunos campos se basan en metadatos y contenido del documento fuente, y otros son el resultado de las aptitudes del conjunto de aptitudes.
+1. Al final de la lista de campos que definió en el portal de Azure, observe que se han agregado dos campos adicionales:
 
     ```
     {
@@ -522,17 +521,17 @@ In this task, you will review the index.json file in Visual Studio Code which sh
     }
     ```
 
-1. The **sentiment** field will be used to add the output from the **get-sentiment** skill that was added to the skillset. The **url** field will be used to add the URL for each indexed document to the index, based on the **metadata_storage_path** value extracted from the data source. Note that the index already includes the **metadata_storage_path** field, but it's used as the index key and Base-64 encoded, making it efficient as a key but requiring client applications to decode it if they want to use the actual URL value as a field. Adding a second field for the unencoded value resolves this problem.
+1. El campo **sentiment** se utilizará para agregar la salida de la habilidad **get-sentiment** que se agregó al conjunto de aptitudes. El campo **url** se utilizará para agregar al índice la URL de cada documento indexado, basándose en el valor **metadata_storage_path** extraído de la fuente de datos. Tenga en cuenta que el índice ya incluye el campo **metadata_storage_path**, pero éste se utiliza como clave de índice y está codificado en Base-64, lo que lo hace eficiente como clave pero requiere que las aplicaciones cliente lo decodifiquen si desean usar el valor de URL real como campo. Agregar un segundo campo para el valor sin codificar resuelve este problema.
 
-#### Task 6.4: Review and modify the indexer
+#### Tarea 6.4: Revisar y modificar el indizador
 
-In this task, you will review the **indexer.json** file in Visual Studio Code which shows a JSON definition for **margies-index**
+En esta tarea, revisará el archivo **indexer.json** en Visual Studio Code que muestra una definición JSON para **margies-index**
 
-1. In Visual Studio Code, in the **modify-search** folder, open **indexer.json**. This shows a JSON definition for **margies-indexer**, which maps fields extracted from document content and metadata (in the **fieldMappings** section) and values extracted by skills in the skillset (in the **outputFieldMappings** section) to fields in the index.
+1. En Visual Studio Code, en la carpeta **modify-search**, abra **indexer.json**. Esto muestra una definición JSON para **margies-indexer**, que asigna los campos extraídos del contenido y los metadatos del documento (en la sección **fieldMappings**) y los valores extraídos por las aptitudes en el conjunto de aptitudes (en la sección **outputFieldMappings**) a los campos del índice.
 
      ![](../media/Active-image82.png)
     
-1. In the **fieldMappings** list, note the mapping for the **metadata_storage_path** value to the base-64 encoded key field. This was created when you assigned the **metadata_storage_path** as the key and selected the option to encode the key in the Azure portal. Additionally, a new mapping explicitly maps the same value to the **url** field, but without the Base-64 encoding:
+1. En la lista **fieldMappings**, observe la asignación del valor **metadata_storage_path** al campo de clave codificado en base 64. Esto se creó cuando se asignó **metadata_storage_path** como clave y seleccionó la opción para codificar la clave en el Portal de Azure. Además, una nueva asignación asigna explícitamente el mismo valor al campo **url**, pero sin la codificación en base 64:
 
     ```
     {
@@ -542,9 +541,9 @@ In this task, you will review the **indexer.json** file in Visual Studio Code wh
     
     ```
 
-    > **Note**: All of the other metadata and content fields in the source document are implicitly mapped to fields of the same name in the index.
+    > **Nota**: Todos los demás campos de metadatos y contenido en documento fuente se asignan implícitamente a campos del mismo nombre en el índice.
 
-1. Review the **ouputFieldMappings** section, which maps outputs from the skills in the skillset to index fields. Most of these reflect the choices you made in the user interface, but the following mapping has been added to map the **sentimentLabel** value extracted by your sentiment skill to the **sentiment** field you added to the index:
+1. Revise la sección **ouputFieldMappings**, la cual asigna los resultados de las aptitudes en el conjunto de aptitudes a los campos de índice. La mayoría de estos reflejan las opciones que realizó en la interfaz de usuario, pero se ha añadido la siguiente asignación para asignar el valor **sentimentLabel** extraído por su aptitud de sentimiento al campo **sentiment** que ha añadido al índice:
 
     ```
     {
@@ -553,31 +552,31 @@ In this task, you will review the **indexer.json** file in Visual Studio Code wh
     }
     ```
 
-#### Task 6.5 : Use the REST API to update the search solution
+#### Tarea 6.5: Usar la API REST para actualizar la solución de búsqueda
 
-In this task, you will update JSON definitions in Visual Studio Code for Azure AI Search to include new fields like sentiment analysis results and document URLs. Run modify-search.cmd to apply changes and start indexing. Monitor progress in Azure portal's Indexers section for completion and document size warnings during sentiment analysis.
+En esta tarea, actualizará las definiciones JSON en Visual Studio Code para Azure AI Search a fin de incluir nuevos campos como resultados de análisis de opiniones y URL de documentos. Ejecute modify-search.cmd para aplicar los cambios y comenzar a indexar. Supervise el progreso en la sección Indizadores del Portal de Azure para ver las advertencias de finalización y tamaño de documento durante el análisis de sentimientos.
 
-1. Right-click the **modify-search** folder and select **open an integrated terminal**.
+1. Haga clic con el botón derecho en la carpeta **modify-search** y seleccione **Abrir en terminal integrado**.
 
      ![](../media/Active-image83.png)
    
-1. In the terminal pane for the **modify-search** folder, enter the following command to run the **modify-search.cmd** script, which submits the JSON definitions to the REST interface and initiates the indexing.
+1. En el panel de terminal de la carpeta **modify-search**, ingrese el siguiente comando para ejecutar el script **modify-search.cmd**, el cual envía las definiciones JSON a la interfaz REST e inicia la indexación.
 
     ```
     .\modify-search
     ```
 
-1. When the script has finished, return to the **Overview** page for your **Azure AI Search** from the left navigation pane expand **Search management** and select **Indexers**. Then periodically select **Refresh** to track the progress of the indexing operation. It may take a minute or so to complete.
+1. Cuando el script haya terminado, regrese a la página **Información general** de su recurso **Azure AI Search**. Desde el panel de navegación izquierdo, expanda **Administración de búsquedas** y seleccione **Indizadores**. Luego, haga clic periódicamente en **Actualizar** para realizar un seguimiento del progreso de la operación de indexación. Puede tardar aproximadamente un minuto en completarse.
 
    ![](../media/Active-image84.png)
 
-    >**Note**: There may be some warnings for a few documents that are too large to evaluate sentiment. Often, sentiment analysis is performed at the page or sentence level rather than the full document, but in this scenario, most of the documents, particularly the hotel reviews, are short enough for useful document-level sentiment scores to be evaluated.
+    >**Nota**: Puede haber algunas advertencias para algunos documentos que son demasiado grandes para evaluar el sentimiento. A menudo, el análisis de sentimientos se realiza a nivel de página u oración en lugar de a nivel de documento completo, pero en este escenario, la mayoría de los documentos, en particular las reseñas de hoteles, son lo suficientemente breves como para que se puedan evaluar los puntajes de sentimiento a nivel de documento.
 
-#### Task 6.6 : Query the modified index
-In this task, you'll perform a query in Azure AI Search to retrieve URLs, sentiment, and key phrases for documents mentioning "London" with positive sentiment, authored by "Reviewer".
+#### Tarea 6.6: Consultar el índice modificado
+En esta tarea, realizará una consulta en Azure AI Search para recuperar las URL, el sentimiento y las frases clave de los documentos que mencionan "London" con un sentimiento positivo, creados por "Reviewer".
 
-1. At the top of the blade for your Azure AI Search resource, select **Search explorer**.
-1. In Search explorer, in the **Query string** box, submit the following JSON query:
+1. En la parte superior de la hoja de su recurso de Azure AI Search, seleccione **Explorador de búsqueda**.
+1. En el Explorador de búsqueda, en el cuadro **Cadena de consulta**, envíe la siguiente consulta JSON:
 
     ```json
     {
@@ -587,42 +586,42 @@ In this task, you'll perform a query in Azure AI Search to retrieve URLs, sentim
     }
     ```
 
-    This query retrieves the **url**, **sentiment**, and **keyphrases** for all documents that mention *London* authored by *Reviewer* that has a positive **sentiment** label (in other words, positive reviews that mention London).
+    Esta consulta recupera los campos **url**, el **sentiment** y **keyphrases** de todos los documentos que mencionan *London* creados por *Reviewer* que tienen una etiqueta **sentiment** positiva (en otras palabras, reseñas positivas que mencionan a la ciudad de Londres).
 
-1. Close the **Search explorer** page to return to the **Overview** page.
+1. Cierre la página **Explorador de búsqueda** para volver a la página **Información general**.
 
-### Task 7: Create a search client application
+### Tarea 7: Crear una aplicación cliente de búsqueda
 
-Now that you have a useful index, you can use it from a client application. You can do this by consuming the REST interface, submitting requests, and receiving responses in JSON format over HTTP, or you can use the software development kit (SDK) for your preferred programming language. In this exercise, we'll use the SDK.
+Ahora que tiene un índice útil, puede utilizarlo desde una aplicación cliente. Puede hacerlo consumiendo la interfaz REST, enviando peticiones y recibiendo respuestas en formato JSON a través de HTTP, o puede usar el kit de desarrollo de software (SDK) para su lenguaje de programación preferido. En este ejercicio, utilizaremos el SDK.
 
-> **Note**: You can choose to use the SDK for either **C#** or **Python**. In the steps below, perform the actions appropriate for your preferred language.
+> **Nota**: Puede elegir usar el SDK para **C#** o **Python**. En los pasos a continuación, realice las acciones correspondientes a su lenguaje preferido.
 
-#### Task 7.1 : Get the endpoint and keys for your search resource
+#### Tarea 7.1: Obtener el punto de conexión y las claves para su recurso de búsqueda
 
-In this task, you'll retrieve the endpoint URL and keys for your Azure AI Search resource from the Azure portal, essential for managing and querying your search resources in upcoming tasks.
+En esta tarea, recuperará la URL del punto de conexión y las claves para su recurso de Azure AI Search desde el portal de Azure, algo esencial para administrar y consultar sus recursos de búsqueda en las próximas tareas.
 
-1. In the Azure portal, navigate back to **Azure AI Search**. On the Overview page for the **Azure AI Search** resource, note the url value, which should be similar to **https://your_resource_name.search.windows.net**. Please record this value in Notepad as it will be required in upcoming tasks.
+1. En el portal de Azure, vuelva a **Azure AI Search**. En la página Información general del recurso **Azure AI Search**, observe el valor de la URL, el cual debe tener un aspecto similar a **https://your_resource_name.search.windows.net**. Por favor registre este valor en el Bloc de notas, ya que será necesario en las próximas tareas.
 
     ![](../media/Active-image86.png)
    
-1. From the left navigation expand **Settings** select **Keys**, note that there are two **admin** keys and a single **Manage query keys** key.
+1. En la navegación izquierda, expanda **Configuración** y seleccione **Claves**. Observe que hay dos claves **admin** y una sola clave **Administrar claves de consulta**.
 
-   >**Note**: An *admin* key is used to create and manage search resources
-   >**Note**: An *Manage query keys* key is used by client applications that only need to perform search queries.
+   >**Nota**: Se utiliza una clave *admin* para crear y administrar recursos de búsqueda
+   >**Nota**: Una clave *Administrar claves de consulta* es utilizada por aplicaciones cliente que sólo necesitan realizar consultas de búsqueda.
 
     ![](../media/Active-image87.png)
 
-1.  Please copy the **Manage query keys** to the clipboard and record it in Notepad, as it will be needed for upcoming tasks.
+1.  Por favor copie la clave **Administrar claves de consulta** en el portapapeles y regístrela en el Bloc de notas, ya que será necesaria para las próximas tareas.
 
      ![](../media/Active-image88.png)
     
-#### Task 7.2 : Prepare to use the Azure AI Search SDK
+#### Tarea 7.2: Preparar el uso del SDK de Azure AI Search
 
-In this task, you'll prepare your development environment in Visual Studio Code to integrate with Azure AI Search SDK by installing the necessary packages (Azure.Search.Documents for C# or azure-search-documents for Python) and configuring endpoint URL and query key in the respective configuration files.
+En esta tarea, preparará su entorno de desarrollo en Visual Studio Code para integrarlo con Azure AI Search SDK instalando los paquetes necesarios (Azure.Search.Documents para C# o azure-search-documents para Python) y configurando la URL del punto de conexión y la clave de consulta en los archivos de configuración respectivos.
 
-1. In Visual Studio Code, in the **Explorer** pane, browse to the **22-create-a-search-solution** folder and expand the **C-Sharp** or **Python** folder depending on your language preference.
-1. Right-click the **margies-travel** folder and open an integrated terminal. Then install the Azure AI Search SDK package by running the appropriate command for your language preference:
-   > **Note**: Please ensure the necessary extensions are already installed in the VS Code.
+1. En Visual Studio Code, en el panel **Explorador**, navegue hasta la carpeta **22-create-a-search-solution** y expanda la carpeta **C-Sharp** o **Python** según el lenguaje que prefiera.
+1. Haga clic con el botón derecho en la carpeta **margies-travel** y abra una terminal integrada. Luego, instale el paquete Azure AI Search SDK ejecutando el comando apropiado para su lenguaje de preferencia.
+   > **Nota**: Asegúrese de que las extensiones necesarias ya estén instaladas en VS Code.
 
     **C#**
     
@@ -635,11 +634,11 @@ In this task, you'll prepare your development environment in Visual Studio Code 
     pip install azure-search-documents==11.0.0
     ```
     
-1. View the contents of the **margies-travel** folder, and note that it contains a file for configuration settings:
+1. Vea el contenido de la carpeta **margies-travel** y observe que contiene un archivo para los ajustes de configuración:
     - **C#**: appsettings.json
     - **Python**: .env
 
-1. Open the configuration file and update the **YOUR_SEARCH_ENDPOINT**  with the **Azure AI Search** *Endpoint URL* link and  **YOUR_SEARCH_QUERY_KEY** values with **Manage query keys** which you recorded in previous tasks and save the changes.
+1. Abra el archivo de configuración y actualice **YOUR_SEARCH_ENDPOINT** con la *URL del Punto de conexión* de **Azure AI Search** y los valores **YOUR_SEARCH_QUERY_KEY** con **Manage query keys** que registró en tareas anteriores, y guarde los cambios.
 
     - **C#**: appsettings.json
 
@@ -649,131 +648,132 @@ In this task, you'll prepare your development environment in Visual Studio Code 
   
       ![](../media/Active-image94.png)
 
-#### Task 7.3 : Explore code to search an index
+#### Tarea 7.3: Explorar el código para buscar en un índice
 
-In this task, you'll explore the code for a web application (C# ASP.NET Razor or Python Flask) within the margies-travel folder. You'll review how it interacts with Azure AI Search SDK to perform search queries, configure search clients, and manage search results, including filtering, sorting, and highlighting content fields.
+En esta tarea, explorará el código de una aplicación web (C# ASP.NET Razor o Python Flask) dentro de la carpeta margies-travel. Revisará cómo interactúa con el SKD de Azure AI Search para realizar consultas de búsqueda, configurar clientes de búsqueda y administrar resultados de búsqueda, incluido el filtrado, el ordenamiento y el resaltado de campos de contenido.
 
-The **margies-travel** folder contains code files for a web application (a Microsoft C# *ASP.NET Razor* web application or a Python *Flask* application), which includes search functionality.
+La carpeta **margies-travel** contiene archivos de código para una aplicación web (una aplicación web Microsoft C# *ASP.NET Razor* o una aplicación Python *Flask*), que incluye la funcionalidad de búsqueda.
 
-1. Open the following code file in the web application, depending on your choice of programming language:
+1. Abra el siguiente archivo de código en la aplicación web, según el lenguaje de programación que haya elegido:
     - **C#**:Pages/Index.cshtml.cs
     - **Python**: app.py
 
-1. Near the top of the code file, find the comment **Import search namespaces**, and note the namespaces that have been imported to work with the Azure AI Search SDK:
+1. Cerca de la parte superior del archivo de código, busque el comentario **Import search namespaces** y observe los espacios de nombres que se importaron para trabajar con el SDK de Azure AI Search:
 
-1. In the **search_query** function, find the comment **Create a search client**, and note that the code creates a **SearchClient** object using the endpoint and query key for your Azure AI Search resource:
+1. En la función **search_query**, busque el comentario **Create a search client** y observe que el código crea un objeto **SearchClient** utilizando el punto de conexión y la clave de consulta para su recurso de Azure AI Search:
    
-1. In the **search_query** function, find the comment **Submit search query** and review the code to submit a search for the specified text with the following options:
-    - A *search mode* that requires **all** of the individual words in the search text to be found.
-    - The total number of documents found by the search is included in the results.
-    - The results are filtered to include only documents that match the provided filter expression.
-    - The results are sorted into the specified sort order.
-    - Each discrete value of the **metadata_author** field is returned as a *facet* that can be used to display pre-defined values for filtering.
-    - Up to three extracts of the **merged_content** and **imageCaption** fields with the search terms highlighted are included in the results.
-    - The results include only the fields specified.
+1. En la función **search_query**, busque el comentario **Submit search query** y revise el código para enviar una búsqueda del texto especificado con las siguientes opciones:
+    - Un *modo de búsqueda* que requiere que se encuentren **todas** las palabras individuales en el texto de búsqueda.
+    - El número total de documentos encontrados por la búsqueda se incluye en los resultados.
+    - Los resultados se filtran para incluir solo los documentos que coinciden con la expresión de filtro proporcionada.
+    - Los resultados se ordenan según el orden de clasificación especificado.
+    - Cada valor discreto del campo **metadata_author** se devuelve como una *faceta* que se puede usar para mostrar valores predefinidos para el filtrado.
+    - Se incluyen en los resultados hasta tres extractos de los campos **merged_content** e **imageCaption** con los términos de búsqueda resaltados.
+    - Los resultados incluyen solo los campos especificados.
 
-#### Task 7.4 : Explore code to render search results
+#### Tarea 7.4: Explorar el código para representar los resultados de la búsqueda
 
-In this task, you'll delve into the web application's code (either C# ASP.NET Razor or Python Flask) to understand how it presents search results:
+En esta tarea, profundizará en el código de la aplicación web (ya sea C# ASP.NET Razor o Python Flask) para comprender cómo presenta los resultados de búsqueda:
 
-The web app already includes code to process and render the search results.
+La aplicación web ya incluye código para procesar y representar los resultados de búsqueda.
 
-1. Open the following code file in the web application, depending on your choice of programming language:
+1. Abra el siguiente archivo de código en la aplicación web, según el lenguaje de programación que haya elegido:
     - **C#**:Pages/Index.cshtml
     - **Python**: templates/search.html
-1. Examine the code, which renders the page on which the search results are displayed. Observe that:
-    - The page begins with a search form that the user can use to submit a new search (in the Python version of the application, this form is defined in the **base.html** template), which is referenced at the beginning of the page.
-    - A second form is then rendered, enabling the user to refine the search results. The code for this form:
-        - Retrieves and displays the count of documents from the search results.
-        - Retrieves the facet values for the **metadata_author** field and displays them as an option list for filtering.
-        - Creates a drop-down list of sort options for the results.
-    - The code then iterates through the search results, rendering each result as follows:
-        - Display the **metadata_storage_name** (file name) field as a link to the address in the **url** field.
-        - Displaying *highlights* for search terms found in the **merged_content** and **imageCaption** fields to help show the search terms in context.
-        - Display the **metadata_author**, **metadata_storage_size**, **metadata_storage_last_modified**, and **language** fields.
-        - Display the **sentiment** label for the document. Can be positive, negative, neutral, or mixed.
-        - Display the first five **keyphrases** (if any).
-        - Display the first five **locations** (if any).
-        - Display the first five **imageTags** (if any).
-
-#### Task 7.5 : Run the web app
-
-In this task, you'll be running the Margie's Travel web application locally, searching for specific terms like "London hotel" and "quiet hotel in New York", refining search results using filters and sorting options based on sentiment, observing keyword and location identification in documents.
+1. Examine el código que muestra la página en la que se despliegan los resultados de la búsqueda. Observe que:
+    - La página comienza con un formulario de búsqueda que el usuario puede utilizar para enviar una nueva búsqueda (en la versión Python de la aplicación, este formulario se define en la plantilla **base.html**), a la cual se hace referencia al principio de la página.
+    - A continuación, se muestra un segundo formulario que permite al usuario refinar los resultados de la búsqueda. El código para este formulario:
+        - Recupera y muestra el recuento de documentos de los resultados de la búsqueda.
+        - Recupera los valores de faceta para el campo **metadata_author** y los muestra como una lista de opciones para filtrar.
+        - Crea una lista desplegable de opciones de ordenación para los resultados.
+    - A continuación, el código itera a través de los resultados de la búsqueda y muestra cada resultado de la siguiente manera:
+        - Muestra el campo **metadata_storage_name** (nombre del archivo) como un enlace a la dirección en el campo **url**.
+        - Muestra *lo más destacado* de los términos de búsqueda encontrados en los campos **merged_content** e **imageCaption** para ayudar a mostrar los términos de búsqueda en contexto.
+        - Muestra los campos **metadata_author**, **metadata_storage_size**, **metadata_storage_last_modified** y **language**.
+        - Muestra la etiqueta **sentiment** para el documento. Puede ser positiva, negativa, neutra o mixta.
+        - Muestra las primeras cinco **frases clave** (si las hay).
+        - Muestra las primeras cinco **ubicaciones** (si las hay).
+        - Muestra las primeras cinco **etiquetas de imagen** (si las hay).
 
 
- 1. Return to the integrated terminal for the **margies-travel** folder and enter the following command to run the program:
+#### Tarea 7.5: Ejecutar la aplicación web
+
+En esta tarea, ejecutará la aplicación web Margie's Travel de forma local, buscando términos específicos como "London hotel" y "quiet hotel in New York", refinando los resultados de búsqueda utilizando filtros y opciones de clasificación según el sentimiento, observando la identificación de palabras clave y ubicación en los documentos.
+
+
+ 1. Regrese a la terminal integrada de la carpeta **margies-travel** e ingrese el siguiente comando para ejecutar el programa:
     
     **C#**
     
     ```
     dotnet run
     ```
-    > **Note:** If the command fails, click on the provided link in the error message to download the latest version of the Microsoft ASP.NET Core Shared Framework. After that, download and install .NET Core, and then run the command again.
+    > **Nota:** Si el comando falla, haga clic en el enlace provisto en el mensaje de error para descargar la última versión de Microsoft ASP.NET Core Shared Framework. Luego, descargue e instale .NET Core y entonces ejecute el comando nuevamente.
         
     **Python**
      
     ```
     flask run
     ```
-    > **Note:** If the command fails, **run pip Install python-dotenv** command and then run the command again.
+    > **Nota:** Si el comando falla, **ejecute el comando pip install python-dotenv** y luego vuelva a ejecutar el comando.
 
-1. Open the another tab in edge browse following the link (*http://localhost:5000/* or *http://127.0.0.1:5000/*) to open the **Margie's Travel** site in a web browser.
+1. Abra otra pestaña en el navegador Edge siguiendo el enlace (*http://localhost:5000/* o *http://127.0.0.1:5000/*) para abrir el sitio **Margie's Travel** en un navegador web.
 
     ![](../media/Active-image101.png)
    
-1. On the **Margie's Travel** website, enter **London hotel (1)** into the search box and click **Search (2)**.
+1. En el sitio web **Margie's Travel**, ingrese **London hotel (1)** en el cuadro de búsqueda y haga clic en **Search (2)**.
 
     ![](../media/Active-image95.png)
    
-1. Review the search results. They include the file name (with a hyperlink to the file URL), an extract of the file content with the search terms (*London* and *hotel*) emphasized, and other attributes of the file from the index fields.
+1. Revise los resultados de la búsqueda. Incluyen el nombre del archivo (con un hipervínculo a la URL del archivo), un extracto del contenido del archivo con los términos de búsqueda (*London* y *hotel*) resaltados y otros atributos del archivo procedentes de los campos de índice.
 
     ![](../media/Active-image96.png)
    
-1. Observe that the results page includes some user interface elements that enable you to refine the results. These include:
+1. Observe que la página de resultados incluye algunos elementos de la interfaz de usuario que le permiten refinar los resultados. Estos incluyen:
     
-    - A *Filter by author* based on a facet value for the **metadata_author** field. This demonstrates how you can use *facetable* fields to return a list of *facets* - fields with a small set of discrete values that can be displayed as potential filter values in the user interface.
+    - Un *Filtro por autor (Filter by author)* basado en un valor de faceta para el campo **metadata_author**. Esto demuestra cómo puede usar campos *clasificables* para devolver una lista de *facetas* - campos con un pequeño conjunto de valores discretos que se pueden mostrar como posibles valores de filtro en la interfaz de usuario.
     
-    - A **Sort by** ability to *order* the results based on a specified field and sort direction (ascending or descending). The default order is based on *relevancy*, which is calculated as a **search.score()** value based on  a *scoring profile* that evaluates the frequency and importance of search terms in the index fields.
+    - Una capacidad **Ordenar por (Sort by)** para *ordenar* los resultados de acuerdo a un campo específico y una dirección de ordenamiento (ascendente o descendente). El orden predeterminado se basa en la *relevancia*, la cual se calcula como un valor **search.score()** basado en un *perfil de puntuación* que evalúa la frecuencia e importancia de los términos de búsqueda en los campos de índice.
 
-1. Select the **Reviewer** filter and the **Positive to negative** sort option, and then select **Refine Results**.
+1. Seleccione el filtro **Reviewer** y la opción de ordenación **Positive to negative** y, a continuación, seleccione **Refine Results**.
 
      ![](../media/Active-image97.png)
    
-1. Observe that the results are filtered to include only reviews and sorted based on the sentiment label.
+1. Observe que los resultados están filtrados para incluir solo reseñas y están ordenados según la etiqueta de sentimiento.
    ![](../media/Active-image98.png)
    
-1. On the **Margie's Travel** website, enter **quiet hotel in New York (1)** into the search box and click **Search (2)**.
+1. En el sitio web **Margie's Travel**, ingrese **quiet hotel in New York (1)** en el cuadro de búsqueda y haga clic en **Search (2)**.
 
     ![](../media/Active-image99.png)
    
-1. Try the following search terms:
-    - **Tower of London** (observe that this term is identified as a *key phrase* in some documents).
-    - **skyscraper** (observe that this word doesn't appear in the actual content of any documents but is found in the *image captions* and *image tags* that were generated for images in some documents).
-    - **Mojave desert** (observe that this term is identified as a *location* in some documents).
+1. Pruebe los siguientes términos de búsqueda:
+    - **Tower of London** (observe que este término se identifica como una *frase clave* en algunos documentos).
+    - **skyscraper** (observe que esta palabra no aparece en el contenido real de ningún documento, pero se encuentra en los *títulos de las imágenes* y las *etiquetas de las imágenes* que se generaron para las imágenes en algunos documentos).
+    - **Mojave desert** (observe que este término se identifica como una *ubicación* en algunos documentos).
 
-1. Close the browser tab containing Margie's Travel website and return to Visual Studio Code. Then, in the Python terminal for the **margies-travel** folder (where the dotnet or flask application is running), enter Ctrl+C to stop the app.
-
-
-## Success criteria:
+1. Cierre la pestaña del navegador que contiene el sitio web Margie's Travel y regrese a Visual Studio Code. Luego, en la terminal de Python para la carpeta **margies-travel** (donde se ejecuta la aplicación dotnet o flask), ingrese Ctrl+C para detener la aplicación.
 
 
-To successfully complete this challenge, you must:
-
-   - Deploy the Azure Search Service and Azure Storage Account.
-   - Add data to the storage account.
-   - Index the documents in Azure AI Search using the Azure portal.
-   - Customize the index and configure the indexer in Azure AI Search.
-   - Modify and explore search components using JSON definitions.
-   - Utilize the Azure AI Search SDK to create a client application for search.
-   - Run the web application locally, perform searches, and refine search results effectively.
+## Criterios de éxito:
 
 
-## Additional Resources:
+Para completar este desafío con éxito, debe:
 
-- Refer to [What is Azure AI Search](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search) for reference.
-- [What are Indexes in Azure AI Search?](https://learn.microsoft.com/en-us/azure/search/search-what-is-an-index)
-- [Searching document text at scale using Azure Cognitive Search](https://benalexkeen.com/searching-document-text-at-scale-using-azure-cognitive-search/)
+   - Implementar el Servicio Azure AI Search y Azure Storage Account.
+   - Agregar datos a la cuenta de almacenamiento.
+   - Indexar los documentos en Azure AI Search mediante el portal de Azure.
+   - Personalizar el índice y configurar el indexador en Azure AI Search.
+   - Modificar y explorar los componentes de búsqueda mediante definiciones JSON.
+   - Utilizar el SDK de Azure AI Search para crear una aplicación cliente para búsquedas.
+   - Ejecutar la aplicación web localmente, realizar búsquedas y refinar los resultados de búsqueda de forma eficaz.
 
-To learn more about Azure AI Search, see the [Azure AI Search documentation](https://docs.microsoft.com/azure/search/search-what-is-azure-search).
 
-## Proceed with the next Challenge by clicking on **Next**>>.
+## Recursos Adicionales:
+
+- Consulte [¿Qué es Azure AI Search?](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search) como referencia.
+- [¿Qué son los Índices en Azure AI Search?](https://learn.microsoft.com/en-us/azure/search/search-what-is-an-index)
+- [Búsqueda de texto de documentos a escala mediante Azure Cognitive Search](https://benalexkeen.com/searching-document-text-at-scale-using-azure-cognitive-search/)
+
+Para aprender más acerca de Azure AI Search, vea la [documentación de Azure AI Search](https://docs.microsoft.com/azure/search/search-what-is-azure-search).
+
+## Continúe con el próximo Desafío haciendo clic en **Siguiente**>>.

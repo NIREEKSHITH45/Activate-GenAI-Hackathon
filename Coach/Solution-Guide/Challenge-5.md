@@ -1,99 +1,100 @@
-# Challenge 05: Serverless Document Batch Processing 
+# Desafío 05: Procesamiento de Documentos por Lotes Sin Servidor
 
-## Introduction:
+## Introducción:
 
-Welcome to a pivotal challenge where Contoso Ltd. aims to enhance its AI-powered chat app with a robust document processing system. This challenge focuses on creating a serverless solution for processing new documents, translating them as needed, and seamlessly storing them into Azure AI Search. This system will ensure that these documents are continuously available for consumption by Azure OpenAI, enhancing the chat app's knowledge base and response accuracy.
+Bienvenido a un desafío fundamental en el que Contoso Ltd. pretende mejorar su aplicación de chat impulsada por IA con un sólido sistema de procesamiento de documentos. Este desafío se centra en la creación de una solución sin servidor (serverless) para procesar nuevos documentos, traducirlos según sea necesario y almacenarlos sin problemas en Azure AI Search. Este sistema garantizará que estos documentos estén disponibles de forma continua para que Azure OpenAI los utilice, mejorando la base de conocimientos y la precisión de las respuestas de la aplicación de chat.
 
-Building on your previous achievements in load-balancing Azure OpenAI resources, you will now embark on a journey to streamline document processing. This involves setting up a translation service, creating a serverless architecture for batch processing using Azure services, and leveraging technologies like Form Recognizer and Azure AI Search. Your task is to ensure that newly added documents are promptly processed, analyzed, and indexed, making them readily available for the chat app's AI to utilize.
+Basándose en sus logros anteriores en el balanceo de carga de los recursos de Azure OpenAI, ahora se embarcará en un viaje para optimizar el procesamiento de documentos. Esto implica configurar un servicio de traducción, crear una arquitectura sin servidor para el procesamiento por lotes mediante los servicios de Azure y aprovechar tecnologías como Form Recognizer y Azure AI Search. Su tarea consiste en garantizar que los documentos recién añadidos se procesen, analicen e indexen rápidamente, de modo que estén disponibles para que la IA de la aplicación de chat los utilice.
 
-This challenge unfolds in three main stages: language translation, serverless document batch processing using Azure services, and leveraging advanced features like Form Recognizer and AI search. We kick things off by translating files to meet language requirements. Next, you deploy a serverless architecture, utilizing Azure services, for efficient batch processing of documents. You train and test our model, establish a pipeline to convert documents into a Form Recognizer format, and bring in Azure's AI search service to verify the presence of specific documents in the processed dataset from where they can be used by Azure OpenAI. 
+Este desafío se desarrolla en tres etapas principales: traducción de idiomas, procesamiento de documentos por lotes sin servidor mediante servicios de Azure y aprovechamiento de funciones avanzadas como Form Recognizer y AI Search. Comenzamos traduciendo archivos para cumplir con los requisitos del idioma. A continuación, implementa una arquitectura sin servidor, utilizando servicios de Azure, para un procesamiento eficiente de documentos por lotes. Entrena y prueba nuestro modelo, establece un pipeline para convertir documentos a un formato de Form Recognizer e incorpora el servicio de AI Search de Azure para verificar la presencia de documentos específicos en el conjunto de datos procesados ​​desde donde pueden ser utilizados por Azure OpenAI.
 
-You will utilize the Form Recognizer Service and the Business Process Automation (BPA) Accelerator to build pipelines across various Azure services, creating a seamless document processing solution. This challenge is a step towards realizing an AI solution that can adapt and grow with Contoso's business needs.
+Utilizará el servicio Form Recognizer y el Acelerador de Automatización de Procesos Empresariales (BPA) para construir pipelines a través de varios servicios de Azure, creando una solución de procesamiento de documentos sin fisuras. Este desafío es un paso hacia la creación de una solución de IA que pueda adaptarse y crecer con las necesidades empresariales de Contoso.
 
-# Solution Guide
+# Guía de Soluciones
 
-### Task 1: Translate the documents using Translate
+### Tarea 1: Traducir los documentos con Translate
 
-In this task, you'll set up Azure resources for Azure AI Services. It includes registering providers, creating a new Azure AI service, accepting Responsible AI terms, forking a GitHub repository, generating a Personal Access Token (PAT), and deploying resources to Azure via the GitHub repository using specified parameters and configurations. 
+En esta tarea, configurará los recursos de Azure para los servicios de IA de Azure. Esto incluye el registro de proveedores, la creación de un nuevo servicio de Azure AI, la aceptación de los términos de IA Responsable, la bifurcación (fork) de un repositorio de GitHub, la generación de un Token de Acceso Personal (PAT) y la implementación de recursos en Azure a través del repositorio de GitHub con los parámetros y configuraciones especificadas.
 
-1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Subscriptions (1)**, and then select **Subscriptions (2)** under services.
+1. En la página del Portal de Azure, en el cuadro Buscar recursos, servicios y documentos (G+/) en la parte superior del portal, ingrese **Subscriptions (1)** y luego seleccione **Suscripciones (2)** en Servicios.
 
       ![](../media/Active-image121.png)
 
-1. Select the existing **Subscription**.
+1. Seleccione la **Suscripción** existente.
 
     ![](../media/Active-image122.png)
 
-1. From the left navigation pane expand **Settings (1)** then select **Resource Providers (2)** check **Microsoft DocumentDB** status is marked as **"Registered" (3)**. 
-   If marked as **NotRegistered**, select **Microsoft DocumentDB** then click **Register** from the top menu.
+1. En el panel de navegación izquierdo, expanda **Configuración (1)** y luego seleccione **Proveedores de recursos (2)**. Revise que el estado de **Microsoft.DocumentDB** esté marcado como **"Registrado" (3)**.
+   Si está marcado como **No registrado**, seleccione **Microsoft.DocumentDB** y luego haga clic en **Registrarse** en el menú superior.
 
-   **Note**: *This process may take several seconds or minutes; be sure to refresh the entire browser periodically.*
+   **Nota**: *Este proceso puede tardar varios segundos o minutos; asegúrese de actualizar todo el navegador periódicamente.*
 
       ![](../media/Active-image123.png)       
 
-1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI services multi-service account (1)**, and then select **Azure AI services multi-service account(2)** under services.
+1. En la página del Portal de Azure, en el cuadro Buscar recursos, servicios y documentos (G+/) en la parte superior del portal, ingrese **Azure AI services multi-service account (1)** y luego seleccione **Azure AI services multi-service account (2)** en Servicios.
 
    ![](../media/Active-image(124).png)
 
-1. On **Azure Al services Azure Al services multi-service account** blade, click on **Create**.
+1. En la hoja **Azure Al services | Azure Al services multi-service account**, haga clic en **Crear**.
 
    ![](../media/Active-image125.png)
 
-1. Specify the following details to create an **Azure AI service** then click on **Review + create (7)** tab.
+1. Especifique los siguientes detalles para crear un **servicio de Azure AI** y luego haga clic en la pestaña **Revisar y crear (7)**.
    
-     | **Option**         | **Value**                                              |
+     | **Opción**         | **Valor**                                              |
      | ------------------ | -----------------------------------------------------  |
-     | Subscription       | Leave default  **(1)**                                 |
-     | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
-     | Name               | *Enter a unique name* for your search service or use the format **AI-Service-xxxxxx** (replace **xxxxxx** with Deployment ID **(3)** |
-     | Location           | Use the same location as the resource group  **(4)**    |
-     | Pricing tier       | Standard S0     **(5)**                                 |
-     | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 
+     | Suscripción       | Deje el valor predeterminado  **(1)**                                 |
+     | Grupo de recursos      | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
+     | Nombre               | *Ingrese un nombre único* para su servicio de búsqueda o use el formato **AI-Service-xxxxxx** (reemplace **xxxxxx** con el valor Deployment ID **(3)** |
+     | Región           | Utilice la misma ubicación que el grupo de recursos  **(4)**    |
+     | Plan de tarifa       | Standard S0     **(5)**                                 |
+     | Al marcar esta casilla, confirmo que he leído y comprendido todos los términos que aparecen a continuación | Seleccione la **Casilla de verificación** **(6)**| 
 
-   >**Note**: Here, xxxxxx refers to the deployment ID
+   >**Nota**: Aquí, xxxxxx hace referencia al valor DeploymentID
 
    ![](../media/Active-image126.png)
 
-1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete.
+1. Una vez que la validación sea exitosa en la pestaña **Revisar y crear**, haga clic en **Crear** y espere a que se complete la implementación.
 
     ![](../media/Active-image127.png)
 
-1. To make sure that we have **Accepted the terms and conditions for Responsible AI**:  We must initiate the creation of a **Azure AI Services multi-service account** from the Azure portal to review and acknowledge the terms and conditions. 
+1. Para asegurarnos de que hemos **aceptado los términos y condiciones de IA Responsable**: Debemos iniciar la creación de un recurso **Cuenta multiservicio de Azure AI Services** desde el portal de Azure para revisar y aceptar los términos y condiciones.
 
-    >**Note**: Reference doc: [Quickstart: Create a Cognitive Services resource using the Azure portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows). Once accepted, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc.) under the same Azure subscription.
+    >**Nota**: Documento de referencia: [Inicio rápido: Creación de un recurso de Servicios Cognitivos utilizando el portal de Azure](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows). Una vez aceptado, puede crear recursos posteriores utilizando cualquier herramienta de implementación (SDK, CLI o plantilla ARM, etc.) en la misma suscripción de Azure.
 
-1. Navigate to `https://github.com/CloudLabs-MOC/business-process-automation` and click on **Sign in** then provide your personal **GitHub Username** and **Password** then click **Sign in**.
+1. Navegue a `https://github.com/CloudLabs-MOC/business-process-automation` y haga clic en **Sign in**. Proporcione el **Nombre de Usuario de GitHub** y **Contraseña** de su cuenta personal. Finalmente, haga clic en **Sign in**.
+
 
     ![](../media/Active-image128.png)
 
     ![](../media/Active-image129.png)
     
-1. Once signed in, select **fork (1)** to fork the repository then on **Create a new fork** click **Create fork (2)**.
+1. Una vez que haya iniciado sesión, seleccione **fork (1)** para bifurcar el repositorio, luego en la página **Create a new fork**, haga clic en **Create fork (2)**.
    
     ![](../media/Active-image130.png)
 
    ![](../media/Active-image131.png)
 
-1. Click on your **profile** which is at the top of your right hand, and then select **Settings**.
+1. Haga clic en su **perfil**, que se encuentra en la parte superior derecha, y luego seleccione **Settings**.
 
     ![](../media/Active-image132.png)
    
-1. Scroll down to the complete bottom and select **Developer settings**.
+1. Desplácese hasta el final y seleccione **Developer settings**.
 
     ![](../media/Active-image133.png)
 
-1. From the left navigation pane, expand **Personal access tokens (1)** and select **Tokens (classic) (2)**. On the **Personal access tokens** page, click **Generate new token (3)** and then choose **Generate new token (classic) (4)**.
+1. En el panel de navegación izquierdo, expanda **Personal access tokens (1)** y seleccione **Tokens (classic) (2)**. En la página **Personal access tokens**, haga clic en **Generate new token (3)** y luego elija **Generate new token (classic) (4)**.
 
       ![](../media/Active-image134.png)
 
-1. Provide the following details:
+1. Proporcione los siguientes detalles:
 
    - Note: **PAT (1)**
    - Expiration: **7 days (2)**
      
      ![](../media/Active-image135.png)
 
-   - Select scopes: Select all the scopes **repo, workflow, write:packages, delete:packages, admin:org, admin:public_key, admin:repo_hook, admin:org_hook, gist,notifications, user, delete_repo, write:discussion, admin:enterprise, audit_log, codespace, copilot, project, admin:gpg_key, admin:ssh_signing_key** and click on **Genearte token**.
+   - En la sección Select scopes: seleccione todos los ámbitos **repo, workflow, write:packages, delete:packages, admin:org, admin:public_key, admin:repo_hook, admin:org_hook, gist,notifications, user, delete_repo, write:discussion, admin:enterprise, audit_log, codespace, copilot, project, admin:gpg_key, admin:ssh_signing_key** y haga clic en **Generate token**.
 
       ![](../media/Active-image138.png)
 
@@ -101,404 +102,405 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
       ![](../media/Active-image140.png)
 
-   >**Reference link**: [Get a Workflow Level Token (Classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+   >**Enlace de referencia**: [Obtener un Token de Nivel de Flujo de Trabajo (Clásico)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
-1. Copy the **PAT token** and paste it in a notepad.
+1. Copie el **Token PAT** y péguelo en un bloc de notas.
 
       ![](../media/gen37.png)
    
-1. Click on the "Deploy to Azure" button that corresponds to your environment.
+1. Haga clic en el botón "Deploy to Azure" que corresponda a su entorno.
 
-     ### With OpenAI
-      [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
+     ### Con OpenAI
+      [![Implementar en Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
 
-1. Custom deployment blade, specify the following and others parameters can keep default values.
+1. En la hoja de Implementación personalizada, especifique los siguientes parámetros; los demás pueden mantener los valores predeterminados.
 
-   - Resource Group : **ODL-GenAI-CL-xxxxxx-Activate-GenAI**
-   - Repository Token : Paste the PAT token which you created and recorded in previous step.
-   - Repository Url : Paste the **Forked Github account** url
+   - Grupo de recursos : **ODL-GenAI-CL-xxxxxx-Activate-GenAI**
+   - Repository Token : Pegue el token PAT que creó y registró en el paso anterior.
+   - Repository Url : Pegue la URL del **Repositorio de GitHub bifurcado** en su cuenta personal.
 
       ![](../media/gen39.png)
   
-      >**Note**: Ensure the primary region is set to EASTUS2
+      >**Nota**: Asegúrese de que la región principal (Primary Region) esté configurada en EASTUS2
       
        ![](../media/gen47.png)
      
-     >**Note**: (you can get URL by click on profile from right corner then select **Your repositories** click on **business-process-automation** and from top bar copy the **Github account** url)
+     >**Nota**: (puede obtener la URL haciendo clic en su perfil en la esquina derecha, luego seleccione **Your repositories**, haga clic en **business-process-automation** y, desde la barra superior, copie la URL de la **cuenta de GitHub**)
      
      ![](../media/Active-image141.png)
 
-1. Click on **Review + Create**.
+1. Haga clic en **Revisar y crear**.
 
-1. Wait for the deployment to get complete and click on **Go to resource group**.    
+1. Espere a que se complete la implementación y haga clic en **Ir al grupo de recursos**.   
 
-1. Verify that all the resources are deployed without any issues.
+1. Verifique que todos los recursos se hayan implementado sin problemas.
    
    ![](../media/d005.png)
    
-#### Task 1.2 - Create Azure Blob Storage containers
+#### Tarea 1.2 - Crear contenedores de Azure Blob Storage
 
-In this task, you'll learn how to create a container in an existing storage account where the documents that need to be searched are stored.
+En esta tarea, aprenderá a crear un contenedor en una cuenta de almacenamiento existente donde se almacenan los documentos que deben buscarse.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage account**, and then select **Storage account** under services.
+1. En la página del Portal de Azure, en el cuadro **Buscar recursos, servicios y documentos (G+/)** en la parte superior del portal, ingrese **Storage account** y, luego, seleccione **Cuentas de almacenamiento** en Servicios.
 
-1. Select the storage account that is created from the resources that were deployed in the previous task.
+1. Seleccione la cuenta de almacenamiento creada a partir de los recursos desplegados en la tarea anterior.
 
-1. In the storage account overview blade, expand **Settings(1)** select **Configuration (2)**, **Enabled** the **Allow the blob anonymous access (3)** and click on **Save (4)**.
+1. En la hoja Información general de la cuenta de almacenamiento, expanda **Configuración (1)**, seleccione **Configuración (2)**. Para la opción **Permitir el acceso anónimo al blob (3)** márquelo como **Habilitado** y haga clic en **Guardar (4)**.
 
       ![](../media/Active-image146.png)
 
-1. Expand **Data Storage (1)** select on **Containers (2)** from the left navigation pane, select **+ Container (3)**.
+1. Expanda **Almacenamiento de datos (1)**, seleccione **Contenedores (2)** en el panel de navegación izquierdo y seleccione **+ Contenedor (3)**.
 
     ![](../media/Active-image147.png)
   
-1. On the **New container** blade provide the name as **source (1)** then for **Anonymous access level** select **Blob (anonymous read access for blobs only) (2)** and click on **Create (3)**.
+1. En la hoja **Nuevo contenedor**, establezca el nombre con el valor **source (1)**, luego para **Nivel de acceso anónimo** seleccione **Blob (acceso de lectura anónimo solo para blobs) (2)** y haga clic en **Crear (3)**.
 
      ![](../media/Active-image148.png)
 
-1. Click on the **source** container.
+1. Haga clic en el contenedor **source**.
 
      ![](../media/Active-image149.png)
    
-1. From the left navigation pane expand **Settings(1)** then select **Shared Access Tokens(2)**. From the **Permission** drop down select **Read(3)** and **List(4)** then click on **Generate SAS token and URL(5)**.
+1. Desde el panel de navegación izquierdo, expanda **Configuración(1)** y luego seleccione **Tokens de acceso compartido (2)**. Desde el menú desplegable **Permisos**, seleccione **Lectura(3)** y **Lista(4)** y luego haga clic en **Generar URL y token de SAS (5)**.
 
       ![](../media/Active-image150.png)
 
-1. After clicking **Generate SAS token and URL** scroll down then copy the **Blob SAS URL**.
+1. Después de hacer clic en **Generar URL y token de SAS**, desplácese hacia abajo y copie la **URL de SAS de Blob**.
 
     ![](../media/Active-image151.png)
    
-1. Repeat the same steps number from 1 - 8 by creating another container with name **target** by giving **Write** and **List** permissions.
+1. Repita los mismos pasos del 1 al 8 creando otro contenedor con el nombre **target** y otorgándole permisos **Write** y **List**.
 
-1. Navigate to the source container and click on **Upload**.
+1. Navegue hasta el contenedor source y haga clic en **Cargar**.
 
    ![](../media/Active-image153.png)
 
-1. Click on **Browse for files**.
+1. Haga clic en **Buscar archivos**.
 
     ![](../media/Active-image154.png)
 
-1. Within in **File Explorer** navigate to `C:\LabFiles\Documents` and select **document-translation-sample** file click on **Open** to upload the file.
+1. En el **Explorador de archivos**, navegue hasta `C:\LabFiles\Documents` y seleccione el archivo **document-translation-sample** y haga clic en **Abrir** para subir el archivo.
 
     ![](../media/Active-image155.png)
 
-1. Back on **Upload blob** blade make sure **document-translation-sample** file is selected then click on **Upload**.
+1. De nuevo en la hoja **Cargar blob**, asegúrese de que el archivo **document-translation-sample** esté seleccionado y luego haga clic en **Cargar**.
 
     ![](../media/Active-image156.png)
 
-#### Task 1.3 - Set up your C#/.NET environment and install Newtonsoft.Json
+#### Tarea 1.3 - Configurar su entorno C#/.NET e instalar Newtonsoft.Json
 
-In this task, we will set up a C#/.NET environment in Visual Studio 2022. We'll create a new console application named "document-translation-qs" using .NET 7.0 and install the Newtonsoft.Json package via NuGet for managing JSON operations within our project.
+En esta tarea, configuraremos un entorno C#/.NET en Visual Studio 2022. Crearemos una nueva aplicación de consola llamada "document-translation-qs" usando .NET 7.0 e instalaremos el paquete Newtonsoft.Json a través de NuGet para administrar las operaciones JSON dentro de nuestro proyecto.
    
-1. In the **LabVM**, in the Windows Search bar type Visual and select **Visual Studio 2022**.
+1. En **LabVM**, en la barra de Búsqueda de Windows, escriba Visual y seleccione **Visual Studio 2022**.
 
    ![](../media/Active-image165.png)
 
-   > **Note**: When prompted to sign in, select **Skip for now** then on the **Developement settings** click **Start Visual Studio**.
+   > **Nota**: Cuando se le solicite iniciar sesión, seleccione **Omitir por ahora** y, luego, en **Configuración de desarrollo**, haga clic en **Iniciar Visual Studio**.
 
-1. On the Visual studio **Get Started** page, select **Create a New Project**.
+1. En la página **Comenzar** de Visual Studio, seleccione **Crear un Nuevo Proyecto**.
 
    ![](../media/Active-image157.png)
 
-1. On the **Create a new project** page, enter **console** in the search box. Choose the **Console Application** template, then choose **Next**.
+1. En la página **Crear un nuevo proyecto**, ingrese **console** en el cuadro de búsqueda. Elija la plantilla **Aplicación de Consola** y, luego de clic en **Siguiente**.
 
     ![](../media/Active-image158.png)
 
-1. In the **Configure your new project** dialog window, enter **document-translation-qs** in the Project name box. Then, choose **Next**.
+1. En la ventana de diálogo **Configure su nuevo proyecto**, ingrese **document-translation-qs** en el cuadro Nombre del proyecto. Luego, elija **Siguiente**.
 
     ![](../media/Active-image159.png)
 
-1. In the **Additional information** dialog window, select **.NET 7.0**, and then select **Create**.
+1. En la ventana de diálogo **Información adicional**, seleccione **.NET 7.0** y, a continuación, seleccione **Crear**.
 
      ![](../media/Active-image160.png)
     
-1. Right-click on your **document-translation-qs** project and select **Manage NuGet Packages**.
+1. Haga clic derecho en el proyecto **document-translation-qs** y seleccione **Administrar Paquetes NuGet**.
 
     ![](../media/Active-image161.png)
 
-1. Select the **Browse** tab and type **NewtonsoftJson**.  Select the latest stable version from the drop-down menu
+1. Seleccione la pestaña **Examinar** tab y escriba **Newtonsoft.Json**. Seleccione la última versión estable en el menú desplegable.
 
     ![](../media/Active-image162.png)
    
-1. Click on **install** to install the package in your project.
+1. Haga clic en **Instalar** para instalar el paquete en su proyecto.
 
     ![](../media/Active-image163.png)
 
-1. Click on **Apply**.
+1. Haga clic en **Aplicar**.
 
     ![](../media/Active-image164.png)
    
-#### Task 1.4 -Translate all documents into a storage container and run your application
+#### Tarea 1.4 - Traducir todos los documentos en un contenedor de almacenamiento y ejecutar su aplicación
 
-In this task, you'll set up a Translator resource in Azure Portal, obtain its keys and endpoint, and integrate them into a C# console application in Visual Studio 2022. This application will be configured to batch-translate documents stored in an Azure Storage container using Translator service APIs.
+En esta tarea, configurará un recurso Translator en el Portal de Azure, obtendrá sus claves y punto de conexión, y los integrará en una aplicación de consola de C# en Visual Studio 2022. Esta aplicación se configurará para traducir por lotes documentos almacenados en un contenedor de Azure Storage usando las APIs del servicio Translator.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Translator**, and then select **Translator** under services.
+1. En la página del Portal de Azure, en el cuadro **Buscar recursos, servicios y documentos (G+/)** en la parte superior del portal, ingrese **Traductor** (Translator) y, luego, seleccione **Traductores** (Translators) en Servicios.
 
    ![](../media/Active-image166.png)
 
-1. Go to the Translator resource that is created, please get the resource keys by following the next step.
+1. Vaya al recurso Traductor que se creó y obtenga las claves de recursos siguiendo el paso mostrado a continuación.
    
       ![](../media/Active-image167.png)
    
-1. On the left navigation pane, under **Resource Management** section, select **Keys and Endpoint (1)**. Copy and paste your **Key 1 (2)** and **Document Translation (3)** endpoint in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
+1. En el panel de navegación izquierdo, en la sección **Administración de recursos**, seleccione **Claves y punto de conexión (1)**. Copie y pegue la **Clave 1 (2)** y el punto de conexión **Traducción de Documentos (3)** en una ubicación conveniente, tal como el Bloc de notas de Microsoft. Solo se necesita una clave para realizar una llamada de API.
 
      ![](../media/Active-image168.png)
    
-1. Navigate back to Visual Studio 2022 and open the **Program.cs (1)** file. Delete the pre-existing code, including the line **Console.WriteLine("Hello World!") (2)**.
+1. Vuelva a Visual Studio 2022 y abra el archivo **Program.cs (1)**. Elimine el código preexistente, incluida la línea **Console.WriteLine("Hello World!") (2)**.
 
    ![](../media/Active-image169.png)
 
-1. Open another tab in edge browse for [code sample](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) then navigate to **Start asynchronous batch translation** section copy the code.
+1. Abra otra pestaña en Edge y busque el [código de ejemplo](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample); navegue hasta la sección **Start asynchronous batch translation** y copie el código.
 
     ![](../media/Active-image170.png)
 
-1. Paste the copied code into the Program.cs file.
+1. Pegue el código copiado en el archivo Program.cs.
     ![](../media/Active-image173.png)
 
-1. Within Program.cs file. make the following update  
+1. Dentro del archivo Program.cs, realice la siguiente actualización
 
-    - Update **?api-version={date}** with **?api-version=2024-05-01**.
-    - Update **{your-document-translation-endpoint}** and **{your-api-key}** with values of Translator instance which you recorded in the notepad.   
-    - Also, update **"https://YOUR-SOURCE-URL-WITH-READ-LIST-ACCESS-SAS\"** and **"https://YOUR-TARGET-URL-WITH-WRITE-LIST-ACCESS-SAS\"** with values from your Storage account container instance which you recorded in notepad.
+    - Actualice **?api-version={date}** con **?api-version=2024-05-01**.
+    - Actualice **{your-document-translation-endpoint}** y **{your-api-key}** con los valores de la instancia de Traductor que registró en el Bloc de notas. 
+    - Además, actualice **"https://YOUR-SOURCE-URL-WITH-READ-LIST-ACCESS-SAS\"** and **"https://YOUR-TARGET-URL-WITH-WRITE-LIST-ACCESS-SAS\"** con los valores de la instancia de contenedor de su Cuenta de almacenamiento que registró en el bloc de notas. 
       
       ![](../media/Active-image171.png)
       
-1. Once you've added the code sample to your application, choose the green Start button next to document-translation-qs to build and run your program, or press F5.
+1. Una vez que haya agregado el código de ejemplo a su aplicación, de clic en el botón verde Iniciar junto a document-translation-qs para compilar y ejecutar su programa, o presione F5.
    
     ![](../media/Active-image172.png)
    
-### Task 2: Creating a Form Recognizer Resource
+### Tarea 2: Creación de Recurso Form Recognizer
 
-In this task, you'll create a Form Recognizer resource in Azure Portal by setting up a new project in Document Intelligence Studio. This involves configuring project details, connecting to a training data source stored in an Azure Storage account, and validating your settings before creating the project.
+En esta tarea, creará un recurso Form Recognizer en el Portal de Azure configurando un nuevo proyecto en Document Intelligence Studio. Esto implica configurar los detalles del proyecto, conectarse a una fuente de datos de entrenamiento almacenada en una cuenta de Azure Storage y validar la configuración antes de crear el proyecto.
 
-1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI services multi-service account (1)**, and then select **Azure AI services multi-service account(2)** under services.
+1. En la página del Portal de Azure, en el cuadro Buscar recursos, servicios y documentos (G+/) en la parte superior del portal, ingrese **Azure AI services multi-service account (1)** y, luego seleccione **Azure AI services multi-service account (2)** en Servicios.
 
    ![](../media/Active-image(124).png)
 
-1. On the **Azure AI services multi-service account** blade, select the service that was deployed using the custom template.
+1. En la hoja **Azure AI services multi-service account**, seleccione el servicio que fue implementado usando la plantilla personalizada.
 
      ![](../media/Active-image174.png)
    
-1. On **Azure AI services multi-service account** blade, click on the **Document Intelligence (1)** tab and select **Go to studio (2)**.
+1. En la hoja **Azure AI services multi-service account**, haga clic en la pestaña **Document Intelligence (1)** y seleccione **Go to studio (2)**.
 
     ![](../media/Active-image175.png)
 
-1. In Document Intelligence Studio, scroll down to **Custom extraction models** and select **Get started**.
+1. En Document Intelligence Studio, desplácese hacia abajo hasta **Custom extraction models** y seleccione **Get started**.
 
    ![](../media/Active-image176.png)
 
-1. Under My Project, click on **+ Create a project**.
+1. En My Project, haga clic en **+ Create a project**.
 
     ![](../media/Active-image177.png)
 
-1. Enter the following details and click on **Continue**  **(3)**.
+1. Ingrese los siguientes detalles y luego haga clic en **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
 
       ![](../media/Active-image178.png)
 
-1. Enter the following details under **Configure service resource** and click on **Continue** **(5)**.
+1. Ingrese los siguientes detalles en **Configure service resource** y haga clic en **Continue** **(5)**.
 
-   - Subscription: Select your **Default Subscription** **(1)**.
+   - Subscription: Seleccione su **Suscripción predeterminada** **(1)**
    - Resource group: **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.
-   - Form Recognizer or Cognitive Service Resource: Select the available Cognitive Service Form Recognizer name similar to **cogservicesbpass{suffix}** **(3)**.
+   - Form Recognizer or Cognitive Service Resource: Seleccione el nombre del recurso Cognitive Service Form Recognizer disponible similar a **cogservicesbpass{suffix}** **(3)**.
    - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
 
      ![](../media/Active-image179.png)
 
-1. Enter the following details under **Connect training data source**. and click on **Continue** **(8)**.
+1. Ingrese los siguientes detalles en **Connect training data source** y haga clic en **Continue** **(8)**.
 
-   - Subscription: Select your **Default Subscription** **(1)**.
+   - Subscription: Seleccione su **Suscripción predeterminada** **(1)**
    - Resource group: **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**.
-   - Storage account name: **Select the existing storage account (3)**.
-   - Blob container name: Click on **Create new (4)** and provide the name as **custommoduletext** **(5)** then click on **OK** **(6)**.
-   - Review the settings then click on **Continue** **(7)**.
+   - Storage account name: **Seleccione la cuenta de almacenamiento existente (3)**.
+   - Blob container name: Haga clic en **Create new (4)** y proporcione el nombre **custommoduletext** **(5)**, luego haga clic en **OK** **(6)**.
+   - Revise la configuración y luego haga clic en **Continue** **(7)**.
    
        ![](../media/Active-image180.png)
        ![](../media/Active-image181.png)
        ![](../media/Active-image182.png)
 
-1. Validate the information and choose **Create project**.
+1. Valide la información y seleccione **Create project**.
 
       ![](../media/Active-image183.png)
 
-### Task 3: Train and label data
+### Tarea 3: Entrenar y etiquetar datos
 
-In this task, you'll train a Form Recognizer model by uploading, labeling, training, and testing with sample data comprising 6 training documents.
+En esta tarea, entrenará un modelo de Form Recognizer cargando, etiquetando, entrenando y probando con datos de ejemplo que comprenden 6 documentos de entrenamiento.
 
-1. Click on **Browse for files**.
+1. Haga clic en **Browse for files**.
 
       ![](../media/Active-image184.png)
 
-1.  On the file explorer, navigate to `C:\LabFiles\Documents\Custom Model Sample` (1) path, select all train JPEG files **train1 to train6 (2)**, and hit **Open** **(3)**.
+1. En el explorador de archivos, navegue hasta la ruta `C:\LabFiles\Documents\Custom Model Sample` (1), seleccione todos los archivos JPEG de entrenamiento **train1 a train6 (2)**, y presione **Abrir** **(3)**.
 
       ![](../media/Active-image185.png)
 
-1. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
+1. Una vez cargados, elija **Run now** en la ventana emergente debajo de Run Layout.
 
      ![](../media/Active-image186.png)
 
-1. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization_sample** **(3)**, and hit **enter**.
+1. Haga clic en **+ Add a field** **(1)**, seleccione **Field** **(2)**, ingrese el nombre del campo como **Organization_sample** **(3)**, y presione **enter**.
 
       ![](../media/Active-image187.png)
 
       ![](../media/Active-image188.png)
 
-1. Label the new field added by selecting **CONTOSO LTD** in the top left of each document uploaded. Do this for all six documents.
+1. Etiquete el nuevo campo agregado seleccionando **CONTOSO LTD** en la parte superior izquierda de cada documento cargado. Haga esto para los seis documentos.
 
     ![](../media/Active-image189.png)
    
-1. Once all the documents are labeled, click on **Train** in the top-right corner.
+1. Una vez que todos los documentos estén etiquetados, haga clic en **Train** en la esquina superior derecha.
 
      ![](../media/Active-image190.png)
 
-1. Specify the model ID as **customfrs** **(1)**, the model description as **custom model** **(2)**, and from the drop-down, select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
+1. Especifique el valor de Model ID como **customfrs** **(1)**, en Model Description coloque **custom model** **(2)** y, en el menú desplegable Build Mode seleccione **Template** **(3)**. Haga clic en **Train** **(4)**.
 
     ![](../media/Active-image191.png)
 
-1. Click on **Go to Models**. 
+1. Haga clic en **Go to Models**. 
 
    ![](../media/Active-image192.png)
 
-1. Wait until the model status shows **succeeded**. Once the status is achieved, select the model **customfrs** **(2)** you created and choose **Test** **(3)**.
+1. Espere hasta que el estado del modelo muestre **succeeded**. 
 
      ![](../media/Active-image193.png)
 
-1. Select the model **customfrs** **(1)** you created and choose **Test** **(2)**.
+1. Una vez que se alcance dicho estado, seleccione el modelo **customfrs** **(2)** que ha creado y elija **Test** **(3)**.
 
       ![](../media/Active-image194.png)
    
-1. On the **Test model** window, click on **Browse for files**. 
+1. En la ventana **Test model**, haga clic en **Browse for files**.
 
       ![](../media/Active-image195.png)
 
-1. On the file explorer, navigate to `C:\LabFiles\Document\Custom Model Sample` **(1)** path, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
+1. En el explorador de archivos, navegue hasta la ruta `C:\LabFiles\Document\Custom Model Sample` **(1)**, seleccione todos los archivos JPEG de prueba **test1 y test2** **(2)**, y presione **Abrir** **(3)**.
 
      ![](../media/Active-image196.png)
 
-1. Once uploaded, select **one test model (1)** and click on **Run analysis** **(2)**. 
+1. Una vez cargados, seleccione **one test model (1)** y haga clic en **Run analysis** **(2)**.
 
      ![](../media/Active-image197.png)
 
-1. Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** we created in the last step, along with its confidence score.
+1. Ahora puede ver en el lado derecho que el modelo pudo detectar el campo **Organization_sample** que creamos en el último paso, junto con su puntuación de confianza.
 
     ![](../media/Active-image198.png)
 
-### Task 4 : Build a new pipeline with the custom model module in BPA
+### Tarea 4: Crear una nuevo pipeline con el módulo de modelo personalizado en BPA
 
-In this task, you'll configure a new pipeline in the Business Process Automation Accelerator (BPA) to utilize a custom Form Recognizer model. This involves setting up the model ID within the pipeline stages and configuring document ingestion from specified file paths.
+En esta tarea, configurará un nuevo pipeline en Business Process Automation Accelerator (BPA) para utilizar un modelo personalizado de Form Recognizer. Esto implica configurar el ID del modelo dentro de las etapas de pipeline y configurar la ingesta de documentos desde las rutas de archivo específicas.
 
-After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
+Una vez que esté satisfecho con el rendimiento del modelo personalizado, puede recuperar el ID del modelo y usarlo en un nuevo pipeline de BPA con el módulo de modelo personalizado en el siguiente paso.
 
-1. Navigate back to the Resource groups and select the resource group **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.    
+1. Vuelva a los grupos de recursos y seleccione el grupo de recursos **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.
 
-1. Go to the Resource group, search, and select the **Static Web App** resource type with a name similar to **webappbpa{suffix}**.
+1. Vaya al grupo de recursos, busque y seleccione el tipo de recurso **Aplicación web estática (Static Web App)** con un nombre similar a **webappbpa{suffix}**.
+
 
     ![](../media/Active-image199.png)
 
-1. On the **Static Web App** page, click on **View app in browser**.
+1. En la página **Aplicación web estática**, haga clic en **Ver aplicación en el navegador**.
 
      ![](../media/Active-image200.png)
 
-1. Once the **Business Process Automation Accelerator** page is loaded successfully, click on **Create/Update/Delete Pipelines**. 
+1. Una vez que la página **Business Process Automation Accelerator** se haya cargado correctamente, haga clic en **Create/Update/Delete Pipelines**.
 
    ![](../media/Active-image201.png)
 
-1. On the **Create Or Select A Pipeline** page, enter the New Pipeline Name as **workshop** **(1)**, and click on the **Create Custom Pipeline** **(2)**. 
+1. En la página **Create Or Select A Pipeline**, para New Pipeline Name ingrese el valor **workshop** **(1)**, y haga clic en el botón **Create Custom Pipeline** **(2)**. 
 
     ![](../media/Active-image202.png)
 
-1. On the **Select a document type to get started** page, select **PDF Document**.
+1. En la página **Select a document type to get started**, seleccione **PDF Document**.
 
     ![](../media/Active-image203.png)
 
-1. On the **Select a stage to add it to your pipeline configuration** page, search for and select **Form Recognizer Custom Model (Batch)**.
+1. En la página **Select a stage to add it to your pipeline configuration**, busque y seleccione **Form Recognizer Custom Model (Batch)**.
 
     ![](../media/Active-image204.png)
    
-1. On the pop-up, enter the model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
+1. En la ventana emergente, para model ID ingrese el valor **customfrs** **(1)** y haga clic en el botón **Submit** **(2)**. 
 
     ![](../media/Active-image205.png)
 
-1. On the **Select a stage to add it to your pipeline configuration** page, scroll down to review the **Pipeline Preview** and click on **Done**.
+1. En la página **Select a stage to add it to your pipeline configuration**, desplácese hacia abajo para revisar la sección **Pipeline Preview** y haga clic en **Done**.
 
     ![](../media/Active-image206.png)
 
-1. On the **Pipelines workshop** page, click on **Home**. 
+1. En la página **Pipelines workshop**, haga clic en **Home**. 
 
       ![](../media/Active-image207.png)
 
-1. On the **Business Process Automation Accelerator** page, click on **Ingest Documents**.
+1. En la página **Business Process Automation Accelerator**, haga clic en **Ingest Documents**.
 
      ![](../media/Active-image208.png)
 
-1. On the **Upload a document to Blob Storage** page, from the drop-down, select a pipeline with the name **workshop** **(1)** and click on **Upload or drop a file right here**.
+1. En la página **Upload a document to Blob Storage**, en el menú desplegable, seleccione un pipeline con el nombre **workshop** **(1)** y haga clic en **Upload or drop a file right here**.
 
       ![](../media/Active-image209.png)
 
-1. For documents, enter the following `C:\LabFiles\Document\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
+1. Para documents, ingrese la ruta `C:\LabFiles\Document\Lab 1 Step 3.7` **(1)** y presione enter. Puede cargar varias facturas una por una.
 
       ![](../media/Active-image215.png)
 
-### Task 5: Configure Azure Cognitive Search 
+### Tarea 5: Configurar Azure Cognitive Search
 
-In this task, you'll configure Azure Cognitive Search to connect with Azure Blob Storage. This includes setting up a data source, defining parsing options for JSON files, customizing a search index for data fields, and creating an indexer to automate data ingestion and indexing processes.
+En esta tarea, configurará Azure Cognitive Search para conectarse con Azure Blob Storage. Esto incluye configurar una fuente de datos, definir opciones de análisis para archivos JSON, personalizar un índice de búsqueda para campos de datos y crear un indexador para automatizar los procesos de ingesta e indexación de datos.
 
-1. Navigate back to the resource group window, search, and select **Search Service** with a name similar to **bpa{suffix}**.
+1. Vuelva a la ventana del grupo de recursos, busque y seleccione el **Servicio Search** con un nombre similar a **bpa{suffix}**.
 
    ![](../media/bpa4-1.png)
 
-1. On the **Search service** page, click on **Import data**.
+1. En la página **Servicio Search**, haga clic en **Importación de datos**.
 
    ![](../media/Active-image216.png)
 
-1. Enter the following details for **Connect to your data**.
+1. Ingrese los siguientes detalles para **Conectarse a sus datos**.
 
-   - Data Source: Select **Azure Blob Storage** **(1)**
-   - Data Source Name: Enter **workshop** **(2)**.
-   - Parsing mode: Select **JSON** **(3)**.
-   - Subscription: Select the **existing one (4)**
-   - Click on **Choose an existing connection** **(5)** under the Connection string.
+   - Origen de datos: Seleccione **Almacenamiento de blobs de Azure (Azure Blob Storage)** **(1)**
+   - Nombre del origen de datos: Ingrese **workshop** **(2)**.
+   - Modo de análisis: Seleccione **JSON** **(3)**.
+   - Suscripción: Seleccione la **existente (4)**
+   - Haga clic en **Elegir una conexión existente** **(5)** debajo de la Cadena de conexión.
   
      ![](../media/Active-image210.png)
 
-1. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix} (6)**. 
+1. En la página **Cuentas de almacenamiento**, seleccione la cuenta de almacenamiento con un nombre similar a **bpass{suffix} (6)**. 
 
     ![](../media/Active-image211.png)
 
-1. Select **results** **(7)** from the **Containers** page and click on **Select** **(8)**. It will redirect back to **Connect to your data** page.
+1. Seleccione **results** **(7)** de la página **Contenedores** y haga clic en **Seleccionar** **(8)**. Se le redireccionará a la página **Conectarse a sus datos**. 
 
      ![](../media/Active-image212.png)
   
-1. On the **Connect to your data** page, for **Blob folder** enter  **workshop** **(9)** click on **Next : Add cognitive skills (Optional) (10)**.
+1. En la página **Conectarse a sus datos**, para **Carpeta de blobs** ingrese  **workshop** **(9)**, haga clic en **Siguiente : Agregar aptitudes cognitivas (opcional) (10)**.
 
     ![](../media/Active-image217.png)
 
-1. On the **Add cognitive skills (Optional)**, click on **Skip to : Customize target index**.
+1. En **Agregar aptitudes cognitivas (opcional)**, haga clic en **Omitir: Personalizar índice de destino**.
 
-1. On the **Customize target index**, enter the index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
+1. En **Personalizar índice de destino**, establezca el nombre de índice en **azureblob-index** **(1)**, marque todos los campos como **Recuperable (Retrievable)** **(2)**, y **Se puede buscar (Searchable)** **(3)**.
 
       ![](../media/Active-image214.png)
 
-1. Expand the **aggregatedResults** **(1)** > **customFormRec (2)** > **documents** **(3)** > **fields** **(4)**. Under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString, & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
+1. Expanda **aggregatedResults** **(1)** > **customFormRec (2)** > **documents** **(3)** > **fields** **(4)**. Debajo de este, expanda **Organization_sample (5)**. Haga que los tres campos sean Clasificable (Facetable) **(type, valueString, & content)** **(6)** y haga clic en **Siguiente: Crear un indexador** **(7)**.
 
    ![](../media/Active-image218.png)
 
-1. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
+1. En la página **Crear un indexador**, ingrese el nombre **azureblob-indexer** **(1)** y haga clic en **Enviar** **(2)**.
    
     ![](../media/bpa4-10.png)
 
-## Success Criteria:
+## Criterios de Éxito:
 
-- Successful translation of documents and storage in the Azure Blob Storage target container.
-- Effective setup and utilization of the Form Recognizer resource and BPA pipeline.
-- Proper configuration of Azure Cognitive Search for processed documents.
-- Validation of document processing and search functionality using the Sample Search Application in BPA.
+- Traducción satisfactoria de documentos y almacenamiento en el contenedor de destino de Azure Blob Storage.
+- Configuración y utilización efectivas del recurso Form Recognizer y del pipeline de BPA.
+- Configuración adecuada de Azure Cognitive Search para los documentos procesados.
+- Validación de la funcionalidad de búsqueda y procesamiento de documentos utilizando la aplicación de búsqueda de ejemplo en BPA.
 
-## Additional Resources:
+## Recursos Adicionales:
 
-- Refer to [document translation](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) for sample code that will be used for document translation using C#.
-- Refer to [Document Translation operations](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/reference/rest-api-guide) to understand the REST APIs that we utilize for document translation.
+- Consulte [traducción de documentos](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) para ver un código de ejemplo que se utilizará para la traducción de documentos con C#.
+- Consulte [operaciones de Traducción de Documentos](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/reference/rest-api-guide) para comprender las API REST que utilizamos para la traducción de documentos.
 
-## Proceed with the next Challenge by clicking on **Next**>>.
+## Continúe con el próximo Desafío haciendo clic en **Siguiente**>>.

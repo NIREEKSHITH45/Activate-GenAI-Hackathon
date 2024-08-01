@@ -1,54 +1,54 @@
-# Activate Gen AI - 2 Day Hackathon
+# Activate Gen AI - Hackathon de 2 Días
 
-Welcome to the Activate Gen AI Hackathon. This two-day event is designed to immerse you in the world of AI application development, harnessing the power and versatility of the Azure OpenAI Service.
+Bienvenido al Hackathon Activate Gen AI. Este evento de dos días está diseñado para sumergirle en el mundo del desarrollo de aplicaciones de IA, aprovechando el poder y la versatilidad del Servicio Azure OpenAI.
 
-## Introduction
+## Introducción
 
-Delve into the world of Azure OpenAI. This event is designed to enhance your AI application development skills, regardless of your current experience level. Through the self-administered challenges, you'll apply your knowledge, build practical solutions, and acquire a deeper understanding of implementing AI solutions using Azure OpenAI.
+Adéntrese en el mundo de Azure OpenAI. Este evento está diseñado para mejorar sus habilidades de desarrollo de aplicaciones de IA, independientemente de su nivel de experiencia actual. A través de los desafíos autoadministrados, aplicará sus conocimientos, construirá soluciones prácticas y adquirirá una comprensión más profunda de la implementación de soluciones de IA con Azure OpenAI.
 
-## Learning Objectives
+## Objetivos de Aprendizaje
 
-By participating in this hackathon, you will learn how to:
+Al participar en este hackathon, aprenderá a:
 
-- Understand GenAI concepts and how they can be used to build chat applications.
-- Learn how to configure the Azure OpenAI service and use Azure AI Search to build private OpenAI with your own data.
-- Gain practical experience in implementing a chat app architecture with Terraform.
-- Explore features of chat apps, such as multilingual queries and advanced chat response settings.
-- Apply GenAI to real-world scenarios, including increased user interactions and dynamic document processing.
-- Operationalize AI-enabled applications with enterprise-level monitoring and logging.
-- Scale AI-enabled applications with enterprise-level load balancing.
+- Comprender los conceptos de IA Generativa y cómo se pueden usar para crear aplicaciones de chat.
+- Aprender a configurar el servicio Azure OpenAI y a utilizar Azure AI Search para consturir aplicaciones privadas de OpenAI con sus propios datos.
+- Adquirir experiencia práctica en la implementación de una arquitectura de aplicaciones de chat con Terraform.
+- Explorar las características de las aplicaciones de chat, como consultas multilingües y configuraciones avanzadas de respuestas de chat.
+- Aplicar IA Generativa a escenarios del mundo real, incluyendo el aumento de las interacciones de los usuarios y el procesamiento dinámico de documentos.
+- Poner en funcionamiento aplicaciones habilitadas para IA con monitoreo y registro de nivel empresarial.
+- Escalar aplicaciones habilitadas para IA con balanceo de carga de nivel empresarial.
 
 
-## Hackathon Format: Challenge-Based
+## Formato del Hackathon: Basado en Desafíos
 
-This hackathon adopts a challenge-based format, offering you a unique opportunity to learn while dealing with practical problems. Each challenge includes one or more self-contained tasks designed to test and enhance your skills in specific aspects of AI app development. You will approach these challenges by:
+Este hackathon adopta un formato basado en desafíos, el cual le ofrece una oportunidad única de aprender mientras se enfrenta a problemas prácticos. Cada desafío incluye una o más tareas independientes diseñadas para probar y mejorar sus habilidades en aspectos específicos del desarrollo de aplicaciones de IA. Abordará estos desafíos de la siguiente manera:
 
-- Analyzing the problem statement.
-- Strategizing your approach to find the most effective solution.
-- Leveraging the provided lab environment and Azure Open AI tools.
-- Collaborating with peers to refine and implement your solutions.
+- Analizando el enunciado del problema.
+- Diseñando una estrategia para encontrar la solución más eficaz.
+- Aprovechando el entorno de laboratorio proporcionado y las herramientas de Azure Open AI.
+- Colaborando con sus compañeros para refinar e implementar sus soluciones.
 
-## Challenges Overview
+## Descripción General de los Desafíos
 
-1. **Challenge 01: Deploy Azure OpenAI Service and LLM Models**
-   - Deploy the Azure OpenAI Service and implement the deployment of a Large Language Model (LLM) within the OpenAI Service.
+1. **Desafío 01: Implementar el Servicio Azure OpenAI y los Modelos LLM**
+   - Implemente el servicio Azure OpenAI e implemente el despliegue de un Modelo de Lenguaje Grande (LLM) dentro del Servicio OpenAI.
      
-2. **Challenge 02: Implement Document Search with Azure AI Search**
-   - Construct an Azure AI Search solution to enable sophisticated document handling. Upload, index, and tailor the search experience using VS Code and Azure. This lays the groundwork for document-based questioning essential for Retriever-Augmented Generation (RAG) in OpenAI.
+2. **Desafío 02: Implementar la Búsqueda de Documentos con Azure AI Search**
+   - Construya una solución de Azure AI Search para permitir un manejo sofisticado de documentos. Cargue, indexe y personalice la experiencia de búsqueda mediante VS Code y Azure. Esto sienta las bases para el cuestionamiento basado en documentos, esencial para la Generación Aumentada de Recuperación (RAG) en OpenAI.
 
-3. **Challenge 03: Deploy an AI-Powered Chat App**
-   - Deploy the chatapp solution architecture in Azure using Terraform.
+3. **Desafío 03: Implementar una Aplicación de Chat con Tecnología de IA**
+   - Implemente la arquitectura de la solución de chatapp en Azure mediante Terraform.
           
-4. **Challenge 04: Interact with the Chat App**
-   - Navigate and explore the web app, interact adeptly with the Chat App using insightful questions, showcase multilingual query proficiency, and implement advanced settings for comprehensive Azure OpenAI service understanding.
+4. **Desafío 04: Interactuar con la Aplicación de Chat**
+   - Navegue y explore la aplicación web, interactúe hábilmente con la aplicación de chat mediante preguntas perspicaces, demuestre competencia en consultas multilingües e implemente configuraciones avanzadas para comprender a fondo el servicio Azure OpenAI.
             
-6. **Challenge 05: Serverless Document Batch Processing**
-   - Embrace the power of serverless computing for batch-processing documents. Analyze documents using Azure Document Intelligence Services and process them with OpenAI. 
+5. **Desafío 05: Procesamiento de Documentos por Lotes Sin Servidor**
+   - Adopte el poder de la computación sin servidor para el procesamiento por lotes de documentos. Analice documentos con Azure Document Intelligence Services y procéselos con OpenAI. 
      
-7. **Challenge 06: Implement Monitoring and Logging of Azure OpenAI Using API Management Service**
-   - Operationalize your solution by setting up monitoring and logging. Use Azure Monitor, Log Analytics, and APIM to gain insights and maintain the robustness of your AI services.
+6. **Desafío 06: Implementar el Monitoreo y el Registro de Azure OpenAI utilizando el Servicio API Management**
+   - Ponga en funcionamiento su solución configurando el monitoreo y el registro. Use Azure Monitor, Log Analytics y APIM para obtener información y mantener la solidez de sus servicios de IA.
 
 
-Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to your coach.
+¡No dude en explorar los desafíos, aprender y divertirse durante este hackathon! Si tiene alguna pregunta, no dude en comunicarse con su coach.
 
-Happy hacking!
+¡Feliz hacking!
