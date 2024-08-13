@@ -8,6 +8,8 @@ Su tarea consiste en implementar un monitoreo exhaustivo para el servicio Azure 
 
 ## Objetivos del Desafío:
 
+> **Importante**: Al implementar servicios en este desafío, ¡asegúrese de utilizar el grupo de recursos denominado **rg-activategenai**!  !
+
 1. **Monitorear el Servicio Azure OpenAI:**
    - Establezca configuraciones de diagnóstico para los servicios de Azure OpenAI existentes.
    - Realice análisis de registros utilizando Consultas Kusto para monitorear el rendimiento y el uso del servicio.
