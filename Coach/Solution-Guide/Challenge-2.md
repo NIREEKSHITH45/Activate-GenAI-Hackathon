@@ -24,8 +24,9 @@ If you have not already cloned the **AI-102-AIEngineer** code repository to the 
 
 1. Execute the following command in the terminal to clone the repository to a local folder: (it doesn't matter which folder).
 
-   `git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer`
-
+   ```
+   git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer
+   ```
     ![](../media/Active-image43.png)
 
 1. When the repository has been cloned, open the folder in Visual Studio Code by following these steps:
@@ -209,7 +210,7 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
 
     ![](../media/Active-image52.png)
       
-   > **Note**: A web browser tab will open and prompt you to sign into Azure. Do so, and then close the browser tab and return to Visual Studio Code.
+   > **Note**: If a web browser tab opens and prompts you to sign in to Azure, please sign in, then close the browser tab and return to Visual Studio Code.
 
 1. Enter the following command to run the batch file. This will create a blob container in your storage account and upload the documents in the **data** folder to it.
 
@@ -305,7 +306,7 @@ In this task, you'll learn how to create a search solution by indexing documents
 
      ![](../media/Active-image64.png)
    
-1. Double-check your selections, paying particular attention to ensure that the correct **Retrievable**, **Filterable**, **Sortable**, **Facetable**, and **Searchable** options are selected for each field  (it can be difficult to change them later). Then proceed to the next step by clicking on **Next: Customize target index**.
+1. Double-check your selections, paying particular attention to ensure that the correct **Retrievable**, **Filterable**, **Sortable**, **Facetable**, and **Searchable** options are selected for each field  (it can be difficult to change them later). Then proceed to the next step by clicking on **Next: Create an indexer**.
 
 1. On the **Create an indexer** tab specify the following
       - Change the **Indexer name** to **margies-indexer (1)**.
