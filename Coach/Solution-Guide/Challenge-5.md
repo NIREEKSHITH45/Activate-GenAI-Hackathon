@@ -196,6 +196,12 @@ In this task, we will set up a C#/.NET environment in Visual Studio 2022. We'll 
 
    > **Note**: When prompted to sign in, select **Skip for now** then on the **Developement settings** click **Start Visual Studio**.
 
+1. Please click on **Work or school Account** to sign in.
+
+      ![](../media/ai3.png)   
+
+      > **Note**: Navigate to the Environment Details tab to get the credentials.
+      
 1. On the Visual studio **Get Started** page, select **Create a New Project**.
 
    ![](../media/Active-image157.png)
@@ -290,6 +296,8 @@ In this task, you'll create a Form Recognizer resource in Azure Portal by settin
 1. Under My Project, click on **+ Create a project**.
 
     ![](../media/Active-image177.png)
+
+      > **Note**: Please sign in if prompted.
 
 1. Enter the following details and click on **Continue**  **(3)**.
     
