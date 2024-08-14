@@ -96,9 +96,9 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
     ![](../media/Active-image226.png)
    
-1. In the **Playground** section, select the **chat** page, and ensure that the **chat** deployment is selected in the configuration pane.
+1. In the **Playground** section, select the **chat** page, and ensure that the **text-turbo** deployment is selected in the configuration pane.
 
-   ![](../media/chat.png)
+   ![](../media/ai4.png)
 
 1. In the **Assistant setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
@@ -210,15 +210,17 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
           ![](../media/Active-image237.png)
 
-1. On **Review + install** tab once validation passed click on **Create**.
+1. On **Review + Create** tab once validation passed click on **Create**.
 
-      > **Note**: Before proceeding with next step make sure **API Management Service** deployed successfully
+      > **Note**: Before proceeding with next step make sure **API Management Service** deployed successfully.
+
+      > **Note**: The deployment of API Management service resource could take approximately 20 minutes. 
 
 1. Once **API Management Service** deployed successfully, click on **Go to resource**.
 
 1. On **API Management service** blade, from left navigation pane under **Security** select **Managed identities** then on **System assigned** tab set the status to **On** and click on **Save**.
 
-    ![](../media/Active-image240.png)
+    ![](../media/ai5.png)
 
 1. Click on **Yes** when **Enable system assigned managed identity** when prompted.
 
@@ -248,7 +250,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
    ![](../media/apinew3.png)
 
-1. In the **Members** tab, select **Managed identity** **(1)**, click on **+ Select Members** **(2)** in the select managed identity pop-up under Managed identity the drop-down select **API Management service** **(3)**, select the **apim** **(4)**, then click-on **Select** **(5)** and click on **Next** **(6)**.
+1. In the **Members** tab, select **Managed identity** **(1)**, click on **+ Select Members** **(2)** in the select managed identity pop-up under Managed identity the drop-down select **API Management service** **(3)**, select the **apim-<inject key="Deployment ID" enableCopy="false"/>** **(4)**, then click-on **Select** **(5)** and click on **Next** **(6)**.
 
    ![](../media/apim-role.png)
 
@@ -338,7 +340,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     
 1. Click on **Save**. Notice that a new policy named **set-backend-service** has been added within the inbound processing tile.
     
-1. Navigate to **Diagnostic settings** in the left pane of the API management service.
+1. Navigate to **Diagnostic settings** in the left pane of the API management service. Click on **+ Add Diagnostic setting**.
 
     ![](../media/diag3.png)
 
@@ -372,7 +374,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     - Click on the **Test (2)** tab.
     - Click on the POST operation that **Creates a completion for the chat message (3)**.
     - Under the **Template parameters** section, enter the following details:
-        - **deployment-name:** Provide the name you had provided earlier for **gpt-35-turbo** model **(4)**
+        - **deployment-id:** Provide the name you had provided earlier for **gpt-35-turbo** model **(4)**
         - **api-version:** 2023-03-15-preview **(5)**
     - Within the **Request body** section, edit the content **(6)** of the sample with the following prompt:
         ```
