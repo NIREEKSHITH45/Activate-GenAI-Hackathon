@@ -46,6 +46,12 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 1. In the **LabVM**, in the Windows Search bar type **Powershell** and select **PowerShell 7-preview (x64)** then **Run as Administrator**.
 
     ![](../media/Active-image102.png)
+
+1. Run the following command to navigate to the following path:
+
+   ```
+   cd C:\Users\demouser
+   ```   
    
 1. Run the following command to login to Azure:
 
@@ -90,6 +96,8 @@ In this task, you'll learn the process of Deploying the Infrastructure.
    azd up
    ```
    >**Note**: In case you are prompted with the **ERROR: not logged in, run azd auth login to login** and select your **Azure Account** again.
+
+   >**Note**: Please be aware that deploying the resources and the associated application may take up to 30 minutes.
 
 1. Add the following details when prompted:
 
