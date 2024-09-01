@@ -1,72 +1,69 @@
-# Challenge 1: Deploy Azure OpenAI Service and LLM Models
+# Desafio 1: Implementar Azure OpenAI e Modelos LLM
 
-### Estimated Time: 30 minutes
+### Tempo Estimado: 30 minutos
 
-## Introduction
+## Introdução:
 
-**Azure OpenAI Service** provides REST API access to OpenAI's powerful language models, including the GPT-4, GPT-4 Turbo with Vision, `gpt-35-turbo`, and Embeddings model series. In addition, the new `GPT-4` and `gpt-35-turbo` model series have now reached general availability.
+**Serviço Azure OpenAI** fornece acesso à API REST dos modelos de linguagem do OpenAI, incluindo o GPT-4, GPT-4 Turbo with Vision, a série de modelos gpt-35-turbo e Embeddings. Além disso, as novas séries de modelos `GPT-4` e `gpt-35-turbo` estão agora disponíveis para uso geral.
 
-A **Large Language Model (LLM)** is a deep learning algorithm that can perform a variety of natural language processing (NLP) tasks. Large language models use transformer models and are trained using massive datasets—hence, large. This enables them to recognize, translate, predict, or generate text or other content.
+Um **Large Language Model (LLM)** é um algoritmo de deep learning capaz de realizar uma variedade de tarefas de processamento de linguagem natural (NLP). Os modelos de linguagem de grande porte utilizam modelos transformers e são treinados com conjuntos de dados massivos — daí o termo "grande". Isso os capacita a reconhecer, traduzir, prever ou gerar texto ou outros conteúdos.
 
-**Contoso Ltd.**, a leading technological firm, is seeking to enhance its product support operations. They receive a vast number of queries daily, which results in longer waiting times and decreased customer satisfaction. To address this, Contoso is planning to implement an AI-powered solution that can handle customer inquiries effectively and efficiently.
+A **Contoso Ltd.**, é uma empresa líder em tecnologia, está buscando aprimorar suas operações de suporte ao produto. Eles recebem um grande número de chamadas diariamente, o que resulta em tempos de espera mais longos e uma diminuição na satisfação do cliente. Para resolver esse problema, a Contoso está planejando implementar uma solução com inteligência artificial que possa lidar com as consultas dos clientes de maneira eficaz e eficiente.
 
-They have chosen to deploy Azure OpenAI Service along with its Large Language Models (LLM), like `gpt-35-turbo` and `text-embedding-ada-002`. These models are known for their capability in processing and generating human-like text, making them ideal for this application.
+A **Contoso Ltd.** decidiu implementar o serviço Azure OpenAI juntamente com seus modelos Large Language Models (LLM), como o `gpt-35-turbo` e o `text-embedding-ada-002`. Estes modelos são conhecidos pela sua capacidade de processar e gerar texto semelhante ao humano, tornando-os ideais para essa aplicação.
 
-As a part of this challenge, your task is to create an Azure OpenAI service and deploy Large Language Models (LLM). The LLMs include **gpt-35-turbo** and **text-embedding-ada-002**.
+Como parte deste desafio, sua tarefa é criar um serviço Azure OpenAI e implementar modelos Large Language Models (LLM). Os LLMs incluem **gpt-35-turbo** e **text-embedding-ada-002**.
 
-### Accessing the Azure portal
+### Aceder ao Portal de Azure
 
-1. To access the Azure portal, open a private/incognito window in your browser and navigate to the Azure Portal.
+1. Para aceder o portal de Azure, abra uma janela privada/incógnita no seu navegador e navegue até o Portal do Azure.
 
-1. On the **Sign in to Microsoft Azure tab**, you will see a login screen. Enter the following email/username, and then click on **Next**.
+1. Na tab **Sign in to Microsoft Azure tab**, você verá uma tela de login. Digite o seguinte e-mail/nome de usuário e clique em **Next**.
 
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   - **Email/nome de usuário:** <inject key="AzureAdUserEmail"></inject>
 
-1. Now enter the following password and click on **Sign in**.
+1. gora insira a seguinte senha e clique em **Sign in**.
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-1. If you see the pop-up **Stay Signed in?**, click No.
+1. Se aparecer a janela pop-up **Stay Signed in?**, clique em Não.
 
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue with the challenge.
+1. Se aparecer a janela pop-up **You have free Azure Advisor recommendations!**, feche a janela para continuar com o desafio.
 
-1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Maybe Later** to skip the tour.
+1. Se aparecer a janela pop-up **Welcome to Microsoft Azure** aparecer, clique em **Maybe Later** para pular o tour.
 
-## Prerequisites
+## Pré-requisitos
 
-Make sure you have the following from the CloudLabs-provided integrated environment:
+Certifique-se de ter o seguinte do ambiente integrado fornecido pelo CloudLabs:
 
-> Note: Prerequisites are already set up in the CloudLabs-provided environment. If you're using your personal computer or laptop, please make sure that all necessary prerequisites are installed to complete this hackathon.
+> Nota: Os pré-requisitos estão pré-configurados no ambiente CloudLabs. Se você estiver usando seu computador ou laptop pessoal, verifique se todos os pré-requisitos essenciais estão instalados para concluir este Hackathon.
 
-  - [Azure Subscription](https://azure.microsoft.com/en-us/free/)
-  - [Azure OpenAI](https://aka.ms/oai/access) access is available with the following models:
+  - [Assinatura de Azure](https://azure.microsoft.com/en-us/free/)
+  - Acesso ao [Azure OpenAI](https://aka.ms/oai/access) com os seguintes modelos:
     - gpt-35-turbo
     - text-embedding-ada-002
+    - gpt-4
 
-## Challenge Objectives:
+## Objetivos do Desafio:
 
-1. **Azure OpenAI Service Deployment:**
-   - Set up an Azure OpenAI Service instance with SKU size Standard `S0`.
-   - Deploy it in the existing resource group named - **<inject key="Resource Group Name"/>**
-   - Obtain the necessary Azure OpenAI Key and Endpoint.
+1. **Implementação do serviço Azure OpenAI:**
+   - Configure uma instância do Azure OpenAI Service com o tamanho do SKU Standard `S0`.
+   - Implemente no grupo de recursos existente com o nome - **<inject key="Resource Group Name"/>**
+   - Obtenha a chave e o Endpoint necessários do Azure OpenAI.
 
+   <validation step="ccff4a0f-eb81-479e-a774-00cc5a664eeb" />
 
-   <validation step="ad89350a-8a60-4fcd-88f1-38493f6f74f7" />
+2. **Implementar Modelos de Linguagem Grande (LLM):**
+   - O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio** que você pode usar para implementar, gerenciar e explorar modelos. Você começará sua exploração do Azure OpenAI usando o Azure OpenAI Studio para Implementar um modelo.
+   - Inicie o Azure OpenAI Studio a partir do painel de overview e implemente três Modelos OpenAI, ou seja, `gpt-35-turbo` e `text-embedding-ada-002`, com uma capacidade TPM de 20k.
 
+   <validation step="32bbf48f-1030-4e8b-8dfe-a395a6746f1d" />
 
+## Critério de Sucesso:
 
-2. **Deploy Large Language Models (LLM):**
-   - Azure OpenAI provides a web-based portal named **Azure OpenAI Studio** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
-   - Launch Azure OpenAI Studio from the overview pane and deploy two OpenAI models, i.e., `gpt-35-turbo` and `text-embedding-ada-002`, with a TPM capacity of 20k.
+- Verifique se o serviço Azure OpenAI está implementado com sucesso no grupo de recursos existente - <inject key="Resource Group Name"/>.
+- Verifique se os Modelos de Linguagem Grande (LLM), `gpt-35-turbo` e `text-embedding-ada-002`,  estão implementados com sucesso no serviço Azure OpenAI.
 
+## Recursos Adicionais:
 
-   <validation step="22eb5371-de7d-426c-be18-594c9e05c080" />
-
-## Success Criteria:
-
-- Verify that the Azure OpenAI Service is successfully deployed in the existing resource group - <inject key="Resource Group Name"/>.
-- Verify that the Large Language Models (LLM), `gpt-35-turbo` and `text-embedding-ada-002`, are successfully deployed with the Azure OpenAI Service.
-
-## Additional Resources:
-
-- Refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for guidance on deploying the service.
+- Consulte a [documentação do serviço Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/) para orientações sobre a criação do serviço.
