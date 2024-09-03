@@ -1,123 +1,123 @@
-# Challenge 03:  Deploy an AI-Powered Chat App 
+# Desafio 03:  Deploy an AI-Powered Chat App 
 
-### Estimated Time: 150 minutes
+### Tempo Estimado: 150 minutos
 
-### Introduction:
+### Introdução:
 
-In this challenge, you'll deploy an AI-powered chat application specifically designed for Contoso Electronics. This app, built with React for the frontend and Python for the backend, showcases advanced features like chat and Q&A interfaces, all augmented by AI capabilities. It's an excellent opportunity for you to explore the integration of Azure OpenAI Service with the GPT-3.5 Turbo model and Azure Cognitive Search for efficient data indexing and retrieval.
+Neste desafio, você irá provisionar uma aplicação de chat alimentado por IA, projetado especificamente para a Contoso Electronics. Esta aplicação, desenvolvida com React para o frontend e Python para o backend, apresenta recursos avançados como interfaces de chat e perguntas e respostas, tudo aprimorado por capacidades de IA. É uma excelente oportunidade para você explorar a integração do Azure OpenAI Service com o modelo GPT-3.5 Turbo e o Azure Cognitive Search para indexação e recuperação de dados eficiente.
 
-This sample app is more than just a chat interface; it demonstrates the Retrieval-Augmented Generation pattern, offering a rich, ChatGPT-like experience over Contoso's own data. The app's features include trustworthiness evaluation of responses with citations, tracking of source content, data preparation, prompt construction, and orchestrating interaction between the ChatGPT model and Cognitive Search. You'll also find adjustable settings in the UX for experimentation and optional performance tracing and monitoring with Application Insights.
+Esta aplicação de demonstração é mais do que apenas uma interface de chat; ela demonstra o padrão Retrieval-Augmented Generation, oferecendo uma experiência rica, semelhante ao ChatGPT, com base nos próprios dados da Contoso. Os recursos do aplicativo incluem avaliação da confiabilidade das respostas com citações, rastreamento do conteúdo de origem, preparação de dados, construção de prompts e orquestração da interação entre o modelo ChatGPT e o Cognitive Search. Você também encontrará configurações ajustáveis na interface do usuário para experimentação e rastreamento e monitorização de desempenho opcional com o Application Insights.
 
-In this challenge, your task is to deploy this comprehensive chat solution for Contoso, allowing them to evaluate its capabilities and integrate it into their environment. The repository comes with sample data, representing a ready-to-use, end-to-end solution. This app is a valuable tool for Contoso's employees to inquire about company benefits, internal policies, job descriptions, and roles.
+Neste desafio, a sua tarefa é implementar esta solução abrangente de chat para a Contoso, permitindo que eles avaliem as suas capacidades e a integrem em seu ambiente. O repositório vem com dados de demonstração, representando uma solução pronta para uso, de ponta a ponta. Esta aplicação é uma ferramenta valiosa para os funcionários da Contoso consultarem sobre benefícios da empresa, políticas internas, descrições de cargos e funções.
 
-You will be using Terraform to deploy the chat app. 
+Você usará Bicep para provisionar a aplicação de chat.
 
-The chat application integrates seamlessly with different Azure services to provide an intelligent user experience. Here's a simple overview of each service used by the app:
+A aplicação de chat se integra perfeitamente com diferentes serviços Azure para fornecer uma experiência inteligente ao usuário. Aqui está uma visão geral simples de cada serviço usado pela aplicação:
 
-- **App Service:** This hosts the chat app, ensuring it can respond to the prompts sent by users from the uploaded relatable data.
-- **Application Insights:** It proactively monitors the app's performance, taking care of issues before they become significant.
-- **Document Intelligence:** Using AI, it understands the content in uploaded documents, making user information more insightful.
-- **Azure OpenAI:** Enhances the app's capabilities with natural language understanding and responses.
-- **Shared Dashboard:** Acts as a central hub for team collaboration and data sharing.
-- **Smart Detector Alert Rule:** Monitors the app's health and notifies the team if any issues arise.
-- **Search Service:** Empowers users with dynamic and efficient search functionality within the app.
-- **Log Analytics Workspace:** Tracks and analyzes app activity, offering valuable insights and logs.
-- **App Service Plan:** Optimizes resource allocation for optimal app performance.
-- **Storage Account:** Securely stores the data that will be used by the Azure AI Search service to provide the inputs to the chat app.
+- **App Service:** Hospeda o aplicativo de chat, garantindo que ele possa responder aos prompts enviados pelos usuários a partir dos dados relevantes carregados.
+- **Application Insights:** Monitoriza proativamente o desempenho da aplicação, cuidando dos problemas antes que se tornem significativos.
+- **Document Intelligence:** Utilizando IA, compreende o conteúdo nos documentos carregados, tornando as informações do usuário mais esclarecedoras.
+- **Azure OpenAI:** Melhora as capacidades do aplicativo com compreensão de linguagem natural e respostas.
+- **Shared Dashboard:** Atua como um hub central para colaboração em equipe e compartilhamento de dados.
+- **Smart Detector Alert Rule:** Monitoriza a saúde da aplicação e notifica a equipe caso surjam problemas.
+- **Search Service:** Oferece aos usuários uma funcionalidade de busca dinâmica e eficiente dentro da aplicação.
+- **Log Analytics Workspace:** Rastrea e analisa a atividade da aplicação, oferecendo insights e logs valiosos.
+- **App Service Plan:** Otimiza a alocação de recursos para um desempenho ideal do aplicativo.
+- **Storage Account:** Armazena com segurança os dados que serão utilizados pelo serviço Azure AI Search para fornecer as entradas ao aplicativo de chat.
 
-Together, these services create a responsive chat application that combines AI features, monitoring capabilities, and efficient data management, providing Contoso with an exceptional user experience.
+Juntos, estes serviços criam uma aplicação de chat responsivo que combina recursos de IA, capacidades de monitorização e gestão eficiente de dados, proporcionando à Contoso uma experiência de usuário excepcional.
 
-## Architecture diagram:
+## Diagram da Arquitectura:
 
 ![](../media/Active-image258.png)
 
-## Solution Guide:
+## Guia da Solução
 
-## Prerequisite
+## Pré-requisitos
    
-1. Start Powershell 7 +.
+1. Inicie o Powershell 7 +.
    
-2. Ensure you run `pwsh.exe` from a PowerShell terminal. If this fails, you likely need to upgrade PowerShell.
+2. Certifique-se de executar `pwsh.exe` a partir de um terminal do PowerShell. Se isso falhar, é provável que você precise atualizar o PowerShell.
 
-## Task 1: Deploy the  AI-Powered Chat App.
+## Tarefa 1: Implementar a Applicação de chat com IA.
 
-In this task, you'll learn the process of Deploying the Infrastructure.
+Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
 
-1. In the **LabVM**, in the Windows Search bar type **Powershell** and select **PowerShell 7-preview (x64)** then **Run as Administrator**.
+1. Usando a **LabVM**, na barra de pesquisa do Windows, digite  **Powershell** e selecione **PowerShell 7-preview (x64)** e depois **Run as Administrator**.
 
     ![](../media/Active-image102.png)
 
-1. Run the following command to navigate to the following path:
+1. Execute o seguinte comando para navegar até ao diretório C:\Users\demouser:
 
    ```
    cd C:\Users\demouser
    ```   
    
-1. Run the following command to login to Azure:
+1. Execute o seguinte comando para fazer login no Azure:
 
    ```
    azd auth login
    ```
 
-   - After running the above command, a web browser tab will open and prompt you to sign into Azure. Select the Azure account you had previously logged into, or if prompted, provide your Azure username and password. Once authentication is complete, you can return to PowerShell 7.
-
-   - Return to PowerShell 7, where you should see the message **Logged in to Azure**.
+   - Após executar o comando acima, uma nova tab do navegador será aberta e solicitará que você faça login no Azure. Selecione a conta do Azure na qual você havia feito login anteriormente ou, se solicitado, forneça seu nome de usuário e senha do Azure. Uma vez que a autenticação esteja concluída, você pode retornar ao PowerShell 7.
+ 
+   - Volte para o PowerShell 7, onde você deve ver a mensagem **Logged in to Azure**.
 
      ![](../media/Active-image104.png)
 
-1. Once successfully logged in ,run the below command to download the project code:
+1. Uma vez logado com sucesso, execute o comando abaixo para baixar o código do projeto:
 
    ```
    azd init -t azure-search-openai-demo
    ```
-   >**Note**: The above command will initialize a git repository, eliminating the need to clone it afterwards.
+   >**Nota**: O comando acima inicializará um repositório git, eliminando a necessidade de cloná-lo posteriormente.
 
-1. When prompted with **Continue iniatializing an app in `C:\Users\demouser`**, type **y / yes (1)**.
+1. Quando solicitado com **Continue iniatializing an app in `C:\Users\demouser`**, digite **y / yes (1)**.
 
    ![](../media/Active-image105.png)
 
-1. If **What would you like to do with these files?** prompted, choose **Overwrite with versions from template**.
+1. Se solicitado **What would you like to do with these files?**, escolha **Overwrite with versions from template**.
 
    ![](../media/gen3.png)
 
-1. Enter a new environment name:  **activategenai**
+1. Digite um novo nome de ambiente:  **activategenai**
 
-   >**Note**: This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
+   >**Nota**: Isso criará uma nova pasta na pasta `.azure` folder, e a definirá como o ambiente ativo para quaisquer chamadas ao azd daqui para frente.
 
    ![](../media/Active-image106.png)
 
-1. Verify the new project initialized is successful.
+1. Verifique se o novo projeto foi inicializado com sucesso.
 
    ![](../media/Active-image107.png)
    
-1. Run the below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
+1. Execute o comando abaixo para criar os recursos no Azure, incluindo a construção do índice de pesquisa com base nos arquivos encontrados na pasta  `./data`.
 
    ```
    azd up
    ```
-   >**Note**: In case you are prompted with the **ERROR: not logged in, run azd auth login to login** and select your **Azure Account** again.
+   >**Nota**: Caso receba a seguinte mensagem: **ERROR: not logged in, run azd auth login to login** selecione sua **Azure Account** novamente.
 
-   >**Note**: Please be aware that deploying the resources and the associated application may take up to 30 minutes.
+   >**Nota**: Tenha em mente que o processo de criação dos recursos e da aplicação pode levar até 30 minutos.
 
-1. Add the following details when prompted:
+1. Adicione os seguintes detalhes quando solicitado:
 
-   - Select an Azure Subscription to use: Press **Enter** to choose the default **subscription (1)**
+   - Select an Azure Subscription to use: Pressione **Enter** para escolher a **subscription (1)**
    - Select an Azure Location to use: **Select any location you would like to use (2)**
-   - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter : **Select any location you would like to use (3)**
-   - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select any location you would like to use(4)**
+   - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter : **Selecione qualquer localização que você gostaria de usar (3)**
+   - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Selecione qualquer localização que você gostaria de usar(4)**
      
       ![](../media/Active-image110.png)
 
       ![](../media/Active-image111.png)
 
-1. After the application has been successfully deployed you will see a URL printed to the console. Copy browse the URL to interact with the application in your browser. It will look like the following:
+1. Após a aplicação ter sido criada com sucesso, você verá uma URL no console. Copie e acesse a URL para interagir com a aplicação usando o seu navegador. A aplicação deve ter a seguinte aparência:
 
     ![](../media/Active-image108.png)
     ![](../media/Active-image109.png)
  
-    >**Note**: It may take 30 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
+    >**Nota**: Pode levar até 30 minutos após você ver 'SUCCESS' para a aplicação estar totalmente criada. Se você vir uma tela de boas-vindas "Python Developer" ou uma página de erro, aguarde um pouco e atualize a página.
 
-## Success Criteria:
+## Critério de Sucesso:
 
 - Successful deployment of the Chat App.
 - validate if the following services are successfully deployed in the RG (Resource Group).
@@ -133,9 +133,9 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 - Validate if the data is populated into the storage container named `content`.
 - The Chat app should be accessible using the Azure App service.
 
-## Additional Resources:
+## Recursos Adicionais:
 
--  Refer to the  [Azure Search OpenAI demo GitHub repository](https://github.com/cmendible/azure-search-openai-demo) for detailed information on the architecture.
+-  Consolte o repositório [Azure Search OpenAI demo](https://github.com/cmendible/azure-search-openai-demo) para informação adicional da arquitectura da aplicação.
 -  [Azure copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
 
-## Proceed with the next Challenge by clicking on **Next**>>.
+## Prossiga para o próximo Desafio clicando em **Next**>>.

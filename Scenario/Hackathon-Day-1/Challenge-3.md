@@ -27,7 +27,7 @@ A aplicação de chat se integra perfeitamente com diferentes serviços Azure pa
 
 Juntos, estes serviços criam uma aplicação de chat responsivo que combina recursos de IA, capacidades de monitorização e gestão eficiente de dados, proporcionando à Contoso uma experiência de usuário excepcional.
 
-## Architecture diagram:
+## Diagram da Arquitectura:
 
 ![](../media/Active-image258.png)
 

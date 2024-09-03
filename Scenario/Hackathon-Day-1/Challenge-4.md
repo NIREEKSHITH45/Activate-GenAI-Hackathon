@@ -8,7 +8,7 @@ Após provisionar com sucesso a aplicação de chat melhorada por IA no desafio 
 
 ## Objetivos do Desafio
 
-**1. Acesso a Aplicação Web e Construção e Resposta de Consultas::**
+**1. Acesso a Aplicação Web e Construção e Resposta de Consultas:**
    
    - No Portal de Azure, pesquise por **`App Services`** e selecione o aplicativo web que você provisionou no desafio anterior.
    - Clique em **"Browse"** para abrir seu aplicação web.
