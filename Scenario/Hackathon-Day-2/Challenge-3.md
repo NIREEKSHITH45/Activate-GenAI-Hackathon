@@ -69,7 +69,7 @@ Asegúrese de que dispone de lo siguiente del ambiente integrado proporcionado p
 
 
 
-   <validation step="9b4373a3-2a97-40ca-8c61-f1182e5eb2ce" />
+   <validation step="36681298-5586-4465-ae71-717f0f69e6dc" />
 
 ## Criterios de Éxito:
 
