@@ -55,7 +55,7 @@ En este desafío, clonará un repositorio proporcionado para sentar las bases pa
       > Sugerencia: La aplicación admite varios idiomas; elija el que se adapte a los requisitos de su proyecto. Ajuste la configuración de la aplicación y configure la aplicación web según sea necesario. Luego, ejecute la aplicación localmente para probar la funcionalidad de búsqueda antes de proceder a la implementación.
 
 
-   <validation step="15277a80-8b44-474a-ac19-0831c71d5fbd" />
+   <validation step="4240749f-2035-4086-92d1-0ff181674a07" />
 
    
 ## Criterios de éxito:
