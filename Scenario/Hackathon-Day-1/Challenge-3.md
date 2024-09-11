@@ -67,7 +67,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
       > Hint : Launch your project into action. This command will deploy your application to Azure, setting up all necessary resources and configurations automatically.
 
-   <validation step="9b4373a3-2a97-40ca-8c61-f1182e5eb2ce" />
+   <validation step="cf48b1e0-f073-4ad2-a631-7661559fa36d" />
 
 ## Success Criteria:
 
