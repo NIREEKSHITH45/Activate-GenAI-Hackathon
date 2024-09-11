@@ -51,7 +51,7 @@ Asegúrese de que dispone de lo siguiente del ambiente integrado proporcionado p
    - Obtenga la clave y el punto de conexión de Azure OpenAI necesarios.
 
 
-   <validation step="ccff4a0f-eb81-479e-a774-00cc5a664eeb" />
+   <validation step="ad89350a-8a60-4fcd-88f1-38493f6f74f7" />
 
 
 
@@ -60,7 +60,7 @@ Asegúrese de que dispone de lo siguiente del ambiente integrado proporcionado p
    - Inicie Azure OpenAI Studio desde el panel de Información general e implemente dos modelos OpenAI, es decir, `gpt-35-turbo` y `text-embedding-ada-002`, con una capacidad de TPM de 20k.
 
 
-   <validation step="32bbf48f-1030-4e8b-8dfe-a395a6746f1d" />
+   <validation step="22eb5371-de7d-426c-be18-594c9e05c080" />
 
 ## Criterios de Éxito:
 
