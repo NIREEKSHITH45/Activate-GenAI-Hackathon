@@ -48,7 +48,7 @@ Neste desafio, você clonará um repositório fornecido para lançar as bases pa
    - Execute o aplicativo localmente para testar a funcionalidade de busca.
    > Dica: A aplicação suporta múltiplos idiomas; escolha o que melhor atende aos requisitos do seu projeto. Ajuste as configurações da aplicação e configure a aplicação web conforme necessário. Em seguida, execute a aplicação localmente para testar a funcionalidade de busca antes de prosseguir com a implementação.
 
-   <validation step="15277a80-8b44-474a-ac19-0831c71d5fbd" />
+   <validation step="00185b3f-b0cd-4db1-87bf-d782f730cf95" />
    
 ## Critério de Sucesso:
 
