@@ -67,7 +67,7 @@ Certifique-se de ter o seguinte no ambiente integrado fornecido pelo CloudLabs:
 
       > Dica : Coloque o seu projeto em ação. Este comando provisionará a sua aplicação no Azure, configurando automaticamente todos os recursos e configurações necessários.
 
-   <validation step="9b4373a3-2a97-40ca-8c61-f1182e5eb2ce" />
+   <validation step="cf48b1e0-f073-4ad2-a631-7661559fa36d" />
 
 ## Critério de Sucesso:
 
