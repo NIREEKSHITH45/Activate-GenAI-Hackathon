@@ -31,7 +31,7 @@ Utilizará el servicio Form Recognizer y el Acelerador de Automatización de Pro
    > Nota: Puede encontrar los documentos en C:\LabFiles\Documents.
 
 
-   <validation step="e7cc8d8f-1ac3-46be-9f16-d5a492ff6147" />
+   <validation step="6936c21b-ffd6-4778-904b-25346932940b" />
 
 **Utilizando Doc Intelligence:**
 > **Importante**: Al implementar servicios en este desafío, ¡asegúrese de utilizar el grupo de recursos denominado **<inject key="Resource Group Name"/>**  !
