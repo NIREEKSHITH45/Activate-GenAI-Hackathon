@@ -51,13 +51,13 @@ Certifique-se de ter o seguinte do ambiente integrado fornecido pelo CloudLabs:
    - Implemente no grupo de recursos existente com o nome - **<inject key="Resource Group Name"/>**
    - Obtenha a chave e o Endpoint necessários do Azure OpenAI.
 
-   <validation step="ccff4a0f-eb81-479e-a774-00cc5a664eeb" />
+   <validation step="ad89350a-8a60-4fcd-88f1-38493f6f74f7" />
 
 2. **Implementar Modelos de Linguagem Grande (LLM):**
    - O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio** que você pode usar para implementar, gerenciar e explorar modelos. Você começará sua exploração do Azure OpenAI usando o Azure OpenAI Studio para Implementar um modelo.
    - Inicie o Azure OpenAI Studio a partir do painel de overview e implemente três Modelos OpenAI, ou seja, `gpt-35-turbo` e `text-embedding-ada-002`, com uma capacidade TPM de 20k.
 
-   <validation step="32bbf48f-1030-4e8b-8dfe-a395a6746f1d" />
+   <validation step="22eb5371-de7d-426c-be18-594c9e05c080" />
 
 ## Critério de Sucesso:
 
