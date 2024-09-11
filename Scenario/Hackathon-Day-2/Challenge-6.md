@@ -20,7 +20,7 @@ Su tarea consiste en implementar un monitoreo exhaustivo para el servicio Azure 
    - Utilice Consultas Kusto dentro de API Management para realizar un análisis de registros completo, centrándose en las respuestas de los mensajes de chat y las interacciones de los prompts.
 
 
-   <validation step="bc6cc0b0-ab0e-4b2f-9e3a-1b1836b20e28" />
+   <validation step="9f41c452-42da-4841-9ee1-0c8fcbdbd9ad" />
   
 ## Criterios de Éxito:
 
