@@ -152,13 +152,13 @@ In this task, you'll learn how to create a **Storage account** resource in the A
    | **Option**            | **Value**                                              |
    | ------------------    | -----------------------------------------------------  |
    | Subscription          | Leave default **(1)**                                  |
-   | Resource Group        | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**         |
+   | Resource Group        | **Activate-GenAI** **(2)**         |
    | Storage account name  | *Enter a unique name* for your Storage account or use the format **storagexxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Region                | Use the same location as the resource group **(4)**    |
    | Performance           | Standard **(5)**                                       |
    | Replication           | Locally redundant storage (LRS) **(6)**                | 
 
-   ![](../media/Active-image36.png)
+   ![](../media/strupdate.png)
 
 1. On the **Advanced** tab, check the box next to **Allow enabling anonymous access on individual containers** and click on **Review + create**
 
