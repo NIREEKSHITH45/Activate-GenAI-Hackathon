@@ -110,7 +110,7 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can
 
    ![](../media/toggle_enable.png)
 
-1. On the feedback popup, click on **Skip**. select the **Subscription** and Resource of **OpenAI** which you created earlier and click on **Use Resource.**
+1. On the feedback popup, click on **Skip**. select the **Subscription** and Resource of **OpenAI** which you created earlier at the resource field and click on **Use Resource.**
 
    ![](../media/useraireso.png)
 
