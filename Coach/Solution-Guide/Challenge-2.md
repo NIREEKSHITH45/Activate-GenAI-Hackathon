@@ -723,6 +723,7 @@ In this task, you'll be running the Margie's Travel web application locally, sea
     **Python**
      
     ```
+    pip install flask
     flask run
     ```
     > **Note:** If the command fails, **run pip Install python-dotenv** command and then run the command again.
