@@ -81,7 +81,7 @@ In this task, you'll learn how to create an **Azure AI Search** resource in the 
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default  **(1)**                                 |
-   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**                |
+   | Resource Group     | **Activate-GenAI** **(2)**                |
    | Name               | *Enter a unique name* for your search service or use the format **searchservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Location           | Use the same location as the resource group **(4)**           |
    | Pricing tier       | Basic   **(5)**                                               | 
