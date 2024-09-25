@@ -122,6 +122,8 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
       ![](../media/Active-image111.png)
 
+   >**Note:** You need to use the arrow keys to navigate towards the particular selection.
+
 1. After the application has been successfully deployed you will see a URL printed to the console. Copy browse the URL to interact with the application in your browser. It will look like the following:
 
     ![](../media/Active-image108.png)
