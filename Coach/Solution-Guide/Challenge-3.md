@@ -64,12 +64,6 @@ In this task, you'll learn the process of Deploying the Infrastructure.
          # Install PowerShell 7 Preview
          Start-Process msiexec.exe -ArgumentList "/i $output /quiet" -Wait
       ```   
-
-1. Run the following command to navigate to the following path:
-
-   ```
-   cd C:\Users\demouser
-   ```   
    
 1. Run the following command to login to Azure:
 
