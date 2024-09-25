@@ -584,7 +584,7 @@ In this task, you will update JSON definitions in Visual Studio Code for Azure A
 #### Task 6.6 : Query the modified index
 In this task, you'll perform a query in Azure AI Search to retrieve URLs, sentiment, and key phrases for documents mentioning "London" with positive sentiment, authored by "Reviewer".
 
-1. At the top of the blade for your Azure AI Search resource, select **Search explorer**.
+1. At the top of the overview blade for your Azure AI Search resource, select **Search explorer**.
 1. In Search explorer, in the **Query string** box, submit the following JSON query:
 
     ```json
@@ -594,6 +594,8 @@ In this task, you'll perform a query in Azure AI Search to retrieve URLs, sentim
       "filter": "metadata_author eq 'Reviewer' and sentiment eq 'positive'"
     }
     ```
+
+   ![](../media/newaiservice2.png)
 
     This query retrieves the **url**, **sentiment**, and **keyphrases** for all documents that mention *London* authored by *Reviewer* that has a positive **sentiment** label (in other words, positive reviews that mention London).
 
@@ -745,10 +747,11 @@ In this task, you'll be running the Margie's Travel web application locally, sea
 
 1. Select the **Reviewer** filter and the **Positive to negative** sort option, and then select **Refine Results**.
 
-     ![](../media/Active-image97.png)
+    ![](../media/Active-image97.png)
    
 1. Observe that the results are filtered to include only reviews and sorted based on the sentiment label.
-   ![](../media/Active-image98.png)
+   
+    ![](../media/Active-image98.png)
    
 1. On the **Margie's Travel** website, enter **quiet hotel in New York (1)** into the search box and click **Search (2)**.
 
