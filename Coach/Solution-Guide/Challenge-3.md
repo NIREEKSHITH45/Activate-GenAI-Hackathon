@@ -47,6 +47,24 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
     ![](../media/Active-image102.png)
 
+   >**Note**: If you are not able to see the Powershell 7-preview. please do run the below commands line by line in Powershell ISE to install the **Powershell 7-preview.**
+
+      ```
+         $PSVersionTable.PSVersion
+         
+         # Define the URL for the latest PowerShell 7 Preview MSI installer
+         $url = "https://github.com/PowerShell/PowerShell/releases/download/v7.4.0-preview.2/PowerShell-7.4.0-preview.2-win-x64.msi"
+      
+         # Define the location to save the MSI file
+         $output = "$env:TEMP\PowerShell-7-Preview.msi"
+      
+         # Download the MSI installer
+         Invoke-WebRequest -Uri $url -OutFile $output
+      
+         # Install PowerShell 7 Preview
+         Start-Process msiexec.exe -ArgumentList "/i $output /quiet" -Wait
+      ```   
+
 1. Run the following command to navigate to the following path:
 
    ```
