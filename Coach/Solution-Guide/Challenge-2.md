@@ -76,7 +76,7 @@ In this task, you'll learn how to create an **Azure AI Search** resource in the 
 
    ![](../media/Active-image24.png)
    
-1. Specify the following details to create an **Azure AI Search** service then click on **Review + Create (6)** tab.
+1. Specify the following details to create an **Azure AI Search** service then click on **Next** untill you reach **Review + Create (6)** tab.
    
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
@@ -88,6 +88,7 @@ In this task, you'll learn how to create an **Azure AI Search** resource in the 
 
     >**Note**: Here, xxxxxx refers to the deployment ID
     >**Note**: If you encounter the error **Cannot get costs for subscription**, please ignore it and proceed with the next step.
+    >**Note**: If you face any issues while deploying the search service in selected region. please select different region to deploy the search service. 
     
     ![](../media/Active-image25.png)
    
@@ -122,7 +123,7 @@ In this task, you'll learn how to create an Azure AI Search resource in the Azur
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default  **(1)**                                 |
-   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
+   | Resource Group     | **Activate-GenAI**  **(2)**        |
    | Name               | *Enter a unique name* for your Azure AI Services or use the format **challengeservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Location           | Use the same location as the resource group  **(4)**          |
    | Pricing tier       | Standard S0     **(5)**                                        |
