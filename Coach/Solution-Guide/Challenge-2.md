@@ -405,7 +405,7 @@ In this task, you'll learn to search and query the index created earlier:
 
     >**Note**: This query returns the filename of any documents authored by *Reviewer* that mention "New York".
 
-      ![](../media/search-explorer.png) 
+      ![](../media/newimg.png) 
   
 ### Task 6: Explore and modify the definitions of search components
 
@@ -451,9 +451,15 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
    
 1. At the top of the skillset definition, note the **cognitiveServices** object, which is used to connect your Azure AI Services resource to the skillset.
 
-1. In the Azure portal, open your Azure AI Services resource (<u>not</u> your Azure AI Search resource!)
+1. In the Azure portal, search for Azure AI Services resource (<u>not</u> your Azure AI Search resource!)
 
-1. On **Azure AI Services** overview page, from the left navigation pane expand **Resource Management** select **Keys and Endpoints**. Then copy **Key 1** to the clipboard.
+      ![](../media/newaiservice.png)
+
+1. From the left navigate to Azure AI **Multi-Service-Account** and select the **challengeservice**.
+
+      ![](../media/newaiservice1.png)
+
+1. On **Azure AI Multi-Services-Account** overview page, from the left navigation pane expand **Resource Management** select **Keys and Endpoints**. Then copy **Key 1** to the clipboard.
 
     ![](../media/Active-image79.png)
    
@@ -464,29 +470,29 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 1. Scroll through the JSON file, noting that it includes definitions for the skills you created using the Azure AI Search user interface in the Azure portal. At the bottom of the list of skills, an additional skill has been added with the following definition:
 
     ```
-    {
+      {
         "@odata.type": "#Microsoft.Skills.Text.V3.SentimentSkill",
-        "defaultLanguageCode": "en",
         "name": "get-sentiment",
         "description": "New skill to evaluate sentiment",
         "context": "/document",
+        "defaultLanguageCode": "en",
         "inputs": [
-            {
-                "name": "text",
-                "source": "/document/merged_content"
-            },
-            {
-                "name": "languageCode",
-                "source": "/document/language"
-            }
+          {
+            "name": "text",
+            "source": "/document/merged_content"
+          },
+          {
+            "name": "languageCode",
+            "source": "/document/language"
+          }
         ],
         "outputs": [
-            {
-                "name": "sentiment",
-                "targetName": "sentimentLabel"
-            }
+          {
+            "name": "sentiment",
+            "targetName": "sentimentLabel"
+          }
         ]
-    }
+      }
     ```
 
    >**Note**: The new skill is named **get-sentiment**, and for each **document** level in a document, it will evaluate the text found in the **merged_content** field of the document being indexed (which includes the source content as well as any text extracted from images in the content). It uses the extracted **language** of the document (with a default of English) and evaluates a label for the sentiment of the content. Values for the sentiment label can be "positive", "negative", "neutral", or "mixed". This label is then output as a new field named **sentimentLabel**.
