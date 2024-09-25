@@ -79,7 +79,7 @@ In this task you'll learn the process of setting up and deploying the Azure Open
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default                                          |
-   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**                 |
+   | Resource Group     | **Activate-GenAI**                 |
    | Region             | Use the same location as the resource group            |
    | Name               | *Enter a unique name* or use the format **OpenAI-xxxxxx** (replace **xxxxxx** with the **Deployment ID** |
    | Pricing tier       | **Standard S0**                                        | 
