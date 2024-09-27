@@ -123,15 +123,17 @@ In this task, you'll learn how to create an Azure AI Search resource in the Azur
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default  **(1)**                                 |
-   | Resource Group     | **Activate-GenAI**  **(2)**        |
+   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
    | Name               | *Enter a unique name* for your Azure AI Services or use the format **challengeservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Location           | Use the same location as the resource group  **(4)**          |
    | Pricing tier       | Standard S0     **(5)**                                        |
    | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 
 
     >**Note**: Here, xxxxxx refers to the deployment ID
+
+    > **Note**: Ensure to use the same region as the Azure AI Search resource created previously.
     
-    ![](../media/Active-image(31).png)
+      ![](../media/Active-image(31).png)
    
 1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
 
@@ -152,7 +154,7 @@ In this task, you'll learn how to create a **Storage account** resource in the A
    | **Option**            | **Value**                                              |
    | ------------------    | -----------------------------------------------------  |
    | Subscription          | Leave default **(1)**                                  |
-   | Resource Group        | **Activate-GenAI** **(2)**         |
+   | Resource Group        | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**         |
    | Storage account name  | *Enter a unique name* for your Storage account or use the format **storagexxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Region                | Use the same location as the resource group **(4)**    |
    | Performance           | Standard **(5)**                                       |
@@ -181,7 +183,7 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
 
 >**Important**: Now that you have the required resources, you can upload some documents to your Azure Storage account.
 
-1. Navigate back to Visual Studio Code, under the **Explorer** pane, expand the **22-create-a-search-solution (1)** folder and select **UploadDocs.cmd (2)**.
+1. Navigate back to Visual Studio Code, under the **Explorer** pane, expand the **labfiles (1)** folder, then expand **01-azure-search (2)** and select **UploadDocs.cmd (3)**.
 
     ![](../media/Active-image47.png)
    
@@ -195,7 +197,7 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
 
     ![](../media/Active-image85.png)
    
-1. Save your changes, and then right-click the **22-create-a-search-solution (1)** folder > **open an integrated terminal (2)**.
+1. Save your changes, and then right-click the **01-azure-search (1)** folder > **open an integrated terminal (2)**.
 
     ![](../media/Active-image51.png)
 
@@ -421,11 +423,11 @@ In this task, you're preparing to execute CURL commands in Visual Studio Code to
 
     ![](../media/Active-image72.png)
    
-1. In Visual Studio Code, in the Explorer pane, expand the **22-create-a-search-solution (1)** folder and its **modify-search (2)** subfolder, and select **modify-search.cmd (3)** to open it. You will use this script file to run *CURL* commands that submit JSON to the Azure AI Service REST interface.
+1. In Visual Studio Code, in the Explorer pane, expand the **02-search-skill (1)** folder and its **update-search (2)** subfolder, and select **update-search.cmd (3)** to open it. You will use this script file to run *CURL* commands that submit JSON to the Azure AI Service REST interface.
 
      ![](../media/Active-image73.png)
    
-1. In **modify-search.cmd**, replace the **YOUR_SEARCH_URL** placeholder with the URL you copied to the clipboard.
+1. In **update-search.cmd**, replace the **YOUR_SEARCH_URL** placeholder with the URL you copied to the clipboard.
 
      ![](../media/Active-image76.png)
      
@@ -437,7 +439,7 @@ In this task, you're preparing to execute CURL commands in Visual Studio Code to
 
       ![](../media/Active-image77.png)
    
-1. Save the changes to **modify-search.cmd** (but don't run it yet!)
+1. Save the changes to **update-search.cmd** (but don't run it yet!)
 
      ![](../media/Active-image75.png)
    
