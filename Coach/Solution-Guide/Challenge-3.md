@@ -47,6 +47,12 @@ En esta tarea, aprenderá el proceso de Implementación de la infraestructura.
 
     ![](../media/Active-image102.png)
    
+1. Ejecute este comando para descargar el código del proyecto.
+
+   ```
+   azd init -t azure-search-openai-demo
+   ```
+
 1. Ejecute el siguiente comando para iniciar sesión en Azure:
 
    ```
