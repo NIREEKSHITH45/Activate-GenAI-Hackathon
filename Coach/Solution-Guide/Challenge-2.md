@@ -25,7 +25,7 @@ If you have not already cloned the **AI-102-AIEngineer** code repository to the 
 1. Execute the following command in the terminal to clone the repository to a local folder: (it doesn't matter which folder).
 
    ```
-   git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer
+   git clone https://github.com/MicrosoftLearning/mslearn-knowledge-mining
    ```
     ![](../media/Active-image43.png)
 
@@ -35,7 +35,7 @@ If you have not already cloned the **AI-102-AIEngineer** code repository to the 
 
        ![](../media/Active-image44.png)
       
-    - Within the file explorer in **Quick access** select **AI-102-AIEngineer (1)** then click on **Select folder (2)**.
+    - Within the file explorer in **Quick access** select **mslearn-knowledge-mining (1)** then click on **Select folder (2)**.
 
        ![](../media/Active-image45.png)
       
@@ -81,7 +81,7 @@ In this task, you'll learn how to create an **Azure AI Search** resource in the 
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default  **(1)**                                 |
-   | Resource Group     | **Activate-GenAI** **(2)**                |
+   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**                |
    | Name               | *Enter a unique name* for your search service or use the format **searchservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Location           | Use the same location as the resource group **(4)**           |
    | Pricing tier       | Basic   **(5)**                                               | 
