@@ -447,7 +447,7 @@ In this task, you're preparing to execute CURL commands in Visual Studio Code to
 
 In this task, you will be configuring a skillset (skillset.json) in Visual Studio Code to integrate Azure AI Services with Azure AI Search:
 
-1. In Visual Studio Code, in the **modify-search** folder, open **skillset.json**. This shows a JSON definition for **margies-skillset**.
+1. In Visual Studio Code, in the **update-search** folder, open **update-skillset.json**. This shows a JSON definition for **margies-skillset**.
 
       ![](../media/Active-image78.png)
    
@@ -465,7 +465,7 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
     ![](../media/Active-image79.png)
    
-1. In Visual Studio Code, in **skillset.json**, replace the **YOUR_COGNITIVE_SERVICES_KEY** placeholder with the Azure AI Services key you copied to the clipboard.
+1. In Visual Studio Code, in **update-skillset.json**, replace the **YOUR_COGNITIVE_SERVICES_KEY** placeholder with the Azure AI Services key you copied to the clipboard.
 
    ![](../media/Active-image80.png)
    
@@ -503,9 +503,9 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
 #### Task 6.3 : Review and modify the index
 
-In this task, you will review the index.json file in Visual Studio Code which shows a JSON definition for **margies-index**
+In this task, you will review the update-index.json file in Visual Studio Code which shows a JSON definition for **margies-custom-index**
 
-1. In Visual Studio Code, in the **modify-search** folder, open **index.json**. This shows a JSON definition for **margies-index**.
+1. In Visual Studio Code, in the **update-search** folder, open **update-index.json**. This shows a JSON definition for **margies-custom-index**.
 
      ![](../media/Active-image81.png)
    
@@ -536,9 +536,9 @@ In this task, you will review the index.json file in Visual Studio Code which sh
 
 #### Task 6.4: Review and modify the indexer
 
-In this task, you will review the **indexer.json** file in Visual Studio Code which shows a JSON definition for **margies-index**
+In this task, you will review the **update-indexer.json** file in Visual Studio Code which shows a JSON definition for **margies-custom-indexer**
 
-1. In Visual Studio Code, in the **modify-search** folder, open **indexer.json**. This shows a JSON definition for **margies-indexer**, which maps fields extracted from document content and metadata (in the **fieldMappings** section) and values extracted by skills in the skillset (in the **outputFieldMappings** section) to fields in the index.
+1. In Visual Studio Code, in the **update-search** folder, open **update-indexer.json**. This shows a JSON definition for **margies-custom-indexer**, which maps fields extracted from document content and metadata (in the **fieldMappings** section) and values extracted by skills in the skillset (in the **outputFieldMappings** section) to fields in the index.
 
      ![](../media/Active-image82.png)
     
@@ -567,14 +567,14 @@ In this task, you will review the **indexer.json** file in Visual Studio Code wh
 
 In this task, you will update JSON definitions in Visual Studio Code for Azure AI Search to include new fields like sentiment analysis results and document URLs. Run modify-search.cmd to apply changes and start indexing. Monitor progress in Azure portal's Indexers section for completion and document size warnings during sentiment analysis.
 
-1. Right-click the **modify-search** folder and select **open an integrated terminal**.
+1. Right-click the **update-search** folder and select **open an integrated terminal**.
 
      ![](../media/Active-image83.png)
    
-1. In the terminal pane for the **modify-search** folder, enter the following command to run the **modify-search.cmd** script, which submits the JSON definitions to the REST interface and initiates the indexing.
+1. In the terminal pane for the **update-search** folder, enter the following command to run the **update-search.cmd** script, which submits the JSON definitions to the REST interface and initiates the indexing.
 
     ```
-    .\modify-search
+    .\update-search
     ```
 
 1. When the script has finished, return to the **Overview** page for your **Azure AI Search** from the left navigation pane expand **Search management** and select **Indexers**. Then periodically select **Refresh** to track the progress of the indexing operation. It may take a minute or so to complete.
