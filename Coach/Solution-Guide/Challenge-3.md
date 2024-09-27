@@ -65,6 +65,12 @@ In this task, you'll learn the process of Deploying the Infrastructure.
          Start-Process msiexec.exe -ArgumentList "/i $output /quiet" -Wait
       ```   
    
+1. Run this command to download the project code.
+
+   ```
+   azd init -t azure-search-openai-demo
+   ```
+
 1. Run the following command to login to Azure:
 
    ```
