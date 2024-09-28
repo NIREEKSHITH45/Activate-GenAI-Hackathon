@@ -183,7 +183,7 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
 
 >**Important**: Now that you have the required resources, you can upload some documents to your Azure Storage account.
 
-1. Navigate back to Visual Studio Code, under the **Explorer** pane, expand the **labfiles (1)** folder, then expand **01-azure-search (2)** and select **UploadDocs.cmd (3)**.
+1. Navigate back to Visual Studio Code, under the **Explorer** pane, expand the **labfiles** folder, then expand **01-azure-search (1)** and select **UploadDocs.cmd (2)**.
 
     ![](../media/ai-4.png)
    
