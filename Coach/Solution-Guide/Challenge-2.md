@@ -27,7 +27,7 @@ If you have not already cloned the **AI-102-AIEngineer** code repository to the 
    ```
    git clone https://github.com/MicrosoftLearning/mslearn-knowledge-mining
    ```
-    ![](../media/Active-image43.png)
+    ![](../media/ai-1.png)
 
 1. When the repository has been cloned, open the folder in Visual Studio Code by following these steps:
 
@@ -37,11 +37,11 @@ If you have not already cloned the **AI-102-AIEngineer** code repository to the 
       
     - Within the file explorer in **Quick access** select **mslearn-knowledge-mining (1)** then click on **Select folder (2)**.
 
-       ![](../media/Active-image45.png)
+       ![](../media/ai-2.png)
       
     - If **Do you trust the authors of the files in this folder?** prompted click on **Yes, I trust the authors**.
 
-         ![](../media/Active-image46.png)
+         ![](../media/ai-3.png)
 
        > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
@@ -185,7 +185,7 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
 
 1. Navigate back to Visual Studio Code, under the **Explorer** pane, expand the **labfiles (1)** folder, then expand **01-azure-search (2)** and select **UploadDocs.cmd (3)**.
 
-    ![](../media/Active-image47.png)
+    ![](../media/ai-4.png)
    
 1. Navigate back to browser tab displaying **Azure portal**, retrieve the **subscription ID (1)**, **Azure storage account name (2)**, and **Azure storage account key** by clicking **Show** > **Clipboard (3)** option from the recently created storage account and record the values in notepad.
 
@@ -195,11 +195,11 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
    
 1. Return to VS code and edit the batch file to replace placeholders **YOUR_SUBSCRIPTION_ID**, **YOUR_AZURE_STORAGE_ACCOUNT_NAME**, and **YOUR_AZURE_STORAGE_KEY** with the corresponding values which you recorded in previous step.
 
-    ![](../media/Active-image85.png)
+    ![](../media/ai-5.png)
    
 1. Save your changes, and then right-click the **01-azure-search (1)** folder > **open an integrated terminal (2)**.
 
-    ![](../media/Active-image51.png)
+    ![](../media/ai-5.1.png)
 
 1. Enter the following command to sign into your Azure subscription by using the Azure CLI:
 
@@ -211,7 +211,7 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
     az login --username <your-username> --password <your-password>
     ```
 
-    ![](../media/Active-image52.png)
+    ![](../media/ai-6.png)
       
    > **Note**: If a web browser tab opens and prompts you to sign in to Azure, please sign in, then close the browser tab and return to Visual Studio Code.
 
@@ -221,7 +221,7 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
     .\UploadDocs
     ```
 
-   ![](../media/Active-image53.png)
+   ![](../media/ai-7.png)
 
 ### Task 5: Data Import and Indexing:
 #### Task 5.1: Index the documents
@@ -425,11 +425,11 @@ In this task, you're preparing to execute CURL commands in Visual Studio Code to
    
 1. In Visual Studio Code, in the Explorer pane, expand the **02-search-skill (1)** folder and its **update-search (2)** subfolder, and select **update-search.cmd (3)** to open it. You will use this script file to run *CURL* commands that submit JSON to the Azure AI Service REST interface.
 
-     ![](../media/Active-image73.png)
+     ![](../media/ai-8.png)
    
 1. In **update-search.cmd**, replace the **YOUR_SEARCH_URL** placeholder with the URL you copied to the clipboard.
 
-     ![](../media/Active-image76.png)
+     ![](../media/ai-9.png)
      
 1. In the Azure portal, back to **Overview** page for your **Azure AI Search** resource expand **Settings** and select **Keys** and copy the **Primary admin key** to the clipboard.
 
@@ -449,7 +449,7 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
 1. In Visual Studio Code, in the **update-search** folder, open **update-skillset.json**. This shows a JSON definition for **margies-skillset**.
 
-      ![](../media/Active-image78.png)
+      ![](../media/ai-10.png)
    
 1. At the top of the skillset definition, note the **cognitiveServices** object, which is used to connect your Azure AI Services resource to the skillset.
 
@@ -467,7 +467,7 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
    
 1. In Visual Studio Code, in **update-skillset.json**, replace the **YOUR_COGNITIVE_SERVICES_KEY** placeholder with the Azure AI Services key you copied to the clipboard.
 
-   ![](../media/Active-image80.png)
+   ![](../media/ai-11.png)
    
 1. Scroll through the JSON file, noting that it includes definitions for the skills you created using the Azure AI Search user interface in the Azure portal. At the bottom of the list of skills, an additional skill has been added with the following definition:
 
