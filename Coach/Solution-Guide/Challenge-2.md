@@ -499,7 +499,7 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
    >**Note**: The new skill is named **get-sentiment**, and for each **document** level in a document, it will evaluate the text found in the **merged_content** field of the document being indexed (which includes the source content as well as any text extracted from images in the content). It uses the extracted **language** of the document (with a default of English) and evaluates a label for the sentiment of the content. Values for the sentiment label can be "positive", "negative", "neutral", or "mixed". This label is then output as a new field named **sentimentLabel**.
 
-1. Save the changes you've made to **skillset.json**.
+1. Save the changes you've made to **update-skillset.json**.
 
 #### Task 6.3 : Review and modify the index
 
