@@ -31,7 +31,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
       ![](../media/Active-image123.png)       
 
-1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI services multi-service account (1)**, and then select **Azure AI services multi-service account(2)** under services.
+1. On the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI services multi-service account (1)**, and then select **Azure AI services multi-service account(2)** under services.
 
    ![](../media/Active-image(124).png)
 
@@ -93,7 +93,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
      
      ![](../media/Active-image135.png)
 
-   - Select scopes: Select all the scopes **repo, workflow, write:packages, delete:packages, admin:org, admin:public_key, admin:repo_hook, admin:org_hook, gist,notifications, user, delete_repo, write:discussion, admin:enterprise, audit_log, codespace, copilot, project, admin:gpg_key, admin:ssh_signing_key** and click on **Genearte token**.
+   - Select scopes: Select all the scopes **repo, workflow, write: packages, delete: packages, admin: org, admin:public_key, admin:repo_hook, admin:org_hook, gist, notifications, user, delete_repo, write: discussion, admin: enterprise, audit_log, codespace, copilot, project, admin:gpg_key, admin:ssh_signing_key** and click on **Genearte token**.
 
       ![](../media/Active-image138.png)
 
@@ -103,7 +103,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
    >**Reference link**: [Get a Workflow Level Token (Classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
-1. Copy the **PAT token** and paste it in a notepad.
+1. Copy the **PAT token** and paste into a notepad.
 
       ![](../media/gen37.png)
    
@@ -112,11 +112,11 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
      ### With OpenAI
       [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
 
-1. Custom deployment blade, specify the following and others parameters can keep default values.
+1. Custom deployment blade, specify the following, and other parameters can keep default values.
 
    - Resource Group : **ODL-GenAI-CL-xxxxxx-Activate-GenAI**
-   - Repository Token : Paste the PAT token which you created and recorded in previous step.
-   - Repository Url : Paste the **Forked Github account** url
+   - Repository Token: Paste the PAT token that you created and recorded in the previous step.
+   - Repository Url: Paste the **Forked Github account** URL
 
       ![](../media/gen39.png)
   
@@ -124,7 +124,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
       
        ![](../media/gen47.png)
      
-     >**Note**: (you can get URL by click on profile from right corner then select **Your repositories** click on **business-process-automation** and from top bar copy the **Github account** url)
+     >**Note**: (you can get the URL by clicking on profile from the right corner then selecting **Your repositories** clicking on **business-process-automation** and from the top bar copy the **Github account** URL)
      
      ![](../media/Active-image141.png)
 
@@ -135,6 +135,41 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 1. Verify that all the resources are deployed without any issues.
    
    ![](../media/d005.png)
+
+1. In the **LabVM**, in the Windows Search bar type **Powershell** and select **PowerShell**.
+
+
+1. Change the directory and download the project code using the following command to configure functions for the Function App.
+
+   ```
+   cd C:\LabFiles
+   git clone https://github.com/Azure/business-process-automation.git
+   ```
+
+1. Change the directory to `backend/api` by running the following command.
+
+   ```
+   cd c:\LabFiles\business-process-automation\src\backend\api
+   ```
+
+1. Run the fallowing command install **dependencies** and **translate typescript** files into javascript.
+
+    ```
+    npm install 
+    npm run build
+    ```
+
+    > **Note**: Please note that the process may take up to 5 minutes to complete.
+
+1. In the meanwhile navigate back to **Azure portal**. On the Azure Portal page, enter the **Search resources, services, and docs (G+/)** box at the portal's top, enter **Function App**, and then select **Function App** under services.
+
+1. On the Function App page, select the Hugging Face Function App with a name that starts with `huggingface{suffix}`.
+
+1. On the `huggingface{suffix}` function app, click on **Environment variables**, under settings verify `WEBSITE_RUN_FROM_PACKAGE` as **1**.
+
+1. Navigate back to the Function App page, and select the BPA Function App with a name that starts with `bpa{suffix}`.
+
+1. On the `bpa{suffix}` function app, click on **Environment variables**, under settings verify `WEBSITE_RUN_FROM_PACKAGE` as **1**.
    
 #### Task 1.2 - Create Azure Blob Storage containers
 
