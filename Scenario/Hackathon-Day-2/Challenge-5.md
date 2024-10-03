@@ -16,16 +16,29 @@ Você utilizará o Form Recognizer Service e o Business Process Automation (BPA)
 
 > **Important**: Ao provisionar os serviços neste desafio, certifique-se de usar o grupo de recursos com o nome **<inject key="Resource Group Name"/>**  !
 
-1. **Configurar o Azure Blob Storage:**
+1. **Bifurque o repositório e gere um GitHub Personal Access Token (PAT).**
+
+   - Bifurque o repositório do Business Process Automation no seu GitHub: `https://github.com/CloudLabs-MOC/business-process-automation`.
+   - Gere um token de acesso pessoal (PAT) do GitHub com token de nível de fluxo de trabalho.
+
+2. **Implantar a Infraestrutura Azure no Portal Azure**:
+
+   - Clique no botão “Implantar no Azure” (TODO):
+
+      [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
+
+   - São necessários o token de repositório atualizado e o URL do repositório Git bifurcado. Os restantes parâmetros já estão preenchidos.
+
+3. **Configurar o Azure Blob Storage:**
    - Crie os containers de origem e destino no Azure Blob Storage para o processamento de documentos, configurando o acesso como blob access.
 
 
-2. **Inicialize o Ambiente C#/.NET para Processamento de Documentos:**
+4. **Inicialize o Ambiente C#/.NET para Processamento de Documentos:**
    - Configure um projeto C#/.NET no Visual Studio para tradução de documentos usando o .NET versão 7.
    - Instale os pacotes necessários, incluindo o Newtonsoft.Json.
 
 
-3. **Traduza Documentos e Execute o Aplicativo:**
+5. **Traduza Documentos e Execute o Aplicativo:**
    - Implemente o código para a tradução de documentos no projeto C#/.NET..
    - Execute o aplicativo para traduzir todos os documentos no container de armazenamento.
    > Nota: Você pode encontrar os documentos em C:\LabFiles\Documents.
