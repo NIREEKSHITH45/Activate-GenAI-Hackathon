@@ -163,14 +163,52 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
 1. In the meanwhile navigate back to **Azure portal**. On the Azure Portal page, enter the **Search resources, services, and docs (G+/)** box at the portal's top, enter **Function App**, and then select **Function App** under services.
 
-1. On the Function App page, select the Hugging Face Function App with a name that starts with `huggingface{suffix}`.
+1. On the Function App page, select the Hugging Face Function App with a name that starts with `huggingface{suffix}`. Copy the Hugging Face Function App name into a notepad.
 
 1. On the `huggingface{suffix}` function app, click on **Environment variables**, under settings verify `WEBSITE_RUN_FROM_PACKAGE` as **1**.
 
-1. Navigate back to the Function App page, and select the BPA Function App with a name that starts with `bpa{suffix}`.
+1. Navigate back to the Function App page, and select the BPA Function App with a name that starts with `bpa{suffix}`. Copy the BPA Function App name into a notepad.
 
 1. On the `bpa{suffix}` function app, click on **Environment variables**, under settings verify `WEBSITE_RUN_FROM_PACKAGE` as **1**.
-   
+
+1. Navigate you **Powershell** in the LabVM, run the fallowing command to login to Azure using **CLI**.
+
+   ```
+   az login -u {azureusername} -p {azurepassword}
+   ```
+
+   > **Note**: Replace **{azureusername}** with **Azure Username** and **{azurepassword}** with **Azure Passowrd**. Azure username and Password can be found in it from **Environment** tab.
+ 
+      ![](../media/Active-image19.png)
+
+1. Once you login into the azure portal throught CLI command. Run the fallwoing command to change directory to api.
+
+   ```
+   cd c:\LabFiles\business-process-automation\src\backend\api
+   ```
+
+1. Run the following command to deploy of **functions** in the `bpa{suffix}` Azure Function App, replacing any previous deployment settings. Replace `{JS_FUNCTION_APP_NAME}` with BPA Function App with a name that starts with `bpa{suffix}`.
+
+   ```
+   func azure functionapp publish {JS_FUNCTION_APP_NAME} --javascript --force
+   ```
+
+   > **Note**: Deployment will take upto 10 min please wait till it succedded.
+
+1. Change the directory to `backend/huggingface` by running the following command.
+
+   ```
+   cd c:\LabFiles\business-process-automation\src\backend\huggingface
+   ```
+
+1. Run the following command to deploy of **functions** in the `huggingface{suffix}` Azure Function App, replacing any previous deployment settings. Replace `{HF_FUNCTION_APP_NAME}` with BPA Function App with a name that starts with `huggingface{suffix}`.
+
+   ```
+   func azure functionapp publish {HF_FUNCTION_APP_NAME} --python --build remote --force
+   ```
+
+   > **Note**: Deployment will take upto 10 min please wait till it succedded.
+
 #### Task 1.2 - Create Azure Blob Storage containers
 
 In this task, you'll learn how to create a container in an existing storage account where the documents that need to be searched are stored.
