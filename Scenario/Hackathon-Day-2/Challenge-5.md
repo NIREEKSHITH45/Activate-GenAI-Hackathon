@@ -14,18 +14,29 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 ## Challenge Objectives:
 
-> **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**  !
+> **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>** !
 
-1. **Setup Azure Blob Storage.**
+1. **Fork the repository and generate a GitHub Personal Access Token (PAT).**
+
+   - Fork the repo Business Process Automation repository into your GitHub: `https://github.com/CloudLabs-MOC/business-process-automation`.
+   - Generate a GitHub Personal Access Token (PAT) with Workflow Level Token.
+
+2. **Deploy Azure Infrastructure in the Azure Portal**:
+
+   - Click on the "Deploy to Azure" button (TODO):
+
+     [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
+
+   - Updated repository token and forked Git repository URL are needed. The remaining parameters are already filled in.
+      
+4. **Setup Azure Blob Storage.**
    - Create mandatory source and target containers in Azure Blob Storage for document processing by granting blob access.
 
-
-2. **Initialize the C#/.NET Environment for Document Processing:**
+5. **Initialize the C#/.NET Environment for Document Processing:**
    - Set up a C#/.NET project in Visual Studio for document translation using .Net Version 7.
    - Install the necessary packages, including Newtonsoft.Json.
 
-
-3. **Translate Documents and Run the Application:**
+6. **Translate Documents and Run the Application:**
    - Implement document translation code in the C#/.NET project.
    - Execute the application to translate all documents in the storage container.
    > Note: You can find the documents in C:\LabFiles\Documents.
@@ -41,17 +52,14 @@ You will utilize the Form Recognizer Service and the Business Process Automation
     - Upload and label training documents to train the Azure Document Intelligence (Form Recognizer) model.
     > Note: You can find the documents in C:\LabFiles\Documents.
 
-
 2. **Build a New Pipeline with a Custom Model Module in BPA:**
     - Utilize the trained Azure Document Intelligence  to create a new pipeline in BPA.
     - Configure the pipeline for efficient document processing and integration with Azure Cognitive Search.
     > Hint : Utilize static web app.
 
-
 3. **Configure Azure AI Search:**
     - Connect to Azure Blob Storage and configure data import and indexing.
     - Set up an indexer for organized data retrieval.
-
 
 4. **Update the Azure OpenAI Model to use the Azure AI Search**
     - Update your existing Azure OpenAI model deployment to connect to the newly created AI Search index and test using the Azure OpenAI Playground.
