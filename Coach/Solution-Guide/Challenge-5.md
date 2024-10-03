@@ -62,7 +62,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
     >**Note**: Reference doc: [Quickstart: Create a Cognitive Services resource using the Azure portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows). Once accepted, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc.) under the same Azure subscription.
 
-1. Navigate to `https://github.com/CloudLabs-MOC/business-process-automation` and click on **Sign in** then provide your personal **GitHub Username** and **Password** then click **Sign in**.
+1. Navigate to `https://github.com/Azure/business-process-automation` and click on **Sign in** then provide your personal **GitHub Username** and **Password** then click **Sign in**.
 
     ![](../media/Active-image128.png)
 
@@ -110,7 +110,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 1. Click on the "Deploy to Azure" button that corresponds to your environment.
 
      ### With OpenAI
-      [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
+      [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
 
 1. Custom deployment blade, specify the following, and other parameters can keep default values.
 
