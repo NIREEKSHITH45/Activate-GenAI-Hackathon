@@ -64,7 +64,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
 1. Navigate to `https://github.com/Azure/business-process-automation` and click on **Sign in** then provide your personal **GitHub Username** and **Password** then click **Sign in**.
 
-    ![](../media/Active-image128.png)
+    ![](../media/ch5-14.png)
 
     ![](../media/Active-image129.png)
     
