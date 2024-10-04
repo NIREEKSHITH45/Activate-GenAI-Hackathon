@@ -43,7 +43,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
    > **Note**: Make sure you are logged in to Azure
         
-   - Change the directory to \src\backend\huggingface and run the following command by replacing the appropriate function app name
+   - Change the directory to `\src\backend\huggingface` and run the following command by replacing the appropriate function app name.
 
    ```
    func azure functionapp publish {HF_FUNCTION_APP_NAME} --python --build remote --force
