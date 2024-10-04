@@ -126,7 +126,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
      
      >**Note**: (you can get the URL by clicking on profile from the right corner then selecting **Your repositories** clicking on **business-process-automation** and from the top bar copy the **Github account** URL)
      
-     ![](../media/ch5-7.png)
+     ![](../media/ch5-15.png)
 
 1. Click on **Review + Create**.
 
