@@ -16,16 +16,49 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**  !
 
+1. **Fork the repository and generate a GitHub Personal Access Token (PAT).**
+
+   - Fork the **Business Process Automation** repository into your GitHub: `https://github.com/Azure/business-process-automation`.
+   - Generate a GitHub **Personal Access Token (PAT)** with Workflow Level Token.
+
+1. **Deploy Azure Infrastructure in the Azure Portal**:
+
+   - Click on the "Deploy to Azure" button (TODO):
+
+      [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
+
+   - Update the repository token and forked Git repository URL by keeping the other options as default.
+
+1. **Install dependencies and translate typescript**.
+
+      - Clone the repository and change the directory to `src/backend/api`.
+      - Run npm and build it.
+
+1. **Deploy functions in the Azure Function App**.
+
+      - Ensure to stay in the api directory and run the following command by replacing the appropriate function app name.
+
+   ```
+   func azure functionapp publish {JS_FUNCTION_APP_NAME} --javascript --force
+   ```
+
+   > **Note**: Make sure you are logged in to Azure
+        
+   - Change the directory to \src\backend\huggingface and run the following command by replacing the appropriate function app name
+
+   ```
+   func azure functionapp publish {HF_FUNCTION_APP_NAME} --python --build remote --force
+   ```
+
 1. **Setup Azure Blob Storage.**
    - Create mandatory source and target containers in Azure Blob Storage for document processing by granting blob access.
 
-
-2. **Initialize the C#/.NET Environment for Document Processing:**
+1 **Initialize the C#/.NET Environment for Document Processing:**
    - Set up a C#/.NET project in Visual Studio for document translation using .Net Version 7.
    - Install the necessary packages, including Newtonsoft.Json.
 
 
-3. **Translate Documents and Run the Application:**
+1. **Translate Documents and Run the Application:**
    - Implement document translation code in the C#/.NET project.
    - Execute the application to translate all documents in the storage container.
    > Note: You can find the documents in C:\LabFiles\Documents.
