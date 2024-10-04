@@ -35,19 +35,16 @@ You will utilize the Form Recognizer Service and the Business Process Automation
       - Run npm and build it.
 
 1. **Deploy functions in the Azure Function App**.
+      
       - Ensure to stay in the api directory and run the following command by replacing the appropriate function app name.
 
-   ```
-   func azure functionapp publish {JS_FUNCTION_APP_NAME} --javascript --force
-   ```
+    > **Hint**: Publish the functions to the appropriate function app which is using Javascript runtime stack.
 
    > **Note**: Make sure you are logged in to Azure
         
    - Change the directory to `\src\backend\huggingface` and run the following command by replacing the appropriate function app name.
 
-   ```
-   func azure functionapp publish {HF_FUNCTION_APP_NAME} --python --build remote --force
-   ```
+    > **Hint**: Publish the functions to the appropriate function app which is using Python runtime stack.
 
 1. **Setup Azure Blob Storage.**
    - Create mandatory source and target containers in Azure Blob Storage for document processing by granting blob access.
