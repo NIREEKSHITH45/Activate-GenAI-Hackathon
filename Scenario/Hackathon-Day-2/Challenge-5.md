@@ -19,7 +19,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 1. **Fork the repository and generate a GitHub Personal Access Token (PAT).**
 
    - Fork the repo Business Process Automation repository into your GitHub: `https://github.com/CloudLabs-MOC/business-process-automation`.
-   - Generate a GitHub Personal Access Token (PAT) with Workflow Level Token.
+   - Generate a **GitHub Personal Access Token (PAT)** with Workflow Level Token.
 
 2. **Deploy Azure Infrastructure in the Azure Portal**:
 
@@ -27,7 +27,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
      [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
 
-   - Updated repository token and forked Git repository URL are needed. The remaining parameters are already filled in.
+   - Update the repository token and forked Git repository URL by keeping the other options as default.
       
 4. **Setup Azure Blob Storage.**
    - Create mandatory source and target containers in Azure Blob Storage for document processing by granting blob access.
