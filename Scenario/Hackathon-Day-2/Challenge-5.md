@@ -35,7 +35,6 @@ You will utilize the Form Recognizer Service and the Business Process Automation
       - Run npm and build it.
 
 1. **Deploy functions in the Azure Function App**.
-
       - Ensure to stay in the api directory and run the following command by replacing the appropriate function app name.
 
    ```
@@ -53,7 +52,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 1. **Setup Azure Blob Storage.**
    - Create mandatory source and target containers in Azure Blob Storage for document processing by granting blob access.
 
-1 **Initialize the C#/.NET Environment for Document Processing:**
+1. **Initialize the C#/.NET Environment for Document Processing:**
    - Set up a C#/.NET project in Visual Studio for document translation using .Net Version 7.
    - Install the necessary packages, including Newtonsoft.Json.
 
