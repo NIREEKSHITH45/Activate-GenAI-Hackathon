@@ -138,20 +138,20 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
 1. In the **LabVM**, in the Windows Search bar type **Powershell** and select **PowerShell**.
 
-1. Change the directory and download the project code using the following command to configure functions for the Function App.
+1. Change the directory and download the project code using the following command to configure functions for the Function App:
 
    ```
    cd C:\LabFiles
    git clone https://github.com/Azure/business-process-automation.git
    ```
 
-1. Change the directory to `backend/api` by running the following command.
+1. Change the directory to `backend/api` by running the following command:
 
    ```
    cd c:\LabFiles\business-process-automation\src\backend\api
    ```
 
-1. Run the fallowing command install **dependencies** and **translate typescript** files into javascript.
+1. Run the following command to install **dependencies** and **translate typescript** files into javascript:
 
     ```
     npm install 
@@ -182,7 +182,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
    ![](../media/ch5-4.png)
 
-1. Navigate you **Powershell** in the LabVM, run the fallowing command to login to Azure using **CLI**.
+1. Navigate you **Powershell** in the LabVM, run the following command to login to Azure using **CLI**.
 
    ```
    az login -u {azureusername} -p {azurepassword}
@@ -192,13 +192,13 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
  
       ![](../media/Active-image19.png)
 
-1. Once you login into the azure portal throught CLI command. Run the fallwoing command to change directory to api.
+1. Once you login into the azure portal throught CLI command, run the follwoing command to change directory to api:
 
    ```
    cd c:\LabFiles\business-process-automation\src\backend\api
    ```
 
-1. Run the following command to deploy **functions** in the `bpa{suffix}` Azure Function App, replacing any previous deployment settings. Replace `{JS_FUNCTION_APP_NAME}` with BPA Function App with a name that starts with `bpa{suffix}`.
+1. Run the following command to deploy **functions** in the `bpa{suffix}` Azure Function App. Replace `{JS_FUNCTION_APP_NAME}` with BPA Function App with the name that starts with `bpa{suffix}`.
 
    ```
    func azure functionapp publish {JS_FUNCTION_APP_NAME} --javascript --force
@@ -206,15 +206,15 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
      ![](../media/ch5-2.png)
 
-      > **Note**: Deployment will take upto 10 min please wait till it succedded. 
+      > **Note**: Deployment will take upto 10 minutes, please wait until it succeeds. 
 
-1. Change the directory to `backend/huggingface` by running the following command.
+1. Change the directory to `backend/huggingface` by running the following command:
 
    ```
    cd c:\LabFiles\business-process-automation\src\backend\huggingface
    ```
 
-1. Run the following command to deploy of **functions** in the `huggingface{suffix}` Azure Function App, replacing any previous deployment settings. Replace `{HF_FUNCTION_APP_NAME}` with BPA Function App with a name that starts with `huggingface{suffix}`.
+1. Run the following command to deploy **functions** in the `huggingface{suffix}` Azure Function App. Replace `{HF_FUNCTION_APP_NAME}` with hugging face Function App with the name that starts with `huggingface{suffix}`.
 
    ```
    func azure functionapp publish {HF_FUNCTION_APP_NAME} --python --build remote --force
@@ -222,7 +222,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
       ![](../media/ch5-1.png)
   
-   > **Note**: Deployment will take upto 10 min please wait till it succedded.
+      > **Note**: Deployment will take upto 10 minutes, please wait until it succeeds.
 
 ### Task 1.2 - Create Azure Blob Storage containers
 
