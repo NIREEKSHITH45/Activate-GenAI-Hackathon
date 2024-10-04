@@ -27,24 +27,24 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
       [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
 
-   - Update the repository token and forked Git repository URL by keeping the other options as default.
+   - Update the repository token and forked Git repository URL while leaving all other settings unchanged.
 
 1. **Install dependencies and translate typescript**.
 
       - Clone the repository and change the directory to `src/backend/api`.
-      - Run npm and build it.
+      - Execute **npm** to build the project.
 
 1. **Deploy functions in the Azure Function App**.
       
-      - Ensure to stay in the api directory and run the following command by replacing the appropriate function app name.
+      - Ensure to stay in the api directory and publish the function.
 
-    > **Hint**: Publish the functions to the appropriate function app which is using Javascript runtime stack.
-
-   > **Note**: Make sure you are logged in to Azure
+    > **Hint**: Publish the function to the designated function app that is configured to use the JavaScript runtime stack.
+    
+    > **Note**: Make sure you are logged in to Azure
         
-   - Change the directory to `\src\backend\huggingface` and run the following command by replacing the appropriate function app name.
+   - Change the directory to `\src\backend\huggingface` and publish the function.
 
-    > **Hint**: Publish the functions to the appropriate function app which is using Python runtime stack.
+    > **Hint**: Publish the function to the designated function app that is configured to use the Python runtime stack.
 
 1. **Setup Azure Blob Storage.**
    - Create mandatory source and target containers in Azure Blob Storage for document processing by granting blob access.
