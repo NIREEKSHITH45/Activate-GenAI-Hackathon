@@ -19,31 +19,31 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
 1. Log in to your account using your credentials to access the platform and its features. If you encounter any issues, ensure your login details are correct or reset your password if needed.
 
-   ![](../../Scenario/Media/nvidia2.png)
+   ![](../../Coach/media/nvidia2.png)
 
 1. If prompted, fill out the form to complete your profile setup.
 
-   ![](../../Scenario/Media/nvidia3.png)
+   ![](../../Coach/media/nvidia3.png)
 
 1. Click on "Account" at the top of the page and navigate to the "Setup" section.
 
-   ![](../../Scenario/Media/nvidia4.png)
+   ![](../../Coach/media/nvidia4.png)
 
 2. Click on **Generate API Key** to create a new key for accessing the necessary services.
 
-   ![](../../Scenario/Media/nvidia5.png)
+   ![](../../Coach/media/nvidia5.png)
 
 3. From the top, click on **+ Generate API Key** to create a new API key.
 
-   ![](../../Scenario/Media/nvidia8.png)
+   ![](../../Coach/media/nvidia8.png)
 
 1. Click on **Confirm** to generate your new API key.
 
-   ![](../../Scenario/Media/nvidia9.png)
+   ![](../../Coach/media/nvidia9.png)
 
 1. Carefully copy your generated API key, as it will be essential for accessing various services and features. Ensure you store it securely, as it may not be displayed again after you leave the page.
 
-   ![](../../Scenario/Media/nvidia7.png)
+   ![](../../Coach/media/nvidia7.png)
 
 ### Create Container Registries
 
@@ -51,7 +51,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
 1. In the search bar of the Azure portal, type **Container registries** (1). From the search results, select **Container registries** (2) to access the container registry management section.
 
-   ![](../../Scenario/Media/cr1.png)
+   ![](../../Coach/media/cr1.png)
 
 1. Click on **+ Create**.
 
@@ -65,21 +65,21 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | **Location** | **East US 2** (3) |
     | **Pricing plan** | **Standard** (4) |
 
-   ![](../../Scenario/Media/cr2.png)
+   ![](../../Coach/media/cr2.png)
 
-   ![](../../Scenario/Media/cr3.png)
+   ![](../../Coach/media/cr3.png)
 
 1. Once the deployment is completed, click on **Go to resource**.
 
 1. From the Overview page copy your subscription id you will use this later
 
-   ![](../../Scenario/Media/cr4.png)
+   ![](../../Coach/media/cr4.png)
 
 ### Visual Studio config.sh file update
 
 1. Start **Visual Studio Code** by launching it from your desktop.
 
-   ![](../../Scenario/Media/vscode1.png)
+   ![](../../Coach/media/vscode1.png)
 
 1. Go to the **Explorer** panel in the upper left corner, click on **Open Folder**, and then select the **nim-deploy** folder from your Desktop.
 
@@ -89,11 +89,11 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
    Desktop\nim-deploy\cloud-service-providers\azure\azureml\cli
    ```
 
-   ![](../../Scenario/Media/vscode2.png)
+   ![](../../Coach/media/vscode2.png)
 
 1. Select **Yes, I trust the authors**.
 
-   ![](../../Scenario/Media/vscode3.png)
+   ![](../../Coach/media/vscode3.png)
 
 1. Open the `config.sh` file and update the values as needed. You can refer to the `example_config.sh` file for guidance on the appropriate configurations and settings.
 
@@ -109,9 +109,9 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | **acr_registry_name** | **amlregistry**|
     | **image_name** | **nvcr.io/nim/meta/llama-3.1-8b-instruct:latest**|
 
-   ![](../../Scenario/Media/vscode4.png)
+   ![](../../Coach/media/vscode4.png)
 
-   ![](../../Scenario/Media/vscode5.png)
+   ![](../../Coach/media/vscode5.png)
 
 1. Press **Ctrl + S** to save the changes you made to the file.
 
@@ -164,7 +164,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
 1. You can find the newly created worksapce in azure
 
-   ![](../../Scenario/Media/bash1.png)
+   ![](../../Coach/media/bash1.png)
 
 ### Store NGC API Key for Use in the AzureML Deployment
 
@@ -195,7 +195,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 1. Navigate to your container registry (**amlregistry**) , Under the service click on the Respositiories select your **nim-meta-llama-3.1-8b-instruct** regiestry, here you will find your image is pushed with the tag name latest.
 
-   ![](../../Scenario/Media/bash2.png)
+   ![](../../Coach/media/bash2.png)
 
 ### Create Managed Online Endpoint
 
@@ -211,15 +211,15 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 1. Go to **amlregistry** container regiestry first. navigate to **Access control (IAM)** (1). Click on **+ Add**(2) and choose **Add role assignment** (3). This allows you to assign specific roles to users, groups, or applications, controlling their permissions to manage resources associated with the app service.
 
-   ![](../../Scenario/Media/bash3.png)
+   ![](../../Coach/media/bash3.png)
 
 1. In the **Add role assignment** page, under the Role tab, choose **Job function roles** (1). Search and select **AcrPull** (2) within this category, and then click **Next** (3) to proceed.
 
-   ![](../../Scenario/Media/bash4.png)
+   ![](../../Coach/media/bash4.png)
 
 1. Next, under the **Members** tab, select **Managed identity** (1) for Assign access to, and then click on **+ Select members** (2). Further, under the **Select managed identities** on the right, choose **Machine learning online endpoint** (3) for **Managed identity**. Finally, under **Selected members**, choose the **llama3-1-8b-nim-endpoint-aml-1** (4), of choice and then continue by clicking on **Select** (5) and **Next** (6).
 
-   ![](../../Scenario/Media/bash5.png)
+   ![](../../Coach/media/bash5.png)
 
 1. Click on **Review + assign**.
 
