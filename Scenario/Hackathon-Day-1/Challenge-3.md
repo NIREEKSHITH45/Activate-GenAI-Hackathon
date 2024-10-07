@@ -69,6 +69,11 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
    <validation step="9b4373a3-2a97-40ca-8c61-f1182e5eb2ce" />
 
+1. **Deploying with NVIDIA NIM**
+
+    - Along with OpenAI Large Language Models (LLMs), NVIDIA NIM along with Meta Llama 3.1 8B can be used for ChatCompletion requests.This document outlines the steps to configure the app to use NVIDIA NIM.
+    - Follow the given instructions here: `https://github.com/CloudLabsAI-Azure/azure-search-openai-demo-nvidia/blob/main/docs/deploy_nvidia_nim.md`
+
 ## Success Criteria:
 
 - Successful deployment of the Chat App.
