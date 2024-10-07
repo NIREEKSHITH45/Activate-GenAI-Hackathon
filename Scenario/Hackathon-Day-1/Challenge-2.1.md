@@ -1,5 +1,5 @@
 
-# Challenge 1.1: Deploy NVidia NIM to Azure
+# Challenge 2.1: Deploy NVidia NIM to Azure
 
 ### Estimated Time: 30 minutes
 
