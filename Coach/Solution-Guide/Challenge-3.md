@@ -128,6 +128,14 @@ In this task, you'll learn the process of Deploying the Infrastructure.
  
     >**Note**: It may take 30 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
 
+1. In the chat application, select **Developer settings**.
+
+   ![](../media/Active-image-new1.png)
+
+1. In the **Developer settings** pop-up, check the box for **Use NVIDIA NIM LLM** **(1)**, then click the **Close** button **(2)**.
+
+   ![](../media/Active-image-new2.png)
+
 ## Success Criteria:
 
 - Successful deployment of the Chat App.
