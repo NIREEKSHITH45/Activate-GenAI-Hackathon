@@ -26,7 +26,7 @@ One of the hottest themes at the moment is size models; users are particularly i
    
 1. You will be prompted with the **Northwind Health chat application** as below. 
 
-   ![](../media/lab03-04.png)
+   ![](../media/Active-image109.png)
 
 1. In the chat application, provide the below prompt and check how responses are given by the ChatGPT and Azure cognitive search services by interacting to construct search queries and retrieve candidate information from the knowledge base.
 
