@@ -89,13 +89,24 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 1. Verify the new project initialized is successful.
 
    ![](../media/Active-image107.png)
+
+1. In the PowerShell run the following commands to set the environment variables using the azd env set command.
+
+   ``` 
+   azd env set NVIDIA_NIM_ENABLED true
+   azd env set NVIDIA_NIM_ENDPOINT <your-azureml-endpoint-token>
+   azd env set NVIDIA_NIM_API_KEY "<your-azureml-key>"
+   azd env set NVIDIA_NIM_MODEL_NAME "meta/llama-3_1-8b-instruct"
+   azd env set NVIDIA_NIM_DEPLOYMENT_NAME llama31-8b-instruct-aml-1
+   ```
+   > **Note**: Replace `<your-azureml-endpoint-token>` with Azure ML endpoint and `<your-azureml-key>` with Azure ML key.
    
 1. Run the below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
 
    ```
    azd up
    ```
-   >**Note**: In case you are prompted with the **ERROR: not logged in, run azd auth login to login** and select your **Azure Account** again.
+   >**Note**: If prompted with the **ERROR: not logged in, run azd auth login to login** and select your **Azure Account** again.
 
    >**Note**: Please be aware that deploying the resources and the associated application may take up to 30 minutes.
 
@@ -103,14 +114,14 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    - Select an Azure Subscription to use: Press **Enter** to choose the default **subscription (1)**
    - Select an Azure Location to use: **Select any location you would like to use (2)**
-   - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter : **Select any location you would like to use (3)**
+   - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter: **Select any location you would like to use (3)**
    - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select any location you would like to use(4)**
      
       ![](../media/Active-image110.png)
 
       ![](../media/Active-image111.png)
 
-1. After the application has been successfully deployed you will see a URL printed to the console. Copy browse the URL to interact with the application in your browser. It will look like the following:
+1. After the application has been successfully deployed you will see a URL printed to the console. Copy and browse the URL to interact with the application in your browser. It will look like the following:
 
     ![](../media/Active-image108.png)
     ![](../media/Active-image109.png)
