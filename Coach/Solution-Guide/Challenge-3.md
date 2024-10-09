@@ -128,6 +128,14 @@ In this task, you'll learn the process of Deploying the Infrastructure.
  
     >**Note**: It may take 30 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
 
+1. In the chat application, enter the prompt: **What does a Product Manager do?** and then press Enter. Click on the **Show thought process** icon.
+
+   ![](../media/Active-image-new3.png)
+
+1. Below in the **Thought Process**, you will see that the **Chat** model is utilized. Now select **Developer settings** from the top.
+
+   ![](../media/Active-image-new4.png)
+
 1. In the chat application, select **Developer settings**.
 
    ![](../media/Active-image-new1.png)
@@ -135,6 +143,12 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 1. In the **Developer settings** pop-up, check the box for **Use NVIDIA NIM LLM** **(1)**, then click the **Close** button **(2)**.
 
    ![](../media/Active-image-new2.png)
+
+1. In the chat application, input the prompt: **'Can you explain in more detail?'** and then press Enter. You’ll notice that the Chat UI updates in green. Next, click on the **Show Thought Process** icon.
+
+   ![](../media/Active-image-new5.png)
+
+1. Below in the **Thought Process**, you will see that the **llama-3_1-8b-instruct** model is utilized.
 
 ## Success Criteria:
 
