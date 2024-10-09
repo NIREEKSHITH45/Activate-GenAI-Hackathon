@@ -136,10 +136,6 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    ![](../media/Active-image-new4.png)
 
-1. In the chat application, select **Developer settings**.
-
-   ![](../media/Active-image-new1.png)
-
 1. In the **Developer settings** pop-up, check the box for **Use NVIDIA NIM LLM** **(1)**, then click the **Close** button **(2)**.
 
    ![](../media/Active-image-new2.png)
