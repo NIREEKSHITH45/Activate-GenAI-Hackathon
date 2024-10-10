@@ -146,6 +146,8 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
 1. Below in the **Thought Process**, you will see that the **llama-3_1-8b-instruct** model is utilized.
 
+   ![](../media/Active-image-new6.png)
+
 ## Success Criteria:
 
 - Successful deployment of the Chat App.
