@@ -497,7 +497,7 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
 #### Task 6.3 : Review and modify the index
 
-In this task, you will review the update-index.json file in Visual Studio Code which shows a JSON definition for **margies-index**
+In this task, you will review the modify-index.json file in Visual Studio Code which shows a JSON definition for **margies-index**
 
 1. In Visual Studio Code, in the **modify-search (1)** folder, open **index.json (2)**. This shows a JSON definition for **margies-index**.
 
@@ -626,7 +626,7 @@ In this task, you'll retrieve the endpoint URL and keys for your Azure AI Search
 
 In this task, you'll prepare your development environment in Visual Studio Code to integrate with Azure AI Search SDK by installing the necessary packages (Azure.Search.Documents for C# or azure-search-documents for Python) and configuring endpoint URL and query key in the respective configuration files.
 
-1. In Visual Studio Code, in the **Explorer** pane, browse to the **22-create-a-search-solution** folder and expand the **C-Sharp** or **Python** folder depending on your language preference.
+1. In Visual Studio Code, in the **Explorer** pane, browse to the **01-azure-search** folder and expand the **C-Sharp** or **Python** folder depending on your language preference.
 1. Right-click the **margies-travel** folder and open an integrated terminal. Then install the Azure AI Search SDK package by running the appropriate command for your language preference:
    > **Note**: Please ensure the necessary extensions are already installed in the VS Code.
 
