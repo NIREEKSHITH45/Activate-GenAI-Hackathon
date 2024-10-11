@@ -27,7 +27,7 @@ If you have not already cloned the **AI-102-AIEngineer** code repository to the 
    ```
    git clone https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git
    ```
-    ![](../media/ai-1.png)
+    ![](../media/ai-14.png)
 
 1. When the repository has been cloned, open the folder in Visual Studio Code by following these steps:
 
@@ -41,7 +41,7 @@ If you have not already cloned the **AI-102-AIEngineer** code repository to the 
       
     - If **Do you trust the authors of the files in this folder?** prompted click on **Yes, I trust the authors**.
 
-         ![](../media/ai-3.png)
+         ![](../media/ai-15.png)
 
        > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
 
