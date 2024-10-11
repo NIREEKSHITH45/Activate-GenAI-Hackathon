@@ -26,7 +26,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
 
 3. **Prepare Document Upload:**
-   - In Visual Studio Code, within the cloned repository, navigate to the 22-create-a-search-solution folder.
+   - In Visual Studio Code, within the cloned repository, navigate to the 01-azure-search folder.
    - Edit the UploadDocs.cmd batch file with the required values.
 
 
