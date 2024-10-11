@@ -422,34 +422,28 @@ In this task, you're preparing to execute CURL commands in Visual Studio Code to
 1. In the Azure portal, return to the **Overview** page for your **Azure AI Search** resource, and in the top section of the page, find the **Url** for your resource (which looks like **https://resource_name.search.windows.net**) and copy it to the clipboard.
 
     ![](../media/Active-image72.png)
-   
-1. In Visual Studio Code, in the Explorer pane, expand the **02-search-skill (1)** folder and its **update-search (2)** subfolder, and select **update-search.cmd (3)** to open it. You will use this script file to run *CURL* commands that submit JSON to the Azure AI Service REST interface.
 
-     ![](../media/ai-8.png)
-   
-1. In **update-search.cmd**, replace the **YOUR_SEARCH_URL** placeholder with the URL you copied to the clipboard.
-
-     ![](../media/ai-9.png)
-     
-1. In the Azure portal, back to **Overview** page for your **Azure AI Search** resource expand **Settings** and select **Keys** and copy the **Primary admin key** to the clipboard.
+1. Expand **Settings**, select **Keys** and copy the **Primary admin key** to the clipboard.
 
     ![](../media/Active-image74.png)
    
-1. Back  to **Visual Studio Code**, replace the **YOUR_ADMIN_KEY** placeholder with the key you copied to the clipboard.
+1. In Visual Studio Code, in the Explorer pane, expand the **01-azure-search (1)** folder and its **modify-search (2)** subfolder, and select **modify-search.cmd (3)** to open it. You will use this script file to run *CURL* commands that submit JSON to the Azure AI Service REST interface.
 
-      ![](../media/Active-image77.png)
+     ![](../media/ai-16.png)
    
-1. Save the changes to **update-search.cmd** (but don't run it yet!)
+1. In **modify-search.cmd**, replace the **YOUR_SEARCH_URL** and **YOUR_ADMIN_KEY** placeholder with the URL and the key you copied to the clipboard and save the changes.
 
-     ![](../media/Active-image75.png)
+     ![](../media/ai-17.png)
+
+    >**Note**: Don't run it yet!
    
 #### Task 6.2: Review and modify the skillset
 
 In this task, you will be configuring a skillset (skillset.json) in Visual Studio Code to integrate Azure AI Services with Azure AI Search:
 
-1. In Visual Studio Code, in the **update-search** folder, open **update-skillset.json**. This shows a JSON definition for **margies-skillset**.
+1. In Visual Studio Code, in the **modify-search** folder, open **skillset.json**. This shows a JSON definition for **margies-skillset**.
 
-      ![](../media/ai-10.png)
+      ![](../media/ai-18.png)
    
 1. At the top of the skillset definition, note the **cognitiveServices** object, which is used to connect your Azure AI Services resource to the skillset.
 
@@ -465,9 +459,9 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
     ![](../media/Active-image79.png)
    
-1. In Visual Studio Code, in **update-skillset.json**, replace the **YOUR_COGNITIVE_SERVICES_KEY** placeholder with the Azure AI Services key you copied to the clipboard.
+1. In Visual Studio Code, in **skillset.json**, replace the **YOUR_COGNITIVE_SERVICES_KEY** placeholder with the Azure AI Services key you copied to the clipboard.
 
-   ![](../media/ai-11.png)
+   ![](../media/ai-19.png)
    
 1. Scroll through the JSON file, noting that it includes definitions for the skills you created using the Azure AI Search user interface in the Azure portal. At the bottom of the list of skills, an additional skill has been added with the following definition:
 
@@ -499,15 +493,15 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
    >**Note**: The new skill is named **get-sentiment**, and for each **document** level in a document, it will evaluate the text found in the **merged_content** field of the document being indexed (which includes the source content as well as any text extracted from images in the content). It uses the extracted **language** of the document (with a default of English) and evaluates a label for the sentiment of the content. Values for the sentiment label can be "positive", "negative", "neutral", or "mixed". This label is then output as a new field named **sentimentLabel**.
 
-1. Save the changes you've made to **update-skillset.json**.
+1. Save the changes you've made to **skillset.json**.
 
 #### Task 6.3 : Review and modify the index
 
-In this task, you will review the update-index.json file in Visual Studio Code which shows a JSON definition for **margies-custom-index**
+In this task, you will review the update-index.json file in Visual Studio Code which shows a JSON definition for **margies-index**
 
-1. In Visual Studio Code, in the **update-search** folder, open **update-index.json**. This shows a JSON definition for **margies-custom-index**.
+1. In Visual Studio Code, in the **modify-search (1)** folder, open **index.json (2)**. This shows a JSON definition for **margies-index**.
 
-     ![](../media/Active-image81.png)
+     ![](../media/ai-20.png)
    
 1. Scroll through the index and view the field definitions. Some fields are based on metadata and content in the source document, and others are the results of skills in the skillset.
 1. At the end of the list of fields that you defined in the Azure portal, note that two additional fields have been added:
@@ -536,11 +530,11 @@ In this task, you will review the update-index.json file in Visual Studio Code w
 
 #### Task 6.4: Review and modify the indexer
 
-In this task, you will review the **update-indexer.json** file in Visual Studio Code which shows a JSON definition for **margies-custom-indexer**
+In this task, you will review the **indexer.json** file in Visual Studio Code which shows a JSON definition for **margies-indexer**
 
-1. In Visual Studio Code, in the **update-search** folder, open **update-indexer.json**. This shows a JSON definition for **margies-custom-indexer**, which maps fields extracted from document content and metadata (in the **fieldMappings** section) and values extracted by skills in the skillset (in the **outputFieldMappings** section) to fields in the index.
+1. In Visual Studio Code, in the **modify-search (1)** folder, open **indexer.json (2)**. This shows a JSON definition for **margies-indexer**, which maps fields extracted from document content and metadata (in the **fieldMappings** section) and values extracted by skills in the skillset (in the **outputFieldMappings** section) to fields in the index.
 
-     ![](../media/Active-image82.png)
+     ![](../media/ai-21.png)
     
 1. In the **fieldMappings** list, note the mapping for the **metadata_storage_path** value to the base-64 encoded key field. This was created when you assigned the **metadata_storage_path** as the key and selected the option to encode the key in the Azure portal. Additionally, a new mapping explicitly maps the same value to the **url** field, but without the Base-64 encoding:
 
@@ -567,14 +561,14 @@ In this task, you will review the **update-indexer.json** file in Visual Studio 
 
 In this task, you will update JSON definitions in Visual Studio Code for Azure AI Search to include new fields like sentiment analysis results and document URLs. Run modify-search.cmd to apply changes and start indexing. Monitor progress in Azure portal's Indexers section for completion and document size warnings during sentiment analysis.
 
-1. Right-click the **update-search** folder and select **open an integrated terminal**.
+1. Right-click the **modify-search** folder and select **open an integrated terminal**.
 
-     ![](../media/Active-image83.png)
+     ![](../media/ai-25.png)
    
-1. In the terminal pane for the **update-search** folder, enter the following command to run the **update-search.cmd** script, which submits the JSON definitions to the REST interface and initiates the indexing.
+1. In the terminal pane for the **modify-search** folder, enter the following command to run the **modify-search.cmd** script, which submits the JSON definitions to the REST interface and initiates the indexing.
 
     ```
-    .\update-search
+    .\modify-search
     ```
 
 1. When the script has finished, return to the **Overview** page for your **Azure AI Search** from the left navigation pane expand **Search management** and select **Indexers**. Then periodically select **Refresh** to track the progress of the indexing operation. It may take a minute or so to complete.
@@ -655,11 +649,11 @@ In this task, you'll prepare your development environment in Visual Studio Code 
 
     - **C#**: appsettings.json
 
-       ![](../media/Active-image93.png)
+       ![](../media/ai-22.png)
 
     - **Python**: .env
   
-      ![](../media/Active-image94.png)
+      ![](../media/ai-23.png)
 
 #### Task 7.3 : Explore code to search an index
 
