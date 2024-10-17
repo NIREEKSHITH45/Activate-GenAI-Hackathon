@@ -148,7 +148,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
    ```
    az account clear
    az config set core.enable_broker_on_windows=false
-   az login
+   az login --user <Username> --password <Password>
    az account set -s ${subscription_id}
    ```
 
