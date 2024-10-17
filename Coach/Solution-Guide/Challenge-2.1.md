@@ -14,7 +14,7 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
 1. Once your account is created or you've successfully logged in, navigate to the Developer Portal.
 
-1. Navigate to [NVIDIA Devloper Portal](https://developer.nvidia.com/developer-program?ncid=pa-srch-goog-746366&_bt=699127533347&_bk=join%20nvidia%20developer%20program&_bm=b&_bn=g&_bg=161777607269&gad_source=1&gclid=Cj0KCQjwxsm3BhDrARIsAMtVz6MYF3MjayqdjwpkljkJ5ZSVv8IqKIExaNHyiPgUykfiJPplssYqyeIaAlNDEALw_wcB) and 1. Click on the **join** option from the top.
+1. Navigate to [NVIDIA Devloper Portal](https://developer.nvidia.com/developer-program?ncid=pa-srch-goog-746366&_bt=699127533347&_bk=join%20nvidia%20developer%20program&_bm=b&_bn=g&_bg=161777607269&gad_source=1&gclid=Cj0KCQjwxsm3BhDrARIsAMtVz6MYF3MjayqdjwpkljkJ5ZSVv8IqKIExaNHyiPgUykfiJPplssYqyeIaAlNDEALw_wcB) and Click on the **join** option from the top.
 
    ![](../../Coach/media/nvidia1.png)
 
