@@ -106,45 +106,52 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can
 
    ![](../media/Active-image11.png)
 
-1. On the **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+1. In **Azure OpenAI Studio**, a pop-up titled **Discover an even better Azure AI Studio experience** will appear. Click **Close** to dismiss it and proceed.
 
-   ![](../media/Active-image13.png)
+   ![](../media/Active-image11a.png)
 
-1. On the **Deployments** page, click on **+ Create new deployment**.
+1. Now, click on **Deployments** from the left menu. Then, select **+ Deploy model** and choose **Deploy base model** from the available options.
 
-     ![](../media/Active-image14.png)
+   ![](../media/Active-image11c.png)
+
+1. Select the **gpt-35-turbo** model and then click on **Confirm**.
+
+   ![](../media/Active-image11d.png)
    
 1. Within the **Deploy model** pop-up interface, enter the following details :
    
     - **Deployment name**: **text-turbo** **(1)**
-    - **Select a model**: **gpt-35-turbo** **(2)**
-    - **Model version**: **Use the default version** **(3)**
-    - **Deployment Type**: **Standard (4)**
-    - Adjust **Tokens per Minute Rate Limit (thousands)**: **20K (5)**
+    - **Model version**: **Use the default version** **(2)**
+    - **Deployment Type**: **Standard (3)**
+    - Adjust **Tokens per Minute Rate Limit (thousands)**: **20K (4)**
   
-         ![](../media/ai1.png)
+         ![](../media/Active-image11e.png)
       
-1. Click on the **Create** button to deploy a model.
+1. Click on the **Deploy** button to deploy a model.
 
-1. Back on the **Deployments** page again, click on **+ Create new deployment**.
+1. Back on the **Deployments** page again, select **+ Deploy model** and choose **Deploy base model** from the available options.
 
-     ![](../media/Active-image16.png)
+     ![](../media/Active-image11f.png)
+
+1. Select the **text-embedding-ada-002** model and then click on **Confirm**.
    
+     ![](../media/Active-image11g.png)
+
 1. Within the **Deploy model** pop-up interface, enter the following details:  and then click on **Advanced options (3)**, followed by scaling down the **Tokens per Minute Rate Limit (thousands) (5)**:
    
     - **Deployment name**: **text-ada-002** **(1)**
-    - **Select a model**: **text-embedding-ada-002** **(2)**
-    - **Model version**: **Use the default version** **(3)**
-    - **Deployment Type**: **Standard (4)**
-    - Adjust the **Tokens per Minute Rate Limit (thousands)**: **20K** **(5)**
+    - **Model version**: **Use the default version** **(2)**
+    - **Deployment Type**: **Standard (3)**
+    - Adjust the **Tokens per Minute Rate Limit (thousands)**: **20K** **(4)**
   
-         ![](../media/ai2.png)
+         ![](../media/Active-image11h.png)
 
-1. Click on the **Create** button to deploy a model.
+1. Click on the **Deploy** button to deploy a model.
 
 1. Back on the Deployments page, you should see the deployment models **text-turbo** and **text-ada-002** created.
 
-     ![](../media/Active-image18.png)
+    ![](../media/Active-image11i.png)
+
 
 ## Success Criteria:
 
