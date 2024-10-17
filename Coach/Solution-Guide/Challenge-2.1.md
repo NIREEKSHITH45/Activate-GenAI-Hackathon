@@ -226,13 +226,53 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 ### Create AzureML Deployment of the NIM Container
 
-1. Run the following command to **deploy the NIM container in AzureML**. IT will takes 10-15 mins to complete the deployment.
+1. Create a new file named **deployment1.yml** in the **azureml_files** folder. 
+
+1. Use the values from the `config.sh` file to replace the following placeholders in the `deployment.yml` file:
+
+- Replace `deployment_name_placeholder` with your actual deployment name.
+- Replace `endpoint_name_placeholder` with your actual endpoint name.
+- Replace `image_name_placeholder` with your desired image name.
+- Replace `acr_registry_placeholder` with your Azure Container Registry (ACR) name.
+- Replace `instance_type_placeholder` with the appropriate instance type.
+
+   ```
+   $schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
+   name: deployment_name_placeholder
+   endpoint_name: endpoint_name_placeholder
+   environment: 
+   name: image_name_placeholder-env
+   image: acr_registry_placeholder.azurecr.io/image_name_placeholder
+   inference_config:
+         liveness_route:
+            path: /v1/health/ready
+            port: 8000
+         readiness_route:
+            path: /v1/health/ready
+            port: 8000
+         scoring_route:
+            path: /
+            port: 8000
+   instance_type: instance_type_placeholder
+   instance_count: 1
+   environment_variables:
+      NGC_API_KEY: ${{azureml://connections/ngc/credentials/NGC_API_KEY}}
+   ```
+
+3. After updating your code based on the provided instructions, it will look similar to the image below:
+
+   ![](../../Coach/media/bash6.png)
+
+4. After making the necessary changes, save the file.
+
+5. Run the following command to **deploy the NIM container in AzureML**. IT will takes 10-15 mins to complete the deployment.
+
+   > **Note:** Ensure to update your **$resource_group** and **$workspace** with the appropriate values before proceeding.
 
     ```cmd
-   ./5_create_deployment.sh
+   $ az ml online-deployment create -f azureml_files/deployment1.yml --resource-group $resource_group --workspace-name $workspace
    ```
    >**Note :** Ensure that the provided Azure Container Registry (ACR) can be accessed by your AzureML endpoint by checking if your endpoint has the "AcrPull" role assignment on the ACR.
-
 
 ## Verify Your Connection
 
