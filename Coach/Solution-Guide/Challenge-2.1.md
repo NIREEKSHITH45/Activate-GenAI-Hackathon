@@ -1,5 +1,4 @@
-
-# Challenge 2.1: Deploy NVIDIA NIM to Azure - Solution Guide
+# Challenge 1: Deploy NVIDIA NIM to Azure - Solution Guide
 
 ## Solution Guide
 
