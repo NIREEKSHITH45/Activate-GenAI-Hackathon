@@ -180,7 +180,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 1. Use the command below to navigate to the directory:
 
    ```
-   cd C:/Users/demouser/Desktop/nim-deploy/cloud-service-providers/azure/azureml/cli
+   cd C:/Users/Public/Desktop/nim-deploy/cloud-service-providers/azure/azureml/cli
    ```
 
 ## Login to Azure with Your Credentials
