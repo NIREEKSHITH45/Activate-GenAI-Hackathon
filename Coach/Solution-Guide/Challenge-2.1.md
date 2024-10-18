@@ -332,10 +332,10 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 5. Run the following command to **deploy the NIM container in AzureML**. IT will takes 10-15 mins to complete the deployment.
 
-   > **Note:** Ensure to update your **$resource_group** and **$workspace** with the appropriate values before proceeding.
+   > **Note:** Replace the **<resource_group>** and **<ml_workspace_name>** with the actual values these values you can find it under config.sh file.
 
     ```cmd
-   $ az ml online-deployment create -f azureml_files/deployment1.yml --resource-group $resource_group --workspace-name $workspace
+   $ az ml online-deployment create -f azureml_files/deployment1.yml --resource-group <resource_group> --workspace-name <ml_workspace_name>
    ```
    >**Note:** This action will approximately take around 15-20 Minutes.
 
