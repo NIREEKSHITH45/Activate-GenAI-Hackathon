@@ -12,7 +12,7 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
    >**Note:** If you don't have an account, simply enter your work email account and submit, and you'll be redirected to the account creation page to provide the necessary details and set up your account.
 
-   ![](../../Coach/media/nvidia1a.png)
+    ![](../../Coach/media/nvidia1a.png)
 
 1. On the **Set Your Profile** page provide the details such as **First Name**, **Last Name**, **Location**, **Job Role**, **Organization**, **Industry Segment(s)**, **Area of Interest** and then click on **Submit**.
 
@@ -306,22 +306,22 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    name: deployment_name_placeholder
    endpoint_name: endpoint_name_placeholder
    environment: 
-   name: image_name_placeholder-env
-   image: acr_registry_placeholder.azurecr.io/image_name_placeholder
-   inference_config:
-         liveness_route:
-            path: /v1/health/ready
-            port: 8000
-         readiness_route:
-            path: /v1/health/ready
-            port: 8000
-         scoring_route:
-            path: /
-            port: 8000
-   instance_type: instance_type_placeholder
+     name: image_name_placeholder-env   # Replace image_name_placeholder with actual image name and keep "-env" as suffix
+     image: acr_registry_placeholder.azurecr.io/image_name_placeholder
+     inference_config:
+       liveness_route:
+         path: /v1/health/ready
+         port: 8000
+       readiness_route:
+         path: /v1/health/ready
+         port: 8000
+       scoring_route:
+         path: /
+         port: 8000
+   instance_type: Standard_NC24ads_A100_v4
    instance_count: 1
    environment_variables:
-      NGC_API_KEY: ${{azureml://connections/ngc/credentials/NGC_API_KEY}}
+     NGC_API_KEY: ${{azureml://connections/ngc/credentials/NGC_API_KEY}}
    ```
 
 3. After updating your code based on the provided instructions, it will look similar to the image below:
@@ -335,8 +335,9 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    > **Note:** Ensure to update your **$resource_group** and **$workspace** with the appropriate values before proceeding.
 
     ```cmd
-   az ml online-deployment create -f azureml_files/deployment1.yml --resource-group $resource_group --workspace-name $workspace
+   $ az ml online-deployment create -f azureml_files/deployment1.yml --resource-group $resource_group --workspace-name $workspace
    ```
+   >**Note:** This action will approximately take around 15-20 Minutes.
 
    >**Note :** Ensure that the provided Azure Container Registry (ACR) can be accessed by your AzureML endpoint by checking if your endpoint has the "AcrPull" role assignment on the ACR.
 
