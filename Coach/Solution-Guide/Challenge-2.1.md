@@ -95,7 +95,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
     | Setting | Action |
     | -- | -- |
-    | **Subscription** | Keep it as default |
+    | **Subscription** | <inject key="SubscriptionID"></inject> |
     | **Resource Group** | **Activate-GenAI** (1) |
     | **Registry name** | **amlregistry-<inject key="DeploymentID" enableCopy="false"/>** (2) |
     | **Location** | **East US 2** (Choose the same location where the resource group) (3) |
@@ -159,6 +159,22 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
    ```
    curl -L -o /usr/bin/jq.exe https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe
+   ```
+
+1. Now, install the ml extension
+
+   ```
+   az extension add -n ml
+   ```
+
+   ```
+   az extension update -n ml
+   ```
+
+1. Run the help command to verify your installation and see available subcommands:
+
+   ```
+   az ml -h
    ```
 
 1. Use the command below to navigate to the directory:
