@@ -186,6 +186,10 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 ## Login to Azure with Your Credentials
 
 1. Update your subscription ID with the one you have copied.
+   
+   - **Subscription Id:** - <inject key="SubscriptionID"></inject>
+   - **Username:** <inject key="AzureAdUserEmail"></inject>
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
 
    ```
    source config.sh
