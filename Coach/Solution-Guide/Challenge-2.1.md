@@ -98,7 +98,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | **Subscription** | Keep it as default |
     | **Resource Group** | **Activate-GenAI** (1) |
     | **Registry name** | **amlregistry-<inject key="DeploymentID" enableCopy="false"/>** (2) |
-    | **Location** | **East US 2** (3) |
+    | **Location** | **East US 2** (Choose the same location where the resource group) (3) |
     | **Pricing plan** | **Standard** (4) |
 
    ![](../../Coach/media/cr2.png)
@@ -135,9 +135,9 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
     | Setting | Action |
     | -- | -- |
-    | **subscription_id** | Provide subcription id |
-    | **resource_group** | **azure-ml**  |
-    | **Registry name** | **amlregistry**  |
+    | **subscription_id** | <inject key="SubscriptionID"></inject> |
+    | **resource_group** | **Activate-GenAI**  |
+    | **Registry name** | **amlregistry-<inject key="DeploymentID" enableCopy="false"/>**  |
     | **workspace** | **ml-workspace** (Provide the name of workspace you want to create) |
     | **location** | **EastUS2** (Choose the same location where the resource group) |
     | **ngc_api_key** | Provide the NGC key  |
