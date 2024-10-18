@@ -337,7 +337,6 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
     ```cmd
    az ml online-deployment create -f azureml_files/deployment1.yml --resource-group $resource_group --workspace-name $workspace
    ```
-   >**Note:** This action will approximately take around 15-20 Minutes.
 
    >**Note :** Ensure that the provided Azure Container Registry (ACR) can be accessed by your AzureML endpoint by checking if your endpoint has the "AcrPull" role assignment on the ACR.
 
