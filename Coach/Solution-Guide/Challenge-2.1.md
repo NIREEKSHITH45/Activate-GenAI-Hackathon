@@ -335,7 +335,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    > **Note:** Ensure to update your **$resource_group** and **$workspace** with the appropriate values before proceeding.
 
     ```cmd
-   $ az ml online-deployment create -f azureml_files/deployment1.yml --resource-group $resource_group --workspace-name $workspace
+   az ml online-deployment create -f azureml_files/deployment1.yml --resource-group $resource_group --workspace-name $workspace
    ```
    >**Note:** This action will approximately take around 15-20 Minutes.
 
