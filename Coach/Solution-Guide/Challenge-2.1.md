@@ -143,7 +143,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | **ngc_api_key** | Provide the NGC key  |
     | **email_address** | Enter the email from Environmental Details tab  |
     | **acr_registry_name** | **amlregistry**|
-    | **image_name** | **nvcr.io/nim/meta/llama-3.1-8b-instruct:latest**|
+    | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
 
    ![](../../Coach/media/vscode4.png)
 
