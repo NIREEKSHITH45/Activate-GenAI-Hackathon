@@ -10,7 +10,17 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
 1. Please log in to [nvidia](https://ngc.nvidia.com/signin) account using your credentials.
 
-   >**Note:** If you don't have an account, simply enter your email and submit, and you'll be redirected to the account creation page to provide the necessary details and set up your account.
+   >**Note:** If you don't have an account, simply enter your work email account and submit, and you'll be redirected to the account creation page to provide the necessary details and set up your account.
+
+   ![](../../Coach/media/nvidia1a.png)
+
+1. On the **Set Your Profile** page provide the details such as **First Name**, **Last Name**, **Location**, **Job Role**, **Organization**, **Industry Segment(s)**, **Area of Interest** and then click on **Submit**.
+
+   ![](../../Coach/media/nvidia1b.png)
+
+1. On the **Create an Nvidia Cloud Account** page enter the **Account Name** as per your preference.
+
+   ![](../../Coach/media/nvidia1c.png)
 
 1. Once your account is created or you've successfully logged in, navigate to the Developer Portal.
 
@@ -26,7 +36,7 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
    ![](../../Coach/media/nvidia3.png)
 
-1. Click on "Account" at the top of the page and navigate to the "Setup" section.
+1. Navigate back to the your **Nvidia Account** Click on **Account** at the top of the page and navigate to the **Setup** section.
 
    ![](../../Coach/media/nvidia4.png)
 
@@ -247,6 +257,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ```cmd
    ./3_save_nim_container.sh
    ```
+   >**Note:** This action will approximately take around 20-25 Minutes.
 
 1. Navigate to your container registry (**amlregistry**) , Under the service click on the Respositiories select your **nim-meta-llama-3.1-8b-instruct** regiestry, here you will find your image is pushed with the tag name latest.
 
@@ -326,6 +337,8 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
     ```cmd
    $ az ml online-deployment create -f azureml_files/deployment1.yml --resource-group $resource_group --workspace-name $workspace
    ```
+   >**Note:** This action will approximately take around 15-20 Minutes.
+
    >**Note :** Ensure that the provided Azure Container Registry (ACR) can be accessed by your AzureML endpoint by checking if your endpoint has the "AcrPull" role assignment on the ACR.
 
 ## Verify Your Connection
