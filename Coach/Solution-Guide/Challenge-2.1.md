@@ -346,32 +346,32 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 Verify your deployment using the `test_chat_completions.sh` script. Modify the URL to your endpoint URL and add the following headers:
 `-H 'Authorization: Bearer <your-azureml-endpoint-token>' -H 'azureml-model-deployment: llama3-1-8b-nim-deployment-aml-1'`
 
-  ```
-  curl -X 'POST' \
-    '
-  https://llama-3-1-8b-nim-endpoint-aml-1.eastus2.inference.ml.azure.com/v1/chat/completions'
-  \
-    -H 'accept: application/json' \
-    -H 'azureml-model-deployment: llama-3-8b-nim-deployment-aml-2' \
-    -H 'Authorization: Bearer rh5Pm064EmOdPdiHfn5DPit7BdHriobu' \
-    -H 'Content-Type: application/json' \
-    -d '{
-    "messages": [
-      {
-        "content": "You are a polite and respectful chatbot helping people plan a vacation.",
-        "role": "system"
-      },
-      {
-        "content": "What should I do for a 4 day vacation in Spain?",
-        "role": "user"
-      }
-    ],
-    "model": "meta/llama-3.1-8b-instruct",
-    "max_tokens": 500,
-    "top_p": 1,
-    "n": 1,
-    "stream": false,
-    "stop": "\n",
-    "frequency_penalty": 0.0
-  }
-  ```
+   ```
+   #!/bin/bash
+   curl -X 'POST' \
+     'https://llama-3-1-8b-nim-endpoint-aml-1.eastus2.inference.ml.azure.com/v1/chat/completions' \
+     -H 'accept: application/json' \
+     -H 'azureml-model-deployment: llama3-1-8b-nim-deployment-aml-5' \
+     -H 'Authorization: Bearer 3L3s8qb6dCQq7TTgorFnwDVZT8qsvId5' \
+     -H 'Content-Type: application/json' \
+     -d '{
+     "messages": [
+       {
+         "content": "You are a polite and respectful chatbot helping people plan a vacation.",
+         "role": "system"
+       },
+       {
+         "content": "What should I do for a 4 day vacation in Spain?",
+         "role": "user"
+       }
+     ],
+     "model": "meta/llama-3.1-8b-instruct",
+     "max_tokens": 500,
+     "top_p": 1,
+     "n": 1,
+     "stream": false,
+     "stop": "\n",
+     "frequency_penalty": 0.0
+   }'
+   
+   ```
