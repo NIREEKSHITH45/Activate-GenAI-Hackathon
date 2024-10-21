@@ -68,9 +68,9 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 1. Once successfully logged in ,run the below command to download the project code:
 
    ```
-   azd init -t azure-search-openai-demo
+   azd init -t https://github.com/CloudLabsAI-Azure/azure-search-openai-demo-nvidia
    ```
-   >**Note**: The above command will initialize a git repository, eliminating the need to clone it afterwards.
+   >**Note**: The above command will initialize a git repository specific to NVIDIA LLM, eliminating the need to clone it afterwards.
 
 1. When prompted with **Continue iniatializing an app in `C:\Users\demouser`**, type **y / yes (1)**.
 
@@ -94,7 +94,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    ``` 
    azd env set NVIDIA_NIM_ENABLED true
-   azd env set NVIDIA_NIM_ENDPOINT <your-azureml-endpoint-token>
+   azd env set NVIDIA_NIM_ENDPOINT "<your-azureml-endpoint-token>"
    azd env set NVIDIA_NIM_API_KEY "<your-azureml-key>"
    azd env set NVIDIA_NIM_MODEL_NAME "meta/llama-3_1-8b-instruct"
    azd env set NVIDIA_NIM_DEPLOYMENT_NAME llama31-8b-instruct-aml-1
