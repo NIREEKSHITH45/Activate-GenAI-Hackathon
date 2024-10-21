@@ -105,9 +105,9 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
     | Setting | Action |
     | -- | -- |
-    | **Subscription** | <inject key="SubscriptionID"></inject> |
+    | **Subscription** | Default |
     | **Resource Group** | **Activate-GenAI** (1) |
-    | **Registry name** | **amlregistry-<inject key="DeploymentID" enableCopy="false"/>** (2) |
+    | **Registry name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** (2) |
     | **Location** | **East US 2** (Choose the same location where the resource group) (3) |
     | **Pricing plan** | **Standard** (4) |
 
@@ -148,10 +148,10 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | **subscription_id** | <inject key="SubscriptionID"></inject> |
     | **resource_group** | **Activate-GenAI**  |
     | **workspace** | **ml-workspace** (Provide the name of workspace you want to create) |
-    | **location** | **EastUS2** (Choose the same location where the resource group) |
+    | **location** | **EastUS2**, **CanadaEast** (Choose the same location where the resource group and make sure there is no space between the loaction name) |
     | **ngc_api_key** | Provide the NGC key  |
     | **email_address** | Enter the email from Environmental Details tab  |
-    | **acr_registry_name** | **amlregistry-<inject key="DeploymentID" enableCopy="false"/>** |
+    | **acr_registry_name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** |
     | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
 
    ![](../../Coach/media/vscode4.png)
@@ -332,10 +332,10 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 5. Run the following command to **deploy the NIM container in AzureML**. IT will takes 10-15 mins to complete the deployment.
 
-   > **Note:** Replace the **<resource_group>** and **<ml_workspace_name>** with the actual values these values you can find it under config.sh file.
+   > **Note:** Replace the **`<resource_group>`** and **`<ml_workspace_name>`** with the actual values these values you can find it under config.sh file.
 
     ```cmd
-   $ az ml online-deployment create -f azureml_files/deployment1.yml --resource-group <resource_group> --workspace-name <ml_workspace_name>
+   az ml online-deployment create -f azureml_files/deployment1.yml --resource-group <resource_group> --workspace-name <ml_workspace_name>
    ```
    >**Note:** This action will approximately take around 15-20 Minutes.
 
