@@ -99,7 +99,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
    azd env set NVIDIA_NIM_MODEL_NAME "meta/llama-3_1-8b-instruct"
    azd env set NVIDIA_NIM_DEPLOYMENT_NAME llama31-8b-instruct-aml-1
    ```
-   > **Note**: Replace `<your-azureml-endpoint-token>` with Azure ML endpoint and `<your-azureml-key>` with Azure ML key.
+   > **Note**: Replace `<your-azureml-endpoint-token>` with Azure ML endpoint and `<your-azureml-key>` with Azure ML key, also if your NIM deployment names is different then the provided one please update that too.
    
 1. Run the below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
 
