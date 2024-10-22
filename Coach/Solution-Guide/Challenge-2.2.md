@@ -109,7 +109,7 @@ provide the **`<resoucre group name>`** name , **`<aks name>`** and **`<nodepool
 
 1. Navigate to the azure portal, and select you aks and from the left under setting option select **Node Pools** and here you will your aks pool is created and running.
 
-   ![](../media/Active-aks4.png)
+   ![](../media/Active-aks6.png)
 
 #### Connect to AKS
 
