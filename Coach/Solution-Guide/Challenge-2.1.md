@@ -121,6 +121,48 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
    ![](../../Coach/media/cr4.png)
 
+### Setup Git Bash Environment
+
+1. Click on the Start menu and search for **Git Bash**. Once you find it, right-click on **Git Bash** and select **Run as Administrator** to launch Git Bash with elevated privileges.
+
+1. Run the following command, This command downloads the latest version of jq, a lightweight and flexible command-line JSON processor, and saves it as an executable file named `jq.exe` in the `/usr/bin/` directory, making it accessible for command-line use.
+
+   ```
+   curl -L -o /usr/bin/jq.exe https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe
+   ```
+
+1. Now, install the ml extension
+
+   ```
+   az extension add -n ml
+   ```
+
+   ```
+   az extension update -n ml
+   ```
+
+1. Run the help command to verify your installation and see available subcommands:
+
+   ```
+   az ml -h
+   ```
+
+1. Clone the GitHub repository to your Desktop 
+
+   ```
+   cd Desktop
+   ```
+
+   ```
+   git clone https://github.com/CloudLabsAI-Azure/nim-deploy.git
+   ```
+
+1. Use the command below to navigate to the directory:
+
+   ```
+   cd nim-deploy/cloud-service-providers/azure/azureml/cli
+   ```
+
 ### Visual Studio config.sh file update
 
 1. Start **Visual Studio Code** by launching it from your desktop.
@@ -148,7 +190,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | **subscription_id** | <inject key="SubscriptionID"></inject> |
     | **resource_group** | **Activate-GenAI**  |
     | **workspace** | **ml-workspace** (Provide the name of workspace you want to create) |
-    | **location** | **EastUS2**, **CanadaEast** (Choose the same location where the resource group and make sure there is no space between the loaction name) |
+    | **location** | **EastUS2**, **CentralUS** (Choose the same location where the resource group and make sure there is no space between the loaction name) |
     | **ngc_api_key** | Provide the NGC key  |
     | **email_address** | Enter the email from Environmental Details tab  |
     | **acr_registry_name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** |
@@ -162,39 +204,11 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
 ##  Create AzureML Deployment of the NIM Container
 
-1. Click on the Start menu and search for **Git Bash**. Once you find it, right-click on **Git Bash** and select **Run as Administrator** to launch Git Bash with elevated privileges.
+### Login to Azure with Your Credentials
 
-1. Run the following command, This command downloads the latest version of jq, a lightweight and flexible command-line JSON processor, and saves it as an executable file named `jq.exe` in the `/usr/bin/` directory, making it accessible for command-line use.
+1. Switch back to the Git Bash terminal.
 
-   ```
-   curl -L -o /usr/bin/jq.exe https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe
-   ```
-
-1. Now, install the ml extension
-
-   ```
-   az extension add -n ml
-   ```
-
-   ```
-   az extension update -n ml
-   ```
-
-1. Run the help command to verify your installation and see available subcommands:
-
-   ```
-   az ml -h
-   ```
-
-1. Use the command below to navigate to the directory:
-
-   ```
-   cd C:/Users/Public/Desktop/nim-deploy/cloud-service-providers/azure/azureml/cli
-   ```
-
-## Login to Azure with Your Credentials
-
-1. Update your subscription ID with the one you have copied.
+1. Update your login credentials (**Username** and **Password**) and set the **subscription_id** for your subscription.
    
    - **Subscription Id:** - <inject key="SubscriptionID"></inject>
    - **Username:** <inject key="AzureAdUserEmail"></inject>
@@ -204,7 +218,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
    source config.sh
    ```
    ```
-   az login
+   az login --user <Username> --password <Password>
    az account set -s ${subscription_id}
    ```
    > **Note:** If you encounter any issues during login, you can execute the following command.
