@@ -311,9 +311,8 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 - Replace `deployment_name_placeholder` with your actual deployment name.
 - Replace `endpoint_name_placeholder` with your actual endpoint name.
-- Replace `image_name_placeholder` with your desired image name.
+- Replace `image_name_placeholder` with your actual image name.
 - Replace `acr_registry_placeholder` with your Azure Container Registry (ACR) name.
-- Replace `instance_type_placeholder` with the appropriate instance type.
 
    ```
    $schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
