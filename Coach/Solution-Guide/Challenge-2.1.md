@@ -357,15 +357,30 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 ## Verify Your Connection
 
-Verify your deployment using the `test_chat_completions.sh` script. Modify the URL to your endpoint URL and add the following headers:
-`-H 'Authorization: Bearer <your-azureml-endpoint-token>' -H 'azureml-model-deployment: llama3-1-8b-nim-deployment-aml-1'`
+1. Return to the **Azure Portal**.
+
+2. Open the **ml-workspace** and click on **Launch studio**.
+
+   ![](../../Coach/media/nvverify1.png)
+
+3. This will take you to **AML Studio**. From the left-hand menu, select **Endpoints** and choose your endpoint.
+
+   ![](../../Coach/media/nvverify2.png)
+
+4. Go to the **Consume** tab, then copy the **REST endpoint** and **Primary key**.
+
+   ![](../../Coach/media/nvverify3.png)
+
+5. In VS Code, open the **`test_chat_completions.sh`** file. Replace the following headers `<your-azureml-endpoint>`, `<your-azureml-endpoint-token>`, and `<deployment-name>` with the appropriate values. Ensure the **deployment-name** matches the one in your `config.sh` file.
+
+6. Once you have updated all the headers, the code should look similar to the following:
 
    ```
    #!/bin/bash
    curl -X 'POST' \
      'https://llama-3-1-8b-nim-endpoint-aml-1.eastus2.inference.ml.azure.com/v1/chat/completions' \
      -H 'accept: application/json' \
-     -H 'azureml-model-deployment: llama3-1-8b-nim-deployment-aml-5' \
+     -H 'azureml-model-deployment: llama3-1-8b-nim-deployment-aml-1' \
      -H 'Authorization: Bearer 3L3s8qb6dCQq7TTgorFnwDVZT8qsvId5' \
      -H 'Content-Type: application/json' \
      -d '{
