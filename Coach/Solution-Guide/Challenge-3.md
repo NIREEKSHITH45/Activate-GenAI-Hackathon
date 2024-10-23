@@ -132,21 +132,25 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    ![](../media/Active-image-new3.png)
 
-1. Below in the **Thought Process**, you will see that the **Chat** model is utilized. Now select **Developer settings** from the top.
+1. Below in the **Thought Process**, you will see that the **Chat** model is utilized.
 
    ![](../media/Active-image-new4.png)
 
-1. In the **Developer settings** pop-up, check the box for **Use NVIDIA NIM LLM** **(1)**, then click the **Close** button **(2)**.
+1. Click on **Ask a question** at the top.
 
-   ![](../media/Active-image-new2.png)
+   ![](../media/Active-image-new2a.png)
 
-1. In the chat application, input the prompt: **'Can you explain in more detail?'** and then press Enter. You’ll notice that the Chat UI updates in green. Next, click on the **Show Thought Process** icon.
+1. In the **Developer settings** pop-up, check the box for **Use NVIDIA NIM LLM** , then click the **Close** button.
 
-   ![](../media/Active-image-new5.png)
+   ![](../media/Active-image-new2b.png)
 
-1. Below in the **Thought Process**, you will see that the **llama-3_1-8b-instruct** model is utilized.
+1. Enter the prompt: **What does a Product Manager do?** and then press Enter. You’ll notice that the Chat UI updates in green. Next, click on the **Show Thought Process** icon.
 
-   ![](../media/Active-image-new6.png)
+   ![](../media/Active-image-new2c.png)
+
+1. Below in the **Thought Process**, you will see that the **llama-3.1-8b-instruct** model is utilized.
+
+   ![](../media/Active-image-new6a.png)
 
 ## Success Criteria:
 
