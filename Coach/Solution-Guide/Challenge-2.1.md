@@ -320,7 +320,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    name: deployment_name_placeholder
    endpoint_name: endpoint_name_placeholder
    environment: 
-     name: image_name_placeholder-env   # Replace image_name_placeholder with actual image name and keep "-env" as suffix
+     name: nim-meta-llama-3-1-8b-instruct-env
      image: acr_registry_placeholder.azurecr.io/image_name_placeholder
      inference_config:
        liveness_route:
