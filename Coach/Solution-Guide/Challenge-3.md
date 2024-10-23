@@ -132,11 +132,11 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    ![](../media/Active-image-new3.png)
 
-1. Below in the **Thought Process**, you will see that the **Chat** model is utilized.
+1. Below in the **Thought Process**, you will see that the **Azure OpenAI Chat** model is utilized.
 
    ![](../media/Active-image-new4.png)
 
-1. Click on **Ask a question** at the top.
+1. Click on **Ask a question** at the top to use he NVIDIA NIM.
 
    ![](../media/Active-image-new2a.png)
 
@@ -144,11 +144,11 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    ![](../media/Active-image-new2b.png)
 
-1. Enter the prompt: **What does a Product Manager do?** and then press Enter. You’ll notice that the Chat UI updates in green. Next, click on the **Show Thought Process** icon.
+1. Enter the prompt: **What does a Product Manager do?** and then press Enter. You’ll notice that the Chat UI updates in green and is generated from NVIDIA LLM. Next, click on the **Show Thought Process** icon to get more details of the model used.
 
    ![](../media/Active-image-new2c.png)
 
-1. Below in the **Thought Process**, you will see that the **llama-3.1-8b-instruct** model is utilized.
+1. Below in the **Thought Process**, you will see that the **llama-3.1-8b-instruct** model is utilized thats coming from AML endpoint that you have deployed in the previous challenge.
 
    ![](../media/Active-image-new6a.png)
 
