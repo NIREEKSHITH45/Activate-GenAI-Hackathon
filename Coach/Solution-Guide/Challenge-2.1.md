@@ -404,3 +404,9 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    }'
    
    ```
+
+1. Run the following command to Verify Connection.
+
+   ```
+   ./test_chat_completions.sh
+   ```
