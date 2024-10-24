@@ -67,7 +67,15 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
       > Hint : Launch your project into action. This command will deploy your application to Azure, setting up all necessary resources and configurations automatically.
 
-   <validation step="cf48b1e0-f073-4ad2-a631-7661559fa36d" />
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+    - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
+      
+    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+      
+    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+    <validation step="cf48b1e0-f073-4ad2-a631-7661559fa36d" />
 
 ## Success Criteria:
 
