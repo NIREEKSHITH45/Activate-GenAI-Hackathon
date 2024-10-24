@@ -120,7 +120,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 1. Add the following details when prompted:
 
    - Select an Azure Subscription to use: Press **Enter** to choose the default **subscription (1)**
-   - Select an Azure Location to use: **Select any location you would like to use (2)**
+   - Select an Azure Location to use: **Please select the same location that you chose for creating the Azure AI search during Challenge 2 (2)**
    - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter : **Select any location you would like to use (3)**
    - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select any location you would like to use(4)**
      
