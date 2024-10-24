@@ -65,10 +65,10 @@ In this task, you'll learn the process of Deploying the Infrastructure.
          Start-Process msiexec.exe -ArgumentList "/i $output /quiet" -Wait
       ```   
    
-1. Run this command to download the project code.
+1. Run the following command in **PowerShell** to install the Azure Developer CLI. After installation, please reopen **PowerShell 7-preview (x64)**.
 
    ```
-   azd init -t azure-search-openai-demo
+   powershell -ex AllSigned -c "Invoke-RestMethod 'https://aka.ms/install-azd.ps1' | Invoke-Expression"
    ```
 
 1. Run the following command to login to Azure:
@@ -120,7 +120,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 1. Add the following details when prompted:
 
    - Select an Azure Subscription to use: Press **Enter** to choose the default **subscription (1)**
-   - Select an Azure Location to use: **Select any location you would like to use (2)**
+   - Select an Azure Location to use: **Please select the same location that you chose for creating the Azure AI search during Challenge 2 (2)**
    - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter : **Select any location you would like to use (3)**
    - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select any location you would like to use(4)**
      
