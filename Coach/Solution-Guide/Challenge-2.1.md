@@ -310,11 +310,11 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 1. Create a new file named **deployment1.yml** in the **azureml_files** folder. 
 
 1. Use the values from the `config.sh` file to replace the following placeholders in the `deployment.yml` file:
-
-- Replace `deployment_name_placeholder` with your actual deployment name.
-- Replace `endpoint_name_placeholder` with your actual endpoint name.
-- Replace `image_name_placeholder` with your actual image name.
-- Replace `acr_registry_placeholder` with your Azure Container Registry (ACR) name.
+  
+  - Replace `deployment_name_placeholder` with the same name as the `deployment_name` from the config.sh file.
+  - Replace `endpoint_name_placeholder` with the same name as the `endpoint_name` from the config.sh file.
+  - Replace `image_name_placeholder` with the same name as the `image_name` from the config.sh file.
+  - Replace `acr_registry_placeholder` with the same name as the `acr_registry_name` name  from the config.sh file.
 
    ```
    $schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
@@ -411,3 +411,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ```
    ./test_chat_completions.sh
    ```
+
+1. You will see the output similar to the below screenshot.
+
+   ![](../media/llama-output.png)  
