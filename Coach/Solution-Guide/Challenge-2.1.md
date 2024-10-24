@@ -52,7 +52,7 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
    ![](../../Coach/media/nvidia9.png)
 
-1. Carefully copy your generated API key, as it will be essential for accessing various services and features. Ensure you store it securely, as it may not be displayed again after you leave the page.
+1. Carefully copy your generated API key, essential for accessing various services and features paste the API key in the notebook. Ensure you store it securely, as it may not be displayed again after you leave the page.
 
    ![](../../Coach/media/nvidia7.png)
 
@@ -117,13 +117,15 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
 1. Once the deployment is completed, click on **Go to resource**.
 
-1. From the Overview page copy your subscription id you will use this later
+1. From the Overview page copy the subscription ID and paste the  subscription ID into the notebook you will use later use.
 
    ![](../../Coach/media/cr4.png)
 
 ### Setup Git Bash Environment
 
-1. Click on the Start menu and search for **Git Bash**. Once you find it, right-click on **Git Bash** and select **Run as Administrator** to launch Git Bash with elevated privileges.
+1. In the **LabVM**, click on the Start menu and search for **Git Bash** **(1)**. Once you find it, right-click on **Git Bash** **(2)** and select **Run as Administrator** **(3)** to launch Git Bash with elevated privileges.
+
+   ![](../media/git-bash-run.png)
 
 1. Run the following command, This command downloads the latest version of jq, a lightweight and flexible command-line JSON processor, and saves it as an executable file named `jq.exe` in the `/usr/bin/` directory, making it accessible for command-line use.
 
@@ -134,7 +136,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 1. Now, install the ml extension
 
    ```
-   az extension add -n ml
+   az extension add -n ml --allow-preview false
    ```
 
    ```
