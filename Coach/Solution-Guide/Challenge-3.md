@@ -65,10 +65,10 @@ In this task, you'll learn the process of Deploying the Infrastructure.
          Start-Process msiexec.exe -ArgumentList "/i $output /quiet" -Wait
       ```   
    
-1. Run this command to download the project code.
+1. Run the following command in **PowerShell** to install the Azure Developer CLI. After installation, please reopen **PowerShell 7-preview (x64)**.
 
    ```
-   azd init -t azure-search-openai-demo
+   powershell -ex AllSigned -c "Invoke-RestMethod 'https://aka.ms/install-azd.ps1' | Invoke-Expression"
    ```
 
 1. Run the following command to login to Azure:
