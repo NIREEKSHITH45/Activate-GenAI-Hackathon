@@ -208,7 +208,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
    ![](../../Coach/media/vscode4.png)
 
-   ![](../../Coach/media/vscode5.png)
+   ![](../../Coach/media/up2.png)
 
 1. Press **Ctrl + S** to save the changes you made to the file.
 
@@ -253,7 +253,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
 1. You can find the newly created worksapce in azure
 
-   ![](../../Coach/media/bash1.png)
+   ![](../../Coach/media/u1.png)
 
 ### Store NGC API Key for Use in the AzureML Deployment
 
@@ -283,7 +283,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ```
    >**Note:** This action will approximately take around 20-25 Minutes.
 
-1. Navigate to your container registry (**amlregistry**) , Under the service click on the Respositiories select your **nim-meta-llama-3.1-8b-instruct** regiestry, here you will find your image is pushed with the tag name latest.
+1. Navigate to your container registry (**amlregistry**) , Under the service click on the Respositiories select your **nim-meta-llama-3.1-8b-instruct** regiestry, here you will find your image is pushed with the tag name **latest**.
 
    ![](../../Coach/media/bash2.png)
 
@@ -315,7 +315,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 ### Create AzureML Deployment of the NIM Container
 
-1. Create a new file named **deployment1.yml** in the **azureml_files** folder. 
+1. Navigate to the **deployment.yml** in the **azureml_files** folder. 
 
 1. Use the values from the `config.sh` file to replace the following placeholders in the `deployment.yml` file:
   
@@ -358,7 +358,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    > **Note:** Replace the **`<resource_group>`** and **`<ml_workspace_name>`** with the actual values these values you can find it under config.sh file.
 
     ```cmd
-   az ml online-deployment create -f azureml_files/deployment1.yml --resource-group <resource_group> --workspace-name <ml_workspace_name>
+   az ml online-deployment create -f azureml_files/deployment.yml --resource-group <resource_group> --workspace-name <ml_workspace_name>
    ```
    >**Note:** This action will approximately take around 15-20 Minutes.
 

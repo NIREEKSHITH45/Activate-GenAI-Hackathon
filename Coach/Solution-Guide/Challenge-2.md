@@ -609,6 +609,7 @@ In this task, you'll retrieve the endpoint URL and keys for your Azure AI Search
 1. From the left navigation expand **Settings** select **Keys**, note that there are two **admin** keys and a single **Manage query keys** key.
 
    >**Note**: An *admin* key is used to create and manage search resources
+   
    >**Note**: An *Manage query keys* key is used by client applications that only need to perform search queries.
 
     ![](../media/Active-image87.png)

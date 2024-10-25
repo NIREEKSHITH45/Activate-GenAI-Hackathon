@@ -69,7 +69,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
 2. **Deploy Container registries**
 
-   - Deploy a Container registries with fallowing details.
+   - Deploy a Container registries with following details.
 
      | Setting | Action |
      | --- | --- |
@@ -85,13 +85,13 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
    - Run the configuration in Git Bash.
    
-   - Downloads the latest version of **jq**  file, a lightweight and flexible command-line JSON processor, and saves it as an executable file named `jq-win64.exe` in the `/usr/bin/jq.exe` directory
+   - Downloads the latest version of **jq**  file, a lightweight and flexible command-line JSON processor, and save it as an executable file named `jq-win64.exe` in the `/usr/bin/jq.exe` directory
 
      > Note: You can use https://github.com/jqlang/jq/releases url 
    
    - Install the `az ml` stable extension.
 
-   - Clone the fallowing repo.
+   - Clone the following repo.
 
       ```
       https://github.com/CloudLabsAI-Azure/nim-deploy.git
