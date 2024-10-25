@@ -1,0 +1,17 @@
+[ 
+  {
+  "Name": "Activate GenAI Hackathon - Day 1",
+  "Language": "English",
+  "BaseURL": "https://github.com/CloudLabs-MOC/Activate-GenAI-Hackathon/tree/main",
+  "Files": [
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/refs/heads/Nvidia-Content/Scenario/Hackathon-Day-1/Challenge-2.1v2.md",
+       "Order": 1
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/refs/heads/Nvidia-Content/Scenario/Hackathon-Day-1/Challenge-3.md",
+       "Order": 2
+     }
+  ]
+ } 
+]
