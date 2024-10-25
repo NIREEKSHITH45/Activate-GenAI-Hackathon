@@ -1,4 +1,4 @@
-# Challenge 04: Interact with the Chat App
+# Challenge 05: Interact with the Chat App
 
 ### Estimated Time: 30 minutes
 
