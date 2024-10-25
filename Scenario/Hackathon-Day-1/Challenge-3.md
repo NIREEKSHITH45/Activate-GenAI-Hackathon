@@ -1,4 +1,4 @@
-# Challenge 03:  Deploy an AI-Powered Chat App
+# Challenge 04:  Deploy an AI-Powered Chat App
 
 ### Estimated Time: 150 minutes
 
