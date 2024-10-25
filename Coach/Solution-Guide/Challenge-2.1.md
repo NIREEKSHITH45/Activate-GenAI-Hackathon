@@ -8,7 +8,9 @@ This lab guides participants through deploying NVIDIA NeMo Inference Manager (NI
 
 Participants will begin by creating an NVIDIA account to generate an API key, essential for accessing NVIDIA’s NGC resources, such as container images for NeMo models. Then, the lab covers setting up Azure Container Registry (ACR) for storing these images, configuring Git Bash to interact with Azure, and updating relevant configuration files within Visual Studio Code. After this setup, participants will deploy the NIM container through Azure Machine Learning, which will handle the GPU-based model deployment and expose it through a managed online endpoint.
 
-## Generate NGC API KEY
+## Solution Guide
+
+### Generate NGC API KEY
 
 > **Note:** This process of getting NGC API key is no longer recommended. Participant is recommended to get API key through build.nvidia.com as mentioned in the Scenario page.
 
