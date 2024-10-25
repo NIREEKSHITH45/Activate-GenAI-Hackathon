@@ -1,6 +1,6 @@
 # Challenge 03: Deploy NVIDIA NIM on Azure
 
-### Estimated Time: 30 minutes
+### Estimated Time: 90 minutes
 
 ## Introduction
 
