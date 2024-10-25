@@ -8,9 +8,11 @@ Your mandate, as avant-garde developers, is to navigate the vast expanse of AI, 
     - Deploy and experiment with LLMs to enrich GenTech's communication channels, focusing on interpreting, analyzing, and summarizing internal and external communications for more streamlined and impactful exchanges.
 2. **Implement Intelligent Document Search**
     - Engineer innovative tools that allow for efficient indexing and searching of vast document repositories, enabling rapid retrieval of information and knowledge discovery, crucial for informed decision-making within GenTech.
-3. **Establish AI-Powered Chat Interactions**
+3. **Deploy NVIDIA NIM Microservices for Generative AI on Azure**
+    - Deploy NVIDIA NIM microservices on Azure to seamlessly integrate generative AI models, leveraging NVIDIA GPUs for optimal performance. This setup enables real-time, scalable AI inference for applications requiring sophisticated document and data analysis, empowering enterprise-level decision-making with secure, high-efficiency AI deployment.
+4. **Establish AI-Powered Chat Interactions**
     -  Deploy and refine conversational AI interfaces within Contoso's digital ecosystem, ensuring they can handle intricate, multilingual conversations with finesse, thereby elevating the user experience on our platforms.
-4. **Establish AI-Powered Personalized Chat Experience with Private Data**
+5. **Establish AI-Powered Personalized Chat Experience with Private Data**
     -  Enhance the conversational AI interfaces by equipping them with personalized data, such as building a bot for employees to inquire about the company's benefits.
 
 Throughout the challenges of this hackathon, you will interact with state-of-the-art technologies essential for realizing Contoso's objectives. You will be equipped with the necessary arsenal of tools and services to effectively bring these use cases to fruition.
