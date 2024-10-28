@@ -22,13 +22,13 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
     ![](../../Coach/media/nvidia1a.png)
 
-1. On the **Set Your Profile** page provide the details such as **First Name**, **Last Name**, **Location**, **Job Role**, **Organization**, **Industry Segment(s)**, **Area of Interest** and then click on **Submit**.
-
-   ![](../../Coach/media/nvidia1b.png)
-
 1. On the **Create an Nvidia Cloud Account** page enter the **Account Name** as per your preference.
 
    ![](../../Coach/media/nvidia1c.png)
+
+1. On the **Set Your Profile** page provide the details such as **First Name**, **Last Name**, **Location**, **Job Role**, **Organization**, **Industry Segment(s)**, **Area of Interest** and then click on **Submit**.
+
+   ![](../../Coach/media/nvidia1b.png)
 
 1. Once your account is created or you've successfully logged in, navigate to the Developer Portal.
 
