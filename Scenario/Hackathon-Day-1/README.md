@@ -5,7 +5,7 @@ Welcome to the Activate GenAI Hackathon! Today, you're set to dive into the tran
 
 ## Introduction
 
-Your quest is to innovate for the future at the fictitious enterprise, GenTech Inc. Your challenge? To integrate next-generation AI capabilities into GenTech's ecosystem, enhancing their operations and customer engagement through intelligent application development.
+Your quest is to innovate for the future at the fictitious enterprise, Contoso ltd. Your challenge? To integrate next-generation AI capabilities into GenTech's ecosystem, enhancing their operations and customer engagement through intelligent application development.
 
 
 ## Learning Objectives
