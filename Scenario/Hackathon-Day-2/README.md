@@ -37,7 +37,7 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
    - Construct an Azure AI Search solution to enable sophisticated document handling. Upload, index, and tailor the search experience using VS Code and Azure. This lays the groundwork for document-based questioning essential for Retriever-Augmented Generation (RAG) in OpenAI.
 
 3. **Challenge 03: Deploy an AI-Powered Chat App**
-   - Deploy the chatapp solution architecture in Azure using Terraform.
+   - Deploy the chatapp solution architecture in Azure using Azure Bicep.
           
 4. **Challenge 04: Interact with the Chat App**
    - Navigate and explore the web app, interact adeptly with the Chat App using insightful questions, showcase multilingual query proficiency, and implement advanced settings for comprehensive Azure OpenAI service understanding.
