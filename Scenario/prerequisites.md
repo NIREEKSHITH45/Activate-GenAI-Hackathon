@@ -14,7 +14,7 @@ Before you begin, ensure that you have the following prerequisites installed and
 
 1. **Azure Developer CLI (azd)**: The Azure Developer CLI (azd) is an open-source tool that accelerates provisioning and deploying app resources on Azure. azd provides best practice, developer-friendly commands that map to key stages in your development workflow, whether you're working in the terminal, an integrated development environment (IDE), or through CI/CD (continuous integration/continuous deployment) pipelines. Install it [here](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd?tabs=winget-windows%2Cbrew-mac%2Cscript-linux&pivots=os-windows).
 
-1. **Bicep:** [ Azure Bicep]([https://developer.hashicorp.com/terraform/install](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install))
+1. **Bicep:** [ Azure Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)
 
 1. **Python:** Install [Python 3.12.1](https://www.python.org/downloads)
      * **Important**: Python and the pip package manager must be in the path on Windows for the setup scripts to work.
