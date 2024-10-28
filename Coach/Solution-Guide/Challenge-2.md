@@ -31,7 +31,7 @@ If you have not already cloned the **AI-102-AIEngineer** code repository to the 
 
 1. When the repository has been cloned, open the folder in Visual Studio Code by following these steps:
 
-    - From the top left corncer menu select **File (1)** >  **Open Folder (2)**.
+    - From the top left corner menu select **File (1)** >  **Open Folder (2)**.
 
        ![](../media/Active-image44.png)
       
