@@ -48,7 +48,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 1. **Azure OpenAI Service Deployment:**
    - Set up an Azure OpenAI Service instance with SKU size Standard `S0`.
    - Deploy it in the existing resource group named - **<inject key="Resource Group Name"/>**
-   - Obtain the necessary Azure OpenAI Key and Endpoint.
+   - Once the Azure OpenAI is deployed, obtain the necessary Azure OpenAI Key and Endpoint.
    - Please ensure the Azure OpenAI Service name follows this format: **OpenAI-xxxxxx**, where xxxxxx should be replaced with your specific **Deployment ID**.
 
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:

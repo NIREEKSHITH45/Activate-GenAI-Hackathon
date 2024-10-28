@@ -12,8 +12,6 @@ Before you begin, ensure that you have the following prerequisites installed and
 
 1. **Azure CLI:** The Azure Command-Line Interface (CLI) is useful for managing Azure resources from the command line. Install it [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
 
-1. **Azure Developer CLI (azd)**: The Azure Developer CLI (azd) is an open-source tool that accelerates provisioning and deploying app resources on Azure. azd provides best practice, developer-friendly commands that map to key stages in your development workflow, whether you're working in the terminal, an integrated development environment (IDE), or through CI/CD (continuous integration/continuous deployment) pipelines. Install it [here](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd?tabs=winget-windows%2Cbrew-mac%2Cscript-linux&pivots=os-windows).
-
 1. **Bicep:** [ Azure Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)
 
 1. **Python:** Install [Python 3.12.1](https://www.python.org/downloads)
