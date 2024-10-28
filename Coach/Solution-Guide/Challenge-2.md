@@ -54,6 +54,8 @@ To create the solution for Margie's Travel, you will need the following resource
 - A **Storage account** with a blob container in which the documents to be searched are stored.
   > **Important**: Your Azure AI Search and Azure AI Services resources must be in the same location.
 
+  > Please find this link and use any regions which supports Azure AI Services. https://learn.microsoft.com/en-us/azure/search/search-region-support#americas, please deploy Azure AI Search according to Azure AI Services.
+
 #### Task 2.1: Create an Azure AI Search resource
 
 In this task, you'll learn how to create an **Azure AI Search** resource in the Azure portal.
@@ -128,7 +130,7 @@ In this task, you'll learn how to create an Azure AI Search resource in the Azur
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default  **(1)**                                 |
    | Resource Group     | **Activate-GenAI**  **(2)**        |
-   | Location           | Use the same location as the resource group  **(3)**          |
+   | Location           | Use the same location as the Azure AI Search **(3)**          |
    | Name               | *Enter a unique name* for your Azure AI Services or use the format **challengeservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(4)** |
    | Pricing tier       | Standard S0     **(5)**                                        |
    | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 

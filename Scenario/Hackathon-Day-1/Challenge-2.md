@@ -25,6 +25,8 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
      
      > **Important**: Your Azure AI Search and Azure AI Services resources must be in the same location.
 
+     > Please find this link and use any regions which supports Azure AI Services. https://learn.microsoft.com/en-us/azure/search/search-region-support#americas
+
 3. **Prepare Document Upload:**
    - In Visual Studio Code, within the cloned repository, navigate to the 22-create-a-search-solution folder.
    - Edit the UploadDocs.cmd batch file with the required values.
