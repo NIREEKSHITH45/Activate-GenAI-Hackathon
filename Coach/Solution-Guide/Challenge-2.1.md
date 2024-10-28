@@ -173,6 +173,8 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
    cd nim-deploy/cloud-service-providers/azure/azureml/cli
    ```
 
+Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/cloud-service-providers/azure/azureml/cli).
+
 ### Visual Studio config.sh file update
 
 1. Start **Visual Studio Code** by launching it from your desktop.
