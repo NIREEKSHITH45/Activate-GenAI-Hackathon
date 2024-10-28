@@ -14,9 +14,6 @@ You need to deploy NVIDIA NIM on one of the following services for Challenge 3:
 
 - **Azure ML** - Deploy as a managed online endpoint
   
-- **Azure Kubernetes Service** - Deploy using a helm chart on a single Standard_NC24ads_A100_v4 node pool
-
-- **Azure VM** - Deploy as a docker container running in a Standard_NC24ads_A100_v4 VM.
 
 ## Scenario
 
