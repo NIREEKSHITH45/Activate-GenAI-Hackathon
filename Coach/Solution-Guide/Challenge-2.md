@@ -14,7 +14,7 @@ To address this challenge, Margie's Travel can use Azure AI Search to implement 
 
 ### Task 1: Clone the repository for this course
 
-If you have not already cloned the **AI-102-AIEngineer** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
+If you have not already cloned the **mslearn-knowledge-mining** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
 
 1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
 
