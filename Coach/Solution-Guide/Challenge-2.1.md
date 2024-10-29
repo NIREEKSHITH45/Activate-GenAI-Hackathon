@@ -315,56 +315,13 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 1. Click on **Review + assign**.
 
-### Create AzureML Deployment of the NIM Container
+### Create the Deployment
 
-1. Navigate to the **deployment.yml** in the **azureml_files** folder. 
+1. Run the following command to **create a deployment**.
 
-1. Use the values from the `config.sh` file to replace the following placeholders in the `deployment.yml` file:
-  
-  - Replace `deployment_name_placeholder` with the same name as the `deployment_name` from the config.sh file.
-  - Replace `endpoint_name_placeholder` with the same name as the `endpoint_name` from the config.sh file.
-  - Replace `image_name_placeholder` with the same name as the `image_name` from the config.sh file.
-  - Replace `acr_registry_placeholder` with the same name as the `acr_registry_name` name  from the config.sh file.
-
+   ```cmd
+   ./5_create_deployment.sh
    ```
-   $schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
-   name: deployment_name_placeholder
-   endpoint_name: endpoint_name_placeholder
-   environment: 
-     name: nim-meta-llama-3-1-8b-instruct-env
-     image: acr_registry_placeholder.azurecr.io/image_name_placeholder
-     inference_config:
-       liveness_route:
-         path: /v1/health/ready
-         port: 8000
-       readiness_route:
-         path: /v1/health/ready
-         port: 8000
-       scoring_route:
-         path: /
-         port: 8000
-   instance_type: Standard_NC24ads_A100_v4
-   instance_count: 1
-   environment_variables:
-     NGC_API_KEY: ${{azureml://connections/ngc/credentials/NGC_API_KEY}}
-   ```
-
-3. After updating your code based on the provided instructions, it will look similar to the image below:
-
-   ![](../../Coach/media/bash6.png)
-
-4. After making the necessary changes, save the file.
-
-5. Run the following command to **deploy the NIM container in AzureML**. IT will takes 10-15 mins to complete the deployment.
-
-   > **Note:** Replace the **`<resource_group>`** and **`<ml_workspace_name>`** with the actual values these values you can find it under config.sh file.
-
-    ```cmd
-   az ml online-deployment create -f azureml_files/deployment.yml --resource-group <resource_group> --workspace-name <ml_workspace_name>
-   ```
-   >**Note:** This action will approximately take around 15-20 Minutes.
-
-   >**Note :** Ensure that the provided Azure Container Registry (ACR) can be accessed by your AzureML endpoint by checking if your endpoint has the "AcrPull" role assignment on the ACR.
 
 ## Verify Your Connection
 
@@ -383,6 +340,8 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ![](../../Coach/media/nvverify3.png)
 
 5. In VS Code, open the **`test_chat_completions.sh`** file. Replace the following headers `<your-azureml-endpoint>`, `<your-azureml-endpoint-token>`, and `<deployment-name>` with the appropriate values. Ensure the **deployment-name** matches the one in your `config.sh` file.
+
+   >**Note:** Ensure to add** /v1/chat/completions** towards the end of the endpoint.
 
 6. Once you have updated all the headers, the code should look similar to the following:
 
