@@ -10,7 +10,7 @@ Participants will begin by creating an NVIDIA account to generate an API key, es
 
 ## Solution Guide
 
-### Generate NGC API KEY
+### Exercise 1: Generate NGC API KEY
 
 > **Note:** This process of getting NGC API key is no longer recommended. Participant is recommended to get API key through build.nvidia.com as mentioned in the Scenario page.
 
@@ -48,11 +48,11 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
    ![](../../Coach/media/nvidia4.png)
 
-2. Click on **Generate API Key** to create a new key for accessing the necessary services.
+1. Click on **Generate API Key** to create a new key for accessing the necessary services.
 
    ![](../../Coach/media/nvidia5.png)
 
-3. From the top, click on **+ Generate API Key** to create a new API key.
+1. From the top, click on **+ Generate API Key** to create a new API key.
 
    ![](../../Coach/media/nvidia8.png)
 
@@ -64,11 +64,13 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
    ![](../../Coach/media/nvidia7.png)
 
-### Accessing the Azure portal
+## Exercise 2: Accessing the Azure portal
+
+
 
 >**Important**: You can find the Username and Password within the environment by navigating to the **Environment** **(1)** tab in the left pane then copy the **Azure Username** **(2)** and **Azure Password** **(3)**, which will be required for signing into the Azure portal in later steps and you can record the **Deployment Id** **(4)**, which can be used to provide a unique name to the resources during deployment.
 
->**Note**: Numbers and ID's values may vary kindly ignore values in screenshots and copy values from **Environment** tab.
+   >**Note**: Numbers and ID's values may vary kindly ignore values in screenshots and copy values from **Environment** tab.
 
  ![](../media/Active-image19.png)
  ![](../media/Active-image(20).png)
@@ -99,7 +101,7 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
     ![](../media/Active-image5.png)
 
-### Create Container Registries
+### Task 3: Create Container Registries
 
 Azure Container Registry (ACR) is a managed Docker container registry service that allows you to store and manage private Docker container images and artifacts in Azure. It provides a secure and scalable solution for building, deploying, and managing containerized applications, enabling seamless integration with Azure services.
 
@@ -129,7 +131,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
    ![](../../Coach/media/cr4.png)
 
-### Setup Git Bash Environment
+###  Task 4: Setup Git Bash Environment
 
 1. In the **LabVM**, click on the Start menu and search for **Git Bash** **(1)**. Once you find it, right-click on **Git Bash** **(2)** and select **Run as Administrator** **(3)** to launch Git Bash with elevated privileges.
 
@@ -175,7 +177,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
 Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/tree/main/cloud-service-providers/azure/azureml/cli).
 
-### Visual Studio config.sh file update
+###  Task 5: Visual Studio config.sh file update
 
 1. Start **Visual Studio Code** by launching it from your desktop.
 
