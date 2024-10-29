@@ -144,6 +144,8 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
      - Update the `test_chat_completions.sh` file with the necessary details located in the `nim-deploy\cloud-service-providers\azure\azureml\cli` directory.
        
        > **Hint**: Use the values from the `config.sh` file.
+  
+       > **Note**: Ensure to append `/v1/chat/completions` to the end of the endpoint.
       
       - Run `test_chat_completions.sh` file to Verify Connection
 
