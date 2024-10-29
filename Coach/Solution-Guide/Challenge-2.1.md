@@ -315,9 +315,11 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 1. Click on **Review + assign**.
 
-### Create the Deployment
+### Create AzureML Deployment of the NIM Container
 
-1. Run the following command to **create a deployment**.
+Create an AzureML deployment with the NIM container obtained from the provided Azure container registry.
+
+1. Run the following command to **create AzureML deployment of the NIM container**.
 
    ```cmd
    ./5_create_deployment.sh
