@@ -133,7 +133,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
    - Create AzureML Deployment of the NIM Container
 
-        - 1. Run the `./5_create_deployment.sh` to create AzureML deployment of the NIM container.
+        - Run the `./5_create_deployment.sh` to create AzureML deployment of the NIM container.
    
    - **Verify the Connection**
 
