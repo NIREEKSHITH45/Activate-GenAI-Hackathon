@@ -201,7 +201,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
     | Setting | Action |
     | -- | -- |
-    | **subscription_id** | <inject key="SubscriptionID"></inject> |
+    | **subscription_id** | <inject key="SubscriptionID" enableCopy="false"/></inject> |
     | **resource_group** | **Activate-GenAI**  |
     | **workspace** | **ml-workspace** (Provide the name of workspace you want to create) |
     | **location** | **EastUS2**, **CentralUS** (Choose the same location where the resource group and make sure there is no space between the loaction name) |
