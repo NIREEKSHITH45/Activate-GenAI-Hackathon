@@ -21,10 +21,11 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 2. **Setup Azure Resources:**
    - Create an Azure AI Search resource with basic pricing.
    - Create an Azure AI Service with the Standard S0 SKU.
+   > Note : Ensure to use the same region as the Azure AI Search resource.     
    - Create an Azure Storage Account with the Standard Tier.
 
 3. **Prepare Document Upload:**
-   - In Visual Studio Code, within the cloned repository, navigate to the 22-create-a-search-solution folder.
+   - In Visual Studio Code, within the cloned repository, navigate to the **01-azure-search folder**.
    - Edit the UploadDocs.cmd batch file with the required values.
 
 4. **Execute the Upload Script:**
@@ -47,8 +48,8 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 7. **Deploy & Test a Search Client Application:**
    - Update application settings and configure the web app.
    - Run the application locally to test the search functionality.
-   > Hint: The application supports multiple languages; choose the one that suits your project's requirements. Adjust your application settings and configure the web application as needed. Then, run the application locally to test the search functionality before proceeding with deployment. 
-
+   > Hint: The application supports multiple languages; choose the one that suits your project's requirements. Adjust your application settings and configure the web application as needed. Then, run the application locally to test the search functionality before proceeding with deployment.
+   
    <validation step="15277a80-8b44-474a-ac19-0831c71d5fbd" />
    
 ## Success criteria:
