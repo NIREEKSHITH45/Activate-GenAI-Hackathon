@@ -15,8 +15,8 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>** !
 
 1. **Clone the Repository:**
-   - Clone the repository within Visual Studio Code: `https://github.com/MicrosoftLearning/AI-102-AIEngineer`.
-     > Hint : You can utilize the following repository, https://github.com/MicrosoftLearning/AI-102-AIEngineer, to explore and perform the scenarios listed below.
+   - Clone the repository within Visual Studio Code: `https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git`.
+     > Hint : You can utilize the following repository, https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git, to explore and perform the scenarios listed below.
 
 2. **Setup Azure Resources:**
    - Create an Azure AI Search resource with basic pricing.
