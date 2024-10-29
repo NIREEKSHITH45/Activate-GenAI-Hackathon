@@ -122,20 +122,18 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
        - Run the `./3_save_nim_container.sh` script to push NIM container in your container registry.
        - Verify that the NIM container has been published in the container registry by checking the `Repositories`.
        - Copy the `Repositories` endpoint.
+
+    - **Create Managed Online Endpoint**
+
+        - Run the `./4_create_endpoint.sh` script to create a managed online endpoint.
    
    - **Role Assignment**
        
        - Proivde `AcrPull` role assignment to the Machine Learning Online endpoint managed idenity.
 
-   - **Create AzureML Deployment of the NIM Container**
+   - Create AzureML Deployment of the NIM Container
 
-       - Update the `deployment.yml` file with the necessary details located in the `nim-deploy\cloud-service-providers\azure\azureml\cli\azureml_files` directory.
-        
-         > **Hint**: Use the values from the `config.sh` file
-       
-       - Run `deployment.yml` file to create Machine learning online deployment.
-
-         > **Hint**: Use az ml online-deployment command to deploy.
+        - 1. Run the `./5_create_deployment.sh` to create AzureML deployment of the NIM container.
    
    - **Verify the Connection**
 
