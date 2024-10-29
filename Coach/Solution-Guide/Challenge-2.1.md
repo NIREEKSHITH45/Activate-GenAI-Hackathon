@@ -341,7 +341,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 5. In VS Code, open the **`test_chat_completions.sh`** file. Replace the following headers `<your-azureml-endpoint>`, `<your-azureml-endpoint-token>`, and `<deployment-name>` with the appropriate values. Ensure the **deployment-name** matches the one in your `config.sh` file.
 
-   >**Note:** Ensure to add** /v1/chat/completions** towards the end of the endpoint.
+   >**Note:** Ensure to add **/v1/chat/completions** towards the end of the endpoint.
 
 6. Once you have updated all the headers, the code should look similar to the following:
 
