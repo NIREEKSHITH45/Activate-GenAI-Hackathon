@@ -60,6 +60,8 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 1. **Deploy the AI-Powered Chat App:**
 
     - Deploy an AI-powered chat application on Azure, integrating Azure AI services and Azure Search, and ensuring it's accessible and functional post-deployment.
+
+   - Provide the name of the environment as **activategenai** when prompted.
     
       > Hint : Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure Developer CLI. Once authenticated, you'll have access to your Azure resources.
     
