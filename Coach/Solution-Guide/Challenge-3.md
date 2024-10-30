@@ -110,6 +110,8 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    >**Note**: Please be aware that deploying the resources and the associated application may take up to 30 minutes.
 
+   > **Note** : Ensure to re-run in case of any deployment failure with Storage Account.
+
 1. Add the following details when prompted:
 
    - Select an Azure Subscription to use: Press **Enter** to choose the default **subscription (1)**
