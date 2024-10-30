@@ -52,13 +52,13 @@ Make sure you have the following from the CloudLabs-provided integrated environm
    - Obtain the necessary Azure OpenAI Key and Endpoint.
    - Please ensure the Azure OpenAI Service name follows this format: **OpenAI-xxxxxx**, where xxxxxx should be replaced with your specific **Deployment ID**.
 
-   <validation step="ccff4a0f-eb81-479e-a774-00cc5a664eeb" />
+   <validation step="b722c3ba-123e-43dd-b6e5-a056e7a89615" />
 
 2. **Deploy Large Language Models (LLM):**
    - Azure OpenAI provides a web-based portal named **Azure OpenAI Studio** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
    - Launch Azure OpenAI Studio from the overview pane and deploy two OpenAI models, i.e., `gpt-35-turbo` and `text-embedding-ada-002`, with a TPM capacity of 20k.
 
-   <validation step="32bbf48f-1030-4e8b-8dfe-a395a6746f1d" />
+   <validation step="ff38277c-ae8d-4746-9ec8-b36bca96c707" />
 
 ## Success Criteria:
 
