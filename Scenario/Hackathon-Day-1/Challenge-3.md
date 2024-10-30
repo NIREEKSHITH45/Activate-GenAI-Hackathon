@@ -69,6 +69,8 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
       > Hint : Launch your project into action. This command will deploy your application to Azure, setting up all necessary resources and configurations automatically.
 
+      > Note : Ensure to re-run in case of any deployment failure with Storage Account.
+
    <validation step="9b4373a3-2a97-40ca-8c61-f1182e5eb2ce" />
 
 1. **Deploying with NVIDIA NIM**
