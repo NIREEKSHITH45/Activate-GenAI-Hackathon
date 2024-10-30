@@ -100,6 +100,8 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
    - Update the `config.sh` file with the necessary details located in the `nim-deploy\cloud-service-providers\azure\azureml\cli` directory.
    - Update resource group as `Activate-GenAI` and image name as `nim-meta-llama-3.1-8b-instruct:latest`.
 
+      - Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/tree/main/cloud-service-providers/azure/azureml/cli).
+
 5. **Create AzureML Deployment of the NIM Container**
 
    - **Configuration and Login to Azure**
