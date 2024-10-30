@@ -71,7 +71,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
       > Note : Ensure to re-run in case of any deployment failure with Storage Account.
 
-       <validation step="d170a2ad-32d3-4149-ba77-caf4264a4373" />
+        <validation step="d170a2ad-32d3-4149-ba77-caf4264a4373" />
 
 1. **Deploying with NVIDIA NIM**
 
