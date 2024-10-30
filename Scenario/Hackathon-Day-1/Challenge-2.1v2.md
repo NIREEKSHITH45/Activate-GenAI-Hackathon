@@ -133,7 +133,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
        
        - Proivde `AcrPull` role assignment to the Machine Learning Online endpoint managed idenity.
 
-   - Create AzureML Deployment of the NIM Container
+   - **Create AzureML Deployment of the NIM Container**
 
         - Run the `./5_create_deployment.sh` to create AzureML deployment of the NIM container.
    
