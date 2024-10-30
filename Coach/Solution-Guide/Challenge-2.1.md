@@ -121,15 +121,15 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | **Location** | **East US 2** (Choose the same location where the resource group) (3) |
     | **Pricing plan** | **Standard** (4) |
 
-   ![](../../Coach/media/cr2.png)
+   ![](../../Coach/media/aml1.png)
 
-   ![](../../Coach/media/cr3.png)
+   ![](../../Coach/media/aml2.png)
 
 1. Once the deployment is completed, click on **Go to resource**.
 
 1. From the Overview page copy the subscription ID and paste the  subscription ID into the notebook you will use later use.
 
-   ![](../../Coach/media/cr4.png)
+   ![](../../Coach/media/aml3.png)
 
 ###  Task 4: Setup Git Bash Environment
 
