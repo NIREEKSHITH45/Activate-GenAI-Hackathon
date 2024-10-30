@@ -89,7 +89,7 @@ In this task, you'll learn how to create an **Azure AI Search** resource in the 
     >**Note**: Here, xxxxxx refers to the deployment ID
     >**Note**: If you encounter the error **Cannot get costs for subscription**, please ignore it and proceed with the next step.
     
-    ![](../media/Active-image25.png)
+    ![](../media/aml4.png)
    
 1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
 
