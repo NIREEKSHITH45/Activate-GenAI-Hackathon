@@ -112,7 +112,7 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can
 
 1. Click on **Deployments (1)** under **Shared Resources**, then select **+ Deploy Model**. Next, **choose Deploy Base Model (2)**.
 
-    ![](../media/solimage1.png)
+    ![](../media/solimage5.png)
 
 1. Search for **gpt-35-turbo** and click on **Confirm**.
 
