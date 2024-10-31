@@ -14,16 +14,16 @@ Você usará Bicep para provisionar a aplicação de chat.
 
 A aplicação de chat se integra perfeitamente com diferentes serviços Azure para fornecer uma experiência inteligente ao usuário. Aqui está uma visão geral simples de cada serviço usado pela aplicação:
 
-- **App Service:** Hospeda o aplicativo de chat, garantindo que ele possa responder aos prompts enviados pelos usuários a partir dos dados relevantes carregados.
-- **Application Insights:** Monitoriza proativamente o desempenho da aplicação, cuidando dos problemas antes que se tornem significativos.
-- **Document Intelligence:** Utilizando IA, compreende o conteúdo nos documentos carregados, tornando as informações do usuário mais esclarecedoras.
-- **Azure OpenAI:** Melhora as capacidades do aplicativo com compreensão de linguagem natural e respostas.
-- **Shared Dashboard:** Atua como um hub central para colaboração em equipe e compartilhamento de dados.
-- **Smart Detector Alert Rule:** Monitoriza a saúde da aplicação e notifica a equipe caso surjam problemas.
-- **Search Service:** Oferece aos usuários uma funcionalidade de busca dinâmica e eficiente dentro da aplicação.
-- **Log Analytics Workspace:** Rastrea e analisa a atividade da aplicação, oferecendo insights e logs valiosos.
-- **App Service Plan:** Otimiza a alocação de recursos para um desempenho ideal do aplicativo.
-- **Storage Account:** Armazena com segurança os dados que serão utilizados pelo serviço Azure AI Search para fornecer as entradas ao aplicativo de chat.
+- **App Service:** hospeda o aplicativo de bate-papo, garantindo que ele possa responder aos prompts do usuário a partir dos dados relevantes carregados.
+- **Application Insights:** monitora proativamente o desempenho do aplicativo, abordando problemas antes que eles se tornem significativos.
+- **Document Intelligence:** usando IA, entende o conteúdo em documentos carregados, tornando a entrada do usuário mais perspicaz.
+- **Azure OpenAI:** aprimora os recursos do aplicativo com compreensão e respostas de linguagem natural.
+- **Shared Dashboard:** atua como um hub central para colaboração da equipe e compartilhamento de dados.
+- **Smart Detector Alert Rule:** monitora a integridade do aplicativo e notifica a equipe se surgirem problemas.
+- **Search Service:** fornece aos usuários uma funcionalidade de pesquisa dinâmica e eficiente dentro do aplicativo.
+- **Log Analytics Workspace:** rastreia e analisa a atividade do aplicativo, fornecendo insights e logs valiosos.
+- **App Service Plan:** otimiza a alocação de recursos para desempenho ideal do aplicativo.
+- **Storage Account:** armazena com segurança os dados que serão usados ​​pelo serviço Azure AI Search para fornecer entrada ao aplicativo de bate-papo.
 
 Juntos, estes serviços criam uma aplicação de chat responsivo que combina recursos de IA, capacidades de monitorização e gestão eficiente de dados, proporcionando à Contoso uma experiência de usuário excepcional.
 
@@ -31,13 +31,11 @@ Juntos, estes serviços criam uma aplicação de chat responsivo que combina rec
 
 ![](../media/Active-image258.png)
 
-
 ## Pré-requisitos
 
 Certifique-se de ter o seguinte no ambiente integrado fornecido pelo CloudLabs:
 
 > Nota: Os pré-requisitos estão pré-configurados no ambiente CloudLabs. Se você estiver usando seu computador ou laptop pessoal, verifique se todos os pré-requisitos essenciais estão instalados para concluir este Hackathon.
-
 
   - [Subscrição de Azure](https://azure.microsoft.com/en-us/free/)
   - Acesso ao [Azure OpenAI](https://aka.ms/oai/access) com os seguintes modelos:
