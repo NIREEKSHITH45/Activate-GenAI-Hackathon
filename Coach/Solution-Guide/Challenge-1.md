@@ -31,7 +31,7 @@ A sua tarefa é provisionar o Serviço Azure OpenAI e implementar Modelos de Lin
 
 1. Na tab **Sign into Microsoft Azure tab**, você verá uma tela de login. Digite o seguinte e-mail/nome de usuário e clique em **Next**.
    
-   - **e-mail/nome de usuário:** <inject key="AzureAdUserEmail"></inject>
+   - **E-mail/nome de usuário:** <inject key="AzureAdUserEmail"></inject>
 
      ![](../media/Active-image1.png)
 
