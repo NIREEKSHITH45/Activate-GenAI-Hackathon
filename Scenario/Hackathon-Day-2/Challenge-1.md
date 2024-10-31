@@ -14,23 +14,23 @@ A **Contoso Ltd.** decidiu implementar o serviço Azure OpenAI juntamente com se
 
 Como parte deste desafio, sua tarefa é criar um serviço Azure OpenAI e implementar modelos Large Language Models (LLM). Os LLMs incluem **gpt-35-turbo** e **text-embedding-ada-002**.
 
-### Aceder ao Portal de Azure
+### Acesse o Portal do Azure
 
-1. Para aceder o portal de Azure, abra uma janela privada/incógnita no seu navegador e navegue até o Portal do Azure.
+1. Para acessar o portal do Azure, abra uma janela privada/anônima no seu navegador e navegue até o Portal do Azure.
 
-1. Na tab **Sign in to Microsoft Azure tab**, você verá uma tela de login. Digite o seguinte e-mail/nome de usuário e clique em **Next**.
+1. Na aba **Entrar no Microsoft Azure**, você verá uma tela de entrada. Insira o seguinte e-mail/nome de usuário e clique em **Avançar**.
 
-   - **Email/nome de usuário:** <inject key="AzureAdUserEmail"></inject>
+   - **E-mail/Nome de usuário:** <inject key="AzureAdUserEmail"></inject>
 
-1. gora insira a seguinte senha e clique em **Sign in**.
+1. Agora insira a seguinte senha e clique em **Entrar**.
 
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Senha:** <inject key="AzureAdUserPassword"></inject>
 
-1. Se aparecer a janela pop-up **Stay Signed in?**, clique em Não.
+1. Se um pop-up **Continuar conectado?** aparecer, clique em Não.
 
-1. Se aparecer a janela pop-up **You have free Azure Advisor recommendations!**, feche a janela para continuar com o desafio.
+1. Se um pop-up **Você tem recomendações gratuitas do Azure Advisor!** aparecer, feche a janela para continuar com o desafio.
 
-1. Se aparecer a janela pop-up **Welcome to Microsoft Azure** aparecer, clique em **Maybe Later** para pular o tour.
+1. Se uma janela pop-up **Bem-vindo ao Microsoft Azure** aparecer, clique em **Talvez mais tarde** para pular o tour.
 
 ## Pré-requisitos
 
