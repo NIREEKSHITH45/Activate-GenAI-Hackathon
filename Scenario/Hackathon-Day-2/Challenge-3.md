@@ -53,7 +53,7 @@ Certifique-se de ter o seguinte no ambiente integrado fornecido pelo CloudLabs:
 
 > **Importante** : Execute o Powershell 7 +.
 
-1. **Clone o Repository:**
+1. **Clone o Repositório:**
    - Clone o repositório Active Gen AI: `https://github.com/Azure-Samples/azure-search-openai-demo`.
    - Verifique que Bicep está instalado na sua maquina. Se não estive instalar, siga o [guia de instalação de Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)).
 
