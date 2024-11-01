@@ -1,160 +1,168 @@
-# Desafio 01: Implementar Azure OpenAI e Modelos LLM
-### Tempo Estimado: 30 minutos
+# Desafio 01: Implantar o Azure OpenAI Service e os modelos LLM
+### Tempo estimado: 30 minutos
 ## Introdução
 
-Bem-vindo ao Desafio sobre provisionar o Serviço Azure OpenAI! Este desafio foi projetado para testar suas capacidades na implementação do Serviço Azure OpenAI e os seus Modelos de Linguagem de Grande Escala (LLM). O objetivo é configurar o Serviço OpenAI e implementar modelos LLM.
+Bem-vindo ao Desafio Implantar o Azure OpenAI Service! Este desafio foi criado para testar suas habilidades na implantação do Azure OpenAI Service e seus Large Language Models (LLM). O objetivo é configurar o OpenAI Service e implantar modelos LLM.
 
-O serviço **Azure OpenAI** fornece acesso à API REST aos poderosos modelos de linguagem da OpenAI, incluindo o GPT-4, GPT-4 Turbo com Visão, `gpt-35-turbo` e a série de modelos de Embeddings. Além disso, as novas séries de modelos `GPT-4` e `gpt-35-turbo` agora alcançaram disponibilidade geral.
+O **Azure OpenAI Service** fornece acesso REST API aos poderosos modelos de linguagem do OpenAI, incluindo as séries de modelos GPT-4, GPT-4 Turbo with Vision, `gpt-35-turbo` e Embeddings. Além disso, as novas séries de modelos `GPT-4` e `gpt-35-turbo` já atingiram a disponibilidade geral.
 
-Um **Modelo de Linguagem de Grande Escala (LLM)** é um algoritmo deep learning capaz de executar uma variedade de tarefas de processamento de linguagem natural (NLP). Modelos de linguagem de grande escala usam modelos transformadores e são treinados com grandes conjuntos de dados — daí o termo "grande". Isso permite que eles reconheçam, traduzam, prevejam ou gerem texto ou outro conteúdo.
+Um **Large Language Model (LLM)** é um algoritmo de aprendizado profundo que pode executar uma variedade de tarefas de processamento de linguagem natural (NLP). Os grandes modelos de linguagem usam modelos transformadores e são treinados usando conjuntos de dados massivos — portanto, grandes. Isso permite que eles reconheçam, traduzam, prevejam ou gerem texto ou outro conteúdo.
 
-A **Contoso Ltd.**, uma empresa tecnológica líder, busca melhorar suas operações de suporte a produtos. Eles recebem um grande número de consultas diariamente, o que resulta em tempos de espera mais longos e na redução da satisfação do cliente. Para resolver isso, a Contoso está planejando implementar uma solução impulsionada por IA que possa lidar com as consultas de clientes de forma eficaz e eficiente.
+**Contoso Ltd.**, uma empresa líder em tecnologia, está buscando aprimorar suas operações de suporte a produtos. Eles recebem um grande número de consultas diariamente, o que resulta em tempos de espera mais longos e menor satisfação do cliente. Para resolver isso, a Contoso está planejando implementar uma solução com tecnologia de IA que pode lidar com as consultas dos clientes de forma eficaz e eficiente.
 
-Eles optaram por implementar o serviço Azure OpenAI juntamente com seus Modelos de Linguagem de Grande Escala (LLM), como `gpt-35-turbo` e `text-embedding-ada-002`. Estes modelos são conhecidos pela sua capacidade de processar e gerar texto semelhante ao humano, tornando-os ideais para essa aplicação.
+Eles escolheram implantar o Azure OpenAI Service junto com seus Large Language Models (LLM), como `gpt-35-turbo` e `text-embedding-ada-002`. Esses modelos são conhecidos por sua capacidade de processar e gerar texto semelhante ao humano, tornando-os ideais para esta aplicação.
 
-Como parte deste desafio, a sua tarefa é criar um serviço Azure OpenAI e implementar Modelos de Linguagem de Grande Escala (LLM). Os Modelos de Linguagem de Grande Escala incluem **gpt-35-turbo** e **text-embedding-ada-002**.
+Como parte deste desafio, sua tarefa é criar um serviço Azure OpenAI e implantar Large Language Models (LLM). Os Large Language Models incluem **gpt-35-turbo** e **text-embedding-ada-002**.
 
 ## Descrição
 
-A sua tarefa é provisionar o Serviço Azure OpenAI e implementar Modelos de Linguagem de Grande Escala (LLM).
+Sua tarefa é implantar o Azure OpenAI Service e implantar Large Language Models (LLM).
 
-### Aceder ao Portal do Azure
+### Acessando o portal do Azure
 
->**Importante**: Você pode encontrar o Nome de Usuário e a Senha no ambiente navegando até a tab **Environment** **(1)** no painel esquerdo, depois copie o **Azure Username** **(2)** e a **Azure Password** **(3)**, que serão necessários para fazer login no portal de Azure nas etapas posteriores. Você também pode registrar o **Deployment Id** **(4)**, que pode ser usado para fornecer um nome exclusivo aos recursos durante a implementação.
+>**Importante**: Você pode encontrar o nome de usuário e a senha no ambiente navegando até a guia **Ambiente** no painel esquerdo e, em seguida, copiar o **Nome de Usuário do Azure** e a **Senha do Azure**, que serão necessários para entrar no portal do Azure em etapas posteriores, e você pode registrar o **Deployment ID**, que pode ser usado para fornecer um nome exclusivo aos recursos durante a implantação.
 
->**Nota**: Os valores dos números e IDs podem variar. Por favor, ignore os valores nas capturas de tela e copie os valores da tab **Environment**.
+>**Observação**: Os valores de números e IDs podem variar, ignore os valores nas capturas de tela e copie os valores da guia **Ambiente**.
 
- ![](../media/Active-image19.png)
- ![](../media/Active-image(20).png)
+![](../media/1-11-24(18).png)
 
-1. Para aceder ao portal de Azure, na labvm abra o **Microsoft Edge** e navegue até o [Portal do Azure](https://portal.azure.com/).
+1. Para acessar o portal do Azure, dentro do labvm abra o **Microsoft Edge** e navegue até o [Portal do Azure](https://portal.azure.com/).
 
-1. Na tab **Sign into Microsoft Azure tab**, você verá uma tela de login. Digite o seguinte e-mail/nome de usuário e clique em **Next**.
-   
-   - **E-mail/nome de usuário:** <inject key="AzureAdUserEmail"></inject>
+1. Na aba **Entrar no Microsoft Azure**, você verá uma tela de login. Insira o seguinte e-mail/nome de usuário e clique em **Avançar**
 
-     ![](../media/Active-image1.png)
+    - **E-mail/Nome de usuário:** <inject key="AzureAdUserEmail"></inject>
 
-1. Agora insira a seguinte senha e clique em **Sign in**.
+        ![](../media/1-11-24(1).png)
 
-   - **Senha/Password:** <inject key="AzureAdUserPassword"></inject>
+1. Agora insira a seguinte senha e clique em **Entrar**.
 
-      ![](../media/Active-image2.png)
+    - **Senha:** <inject key="AzureAdUserPassword"></inject>
 
-1. Se aparecer a janela pop-up **Action Required**, clique em **Ask Later**.
+        ![](../media/1-11-24(2).png)
 
-    ![](../media/Active-image3.png)
-   
-1. Se aparecer a janela pop-up **Stay Signed in?**, clique **No**.
+1. Quando a janela **Ação necessária** aparecer, clique em **Perguntar depois**.
 
-    ![](../media/Active-image4.png)
+1. Se você vir o pop-up **Continuar conectado?**, clique em **Não**.
 
-1. Se uma janela pop-up **Welcome to Microsoft Azure** aparecer, clique em **Cancel** para pular o tour.
+    ![](../media/1-11-24(3).png)
 
-    ![](../media/Active-image5.png)
+1. Se uma janela pop-up **Bem-vindo ao Microsoft Azure** aparecer, clique em **Cancelar** para pular o tour.
+
+    ![](../media/1-11-24(4).png)
 
 ## Pré-requisitos
 
-- [Assinatura de Azure](https://azure.microsoft.com/en-us/free/)
-- [Azure OpenAI](https://aka.ms/oai/access) access is available with the following models:
-  - gpt-35-turbo
-  - text-embedding-ada-002
+- [Assinatura do Azure](https://azure.microsoft.com/en-us/free/)
+- [Azure OpenAI](https://aka.ms/oai/access) o acesso está disponível com os seguintes modelos:
+- gpt-35-turbo
+- text-embedding-ada-002
 
-## Guia da Solução
+## Guia de soluções
 
-### Tarefa 1: Deploy an Azure Open AI Service
+### Tarefa 1: Implantar um serviço Azure Open AI
 
-Nesta tarefa, você irá proceder a configuração e implementação do serviço Azure OpenAI no portal de Azure.
+Nesta tarefa, você aprenderá o processo de configuração e implantação do serviço Azure OpenAI no Portal do Azure.
 
-1. Na página do Portal de Azure, em **Search resources, services and docs (G+/)**, introduza **Azure OpenAI (1)**, e selecione **Azure OpenAI (2)** em serviços.
+1. Na página Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **OpenAI (1)** e selecione **OpenAI (2)** em serviços.
 
-    ![](../media/Active-image6.png)
+    ![](../media/1-11-24(5).png)
 
-1. Na página **Azure AI Services | Azure OpenAI**, clique em **+ Create**.
+1. Na lâmina **Azure AI Services | Azure OpenAI**, clique em **+ Criar (2)**.
 
-   ![](../media/Active-image7.png)
+    ![](../media/1-11-24(6).png)
 
-1. Especifique os seguintes detalhes para implementar o serviço Azure OpenAI e clique em **Next** duas vezes.
+1. Especifique os seguintes detalhes para implantar o serviço Azure Open AI e clique em **Próxima (6)** três vezes.
 
-   | **Opção**         | **Valor**                                              |
-   | ------------------ | -----------------------------------------------------  |
-   | Subscription       | Escolha a assinatura disponível                        |
-   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**                 |
-   | Region             | Use a mesma localização que o grupo de recursos        |
-   | Name               | *Insira um nome único* ou use o formato **OpenAI-xxxxxx** (substitua **xxxxxx** pelo **Deployment ID** |
-   | Pricing tier       | **Standard S0**                                        | 
+    | **Option** | **Value** |
+    | ------------------ | ----------------------------------------------------- |
+    | Assinatura | Deixar padrão **(1)** |
+    | Grupo de recursos | **Activate-GenAI (2)** |
+    | Região | Use o mesmo local do grupo de recursos **(3)** |
+    | Nome | Use o formato **OpenAI-xxxxxx** (substitua **xxxxxx** pelo **Deployment ID**) **(4)** |
+    | Tipo de preço | **Standard S0 (5)** |
 
-   >**Nota**: xxxxxx refere-se ao **deployment ID** que registrou na última tarefa.
+    >**Observação**: aqui, xxxxxx se refere ao **Deployment ID** que você registrou na última tarefa.
 
-    ![](../media/Active-image9.png)
+    ![](../media/1-11-24(7).png)
 
-1. Uma vez que a validação for bem-sucedida na tab **Review + submit**, clique em **Create** e aguarde a conclusão da criação do recurso.
+1. Uma vez que a validação for bem-sucedida no **Examinar + enviar**, clique em **Criar** e aguarde a conclusão da implantação.
 
-     ![](../media/Active-image10.png)
+    ![](../media/1-11-24(8).png)
 
-### Tarefa 2: Implementar um modelo
+    ![](../media/1-11-24(9).png)
 
-O Azure OpenAI oferece um portal baseado na web chamado Azure OpenAI Studio, que você pode usar para criar, gerir e explorar modelos. Você começará a sua exploração do Azure OpenAI usando o Azure OpenAI Studio para criar um modelo.
+### Tarefa 2: Implantar um modelo
 
-1. Na página do Portal de Azure, na caixa **Search resources, services and docs (G+/)** na parte superior do portal, digite **Azure OpenAI (1)** e, em seguida, selecione **Azure OpenAI (2)**.
+O Azure OpenAI fornece um portal baseado na Web chamado Azure OpenAI Studio, que você pode usar para implantar, gerenciar e explorar modelos. Você começará sua exploração do Azure OpenAI usando o Azure OpenAI Studio para implantar um modelo.
 
-1. Na janela **Azure AI Services | Azure OpenAI**, selecione **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject>**.
+1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **OpenAI (1)** e selecione **OpenAI (2)** em serviços.
 
-    ![](../media/Active-image12.png)
+    ![](../media/1-11-24(5).png)
 
-1. INa página de recursos do Azure OpenAI, clique em **Go to Azure OpenAI Studio**. Isso o levará para o **Azure AI Studio**.
+1. Na lâmina **Azure AI services | OpenAI (1)**, selecione **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
 
-   ![](../media/Active-image11.png)
+    ![](../media/1-11-24(10).png)
 
-1. Na página **Welcome to Azure OpenAI Service**, clique em **Create new deployment**.
+1. No painel de recursos do Azure OpenAI, selecione **Visão geral (1)** no menu à esquerda e clique em **Go to Azure OpenAI Studio (2)**. Isso o levará ao Azure AI Studio.
 
-   ![](../media/Active-image13.png)
+    ![](../media/1-11-24(11).png)
 
-1. Na página **Deployments**, clique em **+ Create new deployment**.
+    >**Observação:** se o pop-up Discover an even better Azure AI Studio experience aparecer, clique em Fechar para descartá-lo.
 
-     ![](../media/Active-image14.png)
-   
-1. Na interface pop-up **Deploy model**, insira os seguintes detalhes:
-   
-    - **Deployment name**: **text-turbo** **(1)**
-    - **Select a model**: **gpt-35-turbo** **(2)**
-    - **Model version**: **Usar a versão padrão** **(3)**
-    - **Deployment Type**: **Standard (4)**
-    - Ajustar **Tokens per Minute Rate Limit (thousands)**: **20K (5)**
-  
-         ![](../media/ai1.png)
-      
-1. Clique no botão **Create** para criar o modelo.
+1. Clique em **Implantações (1)** em **Recursos compartilhados** e selecione **+ Implante o modelo (2)**. Em seguida, **Implantar o modelo básico (3)**.
 
-1. De volta à página **Deployments** clique novamente em **+ Create new deployment**.
+    ![](../media/1-11-24(12).png)
 
-     ![](../media/Active-image16.png)
-   
-1. Na interface pop-up **Deploy model**,  insira os seguintes detalhes e clique em **Advanced options (3)**, seguido de reduzir o **Tokens per Minute Rate Limit (thousands) (5)**:
-   
-    - **Deployment name**: **text-ada-002** **(1)**
-    - **Select a model**: **text-embedding-ada-002** **(2)**
-    - **Model version**: **Usar a versão padrão** **(3)**
-    - **Deployment Type**: **Standard (4)**
-    - Ajustar **Tokens per Minute Rate Limit (thousands)**: **20K** **(5)**
-  
-         ![](../media/ai2.png)
+1. Pesquise por **gpt-35-turbo (1)** e clique em **Confirmar (2)**.
 
-1. Clique no botão **Create** para criar o modelo.
+    ![](../media/1-11-24(13).png)
 
-1. De volta à página de Deployments, você deve ver os modelos **text-turbo** e **text-ada-002** criados.
+1. Na interface pop-up do modelo Deploy, clique em **Personalizar** e insira os seguintes detalhes:
 
-     ![](../media/Active-image18.png)
+    - **Nome da implantação (1)**: text-turbo
+    - **Tipo de implantação (2)**: Standard
+    - **Versão do modelo (3)**: 0301(Padrão)
+    - **Limite de Taxa de Tokens por Minuto (4)**: 20K
+    - **Habilitar cota dinâmica (5)**: Habilitado
+    - Clique em **Implantar (6)**
 
-## Critério de Sucesso:
+        ![](../media/1-11-24(14).png)
 
-- Provisionamente do serviço Azure OpenAI.
+        >**Observação:** se a opção **Personalizar** não aparecer, você pode inserir diretamente os detalhes da implantação do modelo.
 
-- Implementação de Modelos LLM no serviço Azure OpenAI.
+1. Clique em **Implantações (1)** em **Recursos compartilhados** e selecione **+ Implante o modelo (2)**. Em seguida, **Implantar o modelo básico (3)**.
 
+    ![](../media/1-11-24(12).png)
 
-## Recursos Adicionais:
+1. Pesquise por **text-embedding-ada-002 (1)** e clique em **Confirmar (2)**.
 
-- Consulte a [Documentação do serviço Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/) para orientações sobre como implementar o serviço.
+    ![](../media/1-11-24(15).png)
 
-## Prossiga para o próximo Desafio clicando em **Next**>>.
+1. Na interface pop-up do modelo Deploy, clique em **Personalizar** e insira os seguintes detalhes:
+
+    - **Nome da implantação (1)**: text-ada-002
+    - **Tipo de implantação (2)**: Standard
+    - **Versão do modelo (3)**: 2 (Padrão)
+    - **Limite de Taxa de Tokens por Minuto (4)**: 20K
+    - **Habilitar cota dinâmica (5)**: Habilitado
+    - Clique em **Implantar (6)**
+
+        ![](../media/1-11-24(16).png)
+
+        >**Observação:** se a opção **Personalizar** não aparecer, você pode inserir diretamente os detalhes da implantação do modelo.
+
+1. De volta à página Implantações, você deve ver os modelos de implantação **text-turbo** e **text-ada-002** criados.
+
+    ![](../media/1-11-24(17).png)
+
+## Critérios de sucesso:
+
+- Implantação bem-sucedida do Azure OpenAI Service.
+
+- Implantação de Large Language Models (LLM) com o OpenAI Service.
+
+## Recursos adicionais:
+
+- Consulte a [documentação do Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/) para obter orientação sobre como implantar o serviço.
+
+## Prossiga com o próximo desafio clicando em **Avançar**>>.
