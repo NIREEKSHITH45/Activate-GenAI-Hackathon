@@ -73,7 +73,7 @@ Nesta tarefa, você aprenderá o processo de configuração e implantação do s
 
 1. Especifique os seguintes detalhes para implantar o serviço Azure Open AI e clique em **Próxima (6)** três vezes.
 
-    | **Option** | **Value** |
+    | **Opção** | **Valor** |
     | ------------------ | ----------------------------------------------------- |
     | Assinatura | Deixar padrão **(1)** |
     | Grupo de recursos | **Activate-GenAI (2)** |

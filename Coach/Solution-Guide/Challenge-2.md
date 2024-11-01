@@ -4,175 +4,178 @@
 
 ## Introdução:
 
-All organizations rely on information to make decisions, answer questions, and function efficiently. The problem for most organizations is not a lack of information but the challenge of finding and  extracting the information from the massive set of documents, databases, and other sources in which the information is stored.
+Todas as organizações dependem de informações para tomar decisões, responder perguntas e funcionar de forma eficiente. O problema para a maioria das organizações não é a falta de informações, mas o desafio de encontrar e extrair as informações do enorme conjunto de documentos, bancos de dados e outras fontes nas quais as informações são armazenadas.
 
-For example, suppose *Margie's Travel* is a travel agency that specializes in organizing trips to cities around the world. Over time, the company has amassed a huge amount of information in documents such as brochures as well as reviews of hotels submitted by customers. This data is a valuable source of insights for travel agents and customers as they plan trips, but the sheer volume of data can make it difficult to find relevant information to answer a specific customer question.
+Por exemplo, suponha que *Margie's Travel* seja uma agência de viagens especializada em organizar viagens para cidades ao redor do mundo. Ao longo do tempo, a empresa acumulou uma enorme quantidade de informações em documentos como brochuras, bem como avaliações de hotéis enviadas por clientes. Esses dados são uma fonte valiosa de insights para agentes de viagens e clientes à medida que planejam viagens, mas o grande volume de dados pode dificultar a localização de informações relevantes para responder a uma pergunta específica do cliente.
 
-To address this challenge, Margie's Travel can use Azure AI Search to implement a solution in which the documents are indexed and enriched by using AI skills to make them easier to search.
+Para lidar com esse desafio, a Margie's Travel pode usar o Azure AI Search para implementar uma solução na qual os documentos são indexados e enriquecidos usando habilidades de IA para torná-los mais fáceis de pesquisar.
 
 ## Guia da Solução
 
-### Tarefa 1: Clone the repository for this course
+### Tarefa 1: Clonar o repositório para este curso
 
-If you have not already cloned the **AI-102-AIEngineer** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
+Se você ainda não clonou o repositório de código **AI-102-AIEngineer** para o ambiente em que está trabalhando neste laboratório, siga estas etapas para fazer isso. Caso contrário, abra a pasta clonada no Visual Studio Code.
 
-1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
+1. Abra o **Visual Studio Code** na área de trabalho da VM do laboratório clicando duas vezes nele.
 
-1. In **Visual Studio Code**, from the top left menu, select the **(...) (1)** ellipses > **Terminal (2)**, then choose **New Terminal (3)**.
+1. No **Visual Studio Code**, no menu superior esquerdo, selecione as reticências **(...) (1)** > **Terminal (2)** e escolha **New Terminal (3)**.
 
-   ![](../media/Active-image42.png)
+    ![](../media/Active-image42.png)
 
-1. Execute the following command in the terminal to clone the repository to a local folder: (it doesn't matter which folder).
+1. Execute o seguinte comando no terminal para clonar o repositório para uma pasta local: (não importa qual pasta).
 
-   ```
-   git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer
-   ```
+    ```
+    git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer
+    ```
+
     ![](../media/Active-image43.png)
 
-1. When the repository has been cloned, open the folder in Visual Studio Code by following these steps:
+1. Quando o repositório tiver sido clonado, abra a pasta no Visual Studio Code seguindo estas etapas:
 
-    - From the top left corncer menu select **File (1)** >  **Open Folder (2)**.
+    - No menu do canto superior esquerdo, selecione **File (1)** > **Open Folder... (2)**.
 
-       ![](../media/Active-image44.png)
-      
-    - Within the file explorer in **Quick access** select **AI-102-AIEngineer (1)** then click on **Select folder (2)**.
+        ![](../media/Active-image44.png)
 
-       ![](../media/Active-image45.png)
-      
-    - If **Do you trust the authors of the files in this folder?** prompted click on **Yes, I trust the authors**.
+    - No explorador de arquivos em **Acesso rápido**, selecione **AI-102-AIEngineer (1)** e clique em **Selecionar pasta (2)**.
 
-         ![](../media/Active-image46.png)
+        ![](../media/1-11-24(39).png)
 
-       > **Note**: If you are prompted to add required assets to build and debug, select **Not Now**.
+    - Se **Do you trust the authors of the files in this folder?** for solicitado, clique em **Yes, I trust the authors**.
+
+        ![](../media/Active-image46.png) 
+
+        > **Observação**: se você for solicitado a adicionar os ativos necessários para compilar e depurar, consulte **Not now**.
 
 ### Tarefa 2: Create Azure resources
 
 To create the solution for Margie's Travel, you will need the following resources in your Azure subscription:
 
-- An **Azure AI Search** resource that will manage indexing and querying.
-- An **Azure AI Services** resource that provides AI services for skills that your search solution can use to enrich the data in the data source with AI-generated insights.
-- A **Storage account** with a blob container in which the documents to be searched are stored.
-  > **Important**: Your Azure AI Search and Azure AI Services resources must be in the same location.
+- Um recurso do **Azure AI Search** que gerenciará a indexação e a consulta.
+- Um recurso do **Azure AI Services** que fornece serviços de IA para habilidades que sua solução de pesquisa pode usar para enriquecer os dados na fonte de dados com insights gerados por IA.
+- Uma **Conta de armazenamento** com um contêiner de blob no qual os documentos a serem pesquisados ​​são armazenados.
 
-#### Tarefa 2.1: Create an Azure AI Search resource
+  > **Importante**: seus recursos do Azure AI Search e do Azure AI Services devem estar no mesmo local.
 
-In this task, you'll learn how to create an **Azure AI Search** resource in the Azure portal.
+#### Tarefa 2.1: Criar um recurso do Azure AI Search
 
-1. In a web browser, sign in to Azure portal using `https://portal.azure.com`.
+Nesta tarefa, você aprenderá a criar um recurso do **Azure AI Search** no portal do Azure.
 
-1. Return to the Azure portal home page, and then click the **&#65291;Create a resource** button.
+1. Em um navegador da Web, entre no portal do Azure usando `https://portal.azure.com`.
 
-    ![](../media/Active-image21.png)
-     
-1. Search for and select **Azure AI Search** from the list on Create a resource page.
+1. Retorne à página inicial do portal do Azure e clique no botão **&#65291;Criar um recurso**.
 
-   ![](../media/Active-image22.png)
+    ![](../media/1-11-24(19).png)
 
-1. On the **Marketplace** page, select **Azure AI Search**.
+1. Pesquise e selecione **Azure AI Search** na lista na página Criar um recurso.
 
-   ![](../media/Active-image33.png)
+    ![](../media/1-11-24(21).png)
+
+1. Na página **Mercado**, selecione **Azure AI Search**.
+
+    ![](../media/1-11-24(22).png)
+
+1. Na página **Azure AI Search**, clique em **Criar**.
+
+    ![](../media/1-11-24(23).png)
+
+1. Especifique os seguintes detalhes para criar um serviço **Pesquisa de IA do Azure** e clique na aba **Revisar + Criar (6)**.
+
+    | **Opção** | **Valor** |
+    | ------------------ | ----------------------------------------------------- |
+    | Assinatura | Deixar padrão **(1)** |
+    | Grupo de Recursos | **Activate-GenAI** **(2)** |
+    | Nome | *Digite um nome exclusivo* para seu serviço de pesquisa ou use o formato **searchservice-xxxxxx** (substitua **xxxxxx** pelo **Deployment ID** registrado no **Challenge 01**) **(3)** |
+    | Local | Use o mesmo local que o grupo de recursos **(4)** |
+    | Camada de preços | Básico **(5)** |
+
+    >**Observação**: aqui, xxxxxx se refere ao ID de implantação.
     
-1. On the **Azure AI Search** page, click on **Create**. 
+    >**Observação**: se você encontrar o erro **Não é possível obter custos para assinatura**, ignore-o e prossiga para a próxima etapa.
 
-   ![](../media/Active-image24.png)
-   
-1. Specify the following details to create an **Azure AI Search** service then click on **Review + Create (6)** tab.
-   
-   | **Option**         | **Value**                                              |
-   | ------------------ | -----------------------------------------------------  |
-   | Subscription       | Leave default  **(1)**                                 |
-   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**                |
-   | Name               | *Enter a unique name* for your search service or use the format **searchservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
-   | Location           | Use the same location as the resource group **(4)**           |
-   | Pricing tier       | Basic   **(5)**                                               | 
+    ![](../media/1-11-24(24).png)
 
-    >**Note**: Here, xxxxxx refers to the deployment ID
-    >**Note**: If you encounter the error **Cannot get costs for subscription**, please ignore it and proceed with the next step.
-    
-    ![](../media/Active-image25.png)
-   
-1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
+1. Assim que a validação for bem-sucedida na guia **Revisar + criar**, clique em **Criar** e aguarde a conclusão da implantação, depois clique em **Ir para o recurso**.
 
-   ![](../media/Active-image26.png)
+    ![](../media/1-11-24(25).png)
 
-   ![](../media/Active-image27.png)
+    ![](../media/1-11-24(26).png)
 
-1. Review the **Overview** page on the blade for your Azure AI Search resource in the Azure portal. Here, you can use a visual interface to create, test, manage, and monitor the various components of a search solution, including data sources, indexes, indexers, and skillsets.
+1. Revise a página **Visão geral** na lâmina para seu recurso do Azure AI Search no portal do Azure. Aqui, você pode usar uma interface visual para criar, testar, gerenciar e monitorar os vários componentes de uma solução de pesquisa, incluindo fontes de dados, índices, indexadores e conjuntos de habilidades.
 
-#### Tarefa 2.2: Create an Azure AI Services resource
+#### Tarefa 2.2: Criar um recurso do Azure AI Services
 
-In this task, you'll learn how to create an Azure AI Search resource in the Azure portal. Your search solution will use this resource to enrich the data in the datastore with AI-generated insights.
+Nesta tarefa, você aprenderá a criar um recurso do Azure AI Search no portal do Azure. Sua solução de pesquisa usará esse recurso para enriquecer os dados no armazenamento de dados com insights gerados por IA.
 
-1. Return to the Azure portal home page, and then click the **&#65291;Create a resource** button.
+1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Azure AI Services (1)** e selecione **Azure AI services (2)** em serviços.
 
-    ![](../media/Active-image21.png)
-     
-1. Search for and select **Azure AI Services (1) (2)** from the list then on the **Marketplace** page, select **Azure AI Services (3)**.
+    ![](../media/1-11-24(27).png)
 
-   ![](../media/Active-image28.png)
+1. Na página **Azure AI Services**, clique em **+ Criar**.
 
-   ![](../media/Active-image29.png)
-    
-1. On the **Azure AI Services** page, click on **Create**. 
+    ![](../media/1-11-24(28).png)
 
-   ![](../media/Active-image30.png)
-   
-1. Specify the following details to create an **Azure AI Service** then click on **Review + Create (7)** tab.
-   
-   | **Option**         | **Value**                                              |
-   | ------------------ | -----------------------------------------------------  |
-   | Subscription       | Leave default  **(1)**                                 |
-   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
-   | Name               | *Enter a unique name* for your Azure AI Services or use the format **challengeservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
-   | Location           | Use the same location as the resource group  **(4)**          |
-   | Pricing tier       | Standard S0     **(5)**                                        |
-   | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 
+1. Especifique os seguintes detalhes para criar um **Azure AI Services** e clique na aba **Examinar + criar**.
 
-    >**Note**: Here, xxxxxx refers to the deployment ID
-    
-    ![](../media/Active-image(31).png)
-   
-1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
+    | **Opção** | **Valor** |
+    | ------------------ | ----------------------------------------------------- |
+    | Assinatura | Deixar padrão |
+    | Grupo de Recursos | **Activate-GenAI** |
+    | Region | Use o mesmo local que o grupo de recursos |
+    | Nome | *Digite um nome exclusivo* para seus Azure AI Services ou use o formato **challengeservice-xxxxxx** (substitua **xxxxxx** pelo **Deployment ID** registrado no **Challenge 01**) |
+    | Tipo de preço | Standard S0 |
 
-#### Tarefa 2.3: Create a storage account
+    >**Observação**: aqui, xxxxxx se refere ao ID de implantação
 
-In this task, you'll learn how to create a **Storage account** resource in the Azure portal, and in next steps will be creating blob container where the documents to be searched are stored.
+    ![](../media/1-11-24(29).png)
 
-1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Storage account** **(1)**, and then select **Storage account** **(2)** under services.
+1. Assim que a validação for bem-sucedida na guia **Examinar + criar**, clique em **Criar** e aguarde a conclusão da implantação, depois clique em **Ir para o recurso**.
 
-    ![](../media/Active-image34.png)
+    ![](../media/1-11-24(30).png)
 
-1. Click on **Create**.
+    ![](../media/1-11-24(31).png)
 
-    ![](../media/Active-image35.png)
-   
-1. Specify the following details to create an Azure **Storage account** then click on **Next** **(7)**  tab.
-   
-   | **Option**            | **Value**                                              |
-   | ------------------    | -----------------------------------------------------  |
-   | Subscription          | Leave default **(1)**                                  |
-   | Resource Group        | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**         |
-   | Storage account name  | *Enter a unique name* for your Storage account or use the format **storagexxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
-   | Region                | Use the same location as the resource group **(4)**    |
-   | Performance           | Standard **(5)**                                       |
-   | Replication           | Locally redundant storage (LRS) **(6)**                | 
+#### Tarefa 2.3: Criar uma conta de armazenamento
 
-   ![](../media/Active-image36.png)
+Nesta tarefa, você aprenderá a criar um recurso de **Conta de armazenamento** no portal do Azure e, nas próximas etapas, criará um contêiner de blobs onde os documentos a serem pesquisados ​​serão armazenados.
 
-1. On the **Advanced** tab, check the box next to **Allow enabling anonymous access on individual containers** and click on **Review + create**
+1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Conta de armazenamento** **(1)** e selecione **Conta de armazenamento** **(2)** em serviços.
 
-   ![](../media/Active-image37.png)
+    ![](../media/1-11-24(32).png)
 
-1. Once validation is successful on  **Review + create**, click **Create** and wait for the deployment to complete click on **Go to resource**.
-      ![](../media/Active-image38.png)
-   
-      ![](../media/Active-image39.png)
-   
-1. On the **Overview** page, note the **Subscription ID**; this identifies the subscription for which the storage account is provisioned.
+1. Clique em **+ Criar**.
 
-   ![](../media/Active-image40.png)
+    ![](../media/1-11-24(33).png)
 
-    > **Tip**: Keep the **Storage Account** blade open; you will need the subscription ID and one of the keys in the next procedure.
+1. Especifique os seguintes detalhes para criar uma conta de armazenamento do Azure e clique na guia Avançar **Próximo (7)**.
+
+    | **Opção** | **Valor** |
+    | ------------------ | ----------------------------------------------------- |
+    | Assinatura | Deixe o padrão **(1)** |
+    | Grupo de recursos | **Activate-GenAI** **(2)** |
+    | Nome da conta de armazenamento | *Digite um nome exclusivo* para seus Serviços de IA do Azure ou use o formato **challengeservice-xxxxxx** (substitua **xxxxxx** pelo **ID de implantação** registrado no **Desafio 01**) **(3)** |
+    | Região | Use o mesmo local do grupo de recursos **(4)** |
+    | Desempenho | Standard **(5)** |
+    | Redundância | **LRS (armazenamento com redundância local)** **(6)**|
+
+    >**Observação**: aqui, xxxxxx se refere ao ID de implantação
+
+    ![](../media/1-11-24(34).png)
+
+1. Na aba **Avançado**, marque a caixa ao lado de **Permitir acesso anônimo em contêineres individuais (1)** e clique em **Revisar + criar (2)**
+
+    ![](../media/1-11-24(35).png)
+
+1. Assim que a validação for bem-sucedida em **Revisar + criar**, clique em **Criar** e aguarde a conclusão da implantação, clique em **Ir para o recurso**.
+
+    ![](../media/1-11-24(36).png)
+
+    ![](../media/1-11-24(37).png)
+
+1. Na página **Visão geral**, observe o **ID da Assinatura**; ele identifica a assinatura para a qual a conta de armazenamento é provisionada.
+
+    ![](../media/1-11-24(38).png)
+
+    > **Dica**: mantenha a lâmina **Conta de armazenamento** aberta; você precisará do ID da assinatura e de uma das chaves no próximo procedimento.
 
 ### Tarefa 3 e Tarefa 4: Upload documents to Azure Storage and execute the uploaded script
 
