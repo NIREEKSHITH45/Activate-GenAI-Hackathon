@@ -223,115 +223,113 @@ Nesta tarefa, você navegará entre o Visual Studio Code e o portal do Azure par
 
     ![](../media/Active-image53.png)
 
-### Tarefa 5: Data Import and Indexing:
-#### Tarefa 5.1: Index the documents
+### Tarefa 5: Importação e indexação de dados:
+#### Tarefa 5.1: Indexar os documentos
 
-In this task, you'll learn how to create a search solution by indexing documents that are already in place. Navigating to your Azure AI Search resource in the Azure portal, configure the data source to utilize Azure Blob Storage, integrate cognitive skills for enrichment, customize the target index, and set up an indexer to process and index the documents effectively.
+Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando documentos que já estão em vigor. Navegando até seu recurso do Azure AI Search no portal do Azure, configure a fonte de dados para utilizar o Azure Blob Storage, integre habilidades cognitivas para enriquecimento, personalize o índice de destino e configure um indexador para processar e indexar os documentos de forma eficaz.
 
->**Note**: Now that you have the documents in place, you can create a search solution by indexing them.
+>**Observação**: agora que você tem os documentos em vigor, pode criar uma solução de pesquisa indexando-os.
 
-1. In the Azure portal, browse to your **Azure AI Search** resource. Then, on its **Overview** page, select **Import data**.
+1. No portal do Azure, navegue até seu recurso **Azure AI Search**. Em seguida, na página **Visão geral**, selecione **Importar dados**.
 
-   ![](../media/Active-image54.png)
+    ![](../media/imag3.png)
 
-1. On the **Connect to your data** page, in the **Data Source** list, select **Azure Blob Storage**. Then complete the data store details with the following values:
+1. Na página **Conectar aos seus dados**, na lista **Fonte de dados**, selecione **Azure Blob Storage**. Em seguida, preencha os detalhes do armazenamento de dados com os seguintes valores:
+
+    - **Fonte de dados**: Armazenamento de Blobs do Azure(1)
+    - **Nome da fonte de dados**: margies-data (2)
+    - **Dados para extrair**: Conteúdo e metadados (3)
+    - **Modo de análise**: Padrão (4)
+    - **Assinatura**: Deixe o padrão (5)
+    - **Cadeia de conexão**: Selecione **Escolha uma conexão existente (6)**. Em seguida, selecione sua conta de armazenamento (7) e, finalmente, selecione o contêiner **margies (8)** que foi criado pelo script UploadDocs.cmd. Em seguida, clique em **Selecionar (9)**.
+
+      ![](../media/imag4.png)
+        
+      ![](../media/imag5.png)
+        
+      ![](../media/imag6.png)
+
+    - **Autenticação de identidade gerenciada**: Nenhuma (10)
+    - **Nome do contêiner**: margies (11)
+    - **Pasta de blobs**: *Deixe em branco.* (12)
+    - **Descrição**: Brochuras e avaliações no site da Margie's Travel. (13)
+    - Clique em **Adicionar habilidades cognitivas (opcional) (14)**
+
+      ![](../media/imag7.png)
+
+1. Na guia **Adicionar habilidades cognitivas (opcional)**, expanda **Anexar serviços de IA(1)**, dentro da seção selecione seu recurso **Serviços de IA do Azure (2)**.
+
+   ![](../media/Active-image59.png)
+
+1. Role para baixo e expanda a seção **Adicionar enriquecimentos (1)** e especifique o seguinte:
+
+    - Altere o **Nome do conjunto de habilidades** para **margies-skillset (2)**.
+    - Marque a caixa de seleção para **Ativar OCR e mesclar todo o texto no campo merged_content (3)**.
+    - Certifique-se de que o **Campo de dados de origem** esteja definido como **merged_content (4)**.
+    - Deixe o **Nível de granularidade de enriquecimento** como o **Campo de origem (5)**, que define todo o conteúdo do documento que está sendo indexado, mas observe que você pode alterar isso para extrair informações em níveis mais granulares, como páginas ou frases.
     
-    - **Data Source**: Azure Blob Storage (1)
-    - **Data source name**: margies-data  (2)
-    - **Data to extract**: Content and metadata (3)
-    - **Parsing mode**: Default (4)
-    - **Subscription**: Leave default (5)  
-    - **Connection string**: Select **Choose an existing connection (6)**. Then select your storage account (7), and finally select the **margies (8)** container that 
-       was created by the UploadDocs.cmd script. then click on **Select (9)**.
+    ![](../media/Active-image60.png)
 
-        ![](../media/Active-image55.png)
-
-        ![](../media/Active-image56.png)
-
-        ![](../media/Active-image57.png)
-      
-    - **Managed identity authentication**: None (10)
-    - **Container name**: margies (11)
-    - **Blob folder**: *Leave this blank.* (12)
-    - **Description**: Brochures and reviews in Margie's Travel web site. (13)
-    - Click on **Add cognitive skills(Optional) (14)**
-
-       ![](../media/Active-image58.png)
-
-1. On **Add cognitive skills (Optional)** tab expand **Attach AI Services(1)**, within the section  select your **Azure AI Services (2)** resource.
-
-     ![](../media/Active-image59.png)
-   
-1. Scroll down and expand **Add enrichments (1)** section and specify the following :
+    - Selecione os seguintes campos enriquecidos:
     
-    - Change the **Skillset name** to **margies-skillset (2)**.
-    - Select the checkbox for **Enable OCR and merge all text into merged_content field (3)**.
-    - Ensure that the **Source data field** is set to **merged_content (4)**.
-    - Leave the **Enrichment granularity level** as the **Source field (5)**, which sets the entire contents of the document being indexed, but note that you can change this to extract information at more granular levels, like pages or sentences.
-  
-      ![](../media/Active-image60.png)
+    | Habilidade cognitiva | Parâmetro | Nome do campo |
+    | --------------- | ---------- | ---------- |
+    | Extrair nomes de locais | | locais |
+    | Extrair frases-chave | | frases-chave |
+    | Detectar idioma | | idioma |
+    | Gerar tags de imagens | | imageTags |
+    | Gerar legendas de imagens | | imageCaption |
+    
+    ![](../media/Active-image61.png)
 
-    - Select the following enriched fields:
+1. Verifique novamente suas seleções (pode ser difícil alterá-las mais tarde). Em seguida, prossiga para a próxima etapa (*Personalizar índice de destino*).
 
-        | Cognitive Skill | Parameter | Field name |
-        | --------------- | ---------- | ---------- |
-        | Extract location names | | locations |
-        | Extract key phrases | | keyphrases |
-        | Detect language | | language |
-        | Generate tags from images | | imageTags |
-        | Generate captions from images | | imageCaption |
+    ![](../media/Active-image62.png)
 
-        ![](../media/Active-image61.png)
-      
-1. Double-check your selections (it can be difficult to change them later). Then proceed to the next step (*Customize target index*).
+1. Na guia **Personalizar índice de destino**, altere o **Nome do índice** para **margies-index (1)**.
 
-   ![](../media/Active-image62.png)
-  
-1. On **Customize target index** tab change the **Index name** to **margies-index (1)**.
-   
-1. Ensure that the **Key** is set to **metadata_storage_path (2)** and leave the **Suggester name** blank and **Search mode (3)** at its default value.
+1. Certifique-se de que a **Chave** esteja definida como **metadata_storage_path (2)** e deixe o **Nome do sugeridor** em branco e o **Modo de pesquisa (3)** em seu valor padrão.
 
     ![](../media/Active-image63.png)
    
-1. Make the following changes to the index fields, leaving all other fields with their default settings (**IMPORTANT**: you may need to scroll to the right to see the entire table):
+1. Faça as seguintes alterações nos campos de índice, deixando todos os outros campos com suas configurações padrão (**IMPORTANTE**: pode ser necessário rolar para a direita para ver a tabela inteira):
 
-    | Field name | Retrievable | Filterable | Sortable | Facetable | Searchable |
+    | Nome do campo | Recuperável | Filtrável | Classificável | Facetable | Pesquisável |
     | ---------- | ----------- | ---------- | -------- | --------- | ---------- |
-    | metadata_storage_size | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | |
+    | metadata_storage_size | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | |
     | metadata_storage_last_modified | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | |
-    | metadata_storage_name | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
-    | metadata_author | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
-    | locations | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
-    | keyphrases | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
-    | language | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | |
+    | nome_de_armazenamento_de_metadados | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
+    | metadata_author | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
+    | localizações | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
+    | frases-chave | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
+    | idioma | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | |
+    
+    Use a imagem abaixo para verificar a opção.
+    
+    ![](../media/Active-image64.png)
 
-    Use the below image to cross verify the option. 
+1. Verifique novamente suas seleções, prestando atenção especial para garantir que as opções corretas **Recuperável**, **Filtrável**, **Classificável**, **Facetable** e **Pesquisável** estejam selecionadas para cada campo (pode ser difícil alterá-las mais tarde). Em seguida, prossiga para a próxima etapa clicando em **Próximo: Criar um indexador**.
 
-     ![](../media/Active-image64.png)
-   
-1. Double-check your selections, paying particular attention to ensure that the correct **Retrievable**, **Filterable**, **Sortable**, **Facetable**, and **Searchable** options are selected for each field  (it can be difficult to change them later). Then proceed to the next step by clicking on **Next: Create an indexer**.
+1. Na guia **Criar um indexador**, especifique o seguinte
+    - Altere o **Nome do indexador** para **margies-indexer (1)**.
+    - Deixe o **Agendamento** definido como **Uma vez (2)**.
+    - Expanda as **Opções avançadas (3)** e certifique-se de que a opção **Chaves de codificação Base-64 (4)** esteja selecionada (geralmente, as chaves de codificação tornam o índice mais eficiente).
 
-1. On the **Create an indexer** tab specify the following
-      - Change the **Indexer name** to **margies-indexer (1)**.
-      - Leave the **Schedule** set to **Once (2)**.
-      - Expand the **Advanced options (3)** and ensure that the **Base-64 encode keys (4)** option is selected (generally, encoding keys make the index more efficient).
-      
-      - Select **Submit (5)** to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
-          
-          1. Extracts the document metadata fields and content from the data source.
-          2. Runs the skillset of cognitive skills to generate additional enriched fields.
-          3. Maps the extracted fields to the index.
-      
-          ![](../media/Active-image65.png)  
+    - Selecione **Enviar (5)** para criar a fonte de dados, o conjunto de habilidades, o índice e o indexador. O indexador é executado automaticamente e executa o pipeline de indexação, que:
 
-1. On **Azure AI Search** resource page, expand **Search management (1)** select **Indexers (2)** which should show the newly created **margies-indexer (3)**.
+        1. Extrai os campos de metadados do documento e o conteúdo da fonte de dados.
+        2. Executa o conjunto de habilidades cognitivas para gerar campos enriquecidos adicionais.
+        3. Mapeia os campos extraídos para o índice.
 
-   ![](../media/Active-image66.png)  
+           ![](../media/Active-image65.png)
 
-1. Select **margies-indexer** . Wait a few minutes, and click **&orarr; Refresh** until the **Status** indicates success.
+1. Na página de recursos do **Azure AI Search**, expanda **Gerenciamento de pesquisa (1)** selecione **Indexadores (2)** que deve mostrar o **margies-indexer (3)** recém-criado.
 
-    ![](../media/Active-image67.png) 
+    ![](../media/Active-image66.png)
 
+1. Selecione **margies-indexer** . Aguarde alguns minutos e clique em **&orarr; Atualizar** até que o **Status** indique sucesso.
+
+    ![](../media/Active-image67.png)
 #### Tarefa 5.2: Search the index
 
 In this task, you'll learn to search and query the index created earlier:
