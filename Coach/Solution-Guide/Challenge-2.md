@@ -189,9 +189,9 @@ Nesta tarefa, você navegará entre o Visual Studio Code e o portal do Azure par
 
 1. Navegue de volta para a aba do navegador exibindo **portal do Azure**, recupere o **ID da assinatura (1)**, **nome da conta de armazenamento do Azure (2)** e **chave da conta de armazenamento do Azure** clicando na opção **Mostrar** > **Área de transferência (3)** da conta de armazenamento criada recentemente e registre os valores no bloco de notas.
 
-    ![](../media/Active-image48.png)
+    ![](../media/imag1.png)
 
-    ![](../media/Active-image49.png)
+    ![](../media/imag2.png)
 
 1. Retorne ao código do VS e edite o arquivo em lote para substituir os espaços reservados **YOUR_SUBSCRIPTION_ID**, **YOUR_AZURE_STORAGE_ACCOUNT_NAME** e **YOUR_AZURE_STORAGE_KEY** pelos valores correspondentes que você registrou na etapa anterior.
 
