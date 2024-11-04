@@ -177,51 +177,51 @@ Nesta tarefa, você aprenderá a criar um recurso de **Conta de armazenamento** 
 
     > **Dica**: mantenha a lâmina **Conta de armazenamento** aberta; você precisará do ID da assinatura e de uma das chaves no próximo procedimento.
 
-### Tarefa 3 e Tarefa 4: Upload documents to Azure Storage and execute the uploaded script
+### Tarefa 3 e Tarefa 4: Carregar documentos no Armazenamento do Azure e executar o script carregado
 
-In this task, you'll navigate between Visual Studio Code and the Azure portal to retrieve necessary credentials, update a batch file, and use the Azure CLI to upload documents to a blob container in your storage account.
+Nesta tarefa, você navegará entre o Visual Studio Code e o portal do Azure para recuperar as credenciais necessárias, atualizar um arquivo em lote e usar o CLI do Azure para carregar documentos em um contêiner de blob na sua conta de armazenamento.
 
->**Important**: Now that you have the required resources, you can upload some documents to your Azure Storage account.
+>**Importante**: Agora que você tem os recursos necessários, pode carregar alguns documentos na sua conta do Armazenamento do Azure.
 
-1. Navigate back to Visual Studio Code, under the **Explorer** pane, expand the **22-create-a-search-solution (1)** folder and select **UploadDocs.cmd (2)**.
+1. Navegue de volta para o Visual Studio Code, no painel **Explorer**, expanda a pasta **22-create-a-search-solution (1)** e selecione **UploadDocs.cmd (2)**.
 
     ![](../media/Active-image47.png)
-   
-1. Navigate back to browser tab displaying **Azure portal**, retrieve the **subscription ID (1)**, **Azure storage account name (2)**, and **Azure storage account key** by clicking **Show** > **Clipboard (3)** option from the recently created storage account and record the values in notepad.
 
-      ![](../media/Active-image48.png)
-   
-      ![](../media/Active-image49.png)
-   
-1. Return to VS code and edit the batch file to replace placeholders **YOUR_SUBSCRIPTION_ID**, **YOUR_AZURE_STORAGE_ACCOUNT_NAME**, and **YOUR_AZURE_STORAGE_KEY** with the corresponding values which you recorded in previous step.
+1. Navegue de volta para a aba do navegador exibindo **portal do Azure**, recupere o **ID da assinatura (1)**, **nome da conta de armazenamento do Azure (2)** e **chave da conta de armazenamento do Azure** clicando na opção **Mostrar** > **Área de transferência (3)** da conta de armazenamento criada recentemente e registre os valores no bloco de notas.
+
+    ![](../media/Active-image48.png)
+
+    ![](../media/Active-image49.png)
+
+1. Retorne ao código do VS e edite o arquivo em lote para substituir os espaços reservados **YOUR_SUBSCRIPTION_ID**, **YOUR_AZURE_STORAGE_ACCOUNT_NAME** e **YOUR_AZURE_STORAGE_KEY** pelos valores correspondentes que você registrou na etapa anterior.
 
     ![](../media/Active-image85.png)
-   
-1. Save your changes, and then right-click the **22-create-a-search-solution (1)** folder > **open an integrated terminal (2)**.
+
+1. Salve suas alterações e clique com o botão direito do mouse na pasta **22-create-a-search-solution (1)** > **abra um terminal integrado (2)**.
 
     ![](../media/Active-image51.png)
 
-1. Enter the following command to sign into your Azure subscription by using the Azure CLI:
+1. Insira o seguinte comando para entrar na sua assinatura do Azure usando o Azure CLI:
 
-   > **Note**: Ensure we have installed the Azure CLI and the Azure CLI Tools extension in Visual Studio Code.
+    > **Observação**: certifique-se de ter instalado o Azure CLI e a extensão Azure CLI Tools no Visual Studio Code.
 
-   >**Note**: Make sure to replace <your-username> <your-password> with **Azure username** and **password** which you using from challenge-1.
-   
+    >**Observação**: certifique-se de substituir <seu-nome-de-usuário> <sua-senha> por **nome-de-usuário-do-Azure** e **senha** que você está usando no desafio-1.
+
     ```
-    az login --username <your-username> --password <your-password>
+    az login --username <seu-nome-de-usuário> --password <sua-senha>
     ```
 
     ![](../media/Active-image52.png)
-      
-   > **Note**: If a web browser tab opens and prompts you to sign in to Azure, please sign in, then close the browser tab and return to Visual Studio Code.
 
-1. Enter the following command to run the batch file. This will create a blob container in your storage account and upload the documents in the **data** folder to it.
+    > **Observação**: se uma guia do navegador da Web abrir e solicitar que você faça login no Azure, faça login, feche a guia do navegador e retorne ao Visual Studio Code.
+
+1. Insira o seguinte comando para executar o arquivo em lote. Isso criará um contêiner de blob na sua conta de armazenamento e carregará os documentos na pasta **data** para ele.
 
     ```
     .\UploadDocs
     ```
 
-   ![](../media/Active-image53.png)
+    ![](../media/Active-image53.png)
 
 ### Tarefa 5: Data Import and Indexing:
 #### Tarefa 5.1: Index the documents
