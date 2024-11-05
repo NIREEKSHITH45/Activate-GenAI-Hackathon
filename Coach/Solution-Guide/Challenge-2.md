@@ -559,7 +559,7 @@ Nesta tarefa, você atualizará as definições JSON no Visual Studio Code para 
 
 1. Quando o script terminar, retorne à página **Visão geral** do seu **Azure AI Search** no painel de navegação esquerdo, expanda **Gerenciamento de pesquisa** e selecione **Indexadores**. Em seguida, selecione periodicamente **Atualizar** para rastrear o progresso da operação de indexação. Pode levar cerca de um minuto para ser concluído.
 
-    ![](../media/Active-image84.png)
+    ![](../media/imag25.png)
 
     >**Observação**: pode haver alguns avisos para alguns documentos que são muito grandes para avaliar o sentimento. Frequentemente, a análise de sentimento é realizada no nível da página ou da frase, em vez do documento completo, mas neste cenário, a maioria dos documentos, principalmente as avaliações de hotéis, são curtas o suficiente para que pontuações de sentimento úteis no nível do documento sejam avaliadas.
 
