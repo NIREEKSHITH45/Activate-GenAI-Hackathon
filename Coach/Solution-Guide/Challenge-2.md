@@ -310,7 +310,7 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
         2. Executa o conjunto de habilidades cognitivas para gerar campos enriquecidos adicionais.
         3. Mapeia os campos extraídos para o índice.
 
-           ![](../media/Active-image65.png)
+           ![](../media/imag15.png)
 
 1. Na página de recursos do **Azure AI Search**, expanda **Gerenciamento de pesquisa (1)** selecione **Indexadores (2)** que deve mostrar o **margies-indexer (3)** recém-criado.
 
