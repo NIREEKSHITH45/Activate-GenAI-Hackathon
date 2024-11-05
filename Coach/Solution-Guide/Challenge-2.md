@@ -407,7 +407,7 @@ Nesta tarefa, você está se preparando para executar comandos CURL no Visual St
 
 1. No portal do Azure, retorne à página **Visão geral** do seu recurso **Azure AI Search** e, na seção superior da página, encontre o **Url** do seu recurso (que se parece com **https://resource_name.search.windows.net**) e copie-o para a área de transferência.
 
-    ![](../media/Active-image72.png)
+    ![](../media/imag22.png)
 
 1. No Visual Studio Code, no painel Explorer, expanda a pasta **22-create-a-search-solution (1)** e sua subpasta **modify-search (2)** e selecione **modify-search.cmd (3)** para abri-la. Você usará este arquivo de script para executar comandos *CURL* que enviam JSON para a interface REST do Azure AI Service.
 
@@ -419,7 +419,7 @@ Nesta tarefa, você está se preparando para executar comandos CURL no Visual St
 
 1. No portal do Azure, volte para a página **Visão geral** do seu recurso **Azure AI Search**, expanda **Configurações** e selecione **Chaves** e copie a **Chave de administrador principal** para a área de transferência.
 
-    ![](../media/Active-image74.png)
+    ![](../media/imag23.png)
 
 1. Volte para o **Visual Studio Code**, substitua o espaço reservado **YOUR_ADMIN_KEY** pela chave que você copiou para a área de transferência.
 
