@@ -326,17 +326,17 @@ Nesta tarefa, você aprenderá a pesquisar e consultar o índice criado anterior
 
 1. Na parte superior da página **Visão geral** do seu recurso de pesquisa do Azure AI, selecione **Explorador de pesquisa**.
 
-    ![](../media/Active-image68.png)
+    ![](../media/imag18.png)
 
 1. No Explorador de pesquisa, na caixa **Sequência de caracteres de consulta**, insira `*` (um único asterisco) e selecione **Pesquisar**.
 
-    ![](../media/Active-image69.png)
+    ![](../media/imag19.png)
     
     >**Observação**: esta consulta recupera todos os documentos no índice no formato JSON. Examine os resultados e observe os campos de cada documento, que contêm conteúdo do documento, metadados e dados enriquecidos extraídos pelas habilidades cognitivas selecionadas.
 
 1. No menu **Exibir**, selecione **Exibição JSON**.
 
-    ![](../media/Active-image70.png)
+    ![](../media/imag20.png)
 
 1. Observe que a solicitação JSON para a pesquisa é mostrada, assim:
 
@@ -345,7 +345,7 @@ Nesta tarefa, você aprenderá a pesquisar e consultar o índice criado anterior
     "search": "*"
     }
     ```
-    ![](../media/Active-image71.png)
+    ![](../media/imag21.png)
 
 1. Modifique a solicitação JSON para incluir o parâmetro **count**, conforme mostrado aqui:
 
