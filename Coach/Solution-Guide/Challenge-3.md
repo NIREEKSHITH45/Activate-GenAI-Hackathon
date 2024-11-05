@@ -43,7 +43,7 @@ Juntos, estes serviços criam uma aplicação de chat responsivo que combina rec
 
 Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
 
-1. Usando a **LabVM**, na barra de pesquisa do Windows, digite  **Powershell** e selecione **PowerShell 7-preview (x64)** e depois **Run as Administrator**.
+1. Usando a **LabVM**, na barra de pesquisa do Windows, digite  **Powershell** e selecione **PowerShell 7-preview (x64)** e depois **Executar como administrador**.
 
     ![](../media/Active-image102.png)
 
