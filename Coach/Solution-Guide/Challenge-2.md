@@ -600,11 +600,11 @@ Nesta tarefa, você recuperará a URL e as chaves do ponto de extremidade para s
     >**Observação**: uma chave *admin* é usada para criar e gerenciar recursos de pesquisa
     >**Observação**: uma chave *Gerenciar chaves de consulta* é usada por aplicativos clientes que precisam apenas executar consultas de pesquisa.
     
-    ![](../media/Active-image87.png)
+    ![](../media/imag23.png)
 
 1. Copie as **Gerenciar chaves de consulta** para a área de transferência e registre-as no Bloco de notas, pois elas serão necessárias para tarefas futuras.
 
-    ![](../media/Active-image88.png)
+    ![](../media/imag26.png)
 
 ### Tarefa 7.2: Prepare-se para usar o Azure AI Search SDK
 
