@@ -257,23 +257,23 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
     - Certifique-se de que o **Campo de dados de origem** esteja definido como **merged_content (4)**.
     - Deixe o **Nível de granularidade de enriquecimento** como o **Campo de origem (5)**, que define todo o conteúdo do documento que está sendo indexado, mas observe que você pode alterar isso para extrair informações em níveis mais granulares, como páginas ou frases.
     
-    ![](../media/Active-image60.png)
+    ![](../media/imag11.png)
 
     - Selecione os seguintes campos enriquecidos:
     
     | Habilidade cognitiva | Parâmetro | Nome do campo |
     | --------------- | ---------- | ---------- |
-    | Extrair nomes de locais | | locais |
-    | Extrair frases-chave | | frases-chave |
-    | Detectar idioma | | idioma |
+    | Extrair nomes de localização | | locations |
+    | Extrair frases-chave | | keyphrases |
+    | Detectar idioma | | language |
     | Gerar tags de imagens | | imageTags |
     | Gerar legendas de imagens | | imageCaption |
     
-    ![](../media/Active-image61.png)
+    ![](../media/imag12.png)
 
 1. Verifique novamente suas seleções (pode ser difícil alterá-las mais tarde). Em seguida, prossiga para a próxima etapa (*Personalizar índice de destino*).
 
-    ![](../media/Active-image62.png)
+    ![](../media/imag13.png)
 
 1. Na guia **Personalizar índice de destino**, altere o **Nome do índice** para **margies-index (1)**.
 
