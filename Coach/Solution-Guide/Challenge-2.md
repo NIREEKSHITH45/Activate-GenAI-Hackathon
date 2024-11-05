@@ -242,13 +242,13 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
     
     >**Observação**: aqui, xxxxxx se refere ao ID de implantação
     
-    ![](../media/Active-image(31).png)
+    ![](../media/imag9.png)
 
 1. Assim que a validação for bem-sucedida na guia **Revisar + criar**, clique em **Criar** e aguarde a conclusão da implantação.
 
 1. Na guia **Adicionar habilidades cognitivas (opcional)**, expanda **Anexar serviços de IA(1)**, dentro da seção selecione seu recurso **Serviços de IA do Azure (2)**.
 
-   ![](../media/Active-image59.png)
+   ![](../media/imag10.png)
 
 1. Role para baixo e expanda a seção **Adicionar enriquecimentos (1)** e especifique o seguinte:
 
