@@ -314,11 +314,11 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
 
 1. Na página de recursos do **Azure AI Search**, expanda **Gerenciamento de pesquisa (1)** selecione **Indexadores (2)** que deve mostrar o **margies-indexer (3)** recém-criado.
 
-    ![](../media/Active-image66.png)
+    ![](../media/imag16.png)
 
-1. Selecione **margies-indexer** . Aguarde alguns minutos e clique em **&orarr; Atualizar** até que o **Status** indique sucesso.
+1. Selecione **margies-indexer** . Aguarde alguns minutos e clique em **&orarr; Atualizar** até que o **Status** indique Exito.
 
-    ![](../media/Active-image67.png)
+    ![](../media/imag17.png)
    
 ### Tarefa 5.2: Pesquisar o índice
 
