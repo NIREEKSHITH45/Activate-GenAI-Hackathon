@@ -593,7 +593,7 @@ Nesta tarefa, você recuperará a URL e as chaves do ponto de extremidade para s
 
 1. No portal do Azure, navegue de volta para **Pesquisa de IA do Azure**. Na página Visão geral do recurso **Azure AI Search**, observe o valor da URL, que deve ser semelhante a **https://nome_do_seu_recurso.search.windows.net**. Registre esse valor no Bloco de notas, pois ele será necessário em tarefas futuras.
 
-    ![](../media/Active-image86.png)
+    ![](../media/imag22.png)
 
 1. Na navegação à esquerda, expanda **Configurações**, selecione **Chaves**, observe que há duas chaves **admin** e uma única chave **Gerenciar chaves de consulta**.
 
