@@ -56,7 +56,7 @@ To create the solution for Margie's Travel, you will need the following resource
 
   > **Importante**: seus recursos do Azure AI Search e do Azure AI Services devem estar no mesmo local.
 
-#### Tarefa 2.1: Criar um recurso do Azure AI Search
+### Tarefa 2.1: Criar um recurso do Azure AI Search
 
 Nesta tarefa, você aprenderá a criar um recurso do **Azure AI Search** no portal do Azure.
 
@@ -102,39 +102,7 @@ Nesta tarefa, você aprenderá a criar um recurso do **Azure AI Search** no port
 
 1. Revise a página **Visão geral** na lâmina para seu recurso do Azure AI Search no portal do Azure. Aqui, você pode usar uma interface visual para criar, testar, gerenciar e monitorar os vários componentes de uma solução de pesquisa, incluindo fontes de dados, índices, indexadores e conjuntos de habilidades.
 
-#### Tarefa 2.2: Criar um recurso do Azure AI Services
-
-Nesta tarefa, você aprenderá a criar um recurso do Azure AI Search no portal do Azure. Sua solução de pesquisa usará esse recurso para enriquecer os dados no armazenamento de dados com insights gerados por IA.
-
-1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Azure AI Services (1)** e selecione **Azure AI services (2)** em serviços.
-
-    ![](../media/1-11-24(27).png)
-
-1. Na página **Azure AI Services**, clique em **+ Criar**.
-
-    ![](../media/1-11-24(28).png)
-
-1. Especifique os seguintes detalhes para criar um **Azure AI Services** e clique na aba **Examinar + criar**.
-
-    | **Opção** | **Valor** |
-    | ------------------ | ----------------------------------------------------- |
-    | Assinatura | Deixar padrão |
-    | Grupo de Recursos | **Activate-GenAI** |
-    | Region | Use o mesmo local que o grupo de recursos |
-    | Nome | *Digite um nome exclusivo* para seus Azure AI Services ou use o formato **challengeservice-xxxxxx** (substitua **xxxxxx** pelo **Deployment ID** registrado no **Challenge 01**) |
-    | Tipo de preço | Standard S0 |
-
-    >**Observação**: aqui, xxxxxx se refere ao ID de implantação
-
-    ![](../media/1-11-24(29).png)
-
-1. Assim que a validação for bem-sucedida na guia **Examinar + criar**, clique em **Criar** e aguarde a conclusão da implantação, depois clique em **Ir para o recurso**.
-
-    ![](../media/1-11-24(30).png)
-
-    ![](../media/1-11-24(31).png)
-
-#### Tarefa 2.3: Criar uma conta de armazenamento
+### Tarefa 2.2: Criar uma conta de armazenamento
 
 Nesta tarefa, você aprenderá a criar um recurso de **Conta de armazenamento** no portal do Azure e, nas próximas etapas, criará um contêiner de blobs onde os documentos a serem pesquisados ​​serão armazenados.
 
@@ -152,7 +120,7 @@ Nesta tarefa, você aprenderá a criar um recurso de **Conta de armazenamento** 
     | ------------------ | ----------------------------------------------------- |
     | Assinatura | Deixe o padrão **(1)** |
     | Grupo de recursos | **Activate-GenAI** **(2)** |
-    | Nome da conta de armazenamento | *Digite um nome exclusivo* para seus Serviços de IA do Azure ou use o formato **challengeservice-xxxxxx** (substitua **xxxxxx** pelo **ID de implantação** registrado no **Desafio 01**) **(3)** |
+    | Nome da conta de armazenamento | *Digite um nome exclusivo* para seus Serviços de IA do Azure ou use o formato **storagexxxxxx** (substitua **xxxxxx** pelo **ID de implantação** registrado no **Desafio 01**) **(3)** |
     | Região | Use o mesmo local do grupo de recursos **(4)** |
     | Desempenho | Standard **(5)** |
     | Redundância | **LRS (armazenamento com redundância local)** **(6)**|
@@ -256,6 +224,27 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
     - Clique em **Adicionar habilidades cognitivas (opcional) (14)**
 
       ![](../media/imag7.png)
+
+1. Na aba **Adicionar habilidades cognitivas (Opcional)** expanda **Anexar Serviços de IA(1)**, dentro da seção clique em **Criar novo serviço de IA do Azure** para criar o recurso de serviço de IA do Azure.
+
+    **Observação:** esta ação abrirá uma nova aba para criar o recurso de serviços de IA do Azure. Depois que o recurso for criado, volte para a aba anterior e clique em **Atualizar** para exibir o nome do recurso recém-criado.
+
+1. Especifique os seguintes detalhes para criar um **Serviço de IA do Azure** e clique na aba **Revisar + Criar (7)**.
+
+    | **Opção** | **Valor** |
+    | ------------------ | ----------------------------------------------------- |
+    | Assinatura | Deixar padrão **(1)** |
+    | Grupo de recursos | **Ativar-GenAI** **(2)** |
+    | Nome | *Digite um nome exclusivo* para seus Serviços de IA do Azure ou use o formato **challengeservice-xxxxxx** (substitua **xxxxxx** pelo **ID de implantação** registrado no **Desafio 01**) **(3)** |
+    | Localização | Use o mesmo local que o grupo de recursos **(4)** |
+    | Nível de preço | Padrão S0 **(5)** |
+    | Ao marcar esta caixa, reconheço que li e entendi todos os termos abaixo | Selecione a **Caixa de seleção** **(6)**|
+    
+    >**Observação**: aqui, xxxxxx se refere ao ID de implantação
+    
+    ![](../media/Active-image(31).png)
+
+1. Assim que a validação for bem-sucedida na guia **Revisar + criar**, clique em **Criar** e aguarde a conclusão da implantação.
 
 1. Na guia **Adicionar habilidades cognitivas (opcional)**, expanda **Anexar serviços de IA(1)**, dentro da seção selecione seu recurso **Serviços de IA do Azure (2)**.
 
