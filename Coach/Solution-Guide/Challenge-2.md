@@ -279,7 +279,7 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
 
 1. Certifique-se de que a **Chave** esteja definida como **metadata_storage_path (2)** e deixe o **Nome do sugeridor** em branco e o **Modo de pesquisa (3)** em seu valor padrão.
 
-    ![](../media/Active-image63.png)
+    ![](../media/imag14.png)
    
 1. Faça as seguintes alterações nos campos de índice, deixando todos os outros campos com suas configurações padrão (**IMPORTANTE**: pode ser necessário rolar para a direita para ver a tabela inteira):
 
