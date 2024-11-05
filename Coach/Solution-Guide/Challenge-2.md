@@ -443,7 +443,7 @@ Nesta tarefa, você configurará um conjunto de habilidades (skillset.json) no V
 
 1. Na página de visão geral do **Azure AI Services**, no painel de navegação esquerdo, expanda **Resource Management** e selecione **Keys and Endpoints**. Em seguida, copie **Key 1** para a área de transferência.
 
-    ![](../media/Active-image79.png)
+    ![](../media/imag24.png)
 
 1. No Visual Studio Code, em **skillset.json**, substitua o espaço reservado **YOUR_COGNITIVE_SERVICES_KEY** pela chave do Azure AI Services que você copiou para a área de transferência.
 
