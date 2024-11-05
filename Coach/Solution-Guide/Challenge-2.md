@@ -394,10 +394,8 @@ Nesta tarefa, você aprenderá a pesquisar e consultar o índice criado anterior
     ```
 
     >**Observação**: Esta consulta retorna o nome do arquivo de qualquer documento criado por *Reviewer* que mencione "New York".
-    
-    ![](../media/search-explorer.png)
   
-### Tarefa 6: Explorar e modificar as definições dos componentes de pesquisa
+## Tarefa 6: Explorar e modificar as definições dos componentes de pesquisa
 
 Os componentes da solução de pesquisa são baseados em definições JSON, que você pode visualizar e editar no portal do Azure.
 
