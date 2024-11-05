@@ -47,6 +47,30 @@ Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
 
     ![](../media/Active-image102.png)
 
+    >**Observação**: Se você não conseguir visualizar a prévia do Powershell 7. execute os comandos abaixo linha por linha no Powershell ISE para instalar o **Powershell 7-preview.**
+
+      ```
+      $PSVersionTable.PSVersion
+      
+      # Defina a URL para o instalador MSI mais recente do PowerShell 7 Preview
+      $url = "https://github.com/PowerShell/PowerShell/releases/download/v7.4.0-preview.2/PowerShell-7.4.0-preview.2-win-x64.msi"
+      
+      # Defina o local para salvar o arquivo MSI
+      $output = "$env:TEMP\PowerShell-7-Preview.msi"
+      
+      # Baixe o instalador MSI
+      Invoke-WebRequest -Uri $url -OutFile $output
+      
+      # Instale o PowerShell 7 Preview
+      Start-Process msiexec.exe -ArgumentList "/i $output /quiet" -Wait
+      ```
+
+1. Execute o seguinte comando em **PowerShell** para instalar o Azure Developer CLI. Após a instalação, reabra o **PowerShell 7-preview (x64)**.
+
+   ```
+   powershell -ex AllSigned -c "Invoke-RestMethod 'https://aka.ms/install-azd.ps1' | Invoke-Expression"
+   ```
+
 1. Execute o seguinte comando para navegar até ao diretório C:\Users\demouser:
 
    ```
