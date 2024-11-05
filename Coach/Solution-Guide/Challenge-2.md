@@ -441,7 +441,7 @@ Nesta tarefa, você configurará um conjunto de habilidades (skillset.json) no V
 
 1. No portal do Azure, abra seu recurso do Azure AI Services (<u>não</u> seu recurso do Azure AI Search!)
 
-1. Na página de visão geral do **Azure AI Services**, no painel de navegação esquerdo, expanda **Resource Management** e selecione **Keys and Endpoints**. Em seguida, copie **Key 1** para a área de transferência.
+1. Na página de visão geral do **Azure AI Services**, no painel de navegação esquerdo, expanda **Resource Management** e selecione **Chaves e Ponto de extremidade**. Em seguida, copie **CHAVE 1** para a área de transferência.
 
     ![](../media/imag24.png)
 
