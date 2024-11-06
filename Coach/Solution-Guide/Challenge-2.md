@@ -738,7 +738,7 @@ In this task, you'll be running the Margie's Travel web application locally, sea
     pip install flask
     flask run
     ```
-    > **Note:** If the command fails, **pip install python-dotenv** command and then run the command again.
+    > **Note:** If the command fails, run **pip install flask** and  **pip install python-dotenv** commands then run the command again.
 
 1. Open the another tab in edge browse following the link (*http://localhost:5000/* or *http://127.0.0.1:5000/*) to open the **Margie's Travel** site in a web browser.
 
