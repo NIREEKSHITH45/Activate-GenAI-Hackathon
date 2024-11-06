@@ -130,7 +130,7 @@ Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
 
 1. Após a aplicação ter sido criada com sucesso, você verá uma URL no console. Copie e acesse a URL para interagir com a aplicação usando o seu navegador. A aplicação deve ter a seguinte aparência:
 
-    ![](../media/Active-image108.png)
+    ![](../media/imag05.png)
     ![](../media/Active-image109.png)
  
     >**Nota**: Pode levar até 30 minutos após você ver 'SUCCESS' para a aplicação estar totalmente criada. Se você vir uma tela de boas-vindas "Python Developer" ou uma página de erro, aguarde um pouco e atualize a página.
