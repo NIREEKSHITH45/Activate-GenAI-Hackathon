@@ -102,7 +102,44 @@ Nesta tarefa, você aprenderá a criar um recurso do **Azure AI Search** no port
 
 1. Revise a página **Visão geral** na lâmina para seu recurso do Azure AI Search no portal do Azure. Aqui, você pode usar uma interface visual para criar, testar, gerenciar e monitorar os vários componentes de uma solução de pesquisa, incluindo fontes de dados, índices, indexadores e conjuntos de habilidades.
 
-### Tarefa 2.2: Criar uma conta de armazenamento
+#### Tarefa 2.2: Criar um recurso do Azure AI Services
+
+Nesta tarefa, você aprenderá a criar um recurso do Azure AI Search no portal do Azure. Sua solução de pesquisa usará esse recurso para enriquecer os dados no armazenamento de dados com insights gerados por IA.
+
+1. Retorne à página inicial do portal do Azure e clique no botão **&#65291;Criar um recurso**.
+
+    ![](../media/Active-image21.png)
+
+1. Pesquise e selecione **Azure AI Services (1) (2)** na lista e, na página **Marketplace**, selecione **Azure AI Services (3)**.
+
+    ![](../media/Active-image28.png)
+    
+    ![](../media/Active-image29.png)
+
+1. Na página **Azure AI Services**, clique em **Criar**.
+
+    ![](../media/Active-image30.png)
+
+1. Especifique os seguintes detalhes para criar um **Azure AI Service** e clique na aba **Review + Create (7)**.
+
+    | **Option** | **Value** |
+    | ------------------ | ----------------------------------------------------- |
+    | Subscription | Leave default **(1)** |
+    | Resource Group | **Activate-GenAI** **(2)** |
+    | Location | Use the same location as Azure AI Search **(3)** |
+    | Name | *Digite um nome exclusivo* para seus Azure AI Services ou use o formato **challengeservice-xxxxxx** (substitua **xxxxxx** pelo **Deployment ID** registrado no **Challenge 01**) **(4)** |
+    | Pricing tier | Standard S0 **(5)** |
+    | Ao marcar esta caixa, reconheço que li e entendi todos os termos abaixo | Selecione a **Checkbox** **(6)**|
+    
+    >**Observação**: aqui, xxxxxx se refere à ID de implantação
+
+    ![](../media/Active-image(31).png)
+
+1. Assim que a validação for bem-sucedida na guia **Revisar + criar**, clique em **Criar** e aguarde a conclusão da implantação, depois clique em **Ir para o recurso**.
+
+>**Observação**: seus recursos do Azure AI Search e do Azure AI Services devem estar no mesmo local.
+
+### Tarefa 2.3: Criar uma conta de armazenamento
 
 Nesta tarefa, você aprenderá a criar um recurso de **Conta de armazenamento** no portal do Azure e, nas próximas etapas, criará um contêiner de blobs onde os documentos a serem pesquisados ​​serão armazenados.
 
