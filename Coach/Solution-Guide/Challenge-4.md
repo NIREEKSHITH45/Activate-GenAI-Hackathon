@@ -12,7 +12,7 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
 
 One of the hottest themes at the moment is size models; users are particularly interested in conversation GPT. The most intriguing thing about all those basic models—Chat GPT included—is that while they perform admirably on their own, they perform even better when combined with your own data.
 
-1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **App Services (1)**, and then select **App Services (2)** under services.
+1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Containerapps**, and then select **Container Apps** under services.
 
    ![](../media/imag09.png)
 
@@ -20,7 +20,7 @@ One of the hottest themes at the moment is size models; users are particularly i
 
    ![](../media/imag010.png)
       
-1. Next, click on **Browse** to open your Web application.
+1. Next, click on **Application Url** to open your Web application.
 
    ![](../media/imag011.png)
    
