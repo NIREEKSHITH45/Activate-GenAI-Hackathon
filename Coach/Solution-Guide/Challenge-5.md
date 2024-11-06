@@ -18,47 +18,46 @@ Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. 
 
 1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Assinaturas (1)** e selecione **Assinaturas (2)** em serviços.
 
-![](../media/imag001.png)
+    ![](../media/imag001.png)
 
 1. Selecione a **Assinatura** existente.
 
-![](../media/imag002.png)
+    ![](../media/imag002.png)
 
-1. No painel de navegação esquerdo, expanda **Configurações (1)** e selecione **Provedores de Recursos (2)**, marque **O status do Microsoft DocumentDB** está marcado como **"Registrado" (3)**.
-Se marcado como **NãoRegistrado**, selecione **Microsoft DocumentDB** e clique em **Registrar** no menu superior.
+1. No painel de navegação esquerdo, expanda **Configurações (1)** e selecione **Provedores de Recursos (2)**, marque **O status do Microsoft DocumentDB** está marcado como **"Registrado" (3)**.Se marcado como **NãoRegistrado**, selecione **Microsoft DocumentDB** e clique em **Registrar** no menu superior.
 
-**Observação**: *Este processo pode levar vários segundos ou minutos; certifique-se de atualizar todo o navegador periodicamente.*
+    **Observação**: *Este processo pode levar vários segundos ou minutos; certifique-se de atualizar todo o navegador periodicamente.*
 
-![](../media/imag003.png)
+    ![](../media/imag003.png)
 
 1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Conta multisserviço de serviços do Azure AI (1)** e selecione **Conta multisserviço de serviços do Azure AI (2)** em serviços.
 
-![](../media/imag004.png)
+    ![](../media/imag004.png)
 
 1. Na lâmina **Azure Al services Azure Al services multi-service account**, clique em **Create**.
 
-![](../media/imag005.png)
+    ![](../media/imag005.png)
 
 1. Especifique os seguintes detalhes para criar um **Azure AI service** e clique na aba **Review + create (7)**.
 
-| **Option** | **Value** |
-| ------------------ | ----------------------------------------------------- |
-| Subscription | Deixe o padrão **(1)** |
-| Resource Group | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)** |
-| Name | *Digite um nome exclusivo* para seu serviço de pesquisa ou use o formato **AI-Service-xxxxxx** (substitua **xxxxxx** por ID de implantação **(3)** |
-| Localização | Use o mesmo local que o grupo de recursos **(4)** |
-| Nível de preço | Padrão S0 **(5)** |
-| Ao marcar esta caixa, reconheço que li e entendi todos os termos abaixo | Selecione a **Caixa de seleção** **(6)**|
+    | **Option** | **Value** |
+    | ------------------ | ----------------------------------------------------- |
+    | Subscription | Deixe o padrão **(1)** |
+    | Resource Group | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)** |
+    | Name | *Digite um nome exclusivo* para seu serviço de pesquisa ou use o formato **AI-Service-xxxxxx** (substitua **xxxxxx** por ID de implantação **(3)** |
+    | Localização | Use o mesmo local que o grupo de recursos **(4)** |
+    | Nível de preço | Padrão S0 **(5)** |
+    | Ao marcar esta caixa, reconheço que li e entendi todos os termos abaixo | Selecione a **Caixa de seleção** **(6)**|
+    
+    >**Observação**: aqui, xxxxxx se refere à ID de implantação
 
->**Observação**: aqui, xxxxxx se refere à ID de implantação
-
-![](../media/imag006.png)
+    ![](../media/imag006.png)
 
 1. Assim que a validação for bem-sucedida na guia **Revisar + criar**, clique em **Criar** e aguarde a conclusão da implantação.
 
 1. Para garantir que **Aceitamos os termos e condições para a IA responsável**: devemos iniciar a criação de uma **conta multisserviço do Azure AI Services** no portal do Azure para revisar e reconhecer os termos e condições.
 
->**Observação**: Documento de referência: [Início rápido: criar um recurso de serviços cognitivos usando o portal do Azure](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows). Depois de aceito, você pode criar recursos subsequentes usando qualquer ferramenta de implantação (SDK, CLI ou modelo ARM, etc.) na mesma assinatura do Azure.
+    >**Observação**: Documento de referência: [Início rápido: criar um recurso de serviços cognitivos usando o portal do Azure](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows). Depois de aceito, você pode criar recursos subsequentes usando qualquer ferramenta de implantação (SDK, CLI ou modelo ARM, etc.) na mesma assinatura do Azure.
 
 1. Navigate to `https://github.com/CloudLabs-MOC/business-process-automation` and click on **Sign in** then provide your personal **GitHub Username** and **Password** then click **Sign in**.
 
