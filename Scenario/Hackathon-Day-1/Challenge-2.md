@@ -20,6 +20,7 @@ Neste desafio, você clonará um repositório fornecido para lançar as bases pa
 
 2. **Configurar Recursos do Azure:**
    - Crie um recurso de Azure AI Search com o SKU Basic.
+   - Crie um Serviço de IA do Azure com o SKU S0 Padrão.
    - Crie uma Conta de Armazenamento do Azure com o nível Standard.
 
 3. **Preparar o Upload de Documentos:**
@@ -33,8 +34,6 @@ Neste desafio, você clonará um repositório fornecido para lançar as bases pa
 
 5. **Importação e Indexação de Dados:**
    - Importe dados para o AI Search usando o Blob Storage.
-   - Crie um Azure AI Service com o SKU Standard S0 usando o recurso Azure AI Search.
-     > **Observação**: certifique-se de usar a mesma região que o recurso Azure AI Search.
    - Conectar os Serviços de IA do Azure e personalize o índice.
    - Crie um indexador para a integração de dados.
 
