@@ -14,15 +14,15 @@ One of the hottest themes at the moment is size models; users are particularly i
 
 1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **App Services (1)**, and then select **App Services (2)** under services.
 
-   ![](../media/Active-image112.png)
+   ![](../media/imag09.png)
 
 1. Select **webapp**.
 
-   ![](../media/Active-image113.png)
+   ![](../media/imag010.png)
       
 1. Next, click on **Browse** to open your Web application.
 
-   ![](../media/Active-image114.png)
+   ![](../media/imag011.png)
    
 1. You will be prompted with the **Northwind Health chat application** as below. 
 
