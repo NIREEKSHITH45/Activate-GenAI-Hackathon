@@ -14,15 +14,15 @@ Um dos temas mais interessantes no momento são os tamanhos dos modelos; os usu�
 
 1. Na página do Portal de Azure, na caixa **Search resources, services, and docs (G+/)** no topo do portal, digite **App Services (1)**, e, em seguida, selecione **App Services (2)**.
 
-   ![](../media/Active-image112.png)
+   ![](../media/imag06.png)
 
 1. Selecione **webapp**.
 
-   ![](../media/Active-image113.png)
+   ![](../media/imag07.png)
       
 1. Em seguida, clique em **Browse** para abrir a sua aplicação web.
 
-   ![](../media/Active-image114.png)
+   ![](../media/imag08.png)
    
 1. Você será solicitado a utilizar o **Northwind Health chat application** como mostrado abaixo. 
 
