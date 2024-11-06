@@ -720,7 +720,7 @@ Nesta tarefa, você executará o aplicativo da web Margie's Travel localmente, p
     ```
     flask run
     ```
-    > **Observação:** Se o comando falhar, **execute o comando pip Install python-dotenv** e execute-o novamente.
+    > **Observação:** se o comando falhar, execute os comandos **pip install flask** e **pip install python-dotenv** e, em seguida, execute o comando novamente.
 
 1. Abra outra aba no Edge Browse seguindo o link (*http://localhost:5000/* ou *http://127.0.0.1:5000/*) para abrir o site **Margie's Travel** em um navegador da web.
 
