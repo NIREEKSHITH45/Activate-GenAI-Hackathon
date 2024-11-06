@@ -12,7 +12,7 @@ Após provisionar com sucesso a aplicação de chat melhorada por IA no desafio 
 
 Um dos temas mais interessantes no momento são os tamanhos dos modelos; os usuários estão particularmente interessados no GPT para conversas. O mais intrigante sobre todos esses modelos básicos — incluindo o Chat GPT — é que, enquanto eles se saem bem sozinhos, eles têm um desempenho ainda melhor quando combinados com os dados das organizações.
 
-1. Na página do Portal de Azure, na caixa **Search resources, services, and docs (G+/)** no topo do portal, digite **App Services (1)**, e, em seguida, selecione **App Services (2)**.
+1. Na página do Portal de Azure, na caixa **Search resources, services, and docs (G+/)** no topo do portal, digite **Container Apps**, e, em seguida, selecione **Aplicativos de Contêiner**.
 
    ![](../media/imag06.png)
 
@@ -20,7 +20,7 @@ Um dos temas mais interessantes no momento são os tamanhos dos modelos; os usu�
 
    ![](../media/imag07.png)
       
-1. Em seguida, clique em **Browse** para abrir a sua aplicação web.
+1. Em seguida, clique em **URL do aplicativo** para abrir a sua aplicação web.
 
    ![](../media/imag08.png)
    
