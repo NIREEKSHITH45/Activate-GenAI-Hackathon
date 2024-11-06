@@ -45,7 +45,7 @@ Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
 
 1. Usando a **LabVM**, na barra de pesquisa do Windows, digite  **Powershell** e selecione **PowerShell 7-preview (x64)** e depois **Executar como administrador**.
 
-    ![](../media/Active-image102.png)
+    ![](../media/imag04.png)
 
     >**Observação**: Se você não conseguir visualizar a prévia do Powershell 7. execute os comandos abaixo linha por linha no Powershell ISE para instalar o **Powershell 7-preview.**
 
@@ -70,12 +70,6 @@ Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
    ```
    powershell -ex AllSigned -c "Invoke-RestMethod 'https://aka.ms/install-azd.ps1' | Invoke-Expression"
    ```
-
-1. Execute o seguinte comando para navegar até ao diretório C:\Users\demouser:
-
-   ```
-   cd C:\Users\demouser
-   ```   
    
 1. Execute o seguinte comando para fazer login no Azure:
 
