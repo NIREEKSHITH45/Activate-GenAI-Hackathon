@@ -163,7 +163,7 @@ In this task, you'll learn how to create a container in an existing storage acco
 
 1. After clicking **Generate SAS token and URL** scroll down then copy the **Blob SAS URL**.
 
-    ![](../media/Active-image151.png)
+    ![](../media/imag0012.png)
    
 1. Repeat the same steps number from 1 - 8 by creating another container with name **target** by giving **Write** and **List** permissions.
 
