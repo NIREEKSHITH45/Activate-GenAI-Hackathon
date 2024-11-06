@@ -1,66 +1,64 @@
 # Challenge 05: Serverless Document Batch Processing 
 
-## Introduction:
+## Introdução:
 
-Welcome to a pivotal challenge where Contoso Ltd. aims to enhance its AI-powered chat app with a robust document processing system. This challenge focuses on creating a serverless solution for processing new documents, translating them as needed, and seamlessly storing them into Azure AI Search. This system will ensure that these documents are continuously available for consumption by Azure OpenAI, enhancing the chat app's knowledge base and response accuracy.
+Bem-vindo a um desafio crucial em que a Contoso Ltd. visa aprimorar seu aplicativo de bate-papo com tecnologia de IA com um sistema de processamento de documentos robusto. Este desafio se concentra na criação de uma solução sem servidor para processar novos documentos, traduzi-los conforme necessário e armazená-los perfeitamente no Azure AI Search. Este sistema garantirá que esses documentos estejam continuamente disponíveis para consumo pelo Azure OpenAI, aprimorando a base de conhecimento e a precisão de resposta do aplicativo de bate-papo.
 
-Building on your previous achievements in load-balancing Azure OpenAI resources, you will now embark on a journey to streamline document processing. This involves setting up a translation service, creating a serverless architecture for batch processing using Azure services, and leveraging technologies like Form Recognizer and Azure AI Search. Your task is to ensure that newly added documents are promptly processed, analyzed, and indexed, making them readily available for the chat app's AI to utilize.
+Com base em suas conquistas anteriores no balanceamento de carga de recursos do Azure OpenAI, você agora embarcará em uma jornada para otimizar o processamento de documentos. Isso envolve configurar um serviço de tradução, criar uma arquitetura sem servidor para processamento em lote usando serviços do Azure e aproveitar tecnologias como Form Recognizer e Azure AI Search. Sua tarefa é garantir que os documentos recém-adicionados sejam prontamente processados, analisados ​​e indexados, tornando-os prontamente disponíveis para a IA do aplicativo de bate-papo utilizar.
 
-This challenge unfolds in three main stages: language translation, serverless document batch processing using Azure services, and leveraging advanced features like Form Recognizer and AI search. We kick things off by translating files to meet language requirements. Next, you deploy a serverless architecture, utilizing Azure services, for efficient batch processing of documents. You train and test our model, establish a pipeline to convert documents into a Form Recognizer format, and bring in Azure's AI search service to verify the presence of specific documents in the processed dataset from where they can be used by Azure OpenAI. 
+Este desafio se desdobra em três estágios principais: tradução de idioma, processamento em lote de documentos sem servidor usando serviços do Azure e aproveitamento de recursos avançados como Form Recognizer e pesquisa de IA. Começamos traduzindo arquivos para atender aos requisitos de idioma. Em seguida, você implanta uma arquitetura sem servidor, utilizando serviços do Azure, para processamento eficiente de documentos em lote. Você treina e testa nosso modelo, estabelece um pipeline para converter documentos em um formato Form Recognizer e traz o serviço de pesquisa de IA do Azure para verificar a presença de documentos específicos no conjunto de dados processados ​​de onde eles podem ser usados ​​pelo Azure OpenAI.
 
-You will utilize the Form Recognizer Service and the Business Process Automation (BPA) Accelerator to build pipelines across various Azure services, creating a seamless document processing solution. This challenge is a step towards realizing an AI solution that can adapt and grow with Contoso's business needs.
+Você utilizará o Form Recognizer Service e o Business Process Automation (BPA) Accelerator para construir pipelines em vários serviços do Azure, criando uma solução de processamento de documentos perfeita. Este desafio é um passo em direção à concretização de uma solução de IA que pode se adaptar e crescer com as necessidades de negócios da Contoso.
 
 # Solution Guide
 
-### Task 1: Translate the documents using Translate
+### Tarefa 1: traduzir os documentos usando o Translate
 
-In this task, you'll set up Azure resources for Azure AI Services. It includes registering providers, creating a new Azure AI service, accepting Responsible AI terms, forking a GitHub repository, generating a Personal Access Token (PAT), and deploying resources to Azure via the GitHub repository using specified parameters and configurations. 
+Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. Isso inclui registrar provedores, criar um novo serviço do Azure AI, aceitar os termos do Responsible AI, bifurcar um repositório do GitHub, gerar um Personal Access Token (PAT) e implantar recursos no Azure por meio do repositório do GitHub usando parâmetros e configurações especificados.
 
-1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Subscriptions (1)**, and then select **Subscriptions (2)** under services.
+1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Assinaturas (1)** e selecione **Assinaturas (2)** em serviços.
 
-      ![](../media/Active-image121.png)
+![](../media/imag001.png)
 
-1. Select the existing **Subscription**.
+1. Selecione a **Assinatura** existente.
 
-    ![](../media/Active-image122.png)
+![](../media/imag002.png)
 
-1. From the left navigation pane expand **Settings (1)** then select **Resource Providers (2)** check **Microsoft DocumentDB** status is marked as **"Registered" (3)**. 
-   If marked as **NotRegistered**, select **Microsoft DocumentDB** then click **Register** from the top menu.
+1. No painel de navegação esquerdo, expanda **Configurações (1)** e selecione **Provedores de Recursos (2)**, marque **O status do Microsoft DocumentDB** está marcado como **"Registrado" (3)**.
+Se marcado como **NãoRegistrado**, selecione **Microsoft DocumentDB** e clique em **Registrar** no menu superior.
 
-   **Note**: *This process may take several seconds or minutes; be sure to refresh the entire browser periodically.*
+**Observação**: *Este processo pode levar vários segundos ou minutos; certifique-se de atualizar todo o navegador periodicamente.*
 
-      ![](../media/Active-image123.png)       
+![](../media/imag003.png)
 
-1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI services multi-service account (1)**, and then select **Azure AI services multi-service account(2)** under services.
+1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Conta multisserviço de serviços do Azure AI (1)** e selecione **Conta multisserviço de serviços do Azure AI (2)** em serviços.
 
-   ![](../media/Active-image(124).png)
+![](../media/imag004.png)
 
-1. On **Azure Al services Azure Al services multi-service account** blade, click on **Create**.
+1. Na lâmina **Azure Al services Azure Al services multi-service account**, clique em **Create**.
 
-   ![](../media/Active-image125.png)
+![](../media/imag005.png)
 
-1. Specify the following details to create an **Azure AI service** then click on **Review + create (7)** tab.
-   
-     | **Option**         | **Value**                                              |
-     | ------------------ | -----------------------------------------------------  |
-     | Subscription       | Leave default  **(1)**                                 |
-     | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
-     | Name               | *Enter a unique name* for your search service or use the format **AI-Service-xxxxxx** (replace **xxxxxx** with Deployment ID **(3)** |
-     | Location           | Use the same location as the resource group  **(4)**    |
-     | Pricing tier       | Standard S0     **(5)**                                 |
-     | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 
+1. Especifique os seguintes detalhes para criar um **Azure AI service** e clique na aba **Review + create (7)**.
 
-   >**Note**: Here, xxxxxx refers to the deployment ID
+| **Option** | **Value** |
+| ------------------ | ----------------------------------------------------- |
+| Subscription | Deixe o padrão **(1)** |
+| Resource Group | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)** |
+| Name | *Digite um nome exclusivo* para seu serviço de pesquisa ou use o formato **AI-Service-xxxxxx** (substitua **xxxxxx** por ID de implantação **(3)** |
+| Localização | Use o mesmo local que o grupo de recursos **(4)** |
+| Nível de preço | Padrão S0 **(5)** |
+| Ao marcar esta caixa, reconheço que li e entendi todos os termos abaixo | Selecione a **Caixa de seleção** **(6)**|
 
-   ![](../media/Active-image126.png)
+>**Observação**: aqui, xxxxxx se refere à ID de implantação
 
-1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete.
+![](../media/imag006.png)
 
-    ![](../media/Active-image127.png)
+1. Assim que a validação for bem-sucedida na guia **Revisar + criar**, clique em **Criar** e aguarde a conclusão da implantação.
 
-1. To make sure that we have **Accepted the terms and conditions for Responsible AI**:  We must initiate the creation of a **Azure AI Services multi-service account** from the Azure portal to review and acknowledge the terms and conditions. 
+1. Para garantir que **Aceitamos os termos e condições para a IA responsável**: devemos iniciar a criação de uma **conta multisserviço do Azure AI Services** no portal do Azure para revisar e reconhecer os termos e condições.
 
-    >**Note**: Reference doc: [Quickstart: Create a Cognitive Services resource using the Azure portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows). Once accepted, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc.) under the same Azure subscription.
+>**Observação**: Documento de referência: [Início rápido: criar um recurso de serviços cognitivos usando o portal do Azure](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows). Depois de aceito, você pode criar recursos subsequentes usando qualquer ferramenta de implantação (SDK, CLI ou modelo ARM, etc.) na mesma assinatura do Azure.
 
 1. Navigate to `https://github.com/CloudLabs-MOC/business-process-automation` and click on **Sign in** then provide your personal **GitHub Username** and **Password** then click **Sign in**.
 
