@@ -43,15 +43,33 @@ Juntos, estes serviços criam uma aplicação de chat responsivo que combina rec
 
 Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
 
-1. Usando a **LabVM**, na barra de pesquisa do Windows, digite  **Powershell** e selecione **PowerShell 7-preview (x64)** e depois **Run as Administrator**.
+1. Usando a **LabVM**, na barra de pesquisa do Windows, digite  **Powershell** e selecione **PowerShell 7-preview (x64)** e depois **Executar como administrador**.
 
-    ![](../media/Active-image102.png)
+    ![](../media/imag04.png)
 
-1. Execute o seguinte comando para navegar até ao diretório C:\Users\demouser:
+    >**Observação**: Se você não conseguir visualizar a prévia do Powershell 7. execute os comandos abaixo linha por linha no Powershell ISE para instalar o **Powershell 7-preview.**
+
+      ```
+      $PSVersionTable.PSVersion
+      
+      # Defina a URL para o instalador MSI mais recente do PowerShell 7 Preview
+      $url = "https://github.com/PowerShell/PowerShell/releases/download/v7.4.0-preview.2/PowerShell-7.4.0-preview.2-win-x64.msi"
+      
+      # Defina o local para salvar o arquivo MSI
+      $output = "$env:TEMP\PowerShell-7-Preview.msi"
+      
+      # Baixe o instalador MSI
+      Invoke-WebRequest -Uri $url -OutFile $output
+      
+      # Instale o PowerShell 7 Preview
+      Start-Process msiexec.exe -ArgumentList "/i $output /quiet" -Wait
+      ```
+
+1. Execute o seguinte comando em **PowerShell** para instalar o Azure Developer CLI. Após a instalação, reabra o **PowerShell 7-preview (x64)**.
 
    ```
-   cd C:\Users\demouser
-   ```   
+   powershell -ex AllSigned -c "Invoke-RestMethod 'https://aka.ms/install-azd.ps1' | Invoke-Expression"
+   ```
    
 1. Execute o seguinte comando para fazer login no Azure:
 
@@ -112,7 +130,7 @@ Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
 
 1. Após a aplicação ter sido criada com sucesso, você verá uma URL no console. Copie e acesse a URL para interagir com a aplicação usando o seu navegador. A aplicação deve ter a seguinte aparência:
 
-    ![](../media/Active-image108.png)
+    ![](../media/imag05.png)
     ![](../media/Active-image109.png)
  
     >**Nota**: Pode levar até 30 minutos após você ver 'SUCCESS' para a aplicação estar totalmente criada. Se você vir uma tela de boas-vindas "Python Developer" ou uma página de erro, aguarde um pouco e atualize a página.

@@ -20,7 +20,7 @@ Neste desafio, você clonará um repositório fornecido para lançar as bases pa
 
 2. **Configurar Recursos do Azure:**
    - Crie um recurso de Azure AI Search com o SKU Basic.
-   - Crie um serviço Azure AI com o SKU Standard S0.
+   - Crie um Serviço de IA do Azure com o SKU S0 Padrão.
    - Crie uma Conta de Armazenamento do Azure com o nível Standard.
 
 3. **Preparar o Upload de Documentos:**

@@ -1,140 +1,137 @@
 # Challenge 05: Serverless Document Batch Processing 
 
-## Introduction:
+## Introdução:
 
-Welcome to a pivotal challenge where Contoso Ltd. aims to enhance its AI-powered chat app with a robust document processing system. This challenge focuses on creating a serverless solution for processing new documents, translating them as needed, and seamlessly storing them into Azure AI Search. This system will ensure that these documents are continuously available for consumption by Azure OpenAI, enhancing the chat app's knowledge base and response accuracy.
+Bem-vindo a um desafio crucial em que a Contoso Ltd. visa aprimorar seu aplicativo de bate-papo com tecnologia de IA com um sistema de processamento de documentos robusto. Este desafio se concentra na criação de uma solução sem servidor para processar novos documentos, traduzi-los conforme necessário e armazená-los perfeitamente no Azure AI Search. Este sistema garantirá que esses documentos estejam continuamente disponíveis para consumo pelo Azure OpenAI, aprimorando a base de conhecimento e a precisão de resposta do aplicativo de bate-papo.
 
-Building on your previous achievements in load-balancing Azure OpenAI resources, you will now embark on a journey to streamline document processing. This involves setting up a translation service, creating a serverless architecture for batch processing using Azure services, and leveraging technologies like Form Recognizer and Azure AI Search. Your task is to ensure that newly added documents are promptly processed, analyzed, and indexed, making them readily available for the chat app's AI to utilize.
+Com base em suas conquistas anteriores no balanceamento de carga de recursos do Azure OpenAI, você agora embarcará em uma jornada para otimizar o processamento de documentos. Isso envolve configurar um serviço de tradução, criar uma arquitetura sem servidor para processamento em lote usando serviços do Azure e aproveitar tecnologias como Form Recognizer e Azure AI Search. Sua tarefa é garantir que os documentos recém-adicionados sejam prontamente processados, analisados ​​e indexados, tornando-os prontamente disponíveis para a IA do aplicativo de bate-papo utilizar.
 
-This challenge unfolds in three main stages: language translation, serverless document batch processing using Azure services, and leveraging advanced features like Form Recognizer and AI search. We kick things off by translating files to meet language requirements. Next, you deploy a serverless architecture, utilizing Azure services, for efficient batch processing of documents. You train and test our model, establish a pipeline to convert documents into a Form Recognizer format, and bring in Azure's AI search service to verify the presence of specific documents in the processed dataset from where they can be used by Azure OpenAI. 
+Este desafio se desdobra em três estágios principais: tradução de idioma, processamento em lote de documentos sem servidor usando serviços do Azure e aproveitamento de recursos avançados como Form Recognizer e pesquisa de IA. Começamos traduzindo arquivos para atender aos requisitos de idioma. Em seguida, você implanta uma arquitetura sem servidor, utilizando serviços do Azure, para processamento eficiente de documentos em lote. Você treina e testa nosso modelo, estabelece um pipeline para converter documentos em um formato Form Recognizer e traz o serviço de pesquisa de IA do Azure para verificar a presença de documentos específicos no conjunto de dados processados ​​de onde eles podem ser usados ​​pelo Azure OpenAI.
 
-You will utilize the Form Recognizer Service and the Business Process Automation (BPA) Accelerator to build pipelines across various Azure services, creating a seamless document processing solution. This challenge is a step towards realizing an AI solution that can adapt and grow with Contoso's business needs.
+Você utilizará o Form Recognizer Service e o Business Process Automation (BPA) Accelerator para construir pipelines em vários serviços do Azure, criando uma solução de processamento de documentos perfeita. Este desafio é um passo em direção à concretização de uma solução de IA que pode se adaptar e crescer com as necessidades de negócios da Contoso.
 
 # Solution Guide
 
-### Task 1: Translate the documents using Translate
+### Tarefa 1: traduzir os documentos usando o Translate
 
-In this task, you'll set up Azure resources for Azure AI Services. It includes registering providers, creating a new Azure AI service, accepting Responsible AI terms, forking a GitHub repository, generating a Personal Access Token (PAT), and deploying resources to Azure via the GitHub repository using specified parameters and configurations. 
+Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. Isso inclui registrar provedores, criar um novo serviço do Azure AI, aceitar os termos do Responsible AI, bifurcar um repositório do GitHub, gerar um Personal Access Token (PAT) e implantar recursos no Azure por meio do repositório do GitHub usando parâmetros e configurações especificados.
 
-1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Subscriptions (1)**, and then select **Subscriptions (2)** under services.
+1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Assinaturas (1)** e selecione **Assinaturas (2)** em serviços.
 
-      ![](../media/Active-image121.png)
+    ![](../media/imag001.png)
 
-1. Select the existing **Subscription**.
+1. Selecione a **Assinatura** existente.
 
-    ![](../media/Active-image122.png)
+    ![](../media/imag002.png)
 
-1. From the left navigation pane expand **Settings (1)** then select **Resource Providers (2)** check **Microsoft DocumentDB** status is marked as **"Registered" (3)**. 
-   If marked as **NotRegistered**, select **Microsoft DocumentDB** then click **Register** from the top menu.
+1. No painel de navegação esquerdo, expanda **Configurações (1)** e selecione **Provedores de Recursos (2)**, marque **O status do Microsoft DocumentDB** está marcado como **"Registrado" (3)**.Se marcado como **NãoRegistrado**, selecione **Microsoft DocumentDB** e clique em **Registrar** no menu superior.
 
-   **Note**: *This process may take several seconds or minutes; be sure to refresh the entire browser periodically.*
+    **Observação**: *Este processo pode levar vários segundos ou minutos; certifique-se de atualizar todo o navegador periodicamente.*
 
-      ![](../media/Active-image123.png)       
+    ![](../media/imag003.png)
 
-1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI services multi-service account (1)**, and then select **Azure AI services multi-service account(2)** under services.
+1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Conta multisserviço de serviços do Azure AI (1)** e selecione **Conta multisserviço de serviços do Azure AI (2)** em serviços.
 
-   ![](../media/Active-image(124).png)
+    ![](../media/imag004.png)
 
-1. On **Azure Al services Azure Al services multi-service account** blade, click on **Create**.
+1. Na lâmina **Azure Al services Azure Al services multi-service account**, clique em **Create**.
 
-   ![](../media/Active-image125.png)
+    ![](../media/imag005.png)
 
-1. Specify the following details to create an **Azure AI service** then click on **Review + create (7)** tab.
-   
-     | **Option**         | **Value**                                              |
-     | ------------------ | -----------------------------------------------------  |
-     | Subscription       | Leave default  **(1)**                                 |
-     | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
-     | Name               | *Enter a unique name* for your search service or use the format **AI-Service-xxxxxx** (replace **xxxxxx** with Deployment ID **(3)** |
-     | Location           | Use the same location as the resource group  **(4)**    |
-     | Pricing tier       | Standard S0     **(5)**                                 |
-     | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 
+1. Especifique os seguintes detalhes para criar um **Azure AI service** e clique na aba **Review + create (7)**.
 
-   >**Note**: Here, xxxxxx refers to the deployment ID
+    | **Option** | **Value** |
+    | ------------------ | ----------------------------------------------------- |
+    | Subscription | Deixe o padrão **(1)** |
+    | Resource Group | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)** |
+    | Name | *Digite um nome exclusivo* para seu serviço de pesquisa ou use o formato **AI-Service-xxxxxx** (substitua **xxxxxx** por ID de implantação **(3)** |
+    | Localização | Use o mesmo local que o grupo de recursos **(4)** |
+    | Nível de preço | Padrão S0 **(5)** |
+    | Ao marcar esta caixa, reconheço que li e entendi todos os termos abaixo | Selecione a **Caixa de seleção** **(6)**|
+    
+    >**Observação**: aqui, xxxxxx se refere à ID de implantação
 
-   ![](../media/Active-image126.png)
+    ![](../media/imag006.png)
 
-1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete.
+1. Assim que a validação for bem-sucedida na guia **Revisar + criar**, clique em **Criar** e aguarde a conclusão da implantação.
 
-    ![](../media/Active-image127.png)
+1. Para garantir que **Aceitamos os termos e condições para a IA responsável**: devemos iniciar a criação de uma **conta multisserviço do Azure AI Services** no portal do Azure para revisar e reconhecer os termos e condições.
 
-1. To make sure that we have **Accepted the terms and conditions for Responsible AI**:  We must initiate the creation of a **Azure AI Services multi-service account** from the Azure portal to review and acknowledge the terms and conditions. 
+    >**Observação**: Documento de referência: [Início rápido: criar um recurso de serviços cognitivos usando o portal do Azure](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows). Depois de aceito, você pode criar recursos subsequentes usando qualquer ferramenta de implantação (SDK, CLI ou modelo ARM, etc.) na mesma assinatura do Azure.
 
-    >**Note**: Reference doc: [Quickstart: Create a Cognitive Services resource using the Azure portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows). Once accepted, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc.) under the same Azure subscription.
-
-1. Navigate to `https://github.com/CloudLabs-MOC/business-process-automation` and click on **Sign in** then provide your personal **GitHub Username** and **Password** then click **Sign in**.
+1. Navegue até `https://github.com/CloudLabs-MOC/business-process-automation` e clique em **Entrar**, depois forneça seu **Nome de usuário do GitHub** e **Senha** pessoais e clique em **Entrar**.
 
     ![](../media/Active-image128.png)
-
-    ![](../media/Active-image129.png)
     
-1. Once signed in, select **fork (1)** to fork the repository then on **Create a new fork** click **Create fork (2)**.
-   
+    ![](../media/Active-image129.png)
+
+1. Depois de entrar, selecione **fork (1)** para bifurcar o repositório e, em **Criar um novo fork**, clique em **Criar fork (2)**.
+
     ![](../media/Active-image130.png)
+    
+    ![](../media/Active-image131.png)
 
-   ![](../media/Active-image131.png)
-
-1. Click on your **profile** which is at the top of your right hand, and then select **Settings**.
+1. Clique no seu **perfil**, que está no topo da sua mão direita, e selecione **Configurações**.
 
     ![](../media/Active-image132.png)
-   
-1. Scroll down to the complete bottom and select **Developer settings**.
+
+1. Role para baixo até o final e selecione **Configurações do desenvolvedor**.
 
     ![](../media/Active-image133.png)
 
-1. From the left navigation pane, expand **Personal access tokens (1)** and select **Tokens (classic) (2)**. On the **Personal access tokens** page, click **Generate new token (3)** and then choose **Generate new token (classic) (4)**.
+1. No painel de navegação esquerdo, expanda **Tokens de acesso pessoal (1)** e selecione **Tokens (clássico) (2)**. Na página **Tokens de acesso pessoal**, clique em **Gerar novo token (3)** e escolha **Gerar novo token (clássico) (4)**.
 
-      ![](../media/Active-image134.png)
+    ![](../media/Active-image134.png)
 
-1. Provide the following details:
+1. Forneça os seguintes detalhes:
 
-   - Note: **PAT (1)**
-   - Expiration: **7 days (2)**
-     
-     ![](../media/Active-image135.png)
+    - Nota: **PAT (1)**
+    - Expiração: **7 dias (2)**
+    
+       ![](../media/Active-image135.png)
 
-   - Select scopes: Select all the scopes **repo, workflow, write:packages, delete:packages, admin:org, admin:public_key, admin:repo_hook, admin:org_hook, gist,notifications, user, delete_repo, write:discussion, admin:enterprise, audit_log, codespace, copilot, project, admin:gpg_key, admin:ssh_signing_key** and click on **Genearte token**.
+    - Selecione os escopos: Selecione todos os escopos **repo, workflow, write:packages, delete:packages, admin:org, admin:public_key, admin:repo_hook, admin:org_hook, gist,notifications, user, delete_repo, write:discussion, admin:enterprise, audit_log, codespace, copilot, project, admin:gpg_key, admin:ssh_signing_key** e clique em **Genearte token**.
 
-      ![](../media/Active-image138.png)
+       ![](../media/Active-image138.png)
+    
+       ![](../media/Active-image139.png)
+    
+       ![](../media/Active-image140.png)
 
-      ![](../media/Active-image139.png)
+       >**Link de referência**: [Obtenha um token de nível de fluxo de trabalho (clássico)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
-      ![](../media/Active-image140.png)
+1. Copie o **token PAT** e cole-o em um bloco de notas.
 
-   >**Reference link**: [Get a Workflow Level Token (Classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+    ![](../media/gen37.png)
 
-1. Copy the **PAT token** and paste it in a notepad.
+1. Clique no botão "Implantar no Azure" que corresponde ao seu ambiente.
 
-      ![](../media/gen37.png)
-   
-1. Click on the "Deploy to Azure" button that corresponds to your environment.
+    ### Com OpenAI
+    [![Implantar no Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
 
-     ### With OpenAI
-      [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
+1. Lâmina de implantação personalizada, especifique o seguinte e outros parâmetros podem manter os valores padrão.
 
-1. Custom deployment blade, specify the following and others parameters can keep default values.
+    - Grupo de recursos: **ODL-GenAI-CL-xxxxxx-Activate-GenAI**
+    - Token do repositório: cole o token PAT que você criou e registrou na etapa anterior.
+    - URL do repositório: cole a URL da **conta bifurcada do Github**
+    
+    ![](../media/gen39.png)
 
-   - Resource Group : **ODL-GenAI-CL-xxxxxx-Activate-GenAI**
-   - Repository Token : Paste the PAT token which you created and recorded in previous step.
-   - Repository Url : Paste the **Forked Github account** url
+    >**Observação**: certifique-se de que a região primária esteja definida como EASTUS2
+    
+    ![](../media/gen47.png)
 
-      ![](../media/gen39.png)
-  
-      >**Note**: Ensure the primary region is set to EASTUS2
-      
-       ![](../media/gen47.png)
-     
-     >**Note**: (you can get URL by click on profile from right corner then select **Your repositories** click on **business-process-automation** and from top bar copy the **Github account** url)
-     
-     ![](../media/Active-image141.png)
+    >**Observação**: (você pode obter a URL clicando no perfil no canto direito e, em seguida, selecionar **Seus repositórios**, clicar em **business-process-automation** e, na barra superior, copiar a URL da **conta do Github**)
+    
+    ![](../media/Active-image141.png)
 
-1. Click on **Review + Create**.
+1. Clique em **Revisar + criar** e **Criar**.
 
-1. Wait for the deployment to get complete and click on **Go to resource group**.    
+1. Aguarde a conclusão da implantação e clique em **Ir para o grupo de recursos**.
 
-1. Verify that all the resources are deployed without any issues.
-   
-   ![](../media/d005.png)
+1. Verifique se todos os recursos foram implantados sem problemas.
+
+    ![](../media/d005.png)
    
 #### Task 1.2 - Create Azure Blob Storage containers
 
@@ -146,27 +143,27 @@ In this task, you'll learn how to create a container in an existing storage acco
 
 1. In the storage account overview blade, expand **Settings(1)** select **Configuration (2)**, **Enabled** the **Allow the blob anonymous access (3)** and click on **Save (4)**.
 
-      ![](../media/Active-image146.png)
+      ![](../media/imag007.png)
 
 1. Expand **Data Storage (1)** select on **Containers (2)** from the left navigation pane, select **+ Container (3)**.
 
-    ![](../media/Active-image147.png)
+    ![](../media/imag008.png)
   
 1. On the **New container** blade provide the name as **source (1)** then for **Anonymous access level** select **Blob (anonymous read access for blobs only) (2)** and click on **Create (3)**.
 
-     ![](../media/Active-image148.png)
+     ![](../media/imag009.png)
 
 1. Click on the **source** container.
 
-     ![](../media/Active-image149.png)
+     ![](../media/imag0010.png)
    
 1. From the left navigation pane expand **Settings(1)** then select **Shared Access Tokens(2)**. From the **Permission** drop down select **Read(3)** and **List(4)** then click on **Generate SAS token and URL(5)**.
 
-      ![](../media/Active-image150.png)
+      ![](../media/imag0011.png)
 
 1. After clicking **Generate SAS token and URL** scroll down then copy the **Blob SAS URL**.
 
-    ![](../media/Active-image151.png)
+    ![](../media/imag0012.png)
    
 1. Repeat the same steps number from 1 - 8 by creating another container with name **target** by giving **Write** and **List** permissions.
 
