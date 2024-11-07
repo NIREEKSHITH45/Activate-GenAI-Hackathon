@@ -12,11 +12,11 @@ Após provisionar com sucesso a aplicação de chat melhorada por IA no desafio 
 
 Um dos temas mais interessantes no momento são os tamanhos dos modelos; os usuários estão particularmente interessados no GPT para conversas. O mais intrigante sobre todos esses modelos básicos — incluindo o Chat GPT — é que, enquanto eles se saem bem sozinhos, eles têm um desempenho ainda melhor quando combinados com os dados das organizações.
 
-1. Na página do Portal de Azure, na caixa **Search resources, services, and docs (G+/)** no topo do portal, digite **Container Apps**, e, em seguida, selecione **Aplicativos de Contêiner**.
+1. Na página do Portal de Azure, na caixa **Pesquisar recursos, serviços e documentos (G+/)** no topo do portal, digite **Container Apps**, e, em seguida, selecione **Aplicativos de Contêiner**.
 
    ![](../media/imag06.png)
 
-1. Selecione **webapp**.
+1. Selecione **webapp container**.
 
    ![](../media/imag07.png)
       
@@ -36,7 +36,7 @@ Um dos temas mais interessantes no momento são os tamanhos dos modelos; os usu�
 
    ![](../media/Active-image115.png)
 
-1. A resposta não apenas respondeu à pergunta com base no conteúdo encontrado nesses documentos, mas também incluiu **citações**. Selecione qualquer uma das **citações (1)** para validar a precisão das informações. Quando você clica em uma anotação, o aplicativo pula diretamente para a página do **documento (2)** que entra na comparação dos planos, permitindo que você leia mais ou faça uma validação adicional da precisão da resposta na seção de **citações**.
+1. A resposta não apenas respondeu à pergunta com base no conteúdo encontrado nesses documentos, mas também incluiu **citations**. Selecione qualquer uma das **citations (1)** para validar a precisão das informações. Quando você clica em uma anotação, o aplicativo pula diretamente para a página do **documento (2)** que entra na comparação dos planos, permitindo que você leia mais ou faça uma validação adicional da precisão da resposta na seção de **citations**.
 
    ![](../media/Active-image116.png)
 

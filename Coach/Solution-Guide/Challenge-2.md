@@ -118,9 +118,7 @@ Nesta tarefa, você aprenderá a criar um recurso do Azure AI Search no portal d
 
 1. Na página **Azure AI Services**, clique em **Criar**.
 
-    ![](../media/imag3.png)
-
-1. Especifique os seguintes detalhes para criar um **Azure AI Service** e clique na aba **Review + Create (7)**.
+1. Especifique os seguintes detalhes para criar um **Criar Serviços Cognitivos** e clique na aba **Examinar + Criar (7)**.
 
     | **Option** | **Value** |
     | ------------------ | ----------------------------------------------------- |
@@ -135,9 +133,9 @@ Nesta tarefa, você aprenderá a criar um recurso do Azure AI Search no portal d
 
     ![](../media/imag9.png)
 
-1. Assim que a validação for bem-sucedida na guia **Revisar + criar**, clique em **Criar** e aguarde a conclusão da implantação, depois clique em **Ir para o recurso**.
+1. Assim que a validação for bem-sucedida na guia **Examinar + Criar**, clique em **Criar** e aguarde a conclusão da implantação, depois clique em **Ir para o recurso**.
 
->**Observação**: seus recursos do Azure AI Search e do Azure AI Services devem estar no mesmo local.
+    >**Observação**: seus recursos do Azure AI Search e do Azure AI Services devem estar no mesmo local.
 
 ### Tarefa 2.3: Criar uma conta de armazenamento
 
@@ -166,7 +164,7 @@ Nesta tarefa, você aprenderá a criar um recurso de **Conta de armazenamento** 
 
     ![](../media/1-11-24(34).png)
 
-1. Na aba **Avançado**, marque a caixa ao lado de **Permitir acesso anônimo em contêineres individuais (1)** e clique em **Revisar + criar (2)**
+1. Na aba **Avançado**, marque a caixa ao lado de **Permitir a hablitacao do acesso anônimo em contêineres individuais (1)** e clique em **Revisar + criar (2)**
 
     ![](../media/1-11-24(35).png)
 
@@ -192,7 +190,7 @@ Nesta tarefa, você navegará entre o Visual Studio Code e o portal do Azure par
 
     ![](../media/Active-image47.png)
 
-1. Navegue de volta para a aba do navegador exibindo **portal do Azure**, recupere o **ID da assinatura (1)**, **nome da conta de armazenamento do Azure (2)** e **chave da conta de armazenamento do Azure** clicando na opção **Mostrar** > **Área de transferência (3)** da conta de armazenamento criada recentemente e registre os valores no bloco de notas.
+1. Navegue de volta para a aba do navegador que exibe o **portal do Azure**, recupere o **nome da conta de armazenamento do Azure (1), o **ID da assinatura (2)** e a **chave da conta de armazenamento do Azure** clicando em **Chaves de acesso** em Segurança + rede no menu à esquerda e, em seguida, clique na opção **Mostrar** > **Área de transferência (3)** da conta de armazenamento criada recentemente e registre os valores no bloco de notas.
 
     ![](../media/imag1.png)
 
@@ -202,7 +200,7 @@ Nesta tarefa, você navegará entre o Visual Studio Code e o portal do Azure par
 
     ![](../media/Active-image85.png)
 
-1. Salve suas alterações e clique com o botão direito do mouse na pasta **22-create-a-search-solution (1)** > **abra um terminal integrado (2)**.
+1. Salve suas alterações e clique com o botão direito do mouse na pasta **22-create-a-search-solution (1)** > **Open in Integrated Terminal (2)**.
 
     ![](../media/Active-image51.png)
 
@@ -210,10 +208,10 @@ Nesta tarefa, você navegará entre o Visual Studio Code e o portal do Azure par
 
     > **Observação**: certifique-se de ter instalado o Azure CLI e a extensão Azure CLI Tools no Visual Studio Code.
 
-    >**Observação**: certifique-se de substituir <seu-nome-de-usuário> <sua-senha> por **nome-de-usuário-do-Azure** e **senha** que você está usando no desafio-1.
+    >**Observação**: certifique-se de substituir <seu-nome-de-usuário> <your-username> por **nome-de-usuário-do-Azure** e **<your-password>** que você está usando no desafio-1.
 
     ```
-    az login --username <seu-nome-de-usuário> --password <sua-senha>
+    az login --username <your-username> --password <your-password>
     ```
 
     ![](../media/Active-image52.png)
@@ -239,26 +237,26 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
 
     ![](../media/imag3.png)
 
-1. Na página **Conectar aos seus dados**, na lista **Fonte de dados**, selecione **Azure Blob Storage**. Em seguida, preencha os detalhes do armazenamento de dados com os seguintes valores:
+1. Na página **Conectar a seus dados**, na lista **Fonte de dados**, selecione **Armazenamento de Blobs do Azure**. Em seguida, preencha os detalhes do armazenamento de dados com os seguintes valores:
 
-    - **Fonte de dados**: Armazenamento de Blobs do Azure(1)
-    - **Nome da fonte de dados**: margies-data (2)
-    - **Dados para extrair**: Conteúdo e metadados (3)
-    - **Modo de análise**: Padrão (4)
-    - **Assinatura**: Deixe o padrão (5)
-    - **Cadeia de conexão**: Selecione **Escolha uma conexão existente (6)**. Em seguida, selecione sua conta de armazenamento (7) e, finalmente, selecione o contêiner **margies (8)** que foi criado pelo script UploadDocs.cmd. Em seguida, clique em **Selecionar (9)**.
+    - **Fonte de Dados**: **Armazenamento de Blobs do Azure (1)**
+    - **Nome da fonte de dados**: **margies-data (2)**
+    - **Dados para extrair**: **Conteúdo e metadados (3)**
+    - **Modo de análise**: **Padrão (4)**
+    - **Assinatura**: **Deixe o padrão (5)**
+    - **Cadeia de conexão**: Selecione **Escolha uma conexão existente (6)**. Em seguida, selecione sua conta **de armazenamento (7)** e, finalmente, selecione o contêiner **margies (8)** que foi criado pelo script UploadDocs.cmd. Em seguida, clique em **Selecionar (9)**.
 
       ![](../media/imag4.png)
         
       ![](../media/imag5.png)
         
-      ![](../media/imag6.png)
+      ![](../media/imagn1.png)
 
-    - **Autenticação de identidade gerenciada**: Nenhuma (10)
-    - **Nome do contêiner**: margies (11)
-    - **Pasta de blobs**: *Deixe em branco.* (12)
-    - **Descrição**: Brochuras e avaliações no site da Margie's Travel. (13)
-    - Clique em **Adicionar habilidades cognitivas (opcional) (14)**
+    - **Autenticação de identidade gerenciada**: **Nenhum (10)**
+    - **Nome do contêiner**: **margies (11)**
+    - **Pasta de blobs**: *Deixe em branco.* **(12)**
+    - **Descrição**: **Brochuras e avaliações no site da Margie's Travel. (13)**
+    - Clique em **próximo : Adicionar habilidades cognitivas (opcional) (14)**
 
       ![](../media/imag7.png)
 
@@ -328,11 +326,11 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
 
            ![](../media/imag15.png)
 
-1. Na página de recursos do **Azure AI Search**, expanda **Gerenciamento de pesquisa (1)** selecione **Indexadores (2)** que deve mostrar o **margies-indexer (3)** recém-criado.
+1. Na página de recursos do **serviço de Pesquisa**, expanda **Gerenciamento de pesquisa (1)** selecione **Indexadores (2)** que deve mostrar o **margies-indexer (3)** recém-criado.
 
     ![](../media/imag16.png)
 
-1. Selecione **margies-indexer** . Aguarde alguns minutos e clique em **&orarr; Atualizar** até que o **Status** indique Exito.
+1. Selecione **margies-indexer** . Aguarde alguns minutos e clique em **&orarr; Atualizar** até que o **Status** indique **Exito**.
 
     ![](../media/imag17.png)
    
@@ -344,7 +342,7 @@ Nesta tarefa, você aprenderá a pesquisar e consultar o índice criado anterior
 
     ![](../media/imag18.png)
 
-1. No Explorador de pesquisa, na caixa **Sequência de caracteres de consulta**, insira `*` (um único asterisco) e selecione **Pesquisar**.
+1. No Explorador de pesquisa, na caixa **Sequência de caracteres de consulta**, insira `*` **(1)** (um único asterisco) e selecione **Pesquisar (2)**.
 
     ![](../media/imag19.png)
     
@@ -421,7 +419,7 @@ Embora você possa usar o portal para criar e modificar soluções de pesquisa, 
 
 Nesta tarefa, você está se preparando para executar comandos CURL no Visual Studio Code para interagir com a interface REST do Azure AI Service:
 
-1. No portal do Azure, retorne à página **Visão geral** do seu recurso **Azure AI Search** e, na seção superior da página, encontre o **Url** do seu recurso (que se parece com **https://resource_name.search.windows.net**) e copie-o para a área de transferência.
+1. No portal do Azure, retorne à página **Visão geral** do seu recurso **serviço de Pesquisa** e, na seção superior da página, encontre o **Url** do seu recurso (que se parece com **https://resource_name.search.windows.net**) e copie-o para a área de transferência.
 
     ![](../media/imag22.png)
 
@@ -433,7 +431,7 @@ Nesta tarefa, você está se preparando para executar comandos CURL no Visual St
 
     ![](../media/Active-image76.png)
 
-1. No portal do Azure, volte para a página **Visão geral** do seu recurso **Azure AI Search**, expanda **Configurações** e selecione **Chaves** e copie a **Chave de administrador principal** para a área de transferência.
+1. No portal do Azure, volte para a página **Visão geral** do seu recurso **serviço de Pesquisa**, expanda **Configurações (1)** e selecione **Chaves (2)** e copie a **Chave de administracao primaria (3)** para a área de transferência.
 
     ![](../media/imag23.png)
 
@@ -563,7 +561,7 @@ Nesta tarefa, você revisará o arquivo **indexer.json** no Visual Studio Code, 
 
 Nesta tarefa, você atualizará as definições JSON no Visual Studio Code para Azure AI Search para incluir novos campos, como resultados de análise de sentimento e URLs de documentos. Execute modify-search.cmd para aplicar as alterações e iniciar a indexação. Monitore o progresso na seção Indexadores do portal do Azure para avisos de conclusão e tamanho do documento durante a análise de sentimento.
 
-1. Clique com o botão direito do mouse na pasta **modify-search** e selecione **abrir um terminal integrado**.
+1. Clique com o botão direito do mouse na pasta **modify-search** e selecione **Open in Integrated Terminal**.
 
     ![](../media/Active-image83.png)
 
@@ -573,7 +571,7 @@ Nesta tarefa, você atualizará as definições JSON no Visual Studio Code para 
     .\modify-search
     ```
 
-1. Quando o script terminar, retorne à página **Visão geral** do seu **Azure AI Search** no painel de navegação esquerdo, expanda **Gerenciamento de pesquisa** e selecione **Indexadores**. Em seguida, selecione periodicamente **Atualizar** para rastrear o progresso da operação de indexação. Pode levar cerca de um minuto para ser concluído.
+1. Quando o script terminar, retorne à página **Visão geral** do seu **serviço de Pesquisa** no painel de navegação esquerdo, expanda **Gerenciamento de pesquisa** e selecione **Indexadores**. Em seguida, selecione periodicamente **Atualizar** para rastrear o progresso da operação de indexação. Pode levar cerca de um minuto para ser concluído.
 
     ![](../media/imag25.png)
 
@@ -582,8 +580,8 @@ Nesta tarefa, você atualizará as definições JSON no Visual Studio Code para 
 ### Tarefa 6.6: Consultar o índice modificado
 Nesta tarefa, você executará uma consulta no Azure AI Search para recuperar URLs, sentimentos e frases-chave para documentos que mencionam "Londres" com sentimentos positivos, de autoria de "Revisor".
 
-1. Na parte superior da lâmina do seu recurso do Azure AI Search, selecione **Search explorer**.
-1. No Search explorer, na caixa **Query string**, envie a seguinte consulta JSON:
+1. Na parte superior da lâmina do seu recurso do Azure AI Search, selecione **Explorador de pesquisa**.
+1. No Explorador de pesquisa, na caixa **Query string**, envie a seguinte consulta JSON:
 
     ```json
     {
@@ -595,7 +593,7 @@ Nesta tarefa, você executará uma consulta no Azure AI Search para recuperar UR
 
     Esta consulta recupera a **url**, **sentiment** e **keyphrases** para todos os documentos que mencionam *London* de autoria de *Reviewer* que têm um rótulo de **sentiment** positivo (em outras palavras, avaliações positivas que mencionam London).
 
-1. Feche a página **Search explorer** para retornar à página **Overview**.
+1. Feche a página **Explorador de pesquisa** para retornar à página **Overview**.
 
 ### Tarefa 7: Criar um aplicativo cliente de pesquisa
 
@@ -607,7 +605,7 @@ Agora que você tem um índice útil, pode usá-lo em um aplicativo cliente. Voc
 
 Nesta tarefa, você recuperará a URL e as chaves do ponto de extremidade para seu recurso de Pesquisa de IA do Azure do portal do Azure, essencial para gerenciar e consultar seus recursos de pesquisa em tarefas futuras.
 
-1. No portal do Azure, navegue de volta para **Pesquisa de IA do Azure**. Na página Visão geral do recurso **Azure AI Search**, observe o valor da URL, que deve ser semelhante a **https://nome_do_seu_recurso.search.windows.net**. Registre esse valor no Bloco de notas, pois ele será necessário em tarefas futuras.
+1. No portal do Azure, navegue de volta para **serviço de Pesquisa**. Na página Visão geral do recurso **serviço de Pesquisa**, observe o valor da URL, que deve ser semelhante a **https://nome_do_seu_recurso.search.windows.net**. Registre esse valor no Bloco de notas, pois ele será necessário em tarefas futuras.
 
     ![](../media/imag22.png)
 
