@@ -280,7 +280,7 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
         | Extrair nomes de localização | | locations |
         | Extrair frases-chave | | keyphrases |
         | Detectar idioma | | language |
-        | Gerar tags de imagens | | imageTags |
+        | Gerar marcações de imagens | | imageTags |
         | Gerar legendas de imagens | | imageCaption |
         
         ![](../media/imag12.png)
@@ -455,7 +455,7 @@ Nesta tarefa, você configurará um conjunto de habilidades (skillset.json) no V
 
 1. No portal do Azure, abra seu recurso do Azure AI Services (<u>não</u> seu recurso do Azure AI Search!)
 
-1. Na página de visão geral do **Azure AI Services**, no painel de navegação esquerdo, expanda **Resource Management** e selecione **Chaves e Ponto de extremidade**. Em seguida, copie **CHAVE 1** para a área de transferência.
+1. Na página de visão geral do **Azure AI Services**, no painel de navegação esquerdo, expanda **Gerenciamento de Recursos** e selecione **Chaves e Ponto de extremidade**. Em seguida, copie **CHAVE 1** para a área de transferência.
 
     ![](../media/imag24.png)
 
@@ -546,7 +546,7 @@ Nesta tarefa, você revisará o arquivo **indexer.json** no Visual Studio Code, 
     
     ```
 
-> **Observação**: todos os outros metadados e campos de conteúdo no documento de origem são mapeados implicitamente para campos do mesmo nome no índice.
+    > **Observação**: todos os outros metadados e campos de conteúdo no documento de origem são mapeados implicitamente para campos do mesmo nome no índice.
 
 1. Revise a seção **ouputFieldMappings**, que mapeia saídas das habilidades no skillset para campos de índice. A maioria delas reflete as escolhas que você fez na interface do usuário, mas o mapeamento a seguir foi adicionado para mapear o valor **sentimentLabel** extraído pela sua habilidade de sentimento para o campo **sentiment** que você adicionou ao índice:
 
