@@ -45,7 +45,7 @@ Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
 
 1. Usando a **LabVM**, na barra de pesquisa do Windows, digite  **Powershell** e selecione **PowerShell 7-preview (x64)** e depois **Executar como administrador**.
 
-    ![](../media/imag04.png)
+    ![](../media/imagn2.png)
 
     >**Observação**: Se você não conseguir visualizar a prévia do Powershell 7. execute os comandos abaixo linha por linha no Powershell ISE para instalar o **Powershell 7-preview.**
 
@@ -137,19 +137,19 @@ Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
 
 ## Critério de Sucesso:
 
-- Successful deployment of the Chat App.
-- validate if the following services are successfully deployed in the RG (Resource Group).
-  - App Service
-  - Document Intelligence
-  - Azure OpenAI
-  - Shared Dashboard
-  - Smart Detector Alert Rule
-  - Search Service
-  - Log Analytics Workspace
-  - App Service Plan
-  - Storage Account
-- Validate if the data is populated into the storage container named `content`.
-- The Chat app should be accessible using the Azure App service.
+- Implantação bem-sucedida do aplicativo de bate-papo.
+- validar se os seguintes serviços foram implantados com sucesso no RG (Grupo de recursos).
+   - Serviço de aplicativo
+   - Inteligência de documentos
+   - Azure OpenAI
+   - Painel compartilhado
+   - Regra de alerta do detector inteligente
+   - Serviço de pesquisa
+   - Espaço de trabalho do Log Analytics
+   - Plano do serviço de aplicativo
+   - Conta de armazenamento
+- Validar se os dados são preenchidos no contêiner de armazenamento denominado `content`.
+- O aplicativo de bate-papo deve ser acessível usando o serviço de aplicativo do Azure.
 
 ## Recursos Adicionais:
 
