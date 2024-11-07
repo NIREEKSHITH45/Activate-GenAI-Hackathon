@@ -190,7 +190,7 @@ Nesta tarefa, você navegará entre o Visual Studio Code e o portal do Azure par
 
     ![](../media/Active-image47.png)
 
-1. Navegue de volta para a aba do navegador que exibe o **portal do Azure**, recupere o **nome da conta de armazenamento do Azure (1), o **ID da assinatura (2)** e a **chave da conta de armazenamento do Azure** clicando em **Chaves de acesso** em Segurança + rede no menu à esquerda e, em seguida, clique na opção **Mostrar** > **Área de transferência (3)** da conta de armazenamento criada recentemente e registre os valores no bloco de notas.
+1. Navegue de volta para a aba do navegador que exibe o **portal do Azure**, recupere o **nome da conta de **armazenamento do Azure (1)**, o **ID da assinatura (2)** e a **chave da conta de armazenamento do Azure** clicando em **Chaves de acesso** em Segurança + rede no menu à esquerda e, em seguida, clique na opção **Mostrar** > **Área de transferência (3)** da conta de armazenamento criada recentemente e registre os valores no bloco de notas.
 
     ![](../media/imag1.png)
 
