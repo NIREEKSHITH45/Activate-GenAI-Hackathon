@@ -1,4 +1,4 @@
-# Desafio 02: Implementar Document Search usando o Azure AI Search
+# Desafio 02: Implementar a pesquisa de documentos usando o Azure AI Search
 
 ### Tempo Estimado: 120 minutos
 
@@ -208,7 +208,7 @@ Nesta tarefa, você navegará entre o Visual Studio Code e o portal do Azure par
 
     > **Observação**: certifique-se de ter instalado o Azure CLI e a extensão Azure CLI Tools no Visual Studio Code.
 
-    >**Observação**: certifique-se de substituir <seu-nome-de-usuário> <your-username> por **nome-de-usuário-do-Azure** e **<your-password>** que você está usando no desafio-1.
+    >**Observação**: certifique-se de substituir <your-username> e <your-password> que você está usando no desafio-1.
 
     ```
     az login --username <your-username> --password <your-password>
@@ -743,6 +743,7 @@ Nesta tarefa, você executará o aplicativo da web Margie's Travel localmente, p
     ![](../media/Active-image97.png)
 
 1. Observe que os resultados são filtrados para incluir apenas avaliações e classificados com base no rótulo de sentimento.
+
     ![](../media/Active-image98.png)
 
 1. No site **Margie's Travel**, digite **quiet hotel in New York (1)** na caixa de pesquisa e clique em **Search (2)**.
