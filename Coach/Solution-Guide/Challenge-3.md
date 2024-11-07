@@ -132,7 +132,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
 1. After the application has been successfully deployed you will see a URL printed to the console. Copy browse the URL to interact with the application in your browser. It will look like the following:
 
-    ![](../media/Active-image108.png)
+    ![](../media/imag05.png)
     ![](../media/Active-image109.png)
  
     >**Note**: It may take 30 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
