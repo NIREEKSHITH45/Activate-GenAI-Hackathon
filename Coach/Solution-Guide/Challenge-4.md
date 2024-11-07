@@ -1,4 +1,4 @@
-# Desafio 04: Interact with the Chat App
+# Desafio 04: Interaja com o aplicativo de bate-papo
 
 ### Tempo Estimado: 30 minutos
 
@@ -16,7 +16,7 @@ Um dos temas mais interessantes no momento são os tamanhos dos modelos; os usu�
 
    ![](../media/imag06.png)
 
-1. Selecione **webapp container**.
+1. Selecione **Contêiner de aplicativo da Web**.
 
    ![](../media/imag07.png)
       
@@ -36,7 +36,7 @@ Um dos temas mais interessantes no momento são os tamanhos dos modelos; os usu�
 
    ![](../media/Active-image115.png)
 
-1. A resposta não apenas respondeu à pergunta com base no conteúdo encontrado nesses documentos, mas também incluiu **citations**. Selecione qualquer uma das **citations (1)** para validar a precisão das informações. Quando você clica em uma anotação, o aplicativo pula diretamente para a página do **documento (2)** que entra na comparação dos planos, permitindo que você leia mais ou faça uma validação adicional da precisão da resposta na seção de **citations**.
+1. A resposta não apenas respondeu à pergunta com base no conteúdo encontrado nesses documentos, mas também incluiu **Citations**. Selecione qualquer uma das **Citations (1)** para validar a precisão das informações. Quando você clica em uma anotação, o aplicativo pula diretamente para a página do **documento (2)** que entra na comparação dos planos, permitindo que você leia mais ou faça uma validação adicional da precisão da resposta na seção de **Citations**.
 
    ![](../media/Active-image116.png)
 
@@ -54,7 +54,7 @@ Um dos temas mais interessantes no momento são os tamanhos dos modelos; os usu�
    
    ![](../media/3-7.png)
 
-1. Vamos fazer uma pequena alteração no prompt para pedir que o OpenAI responda em qualquer idioma no qual a pergunta não for feita. No canto superior direito, selecione  **Developer Settings** e adicione a mensagem abaixo na seção **Override prompt template**. Clique em **Close**.
+1. Vamos fazer uma pequena alteração no prompt para pedir que o OpenAI responda em qualquer idioma no qual a pergunta não for feita. No canto superior direito, selecione  **Developer Settings (1)** e adicione a mensagem abaixo na seção **Override prompt template (2)**. Clique em **Close (3)**.
 
       ```
       convert prompts to English and respond when asked questions in a different language
@@ -67,12 +67,12 @@ Um dos temas mais interessantes no momento são os tamanhos dos modelos; os usu�
 1. Quando fazemos uma pergunta em um idioma diferente, o prompt é convertido para inglês para realizar a busca e, em seguida, o modelo responde no mesmo idioma em que a pergunta foi feita. Insira o prompt abaixo na seção de chat e observe que ele está recebendo a pergunta, detectando que ela está em francês, convertendo-a para o inglês, executando-a como antes e depois retornando a resposta esperada como anteriormente.
 
    ```
-   Quelles sont les responsabilités du responsible marketing ?
+   Quelles sont les responsabilités du responsible marketing?
    ```
 
    ![](../media/3-8.png)
 
-1. Vá para **Developer Settings** e, na seção **Exclude category**, marque a caixa de seleção para **Use semantic options** e **Suggest follow-up questions**. Clique em **Close**.
+1. Vá para **Developer Settings** e, na seção **Exclude category**, marque a caixa de seleção para **Use semantic captions (1)** e **Suggest follow-up questions (2)**. Clique em **Close (3)**.
 
    ![](../media/Active-image119.png)
 
@@ -95,4 +95,4 @@ Um dos temas mais interessantes no momento são os tamanhos dos modelos; os usu�
 
 - Consulte  [azure-search-openai-demo](https://github.com/Azure-Samples/azure-search-openai-demo) para mais informação.
 
-## Prossiga para o próximo Desafio clicando em **Next**>>.
+## Prossiga para o próximo Desafio clicando em **Próximo**>>.

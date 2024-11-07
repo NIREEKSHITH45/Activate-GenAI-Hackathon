@@ -1,4 +1,4 @@
-# Desafio 03:  Deploy an AI-Powered Chat App 
+# Desafio 03:  Implante um aplicativo de bate-papo com tecnologia de IA 
 
 ### Tempo Estimado: 150 minutos
 
@@ -15,15 +15,15 @@ Você usará Bicep para provisionar a aplicação de chat.
 A aplicação de chat se integra perfeitamente com diferentes serviços Azure para fornecer uma experiência inteligente ao usuário. Aqui está uma visão geral simples de cada serviço usado pela aplicação:
 
 - **App Service:** Hospeda o aplicativo de chat, garantindo que ele possa responder aos prompts enviados pelos usuários a partir dos dados relevantes carregados.
-- **Application Insights:** Monitoriza proativamente o desempenho da aplicação, cuidando dos problemas antes que se tornem significativos.
-- **Document Intelligence:** Utilizando IA, compreende o conteúdo nos documentos carregados, tornando as informações do usuário mais esclarecedoras.
-- **Azure OpenAI:** Melhora as capacidades do aplicativo com compreensão de linguagem natural e respostas.
-- **Shared Dashboard:** Atua como um hub central para colaboração em equipe e compartilhamento de dados.
-- **Smart Detector Alert Rule:** Monitoriza a saúde da aplicação e notifica a equipe caso surjam problemas.
-- **Search Service:** Oferece aos usuários uma funcionalidade de busca dinâmica e eficiente dentro da aplicação.
+- **Insights de aplicação:** Monitora proativamente o desempenho da aplicação, cuidando dos problemas antes que se tornem importantes.
+- **Inteligência de Documentos:** Utilizando IA, compreende o conteúdo nos documentos transferidos, tornando as informações do usuário mais esclarecedoras.
+- **Azure OpenAI:** Melhore as capacidades do aplicativo com compreensão de linguagem natural e respostas.
+- **Painel Compartilhado:** Atua como um hub central para colaboração em equipe e compartilhamento de dados.
+- **Regra de alerta do detector inteligente:** Monitoriza a saúde da aplicação e notifica a equipe caso surjam problemas.
+- **Serviço de busca:** Oferece aos usuários uma funcionalidade de busca dinâmica e eficiente dentro da aplicação.
 - **Log Analytics Workspace:** Rastrea e analisa a atividade da aplicação, oferecendo insights e logs valiosos.
-- **App Service Plan:** Otimiza a alocação de recursos para um desempenho ideal do aplicativo.
-- **Storage Account:** Armazena com segurança os dados que serão utilizados pelo serviço Azure AI Search para fornecer as entradas ao aplicativo de chat.
+- **Plano de serviço de aplicativo:** Otimiza a alocação de recursos para um desempenho ideal do aplicativo.
+- **Conta de Armazenamento:** Armazena com segurança os dados que serão utilizados pelo serviço Azure AI Search para fornecer as entradas ao aplicativo de chat.
 
 Juntos, estes serviços criam uma aplicação de chat responsivo que combina recursos de IA, capacidades de monitorização e gestão eficiente de dados, proporcionando à Contoso uma experiência de usuário excepcional.
 
@@ -119,10 +119,10 @@ Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
 
 1. Adicione os seguintes detalhes quando solicitado:
 
-   - Select an Azure Subscription to use: Pressione **Enter** para escolher a **subscription (1)**
-   - Select an Azure Location to use: **Select any location you would like to use (2)**
-   - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter : **Selecione qualquer localização que você gostaria de usar (3)**
-   - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Selecione qualquer localização que você gostaria de usar(4)**
+   - Selecione uma assinatura do Azure para usar: Pressione **Enter** para escolher a **Subscription (1)** 
+   - Selecione um local do Azure para usar: **Selecione qualquer local que você gostaria de usar (2)** 
+   - Enter um valor para o parâmetro de infraestrutura 'documentIntelligenceResourceGroupLocation': **Selecione qualquer local que você gostaria de usar (3)** 
+   - Insira um valor para o parâmetro de infraestrutura 'openAIResourceGroupLocation': **Selecione qualquer local que você gostaria de usar (4)**
      
       ![](../media/Active-image110.png)
 
@@ -156,4 +156,4 @@ Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
 -  Consolte o repositório [Azure Search OpenAI demo](https://github.com/cmendible/azure-search-openai-demo) para informação adicional da arquitectura da aplicação.
 -  [Azure copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
 
-## Prossiga para o próximo Desafio clicando em **Next**>>.
+## Prossiga para o próximo Desafio clicando em **Próximo**>>.
