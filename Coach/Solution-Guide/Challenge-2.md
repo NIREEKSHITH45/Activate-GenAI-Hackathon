@@ -190,7 +190,7 @@ Nesta tarefa, você navegará entre o Visual Studio Code e o portal do Azure par
 
     ![](../media/Active-image47.png)
 
-1. Navegue de volta para a aba do navegador que exibe o **portal do Azure**, recupere o **nome da conta de **armazenamento do Azure (1)**, o **ID da assinatura (2)** e a **chave da conta de armazenamento do Azure** clicando em **Chaves de acesso** em Segurança + rede no menu à esquerda e, em seguida, clique na opção **Mostrar** > **Área de transferência (3)** da conta de armazenamento criada recentemente e registre os valores no bloco de notas.
+1. Navegue de volta para a aba do navegador que exibe o **portal do Azure**, recupere o nome da conta de **armazenamento do Azure (1)**, o **ID da Assinatura (2)** e a **chave da conta de armazenamento do Azure** clicando em **Chaves de acesso** em Segurança + rede no menu à esquerda e, em seguida, clique na opção **Mostrar** > **Área de transferência (3)** da conta de armazenamento criada recentemente e registre os valores no bloco de notas.
 
     ![](../media/imag1.png)
 
@@ -237,14 +237,14 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
 
     ![](../media/imag3.png)
 
-1. Na página **Conectar a seus dados**, na lista **Fonte de dados**, selecione **Armazenamento de Blobs do Azure**. Em seguida, preencha os detalhes do armazenamento de dados com os seguintes valores:
+1. Na página **Conectar a seus dados**, na lista **Fonte de Dados**, selecione **Armazenamento de Blobs do Azure**. Em seguida, preencha os detalhes do armazenamento de dados com os seguintes valores:
 
-    - **Fonte de Dados**: **Armazenamento de Blobs do Azure (1)**
-    - **Nome da fonte de dados**: **margies-data (2)**
-    - **Dados para extrair**: **Conteúdo e metadados (3)**
-    - **Modo de análise**: **Padrão (4)**
-    - **Assinatura**: **Deixe o padrão (5)**
-    - **Cadeia de conexão**: Selecione **Escolha uma conexão existente (6)**. Em seguida, selecione sua conta **de armazenamento (7)** e, finalmente, selecione o contêiner **margies (8)** que foi criado pelo script UploadDocs.cmd. Em seguida, clique em **Selecionar (9)**.
+    - **Fonte de Dados (1)**: Armazenamento de Blob do Azure
+    - **Nome da fonte de dados (2)**: margies-data
+    - **Dados para extrair (3)**: Conteúdo e metadados
+    - **Modo de análise (4)**: Padrão
+    - **Assinatura (5)**: Deixe o padrão
+    - **Cadeia de conexão**: Selecione **Escolher uma conexão existente (6)**. Em seguida, selecione sua **Conta de armazenamento (7)** e, finalmente, selecione o contêiner **margies (8)** que foi criado pelo script UploadDocs.cmd. Em seguida, clique em **Selecionar (9)**.
 
       ![](../media/imag4.png)
         
@@ -252,30 +252,30 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
         
       ![](../media/imagn1.png)
 
-    - **Autenticação de identidade gerenciada**: **Nenhum (10)**
-    - **Nome do contêiner**: **margies (11)**
-    - **Pasta de blobs**: *Deixe em branco.* **(12)**
-    - **Descrição**: **Brochuras e avaliações no site da Margie's Travel. (13)**
-    - Clique em **próximo : Adicionar habilidades cognitivas (opcional) (14)**
+    - **Autenticação de identidade gerenciada (10)**: Nenhum 
+    - **Nome do contêiner (11)**: margies
+    - **Pasta de blobs (12)**: Deixe em branco
+    - **Descrição (13)**: Brochuras e avaliações no site da Margie's Travel.
+    - Clique em **Próximo : Adicionar habilidades cognitivas (opcional) (14)**
 
       ![](../media/imag7.png)
 
-1. Na guia **Adicionar habilidades cognitivas (opcional)**, expanda **Anexar serviços de IA(1)**, dentro da seção selecione seu recurso **Serviços de IA do Azure (2)**.
+1. Na guia **Adicionar habilidades cognitivas (Opcional)**, expanda **Anexar Serviços de IA (1)**, dentro da seção selecione seu recurso **Serviços de IA do Azure (2)**.
 
    ![](../media/imag10.png)
 
 1. Role para baixo e expanda a seção **Adicionar enriquecimentos (1)** e especifique o seguinte:
 
     - Altere o **Nome do conjunto de habilidades** para **margies-skillset (2)**.
-    - Marque a caixa de seleção para **Ativar OCR e mesclar todo o texto no campo merged_content (3)**.
+    - Marque a caixa de seleção para **Habilitar OCR e mesclar todo o texto no campo merged_content (3)**.
     - Certifique-se de que o **Campo de dados de origem** esteja definido como **merged_content (4)**.
-    - Deixe o **Nível de granularidade de enriquecimento** como o **Campo de origem (5)**, que define todo o conteúdo do documento que está sendo indexado, mas observe que você pode alterar isso para extrair informações em níveis mais granulares, como páginas ou frases.
+    - Deixe o **Nível de granularidade do enriquecimento** como o **Campo de origem (5)**, que define todo o conteúdo do documento que está sendo indexado, mas observe que você pode alterar isso para extrair informações em níveis mais granulares, como páginas ou frases.
     
         ![](../media/imag11.png)
 
     - Selecione os seguintes campos enriquecidos:
     
-        | Habilidade cognitiva | Parâmetro | Nome do campo |
+        | Habilidades Cognitivas de Texto | Parâmetro | Nome do campo |
         | --------------- | ---------- | ---------- |
         | Extrair nomes de localização | | locations |
         | Extrair frases-chave | | keyphrases |
@@ -291,7 +291,7 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
 
 1. Na guia **Personalizar índice de destino**, altere o **Nome do índice** para **margies-index (1)**.
 
-1. Certifique-se de que a **Chave** esteja definida como **metadata_storage_path (2)** e deixe o **Nome do sugeridor** em branco e o **Modo de pesquisa (3)** em seu valor padrão.
+1. Certifique-se de que a **Chave** esteja definida como **metadata_storage_path (2)** e deixe o **Nome do sugeridor** em branco e o **Modo de busca (3)** em seu valor padrão.
 
     ![](../media/imag14.png)
    
@@ -315,7 +315,7 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
 
 1. Na guia **Criar um indexador**, especifique o seguinte
     - Altere o **Nome do indexador** para **margies-indexer (1)**.
-    - Deixe o **Agendamento** definido como **Uma vez (2)**.
+    - Deixe o **Agenda** definido como **Uma vez (2)**.
     - Expanda as **Opções avançadas (3)** e certifique-se de que a opção **Chaves de codificação Base-64 (4)** esteja selecionada (geralmente, as chaves de codificação tornam o índice mais eficiente).
 
     - Selecione **Enviar (5)** para criar a fonte de dados, o conjunto de habilidades, o índice e o indexador. O indexador é executado automaticamente e executa o pipeline de indexação, que:
@@ -326,7 +326,7 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
 
            ![](../media/imag15.png)
 
-1. Na página de recursos do **serviço de Pesquisa**, expanda **Gerenciamento de pesquisa (1)** selecione **Indexadores (2)** que deve mostrar o **margies-indexer (3)** recém-criado.
+1. Na página de recursos do **Serviço de Pesquisa**, expanda **Gerenciamento de pesquisa (1)** selecione **Indexadores (2)** que deve mostrar o **margies-indexer (3)** recém-criado.
 
     ![](../media/imag16.png)
 
@@ -409,7 +409,7 @@ Nesta tarefa, você aprenderá a pesquisar e consultar o índice criado anterior
 
     >**Observação**: Esta consulta retorna o nome do arquivo de qualquer documento criado por *Reviewer* que mencione "New York".
   
-## Tarefa 6: Explorar e modificar as definições dos componentes de pesquisa
+## Tarefa 6: Explorar e modificar definições de componentes de pesquisa
 
 Os componentes da solução de pesquisa são baseados em definições JSON, que você pode visualizar e editar no portal do Azure.
 
@@ -419,7 +419,7 @@ Embora você possa usar o portal para criar e modificar soluções de pesquisa, 
 
 Nesta tarefa, você está se preparando para executar comandos CURL no Visual Studio Code para interagir com a interface REST do Azure AI Service:
 
-1. No portal do Azure, retorne à página **Visão geral** do seu recurso **serviço de Pesquisa** e, na seção superior da página, encontre o **Url** do seu recurso (que se parece com **https://resource_name.search.windows.net**) e copie-o para a área de transferência.
+1. No portal do Azure, retorne à página **Visão geral** do seu recurso **Serviço de pesquisa** e, na seção superior da página, encontre o **Url** do seu recurso (que se parece com **https://resource_name.search.windows.net**) e copie-o para a área de transferência.
 
     ![](../media/imag22.png)
 
@@ -431,7 +431,7 @@ Nesta tarefa, você está se preparando para executar comandos CURL no Visual St
 
     ![](../media/Active-image76.png)
 
-1. No portal do Azure, volte para a página **Visão geral** do seu recurso **serviço de Pesquisa**, expanda **Configurações (1)** e selecione **Chaves (2)** e copie a **Chave de administracao primaria (3)** para a área de transferência.
+1. No portal do Azure, volte para a página **Visão geral** do seu recurso **Serviço de pesquisa**, expanda **Configurações (1)** e selecione **Chaves (2)** e copie a **Chave de administração primaria (3)** para a área de transferência.
 
     ![](../media/imag23.png)
 
@@ -451,11 +451,11 @@ Nesta tarefa, você configurará um conjunto de habilidades (skillset.json) no V
 
     ![](../media/Active-image78.png)
 
-1. Na parte superior da definição do conjunto de habilidades, observe o objeto **cognitiveServices**, que é usado para conectar seu recurso do Azure AI Services ao conjunto de habilidades.
+1. Na parte superior da definição do conjunto de habilidades, observe o objeto **Serviços cognitivos**, que é usado para conectar seu recurso do Azure AI Services ao conjunto de habilidades.
 
 1. No portal do Azure, abra seu recurso do Azure AI Services (<u>não</u> seu recurso do Azure AI Search!)
 
-1. Na página de visão geral do **Azure AI Services**, no painel de navegação esquerdo, expanda **Resource Management** e selecione **Chaves e Ponto de extremidade**. Em seguida, copie **CHAVE 1** para a área de transferência.
+1. Na página de visão geral do **Azure AI Services**, no painel de navegação esquerdo, expanda **Gerenciamento de Recursos** e selecione **Chaves e Ponto de extremidade**. Em seguida, copie **CHAVE 1** para a área de transferência.
 
     ![](../media/imag24.png)
 
@@ -543,10 +543,9 @@ Nesta tarefa, você revisará o arquivo **indexer.json** no Visual Studio Code, 
     "sourceFieldName" : "metadata_storage_path",
     "targetFieldName" : "url"
     }
-    
     ```
 
-> **Observação**: todos os outros metadados e campos de conteúdo no documento de origem são mapeados implicitamente para campos do mesmo nome no índice.
+    > **Observação**: todos os outros metadados e campos de conteúdo no documento de origem são mapeados implicitamente para campos do mesmo nome no índice.
 
 1. Revise a seção **ouputFieldMappings**, que mapeia saídas das habilidades no skillset para campos de índice. A maioria delas reflete as escolhas que você fez na interface do usuário, mas o mapeamento a seguir foi adicionado para mapear o valor **sentimentLabel** extraído pela sua habilidade de sentimento para o campo **sentiment** que você adicionou ao índice:
 
@@ -557,11 +556,11 @@ Nesta tarefa, você revisará o arquivo **indexer.json** no Visual Studio Code, 
     }
     ```
 
-### Tarefa 6.5: Use a API REST para atualizar a solução de pesquisa
+### Tarefa 6.5: Use uma API REST para atualizar a solução de pesquisa
 
 Nesta tarefa, você atualizará as definições JSON no Visual Studio Code para Azure AI Search para incluir novos campos, como resultados de análise de sentimento e URLs de documentos. Execute modify-search.cmd para aplicar as alterações e iniciar a indexação. Monitore o progresso na seção Indexadores do portal do Azure para avisos de conclusão e tamanho do documento durante a análise de sentimento.
 
-1. Clique com o botão direito do mouse na pasta **modify-search** e selecione **Open in Integrated Terminal**.
+1. Clique com o botão direito do mouse na pasta **modify-search (1)** e selecione **Open in Integrated Terminal (2)**.
 
     ![](../media/Active-image83.png)
 
@@ -571,7 +570,7 @@ Nesta tarefa, você atualizará as definições JSON no Visual Studio Code para 
     .\modify-search
     ```
 
-1. Quando o script terminar, retorne à página **Visão geral** do seu **serviço de Pesquisa** no painel de navegação esquerdo, expanda **Gerenciamento de pesquisa** e selecione **Indexadores**. Em seguida, selecione periodicamente **Atualizar** para rastrear o progresso da operação de indexação. Pode levar cerca de um minuto para ser concluído.
+1. Quando o script terminar, retorne à página **Visão geral** do seu **Serviço de pesquisa** no painel de navegação esquerdo, expanda **Gerenciamento de pesquisa** e selecione **Indexadores**. Em seguida, selecione periodicamente **Atualizar** para rastrear o progresso da operação de indexação. Pode levar cerca de um minuto para ser concluído.
 
     ![](../media/imag25.png)
 
@@ -593,7 +592,7 @@ Nesta tarefa, você executará uma consulta no Azure AI Search para recuperar UR
 
     Esta consulta recupera a **url**, **sentiment** e **keyphrases** para todos os documentos que mencionam *London* de autoria de *Reviewer* que têm um rótulo de **sentiment** positivo (em outras palavras, avaliações positivas que mencionam London).
 
-1. Feche a página **Explorador de pesquisa** para retornar à página **Overview**.
+1. Feche a página **Explorador de pesquisa** para retornar à página **Visão geral**.
 
 ### Tarefa 7: Criar um aplicativo cliente de pesquisa
 
@@ -605,13 +604,14 @@ Agora que você tem um índice útil, pode usá-lo em um aplicativo cliente. Voc
 
 Nesta tarefa, você recuperará a URL e as chaves do ponto de extremidade para seu recurso de Pesquisa de IA do Azure do portal do Azure, essencial para gerenciar e consultar seus recursos de pesquisa em tarefas futuras.
 
-1. No portal do Azure, navegue de volta para **serviço de Pesquisa**. Na página Visão geral do recurso **serviço de Pesquisa**, observe o valor da URL, que deve ser semelhante a **https://nome_do_seu_recurso.search.windows.net**. Registre esse valor no Bloco de notas, pois ele será necessário em tarefas futuras.
+1. No portal do Azure, navegue de volta para **Serviço de pesquisa**. Na página Visão geral do recurso **Serviço de pesquisa**, observe o valor da URL, que deve ser semelhante a **https://your_resource_name.search.windows.net**. Registre esse valor no Bloco de notas, pois ele será necessário em tarefas futuras.
 
     ![](../media/imag22.png)
 
-1. Na navegação à esquerda, expanda **Configurações**, selecione **Chaves**, observe que há duas chaves **admin** e uma única chave **Gerenciar chaves de consulta**.
+1. Na navegação à esquerda, expanda **Configurações (1)**, selecione **Chaves (2)**, observe que há duas chaves **administrador** e uma única chave **Gerenciar chaves de administrador**.
 
     >**Observação**: uma chave *admin* é usada para criar e gerenciar recursos de pesquisa
+
     >**Observação**: uma chave *Gerenciar chaves de consulta* é usada por aplicativos clientes que precisam apenas executar consultas de pesquisa.
     
     ![](../media/imag23.png)
@@ -620,7 +620,7 @@ Nesta tarefa, você recuperará a URL e as chaves do ponto de extremidade para s
 
     ![](../media/imag26.png)
 
-### Tarefa 7.2: Prepare-se para usar o Azure AI Search SDK
+### Tarefa 7.2: Prepare-se para usar o SDK de pesquisa do Azure AI
 
 Nesta tarefa, você preparará seu ambiente de desenvolvimento no Visual Studio Code para integrar-se ao Azure AI Search SDK instalando os pacotes necessários (Azure.Search.Documents para C# ou azure-search-documents para Python) e configurando a URL do ponto de extremidade e a chave de consulta nos respectivos arquivos de configuração.
 
@@ -660,7 +660,7 @@ Nesta tarefa, você explorará o código para um aplicativo da Web (C# ASP.NET R
 A pasta **margies-travel** contém arquivos de código para um aplicativo da Web (um aplicativo da Web Microsoft C# *ASP.NET Razor* ou um aplicativo Python *Flask*), que inclui funcionalidade de pesquisa.
 
 1. Abra o seguinte arquivo de código no aplicativo da Web, dependendo da sua escolha de linguagem de programação:
-    - **C#**:Pages/Index.cshtml.cs
+    - **C#**: Pages/Index.cshtml.cs
     - **Python**: app.py
 
 1. Próximo ao topo do arquivo de código, encontre o comentário **Import search namespaces** e observe os namespaces que foram importados para funcionar com o Azure AI Search SDK:
@@ -683,7 +683,7 @@ Nesta tarefa, você se aprofundará no código do aplicativo da web (C# ASP.NET 
 O aplicativo da web já inclui código para processar e renderizar os resultados da pesquisa.
 
 1. Abra o seguinte arquivo de código no aplicativo da web, dependendo da sua escolha de linguagem de programação:
-    - **C#**:Pages/Index.cshtml
+    - **C#**: Pages/Index.cshtml
     - **Python**: templates/search.html
 1. Examine o código, que renderiza a página na qual os resultados da pesquisa são exibidos. Observe que:
     - A página começa com um formulário de pesquisa que o usuário pode usar para enviar uma nova pesquisa (na versão Python do aplicativo, esse formulário é definido no modelo **base.html**), que é referenciado no início da página.
@@ -738,7 +738,7 @@ Nesta tarefa, você executará o aplicativo da web Margie's Travel localmente, p
     
     - Uma capacidade de **Classificar por** para *ordenar* os resultados com base em um campo especificado e na direção da classificação (crescente ou decrescente). A ordem padrão é baseada na *relevância*, que é calculada como um valor **search.score()** com base em um *perfil de pontuação* que avalia a frequência e a importância dos termos de pesquisa nos campos de índice.
 
-1. Selecione o filtro **Revisor** e a opção de classificação **Positivo para negativo** e, em seguida, selecione **Refinar resultados**.
+1. Selecione o filtro **Reviewer (1)** e a opção de classificação **Positive to negative (2)** e, em seguida, selecione **Refine Results (3)**.
 
     ![](../media/Active-image97.png)
 
@@ -776,4 +776,4 @@ Para concluir este desafio com sucesso, você deve:
 
 Para saber mais sobre o Azure AI Search, consulte a [documentação do Azure AI Search](https://docs.microsoft.com/azure/search/search-what-is-azure-search).
 
-## Prossiga para o próximo Desafio clicando em **Next**>>.
+## Prossiga para o próximo Desafio clicando em **Próximo**>>.
