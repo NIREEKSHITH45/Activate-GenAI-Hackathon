@@ -157,7 +157,7 @@ Nesta tarefa, você aprenderá a criar um contêiner em uma conta de armazenamen
 
     ![](../media/imag0010.png)
 
-1. No painel de navegação esquerdo, expanda **Configurações(1)** e selecione **Tokens de acesso compartilhado(2)**. No menu suspenso **Permissão**, selecione **Ler(3)** e **Lista(4)** e clique em **Gerar token SAS e URL(5)**.
+1. No painel de navegação esquerdo, expanda **Configurações (1)** e selecione **Tokens de acesso compartilhado (2)**. No menu suspenso **Permissão**, selecione **Ler (3)** e **Lista (4)** e clique em **Gerar token SAS e URL (5)**.
 
     ![](../media/imag0011.png)
 
