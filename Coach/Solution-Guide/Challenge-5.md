@@ -380,7 +380,7 @@ Nesta tarefa, você treinará um modelo do Form Recognizer carregando, rotulando
 
      ![](../media/imagn25.png)
 
-1. Após o upload, selecione **one test model (1)** e clique em **Run analysis** **(2)**.
+1. Após o upload, selecione **um modelo de teste (1)** e clique em **Run analysis** **(2)**.
 
      ![](../media/Active-image197.png)
 
