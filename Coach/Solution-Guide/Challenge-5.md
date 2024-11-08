@@ -141,7 +141,7 @@ Nesta tarefa, você aprenderá a criar um contêiner em uma conta de armazenamen
 
 1. Selecione a conta de armazenamento criada a partir dos recursos que foram implantados na tarefa anterior.
 
-1. Na lâmina de visão geral da conta de armazenamento, expanda **Configurações(1)** selecione **Configuração (2)**, **Habilitado** o **Permitir acesso anônimo ao blob (3)** e clique em **Salvar (4)**.
+1. Na lâmina de visão geral da conta de armazenamento, expanda **Configurações (1)** selecione **Configuração (2)**, **Habilitado** o **Permitir acesso anônimo ao blob (3)** e clique em **Salvar (4)**.
 
     ![](../media/imag007.png)
 
@@ -176,7 +176,8 @@ Nesta tarefa, você aprenderá a criar um contêiner em uma conta de armazenamen
     ![](../media/imagn4.png)
 
 1. No **Explorador de Arquivos** navegue até `C:\LabFiles\Documents` e selecione o arquivo **document-translation-sample** clique em **Abrir** para carregar o arquivo.
-    ![](../media/imagn5.png)
+
+   ![](../media/imagn5.png)
 
 1. De volta à lâmina **Carregar blob**, certifique-se de que o arquivo **document-translation-sample (1)** esteja selecionado e clique em **Carregar (2)**.
 
