@@ -34,11 +34,11 @@ Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. 
 
     ![](../media/imag004.png)
 
-1. Na lâmina **Azure Al services | Azure Al services multi-service account**, clique em **Criar**.
+1. Na lâmina **Azure Al services | Azure Al services multi-service account**, clique em **+ Criar**.
 
     ![](../media/imag005.png)
 
-1. Especifique os seguintes detalhes para criar um **Serviços Cognitives** e clique na aba **Examiner + create (7)**.
+1. Especifique os seguintes detalhes para criar um **Serviços Cognitives** e clique na aba **Examiner + criar (7)**.
 
     | **Option** | **Value** |
     | ------------------ | ----------------------------------------------------- |
