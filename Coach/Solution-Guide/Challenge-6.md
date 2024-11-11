@@ -71,7 +71,7 @@ O Azure OpenAI coleta os mesmos tipos de dados de monitoramento que outros recur
 
    ![](../media/imagn42.png)
 
-1. Na página de recursos do Azure OpenAI, em **Monitoramento**, selecione **Configurações de diagnóstico (1)** no painel esquerdo. Na página Configurações de diagnóstico, selecione **Adicionar configuração de diagnóstico (2)**.
+1. Na página de recursos do Azure OpenAI, em **Monitoramento**, selecione **Configurações de diagnóstico (1)** no painel esquerdo. Na página Configurações de diagnóstico, selecione **+ Adicionar configuração de diagnóstico (2)**.
 
    ![](../media/imagn47.png)
 
@@ -109,7 +109,7 @@ O playground *Chat* fornece uma interface de chatbot para modelos GPT 3.5 e supe
    ![](../media/imagn51.png)
 
 1. Role para baixo para adicionar um novo exemplo:
-    - Clique em **+ Adicionar Seção ** e selecione **Exemplos** no painel **configuração**.
+    - Clique em **+ Adicionar Seção** e selecione **Exemplos** no painel **configuração**.
     - Digite a seguinte mensagem e resposta nas caixas designadas:
         - **Usuário**: `Quais são os diferentes tipos de inteligência artificial?` 
           
@@ -191,18 +191,18 @@ Os dados nos logs do Azure Monitor são armazenados em tabelas, onde cada tabela
 
 Criar uma configuração de diagnóstico e vincular o Azure OpenAI a um espaço de trabalho de análise de log ajuda a capturar logs nativos; no entanto, o espaço de trabalho do Log Analytics é incapaz de registrar a solicitação do usuário e os prompts de resposta do modelo OpenAI. Em tais cenários, o Azure API Management Service é útil.
 
-1. Na barra de pesquisa global, pesquise e selecione **API Management Services** e selecione-o 
+1. Na barra de pesquisa global, pesquise e selecione **API Management** e selecione-o 
 
     ![](../media/imagn60.png) 
 
-1. Adicione os seguintes detalhes na página **Criar serviço de gerenciamento de API** e clique em **Revisar + instalar**:
+1. Adicione os seguintes detalhes na página **Criar serviço de gerenciamento de API** e clique em **Examinar + Criar**:
 
       - Assinatura: **Selecione a assinatura padrão (1)**
       - Grupo de recursos: Selecione **rg-activategenai (2)**
       - Região: **(US) East US (3)**
       - Nome do recurso: **apim-<inject key="Deployment ID" enableCopy="false"/> (4)**
       - Nome da organização: **Windows (5)**
-      - Email do administrador: **Email/Username**: <inject key="AzureAdUserEmail"></inject> (6)
+      - Email do administrador: **Email/Username**: <inject key="AzureAdUserEmail"></inject> **(6)**
       - Tipo de preço: Selecione **Standard (99.95% de SLA) (7)**
       - Unidades(s): **1 (8)**
     
@@ -234,21 +234,21 @@ Criar uma configuração de diagnóstico e vincular o Azure OpenAI a um espaço 
 
 1. Para capturar os valores da chave e do ponto de extremidade do Azure OpenAI, execute as seguintes etapas:
     - Selecione **Chaves e pontos de extremidade (1)** na seção **Gerenciamento de recursos** no painel de navegação esquerdo.
-    - Clique em **Mostrar as chaves (2)**.
+    - Clique em **Mostrar as Chaves (2)**.
     - Copie **Chave 1 (3)** e certifique-se de colá-la em um editor de texto, como o Bloco de notas, para referência futura.
     - Por fim, copie a URL da API do **Ponto de extremidade (4)** clicando em **Copiar para a área de transferência**. Cole-a em um editor de texto, como o Bloco de notas, para uso posterior.
 
          ![](../media/imagn64.png "Create Azure OpenAI resource")
    
-1. In the **OpenAI**, select **Access control (IAM)** **(1)**, click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
+1. No **OpenAI**, selecione **Controle de acesso (IAM)** **(1)**, clique em **+ Adicionar** **(2)** e selecione **Adicionar atribuição de função** **(3)**.
 
    ![](../media/imagn65.png)   
 
-1. Na aba **Adicionar atribuição de função** na barra de pesquisa, pesquise e selecione **Usuário dos Serviços Cognitivos** e clique em **Próximo (3)**.
+1. Na guia **Adicionar atribuição de função (1)** na barra de pesquisa, pesquise e selecione **Usuário dos serviços cognitivos (2)** e clique em **Próximo (3)**.
 
    ![](../media/imagn66.png)
 
-1. Na aba **Membros**, selecione **Identidade gerenciada** **(1)**, clique em **+ Selecionar membros** **(2)** no pop-up de seleção de identidade gerenciada em Identidade gerenciada no menu suspenso, selecione **Serviço de gerenciamento de API** **(3)**, selecione **apim-<inject key="ID de implantação" enableCopy="false"/>** **(4)* *, clique em **Selecionar** **(5)** e clique em **Próximo** **(6)**.
+1. Na aba **Membros**, selecione **Identidade gerenciada** **(1)**, clique em **+ Selecionar membros** **(2)** no pop-up de seleção de identidade gerenciada em Identidade gerenciada no menu suspenso, selecione **Serviço de gerenciamento de API** **(3)**, selecione **apim-<inject key="ID de implantação" enableCopy="false"/>** **(4)**, clique em **Selecionar** **(5)** e clique em **Próximo** **(6)**.
 
    ![](../media/imagn67.png)
 
@@ -265,7 +265,7 @@ Criar uma configuração de diagnóstico e vincular o Azure OpenAI a um espaço 
       | API Type **(1)**        | **Basic**            | 
       | Display name **(2)**    | **miyagi-api**       |
       | Name **(3)**            | **miyagi-api**       |
-      | Web service URL **(4)** | Enter the Endpoint of Azure OpenAI Endpoint |
+      | Web service URL **(4)** | Insira o ponto de extremidade do Azure OpenAI Endpoint |
       | API URL suffix **(5)**  | **openai** |
       | Clique em  **(6)**       | **Create** |
 
@@ -300,7 +300,7 @@ Criar uma configuração de diagnóstico e vincular o Azure OpenAI a um espaço 
 
      ![](../media/imagn72.png)
 
-1. No serviço de gerenciamento de API, clique em **assinaturas** **(1)** em APIs no menu à esquerda e clique em **+ Adicionar assinatura** **(2)**.
+1. No serviço de gerenciamento de API, clique em **Assinaturas** **(1)** em APIs no menu à esquerda e clique em **+ Adicionar assinatura** **(2)**.
 
     ![](../media/imagn73.png)
 
@@ -370,11 +370,13 @@ Criar uma configuração de diagnóstico e vincular o Azure OpenAI a um espaço 
 
     - Selecione a API do serviço Azure OpenAI **(1)**.
     - Clique na aba **Test (2)**.
-    - Clique na operação POST que **Cria uma conclusão para a mensagem de bate-papo (3)**.
+    - Clique na operação POST que **Creates a conclusion for the chat message (3)**.
     - Na seção **Template parameters**, insira os seguintes detalhes:
         - **deployment-id:** Forneça o nome que você forneceu anteriormente para **gpt-35-turbo** modelo **(4)**
+        
         - **api-version:** 2023-03-15-preview **(5)**
     - Na seção **Request body**, edite o conteúdo **(6)** da amostra com o seguinte prompt:
+
         ```
         {"model":"gpt-35-turbo","messages":[{"role":"user","content":"Hello! What does an API Management Service in Azure do?"}]}
         ```
@@ -398,47 +400,47 @@ Criar uma configuração de diagnóstico e vincular o Azure OpenAI a um espaço 
    ![](../media/imagn79.png)
 
 3. Na aba **New Query 1**, rascunhe uma nova consulta de modo que:
-- A tabela deve ser nomeada **ApiManagementGatewayLogs**.
-- O campo **BackendResponseBody** contém a resposta JSON do serviço OpenAI, que inclui a conclusão de texto, bem como as informações de token e modelo.
-- Cole a consulta abaixo no editor de consultas para identificar o uso de token por modelo de IP:
-    ```
-    ApiManagementGatewayLogs
-    | where tolower(OperationId) in ('completions_create','chatcompletions_create')
-    | where ResponseCode  == '200'
-    | extend modelkey = substring(parse_json(BackendResponseBody)['model'], 0, indexof(parse_json(BackendResponseBody)['model'], 
-    '-', 0, -1, 2))
-    | extend model = tostring(parse_json(BackendResponseBody)['model'])
-    | extend prompttokens = parse_json(parse_json(BackendResponseBody)['usage'])['prompt_tokens']
-    | extend completiontokens = parse_json(parse_json(BackendResponseBody)['usage'])['completion_tokens']
-    | extend totaltokens = parse_json(parse_json(BackendResponseBody)['usage'])['total_tokens']
-    | extend ip = CallerIpAddress
-    | where model !=  ''
-    | summarize
-        sum(todecimal(prompttokens)),
-        sum(todecimal(completiontokens)),
-        sum(todecimal(totaltokens)),
-        avg(todecimal(totaltokens))
-        by ip, model
-    ```
+    - A tabela deve ser nomeada **ApiManagementGatewayLogs**.
+    - O campo **BackendResponseBody** contém a resposta JSON do serviço OpenAI, que inclui a conclusão de texto, bem como as informações de token e modelo.
+    - Cole a consulta abaixo no editor de consultas para identificar o uso de token por modelo de IP:
+        ```
+        ApiManagementGatewayLogs
+        | where tolower(OperationId) in ('completions_create','chatcompletions_create')
+        | where ResponseCode  == '200'
+        | extend modelkey = substring(parse_json(BackendResponseBody)['model'], 0, indexof(parse_json(BackendResponseBody)['model'], 
+        '-', 0, -1, 2))
+        | extend model = tostring(parse_json(BackendResponseBody)['model'])
+        | extend prompttokens = parse_json(parse_json(BackendResponseBody)['usage'])['prompt_tokens']
+        | extend completiontokens = parse_json(parse_json(BackendResponseBody)['usage'])['completion_tokens']
+        | extend totaltokens = parse_json(parse_json(BackendResponseBody)['usage'])['total_tokens']
+        | extend ip = CallerIpAddress
+        | where model !=  ''
+        | summarize
+            sum(todecimal(prompttokens)),
+            sum(todecimal(completiontokens)),
+            sum(todecimal(totaltokens)),
+            avg(todecimal(totaltokens))
+            by ip, model
+        ```
 
-   ![](../media/imagn80.png)
+        ![](../media/imagn80.png)
 
 4. Clique em Executar e observe o resultado, que define o uso do token com base no prompt e na resposta fornecidos.
 
    ![](../media/imagn81.png)
 
 5. Vamos executar outra consulta para monitorar as conclusões de prompt.
-- Substitua o conteúdo do editor de consulta pelo seguinte KQL para registrar os prompts **(1)**.
-    ```
-    ApiManagementGatewayLogs
-    | where tolower(OperationId) in ('completions_create','chatcompletions_create')
-    | where ResponseCode  == '200'
-    | extend model = tostring(parse_json(BackendResponseBody)['model'])
-    | extend prompttokens = parse_json(parse_json(BackendResponseBody)['usage'])['prompt_tokens']
-    | extend prompttext = substring(parse_json(parse_json(BackendResponseBody)['choices'])[0], 0, 100)
-    ```
-    - Clique em **Executar**.
-    - Observe as complexidades do resultado gerado na aba **Resultados**.
+    - Substitua o conteúdo do editor de consulta pelo seguinte KQL para registrar os prompts **(1)**.
+        ```
+        ApiManagementGatewayLogs
+        | where tolower(OperationId) in ('completions_create','chatcompletions_create')
+        | where ResponseCode  == '200'
+        | extend model = tostring(parse_json(BackendResponseBody)['model'])
+        | extend prompttokens = parse_json(parse_json(BackendResponseBody)['usage'])['prompt_tokens']
+        | extend prompttext = substring(parse_json(parse_json(BackendResponseBody)['choices'])[0], 0, 100)
+        ```
+        - Clique em **Executar**.
+        - Observe as complexidades do resultado gerado na aba **Resultados**.
 
 6. Para visualizar os prompts registrados, <br>
 
@@ -464,4 +466,3 @@ Os participantes serão avaliados com base nos seguintes critérios:
 - Consulte [Como configurar o Azure API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md) para obter informações detalhadas.
 - Consulte este vídeo sobre [Registrar e monitorar tudo no Azure OpenAI com o API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md).
 - Consulte o [Tutorial de consultas do Kusto](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-tutorial) para obter informações detalhadas.
-## Prossiga para o próximo Desafio clicando em **Próximo**>>.

@@ -12,11 +12,11 @@ Você utilizará o Form Recognizer Service e o Business Process Automation (BPA)
 
 # Guia de soluções
 
-### Tarefa 1: traduzir os documentos usando o Translate
+### Tarefa 1: Traduzir os documentos usando o Translate
 
 Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. Isso inclui registrar provedores, criar um novo serviço do Azure AI, aceitar os termos do Responsible AI, bifurcar um repositório do GitHub, gerar um Personal Access Token (PAT) e implantar recursos no Azure por meio do repositório do GitHub usando parâmetros e configurações especificados.
 
-1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Assinaturas (1)** e selecione **Assinaturas (2)** em serviços.
+1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Assinatura (1)** e selecione **Assinaturas (2)** em serviços.
 
     ![](../media/imag001.png)
 
@@ -30,7 +30,7 @@ Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. 
 
     ![](../media/imag003.png)
 
-1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Conta multisserviço de serviços do Azure AI (1)** e selecione **Conta multisserviço de serviços do Azure AI (2)** em serviços.
+1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Azure AI services multi-service account (1)** e selecione **Azure AI services multi-service account (2)** em serviços.
 
     ![](../media/imag004.png)
 
@@ -43,7 +43,7 @@ Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. 
     | **Option** | **Value** |
     | ------------------ | ----------------------------------------------------- |
     | Assinatura | Deixe o padrão **(1)** |
-    | Grupo de Recursos | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)** |
+    | Grupo de recursos | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)** |
       | Região | Use o mesmo local que o grupo de recursos **(3)** |
     | Nome | *Digite um nome exclusivo* para seu serviço de pesquisa ou use o formato **AI-Service-xxxxxx** (substitua **xxxxxx** por ID de implantação **(4)** |
     | Tipo de preço | Standard S0 **(5)** |
@@ -59,19 +59,19 @@ Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. 
 
     >**Observação**: Documento de referência: [Início rápido: criar um recurso de serviços cognitivos usando o portal do Azure](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows). Depois de aceito, você pode criar recursos subsequentes usando qualquer ferramenta de implantação (SDK, CLI ou modelo ARM, etc.) na mesma assinatura do Azure.
 
-1. Navegue até `https://github.com/CloudLabs-MOC/business-process-automation` e clique em **Sign in**, depois forneça seu **Nome de usuário do GitHub (1)** e **Senha (2)** pessoais e clique em **Sign in (3)**.
+1. Navegue até `https://github.com/CloudLabs-MOC/business-process-automation` e clique em **Sign in**, depois forneça seu **GitHub username (1)** e **Password (2)** pessoais e clique em **Sign in (3)**.
 
     ![](../media/Active-image128.png)
     
     ![](../media/Active-image129.png)
 
-1. Depois de entrar, selecione **fork (1)** para bifurcar o repositório e, em **Criar um novo fork**, clique em **Create fork (2)**.
+1. Depois de entrar, selecione **Fork (1)** para bifurcar o repositório e, em **Create a new fork**, clique em **Create fork (2)**.
 
     ![](../media/Active-image130.png)
     
     ![](../media/Active-image131.png)
 
-1. Clique no seu **perfil**, que está no topo da sua mão direita, e selecione **Settings**.
+1. Clique no seu **profile**, que está no topo da sua mão direita, e selecione **Settings**.
 
     ![](../media/Active-image132.png)
 
@@ -104,7 +104,7 @@ Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. 
 
     ![](../media/gen37.png)
 
-1. Clique no botão "Implantar no Azure" que corresponde ao seu ambiente.
+1. Clique no botão "Deploy to Azure" que corresponde ao seu ambiente.
 
     ### Com OpenAI
       [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
@@ -115,15 +115,15 @@ Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. 
     - Repository Token : cole o token PAT que você criou e registrou na etapa anterior.
     - Repository Url : cole a URL da **conta bifurcada do Github**
     
-    ![](../media/gen39.png)
+      ![](../media/gen39.png)
 
-    >**Observação**: certifique-se de que a região primária esteja definida como EASTUS2
+      >**Observação**: certifique-se de que a região primária esteja definida como EASTUS2
     
-    ![](../media/gen47.png)
+      ![](../media/gen47.png)
 
-    >**Observação**: (você pode obter a URL clicando no perfil no canto direito e, em seguida, selecionar **Seus repositórios**, clicar em **business-process-automation** e, na barra superior, copiar a URL da **conta do Github**)
+      >**Observação**: (você pode obter a URL clicando no perfil no canto direito e, em seguida, selecionar **Seus repositórios**, clicar em **business-process-automation** e, na barra superior, copiar a URL da **conta do Github**)
     
-    ![](../media/Active-image141.png)
+      ![](../media/Active-image141.png)
 
 1. Clique em **Revisar + criar** e **Criar**.
 
@@ -153,7 +153,7 @@ Nesta tarefa, você aprenderá a criar um contêiner em uma conta de armazenamen
 
     ![](../media/imag009.png)
 
-1. Clique no contêiner **Source**.
+1. Clique no contêiner **source**.
 
     ![](../media/imag0010.png)
 
@@ -175,7 +175,7 @@ Nesta tarefa, você aprenderá a criar um contêiner em uma conta de armazenamen
 
     ![](../media/imagn4.png)
 
-1. No **Explorador de Arquivos** navegue até `C:\LabFiles\Documents` e selecione o arquivo **document-translation-sample** clique em **Abrir** para carregar o arquivo.
+1. No **Explorador de Arquivos** navegue até `C:\LabFiles\Documents` e selecione o arquivo **document-translation-sample (1)** clique em **Abrir (2)** para carregar o arquivo.
 
    ![](../media/imagn5.png)
 
@@ -189,8 +189,6 @@ Nesta tarefa, configuraremos um ambiente C#/.NET no Visual Studio 2022. Criaremo
    
 1. No **LabVM**, na barra de pesquisa do Windows, digite Visual e selecione **Visual Studio 2022**.
 
-   ![](../media/imagn7.png)
-
    > **Observação**: quando solicitado a entrar, selecione **Ignorar por enquanto** e, em **Configurações de desenvolvimento**, clique em **Iniciar o Visual Studio**.
 
 1. Clique em **Conta de trabalho ou escola** para fazer login.
@@ -201,7 +199,7 @@ Nesta tarefa, configuraremos um ambiente C#/.NET no Visual Studio 2022. Criaremo
 
    ![](../media/imagn8.png)
 
-1. Na página **Criar um novo projeto**, insira **console (1)** na caixa de pesquisa. Escolha o modelo **Aplicativo do console (2)** e, em seguida, escolha **Próximo (3)**.
+1. Na página **Criar um novo projeto**, insira **console (1)** na caixa de pesquisa. Escolha o modelo **Aplicativo do Console (2)** e, em seguida, escolha **Próximo (3)**.
 
     ![](../media/imagn9.png)
 
@@ -217,7 +215,7 @@ Nesta tarefa, configuraremos um ambiente C#/.NET no Visual Studio 2022. Criaremo
 
     ![](../media/imagn12.png)
 
-1. Selecione a aba **Procurar (1)** e digite **Newtonsoft Json (2)**. Selecione a versão estável mais recente no menu suspenso
+1. Selecione a aba **Procurar (1)** e digite **NewtonsoftJson (2)**. Selecione a versão estável mais recente no menu suspenso
 
     ![](../media/imagn13.png)
    
@@ -249,7 +247,7 @@ Nesta tarefa, você configurará um recurso do Translator no Portal do Azure, ob
 
    ![](../media/imagn19.png)
 
-1. Abra outra aba no Edge Browse para [exemplo de código](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) e navegue até a seção **Iniciar tradução assíncrona em lote** e copie o código.
+1. Abra outra aba no Edge Browse para [exemplo de código](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) e navegue até a seção **Start asynchronous batch translation** e copie o código.
 
     ![](../media/Active-image170.png)
 
@@ -301,7 +299,7 @@ Nesta tarefa, você criará um recurso do Form Recognizer no Portal do Azure con
 
       ![](../media/Active-image178.png)
 
-1. Insira os seguintes detalhes em**Configure service resource** e clique em **Continue** **(5)**.
+1. Insira os seguintes detalhes em **Configure service resource** e clique em **Continue** **(5)**.
 
    - Subscription: Selecione sua **Assinatura Padrão** **(1)**.
    - Resource group: **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.
@@ -314,8 +312,8 @@ Nesta tarefa, você criará um recurso do Form Recognizer no Portal do Azure con
 
    - Subscription: Selecione o seu **Assinatura Padrão** **(1)**.
    - Resource group: **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**.
-   - Storage account nome: **Selecione a conta de armazenamento existente (3)**.
-   - Blob container nome: Clique em **Create new (4)** e forneça o nome como **custommoduletext** **(5)** e clique em **OK** **(6)**.
+   - Storage account: **Selecione a conta de armazenamento existente (3)**.
+   - Blob container: Clique em **Create new (4)** e forneça o nome como **custommoduletext** **(5)** e clique em **OK** **(6)**.
    - Revise as configurações e clique em **Continue** **(7)**.
    
        ![](../media/Active-image180.png)
@@ -376,7 +374,7 @@ Nesta tarefa, você treinará um modelo do Form Recognizer carregando, rotulando
 
       ![](../media/Active-image195.png)
 
-1. No explorador de arquivos, navegue até `C:\LabFiles\Document\Custom Model Sample` **(1)** caminho, selecione todos os arquivos JPEG de teste **test1 and test2** **(2)**, e bateu **Open** **(3)**.
+1. No explorador de arquivos, navegue até `C:\LabFiles\Document\Custom Model Sample` **(1)** caminho, selecione todos os arquivos JPEG de teste **test1 and test2** **(2)**, e bateu **Abrir** **(3)**.
 
      ![](../media/imagn25.png)
 
@@ -394,7 +392,7 @@ Nesta tarefa, você configurará um novo pipeline no Business Process Automation
 
 Depois de ficar satisfeito com o desempenho do modelo personalizado, você pode recuperar o ID do modelo e usá-lo em um novo pipeline BPA com o módulo Modelo Personalizado na próxima etapa.
 
-1. Navegue de volta para os grupos de recursos e selecione o grupo de recursos**ODL-GenAI-CL-xxxxxx-Activate-GenAI**.    
+1. Navegue de volta para os grupos de recursos e selecione o grupo de recursos **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.    
 
 1. Vá para o grupo Recursos, pesquise e selecione o tipo de recurso **Aplicativo Web Estático** com um nome semelhante a **webappbpa{sufixo}**.
 
@@ -458,7 +456,7 @@ Nesta tarefa, você configurará o Azure Cognitive Search para se conectar ao Az
 
 1. Insira os seguintes detalhes para **Conectar a seus dados**.
 
-    - Fonte de Dados: Selecione **Azure Blob Storage** **(1)**
+    - Fonte de Dados: Selecione **Armazenamento de Blobs do Azure** **(1)**
     - Nome da fonte de dados: Insira **workshop** **(2)**.
     - Modo de análise: Selecione **JSON** **(3)**.
     - Assinatura: Selecione a **existente (4)**
@@ -480,7 +478,7 @@ Nesta tarefa, você configurará o Azure Cognitive Search para se conectar ao Az
 
 1. Em **Adicionar habilidades cognitivas (Opcional)**, clique em **Ir para: Personalizar índice de destino**.
 
-1. Em **Personalizar índice de destino**, insira o nome do índice como **azureblob-index** **(1)**, torne todos os campos **Recuperáveis** **(2)** e **Pesquisáveis** **(3)**.
+1. Em **Personalizar índice de destino**, insira o nome do índice como **azureblob-index** **(1)**, torne todos os campos **Recuperával** **(2)** e **Pesquisável** **(3)**.
 
       ![](../media/imagn38.png)
 
