@@ -24,7 +24,7 @@ Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. 
 
     ![](../media/imag002.png)
 
-1. No painel de navegação esquerdo, expanda **Configurações (1)** e selecione **Provedores de Recursos (2)**, marque **O status do Microsoft DocumentDB** está marcado como **"Registered" (3)**.Se marcado como **NãoRegistrado**, selecione **Microsoft DocumentDB** e clique em **Registrar** no menu superior.
+1. No painel de navegação esquerdo, expanda **Configurações (1)** e selecione **Provedores de recurso (2)**, marque **O status do Microsoft DocumentDB** está marcado como **Registered (3)**. Se marcado como **NãoRegistrado**, selecione **Microsoft DocumentDB** e clique em **Registrar** no menu superior.
 
     **Observação**: *Este processo pode levar vários segundos ou minutos; certifique-se de atualizar todo o navegador periodicamente.*
 
