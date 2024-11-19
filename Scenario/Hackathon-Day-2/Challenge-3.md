@@ -14,7 +14,7 @@ You will be using bicep to deploy the chat app.
 
 The chat application integrates seamlessly with different Azure services to provide an intelligent user experience. Here's a simple overview of each service used by the app:
 
-- **App Service:** This hosts the chat app, ensuring it can respond to the prompts sent by users from the uploaded relatable data.
+- **Container Apps:** Azure Container Apps deploy and scale containerized applications effortlessly, ensuring reliability with automatic scaling and Azure Monitor integration.
 - **Application Insights:** It proactively monitors the app's performance, taking care of issues before they become significant.
 - **Document Intelligence:** Using AI, it understands the content in uploaded documents, making user information more insightful.
 - **Azure OpenAI:** Enhances the app's capabilities with natural language understanding and responses.
@@ -73,7 +73,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 - Successful deployment of the Chat App.
 - validate if the following services are successfully deployed in the RG (Resource Group).
-  - App Service
+  - Container App
   - Document Intelligence
   - Azure OpenAI
   - Shared Dashboard
