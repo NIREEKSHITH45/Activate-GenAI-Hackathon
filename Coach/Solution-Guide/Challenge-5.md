@@ -44,7 +44,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
      | **Option**         | **Value**                                              |
      | ------------------ | -----------------------------------------------------  |
      | Subscription       | Leave default  **(1)**                                 |
-     | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
+     | Resource Group     | **Activate-GenAI**  **(2)**        |
      | Name               | *Enter a unique name* for your search service or use the format **AI-Service-xxxxxx** (replace **xxxxxx** with Deployment ID **(3)** |
      | Location           | Use the same location as the resource group  **(4)**    |
      | Pricing tier       | Standard S0     **(5)**                                 |
@@ -114,7 +114,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
 1. Custom deployment blade, specify the following and others parameters can keep default values.
 
-   - Resource Group : **ODL-GenAI-CL-xxxxxx-Activate-GenAI**
+   - Resource Group : **Activate-GenAI**
    - Repository Token : Paste the PAT token which you created and recorded in previous step.
    - Repository Url : Paste the **Forked Github account** url
 
@@ -309,7 +309,7 @@ In this task, you'll create a Form Recognizer resource in Azure Portal by settin
 1. Enter the following details under **Configure service resource** and click on **Continue** **(5)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.
+   - Resource group: **Activate-GenAI**.
    - Form Recognizer or Cognitive Service Resource: Select the available Cognitive Service Form Recognizer name similar to **cogservicesbpass{suffix}** **(3)**.
    - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
 
@@ -318,7 +318,7 @@ In this task, you'll create a Form Recognizer resource in Azure Portal by settin
 1. Enter the following details under **Connect training data source**. and click on **Continue** **(8)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**.
+   - Resource group: **Activate-GenAI** **(2)**.
    - Storage account name: **Select the existing storage account (3)**.
    - Blob container name: Click on **Create new (4)** and provide the name as **custommoduletext** **(5)** then click on **OK** **(6)**.
    - Review the settings then click on **Continue** **(7)**.
@@ -399,7 +399,7 @@ In this task, you'll configure a new pipeline in the Business Process Automation
 
 After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
 
-1. Navigate back to the Resource groups and select the resource group **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.    
+1. Navigate back to the Resource groups and select the resource group **Activate-GenAI**.    
 
 1. Go to the Resource group, search, and select the **Static Web App** resource type with a name similar to **webappbpa{suffix}**.
 

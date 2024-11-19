@@ -12,19 +12,21 @@ In this task you'll explore the affect of the default content filters in Azure O
 
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-    ![](../media/Active-image6.png)
+    ![](../media/solt1s1.png)
 
 1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** created in the previous challenges.
 
-      ![](../media/1-2.png)
+      ![](../media/solt2s2.png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio**; it will navigate to **Azure AI Studio**.
 
-      ![](../media/1-1.png)
+    ![](../media/solt2s3.png)
 
 1. In Azure OpenAI Studio, view the **Content filters (1)** page from the left navigation menu and select **Create customized content filter (2)**.
 
     ![](../media/Active-image219.png)
+
+   >**Note:** If the **Content filters** option is not visible, click **Switch to the old look**. When the feedback pop-up appears, select **Skip**.
    
 1. Review the default settings for a content filter.
 
@@ -61,11 +63,11 @@ Azure OpenAI collects the same kinds of monitoring data as other Azure resources
 
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-    ![](../media/Active-image6.png)
+    ![](../media/solt1s1.png)
 
 1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
 
-   ![](../media/1-2.png)
+   ![](../media/solt2s2.png)
 
 1. From the Azure OpenAI resource page, under **Monitoring**, select **Diagnostic settings (1)** on the left pane. On the Diagnostic settings page, select **Add diagnostic setting (2)**.
 
@@ -82,7 +84,7 @@ Azure OpenAI collects the same kinds of monitoring data as other Azure resources
 
    ![](../media/Active-image225.png)
 
-> After the successful configuration of the diagnostic settings, you can work with metrics and log data for your Azure OpenAI resource in your Log Analytics workspace.
+   > After the successful configuration of the diagnostic settings, you can work with metrics and log data for your Azure OpenAI resource in your Log Analytics workspace.
 
 ### Task 2.2: Use the Chat Playground to ingest additional logs
 
@@ -139,13 +141,13 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
 
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-    ![](../media/Active-image6.png)
+    ![](../media/solt1s1.png)
 
 1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
    
 1. From your Azure OpenAI resource page, under **Monitoring** on the left pane, select **Logs (1)**, and then click on the pre-created Log Analytics workspace **(2)** that was used to configure diagnostics for your Azure OpenAI resource.
 
-  ![](../media/Active-image231.png)
+    ![](../media/Active-image231.png)
 
 1. Within the **Log Analytics workspace** page, under Overview on the left pane, select **Logs**.
 
@@ -230,7 +232,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
         
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-    ![](../media/Active-image6.png)
+    ![](../media/solt1s1.png)
 
 1. Select the **OpenAI Service** deployed in the previous challenge.
 
