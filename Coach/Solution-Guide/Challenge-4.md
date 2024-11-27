@@ -12,13 +12,13 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
 
 One of the hottest themes at the moment is size models; users are particularly interested in conversation GPT. The most intriguing thing about all those basic models—Chat GPT included—is that while they perform admirably on their own, they perform even better when combined with your own data.
 
-1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Containerapps**, and then select **Container Apps** under services.
+1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Containerapps (1)**, and then select **Container Apps (2)** under services.
 
-   ![](../media/imag09.png)
+   ![](../media/activate2.png)
 
 1. Select **webapp**.
 
-   ![](../media/imag010.png)
+   ![](../media/activate3.png)
       
 1. Next, click on **Application Url** to open your Web application.
 
@@ -54,13 +54,13 @@ One of the hottest themes at the moment is size models; users are particularly i
    
    ![](../media/3-7.png)
 
-1. Let us make a slight change to the prompt to ask open AI to take any question that is not asked in English and respond in the language it was asked in. From the right top corner select **Developer Settings** and add the below message in the **Override prompt template** section. Click on **Close**.
+1. Let us make a slight change to the prompt to ask open AI to take any question that is not asked in English and respond in the language it was asked in. From the right top corner select **Developer Settings (1)** and add the below message **(2)** in the **Override prompt template** section. Click on **Close (3)**.
 
       ```
       convert prompts to English and respond when asked questions in a different language
       ```
 
-      ![](../media/Active-image117.png)
+      ![](../media/activate4.png)
    
       ![](../media/Active-image118.png)
 
@@ -72,9 +72,9 @@ One of the hottest themes at the moment is size models; users are particularly i
 
    ![](../media/3-8.png)
 
-1. Go to **Developer Settings**, and in the **Exclude category** section, enable the check box for **Use semantic options** and **Suggest follow-up questions**. Click on **Close**.
+1. Go to **Developer Settings**, in the **Exclude category** section, enable the check box for **Use semantic options (1)** and in the **Retrieval mode** section,enable the check box for **Suggest follow-up questions (2)**. Click on **Close (3)**.
 
-   ![](../media/Active-image119.png)
+   ![](../media/activate1.png)
 
 1. Enter the prompt and observe how the responses to the prompt will change in the chat by giving the below prompt.
 
