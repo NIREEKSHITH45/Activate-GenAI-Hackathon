@@ -113,7 +113,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
    ```
    azd up
    ```
-   >**Note**: In case you are prompted with the **ERROR: not logged in, run azd auth login to login** and select your **Azure Account** again.
+   >**Note**: In case you are prompted with the **ERROR: not logged in, run `azd auth login` to login** and select your **Azure Account** again.
 
    >**Note**: Please be aware that deploying the resources and the associated application may take up to 30 minutes.
 
