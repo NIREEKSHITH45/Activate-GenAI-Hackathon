@@ -152,7 +152,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
    ![](../media/Active-image235.png)
 
-1. Add the following details in the **Create API Management Service** page and click on **Review + install**:
+1. Add the following details in the **Create API Management Service** page and click on **Review + Create (9)**:
 
       - Subscription: **Select the default subscription (1)**
       - Resource Group: Select **rg-activategenai (2)**
