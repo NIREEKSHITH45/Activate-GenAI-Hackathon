@@ -22,9 +22,8 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
    - Create an Azure AI Search resource with basic pricing.
         > **Note:** If you encounter the error **Cannot get costs for subscription** on the top while creating the search service, please ignore it.
    - Create an Azure AI Service with the Standard S0 SKU.
+        > **Important**: Your **Azure AI Search** and **Azure AI Service** resources must be in the same location.
    - Create an Azure Storage Account with the Standard Tier.
-
-     > **Important**: Your Azure AI Search and Azure AI Services resources must be in the same location.
 
      > Please find this link and use any regions which supports Azure AI Services. https://learn.microsoft.com/en-us/azure/search/search-region-support#americas
 
