@@ -6,45 +6,6 @@ Explore monitoring data collection, including activity logs and platform metrics
 
 # Solution Guide
 
-## Task 1: Explore content filters
-
-In this task you'll explore the affect of the default content filters in Azure OpenAI. Content filters are applied to prompts and completions to prevent potentially harmful or offensive language from being generated.
-
-1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
-
-    ![](../media/solt1s1.png)
-
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** created in the previous challenges.
-
-      ![](../media/solt2s2.png)
-
-1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio**; it will navigate to **Azure AI Studio**.
-
-    ![](../media/solt2s3.png)
-
-1. In Azure OpenAI Studio, view the **Content filters (1)** page from the left navigation menu and select **Create customized content filter (2)**.
-
-    ![](../media/Active-image219.png)
-
-   >**Note:** If the **Content filters** option is not visible, click **Switch to the old look**. When the feedback pop-up appears, select **Skip**.
-   
-1. Review the default settings for a content filter.
-
-    Content filters are based on restrictions on four categories of potentially harmful content:
-
-    - **Hate**: Language that expresses discrimination or pejorative statements.
-    - **Sexual**: Sexually explicit or abusive language.
-    - **Violence**: Language that describes, advocates, or glorifies violence.
-    - **Self-harm**: Language that describes or encourages self-harm.
-
-      ![](../media/Active-image220.png)
-      
-    Filters are applied for each of these categories to prompts and completions, with a severity setting of **safe**, **low**, **medium**, and **high** used to determine what specific kinds of language are intercepted and prevented by the filter.
-   
-1. Observe that the default settings (which are applied when no custom content filter is present) allow **low** severity language for each category. You can create a more restrictive custom filter by applying filters to one or more **low** severity levels. You cannot, however, make the filters less restrictive (by allowing **medium** or **high** severity language) unless you have applied for and received permission to do so in your subscription. Permission to do so is based on the requirements of your specific generative AI scenario.
-
-    > **Tip**: For more details about the categories and severity levels used in content filters, see [Content filtering](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/content-filter) in the Azure OpenAI service documentation.
-
 ## Task 2: Monitoring the Azure OpenAI Service
 
 When your crucial applications and business processes depend on Azure resources, it's essential to monitor their availability, performance, and operation. Azure OpenAI provides out-of-box dashboards for each of your Azure OpenAI resources. To access the monitoring dashboards, navigate to azure portal search and select the OpenAI and select one the OpenAI resource. On the overview Azure OpenAI resources you get  monitoring dashboards by clicking on **Monitor** tab.
@@ -98,34 +59,26 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
     ![](../media/Active-image226.png)
    
-1. In the **Playground** section, select the **chat** page, and ensure that the **text-turbo** deployment is selected in the configuration pane.
+1. In the **Playground** section, select the **chat** page, and ensure that the deployment name of the **gpt-35-turbo** model is selected in the configuration pane. In the **Give the model instructions and context (2)** section, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`. Click on **Apply changes (3)**.
 
-   ![](../media/ai4.png)
+   ![](../media/aigen4.png)
 
-1. In the **Assistant setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
-
-   ![](../media/Active-image259.png)
-
-1. Scroll down to add a new example:
-    - Click on **+ Add (1)** under the **Examples** section of the **Assistant setup** pane.
-    - Enter the following message and response in the designated boxes:
-        - **User**: `What are different types of artificial intelligence?` **(2)**
-          
-        - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).` **(3)**
-          
-        - Click on **Apply changes (4)** to start a new session and set the behavioral context of the chat system.
-
-             ![](../media/Active-image227.png)
+1. Scroll down, click on **+ Add Section (1)** and click on **Examples (2)**.
    
-             ![](../media/Active-image228.png)
-     
-             ![](../media/Active-image(229).png)
+1. Enter the following message and response in the designated boxes:
+   - **User**: `What are different types of artificial intelligence?` **(1)**
+          
+   - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`  **(2)**
+          
+   - Click on **Apply changes (3)** to start a new session and set the behavioral context of the chat system.
 
-             > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+       ![](../media/aigen5.png)
+
+    > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
              
-             > **Note**: Click on **Continue** when prompted with **Update system message?**.
+   > **Note**: Click on **Continue** when prompted with **Update system message?**.
 
-             ![](../media/Active-image230.png)
+      ![](../media/Active-image230.png)
           
 1. Within the query box of the chat session pane, enter the text `What is artificial intelligence?`
    
