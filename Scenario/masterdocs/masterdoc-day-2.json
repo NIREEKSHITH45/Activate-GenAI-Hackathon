@@ -38,7 +38,11 @@
      {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Scenario/Hackathon-Day-2/Challenge-6.md",
        "Order": 9
-     }    
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Solution-Guide/Known-Issue-Day2.md",
+       "Order": 10
+     }
   ]
  }, 
  {
