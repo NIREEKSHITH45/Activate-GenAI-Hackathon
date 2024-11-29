@@ -22,11 +22,13 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
    What does a Product Manager do?
    ```
 
-- The response not only answered the question based on the content found in these documents, but it also included **citations (1)** to that content to validate the accuracy of the information. When you click on an annotation, the app jumps right to the page of the **document (2)** that goes into the comparison of the plans, so that we can read more or do additional validation on the accuracy of the answer under the **citation** section. 
+- The response not only answered the question based on the content found in these documents, but it also included **citations** to that content to validate the accuracy of the information. When you click on an annotation, the app jumps right to the page of the **document** that goes into the comparison of the plans, so that we can read more or do additional validation on the accuracy of the answer under the **citation** section. 
 
 
 - See how when we click on an annotation, the app jumps right to the page of the document that goes into the comparison of the plans, so that we can read more or do additional validation on the accuracy of the answer. 
 
+- Provide another prompt and analyze the response:
+  
    ```
    Does the project manager manage the human resources team?
    ```
@@ -39,7 +41,7 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
 - Let us make a slight change to the prompt to ask open AI to take any question that is not asked in English and respond in the language it was asked in. Go to **Developer Settings** and add the below message in the **Override prompt template** section. Click on **Close**.
 
   ```
-   convert prompts to English and respond when asked questions in different language
+  Convert prompts to English and respond when asked questions in different language
    ```
 
 - In this override, when we ask a question in a different language, behind the scenes, the prompt gets converted to English to perform the search, and then the model will respond in the same language it was asked in. Enter the below prompt in the chat section and observe that it's taking the question, detecting that it's in French, converting it to English, executing it as before, and then returning the expected response like before.
@@ -49,7 +51,7 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
    ```
 
 **3. Advanced Settings Impact:** 
-- Go to **Developer Settings**, and in the **Exclude category** section, enable the check box for **Use query-contextual summaries instead of whole documents** and **Suggest follow-up questions**. Click on **Close** and observe how the responses to the prompt will change in the chat by giving the below prompt.
+- Go to **Developer Settings**, and in the **Exclude category** section, enable the check box for **Use semantic options** and **Suggest follow-up questions**. Click on **Close** and observe how the responses to the prompt will change in the chat by giving the below prompt.
 
    ```
    What happens in a performance review?
