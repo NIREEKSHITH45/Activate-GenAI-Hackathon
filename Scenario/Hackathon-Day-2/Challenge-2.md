@@ -23,6 +23,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
         > **Note:** If you encounter the error **Cannot get costs for subscription** on the top while creating the search service, please ignore it.
    - Create an Azure AI Service with the Standard S0 SKU.
         > **Important**: Your **Azure AI Search** and **Azure AI Service** resources must be in the same location.
+        
         > Please find this link and use any regions which supports Azure AI Services. https://learn.microsoft.com/en-us/azure/search/search-region-support#americas
    - Create an Azure Storage Account with the Standard Tier.
         > **Note:** Check the box next to **Allow enabling anonymous access on individual containers**.
