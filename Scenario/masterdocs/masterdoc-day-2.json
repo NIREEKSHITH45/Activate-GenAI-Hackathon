@@ -84,6 +84,10 @@
      {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Spanish-Content/Scenario/Hackathon-Day-2/Challenge-6.md",
        "Order": 9
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Spanish-Content/Coach/Solution-Guide/Known-Issue-Day2.md",
+       "Order": 10
      }
     
   ]
@@ -127,7 +131,11 @@
      {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Portuguese-Content/Scenario/Hackathon-Day-2/Challenge-6.md",
        "Order": 9
-     }    
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Portuguese-Content/Coach/Solution-Guide/Known-Issue-Day2.md",
+       "Order": 10
+     }
   ]
  } 
 ]
