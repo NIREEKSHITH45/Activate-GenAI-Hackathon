@@ -64,6 +64,8 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
    ![](../media/aigen4.png)
 
 1. Scroll down, click on **+ Add Section (1)** and click on **Examples (2)**.
+
+   ![](../media/aigen5.png)
    
 1. Enter the following message and response in the designated boxes:
    - **User**: `What are different types of artificial intelligence?` **(1)**
@@ -72,7 +74,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
           
    - Click on **Apply changes (3)** to start a new session and set the behavioral context of the chat system.
 
-       ![](../media/aigen5.png)
+       ![](../media/aigen6.png)
 
     > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
              
