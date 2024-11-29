@@ -10,8 +10,8 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
 
 **1. Access Web Application and Query Construction and Response:**
    
-   - In the Azure Portal, search for **`App Services`** and select the web app you deployed in the previous challenge.
-   - Click on **"Browse"** to open your web application.
+   - In the Azure Portal, search for **`Container Apps`** and select the app you deployed in the previous challenge.
+   - Click on **"Application URL"** to open your application.
  You will be prompted with the **Northwind Health chat application** as below. 
 
      ![](../media/lab03-04.png)
