@@ -86,11 +86,11 @@ In this task you'll learn the process of setting up and deploying the Azure Open
 
    >**Note**: Here, xxxxxx refers to the **deployment ID** which you recorded in last task.
 
-    ![](../media/Active-image9.png)
+    ![](../media/aigen1.png)
 
 1. Once validation is successful on the **Review + submit** tab, click **Create** and wait for the deployment to complete.
 
-     ![](../media/Active-image10.png)
+     ![](../media/aigen2.png)
 
 ### Task 2: Deploy a model
 
