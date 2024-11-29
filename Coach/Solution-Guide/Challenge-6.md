@@ -74,7 +74,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
           
    - Click on **Apply changes (3)** to start a new session and set the behavioral context of the chat system.
 
-       ![](../media/aigen6.png)
+       ![](../media/aigen8.png)
 
     > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
              
@@ -165,7 +165,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     
           ![](../media/Active-image257.png)
 
-          ![](../media/Active-image237.png)
+          ![](../media/aigen7.png)
 
 1. On **Review + Create** tab once validation passed click on **Create**.
 
