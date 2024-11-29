@@ -25,7 +25,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
         > **Important**: Your **Azure AI Search** and **Azure AI Service** resources must be in the same location.
         > Please find this link and use any regions which supports Azure AI Services. https://learn.microsoft.com/en-us/azure/search/search-region-support#americas
    - Create an Azure Storage Account with the Standard Tier.
-        > **Note: **Check the box next to **Allow enabling anonymous access on individual containers**.
+        > **Note:** Check the box next to **Allow enabling anonymous access on individual containers**.
 
 3. **Prepare Document Upload:**
    - In Visual Studio Code, within the cloned repository, navigate to the 22-create-a-search-solution folder.
