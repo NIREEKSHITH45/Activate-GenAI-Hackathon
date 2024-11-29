@@ -56,15 +56,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
    > Hint: The application supports multiple languages; choose the one that suits your project's requirements. Adjust your application settings and configure the web application as needed. Then, run the application locally to test the search functionality before proceeding with deployment. 
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-    - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
-      
-    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-      
-    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-       <validation step="00185b3f-b0cd-4db1-87bf-d782f730cf95" />
+      <validation step="00185b3f-b0cd-4db1-87bf-d782f730cf95" />
    
 ## Success criteria:
 
