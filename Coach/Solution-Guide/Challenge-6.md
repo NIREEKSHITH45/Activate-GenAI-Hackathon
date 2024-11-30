@@ -55,13 +55,13 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio**; it will navigate to **Azure AI Studio**.
 
-1. Click on **Chat** under the **Playground** tab in the left pane.
+1. Click on **Chat** under the **Playgrounds** tab in the left pane.
 
-    ![](../media/Active-image226.png)
+    ![](../media/aigen9.png)
    
-1. In the **Playground** section, select the **chat** page, and ensure that the deployment name of the **gpt-35-turbo** model is selected in the configuration pane. In the **Give the model instructions and context (2)** section, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`. Click on **Apply changes (3)**.
+1. In the **Playground** section, select the **chat** page, and ensure that the **text-turbo (1)** deployment is selected in the configuration pane. In the **Give the model instructions and context (2)** section, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`. Click on **Apply changes (3)**.
 
-   ![](../media/aigen4.png)
+   ![](../media/aigen10.png)
 
 1. Scroll down, click on **+ Add Section (1)** and click on **Examples (2)**.
 
