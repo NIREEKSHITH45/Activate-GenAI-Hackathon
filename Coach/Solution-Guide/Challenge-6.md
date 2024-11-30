@@ -6,7 +6,7 @@ Explore monitoring data collection, including activity logs and platform metrics
 
 # Solution Guide
 
-## Task 2: Monitoring the Azure OpenAI Service
+## Task 1: Monitoring the Azure OpenAI Service
 
 When your crucial applications and business processes depend on Azure resources, it's essential to monitor their availability, performance, and operation. Azure OpenAI provides out-of-box dashboards for each of your Azure OpenAI resources. To access the monitoring dashboards, navigate to azure portal search and select the OpenAI and select one the OpenAI resource. On the overview Azure OpenAI resources you get  monitoring dashboards by clicking on **Monitor** tab.
 
@@ -18,7 +18,7 @@ The dashboards are grouped into four categories: HTTP Requests, Tokens-Based Usa
 - **PTU Utilization:** PTU refers to Performance Tuning Units in Azure OpenAI. These dashboards monitor and optimize PTU use, showing allocation, trends, and efficiency metrics, and offering optimization suggestions. It's crucial for boosting performance and resource allocation.
 - **Fine-tuning:** This category involves dashboards offering tools and insights for fine-tuning Azure OpenAI services. They include performance metrics, configurations, experiment results, and AI model optimization on Azure. They empower informed decisions for better AI performance and accuracy.
 
-### Task 2.1: Configure Diagnostic Settings
+### Task 1.1: Configure Diagnostic Settings
 
 Azure OpenAI collects the same kinds of monitoring data as other Azure resources. You can configure Azure Monitor to generate data in activity logs, resource logs, virtual machine logs, and platform metrics. Platform metrics and the Azure Monitor activity log are collected and stored automatically, which can be routed to other locations by using a diagnostic setting. Azure Monitor resource logs aren't collected and stored until you create a diagnostic setting and a Log Analytics workspace.
 
@@ -47,7 +47,7 @@ Azure OpenAI collects the same kinds of monitoring data as other Azure resources
 
    > After the successful configuration of the diagnostic settings, you can work with metrics and log data for your Azure OpenAI resource in your Log Analytics workspace.
 
-### Task 2.2: Use the Chat Playground to ingest additional logs
+### Task 1.2: Use the Chat Playground to ingest additional logs
 
 The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models. It uses the *ChatCompletions* API rather than the older *Completions* API.
 
@@ -90,7 +90,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
       > Any text that you enter in the **Completions playground** or the **Chat Completions playground** generates metrics and log data for your Azure OpenAI resource. In the Log Analytics workspace for your resource, you can query the monitoring data by using the Kusto query language.
 
-### Task 2.3: Analyze logs using Kusto Queries
+### Task 1.3: Analyze logs using Kusto Queries
 
 Data in Azure Monitor Logs is stored in tables, where each table has its own set of unique properties. The activity log is a type of platform log in Azure that provides insight into subscription-level events. You can view this log independently or route it to Azure Monitor Logs. In the Azure portal, you can use the activity log in Azure Monitor Logs to run complex queries with Log Analytics.
 
@@ -138,9 +138,9 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
 
    ![](../media/Active-image233.png)
 
-## Task 3: Monitoring OpenAI prompts using Azure API Management
+## Task 2: Monitoring OpenAI prompts using Azure API Management
 
-### Task 3.1: Configuring Azure API Management
+### Task 2.1: Configuring Azure API Management
 
 Creating a diagnostic setting and linking Azure OpenAI to a log analytics workspace does help in capturing native logs; however, the Log Analytics workspace is incapable of logging the user request and OpenAI model response prompts. In such scenarios, the Azure API Management Service comes in handy.
 
@@ -323,7 +323,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
       
          ![](../media/diag-logs-configs-1.png)
       
-### Task 3.2: Test the API to create completions for chat message
+### Task 2.2: Test the API to create completions for chat message
 
 1. To run a POST operation to test the functionality of the added API:
 
@@ -346,7 +346,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
    ![](../media/http-response.png)
 
-### Task 3.3: Analyze OpenAI logs using Kusto Queries within the API Management Service
+### Task 2.3: Analyze OpenAI logs using Kusto Queries within the API Management Service
 
 > **DISCLAIMER:** Please note that it might take an hour or two for the Log Analytics Workspace to display results after a query. To ensure smooth execution and to save time, we've included screenshots of the results for better clarity and understanding. 
 
