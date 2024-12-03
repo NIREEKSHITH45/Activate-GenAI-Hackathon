@@ -54,7 +54,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 > **Important** : Start Powershell 7 +.
 
 1. **Clone the Repository:**
-   - Clone the Active Gen AI repository: `https://github.com/Azure-Samples/azure-search-openai-demo`.
+   - Clone the Active Gen AI repository: `https://github.com/CloudLabsAI-Azure/azure-search-openai-demo-nvidia`.
    - Verify if Bicep is installed on your machine. If not, follow the [Bicep installation guide](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)).
 
 2. **Deploy the AI-Powered Chat App:**
