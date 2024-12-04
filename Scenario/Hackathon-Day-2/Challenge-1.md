@@ -51,7 +51,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
    - Obtain the necessary Azure OpenAI Key and Endpoint.
 
 
-   <validation step="ad89350a-8a60-4fcd-88f1-38493f6f74f7" />
+   <validation step="ccff4a0f-eb81-479e-a774-00cc5a664eeb" />
 
 
 
@@ -60,7 +60,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
    - Launch Azure OpenAI Studio from the overview pane and deploy two OpenAI models, i.e., `gpt-35-turbo` and `text-embedding-ada-002`, with a TPM capacity of 20k.
 
 
-   <validation step="22eb5371-de7d-426c-be18-594c9e05c080" />
+   <validation step="32bbf48f-1030-4e8b-8dfe-a395a6746f1d" />
 
 ## Success Criteria:
 
