@@ -63,7 +63,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
     > **Note**: You can find the documents in C:\LabFiles\Documents.
 
 
-   <validation step="6936c21b-ffd6-4778-904b-25346932940b" />
+   <validation step="e7cc8d8f-1ac3-46be-9f16-d5a492ff6147" />
 
 **Using Doc Intelligence:**
 
