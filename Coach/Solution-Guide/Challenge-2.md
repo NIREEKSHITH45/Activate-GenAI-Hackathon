@@ -152,7 +152,7 @@ In this task, you'll learn how to create a **Storage account** resource in the A
 
     ![](../media/Active-image35.png)
    
-1. Specify the following details to create an Azure **Storage account** then click on **Next** **(7)**  tab.
+1. Specify the following details to create an Azure **Storage account** then click on **Next** **(7)**.
    
    | **Option**            | **Value**                                              |
    | ------------------    | -----------------------------------------------------  |
