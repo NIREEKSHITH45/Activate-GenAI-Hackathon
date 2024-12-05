@@ -13,12 +13,12 @@ Your quest is to innovate for the future at the fictitious enterprise, GenTech I
 By participating in this hackathon, you will learn how to:
 
 - Gain practical experience in deploying and managing Azure OpenAI services, including Large Language Models (LLMs).
-- Develop competencies in implementing intelligent document search capabilities using Azure AI.
 - Acquire the ability to set up and deploy a conversational AI interface with a sample chat application.
 - Enhance your problem-solving skills by addressing real-world scenarios with AI-driven solutions.
 - Collaborate with other participants to tackle challenges and share insights.
 
 ## Hackathon Format: Challenge-Based
+
 This hackathon adopts a challenge-based format, offering you a unique opportunity to learn while dealing with practical problems. Each challenge includes one or more self-contained tasks designed to test and enhance your skills in specific aspects of AI app development. You will approach these challenges by:
 
 - Analyzing the problem statement.
