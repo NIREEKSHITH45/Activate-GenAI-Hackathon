@@ -1,6 +1,6 @@
 # Challenge 03:  Deploy an AI-Powered Chat App using NIM
 
-### Estimated Time: 90 minutes
+### Estimated Time: 120 minutes
 
 ### Introduction:
 
