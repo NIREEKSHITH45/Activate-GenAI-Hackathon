@@ -65,12 +65,12 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
      ![](../media/Active-image104.png)
 
-1. Once successfully logged in ,run the below command to download the project code:
+1. Once successfully logged in , run the below command to download the project code:
 
    ```
    azd init -t https://github.com/CloudLabsAI-Azure/azure-search-openai-demo-nvidia
    ```
-   >**Note**: The above command will initialize a git repository specific to NVIDIA LLM, eliminating the need to clone it afterwards.
+   >**Note**: The above command will initialize a git repository specific to NVIDIA LLM, eliminating the need to clone it afterward.
 
 1. When prompted with **Continue iniatializing an app in `C:\Users\demouser`**, type **y / yes (1)**.
 
@@ -110,7 +110,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    >**Note**: Please be aware that deploying the resources and the associated application may take up to 30 minutes.
 
-   > **Note** : Ensure to re-run in case of any deployment failure with Storage Account.
+   > **Note**: Ensure to re-run in case of any deployment failure with Storage Account.
 
 1. Add the following details when prompted:
 
