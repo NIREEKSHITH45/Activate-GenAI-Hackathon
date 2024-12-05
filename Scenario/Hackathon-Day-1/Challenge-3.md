@@ -14,7 +14,7 @@ You will be using bicep to deploy the chat app.
 
 The chat application integrates seamlessly with different Azure services to provide an intelligent user experience. Here's a simple overview of each service used by the app:
 
-- **App Service:** This hosts the chat app, ensuring it can respond to the prompts sent by users from the uploaded relatable data.
+- **Container Apps:** This hosts the chat app, ensuring it can respond to the prompts sent by users from the uploaded relatable data.
 - **Application Insights:** It proactively monitors the app's performance, taking care of issues before they become significant.
 - **Document Intelligence:** Using AI, it understands the content in uploaded documents, making user information more insightful.
 - **Azure OpenAI:** Enhances the app's capabilities with natural language understanding and responses.
@@ -22,7 +22,7 @@ The chat application integrates seamlessly with different Azure services to prov
 - **Smart Detector Alert Rule:** Monitors the app's health and notifies the team if any issues arise.
 - **Search Service:** Empowers users with dynamic and efficient search functionality within the app.
 - **Log Analytics Workspace:** Tracks and analyzes app activity, offering valuable insights and logs.
-- **App Service Plan:** Optimizes resource allocation for optimal app performance.
+- **Container App Plan:** Optimizes resource allocation for optimal app performance.
 - **Storage Account:** Securely stores the data that will be used by the Azure AI Search service to provide the inputs to the chat app.
 
 Together, these services create a responsive chat application that combines AI features, monitoring capabilities, and efficient data management, providing Contoso with an exceptional user experience.
@@ -30,7 +30,6 @@ Together, these services create a responsive chat application that combines AI f
 ## Architecture diagram:
 
 ![](../media/Active-image258.png)
-
 
 ## Prerequisites
 
@@ -57,30 +56,31 @@ Make sure you have the following from the CloudLabs-provided integrated environm
    - Clone the Active Gen AI repository: `https://github.com/Azure-Samples/azure-search-openai-demo`.
    - Verify if Bicep is installed on your machine. If not, follow the [Bicep installation guide](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)).
 
+
+
 1. **Deploy the AI-Powered Chat App:**
+   - Deploy an AI-powered chat application on Azure, integrating Azure AI services and Azure Search, and ensuring it's accessible and functional post-deployment.
+     > Hint : Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure Developer CLI. Once 
+     authenticated, you'll have access to your Azure resources.
+     > Hint : Initialize your project with a specific template. This command will help you set up your project environment
+     > Hint : Launch your project into action. This command will deploy your application to Azure, setting up all necessary resources and configurations automatically.
 
-    - Deploy an AI-powered chat application on Azure, integrating Azure AI services and Azure Search, and ensuring it's accessible and functional post-deployment.
-    
-      > Hint : Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure Developer CLI. Once authenticated, you'll have access to your Azure resources.
-    
-      > Hint : Initialize your project with a specific template. This command will help you set up your project environment
 
-      > Hint : Launch your project into action. This command will deploy your application to Azure, setting up all necessary resources and configurations automatically.
 
-   <validation step="cf48b1e0-f073-4ad2-a631-7661559fa36d" />
+   <validation step="9b4373a3-2a97-40ca-8c61-f1182e5eb2ce" />
 
 ## Success Criteria:
 
 - Successful deployment of the Chat App.
 - validate if the following services are successfully deployed in the RG (Resource Group).
-  - App Service
+  - Container Apps
   - Document Intelligence
   - Azure OpenAI
   - Shared Dashboard
   - Smart Detector Alert Rule
   - Search Service
   - Log Analytics Workspace
-  - App Service Plan
+  - Container App Plan
   - Storage Account
 - Validate if the data is populated into the storage container named `content`.
 - The Chat app should be accessible using the Azure App service.
