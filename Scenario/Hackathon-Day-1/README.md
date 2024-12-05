@@ -31,13 +31,13 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 1. **Challenge 01: Deploy Azure OpenAI Service and LLM Models**
    - Begin your journey by deploying the Azure OpenAI Service and integrating a Large Language Model (LLM). This will serve as the foundation for advanced linguistic intelligence in your applications.
      
-2. **Challenge 03: Deploy NVIDIA NIM on Azure**
+2. **Challenge 02: Deploy NVIDIA NIM on Azure**
    - Deploy NVIDIA NIM to Azure to harness powerful, scalable generative AI model hosting. This guide walks you through setting up NVIDIA NIM—a suite of optimized microservices specifically designed for deploying and managing generative AI models on NVIDIA GPUs. Using Azure and NGC (NVIDIA GPU Cloud), you will deploy models like meta/llama-3.1-8b-instruct with streamlined configuration, security, and performance features. By leveraging the NIM containerization on Azure, you'll establish an efficient and secure environment for real-time AI inference, suitable for complex generative AI applications.
              
-3. **Challenge 04: Deploy an AI-Powered Chat App**
+3. **Challenge 03: Deploy an AI-Powered Chat App**
    - Utilize Terraform to deploy a sample chat application on Azure, automating the provisioning of all necessary resources. This challenge will demonstrate your ability to get an application up and running in the cloud.
           
-4. **Challenge 05: Interact with the Chat App**
+4. **Challenge 04: Interact with the Chat App**
    - Explore the deployed web app, engaging with the Chat App through well-constructed inquiries. Display your ability to handle multilingual queries and make use of advanced settings to deepen your understanding of the Azure OpenAI service's capabilities.
                     
 Each challenge comes with its own set of tasks and objectives. Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to your coach.
