@@ -1,0 +1,37 @@
+[ 
+  {
+  "Name": "Activate GenAI Hackathon",
+  "Language": "English",
+  "BaseURL": "https://github.com/CloudLabs-MOC/Activate-GenAI-Hackathon/tree/Nvidia-Thermofisher",
+  "Files": [
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Nvidia-Thermofisher/Scenario/Hackathon-Day-1/README.md",
+       "Order": 1
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Nvidia-Thermofisher/Scenario/Hackathon-Day-1/Use-Case.md",
+       "Order": 2
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Nvidia-Thermofisher/Scenario/prerequisites.md",
+       "Order": 3
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Nvidia-Thermofisher/Scenario/Hackathon-Day-1/Challenge-1.md",
+       "Order": 4
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Nvidia-Thermofisher/Scenario/Hackathon-Day-1/Challenge-2.1v2.md", 
+       "Order": 5
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Nvidia-Thermofisher/Scenario/Hackathon-Day-1/Challenge-3.md",
+       "Order": 6
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Nvidia-Thermofisher/Scenario/Hackathon-Day-1/Challenge-4.md",
+       "Order": 7
+     }
+  ]
+ } 
+]
