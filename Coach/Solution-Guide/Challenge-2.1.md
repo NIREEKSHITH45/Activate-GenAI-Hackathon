@@ -127,9 +127,32 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
    ![](../../Coach/media/nvdocker6.png)
 
-   >**Note:** If you encounter an error such as **"Docker Desktop - Unexpected WSL error"**, click **Quit** to close Docker, and then **restart** it.
+   >**Note:** If you encounter an error such as **"Docker Desktop - Unexpected WSL error"**, click **Quit** to close Docker and follow below steps:
 
    ![](../../Coach/media/nvdocker7.png)
+
+   - Search for the PowerShell in your lab-VM, right-click on the PowerShell, and select run as administrator.
+     
+     ![](../../Coach/media/powershell.png)
+     
+   - Run the below command:
+      ```
+      #Check if 'docker-users' group exists before adding to 'Administrators'
+       $dockerUsersGroupExists = Get-LocalGroup -Name 'docker-users' -ErrorAction SilentlyContinue
+       $CurrentUser = "demouser"
+       if ($dockerUsersGroupExists -ne $null) {
+           Add-LocalGroupMember -Group 'docker-users' -Member $CurrentUser -Verbose
+           Write-Host "User '$CurrentUser' added to the 'docker-users' group."
+       } else {
+           Write-Host "'docker-users' group does not exist. Skipping adding the user to 'docker-users'."
+     
+        }
+       ```
+   - Once the command is executed, from the resources tab restart the Virtual machine.
+
+     ![](../../Coach/media/res.png)
+  
+   - Once the VM is restarted, Reopen the **Docker Desktop**.
 
 ### Task 2: Create Container Registry
 
