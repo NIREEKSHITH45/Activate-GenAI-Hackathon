@@ -26,7 +26,9 @@ As a part of this challenge, your task is to create an Azure OpenAI service and 
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-1. If you see the pop-up **Stay Signed in?**, click No.
+1. If you see the pop-up **Action Required**, click **Ask later**.   
+
+1. If you see the pop-up **Stay Signed in?**, click **No**.
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue with the challenge.
 

@@ -14,7 +14,7 @@ You will be using azd and bicep to deploy the chat app.
 
 The chat application integrates seamlessly with different Azure services to provide an intelligent user experience. Here's a simple overview of each service used by the app:
 
-- **App Service:** This hosts the chat app, ensuring it can respond to the prompts sent by users from the uploaded relatable data.
+- **Container Apps:** This hosts the chat app, ensuring it can respond to the prompts sent by users from the uploaded relatable data.
 - **Application Insights:** It proactively monitors the app's performance, taking care of issues before they become significant.
 - **Document Intelligence:** Using AI, it understands the content in uploaded documents, making user information more insightful.
 - **Azure OpenAI:** Enhances the app's capabilities with natural language understanding and responses.
@@ -22,7 +22,7 @@ The chat application integrates seamlessly with different Azure services to prov
 - **Smart Detector Alert Rule:** Monitors the app's health and notifies the team if any issues arise.
 - **Search Service:** Empowers users with dynamic and efficient search functionality within the app.
 - **Log Analytics Workspace:** Tracks and analyzes app activity, offering valuable insights and logs.
-- **App Service Plan:** Optimizes resource allocation for optimal app performance.
+- **Container App Plan:** Optimizes resource allocation for optimal app performance.
 - **Storage Account:** Securely stores the data that will be used by the Azure AI Search service to provide the inputs to the chat app.
 
 Together, these services create a responsive chat application that combines AI features, monitoring capabilities, and efficient data management, providing Contoso with an exceptional user experience.
@@ -43,7 +43,7 @@ Together, these services create a responsive chat application that combines AI f
 
 In this task, you'll learn the process of Deploying the Infrastructure.
 
-1. In the **LabVM**, in the Windows Search bar type **Powershell** and select **PowerShell 7-preview (x64)** then **Run as Administrator**.
+1. In the **LabVM**, in the Windows Search bar type **Powershell (1)** and select **PowerShell 7-preview (x64) (2)** then **Run as Administrator**.
 
     ![](../media/Active-image102.png)
 
@@ -64,7 +64,9 @@ In this task, you'll learn the process of Deploying the Infrastructure.
          # Install PowerShell 7 Preview
          Start-Process msiexec.exe -ArgumentList "/i $output /quiet" -Wait
       ```   
-   
+
+1. Now again in the **LabVM**, in the Windows Search bar type **Powershell** and select **PowerShell 7-preview (x64)** then **Run as Administrator**.
+
 1. Run the following command to login to Azure:
 
    ```
@@ -107,7 +109,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
    ```
    azd up
    ```
-   >**Note**: In case you are prompted with the **ERROR: not logged in, run azd auth login to login** and select your **Azure Account** again.
+   >**Note**: In case you are prompted with the **ERROR: not logged in, run `azd auth login` to login** and select your **Azure Account** again.
 
    >**Note**: Please be aware that deploying the resources and the associated application may take up to 30 minutes.
 
@@ -126,8 +128,8 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
 1. After the application has been successfully deployed you will see a URL printed to the console. Copy browse the URL to interact with the application in your browser. It will look like the following:
 
-    ![](../media/Active-image108.png)
-    ![](../media/Active-image109.png)
+    ![](../media/h15.png)
+    ![](../media/h16.png)
  
     >**Note**: It may take 30 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
 
@@ -135,7 +137,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
 - Successful deployment of the Chat App.
 - validate if the following services are successfully deployed in the RG (Resource Group).
-  - App Service
+  - Container Apps
   - Document Intelligence
   - Azure OpenAI
   - Shared Dashboard
