@@ -44,13 +44,13 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
      | **Option**         | **Value**                                              |
      | ------------------ | -----------------------------------------------------  |
      | Subscription       | Leave default  **(1)**                                 |
-     | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
+     | Resource Group     | **ODL-GenAI-CL-XXXXXXX-01 (2)** - refer to the challenge 5 in challenge guide        |
      | Name               | *Enter a unique name* for your search service or use the format **AI-Service-xxxxxx** (replace **xxxxxx** with Deployment ID **(3)** |
      | Location           | Use the same location as the resource group  **(4)**    |
      | Pricing tier       | Standard S0     **(5)**                                 |
      | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 
 
-   >**Note**: Here, xxxxxx refers to the deployment ID
+   >**Note**: Here, xxxxxx in **Name** field refers to the deployment ID
 
    ![](../media/Active-image126.png)
 
@@ -114,7 +114,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
 1. Custom deployment blade, specify the following, and other parameters can keep default values.
 
-   - Resource Group : **ODL-GenAI-CL-xxxxxx-Activate-GenAI**
+   - Resource Group : **ODL-GenAI-CL-XXXXXXX-01 (2)** - refer to the challenge 5 in challenge guide**
    - Repository Token: Paste the PAT token that you created and recorded in the previous step.
    - Repository Url: Paste the **Forked Github account** URL
 
