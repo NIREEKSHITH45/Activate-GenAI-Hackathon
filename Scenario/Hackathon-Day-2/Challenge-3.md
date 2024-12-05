@@ -14,7 +14,7 @@ You will be using bicep to deploy the chat app.
 
 The chat application integrates seamlessly with different Azure services to provide an intelligent user experience. Here's a simple overview of each service used by the app:
 
-- **App Service:** This hosts the chat app, ensuring it can respond to the prompts sent by users from the uploaded relatable data.
+- **Container Apps:** This hosts the chat app, ensuring it can respond to the prompts sent by users from the uploaded relatable data.
 - **Application Insights:** It proactively monitors the app's performance, taking care of issues before they become significant.
 - **Document Intelligence:** Using AI, it understands the content in uploaded documents, making user information more insightful.
 - **Azure OpenAI:** Enhances the app's capabilities with natural language understanding and responses.

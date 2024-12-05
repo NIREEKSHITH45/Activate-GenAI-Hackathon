@@ -24,8 +24,8 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 >**Note**: Numbers and ID's values may vary kindly ignore values in screenshots and copy values from **Environment** tab.
 
- ![](../media/Active-image19.png)
- ![](../media/Active-image(20).png)
+ ![](../media/h45.png)
+ ![](../media/h46.png)
 
 1. To access the Azure portal, within labvm open **Microsoft Edge** and browser to the [Azure Portal](https://portal.azure.com/).
 
@@ -68,29 +68,29 @@ In this task you'll learn the process of setting up and deploying the Azure Open
 
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-    ![](../media/Active-image6.png)
+    ![](../media/h1.png)
 
 1. On **Azure AI Services | Azure OpenAI** blade, click on **+ Create**.
 
-   ![](../media/Active-image7.png)
+   ![](../media/h2.png)
 
-1. Specify the following details to deploy the Azure Open AI service and click **Next** twice.
+1. Specify the following details to deploy the Azure Open AI service and click **Next (6)** thrice.
 
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
-   | Subscription       | Leave default                                          |
-   | Resource Group     | **Activate-GenAI**                 |
-   | Region             | Use the same location as the resource group            |
-   | Name               | *Enter a unique name* or use the format **OpenAI-xxxxxx** (replace **xxxxxx** with the **Deployment ID** |
-   | Pricing tier       | **Standard S0**                                        | 
+   | Subscription       | Leave default **(1)**                                      |
+   | Resource Group     | **ODL-GenAI-CL-XXXXXXX-01 (2)** - refer to the challenge 1 in challenge guide                 |
+   | Region             | Use the same location as the resource group **(3)**            |
+   | Name               | *Enter a unique name* or use the format **OpenAI-xxxxxx (4)** (replace **xxxxxx** with the **Deployment ID** |
+   | Pricing tier       | **Standard S0 (5)**                                        | 
 
-   >**Note**: Here, xxxxxx refers to the **deployment ID** which you recorded in last task.
+   >**Note**: Here, xxxxxx in the **Name** field refers to the **deployment ID** which you recorded in last task.
 
-    ![](../media/Active-image9.png)
+    ![](../media/h3.png)
 
 1. Once validation is successful on the **Review + submit** tab, click **Create** and wait for the deployment to complete.
 
-     ![](../media/Active-image10.png)
+     ![](../media/h43.png)
 
 ### Task 2: Deploy a model
 
@@ -98,61 +98,65 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can
 
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject>**.
+    ![](../media/h1.png)
 
-    ![](../media/Active-image12.png)
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-xxxxxx**.
+
+    ![](../media/h4.png)
+
+     >**Note**: Here, xxxxxx refers to the **deployment ID** which you recorded in last task.    
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio**. It will navigate to **Azure AI Studio**.
 
-   ![](../media/Active-image11.png)
+   ![](../media/h5.png)
 
-1. Enable the toggle to switch to the old look of AI Studio.
+1. From the left Navigation pane, select **Deployments (1)** then click on the **+ Deploy model (2)** drop-down and then select **Deploy base model (3)**.
 
-   ![](../media/toggle_enable.png)
+   ![](../media/h6.png)
 
-1. On the feedback popup, click on **Skip**. select the **Subscription** and Resource of **OpenAI** which you created earlier at the resource field and click on **Use Resource.**
+1. On the **Select a model** page, search for **gpt-35-turbo (1)** then select **gpt-35-turbo (2)** from the list and then click on **Confirm (3)**.
 
-   ![](../media/useraireso.png)
+   ![](../media/h7.png)
 
-1. On the **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+1. Click on **Customize**.
 
-   ![](../media/Active-image13.png)
+   ![](../media/h8.png)
 
-1. On the **Deployments** page, click on **+ Create new deployment**.
-
-     ![](../media/Active-image14.png)
-   
-1. Within the **Deploy model** pop-up interface, enter the following details :
+1. Within the **Deploy model gpt-35-turbo** pop-up interface, enter the following details :
    
     - **Deployment name**: **text-turbo** **(1)**
-    - **Select a model**: **gpt-35-turbo** **(2)**
+    - **Deployment Type**: **Standard (2)**    
     - **Model version**: **Use the default version** **(3)**
-    - **Deployment Type**: **Standard (4)**
-    - Adjust **Tokens per Minute Rate Limit (thousands)**: **20K (5)**
+    - Adjust **Tokens per Minute Rate Limit (thousands)**: **20K (4)**
+    - Click on **Deploy (5)**
   
-         ![](../media/ai1.png)
+      ![](../media/h9.png)
       
-1. Click on the **Create** button to deploy a model.
+1. Back on the **Deployments** page again, click on **Deploy base model**.
 
-1. Back on the **Deployments** page again, click on **+ Create new deployment**.
+     ![](../media/h10.png)
 
-     ![](../media/Active-image16.png)
+1. On the **Select a model** page, search for **text-embedding-ada-002 (1)** then select **text-embedding-ada-002 (2)** from the list and then click on **Confirm (3)**.   
+
+     ![](../media/h11.png)
+
+1. Click on **Customize**.
+
+     ![](../media/h12.png)
    
-1. Within the **Deploy model** pop-up interface, enter the following details:  and then click on **Advanced options (3)**, followed by scaling down the **Tokens per Minute Rate Limit (thousands) (5)**:
-   
+1. Within the **Deploy model text-embedding-ada-002** pop-up interface, enter the following details: 
+
     - **Deployment name**: **text-ada-002** **(1)**
-    - **Select a model**: **text-embedding-ada-002** **(2)**
+    - **Deployment Type**: **Standard (2)**    
     - **Model version**: **Use the default version** **(3)**
-    - **Deployment Type**: **Standard (4)**
-    - Adjust the **Tokens per Minute Rate Limit (thousands)**: **20K** **(5)**
+    - Adjust the **Tokens per Minute Rate Limit (thousands)**: **20K** 
+    - Click on **Deploy (4)**
   
-         ![](../media/ai2.png)
-
-1. Click on the **Create** button to deploy a model.
-
+      ![](../media/h13.png)
+  
 1. Back on the Deployments page, you should see the deployment models **text-turbo** and **text-ada-002** created.
 
-     ![](../media/Active-image18.png)
+     ![](../media/h14.png)
 
 ## Success Criteria:
 
