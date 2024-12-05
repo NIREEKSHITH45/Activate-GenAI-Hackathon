@@ -99,6 +99,38 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
     ![](../media/Active-image5.png)
 
+### Docker Start
+
+1. Double click on the Docker Desktop Shortcut on the screen.
+
+1. Click on **Accept**(1) on the Docker Subscription Service Agreement.
+
+   ![](../../Coach/media/nvdocker1.png)
+
+1. Select Use recommended setting(requires administrator password) and click on **Finish**(1).
+
+   ![](../../Coach/media/nvdocker2.png)
+
+1. Click **Skip**(1) on the Welcome to docker page.
+
+   ![](../../Coach/media/nvdocker3.png)
+
+1. Click **Skip** on the Welcome Survey page.
+
+   ![](../../Coach/media/nvdocker4.png)
+
+1. Click **Skip** on the Sign in page.
+
+   ![](../../Coach/media/nvdocker5.png)
+
+1. Minimize Docker Desktop and continue with next steps.
+
+   ![](../../Coach/media/nvdocker6.png)
+
+   >**Note:** If you encounter an error such as **"Docker Desktop - Unexpected WSL error"**, click **Quit** to close Docker, and then **restart** it.
+
+   ![](../../Coach/media/nvdocker7.png)
+
 ### Task 2: Create Container Registry
 
 Azure Container Registry (ACR) is a managed Docker container registry service that allows you to store and manage private Docker container images and artifacts in Azure. It provides a secure and scalable solution for building, deploying, and managing containerized applications, enabling seamless integration with Azure services.
