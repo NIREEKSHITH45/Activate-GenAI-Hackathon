@@ -72,7 +72,7 @@ One of the hottest themes at the moment is size models; users are particularly i
 
    ![](../media/3-8.png)
 
-1. Go to **Developer Settings**, and in the **Exclude category** section, enable the check box for **Use semantic options (1)** and in the **Retrieval mode** section enable the check box for **Suggest follow-up questions (2)**. Click on **Close (3)**.
+1. Go to **Developer Settings**, and in the **Exclude category** section, enable the check box for **Use semantic captions (1)** and in the **Retrieval mode** section enable the check box for **Suggest follow-up questions (2)**. Click on **Close (3)**.
 
    ![](../media/h23.png)
 
