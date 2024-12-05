@@ -22,7 +22,7 @@ The chat application integrates seamlessly with different Azure services to prov
 - **Smart Detector Alert Rule:** Monitors the app's health and notifies the team if any issues arise.
 - **Search Service:** Empowers users with dynamic and efficient search functionality within the app.
 - **Log Analytics Workspace:** Tracks and analyzes app activity, offering valuable insights and logs.
-- **App Service Plan:** Optimizes resource allocation for optimal app performance.
+- **Container App Plan:** Optimizes resource allocation for optimal app performance.
 - **Storage Account:** Securely stores the data that will be used by the Azure AI Search service to provide the inputs to the chat app.
 
 Together, these services create a responsive chat application that combines AI features, monitoring capabilities, and efficient data management, providing Contoso with an exceptional user experience.
@@ -73,14 +73,14 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 - Successful deployment of the Chat App.
 - validate if the following services are successfully deployed in the RG (Resource Group).
-  - App Service
+  - Container Apps
   - Document Intelligence
   - Azure OpenAI
   - Shared Dashboard
   - Smart Detector Alert Rule
   - Search Service
   - Log Analytics Workspace
-  - App Service Plan
+  - Container App Plan
   - Storage Account
 - Validate if the data is populated into the storage container named `content`.
 - The Chat app should be accessible using the Azure App service.
