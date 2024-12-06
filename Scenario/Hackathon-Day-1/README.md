@@ -1,4 +1,4 @@
-# Activate Gen AI - 1 Day Hackathon
+# Activate GenAI With Azure - 2 Day Hackathon
 
 Welcome to the Activate GenAI Hackathon! Today, you're set to dive into the transformative world of AI, with a focus on utilizing the power of Azure OpenAI services. Prepare yourself for a day of intense learning, innovation, and hands-on experience that will elevate your understanding of AI integration in application development.
 
@@ -35,6 +35,7 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
    - Construct an Azure AI Search solution to enable sophisticated document handling. Upload, index, and tailor the search experience using VS Code and Azure. This lays the groundwork for document-based questioning essential for Retriever-Augmented Generation (RAG) in OpenAI.
 
 3. **Challenge 03: Deploy NVIDIA NIM on Azure**
+
    - Deploy NVIDIA NIM to Azure to harness powerful, scalable generative AI model hosting. This guide walks you through setting up NVIDIA NIM—a suite of optimized microservices specifically designed for deploying and managing generative AI models on NVIDIA GPUs. Using Azure and NGC (NVIDIA GPU Cloud), you will deploy models like meta/llama-3.1-8b-instruct with streamlined configuration, security, and performance features. By leveraging the NIM containerization on Azure, you'll establish an efficient and secure environment for real-time AI inference, suitable for complex generative AI applications.
              
 3. **Challenge 04: Deploy an AI-Powered Chat App**
