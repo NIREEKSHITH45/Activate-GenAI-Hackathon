@@ -145,7 +145,7 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
    
 1. From your Azure OpenAI resource page, under **Monitoring** on the left pane, select **Logs (1)**, and then click on the pre-created Log Analytics workspace **(2)** that was used to configure diagnostics for your Azure OpenAI resource.
 
-  ![](../media/Active-image231.png)
+   ![](../media/Active-image231.png)
 
 1. Within the **Log Analytics workspace** page, under Overview on the left pane, select **Logs**.
 
