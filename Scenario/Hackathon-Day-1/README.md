@@ -2,7 +2,6 @@
 
 Welcome to the Activate GenAI Hackathon! Today, you're set to dive into the transformative world of AI, with a focus on utilizing the power of Azure OpenAI services. Prepare yourself for a day of intense learning, innovation, and hands-on experience that will elevate your understanding of AI integration in application development.
 
-
 ## Introduction
 
 Your quest is to innovate for the future at the fictitious enterprise, GenTech Inc. Your challenge? To integrate next-generation AI capabilities into GenTech's ecosystem, enhancing their operations and customer engagement through intelligent application development.
@@ -36,13 +35,16 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 
 3. **Challenge 03: Deploy NVIDIA NIM on Azure**
 
-   - Deploy NVIDIA NIM to Azure to harness powerful, scalable generative AI model hosting. This guide walks you through setting up NVIDIA NIM—a suite of optimized microservices specifically designed for deploying and managing generative AI models on NVIDIA GPUs. Using Azure and NGC (NVIDIA GPU Cloud), you will deploy models like meta/llama-3.1-8b-instruct with streamlined configuration, security, and performance features. By leveraging the NIM containerization on Azure, you'll establish an efficient and secure environment for real-time AI inference, suitable for complex generative AI applications.
+   - Deploy NVIDIA NIM to Azure to harness powerful, scalable generative AI model hosting. This guide walks you through setting up NVIDIA NIM—a suite of optimized microservices specifically designed for deploying and managing generative AI models on NVIDIA GPUs. Using Azure and NGC (NVIDIA GPU Cloud), you will deploy models like meta/llama-3.1-8b-instruct with streamlined configuration, security, and performance features. By leveraging the NIM containerization on Azure, you'll establish an efficient and secure environment for real-time AI inference that is suitable for complex generative AI applications.
              
-3. **Challenge 04: Deploy an AI-Powered Chat App**
+4. **Challenge 04: Deploy an AI-Powered Chat App**
    - Utilize Terraform to deploy a sample chat application on Azure, automating the provisioning of all necessary resources. This challenge will demonstrate your ability to get an application up and running in the cloud.
           
-4. **Challenge 05: Interact with the Chat App**
-   - Explore the deployed web app, engaging with the Chat App through well-constructed inquiries. Display your ability to handle multilingual queries and make use of advanced settings to deepen your understanding of the Azure OpenAI service's capabilities.
+5. **Challenge 05: Serverless Document Batch Processing**
+   - Embrace the power of serverless computing for batch-processing documents. Analyze documents using Azure Document Intelligence Services and process them with OpenAI.
+
+6. **Challenge 06: Implement Monitoring and Logging of Azure OpenAI Using API Management Service**
+   - Operationalize your solution by setting up monitoring and logging. Use Azure Monitor, Log Analytics, and APIM to gain insights and maintain the robustness of your AI services.
                     
 Each challenge comes with its own set of tasks and objectives. Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to your coach.
 
