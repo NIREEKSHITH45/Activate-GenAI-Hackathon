@@ -439,7 +439,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 1. Run the following command to Verify Connection.
 
    ```
-   ./config.sh
+   ./test_chat_completions.sh
    ```
 
 1. You will see the output similar to the below screenshot.
