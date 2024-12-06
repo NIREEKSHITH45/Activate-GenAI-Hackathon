@@ -10,8 +10,8 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
 
 **1. Access Web Application and Query Construction and Response:**
    
-   - In the Azure Portal, search for **`App Services`** and select the web app you deployed in the previous challenge.
-   - Click on **"Browse"** to open your web application.
+   - In the Azure Portal, search for **`Container Apps`** and select the web app you deployed in the previous challenge.
+   - Click on **"Application Url"** to open your web application.
  You will be prompted with the **Northwind Health chat application** as below. 
 
      ![](../media/lab03-04.png)
@@ -49,7 +49,7 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
    ```
 
 **3. Advanced Settings Impact:** 
-- Go to **Developer Settings**, and in the **Exclude category** section, enable the check box for **Use query-contextual summaries instead of whole documents** and **Suggest follow-up questions**. Click on **Close** and observe how the responses to the prompt will change in the chat by giving the below prompt.
+- Go to **Developer Settings**, and in the **Exclude category** section, enable the check box for **Use semantic captions** and **Suggest follow-up questions**. Click on **Close** and observe how the responses to the prompt will change in the chat by giving the below prompt.
 
    ```
    What happens in a performance review?

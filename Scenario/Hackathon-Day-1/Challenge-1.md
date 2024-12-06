@@ -26,7 +26,9 @@ As a part of this challenge, your task is to create an Azure OpenAI service and 
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-1. If you see the pop-up **Stay Signed in?**, click No.
+1. If you see the pop-up **Action Required**, click **Ask later**.   
+
+1. If you see the pop-up **Stay Signed in?**, click **No**.
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue with the challenge.
 
@@ -50,13 +52,17 @@ Make sure you have the following from the CloudLabs-provided integrated environm
    - Deploy it in the existing resource group named - **<inject key="Resource Group Name"/>**
    - Obtain the necessary Azure OpenAI Key and Endpoint.
 
-   <validation step="9ba9cc02-3197-449e-a583-feee9f3df4a6" />
+
+   <validation step="ccff4a0f-eb81-479e-a774-00cc5a664eeb" />
+
+
 
 2. **Deploy Large Language Models (LLM):**
    - Azure OpenAI provides a web-based portal named **Azure OpenAI Studio** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
    - Launch Azure OpenAI Studio from the overview pane and deploy two OpenAI models, i.e., `gpt-35-turbo` and `text-embedding-ada-002`, with a TPM capacity of 20k.
 
-   <validation step="a4ef7586-7347-499d-8f5d-67e71ed0aea0" />
+
+   <validation step="32bbf48f-1030-4e8b-8dfe-a395a6746f1d" />
 
 ## Success Criteria:
 

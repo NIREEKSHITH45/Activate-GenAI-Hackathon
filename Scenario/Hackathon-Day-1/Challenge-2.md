@@ -16,41 +16,48 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
 1. **Clone the Repository:**
    - Clone the repository within Visual Studio Code: `https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git`.
-     > Hint : You can utilize the following repository, https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git, to explore and perform the scenarios listed below.
+   > Hint : You can utilize the following repository, https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git, to explore and perform the scenarios listed below.
+
 
 2. **Setup Azure Resources:**
    - Create an Azure AI Search resource with basic pricing.
    - Create an Azure AI Service with the Standard S0 SKU.
-   > Note : Ensure to use the same region as the Azure AI Search resource.     
+   > Note : Ensure to use the same region as the Azure AI Search resource. 
    - Create an Azure Storage Account with the Standard Tier.
+
 
 3. **Prepare Document Upload:**
    - In Visual Studio Code, within the cloned repository, navigate to the 01-azure-search folder.
    - Edit the UploadDocs.cmd batch file with the required values.
 
+
 4. **Execute the Upload Script:**
    - Open and examine the UploadDocs.cmd batch file using VS Code.
    - Execute the batch file to ensure that the necessary resources and files are created in Azure.
-     > Hint: Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure CLI
+   > Hint: Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure CLI
+
 
 5. **Data Import and Indexing:**
    - Import data for AI Search using Blob Storage.
    - Link with Azure AI Services and customize the index.
    - Create an indexer for seamless data integration.
 
+
 6. **Query Indexed Documents:**
    - Tweak queries to include counts and specific fields.
    - Define search components.
    - Query the modified index to retrieve refined and targeted information.
-     > Hint: Refine your queries to count results, choose specific fields, configure search components, and use the updated index for detailed and focused information 
-       retrieval.
+   > Hint: Refine your queries to count results, choose specific fields, configure search components, and use the updated index for detailed and focused information retrieval.
+
 
 7. **Deploy & Test a Search Client Application:**
    - Update application settings and configure the web app.
    - Run the application locally to test the search functionality.
    > Hint: The application supports multiple languages; choose the one that suits your project's requirements. Adjust your application settings and configure the web application as needed. Then, run the application locally to test the search functionality before proceeding with deployment. 
 
-   <validation step="4240749f-2035-4086-92d1-0ff181674a07" />
+
+   <validation step="15277a80-8b44-474a-ac19-0831c71d5fbd" />
+
    
 ## Success criteria:
 
