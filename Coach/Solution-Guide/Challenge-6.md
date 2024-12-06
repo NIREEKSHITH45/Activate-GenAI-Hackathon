@@ -137,7 +137,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 Data in Azure Monitor Logs is stored in tables, where each table has its own set of unique properties. The activity log is a type of platform log in Azure that provides insight into subscription-level events. You can view this log independently or route it to Azure Monitor Logs. In the Azure portal, you can use the activity log in Azure Monitor Logs to run complex queries with Log Analytics.
 
-1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
+1. On the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
     ![](../media/Active-image6.png)
 
@@ -145,7 +145,7 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
    
 1. From your Azure OpenAI resource page, under **Monitoring** on the left pane, select **Logs (1)**, and then click on the pre-created Log Analytics workspace **(2)** that was used to configure diagnostics for your Azure OpenAI resource.
 
-  ![](../media/Active-image231.png)
+   ![](../media/Active-image231.png)
 
 1. Within the **Log Analytics workspace** page, under Overview on the left pane, select **Logs**.
 
@@ -155,15 +155,15 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
 
 1. For the following examples, enter the Kusto query into the edit region at the top of the Query window, and then select Run. The query results are displayed below the query text.
 
-    - This Kusto query is useful for an initial analysis of Azure Diagnostics (AzureDiagnostics) data about your resource:
+   - This Kusto query is useful for an initial analysis of Azure Diagnostics (AzureDiagnostics) data about your resource:
       
-         - This query returns a sample of 100 entries and displays a subset of the available columns of data in the logs.
+     - This query returns a sample of 100 entries and displays a subset of the available columns of data in the logs.
       
-        ```kusto
+       ```kusto
        AzureDiagnostics
        | take 100
        | project TimeGenerated, _ResourceId, Category, OperationName
-        ```
+       ```
 
 1. In the query results, you can select the arrow next to the table name to view all available columns and associated data types.
 
@@ -175,6 +175,7 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
    AzureDiagnostics
    | take 100
    ```
+
    > **Note:** If the logs don't reflect immediately, please wait for 10–15 minutes for them to come up.
 
 1. You can also expand the results and check for the details provided under each for more information.
@@ -197,24 +198,24 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
 1. Add the following details in the **Create API Management Service** page and click on **Review + install**:
 
-      - Subscription: **Select the default subscription (1)**
-      - Resource Group: Select **rg-activategenai (2)**
-      - Region: **(US) East US (3)**
-      - Resource Name: **apim-<inject key="Deployment ID" enableCopy="false"/> (4)**
-      - Organization Name: **Windows (5)**
-      - Administrator email: **Email/Username**: <inject key="AzureAdUserEmail"></inject> (6)
-      - Pricing Tier: Select **Standard (99.95% SLA) (7)**
-      - Unit(s): **1 (8)**
+   - Subscription: **Select the default subscription (1)**
+   - Resource Group: Select **rg-activategenai (2)**
+   - Region: **(US) East US (3)**
+   - Resource Name: **apim-<inject key="Deployment ID" enableCopy="false"/> (4)**
+   - Organization Name: **Windows (5)**
+   - Administrator email: **Email/Username**: <inject key="AzureAdUserEmail"></inject> (6)
+   - Pricing Tier: Select **Standard (99.95% SLA) (7)**
+   - Unit(s): **1 (8)**
     
-          ![](../media/Active-image257.png)
+     ![](../media/Active-image257.png)
 
-          ![](../media/Active-image237.png)
+     ![](../media/Active-image237.png)
 
 1. On **Review + Create** tab once validation passed click on **Create**.
 
-      > **Note**: Before proceeding with next step make sure **API Management Service** deployed successfully.
+   > **Note**: Before proceeding with next step make sure **API Management Service** deployed successfully.
 
-      > **Note**: The deployment of API Management service resource could take approximately 20 minutes. 
+   > **Note**: The deployment of API Management service resources could take approximately 20 minutes. 
 
 1. Once **API Management Service** deployed successfully, click on **Go to resource**.
 
@@ -226,21 +227,22 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
    ![](../media/Active-image241.png)
    
-1. Please sign out and then sign back in to the Azure portal before proceeding with the next steps.
+1. Please sign out and then sign back into the Azure portal before proceeding with the next steps.
         
-1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
+1. On the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
     ![](../media/Active-image6.png)
 
 1. Select the **OpenAI Service** deployed in the previous challenge.
 
 1. To capture the values of Azure OpenAI's key and endpoint, execute the following steps:
-    - Select **Keys and Endpoints (1)** under the **Resource Management** section from the left navigation pane.
-    - Click on **Show Keys (2)**.
-    - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
-    - Finally, copy the **Endpoint (4)** API URL by clicking on **Copy to clipboard**. Paste it in a text editor such as Notepad for later use.
+    
+   - Select **Keys and Endpoints (1)** under the **Resource Management** section from the left navigation pane.
+   - Click on **Show Keys (2)**.
+   - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
+   - Finally, copy the **Endpoint (4)** API URL by clicking on **Copy to clipboard**. Paste it in a text editor such as Notepad for later use.
 
-         ![](../media/k&e.png "Create Azure OpenAI resource")
+     ![](../media/k&e.png "Create Azure OpenAI resource")
    
 1. In the **OpenAI**, select **Access control (IAM)** **(1)**, click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
 
