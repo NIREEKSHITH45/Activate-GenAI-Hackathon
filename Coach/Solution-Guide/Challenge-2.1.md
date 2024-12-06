@@ -169,10 +169,12 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | Setting | Action |
     | -- | -- |
     | **Subscription** | Default |
-    | **Resource Group** | **Activate-GenAI** (1) |
+    | **Resource Group** | **ODL-GenAI-CL-XXXXXX-01** (1) |
     | **Registry name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** (2) |
     | **Location** | **East US 2** (Choose the same location where the resource group) (3) |
     | **Pricing plan** | **Standard** (4) |
+
+   > **Note**: Unique ID (XXXXXX) refers to DeploymentID.
 
    ![](../../Coach/media/aml1.png)
 
@@ -255,13 +257,15 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | Setting | Action |
     | -- | -- |
     | **subscription_id** | **<inject key="SubscriptionID" enableCopy="false"/>** |
-    | **resource_group** | **Activate-GenAI**  |
+    | **resource_group** | **ODL-GenAI-CL-XXXXXX-01**  |
     | **workspace** | **ml-workspace** (Provide the name of workspace you want to create) |
     | **location** | **EastUS2**, **CentralUS** (Choose the same location where the resource group and make sure there is no space between the loaction name) |
     | **ngc_api_key** | Provide the NGC key  |
     | **email_address** | Enter the email from Environmental Details tab  |
     | **acr_registry_name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** |
     | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
+
+   > **Note**: Unique ID (XXXXXX) refers to DeploymentID.
 
    ![](../../Coach/media/vscode4.png)
 
