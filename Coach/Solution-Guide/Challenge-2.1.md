@@ -201,7 +201,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 1. Now, install the ml extension
 
    ```
-   az extension add -n ml --allow-preview false
+   az extension add -n ml
    ```
 
    ```
