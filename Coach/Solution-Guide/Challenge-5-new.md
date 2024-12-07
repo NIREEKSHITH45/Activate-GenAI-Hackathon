@@ -52,7 +52,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
    >**Note**: Here, xxxxxx refers to the deployment ID
 
-   ![](../media/Active-image126.png)
+   ![](../media/Active-image126-1.png)
 
 1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete.
 
@@ -313,7 +313,7 @@ In this task, you'll create a Form Recognizer resource in Azure Portal by settin
    - Form Recognizer or Cognitive Service Resource: Select the available Cognitive Service Form Recognizer name similar to **cogservicesbpass{suffix}** **(3)**.
    - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
 
-     ![](../media/Active-image179.png)
+     ![](../media/Active-image179-1.png)
 
 1. Enter the following details under **Connect training data source**. and click on **Continue** **(8)**.
 
@@ -323,9 +323,9 @@ In this task, you'll create a Form Recognizer resource in Azure Portal by settin
    - Blob container name: Click on **Create new (4)** and provide the name as **custommoduletext** **(5)** then click on **OK** **(6)**.
    - Review the settings then click on **Continue** **(7)**.
    
-       ![](../media/Active-image180.png)
-       ![](../media/Active-image181.png)
-       ![](../media/Active-image182.png)
+       ![](../media/Active-image180-1.png)
+       ![](../media/Active-image181-1.png)
+       ![](../media/Active-image182-1.png)
 
 1. Validate the information and choose **Create project**.
 
