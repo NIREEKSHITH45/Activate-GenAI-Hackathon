@@ -53,11 +53,29 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 > **Important** : Start Powershell 7 +.
 
+1. Click the Windows search button and look for **PowerShell 7-Preview**. If **PowerShell 7-Preview** is not visible, execute the following commands one by one in PowerShell ISE to install it.
+
+   ```
+   $PSVersionTable.PSVersion
+   
+   # Define the URL for the latest PowerShell 7 Preview MSI installer
+   $url = "https://github.com/PowerShell/PowerShell/releases/download/v7.4.0-preview.2/PowerShell-7.4.0-preview.2-win-x64.msi"
+
+   # Define the location to save the MSI file
+   $output = "$env:TEMP\PowerShell-7-Preview.msi"
+
+   # Download the MSI installer
+   Invoke-WebRequest -Uri $url -OutFile $output
+
+   # Install PowerShell 7 Preview
+   Start-Process msiexec.exe -ArgumentList "/i $output /quiet" -Wait
+   ```  
+
 1. **Clone the Repository:**
    - Clone the Active Gen AI repository: `https://github.com/CloudLabsAI-Azure/azure-search-openai-demo-nvidia`.
    - Verify if Bicep is installed on your machine. If not, follow the [Bicep installation guide](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)).
 
-2. **Deploy the AI-Powered Chat App:**
+1. **Deploy the AI-Powered Chat App:**
 
     - Deploy an AI-powered chat application on Azure, integrating Azure AI services and Azure Search, and ensuring it's accessible and functional post-deployment.
 
@@ -71,7 +89,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
       > Note : Ensure to re-run in case of any deployment failure with Storage Account.
 
-3. **Deploying with NVIDIA NIM**
+1. **Deploying with NVIDIA NIM**
 
     - Along with OpenAI Large Language Models (LLMs), NVIDIA NIM along with Meta Llama 3.1 8B can be used for ChatCompletion requests.This document outlines the steps to configure the app to use NVIDIA NIM.
     - Follow the given instructions here: `https://github.com/CloudLabsAI-Azure/azure-search-openai-demo-nvidia/blob/main/docs/deploy_nvidia_nim.md`
