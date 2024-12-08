@@ -62,8 +62,6 @@ Make sure you have the following from the CloudLabs-provided integrated environm
    - Launch Azure OpenAI Studio from the overview pane and deploy two OpenAI models, i.e., `gpt-35-turbo` and `text-embedding-ada-002`, with a TPM capacity of 20k.
 
 
-   <validation step="32bbf48f-1030-4e8b-8dfe-a395a6746f1d" />
-
 ## Success Criteria:
 
 - Verify that the Azure OpenAI Service is successfully deployed in the existing resource group - <inject key="Resource Group Name"/>.
