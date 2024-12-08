@@ -78,8 +78,6 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
    - Copy the `Subscription ID` and `Container registries` name in the notepad.
 
-       <validation step="bf43c618-75d9-465a-85f0-80d3e024f687" />
-
 3. **Setup Git Bash Environment**
 
    - Run the configuration in Git Bash.
@@ -122,8 +120,6 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
       - Execute the `1_set_credentials.sh` file to create a new `AzureML workspace` with the "Azure ML Secrets Reader" role assignment.
       - Verify the AzureML workspace is created in the azure-ml resource group.
-
-          <validation step="1993b774-7dfb-4aeb-a792-112946b90e86" />
 
    - **Store NGC API Key for Use in the AzureML Deployment**
 
