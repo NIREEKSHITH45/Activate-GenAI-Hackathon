@@ -71,8 +71,6 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
       > Note : Ensure to re-run in case of any deployment failure with Storage Account.
 
-        <validation step="d170a2ad-32d3-4149-ba77-caf4264a4373" />
-
 3. **Deploying with NVIDIA NIM**
 
     - Along with OpenAI Large Language Models (LLMs), NVIDIA NIM along with Meta Llama 3.1 8B can be used for ChatCompletion requests.This document outlines the steps to configure the app to use NVIDIA NIM.
