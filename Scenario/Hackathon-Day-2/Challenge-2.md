@@ -21,36 +21,42 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
 2. **Setup Azure Resources:**
    - Create an Azure AI Search resource with basic pricing.
+
+      > **Note:** If you encounter the error **Cannot get costs for subscription** on the top while creating the search service, please ignore it.
    - Create an Azure AI Service with the Standard S0 SKU.
-   > Note : Ensure to use the same region as the Azure AI Search resource. 
+
+     > Note : Ensure to use the same region as the Azure AI Search resource.
+
+     > Please find this link and use any regions which supports Azure AI Services. https://learn.microsoft.com/en-us/azure/search/search-region-support#americas
    - Create an Azure Storage Account with the Standard Tier.
 
+        > **Note:** Check the box next to **Allow enabling anonymous access on individual containers**.
 
-3. **Prepare Document Upload:**
+4. **Prepare Document Upload:**
    - In Visual Studio Code, within the cloned repository, navigate to the 01-azure-search folder.
    - Edit the UploadDocs.cmd batch file with the required values.
 
 
-4. **Execute the Upload Script:**
+5. **Execute the Upload Script:**
    - Open and examine the UploadDocs.cmd batch file using VS Code.
    - Execute the batch file to ensure that the necessary resources and files are created in Azure.
    > Hint: Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure CLI
 
 
-5. **Data Import and Indexing:**
+6. **Data Import and Indexing:**
    - Import data for AI Search using Blob Storage.
    - Link with Azure AI Services and customize the index.
    - Create an indexer for seamless data integration.
 
 
-6. **Query Indexed Documents:**
+7. **Query Indexed Documents:**
    - Tweak queries to include counts and specific fields.
    - Define search components.
    - Query the modified index to retrieve refined and targeted information.
    > Hint: Refine your queries to count results, choose specific fields, configure search components, and use the updated index for detailed and focused information retrieval.
 
 
-7. **Deploy & Test a Search Client Application:**
+8. **Deploy & Test a Search Client Application:**
    - Update application settings and configure the web app.
    - Run the application locally to test the search functionality.
    > Hint: The application supports multiple languages; choose the one that suits your project's requirements. Adjust your application settings and configure the web application as needed. Then, run the application locally to test the search functionality before proceeding with deployment. 
