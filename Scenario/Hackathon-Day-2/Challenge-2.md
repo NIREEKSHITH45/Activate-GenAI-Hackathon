@@ -64,9 +64,6 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
    
       > Hint: The application supports multiple languages; choose the one that suits your project's requirements. Adjust your application settings and configure the web application as needed. Then, run the application locally to test the search functionality before proceeding with deployment. 
 
-
-   <validation step="15277a80-8b44-474a-ac19-0831c71d5fbd" />
-
    
 ## Success criteria:
 
