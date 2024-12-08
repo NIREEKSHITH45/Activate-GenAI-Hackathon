@@ -198,6 +198,12 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
    curl -L -o /usr/bin/jq.exe https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe
    ```
 
+1.    - Install the az CLI by navigating to the below link:
+
+       ```
+      $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://azcliprod.blob.core.windows.net/msi/azure-cli-2.51.0.msi -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item .\AzureCLI.msi
+      ```
+
 1. Now, install the ml extension
 
    ```
