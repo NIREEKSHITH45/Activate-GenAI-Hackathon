@@ -87,7 +87,13 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
    - Downloads the latest version of **jq**  file, a lightweight and flexible command-line JSON processor, and save it as an executable file named `jq-win64.exe` in the `/usr/bin/jq.exe` directory
 
      > Note: You can use https://github.com/jqlang/jq/releases url 
-   
+
+   - Install the az CLI by navigating to the below link:
+
+       ```
+      $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://azcliprod.blob.core.windows.net/msi/azure-cli-2.51.0.msi -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item .\AzureCLI.msi
+      ```
+
    - Install the `az ml` stable extension.
 
    - Clone the following repo.
@@ -96,7 +102,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       https://github.com/CloudLabsAI-Azure/nim-deploy.git
       ```
 
-4. **Configure the config.sh**
+5. **Configure the config.sh**
 
    - Open the folder where you have cloned the repo from VS Code.
    - Update the `config.sh` file with the necessary details located in the `nim-deploy\cloud-service-providers\azure\azureml\cli` directory.
@@ -104,7 +110,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
       - Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/tree/main/cloud-service-providers/azure/azureml/cli).
 
-5. **Create AzureML Deployment of the NIM Container**
+6. **Create AzureML Deployment of the NIM Container**
 
    - **Configuration and Login to Azure**
 
