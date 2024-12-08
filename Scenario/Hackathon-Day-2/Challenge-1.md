@@ -52,10 +52,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
    - Deploy it in the existing resource group named - **<inject key="Resource Group Name"/>**
    - Obtain the necessary Azure OpenAI Key and Endpoint.
 
-
-   <validation step="ccff4a0f-eb81-479e-a774-00cc5a664eeb" />
-
-
+      <validation step="ccff4a0f-eb81-479e-a774-00cc5a664eeb" />
 
 2. **Deploy Large Language Models (LLM):**
    - Azure OpenAI provides a web-based portal named **Azure OpenAI Studio** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
