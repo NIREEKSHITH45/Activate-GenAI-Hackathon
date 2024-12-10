@@ -58,9 +58,19 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       
       >**Note:** If you don't have an account, simply enter your work/personal email account and submit, and you'll be redirected to the account creation page to provide the necessary details and set up your account.
    
-   - Navigate to [NVIDIA Devloper Portal](https://developer.nvidia.com/developer-program?ncid=pa-srch-goog-746366&_bt=699127533347&_bk=join%20nvidia%20developer%20program&_bm=b&_bn=g&_bg=161777607269&gad_source=1&gclid=Cj0KCQjwxsm3BhDrARIsAMtVz6MYF3MjayqdjwpkljkJ5ZSVv8IqKIExaNHyiPgUykfiJPplssYqyeIaAlNDEALw_wcB) and Click on the **join**.
+   - Search for and select **Llama-3.1-8b-instruct**, then click **Get Container**.
 
-   - Navigate back to the your **Nvidia Account**, **Generate API Key** under `Setup`.
+     ![](../../Coach/media/nv5.png)
+
+   - **Join** for the **NVIDIA Developer Program** to proceed to the NVIDIA Developer Portal.
+
+   - Provide the required details on the **Integrate NIM into your application** section and click **Join**.
+
+   - Navigate to your **NVIDIA Account**, go to **Organization > Subscriptions**, and ensure the **Active** status for the NVIDIA Developer Program.
+
+     ![](../../Coach/media/nv2.png)
+
+   - Click on your **Nvidia Account**, **Generate API Key** under `Setup`.
 
    - Copy the `Generated API key` in a notebook
 
