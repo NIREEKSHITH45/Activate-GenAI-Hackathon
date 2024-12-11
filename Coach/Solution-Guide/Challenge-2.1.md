@@ -190,11 +190,13 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | **Location** | **East US 2** (Choose the same location where the resource group) (3) |
     | **Pricing plan** | **Standard** (4) |
 
-    > **Note** : Replace `{suffix}` with the Deployment ID. Navigate to **Environment** **(1)**, and copy the **Deployment ID** from the **User Name** field.
-
    ![](../../Coach/media/aml1.png)
 
    ![](../../Coach/media/aml2.png)
+
+   > **Note** : Replace `{suffix}` with the Deployment ID. Navigate to **Environment** **(1)**, and copy the **Deployment ID** from the **User Name** field.
+
+      ![](../media/Active-image(21).png)
 
 1. Once the deployment is completed, click on **Go to resource**.
 
@@ -431,7 +433,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
    curl -X 'POST' \
      'https://llama-3-1-8b-nim-endpoint-aml-1.eastus2.inference.ml.azure.com/v1/chat/completions' \
      -H 'accept: application/json' \
-     -H 'azureml-model-deployment: llama3-1-8b-nim-deployment-aml-1' \
+     -H 'azureml-model-deployment: llama3-1-8b-nim-deployment{suffix}' \
      -H 'Authorization: Bearer 3L3s8qb6dCQq7TTgorFnwDVZT8qsvId5' \
      -H 'Content-Type: application/json' \
      -d '{
@@ -455,6 +457,10 @@ Create an AzureML deployment with the NIM container obtained from the provided A
    }'
    
    ```
+
+   > **Note** : Replace `{suffix}` with the Deployment ID. Navigate to **Environment** **(1)**, and copy the **Deployment ID** from the **User Name** field.
+
+      ![](../media/Active-image(21).png)
 
 1. Run the following command to Verify Connection.
 
