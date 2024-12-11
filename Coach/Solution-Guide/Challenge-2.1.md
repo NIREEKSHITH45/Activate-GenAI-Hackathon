@@ -421,7 +421,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 
    ![](../../Coach/media/nvverify3.png)
 
-5. In VS Code, open the **`test_chat_completions.sh`** file. Replace the following headers `<your-azureml-endpoint>`, `<your-azureml-endpoint-token>`, and `<deployment-name>` with the appropriate values. Ensure the **deployment-name** matches the one in your `test_chat_completions` file.
+5. In VS Code, open the **`test_chat_completions.sh`** file. Replace the following headers `<your-azureml-endpoint>`, `<your-azureml-endpoint-token>`, and `<deployment-name>` with the appropriate values. Ensure the **deployment-name** matches the one in your `test_chat_completions.sh` file.
 
    >**Note:** Ensure to add **/v1/chat/completions** towards the end of the endpoint.
 
@@ -464,7 +464,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 1. Run the following command to Verify Connection.
 
    ```
-   ./test_chat_completions
+   ./test_chat_completions.sh
    ```
 
 1. You will see the output similar to the below screenshot.
