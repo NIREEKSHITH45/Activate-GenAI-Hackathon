@@ -255,7 +255,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
    ![](../../Coach/media/vscode1.png)
 
-1. Go to the **Explorer** panel in the upper left corner, click on **Open Folder**,  **cli folder** from the location where you have cloned the repo in previous step 'Desktop/cloud-service-providers/azure/azureml/cli', and then click on **Select Folder** to open it in Visual Studio Code.
+1. Go to the **Explorer** panel in the upper left corner, click on **Open Folder**,  **cli folder** from the location where you have cloned the repo in previous step `Desktop/cloud-service-providers/azure/azureml/cli` , and then click on **Select Folder** to open it in Visual Studio Code.
 
    ```
    Desktop\nim-deploy\cloud-service-providers\azure\azureml\cli
