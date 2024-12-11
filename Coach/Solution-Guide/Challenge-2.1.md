@@ -117,7 +117,7 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
 ### Docker Start
 
-1. Double click on the Docker Desktop Shortcut on the screen.
+1. Double-click on the Docker Desktop Shortcut on the screen.
 
 1. Click on **Accept**(1) on the Docker Subscription Service Agreement.
 
@@ -135,11 +135,11 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
    ![](../../Coach/media/nvdocker4.png)
 
-1. Click **Skip** on the Sign in page.
+1. Click **Skip** on the Sign-in page.
 
    ![](../../Coach/media/nvdocker5.png)
 
-1. Minimize Docker Desktop and continue with next steps.
+1. Minimize Docker Desktop and continue with the next steps.
 
    ![](../../Coach/media/nvdocker6.png)
 
@@ -272,16 +272,20 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | -- | -- |
     | **subscription_id** | **<inject key="SubscriptionID" enableCopy="false"/>** |
     | **resource_group** | **Activate-GenAI**  |
-    | **workspace** | **ml-workspace** (Provide the name of workspace you want to create) |
-    | **location** | **EastUS2**, **CentralUS** (Choose the same location where the resource group and make sure there is no space between the loaction name) |
+    | **workspace** | **ml-workspace{suffix}** (Provide the name of the workspace you want to create) |
+    | **location** | **EastUS2**, **CentralUS** (Choose the same location where the resource group is and make sure there is no space between the location name) |
     | **ngc_api_key** | Provide the NGC key  |
-    | **email_address** | Enter the email from Environmental Details tab  |
+    | **email_address** | Enter the email from the Environmental Details tab  |
     | **acr_registry_name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** |
     | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
 
    ![](../../Coach/media/vscode4.png)
 
    ![](../../Coach/media/up2.png)
+
+   > Note: Replace `{suffix}` with the Deployment ID. Navigate to **Environment** **(1)**, and copy the **Deployment ID** from the **User Name** field.
+
+      ![](../media/Active-image(21).png)
 
 1. Press **Ctrl + S** to save the changes you made to the file.
 
