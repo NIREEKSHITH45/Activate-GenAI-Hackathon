@@ -333,20 +333,20 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
    ```
    > **Note:** The above command creates a new workspace with the workspace name provided in the config.sh file.
 
-1. You can find the newly created worksapce in azure
+1. You can find the newly created workspace in azure
 
    ![](../../Coach/media/u1.png)
 
 ###  Task 7: Store NGC API Key for Use in the AzureML Deployment
 
-1. To Store NGC API Key for Use in the AzureML Deployment.You have two options for storing the NGC API Key:
+1. To Store NGC API Key for Use in the AzureML Deployment. You have two options for storing the NGC API Key:
 
-   >**Note :** The NGC API Key needs to be stored within Azure so the AzureML workspace can access it during deployment. The API key is required to pull the correct model from the NGC model  catalog. The key can be provided as a workspace connection to the AzureML workspace.
+   >**Note:** The NGC API Key needs to be stored within Azure so the AzureML workspace can access it during deployment. The API key is required to pull the correct model from the NGC model  catalog. The key can be provided as a workspace connection to the AzureML workspace.
    
    **Store the Key as a Workspace Connection:**
    Store the NGC API Key as a custom credential using a workspace connection.
 
-   This script stores the NGC API Key as a workspace connection credential and verifies if the provided workspace can access it.
+   This script stores the NGC API Key as a workspace connection credentials and verifies if the provided workspace can access it.
 
    Run the following script to configure this and verify the connection
 
@@ -365,11 +365,11 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ```
    > **Note**: This step will take approximately 30-40 minutes to pull the image from the NVIDIA registry and push it to the Azure Container Registry (ACR). In the meantime, please skip the subsequent steps for now, proceed to complete Challenge 2, and return to continue from the next step once Challenge 2 is finished. 
 
-1. Navigate to your container registry (**amlregistry**) , Under the service click on the Respositiories select your **nim-meta-llama-3.1-8b-instruct** regiestry, here you will find your image is pushed with the tag name **latest**.
+1. Navigate to your container registry (**amlregistry**) , Under the service click on the Repositories and select your **nim-meta-llama-3.1-8b-instruct** registry, here you will find your image is pushed with the tag name **latest**.
 
    ![](../../Coach/media/bash2.png)
 
-###  Task 9: Create Managed Online Endpoint
+###  Task 9: Create a Managed Online Endpoint
 
 1. Run the following command to **create a managed online endpoint**.
 
@@ -421,7 +421,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 
    ![](../../Coach/media/nvverify3.png)
 
-5. In VS Code, open the **`test_chat_completions.sh`** file. Replace the following headers `<your-azureml-endpoint>`, `<your-azureml-endpoint-token>`, and `<deployment-name>` with the appropriate values. Ensure the **deployment-name** matches the one in your `config.sh` file.
+5. In VS Code, open the **`test_chat_completions.sh`** file. Replace the following headers `<your-azureml-endpoint>`, `<your-azureml-endpoint-token>`, and `<deployment-name>` with the appropriate values. Ensure the **deployment-name** matches the one in your `test_chat_completions` file.
 
    >**Note:** Ensure to add **/v1/chat/completions** towards the end of the endpoint.
 
@@ -464,7 +464,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 1. Run the following command to Verify Connection.
 
    ```
-   ./config.sh
+   ./test_chat_completions
    ```
 
 1. You will see the output similar to the below screenshot.
