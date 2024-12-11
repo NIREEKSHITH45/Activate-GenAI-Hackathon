@@ -183,12 +183,14 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 1. On the **Basics** tab of Create **Container Registry**, provide details as mentioned in the table below and select **Review + create** (5) at the bottom of the page and subsequently click on **Create**.
 
     | Setting | Action |
-    | -- | -- |
+    | ---- | ---- |
     | **Subscription** | Default |
     | **Resource Group** | **Activate-GenAI** (1) |
-    | **Registry name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** (2) |
+    | **Registry name** | **amlregistry{suffix}** (2) |
     | **Location** | **East US 2** (Choose the same location where the resource group) (3) |
     | **Pricing plan** | **Standard** (4) |
+
+    > **Note** : Replace `{suffix}` with the Deployment ID. Navigate to **Environment** **(1)**, and copy the **Deployment ID** from the **User Name** field.
 
    ![](../../Coach/media/aml1.png)
 
@@ -278,12 +280,14 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | **email_address** | Enter the email from the Environmental Details tab  |
     | **acr_registry_name** | **amlregistry{suffix}** |
     | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
+    | **endpoint_name** | **llama-3-1-8b-nim-endpoint{suffix}** |
+    | **deployment_name** | **llama3-1-8b-nim-deployment{suffix}** |
 
    ![](../../Coach/media/vscode4.png)
 
    ![](../../Coach/media/up2.png)
 
-   > Note: Replace `{suffix}` with the Deployment ID. Navigate to **Environment** **(1)**, and copy the **Deployment ID** from the **User Name** field.
+   > **Note** : Replace `{suffix}` with the Deployment ID. Navigate to **Environment** **(1)**, and copy the **Deployment ID** from the **User Name** field.
 
       ![](../media/Active-image(21).png)
 
