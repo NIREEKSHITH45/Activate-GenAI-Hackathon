@@ -1,4 +1,4 @@
-# Challenge 2: Deploy Azure OpenAI Service and LLM Models
+# Challenge 02: Deploy Azure OpenAI Service and LLM Models
 
 ### Estimated Time: 30 minutes
 
