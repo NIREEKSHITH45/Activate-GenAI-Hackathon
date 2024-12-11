@@ -12,7 +12,6 @@ Participants will begin by creating an NVIDIA account to generate an API key, es
 
 ### Task 1: Generate NGC API KEY
 
-> **Note:** This process of getting NGC API key is no longer recommended. Participant is recommended to get API key through build.nvidia.com as mentioned in the Scenario page.
 
 The NVIDIA API key is a unique identifier used to authenticate requests to NVIDIA's APIs, such as the NGC (NVIDIA GPU Cloud) services. This key allows developers to access various resources, including pre-trained models, GPU-accelerated software, and container images. Obtaining an API key typically involves creating an account on NVIDIA's developer portal and generating the key within the account settings. It is important to keep this key secure, as it grants access to your NVIDIA resources and can be used for billing purposes.
 
