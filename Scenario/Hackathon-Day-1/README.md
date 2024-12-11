@@ -28,12 +28,13 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
   
 ## Challenges
 
-1. **Challenge 01: Deploy Azure OpenAI Service and LLM Models**
+
+1. **Challenge 01: Deploy NVIDIA NIM on Azure**
+   - Deploy NVIDIA NIM to Azure to harness powerful, scalable generative AI model hosting. This guide walks you through setting up NVIDIA NIM—a suite of optimized microservices specifically designed for deploying and managing generative AI models on NVIDIA GPUs. Using Azure and NGC (NVIDIA GPU Cloud), you will deploy models like meta/llama-3.1-8b-instruct with streamlined configuration, security, and performance features. By leveraging the NIM containerization on Azure, you'll establish an efficient and secure environment for real-time AI inference, suitable for complex generative AI applications.
+
+2. **Challenge 02: Deploy Azure OpenAI Service and LLM Models**
    - Begin your journey by deploying the Azure OpenAI Service and integrating a Large Language Model (LLM). This will serve as the foundation for advanced linguistic intelligence in your applications.
      
-2. **Challenge 02: Deploy NVIDIA NIM on Azure**
-   - Deploy NVIDIA NIM to Azure to harness powerful, scalable generative AI model hosting. This guide walks you through setting up NVIDIA NIM—a suite of optimized microservices specifically designed for deploying and managing generative AI models on NVIDIA GPUs. Using Azure and NGC (NVIDIA GPU Cloud), you will deploy models like meta/llama-3.1-8b-instruct with streamlined configuration, security, and performance features. By leveraging the NIM containerization on Azure, you'll establish an efficient and secure environment for real-time AI inference, suitable for complex generative AI applications.
-             
 3. **Challenge 03: Deploy an AI-Powered Chat App**
    - Utilize Bicep to deploy a sample chat application on Azure, automating the provisioning of all necessary resources. This challenge will demonstrate your ability to get an application up and running in the cloud.
           
