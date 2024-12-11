@@ -119,8 +119,10 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
    - **Configuration and Login to Azure**
 
       - From the Git Bash change directory `nim-deploy\cloud-service-providers\azure\azureml\cli`.
-      - Configuration settings defined in `config.sh`. This step is crucial for loading environment variables, paths, or any other configuration before running dependent commands.
-      - Login to the Azure portal using CLI command
+      - Configuration settings defined in `config.sh`.
+      - Provide a unique name for **workspace** and **acr_registry_name**, utilizing `<inject key="Deployment ID" />` as a suffix.
+      - This step is crucial for loading environment variables, paths, or any other configuration before running dependent commands.
+      - Login to the Azure portal using CLI command.
 
    - **Setup AzureML Workspace**
 
