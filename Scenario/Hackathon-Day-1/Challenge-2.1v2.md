@@ -76,17 +76,17 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
 2. **Deploy Container registries**
 
-   - Deploy a Container registries with following details.
+   - Deploy a Container registry with the following details.
 
      | Setting | Action |
      | --- | --- |
      | **Subscription** | Default |
      | **Resource Group** | Select the **Activate-GenAI** resource group |
      | **Registry name** | Enter **unique name** |
-     | **Location** | choose the same location where the resource group  |
+     | **Location** | Choose the same location where the resource group  |
      | **Pricing plan** | **Standard** |
 
-   - Copy the `Subscription ID` and `Container registries` name in the notepad.
+   - Copy the `Subscription ID` and `Container registries` names in the notepad.
 
        <validation step="bf43c618-75d9-465a-85f0-80d3e024f687" />
 
@@ -121,8 +121,10 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       - From the Git Bash change directory `nim-deploy\cloud-service-providers\azure\azureml\cli`.
       - Configuration settings defined in `config.sh`.
       - Provide a unique name for **workspace** and **acr_registry_name**, utilizing `<inject key="Deployment ID" />` as a suffix.
+      -  Provide a **endpoint_name** as **llama-3-1-8b-nim-endpoint<inject key="Deployment ID" />** 
+      - Provide a **deployment_name** as **llama3-1-8b-nim-deployment<inject key="Deployment ID" />** 
       - This step is crucial for loading environment variables, paths, or any other configuration before running dependent commands.
-      - Login to the Azure portal using CLI command.
+      - Login to the Azure portal using the CLI command.
 
    - **Setup AzureML Workspace**
 
