@@ -1,4 +1,4 @@
-# Challenge 02: Deploy NVIDIA NIM to Azure
+# Challenge 01: Deploy NVIDIA NIM to Azure
 
 ### Estimated Time: 90 minutes
 
@@ -364,7 +364,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ```cmd
    ./3_save_nim_container.sh
    ```
-   >**Note:** This action will approximately take around 20-25 Minutes.
+   > **Note**: This step will take approximately 30-40 minutes to pull the image from the NVIDIA registry and push it to the Azure Container Registry (ACR). In the meantime, please skip the subsequent steps for now, proceed to complete Challenge 2, and return to continue from the next step once Challenge 2 is finished. 
 
 1. Navigate to your container registry (**amlregistry**) , Under the service click on the Respositiories select your **nim-meta-llama-3.1-8b-instruct** regiestry, here you will find your image is pushed with the tag name **latest**.
 
