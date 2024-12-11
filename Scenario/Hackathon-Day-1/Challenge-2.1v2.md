@@ -122,7 +122,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       - Configuration settings defined in `config.sh`.
       - Provide a unique name for **workspace** and **acr_registry_name**, utilizing **<inject key="Deployment ID" />** as a suffix.
       -  Provide a **endpoint_name** as **llama-3-1-8b-nim-endpoint<inject key="Deployment ID" />** 
-      - Provide a **deployment_name** as **llama3-1-8b-nim-deployment<inject key="Deployment ID" />** 
+      - Provide a **deployment_name** as **llama3-1-8b-nim-dep<inject key="Deployment ID" />** 
       - This step is crucial for loading environment variables, paths, or any other configuration before running dependent commands.
       - Login to the Azure portal using the CLI command.
 
