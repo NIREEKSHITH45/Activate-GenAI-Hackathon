@@ -1,4 +1,4 @@
-# Challenge 1: Deploy Azure OpenAI Service and LLM Models
+# Challenge 2: Deploy Azure OpenAI Service and LLM Models
 
 ### Estimated Time: 30 minutes
 
@@ -64,6 +64,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 - Verify that the Azure OpenAI Service is successfully deployed in the existing resource group - <inject key="Resource Group Name"/>.
 - Verify that the Large Language Models (LLM), `gpt-35-turbo` and `text-embedding-ada-002`, are successfully deployed with the Azure OpenAI Service.
+- Now go back to previous challenge and continue from the remaining steps. 
 
 ## Additional Resources:
 
