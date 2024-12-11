@@ -276,7 +276,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | **location** | **EastUS2**, **CentralUS** (Choose the same location where the resource group is and make sure there is no space between the location name) |
     | **ngc_api_key** | Provide the NGC key  |
     | **email_address** | Enter the email from the Environmental Details tab  |
-    | **acr_registry_name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** |
+    | **acr_registry_name** | **amlregistry{suffix}** |
     | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
 
    ![](../../Coach/media/vscode4.png)
