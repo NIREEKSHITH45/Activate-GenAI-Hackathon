@@ -282,7 +282,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | **acr_registry_name** | **amlregistry{suffix}** |
     | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
     | **endpoint_name** | **llama-3-1-8b-nim-endpoint{suffix}** |
-    | **deployment_name** | **llama3-1-8b-nim-deployment{suffix}** |
+    | **deployment_name** | **llama3-1-8b-nim-dep{suffix}** |
 
    ![](../../Coach/media/vscode4.png)
 
@@ -432,7 +432,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
    curl -X 'POST' \
      'https://llama-3-1-8b-nim-endpoint-aml-1.eastus2.inference.ml.azure.com/v1/chat/completions' \
      -H 'accept: application/json' \
-     -H 'azureml-model-deployment: llama3-1-8b-nim-deployment{suffix}' \
+     -H 'azureml-model-deployment: llama3-1-8b-nim-dep{suffix}' \
      -H 'Authorization: Bearer 3L3s8qb6dCQq7TTgorFnwDVZT8qsvId5' \
      -H 'Content-Type: application/json' \
      -d '{
