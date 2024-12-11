@@ -120,7 +120,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
       - From the Git Bash change directory `nim-deploy\cloud-service-providers\azure\azureml\cli`.
       - Configuration settings defined in `config.sh`.
-      - Provide a unique name for **workspace** and **acr_registry_name**, utilizing `<inject key="Deployment ID" />` as a suffix.
+      - Provide a unique name for **workspace** and **acr_registry_name**, utilizing **<inject key="Deployment ID" />** as a suffix.
       -  Provide a **endpoint_name** as **llama-3-1-8b-nim-endpoint<inject key="Deployment ID" />** 
       - Provide a **deployment_name** as **llama3-1-8b-nim-deployment<inject key="Deployment ID" />** 
       - This step is crucial for loading environment variables, paths, or any other configuration before running dependent commands.
@@ -129,7 +129,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
    - **Setup AzureML Workspace**
 
       - Execute the `1_set_credentials.sh` file to create a new `AzureML workspace` with the "Azure ML Secrets Reader" role assignment.
-      - Verfiy the AzureML workspace is created in the azure-ml resource group.
+      - Verify the AzureML workspace is created in the azure-ml resource group.
 
           <validation step="1993b774-7dfb-4aeb-a792-112946b90e86" />
 
@@ -139,7 +139,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
    
    - **Save NIM Container in Your Container Registry**
 
-       - Run the `./3_save_nim_container.sh` script to push NIM container in your container registry.
+       - Run the `./3_save_nim_container.sh` script to push the NIM container in your container registry.
        - Verify that the NIM container has been published in the container registry by checking the `Repositories`.
        - Copy the `Repositories` endpoint.
 
@@ -149,7 +149,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
    
    - **Role Assignment**
        
-       - Proivde `AcrPull` role assignment to the Machine Learning Online endpoint managed idenity.
+       - Provide `AcrPull` role assignment to the Machine Learning Online endpoint managed identity.
 
    - **Create AzureML Deployment of the NIM Container**
 
@@ -157,7 +157,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
    
    - **Verify the Connection**
 
-     - Naviagte to `Machine learning Endpoint` in `Azure Machine Learning workspace` select the deployed **Endpoint**.
+     - Navigate to `Machine learning Endpoint` in `Azure Machine Learning workspace` and select the deployed **Endpoint**.
      
      - Copy the `endpoint` and `Primary Key` under Consume.
      
@@ -167,7 +167,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
   
        > **Note**: Ensure to append `/v1/chat/completions` to the end of the endpoint.
       
-      - Run `test_chat_completions.sh` file to Verify Connection
+      - Run `test_chat_completions.sh` file to Verify the Connection
 
 
 ## Success Criteria:
