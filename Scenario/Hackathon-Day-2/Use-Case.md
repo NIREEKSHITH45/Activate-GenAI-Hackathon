@@ -1,21 +1,39 @@
 # Hackathon Mission and Use-Case
+
 Welcome to the Activate GenAI Hackathon, proudly presented by Contoso Ltd. Our mission is to leverage the power of Azure OpenAI to revolutionize Contoso's technology stack, streamlining operations and scaling customer engagement like never before. This hackathon serves as a beacon of innovation, challenging you to build AI-enabled solutions that are not only transformative but also scalable and efficient.
 
 As a beacon of innovation in the business world, Contoso Ltd. is unwavering in its commitment to leading the charge in the adoption of cutting-edge technologies. We recognize the incredible potential of Azure OpenAI services to transform every aspect of our business operations. Our goal for this hackathon is to explore and implement AI-driven applications that seamlessly integrate with our existing infrastructure, thereby enhancing operational scalability and enriching customer interactions.
 
 Your challenge, as the torchbearers of innovation, is to dive deep into the world of Azure OpenAI and harness its robust capabilities. Contoso Ltd. is counting on you to design and deploy applications that will:
 
+# Hackathon Mission and Use-Case
+
+Welcome to the Activate GenAI Hackathon, an initiative brought to life by Contoso Ltd. Our mission is to unlock the capabilities of AI and Large Language Models (LLMs) to redefine the landscape of enterprise solutions. This hackathon is a critical milestone in our quest for AI innovation, pushing us to discover groundbreaking applications that resonate with our strategic vision. We inspire participants to think beyond the conventional, leverage AI technologies in transformative ways, and contribute to setting new benchmarks in AI-driven enterprise solutions.
+
+As a forward-thinking entity in the tech sphere, Contoso Ltd. acknowledges the extraordinary impact that AI, particularly Azure OpenAI services, can have on business processes and customer interaction. Our ambition for this hackathon is to harness, experiment with, and execute AI-infused solutions that integrate flawlessly with our existing frameworks, boosting operational effectiveness and customer satisfaction.
+
+Your mandate, as avant-garde developers, is to navigate the vast expanse of AI, harnessing Azure OpenAI’s sophisticated tools. We are entrusting you with the task of ideating and developing applications that can:
+
 1. **Integrate Azure OpenAI into Contoso's Corporate Ecosystem**
+    
     - Deploy and experiment with LLMs to enrich GenTech's communication channels, focusing on interpreting, analyzing, and summarizing internal and external communications for more streamlined and impactful exchanges.
+
 2. **Implement Intelligent Document Search**
+    
     - Engineer innovative tools that allow for efficient indexing and searching of vast document repositories, enabling rapid retrieval of information and knowledge discovery, crucial for informed decision-making within GenTech.
-3. **Establish AI-Powered Chat Interactions**
+
+3. **Deploy NVIDIA NIM Microservices for Generative AI on Azure**
+    
+    - Deploy NVIDIA NIM microservices on Azure to seamlessly integrate generative AI models, leveraging NVIDIA GPUs for optimal performance. This setup enables real-time, scalable AI inference for applications requiring sophisticated document and data analysis, empowering enterprise-level decision-making with secure, high-efficiency AI deployment.
+
+4. **Establish AI-Powered Chat Interactions**
+    
     -  Deploy and refine conversational AI interfaces within Contoso's digital ecosystem, ensuring they can handle intricate, multilingual conversations with finesse, thereby elevating the user experience on our platforms.
-4. **Establish AI-Powered Personalized Chat Experience with Private Data**
-    - Enhance the conversational AI interfaces by equipping them with personalized data, such as by building a bot for employees to inquire about the company's benefits.
-6. **Enhanced Document Handling and Accessibility**
+
+5. **Enhanced Document Handling and Accessibility**
     - In the fast-paced environment at Contoso Ltd., the ability to quickly access and interpret a vast array of documents is paramount. By implementing AI-driven document indexing and searching, Contoso can vastly improve knowledge management and operational efficiency.
-7. **Operationalizing AI Solutions**
+
+6. **Operationalizing AI Solutions**
     - Contoso would like to evaluate the technologies available to operationalize the solutions, with proper logging and monitoring to ensure continuous availability and SLAs. 
 
 Throughout the challenges of this hackathon, you will interact with state-of-the-art technologies essential for realizing Contoso's objectives. You will be equipped with the necessary arsenal of tools and services to effectively bring these use cases to fruition.
