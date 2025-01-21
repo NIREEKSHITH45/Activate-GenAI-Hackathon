@@ -1,4 +1,6 @@
-# Challenge 05: Serverless Document Batch Processing 
+# Challenge 05: Serverless Document Batch Processing
+
+### Estimated Time: 90 minutes
 
 ## Introduction:
 
