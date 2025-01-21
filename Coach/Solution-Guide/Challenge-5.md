@@ -1,7 +1,5 @@
 # Challenge 05: Serverless Document Batch Processing
 
-### Estimated Time: 90 minutes
-
 ## Introduction:
 
 Welcome to a pivotal challenge where Contoso Ltd. aims to enhance its AI-powered chat app with a robust document processing system. This challenge focuses on creating a serverless solution for processing new documents, translating them as needed, and seamlessly storing them into Azure AI Search. This system will ensure that these documents are continuously available for consumption by Azure OpenAI, enhancing the chat app's knowledge base and response accuracy.
