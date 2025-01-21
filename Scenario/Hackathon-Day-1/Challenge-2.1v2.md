@@ -53,28 +53,66 @@ Ensure you have the following from the CloudLabs-provided integrated environment
 Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
 1. **Generate NGC API KEY**
-    
-   -  Navigate to [nvidia](https://ngc.nvidia.com/signin) portal and login using your credentials.
-      
-      >**Note:** If you don't have an account, simply enter your work/personal email account and submit, and you'll be redirected to the account creation page to provide the necessary details and set up your account.
+
+   - Login or Create Nvidia account 
+
+   - Navigate to https://build.nvidia.com/ login using your personal email id. If not create an account.
+
+   - Verify you are provided with 1000 free credits, each translating into one API call by clicking on **Profile**. 
    
-   - Search for and select **Llama-3.1-8b-instruct**, then click **Get Container**.
+   -  Navigate to [Nvidia](https://ngc.nvidia.com/signin) account using your credentials to proceed and Click on the **join**.
+    
+   - Once your account is created or you've successfully logged in.
 
-     ![](../../Coach/media/nv5.png)
+   - You will see a pop-up. On the **Set Email Preferences For Your Services** page, you can either close it or click **Set Email Preferences** to receive updates regarding security, announcements, and maintenance for all your services.
 
-   - **Join** for the **NVIDIA Developer Program** to proceed to the NVIDIA Developer Portal.
+      ![](../../Coach/media/nv8.png)
 
-   - Provide the required details on the **Integrate NIM into your application** section and click **Join**.
+   - In the search bar, look for **Llama-3.1-8b-instruct**.
 
-   - Navigate to your **NVIDIA Account**, go to **Organization > Subscriptions**, and ensure the **Active** status for the NVIDIA Developer Program.
+      ![](../../Coach/media/nv7.png)
 
-     ![](../../Coach/media/nv2.png)
+   - Scroll down and select **Llama-3.1-8b-instruct**. 
 
-   - Click on your **Nvidia Account**, **Generate API Key** under `Setup`.
+      ![](../../Coach/media/nv6.png)
 
-   - Copy the `Generated API key` in a notebook
+   - On the left-hand side, click **Get Container**.
 
-2. **Deploy Container registries**
+      ![](../../Coach/media/nv5.png)
+
+   - A pop-up will appear on the **Approval Required** page. Click **Join** for the **NVIDIA Developer Program**, and it will redirect you to the NVIDIA Developer Portal.
+
+      ![](../../Coach/media/nv4.png)
+
+   - On the **NVIDIA Developer Portal**, under **Integrate NIM into your application**, provide the necessary details and click **Join**.
+
+      ![](../../Coach/media/nv3.png)
+
+   - Navigate back to your **NVIDIA Account**. From **Organization**, click **Subscriptions** on the left. Here, you will see the **Active** status for the NVIDIA Developer Program.
+
+      ![](../../Coach/media/nv2.png)
+
+   - Click on **Account** at the top of the page and navigate to the **Setup** section.
+
+      ![](../../Coach/media/nvidia4.png)
+
+   - Click on **Generate API Key** to create a new key for accessing the necessary services.
+
+      ![](../../Coach/media/nvidia5.png)
+
+   - From the top, click on **+ Generate API Key** to create a new API key.
+
+      ![](../../Coach/media/nvidia8.png)
+
+   - Click on **Confirm** to generate your new API key.
+
+      ![](../../Coach/media/nvidia9.png)
+
+   - Carefully copy your generated API key, essential for accessing various services and features paste the API key in the notebook. Ensure you store it securely, as it may not be displayed again after you leave the page.
+
+      ![](../../Coach/media/nvidia7.png)
+
+1. **Deploy Container registries**
 
    - Deploy a Container registry with the following details.
 
