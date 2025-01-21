@@ -1,4 +1,4 @@
-# Activate Gen AI - 2 Day Hackathon
+# Activate Gen AI: 2-Day Attendee Guide
 
 Welcome to the Activate Gen AI Hackathon. This two-day event is designed to immerse you in the world of AI application development, harnessing the power and versatility of the Azure OpenAI Service.
 
@@ -30,7 +30,7 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 
 ## Challenges Overview
 
-# Activate GenAI with Azure - 2 Day Hackathon
+# Activate GenAI with Azure: 2-Day Attendee Guide
 
 Welcome to the Activate GenAI Hackathon! Today, you're set to dive into the transformative world of AI, with a focus on utilizing the power of Azure OpenAI services. Prepare yourself for a day of intense learning, innovation, and hands-on experience that will elevate your understanding of AI integration in application development.
 
