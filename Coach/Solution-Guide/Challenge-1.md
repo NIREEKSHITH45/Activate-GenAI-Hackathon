@@ -104,55 +104,56 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can
 
     ![](../media/solt2s2.png)
 
-1. In the Azure OpenAI resource pane, select **Overview (1)** from the left-hand menu, then click on **Go to Azure OpenAI Studio (2)**. This will navigate you to Azure AI Studio.
+1. In the Azure OpenAI resource pane, select **Overview** from the left-hand menu, then click on **Go to Azure AI Foundry Portal**. This will navigate you to Azure AI Studio.
 
-   ![](../media/solt2s3.png)
+   ![](../media/a19.png)
 
    >**Note :** If the pop-up Discover an even better Azure AI Studio experience appears, click Close to dismiss it.
 
-1. Click on **Deployments (1)** under **Shared Resources**, then select **+ Deploy Model**. Next, **choose Deploy Base Model (2)**.
+1. Click on **Deployments (1)** under **Shared Resources**, then select **+ Deploy Model (2)**. Next, **choose Deploy Base Model (3)**.
 
-    ![](../media/solimage5.png)
+    ![](../media/a20.png)
 
 1. Search for **gpt-35-turbo** and click on **Confirm**.
 
     ![](../media/solimage2.png)
 
 1. Within the Deploy model pop-up interface, click on **Customize** and enter the following details:
-      - Deployment name: text-turbo(1)
-      - Deployment type: Standard(2)
-      - Model version: 0301(Default)(3)
-      - Tokens per Minute Rate Limit (thousands): 20K (4)
-      - Enable dynamic quota: Enabled (5)
-      - Click on Deploy (6)
+      - Deployment name: **text-turbo (1)**
+      - Deployment type: **Standard (2)**
+      - Model version: **0301(Default) (3)**
+      - Tokens per Minute Rate Limit (thousands): **20K (4)**
+      - Enable dynamic quota: **Enabled (5)**
+      - Click on **Deploy (6)**.
         
-     ![](../media/solimage4.png)
+        ![](../media/solimage4.png)
 
-     >**Note:** If the **Customize** option doesn't appear, you can directly enter the model deployment details. 
+        >**Note:** If the **Customize** option doesn't appear, you can directly enter the model deployment details. 
 
-1. Back on the **Deployments** page again, then select **+ Deploy Model**. Next, **choose Deploy Base Model (2)**.
+1. Back on the **Deployments (1)** page again, then select **+ Deploy Model (2)**. Next, **choose Deploy Base Model (3)**.
 
-     ![](../media/solimage5.png)
+     ![](../media/a20.png)
 
 1. Search for **text-embedding-ada-002** and click on **Confirm**.
 
      ![](../media/solimage6.png)
 
 1. Within the Deploy model pop-up interface, click on **Customize** and enter the following details:
-      - Deployment name: text-ada-002(1)
-      - Deployment type: Standard(2)
-      - Model version: Use the default version(3)
-      - Tokens per Minute Rate Limit (thousands): 20K (4)
-      - Enable dynamic quota: Enabled (5)
-      - Click on Deploy (6)
+   
+      - Deployment name: **text-ada-002 (1)**
+      - Deployment type: **Standard (2)**
+      - Model version: Use the **default version (3)**
+      - Tokens per Minute Rate Limit (thousands): **20K (4)**
+      - Enable dynamic quota: **Enabled (5)**
+      - Click on **Deploy (6)**
         
-     ![](../media/solimage7.png)
+        ![](../media/solimage7.png)
 
-     >**Note:** If the **Customize** option doesn't appear, you can directly enter the model deployment details. 
+        >**Note:** If the **Customize** option doesn't appear, you can directly enter the model deployment details. 
 
 1. Back on the Deployments page, you should see the deployment models **text-turbo** and **text-ada-002** created.
 
-     ![](../media/solimage8.png)
+     ![](../media/a21.png)
 
 ## Success Criteria:
 
