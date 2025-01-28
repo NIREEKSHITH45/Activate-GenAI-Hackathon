@@ -31,7 +31,7 @@ If you have not already cloned the **mslearn-knowledge-mining** code repository 
 
 1. When the repository has been cloned, open the folder in Visual Studio Code by following these steps:
 
-    - From the top left corncer menu select **File (1)** >  **Open Folder (2)**.
+    - From the top left corncer menu select **File (1)** > **Open Folder (2)**.
 
        ![](../media/Active-image44.png)
       
@@ -81,13 +81,15 @@ In this task, you'll learn how to create an **Azure AI Search** resource in the 
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default  **(1)**                                 |
-   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**                |
+   | Resource Group     | **Activate-GenAI** **(2)**                |
    | Name               | *Enter a unique name* for your search service or use the format **searchservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Location           | Use the same location as the resource group **(4)**           |
    | Pricing tier       | Basic   **(5)**                                               | 
 
     >**Note**: Here, xxxxxx refers to the deployment ID
+    
     >**Note**: If you encounter the error **Cannot get costs for subscription**, please ignore it and proceed with the next step.
+    
     >**Note**: If you face any issues while deploying the search service in selected region. please select different region to deploy the search service. 
     
     ![](../media/Active-image25.png)
@@ -123,7 +125,7 @@ In this task, you'll learn how to create an Azure AI Search resource in the Azur
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default  **(1)**                                 |
-   | Resource Group     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
+   | Resource Group     | **Activate-GenAI**  **(2)**        |
    | Name               | *Enter a unique name* for your Azure AI Services or use the format **challengeservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Location           | Use the same location as the resource group  **(4)**          |
    | Pricing tier       | Standard S0     **(5)**                                        |
@@ -154,7 +156,7 @@ In this task, you'll learn how to create a **Storage account** resource in the A
    | **Option**            | **Value**                                              |
    | ------------------    | -----------------------------------------------------  |
    | Subscription          | Leave default **(1)**                                  |
-   | Resource Group        | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**         |
+   | Resource Group        | **Activate-GenAI** **(2)**         |
    | Storage account name  | *Enter a unique name* for your Storage account or use the format **storagexxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Region                | Use the same location as the resource group **(4)**    |
    | Performance           | Standard **(5)**                                       |
@@ -322,7 +324,7 @@ In this task, you'll learn how to create a search solution by indexing documents
           2. Runs the skillset of cognitive skills to generate additional enriched fields.
           3. Maps the extracted fields to the index.
       
-          ![](../media/Active-image65.png)  
+             ![](../media/Active-image65.png)  
 
 1. On **Azure AI Search** resource page, expand **Search management (1)** select **Indexers (2)** which should show the newly created **margies-indexer (3)**.
 
