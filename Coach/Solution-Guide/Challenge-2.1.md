@@ -283,9 +283,9 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
    curl -L -o /usr/bin/jq.exe https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe
    ```
 
-1.    - Install the az CLI by navigating to the below link:
+1. Install the az CLI by navigating to the below link:
 
-       ```
+      ```
       $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://azcliprod.blob.core.windows.net/msi/azure-cli-2.51.0.msi -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item .\AzureCLI.msi
       ```
 
@@ -329,9 +329,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
    ![](../../Coach/media/vscode1.png)
 
-1. Go to the **Explorer** panel in the upper left corner, click on **Open Folder**, and then select the **nim-deploy** folder from your Desktop.
-
-1. Navigate to the **cli folder**, and then click on **Select Folder** to open it in Visual Studio Code.
+1. Go to the **Explorer** panel in the upper left corner, click on **Open Folder**,  select **cli folder** from the location where you have cloned the repo in previous step `Desktop/cloud-service-providers/azure/azureml/cli` , and then click on **Select Folder** to open it in Visual Studio Code.
 
    ```
    Desktop\nim-deploy\cloud-service-providers\azure\azureml\cli
@@ -348,19 +346,23 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | Setting | Action |
     | -- | -- |
     | **subscription_id** | **<inject key="SubscriptionID" enableCopy="false"/>** |
-    | **resource_group** | **ODL-GenAI-CL-XXXXXX-01**  |
-    | **workspace** | **ml-workspace** (Provide the name of workspace you want to create) |
-    | **location** | **EastUS2**, **CentralUS** (Choose the same location where the resource group and make sure there is no space between the loaction name) |
+    | **resource_group** | **Activate-GenAI**  |
+    | **workspace** | **ml-workspace{suffix}** (Provide the name of the workspace you want to create) |
+    | **location** | **EastUS2**, **CentralUS** (Choose the same location where the resource group is and make sure there is no space between the location name) |
     | **ngc_api_key** | Provide the NGC key  |
-    | **email_address** | Enter the email from Environmental Details tab  |
-    | **acr_registry_name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** |
+    | **email_address** | Enter the email from the Environmental Details tab  |
+    | **acr_registry_name** | **amlregistry{suffix}** |
     | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
-
-   > **Note**: Unique ID (XXXXXX) refers to DeploymentID.
+    | **endpoint_name** | **llama-3-1-8b-nim-endpoint{suffix}** |
+    | **deployment_name** | **llama3-1-8b-nim-dep{suffix}** |
 
    ![](../../Coach/media/vscode4.png)
 
    ![](../../Coach/media/up2.png)
+
+   > **Note** : Replace `{suffix}` with the Deployment ID. Navigate to **Environment** **(1)**, and copy the **Deployment ID** from the **User Name** field.
+
+   ![](../media/a26.png)
 
 1. Press **Ctrl + S** to save the changes you made to the file.
 
@@ -376,21 +378,21 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
    - **Username:** <inject key="AzureAdUserEmail"></inject>
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-   ```
-   source config.sh
-   ```
-   ```
-   az login --user <Username> --password <Password>
-   az account set -s ${subscription_id}
-   ```
-   > **Note:** If you encounter any issues during login, you can execute the following command.
+      ```
+      source config.sh
+      ```
+      ```
+      az login --user <Username> --password <Password>
+      az account set -s ${subscription_id}
+      ```
+      > **Note:** If you encounter any issues during login, you can execute the following command.
 
-   ```
-   az account clear
-   az config set core.enable_broker_on_windows=false
-   az login --user <Username> --password <Password>
-   az account set -s ${subscription_id}
-   ```
+      ```
+      az account clear
+      az config set core.enable_broker_on_windows=false
+      az login --user <Username> --password <Password>
+      az account set -s ${subscription_id}
+      ```
 
 1. This will prompt an Azure login window; please select your credentials to log in.
 
@@ -448,6 +450,21 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ```
 
    >**Note :** This command creates an endpoint with the name provided in the config.sh file.
+   > **Note :** If you see an `ERROR: 'ml' is misspelled or not recognized by the system.` Run the below commands to remove, install and verify ml extension.
+
+   ```
+   az extension remove -n ml
+   ```
+
+   ```
+   az extension add -n ml
+   ```
+
+   ```
+   az ml -h
+   ```
+
+   >**Note :** Rerun the command to create endpoint.
 
 ###  Task 10: Role Assignment
 
@@ -475,6 +492,8 @@ Create an AzureML deployment with the NIM container obtained from the provided A
    ./5_create_deployment.sh
    ```
 
+   >**Note:** This action will approximately take around 20-25 Minutes.
+
 ### Task 12: Verify Your Connection
 
 1. Return to the **Azure Portal**.
@@ -491,7 +510,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 
    ![](../../Coach/media/nvverify3.png)
 
-5. In VS Code, open the **`test_chat_completions.sh`** file. Replace the following headers `<your-azureml-endpoint>`, `<your-azureml-endpoint-token>`, and `<deployment-name>` with the appropriate values. Ensure the **deployment-name** matches the one in your `config.sh` file.
+5. In VS Code, open the **`test_chat_completions.sh`** file. Replace the following headers `<your-azureml-endpoint>`, `<your-azureml-endpoint-token>`, and `<deployment-name>` with the appropriate values. Ensure the **deployment-name** matches the one in your `config.sh` file and save the file.
 
    >**Note:** Ensure to add **/v1/chat/completions** towards the end of the endpoint.
 

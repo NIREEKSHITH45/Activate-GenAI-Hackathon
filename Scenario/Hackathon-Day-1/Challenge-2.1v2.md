@@ -121,7 +121,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
      | **Subscription** | Default |
      | **Resource Group** | Select the ****<inject key="Resource Group Name"/>**** resource group |
      | **Registry name** | Enter **unique name** |
-     | **Location** | Choose the same location where the resource group  |
+     | **Location** | Choose the location as per the subscription  |
      | **Pricing plan** | **Standard** |
 
    - Copy the `Subscription ID` and `Container registries` name in the notepad.
@@ -161,8 +161,13 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
    - **Configuration and Login to Azure**
 
       - From the Git Bash change directory `nim-deploy\cloud-service-providers\azure\azureml\cli`.
-      - Configuration settings defined in `config.sh`. This step is crucial for loading environment variables, paths, or any other configuration before running dependent commands.
-      - Login to the Azure portal using the CLI command
+      - Configuration settings defined in `config.sh`.
+      - Provide a unique name for **workspace** and **acr_registry_name**, utilizing **<inject key="Deployment ID" />** as a suffix.
+      -  Provide a **endpoint_name** as **llama-3-1-8b-nim-endpoint<inject key="Deployment ID" />** 
+      - Provide a **deployment_name** as **llama3-1-8b-nim-dep<inject key="Deployment ID" />** 
+      - This step is crucial for loading environment variables, paths, or any other configuration before running dependent commands.
+      - Login to the Azure portal using the CLI command.
+
 
    - **Setup AzureML Workspace**
 
