@@ -1,0 +1,33 @@
+[ 
+  {
+  "Name": "Activate GenAI Hackathon - Day 1",
+  "Language": "English",
+  "BaseURL": "https://github.com/CloudLabs-MOC/Activate-GenAI-Hackathon/tree/main",
+  "Files": [
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Coach/Solution-Guide/Challenge-1.md",
+       "Order": 1
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Microsoft_repo/Coach/Solution-Guide/Challenge-2.md",
+       "Order": 2
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Nvidia-Content/Coach/Solution-Guide/Challenge-2.1.md",
+       "Order": 3
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Nvidia-Content/Coach/Solution-Guide/Challenge-3.md",
+       "Order": 4
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Coach/Solution-Guide/Challenge-5-new.md",
+       "Order": 5
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Coach/Solution-Guide/Challenge-6-new.md",
+       "Order": 6
+     }
+  ]
+ } 
+]
