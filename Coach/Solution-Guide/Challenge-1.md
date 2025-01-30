@@ -121,18 +121,18 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can
 1. Within the Deploy model pop-up interface, click on **Customize** and enter the following details:
       - Deployment name: **text-turbo (1)**
       - Deployment type: **Standard (2)**
-      - Model version: **0301(Default) (3)**
+      - Model version: **0125(Default) (3)**
       - Tokens per Minute Rate Limit (thousands): **20K (4)**
       - Enable dynamic quota: **Enabled (5)**
-      - Click on **Deploy (6)**
+      - Click on **Deploy (6)**.
         
-     ![](../media/solimage4.png)
+        ![](../media/a24.png)
 
-     >**Note:** If the **Customize** option doesn't appear, you can directly enter the model deployment details. 
+        >**Note:** If the **Customize** option doesn't appear, you can directly enter the model deployment details. 
 
-1. Back on the **Deployments** page again, then select **+ Deploy Model**. Next, **choose Deploy Base Model (2)**.
+1. Back on the **Deployments (1)** page again, then select **+ Deploy Model (2)**. Next, **choose Deploy Base Model (3)**.
 
-     ![](../media/solimage5.png)
+     ![](../media/a20.png)
 
 1. Search for **text-embedding-ada-002** and click on **Confirm**.
 
