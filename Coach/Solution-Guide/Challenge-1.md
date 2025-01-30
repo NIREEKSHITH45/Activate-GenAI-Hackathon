@@ -146,13 +146,11 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can
       - Enable dynamic quota: **Enabled (5)**
       - Click on **Deploy (6)**
         
-     ![](../media/solimage7.png)
+        ![](../media/solimage7.png)
 
-     >**Note:** If the **Customize** option doesn't appear, you can directly enter the model deployment details. 
+        >**Note:** If the **Customize** option doesn't appear, you can directly enter the model deployment details. 
 
 1. Back on the Deployments page, you should see the deployment models **text-turbo** and **text-ada-002** created.
-
-     ![](../media/solimage8.png)
 
 ## Success Criteria:
 
