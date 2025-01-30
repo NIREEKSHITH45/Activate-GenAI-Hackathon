@@ -37,6 +37,7 @@ Azure OpenAI collects the same kinds of monitoring data as other Azure resources
    ![](../media/4-2.png)
 
 1. To create a new Diagnostic Settings, on the **Diagnostic Settings** page, configure the following fields:
+   
    - **Diagnostic settings name:** **OpenAI Diagnostic Setting (1)**
    - Select **Send to Log Analytics workspace (2)** - To be checked.
    - **Subscription**: Default - Pre-assigned subscription **(3)**
@@ -44,6 +45,7 @@ Azure OpenAI collects the same kinds of monitoring data as other Azure resources
    - Under **Logs** - Select **allLogs (5)**.
    - Under **Metrics**, select **allMetrics (6)**.
    - To save the configuration, click on **Save (7)**.
+
 
    ![](../media/Active-image225.png)
 
@@ -55,13 +57,13 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 1. Navigate back to the Azure OpenAI service that was previously created.
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio**; it will navigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Explore Azure AI Foundary portal**; it will navigate to **Azure AI Studio**.
 
 1. Click on **Chat** under the **Playgrounds** tab in the left pane.
 
     ![](../media/aigen9.png)
    
-1. In the **Playground** section, select the **chat** page, and ensure that the **text-turbo (1)** deployment is selected in the configuration pane. In the **Give the model instructions and context (2)** section, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`. Click on **Apply changes (3)**.
+1. In the **Playground** section, select the **Show setup** page, and ensure that the **text-turbo (1)** deployment is selected in the configuration pane. In the **Give the model instructions and context (2)** section, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`. Click on **Apply changes (3)**.
 
    ![](../media/aigen10.png)
 
@@ -70,19 +72,20 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
    ![](../media/aigen5.png)
    
 1. Enter the following message and response in the designated boxes:
+   
    - **User**: `What are different types of artificial intelligence?` **(1)**
           
    - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`  **(2)**
           
    - Click on **Apply changes (3)** to start a new session and set the behavioral context of the chat system.
 
-       ![](../media/aigen8.png)
+   ![](../media/aigen8.png)
 
     > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
              
    > **Note**: Click on **Continue** when prompted with **Update system message?**.
 
-      ![](../media/Active-image230.png)
+   ![](../media/Active-image230.png)
           
 1. Within the query box of the chat session pane, enter the text `What is artificial intelligence?`
    
@@ -146,11 +149,11 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
 
 Creating a diagnostic setting and linking Azure OpenAI to a log analytics workspace does help in capturing native logs; however, the Log Analytics workspace is incapable of logging the user request and OpenAI model response prompts. In such scenarios, the Azure API Management Service comes in handy.
 
-1. Within the global search bar, search for and select the **API Management Services**, and select it
+1. Within the global search bar, search for and select the **API Management services**, and select it
 
     ![](../media/Active-image234.png)
 
-1. Click on Create.
+1. Click on **+ Create**.
 
    ![](../media/Active-image235.png)
 
@@ -165,9 +168,9 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
       - Pricing Tier: Select **Standard (99.95% SLA) (7)**
       - Unit(s): **1 (8)**
     
-          ![](../media/Active-image257.png)
+   ![](../media/Active-image257.png)
 
-          ![](../media/aigen7.png)
+   ![](../media/aigen7.png)
 
 1. On **Review + Create** tab once validation passed click on **Create**.
 
@@ -199,7 +202,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
     - Finally, copy the **Endpoint (4)** API URL by clicking on **Copy to clipboard**. Paste it in a text editor such as Notepad for later use.
 
-         ![](../media/k&e.png "Create Azure OpenAI resource")
+   ![](../media/k&e.png "Create Azure OpenAI resource")
    
 1. In the **OpenAI**, select **Access control (IAM)** **(1)**, click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
 
@@ -234,16 +237,16 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
 1. In the API Management service, click on **APIs** **(1)**, click on the **three dots** **(2)** next to miyagi-api, select **Import** **(3)**, and click on **OpenAPI** **(4)**.
 
-    ![](../media/api-openi-import.png)
+   ![](../media/api-openi-import.png)
 
 1. Within the **Import from OpenAPI specification** pop-up window, enter and configure the following details:
     - **OpenAPI specification:** `https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/cognitiveservices/data-plane/AzureOpenAI/inference/stable/2023-05-15/inference.json` **(1)**
     - **Import method:** Select **Update (2)**
     - Click on **Import (3)** to update the existing API with the above OpenAPI specification.
 
-      ![](../media/import-api-2.png)
+   ![](../media/import-api-2.png)
 
-         > **Note:**  The OpenAPI specification is a JSON file that contains the API specifications of Azure OpenAI. You can have a detailed look at the specifications by accessing the above-provided link for a deeper understanding and clarity.
+   > **Note:**  The OpenAPI specification is a JSON file that contains the API specifications of Azure OpenAI. You can have a detailed look at the specifications by accessing the above-provided link for a deeper understanding and clarity.
 
 1. Click on the newly added API and observe the presence of multiple POST operations based on the OpenAPI specification that was provided earlier.
 
@@ -261,7 +264,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
      ![](../media/api-product2.png)
 
-1. In the API Management service, click on **subscriptions** **(1)** under APIs from the left menu and click on **+ Add subscription** **(2)**.
+1. In the API Management service, click on **Subscriptions** **(1)** under APIs from the left menu and click on **+ Add subscription** **(2)**.
 
     ![](../media/api-product3.png)
 
@@ -275,7 +278,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     - Within the Inbound processing tile, click on the ellipses **(2)** adjacent to the **base** policy.
     - Click on **Code editor (3)**.
    
-      ![](../media/allop.png)
+   ![](../media/allop.png)
 
 1. In the code editor copy the below policy to overwrite the **inbound** **(1)** tags only, replace **&lt;&lt;Azure_OpenAI_Endpoint&gt;&gt;** **(2)** of API manager which you copy in Task 1 Step 4 and click on **Save** **(3)**.
 
@@ -291,11 +294,11 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
       </inbound>
       ```
 
-      ![](../media/gen28.png)
+   ![](../media/gen28.png)
 
-      ![](../media/gen29.png)
+   ![](../media/gen29.png)
 
-      > **Note**: Please ensure to paste the **OpenAIEndpoint** values and eliminate any duplication of **https://**.
+   > **Note**: Please ensure to paste the **OpenAIEndpoint** values and eliminate any duplication of **https://**.
     
 1. Click on **Save**. Notice that a new policy named **set-backend-service** has been added within the inbound processing tile.
     
@@ -311,7 +314,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     - **Log analytics workspace** : make sure to select **log Analytics workspace** **(6)**
     - Click on **Save (7)**.
 
-      ![](../media/Active-image256.png)
+    ![](../media/Active-image256.png)
     
 1. Now that the API has been successfully added, it requires configuration to call the OpenAI API through the API Management Service, which can be done by following the below steps:
 
@@ -321,9 +324,9 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     - Set the **Number of payload bytes to log (up to 8192)** to **8192 (4)**.
     - Click on **Save (5)**.
 
-         >**Note:** It might take 15-20 minutes for the **Override global** option to appear under **Azure Monitor**.
+      >**Note:** It might take 15-20 minutes for the **Override global** option to appear under **Azure Monitor**.
       
-         ![](../media/diag-logs-configs-1.png)
+   ![](../media/diag-logs-configs-1.png)
       
 ### Task 2.2: Test the API to create completions for chat message
 
@@ -341,10 +344,11 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
         ```
     - Click on **Send (7)**.
 
-      ![](../media/test-api-1.png)
-      ![](../media/test-api-2.png)
+   ![](../media/test-api-1.png)
 
-2. Notice the **HTTP response** that is generated with the reply under the **message** tab:
+   ![](../media/test-api-2.png)
+
+3. Notice the **HTTP response** that is generated with the reply under the **message** tab:
 
    ![](../media/http-response.png)
 
@@ -390,6 +394,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
 5. Let's run another query to monitor prompt completions.
     - Replace the contents of the query editor with the following KQL to log the prompts **(1)**.
+      
     ```
     ApiManagementGatewayLogs
     | where tolower(OperationId) in ('completions_create','chatcompletions_create')

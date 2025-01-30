@@ -14,7 +14,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 ## Challenge Objectives:
 
-> **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>** !
+> **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>** 
 
 1. **Fork the repository and generate a GitHub Personal Access Token (PAT).**
 
@@ -41,7 +41,8 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 6. **Translate Documents and Run the Application:**
    - Implement document translation code in the C#/.NET project.
    - Execute the application to translate all documents in the storage container.
-   > Note: You can find the documents in C:\LabFiles\Documents.
+     
+     > **Note:** You can find the documents in C:\LabFiles\Documents.
 
    <validation step="e7cc8d8f-1ac3-46be-9f16-d5a492ff6147" />
 
@@ -51,12 +52,14 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 1. **Using an Azure Document Intelligence (Form Recognizer) resource:**
     - Navigate to Azure AI services and utilize the Azure Document Intelligence (Form Recognizer) resource.
     - Upload and label training documents to train the Azure Document Intelligence (Form Recognizer) model.
-    > Note: You can find the documents in C:\LabFiles\Documents.
+      
+      > **Note:** You can find the documents in C:\LabFiles\Documents.
 
 2. **Build a New Pipeline with a Custom Model Module in BPA:**
     - Utilize the trained Azure Document Intelligence  to create a new pipeline in BPA.
     - Configure the pipeline for efficient document processing and integration with Azure Cognitive Search.
-    > Hint : Utilize static web app.
+      
+      > **Hint:** Utilize static web app.
 
 3. **Configure Azure AI Search:**
     - Connect to Azure Blob Storage and configure data import and indexing.

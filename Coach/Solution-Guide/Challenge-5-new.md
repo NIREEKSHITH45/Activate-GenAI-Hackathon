@@ -46,7 +46,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
      | **Option**         | **Value**                                              |
      | ------------------ | -----------------------------------------------------  |
      | Subscription       | Leave default  **(1)**                                 |
-     | Resource Group     | **ODL-GenAI-CL-xxxxxx-01**  **(2)**        |
+     | Resource Group     | **Activate-GenAI**  **(2)**        |
      | Name               | *Enter a unique name* for your search service or use the format **AI-Service-xxxxxx** (replace **xxxxxx** with Deployment ID **(3)** |
      | Location           | Use the same location as the resource group  **(4)**    |
      | Pricing tier       | Standard S0     **(5)**                                 |
@@ -93,15 +93,15 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
    - Note: **PAT (1)**
    - Expiration: **7 days (2)**
      
-     ![](../media/Active-image135.png)
+   ![](../media/Active-image135.png)
 
    - Select scopes: Select all the scopes **repo, workflow, write:packages, delete:packages, admin:org, admin:public_key, admin:repo_hook, admin:org_hook, gist,notifications, user, delete_repo, write:discussion, admin:enterprise, audit_log, codespace, copilot, project, admin:gpg_key, admin:ssh_signing_key** and click on **Genearte token**.
 
-      ![](../media/Active-image138.png)
+   ![](../media/Active-image138.png)
 
-      ![](../media/Active-image139.png)
+   ![](../media/Active-image139.png)
 
-      ![](../media/Active-image140.png)
+   ![](../media/Active-image140.png)
 
    >**Reference link**: [Get a Workflow Level Token (Classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
@@ -120,11 +120,11 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
    - Repository Token : Paste the PAT token which you created and recorded in previous step.
    - Repository Url : Paste the **Forked Github account** url
 
-      ![](../media/gen39.png)
+   ![](../media/gen39.png)
   
       >**Note**: Ensure the primary region is set to EASTUS2
       
-       ![](../media/gen47.png)
+    ![](../media/gen47.png)
      
      >**Note**: (you can get URL by click on profile from right corner then select **Your repositories** click on **business-process-automation** and from top bar copy the **Github account** url)
      
@@ -142,7 +142,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
 In this task, you'll learn how to create a container in an existing storage account where the documents that need to be searched are stored.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage account**, and then select **Storage account** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage account**, and then select **Storage accounts** under services.
 
 1. Select the storage account that is created from the resources that were deployed in the previous task.
 
@@ -162,7 +162,7 @@ In this task, you'll learn how to create a container in an existing storage acco
 
      ![](../media/Active-image149.png)
    
-1. From the left navigation pane expand **Settings(1)** then select **Shared Access Tokens(2)**. From the **Permission** drop down select **Read(3)** and **List(4)** then click on **Generate SAS token and URL(5)**.
+1. From the left navigation pane expand **Settings(1)** then select **Shared access tokens(2)**. From the **Permission** drop down select **Read(3)** and **List(4)** then click on **Generate SAS token and URL(5)**.
 
       ![](../media/Active-image150.png)
 
@@ -240,7 +240,7 @@ In this task, we will set up a C#/.NET environment in Visual Studio 2022. We'll 
 
 In this task, you'll set up a Translator resource in Azure Portal, obtain its keys and endpoint, and integrate them into a C# console application in Visual Studio 2022. This application will be configured to batch-translate documents stored in an Azure Storage container using Translator service APIs.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Translator**, and then select **Translator** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Translator**, and then select **Translators** under services.
 
    ![](../media/Active-image166.png)
 
@@ -261,6 +261,7 @@ In this task, you'll set up a Translator resource in Azure Portal, obtain its ke
     ![](../media/Active-image170.png)
 
 1. Paste the copied code into the Program.cs file.
+   
     ![](../media/Active-image173.png)
 
 1. Within Program.cs file. make the following update  
@@ -269,7 +270,7 @@ In this task, you'll set up a Translator resource in Azure Portal, obtain its ke
     - Update **{your-document-translation-endpoint}** and **{your-api-key}** with values of Translator instance which you recorded in the notepad.   
     - Also, update **"https://YOUR-SOURCE-URL-WITH-READ-LIST-ACCESS-SAS\"** and **"https://YOUR-TARGET-URL-WITH-WRITE-LIST-ACCESS-SAS\"** with values from your Storage account container instance which you recorded in notepad.
       
-      ![](../media/Active-image171.png)
+   ![](../media/Active-image171.png)
       
 1. Once you've added the code sample to your application, choose the green Start button next to document-translation-qs to build and run your program, or press F5.
    
@@ -306,32 +307,34 @@ In this task, you'll create a Form Recognizer resource in Azure Portal by settin
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
 
-      ![](../media/Active-image178.png)
+    ![](../media/Active-image178.png)
 
 1. Enter the following details under **Configure service resource** and click on **Continue** **(5)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **ODL-GenAI-CL-xxxxxx-01**.
+   - Resource group: **Activate-GenAI**.
    - Form Recognizer or Cognitive Service Resource: Select the available Cognitive Service Form Recognizer name similar to **cogservicesbpass{suffix}** **(3)**.
    - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
 
-     ![](../media/Active-image179-1.png)
+   ![](../media/Active-image179-1.png)
 
 1. Enter the following details under **Connect training data source**. and click on **Continue** **(8)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **ODL-GenAI-CL-xxxxxx-01** **(2)**.
+   - Resource group: **Activate-GenAI** **(2)**.
    - Storage account name: **Select the existing storage account (3)**.
    - Blob container name: Click on **Create new (4)** and provide the name as **custommoduletext** **(5)** then click on **OK** **(6)**.
    - Review the settings then click on **Continue** **(7)**.
    
-       ![](../media/Active-image180-1.png)
-       ![](../media/Active-image181-1.png)
-       ![](../media/Active-image182-1.png)
+   ![](../media/Active-image180-1.png)
+
+   ![](../media/Active-image181-1.png)
+
+   ![](../media/Active-image182-1.png)
 
 1. Validate the information and choose **Create project**.
 
-      ![](../media/Active-image183.png)
+   ![](../media/Active-image183.png)
 
 ### Task 3: Train and label data
 
@@ -401,15 +404,15 @@ In this task, you'll configure a new pipeline in the Business Process Automation
 
 After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
 
-1. Navigate back to the Resource groups and select the resource group **ODL-GenAI-CL-xxxxxx-01**.    
+1. Navigate back to the Resource groups and select the resource group **Activate-GenAI**.    
 
 1. Go to the Resource group, search, and select the **Static Web App** resource type with a name similar to **webappbpa{suffix}**.
 
-    ![](../media/Active-image199.png)
+   ![](../media/Active-image199.png)
 
 1. On the **Static Web App** page, click on **View app in browser**.
 
-     ![](../media/Active-image200.png)
+   ![](../media/Active-image200.png)
 
 1. Once the **Business Process Automation Accelerator** page is loaded successfully, click on **Create/Update/Delete Pipelines**. 
 
@@ -437,19 +440,19 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 1. On the **Pipelines workshop** page, click on **Home**. 
 
-      ![](../media/Active-image207.png)
+    ![](../media/Active-image207.png)
 
 1. On the **Business Process Automation Accelerator** page, click on **Ingest Documents**.
 
-     ![](../media/Active-image208.png)
+    ![](../media/Active-image208.png)
 
 1. On the **Upload a document to Blob Storage** page, from the drop-down, select a pipeline with the name **workshop** **(1)** and click on **Upload or drop a file right here**.
 
-      ![](../media/Active-image209.png)
+    ![](../media/Active-image209.png)
 
 1. For documents, enter the following `C:\LabFiles\Document\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
 
-      ![](../media/Active-image215.png)
+    ![](../media/Active-image215.png)
 
 ### Task 5: Configure Azure Cognitive Search 
 
@@ -471,7 +474,7 @@ In this task, you'll configure Azure Cognitive Search to connect with Azure Blob
    - Subscription: Select the **existing one (4)**
    - Click on **Choose an existing connection** **(5)** under the Connection string.
   
-     ![](../media/Active-image210.png)
+   ![](../media/Active-image210.png)
 
 1. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix} (6)**. 
 
@@ -489,11 +492,11 @@ In this task, you'll configure Azure Cognitive Search to connect with Azure Blob
 
 1. On the **Customize target index**, enter the index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
 
-      ![](../media/Active-image214.png)
+    ![](../media/Active-image214.png)
 
 1. Expand the **aggregatedResults** **(1)** > **customFormRec (2)** > **documents** **(3)** > **fields** **(4)**. Under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString, & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
 
-   ![](../media/Active-image218.png)
+    ![](../media/Active-image218.png)
 
 1. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
    
