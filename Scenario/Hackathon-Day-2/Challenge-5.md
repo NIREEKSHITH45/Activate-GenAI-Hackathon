@@ -48,7 +48,7 @@ You will utilize the Form Recognizer Service and the Business Process Automation
       > **Note:** You can find the documents in C:\LabFiles\Documents.
 
 
-   <validation step="6936c21b-ffd6-4778-904b-25346932940b" />
+   <validation step="4c00a88c-8fb8-44a7-a1f4-f0afaca4918b" />
 
 **Using Doc Intelligence:**
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**  
