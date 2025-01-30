@@ -104,15 +104,15 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can
 
     ![](../media/solt2s2.png)
 
-1. In the Azure OpenAI resource pane, select **Overview (1)** from the left-hand menu, then click on **Go to Azure OpenAI Studio (2)**. This will navigate you to Azure AI Studio.
+1. In the Azure OpenAI resource pane, select **Overview** from the left-hand menu, then click on **Go to Azure AI Foundry Portal**. This will navigate you to Azure AI Studio.
 
-   ![](../media/solt2s3.png)
+   ![](../media/a19.png)
 
    >**Note :** If the pop-up Discover an even better Azure AI Studio experience appears, click Close to dismiss it.
 
-1. Click on **Deployments (1)** under **Shared Resources**, then select **+ Deploy Model**. Next, **choose Deploy Base Model (2)**.
+1. Click on **Deployments (1)** under **Shared Resources**, then select **+ Deploy Model (2)**. Next, **choose Deploy Base Model (3)**.
 
-    ![](../media/solimage1.png)
+    ![](../media/a20.png)
 
 1. Search for **gpt-35-turbo** and click on **Confirm**.
 
