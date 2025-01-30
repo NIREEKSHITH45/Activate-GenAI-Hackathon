@@ -346,7 +346,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | Setting | Action |
     | -- | -- |
     | **subscription_id** | **<inject key="SubscriptionID" enableCopy="false"/>** |
-    | **resource_group** | **Activate-GenAI**  |
+    | **resource_group** | **ODL-GenAI-CL-XXXXXXX-01**  |
     | **workspace** | **ml-workspace{suffix}** (Provide the name of the workspace you want to create) |
     | **location** | **EastUS2**, **CentralUS** (Choose the same location where the resource group is and make sure there is no space between the location name) |
     | **ngc_api_key** | Provide the NGC key  |
