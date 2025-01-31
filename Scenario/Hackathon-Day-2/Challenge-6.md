@@ -10,7 +10,7 @@ Your task is to implement comprehensive monitoring for the Azure OpenAI service,
 
 ## Challenge Objectives:
 
-> **Important**: When deploying services in this challenge, please make sure to use the resource group named **rg-activategenai**!
+> **Important**: When deploying services in this challenge, please make sure to use the resource group named **rg-activategenai**
 
 1. **Monitoring the Azure OpenAI Service:**
    - Set up diagnostic settings for the existing Azure OpenAI services.
@@ -19,8 +19,7 @@ Your task is to implement comprehensive monitoring for the Azure OpenAI service,
 2. **Monitoring OpenAI prompts using Azure API Management:**
    - Utilize Kusto queries within API Management for comprehensive log analysis, focusing on chat message completions and prompt interactions.
 
-
-   <validation step="9f41c452-42da-4841-9ee1-0c8fcbdbd9ad" />
+     <validation step="6fd15003-a2d4-44d6-b213-91ca9dee3c47	" />
   
 ## Success Criteria:
 
