@@ -36,12 +36,11 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 2. **Challenge 02: Implement Document Search with Azure AI Search**
    - Construct an Azure AI Search solution to enable sophisticated document handling. Upload, index, and tailor the search experience using VS Code and Azure. This lays the groundwork for document-based questioning essential for Retriever-Augmented Generation (RAG) in OpenAI.
 
-3. **Challenge 03: Deploy NVIDIA NIM on Azure**
-   - Deploy NVIDIA NIM to Azure ML as a managed online endpoint, leveraging its containerized microservices to accelerate AI inference on NVIDIA GPUs with optimal performance and built-in security features.
+3. **Challenge 03: Deploy an AI-Powered Chat App**
+   - Utilize Bicep to deploy a sample chat application on Azure, automating the provisioning of all necessary resources. This challenge will demonstrate your ability to get an application up and running in the cloud.
           
-4. **Challenge 04: Deploy an AI-Powered Chat App**
-   - Deploy the chatapp solution architecture in Azure using Azure Bicep.
-   - Navigate and explore the web app, interact adeptly with the Chat App using insightful questions, showcase multilingual query proficiency, and implement advanced settings for comprehensive Azure OpenAI service understanding.
+4. **Challenge 04: Interact with the Chat App**
+   - Explore the deployed web app, engaging with the Chat App through well-constructed inquiries. Display your ability to handle multilingual queries and make use of advanced settings to deepen your understanding of the Azure OpenAI service's capabilities.
      
 5. **Challenge 05: Implement Monitoring and Logging of Azure OpenAI Using API Management Service**
    - Operationalize your solution by setting up monitoring and logging. Use Azure Monitor, Log Analytics, and APIM to gain insights and maintain the robustness of your AI services.
