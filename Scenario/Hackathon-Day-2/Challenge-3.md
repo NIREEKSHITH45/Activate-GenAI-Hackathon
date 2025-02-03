@@ -65,8 +65,6 @@ Make sure you have the following from the CloudLabs-provided integrated environm
      
      > Hint : Launch your project into action. This command will deploy your application to Azure, setting up all necessary resources and configurations automatically.
 
-      <validation step="36681298-5586-4465-ae71-717f0f69e6dc" />
-
 ## Success Criteria:
 
 - Successful deployment of the Chat App.
