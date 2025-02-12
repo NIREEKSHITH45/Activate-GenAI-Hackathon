@@ -1,14 +1,15 @@
+
 # Challenge 01: Deploy NVIDIA NIM on Azure
 
-### Estimated Time: 90 minutes
+### Estimated Time: 120 minutes
 
 ## Introduction
 
 In the previous challenge, you successfully deployed models within the Azure OpenAI service. In this challenge, you will focus on deploying NVIDIA NIM to Azure for Challenge 3. 
 
-NVIDIA NIM is a suite of highly optimized microservices designed to simplify and accelerate the deployment of generative AI models across cloud, data centers, and workstations. Each NIM is packaged as a container image on a per model or model family basis, such as `meta/llama3-8b-instruct`, and can run on any NVIDIA GPU with sufficient memory. NIMs leverage a runtime that intelligently selects the best model version for the available hardware, ensuring optimal performance.
+NVIDIA NIM is a suite of highly optimized microservices designed to simplify and accelerate the deployment of generative AI models across the cloud, data centers, and workstations. Each NIM is packaged as a container image on a per model or model family basis, such as `meta/llama3-8b-instruct`, and can run on any NVIDIA GPU with sufficient memory. NIMs leverage a runtime that intelligently selects the best model version for the available hardware, ensuring optimal performance.
 
-NIMs are distributed as Docker containers via the NVIDIA NGC Catalog, with each container including built-in security features, such as CVE monitoring and security scanning reports. NIMs offers flexible, scalable deployment options and is compatible with a wide range of NVIDIA GPUs, making it the fastest solution for AI inference.
+NIMs are distributed as Docker containers via the NVIDIA NGC Catalog, with each container including built-in security features, such as CVE monitoring and security scanning reports. NIMs offer flexible, scalable deployment options and are compatible with a wide range of NVIDIA GPUs, making it the fastest solution for AI inference.
 
 You need to deploy NVIDIA NIM on one of the following services for Challenge 3:
 
@@ -53,42 +54,78 @@ Ensure you have the following from the CloudLabs-provided integrated environment
 Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
 1. **Generate NGC API KEY**
-    
-   -  Navigate to [nvidia](https://ngc.nvidia.com/signin) portal and login using your credentials.
-      
-      >**Note:** If you don't have an account, simply enter your work/personal email account and submit, and you'll be redirected to the account creation page to provide the necessary details and set up your account.
+
+   - Login or Create Nvidia account 
+
+   - Navigate to https://build.nvidia.com/ login using your personal email id. If not create an account.
+
+   - Verify you are provided with 1000 free credits, each translating into one API call by clicking on **Profile**. 
    
-   - Search for and select **Llama-3.1-8b-instruct**, then click **Get Container**.
+   -  Navigate to [Nvidia](https://ngc.nvidia.com/signin) account using your credentials to proceed and Click on the **join**.
+    
+   - Once your account is created or you've successfully logged in.
 
-     ![](../../Coach/media/nv5.png)
+   - You will see a pop-up. On the **Set Email Preferences For Your Services** page, you can either close it or click **Set Email Preferences** to receive updates regarding security, announcements, and maintenance for all your services.
 
-   - **Join** for the **NVIDIA Developer Program** to proceed to the NVIDIA Developer Portal.
+      ![](../../Coach/media/nv8.png)
 
-   - Provide the required details on the **Integrate NIM into your application** section and click **Join**.
+   - In the search bar, look for **Llama-3.1-8b-instruct**.
 
-   - Navigate to your **NVIDIA Account**, go to **Organization > Subscriptions**, and ensure the **Active** status for the NVIDIA Developer Program.
+      ![](../../Coach/media/nv7.png)
 
-     ![](../../Coach/media/nv2.png)
+   - Scroll down and select **Llama-3.1-8b-instruct**. 
 
-   - Click on your **Nvidia Account**, **Generate API Key** under `Setup`.
+      ![](../../Coach/media/nv6.png)
 
-   - Copy the `Generated API key` in a notebook
+   - On the left-hand side, click **Get Container**.
 
-2. **Deploy Container registries**
+      ![](../../Coach/media/nv5.png)
+
+   - A pop-up will appear on the **Approval Required** page. Click **Join** for the **NVIDIA Developer Program**, and it will redirect you to the NVIDIA Developer Portal.
+
+      ![](../../Coach/media/nv4.png)
+
+   - On the **NVIDIA Developer Portal**, under **Integrate NIM into your application**, provide the necessary details and click **Join**.
+
+      ![](../../Coach/media/nv3.png)
+
+   - Navigate back to your **NVIDIA Account**. From **Organization**, click **Subscriptions** on the left. Here, you will see the **Active** status for the NVIDIA Developer Program.
+
+      ![](../../Coach/media/nv2.png)
+
+   - Click on **Account** at the top of the page and navigate to the **Setup** section.
+
+      ![](../../Coach/media/nvidia4.png)
+
+   - Click on **Generate API Key** to create a new key for accessing the necessary services.
+
+      ![](../../Coach/media/nvidia5.png)
+
+   - From the top, click on **+ Generate API Key** to create a new API key.
+
+      ![](../../Coach/media/nvidia8.png)
+
+   - Click on **Confirm** to generate your new API key.
+
+      ![](../../Coach/media/nvidia9.png)
+
+   - Carefully copy your generated API key, essential for accessing various services and features paste the API key in the notebook. Ensure you store it securely, as it may not be displayed again after you leave the page.
+
+      ![](../../Coach/media/nvidia7.png)
+
+1. **Deploy Container registries**
 
    - Deploy a Container registry with the following details.
 
      | Setting | Action |
      | --- | --- |
      | **Subscription** | Default |
-     | **Resource Group** | Select the **Activate-GenAI** resource group |
+     | **Resource Group** | Select the ****<inject key="Resource Group Name"/>**** resource group |
      | **Registry name** | Enter **unique name** |
-     | **Location** | Choose the same location where the resource group  |
+     | **Location** | Choose the location as per the subscription  |
      | **Pricing plan** | **Standard** |
 
-   - Copy the `Subscription ID` and `Container registries` names in the notepad.
-
-       <validation step="bf43c618-75d9-465a-85f0-80d3e024f687" />
+   - Copy the `Subscription ID` and `Container registries` name in the notepad.
 
 3. **Setup Git Bash Environment**
 
@@ -97,7 +134,13 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
    - Downloads the latest version of **jq**  file, a lightweight and flexible command-line JSON processor, and save it as an executable file named `jq-win64.exe` in the `/usr/bin/jq.exe` directory
 
      > Note: You can use https://github.com/jqlang/jq/releases url 
-   
+
+   - Install the az CLI by navigating to the below link:
+
+       ```
+      $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://azcliprod.blob.core.windows.net/msi/azure-cli-2.51.0.msi -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item .\AzureCLI.msi
+      ```
+
    - Install the `az ml` stable extension.
 
    - Clone the following repo.
@@ -106,7 +149,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       https://github.com/CloudLabsAI-Azure/nim-deploy.git
       ```
 
-4. **Configure the config.sh**
+5. **Configure the config.sh**
 
    - Open the folder where you have cloned the repo from VS Code.
    - Update the `config.sh` file with the necessary details located in the `nim-deploy\cloud-service-providers\azure\azureml\cli` directory.
@@ -114,7 +157,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
       - Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/tree/main/cloud-service-providers/azure/azureml/cli).
 
-5. **Create AzureML Deployment of the NIM Container**
+6. **Create AzureML Deployment of the NIM Container**
 
    - **Configuration and Login to Azure**
 
@@ -126,12 +169,11 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       - This step is crucial for loading environment variables, paths, or any other configuration before running dependent commands.
       - Login to the Azure portal using the CLI command.
 
+
    - **Setup AzureML Workspace**
 
       - Execute the `1_set_credentials.sh` file to create a new `AzureML workspace` with the "Azure ML Secrets Reader" role assignment.
       - Verify the AzureML workspace is created in the azure-ml resource group.
-
-          <validation step="1993b774-7dfb-4aeb-a792-112946b90e86" />
 
    - **Store NGC API Key for Use in the AzureML Deployment**
 
@@ -140,9 +182,6 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
    - **Save NIM Container in Your Container Registry**
 
        - Run the `./3_save_nim_container.sh` script to push the NIM container in your container registry.
-         
-         > **Note**: This step will take approximately 30-40 minutes to pull the image from the NVIDIA registry and push it to the Azure Container Registry (ACR). In the meantime, please skip the subsequent steps for now, proceed to complete Challenge 2, and return to continue from the next step once Challenge 2 is finished. 
-         
        - Verify that the NIM container has been published in the container registry by checking the `Repositories`.
        - Copy the `Repositories` endpoint.
 
