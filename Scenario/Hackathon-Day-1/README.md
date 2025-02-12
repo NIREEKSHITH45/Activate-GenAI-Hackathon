@@ -37,8 +37,6 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
      
 3. **Challenge 03: Deploy an AI-Powered Chat App**
    - Utilize Bicep to deploy a sample chat application on Azure, automating the provisioning of all necessary resources. This challenge will demonstrate your ability to get an application up and running in the cloud.
-          
-4. **Challenge 04: Interact with the Chat App**
    - Explore the deployed web app, engaging with the Chat App through well-constructed inquiries. Display your ability to handle multilingual queries and make use of advanced settings to deepen your understanding of the Azure OpenAI service's capabilities.
                     
 Each challenge comes with its own set of tasks and objectives. Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to your coach.
