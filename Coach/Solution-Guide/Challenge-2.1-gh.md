@@ -30,7 +30,7 @@ You will be redirected to a page where you can create your NVIDIA account. Provi
 
    ![](../../Coach/media/i-13.png)
 
-1. On the **Create your Account**, page providr thre following details and then click on **Create account (6)**.  
+1. On the **Create your Account**, page provide the following details and then click on **Create account (6)**.  
 
    - Email: Provide your **Personal email address (1)**
    - Password: Provide your **Password (2)**
@@ -233,6 +233,9 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
      
         }
        ```
+
+      >**Note:** If you get an error `demouser is already a member of group docker-users.`, ignore and proceed further
+      
    - Once the command is executed, from the resources tab restart the Virtual machine.
 
      ![](../../Coach/media/res.png)
@@ -288,6 +291,8 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
       ```
       $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://azcliprod.blob.core.windows.net/msi/azure-cli-2.51.0.msi -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item .\AzureCLI.msi
       ```
+
+      >**Note:** Ensure to run the command in windows powershell.
 
 1. Now, install the ml extension
 
@@ -436,6 +441,8 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ./3_save_nim_container.sh
    ```
    >**Note:** This action will approximately take around 20-25 Minutes.
+   
+   >**Note:** Ensure that the docker engine is running.
 
 1. Navigate to your container registry (**amlregistry**) , Under the service click on the Respositiories select your **nim-meta-llama-3.1-8b-instruct** regiestry, here you will find your image is pushed with the tag name **latest**.
 

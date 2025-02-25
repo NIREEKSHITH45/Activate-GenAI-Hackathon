@@ -184,9 +184,9 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
        - Verify that the NIM container has been published in the container registry by checking the `Repositories`.
        - Copy the `Repositories` endpoint.
 
-    - **Create Managed Online Endpoint**
+   - **Create Managed Online Endpoint**
 
-        - Run the `./4_create_endpoint.sh` script to create a managed online endpoint.
+       - Run the `./4_create_endpoint.sh` script to create a managed online endpoint.
    
    - **Role Assignment**
        
