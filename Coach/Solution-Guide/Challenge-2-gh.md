@@ -162,7 +162,7 @@ In this task, you'll learn how to create a **Storage account** resource in the A
    | Performance           | Standard **(5)**                                       |
    | Replication           | Locally redundant storage (LRS) **(6)**                | 
 
-   ![](../media/strupdate.png)
+   ![](../media/up6.png)
 
 1. On the **Advanced** tab, check the box next to **Allow enabling anonymous access on individual containers** and click on **Review + create**
 
