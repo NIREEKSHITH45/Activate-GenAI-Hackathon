@@ -449,13 +449,13 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
    
 1. At the top of the skillset definition, note the **cognitiveServices** object, which is used to connect your Azure AI Services resource to the skillset.
 
-1. In the Azure portal, search for Azure AI Services resource (<u>not</u> your Azure AI Search resource!)
+1. In the Azure portal, search for **Azure AI Services (1)** resource (<u>not</u> your Azure AI Search resource!) and select it.
 
-      ![](../media/newaiservice.png)
+      ![](../media/up7.png)
 
-1. From the left navigate to Azure AI **Multi-Service-Account** and select the **challengeservice**.
+1. From the left navigate to Azure AI **Multi-Service-Account (1)** and select the **challengeservice (2)**.
 
-      ![](../media/newaiservice1.png)
+      ![](../media/up8.png)
 
 1. On **Azure AI Multi-Services-Account** overview page, from the left navigation pane expand **Resource Management** select **Keys and Endpoints**. Then copy **Key 1** to the clipboard.
 
