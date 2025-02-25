@@ -550,14 +550,6 @@ In this task, you will review the **indexer.json** file in Visual Studio Code wh
 
     > **Note**: All of the other metadata and content fields in the source document are implicitly mapped to fields of the same name in the index.
 
-1. Review the **ouputFieldMappings** section, which maps outputs from the skills in the skillset to index fields. Most of these reflect the choices you made in the user interface, but the following mapping has been added to map the **sentimentLabel** value extracted by your sentiment skill to the **sentiment** field you added to the index:
-
-    ```
-    {
-        "sourceFieldName": "/document/sentimentLabel",
-        "targetFieldName": "sentiment"
-    }
-    ```
 
 #### Task 6.5 : Use the REST API to update the search solution
 
@@ -744,7 +736,7 @@ In this task, you'll be running the Margie's Travel web application locally, sea
     
     - A **Sort by** ability to *order* the results based on a specified field and sort direction (ascending or descending). The default order is based on *relevancy*, which is calculated as a **search.score()** value based on  a *scoring profile* that evaluates the frequency and importance of search terms in the index fields.
 
-1. Select the **Reviewer** filter and the **Positive to negative** sort option, and then select **Refine Results**.
+1. Select the **Margies Travel (1)** filter and the **Largest file size (2)** sort option, and then select **Refine Results (3)**.
 
     ![](../media/Active-image97.png)
    
