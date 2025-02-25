@@ -728,7 +728,7 @@ In this task, you'll be running the Margie's Travel web application locally, sea
    
 1. Review the search results. They include the file name (with a hyperlink to the file URL), an extract of the file content with the search terms (*London* and *hotel*) emphasized, and other attributes of the file from the index fields.
 
-    ![](../media/Active-image96.png)
+    ![](../media/up9.png)
    
 1. Observe that the results page includes some user interface elements that enable you to refine the results. These include:
     
@@ -738,15 +738,15 @@ In this task, you'll be running the Margie's Travel web application locally, sea
 
 1. Select the **Margies Travel (1)** filter and the **Largest file size (2)** sort option, and then select **Refine Results (3)**.
 
-    ![](../media/Active-image97.png)
+    ![](../media/up10.png)
    
-1. Observe that the results are filtered to include only reviews and sorted based on the sentiment label.
+1. Observe that the results are filtered to include only reviews and sorted based on the Size label.
    
-    ![](../media/Active-image98.png)
+    ![](../media/up11.png)
    
 1. On the **Margie's Travel** website, enter **quiet hotel in New York (1)** into the search box and click **Search (2)**.
 
-    ![](../media/Active-image99.png)
+    ![](../media/up12.png)
    
 1. Try the following search terms:
     - **Tower of London** (observe that this term is identified as a *key phrase* in some documents).
