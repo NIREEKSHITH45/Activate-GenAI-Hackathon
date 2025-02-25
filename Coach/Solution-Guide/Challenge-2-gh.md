@@ -162,7 +162,7 @@ In this task, you'll learn how to create a **Storage account** resource in the A
    | Performance           | Standard **(5)**                                       |
    | Replication           | Locally redundant storage (LRS) **(6)**                | 
 
-   ![](../media/strupdate.png)
+   ![](../media/up6.png)
 
 1. On the **Advanced** tab, check the box next to **Allow enabling anonymous access on individual containers** and click on **Review + create**
 
@@ -449,13 +449,13 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
    
 1. At the top of the skillset definition, note the **cognitiveServices** object, which is used to connect your Azure AI Services resource to the skillset.
 
-1. In the Azure portal, search for Azure AI Services resource (<u>not</u> your Azure AI Search resource!)
+1. In the Azure portal, search for **Azure AI Services (1)** resource (<u>not</u> your Azure AI Search resource!) and select it.
 
-      ![](../media/newaiservice.png)
+      ![](../media/up7.png)
 
-1. From the left navigate to Azure AI **Multi-Service-Account** and select the **challengeservice**.
+1. From the left navigate to Azure AI **Multi-Service-Account (1)** and select the **challengeservice (2)**.
 
-      ![](../media/newaiservice1.png)
+      ![](../media/up8.png)
 
 1. On **Azure AI Multi-Services-Account** overview page, from the left navigation pane expand **Resource Management** select **Keys and Endpoints**. Then copy **Key 1** to the clipboard.
 
@@ -550,14 +550,6 @@ In this task, you will review the **indexer.json** file in Visual Studio Code wh
 
     > **Note**: All of the other metadata and content fields in the source document are implicitly mapped to fields of the same name in the index.
 
-1. Review the **ouputFieldMappings** section, which maps outputs from the skills in the skillset to index fields. Most of these reflect the choices you made in the user interface, but the following mapping has been added to map the **sentimentLabel** value extracted by your sentiment skill to the **sentiment** field you added to the index:
-
-    ```
-    {
-        "sourceFieldName": "/document/sentimentLabel",
-        "targetFieldName": "sentiment"
-    }
-    ```
 
 #### Task 6.5 : Use the REST API to update the search solution
 
@@ -736,7 +728,7 @@ In this task, you'll be running the Margie's Travel web application locally, sea
    
 1. Review the search results. They include the file name (with a hyperlink to the file URL), an extract of the file content with the search terms (*London* and *hotel*) emphasized, and other attributes of the file from the index fields.
 
-    ![](../media/Active-image96.png)
+    ![](../media/up9.png)
    
 1. Observe that the results page includes some user interface elements that enable you to refine the results. These include:
     
@@ -744,17 +736,17 @@ In this task, you'll be running the Margie's Travel web application locally, sea
     
     - A **Sort by** ability to *order* the results based on a specified field and sort direction (ascending or descending). The default order is based on *relevancy*, which is calculated as a **search.score()** value based on  a *scoring profile* that evaluates the frequency and importance of search terms in the index fields.
 
-1. Select the **Reviewer** filter and the **Positive to negative** sort option, and then select **Refine Results**.
+1. Select the **Margies Travel (1)** filter and the **Largest file size (2)** sort option, and then select **Refine Results (3)**.
 
-    ![](../media/Active-image97.png)
+    ![](../media/up10.png)
    
-1. Observe that the results are filtered to include only reviews and sorted based on the sentiment label.
+1. Observe that the results are filtered to include only reviews and sorted based on the Size label.
    
-    ![](../media/Active-image98.png)
+    ![](../media/up11.png)
    
 1. On the **Margie's Travel** website, enter **quiet hotel in New York (1)** into the search box and click **Search (2)**.
 
-    ![](../media/Active-image99.png)
+    ![](../media/up12.png)
    
 1. Try the following search terms:
     - **Tower of London** (observe that this term is identified as a *key phrase* in some documents).
