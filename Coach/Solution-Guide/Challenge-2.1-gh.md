@@ -233,6 +233,9 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
      
         }
        ```
+
+      >**Note:** If you get an error `demouser is already a member of group docker-users.`, ignore and proceed further
+      
    - Once the command is executed, from the resources tab restart the Virtual machine.
 
      ![](../../Coach/media/res.png)
