@@ -216,6 +216,10 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
     ![](../media/ai-6.png)
       
    > **Note**: If a web browser tab opens and prompts you to sign in to Azure, please sign in, then close the browser tab and return to Visual Studio Code.
+   
+   > **Note**: If you encounter with an error mentioned below, run `az login` and select your account for logging in to azure.
+
+     ![](../media/up13.png)   
 
 1. Enter the following command to run the batch file. This will create a blob container in your storage account and upload the documents in the **data** folder to it.
 
