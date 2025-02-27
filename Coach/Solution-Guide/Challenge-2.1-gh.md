@@ -390,11 +390,12 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
       az login --user <Username> --password <Password>
       az account set -s ${subscription_id}
       ```
-      > **Note:** If you encounter any issues during login, you can execute the following command.
-      
+
       > **Note**: If you encounter with an error mentioned below, run `az login` and select your account for logging in to azure.
       
-        ![](../media/up13.png)
+       ![](../media/up13.png)
+      
+      > **Note:** If you encounter any issues during login, you can execute the following command.
    
       ```
       az account clear
