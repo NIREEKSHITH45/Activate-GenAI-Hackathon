@@ -46,10 +46,9 @@ Azure OpenAI collects the same kinds of monitoring data as other Azure resources
    - Under **Metrics**, select **allMetrics (6)**.
    - To save the configuration, click on **Save (7)**.
 
+     ![](../media/Active-image225.png)
 
-   ![](../media/Active-image225.png)
-
-   > After the successful configuration of the diagnostic settings, you can work with metrics and log data for your Azure OpenAI resource in your Log Analytics workspace.
+     > After the successful configuration of the diagnostic settings, you can work with metrics and log data for your Azure OpenAI resource in your Log Analytics workspace.
 
 ### Task 1.2: Use the Chat Playground to ingest additional logs
 
@@ -79,21 +78,21 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
           
    - Click on **Apply changes (3)** to start a new session and set the behavioral context of the chat system.
 
-   ![](../media/aigen8.png)
+     ![](../media/aigen8.png)
 
-    > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+     > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
              
-   > **Note**: Click on **Continue** when prompted with **Update system message?**.
+     > **Note**: Click on **Continue** when prompted with **Update system message?**.
 
-   ![](../media/Active-image230.png)
+       ![](../media/Active-image230.png)
           
 1. Within the query box of the chat session pane, enter the text `What is artificial intelligence?`
    
 1. Use the **Send** button to submit the message and view the response.
 
-      > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
+   > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
-      > Any text that you enter in the **Completions playground** or the **Chat Completions playground** generates metrics and log data for your Azure OpenAI resource. In the Log Analytics workspace for your resource, you can query the monitoring data by using the Kusto query language.
+   > Any text that you enter in the **Completions playground** or the **Chat Completions playground** generates metrics and log data for your Azure OpenAI resource. In the Log Analytics workspace for your resource, you can query the monitoring data by using the Kusto query language.
 
 ### Task 1.3: Analyze logs using Kusto Queries
 
@@ -119,7 +118,7 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
 
     - This Kusto query is useful for an initial analysis of Azure Diagnostics (AzureDiagnostics) data about your resource:
       
-         - This query returns a sample of 100 entries and displays a subset of the available columns of data in the logs.
+    - This query returns a sample of 100 entries and displays a subset of the available columns of data in the logs.
       
         ```kusto
        AzureDiagnostics
@@ -168,15 +167,15 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
       - Pricing Tier: Select **Standard (99.95% SLA) (7)**
       - Unit(s): **1 (8)**
     
-   ![](../media/Active-image257.png)
-
-   ![](../media/aigen7.png)
+        ![](../media/Active-image257.png)
+      
+        ![](../media/aigen7.png)
 
 1. On **Review + Create** tab once validation passed click on **Create**.
 
-      > **Note**: Before proceeding with next step make sure **API Management Service** deployed successfully.
+   > **Note**: Before proceeding with next step make sure **API Management Service** deployed successfully.
 
-      > **Note**: The deployment of API Management service resource could take approximately 20 minutes. 
+   > **Note**: The deployment of API Management service resource could take approximately 20 minutes. 
 
 1. Once **API Management Service** deployed successfully, click on **Go to resource**.
 
@@ -197,12 +196,13 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 1. Select the **OpenAI Service** deployed in the previous challenge.
 
 1. To capture the values of Azure OpenAI's key and endpoint, execute the following steps:
+   
     - Select **Keys and Endpoints (1)** under the **Resource Management** section from the left navigation pane.
     - Click on **Show Keys (2)**.
     - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
     - Finally, copy the **Endpoint (4)** API URL by clicking on **Copy to clipboard**. Paste it in a text editor such as Notepad for later use.
 
-   ![](../media/k&e.png "Create Azure OpenAI resource")
+      ![](../media/k&e.png "Create Azure OpenAI resource")
    
 1. In the **OpenAI**, select **Access control (IAM)** **(1)**, click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
 
@@ -233,20 +233,21 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
       | API URL suffix **(5)**  | **openai** |
       | Click on  **(6)**       | **Create** |
 
-    ![](../media/apim1.png)
+      ![](../media/apim1.png)
 
 1. In the API Management service, click on **APIs** **(1)**, click on the **three dots** **(2)** next to miyagi-api, select **Import** **(3)**, and click on **OpenAPI** **(4)**.
 
    ![](../media/api-openi-import.png)
 
 1. Within the **Import from OpenAPI specification** pop-up window, enter and configure the following details:
+   
     - **OpenAPI specification:** `https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/cognitiveservices/data-plane/AzureOpenAI/inference/stable/2023-05-15/inference.json` **(1)**
     - **Import method:** Select **Update (2)**
     - Click on **Import (3)** to update the existing API with the above OpenAPI specification.
 
-   ![](../media/import-api-2.png)
+      ![](../media/import-api-2.png)
 
-   > **Note:**  The OpenAPI specification is a JSON file that contains the API specifications of Azure OpenAI. You can have a detailed look at the specifications by accessing the above-provided link for a deeper understanding and clarity.
+      > **Note:**  The OpenAPI specification is a JSON file that contains the API specifications of Azure OpenAI. You can have a detailed look at the specifications by accessing the above-provided link for a deeper understanding and clarity.
 
 1. Click on the newly added API and observe the presence of multiple POST operations based on the OpenAPI specification that was provided earlier.
 
@@ -278,7 +279,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     - Within the Inbound processing tile, click on the ellipses **(2)** adjacent to the **base** policy.
     - Click on **Code editor (3)**.
    
-   ![](../media/allop.png)
+      ![](../media/allop.png)
 
 1. In the code editor copy the below policy to overwrite the **inbound** **(1)** tags only, replace **&lt;&lt;Azure_OpenAI_Endpoint&gt;&gt;** **(2)** of API manager which you copy in Task 1 Step 4 and click on **Save** **(3)**.
 
@@ -294,11 +295,11 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
       </inbound>
       ```
 
-   ![](../media/gen28.png)
+      ![](../media/gen28.png)
+   
+      ![](../media/gen29.png)
 
-   ![](../media/gen29.png)
-
-   > **Note**: Please ensure to paste the **OpenAIEndpoint** values and eliminate any duplication of **https://**.
+      > **Note**: Please ensure to paste the **OpenAIEndpoint** values and eliminate any duplication of **https://**.
     
 1. Click on **Save**. Notice that a new policy named **set-backend-service** has been added within the inbound processing tile.
     
@@ -314,7 +315,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     - **Log analytics workspace** : make sure to select **log Analytics workspace** **(6)**
     - Click on **Save (7)**.
 
-    ![](../media/Active-image256.png)
+      ![](../media/Active-image256.png)
     
 1. Now that the API has been successfully added, it requires configuration to call the OpenAI API through the API Management Service, which can be done by following the below steps:
 
@@ -326,7 +327,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
       >**Note:** It might take 15-20 minutes for the **Override global** option to appear under **Azure Monitor**.
       
-   ![](../media/diag-logs-configs-1.png)
+      ![](../media/diag-logs-configs-1.png)
       
 ### Task 2.2: Test the API to create completions for chat message
 
@@ -339,14 +340,15 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
         - **deployment-id:** Provide the name you had provided earlier for **gpt-35-turbo** model **(4)**
         - **api-version:** 2023-03-15-preview **(5)**
     - Within the **Request body** section, edit the content **(6)** of the sample with the following prompt:
+      
         ```
         {"model":"gpt-35-turbo","messages":[{"role":"user","content":"Hello! What does an API Management Service in Azure do?"}]}
         ```
     - Click on **Send (7)**.
 
-   ![](../media/test-api-1.png)
-
-   ![](../media/test-api-2.png)
+      ![](../media/test-api-1.png)
+   
+      ![](../media/test-api-2.png)
 
 3. Notice the **HTTP response** that is generated with the reply under the **message** tab:
 
@@ -363,9 +365,11 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
    ![](../media/apim-logs.png)
 
 3. Within the **New Query 1** tab, draft a new query such that:
+   
     - The table should be named **ApiManagementGatewayLogs**.
     - The **BackendResponseBody** field contains the JSON response from the OpenAI service, which includes the text completion as well as the token and model information.
     - Paste the below query within the query editor to identify token usage by IP model:
+      
     ```
     ApiManagementGatewayLogs
     | where tolower(OperationId) in ('completions_create','chatcompletions_create')
@@ -386,13 +390,14 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
         by ip, model
     ```
 
-   ![](../media/apim-query.png)
+      ![](../media/apim-query.png)
 
-4. Click on **Run** and notice the result, which defines the token usage based on the given prompt and response.
+5. Click on **Run** and notice the result, which defines the token usage based on the given prompt and response.
 
    ![](../media/apim-result.png)
 
-5. Let's run another query to monitor prompt completions.
+6. Let's run another query to monitor prompt completions.
+   
     - Replace the contents of the query editor with the following KQL to log the prompts **(1)**.
       
     ```
@@ -406,9 +411,9 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     - Click on **Run (2)**.
     - Observe the intricacies of the generated result under the **Results** tab **(3)**.
   
-   ![](../media/apim-result-2.png)
+      ![](../media/apim-result-2.png)
 
-6. To view the logged prompts, <br>
+8. To view the logged prompts, <br>
 
 - Under the **Results** tab, click on the arrow adjacent to the result that was generated using the above query to log prompts.<br>
 - Scroll down and observe the Key-Value pairs of **RequestBody** and **ResponseBody**.
@@ -417,9 +422,9 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
    
    ![](../media/apim-result-4.png)
 
-    >**Note:** If you get the following error, It will take some time to reflect.
+   >**Note:** If you get the following error, It will take some time to reflect.
 
-  ![](../media/image.png)
+   ![](../media/image.png)
 
 ## Success Criteria:
 

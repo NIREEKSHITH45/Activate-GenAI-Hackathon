@@ -93,7 +93,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
    - Note: **PAT (1)**
    - Expiration: **7 days (2)**
      
-   ![](../media/Active-image135.png)
+     ![](../media/Active-image135.png)
 
    - Select scopes: Select all the scopes **repo, workflow, write:packages, delete:packages, admin:org, admin:public_key, admin:repo_hook, admin:org_hook, gist,notifications, user, delete_repo, write:discussion, admin:enterprise, audit_log, codespace, copilot, project, admin:gpg_key, admin:ssh_signing_key** and click on **Genearte token**.
 
@@ -120,11 +120,11 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
    - Repository Token : Paste the PAT token which you created and recorded in previous step.
    - Repository Url : Paste the **Forked Github account** url
 
-   ![](../media/gen39.png)
+     ![](../media/gen39.png)
   
-      >**Note**: Ensure the primary region is set to EASTUS2
+     >**Note**: Ensure the primary region is set to EASTUS2
       
-    ![](../media/gen47.png)
+     ![](../media/gen47.png)
      
      >**Note**: (you can get URL by click on profile from right corner then select **Your repositories** click on **business-process-automation** and from top bar copy the **Github account** url)
      
@@ -148,7 +148,7 @@ In this task, you'll learn how to create a container in an existing storage acco
 
 1. In the storage account overview blade, expand **Settings(1)** select **Configuration (2)**, **Enabled** the **Allow the blob anonymous access (3)** and click on **Save (4)**.
 
-      ![](../media/Active-image146.png)
+   ![](../media/Active-image146.png)
 
 1. Expand **Data Storage (1)** select on **Containers (2)** from the left navigation pane, select **+ Container (3)**.
 
@@ -164,7 +164,7 @@ In this task, you'll learn how to create a container in an existing storage acco
    
 1. From the left navigation pane expand **Settings(1)** then select **Shared access tokens(2)**. From the **Permission** drop down select **Read(3)** and **List(4)** then click on **Generate SAS token and URL(5)**.
 
-      ![](../media/Active-image150.png)
+   ![](../media/Active-image150.png)
 
 1. After clicking **Generate SAS token and URL** scroll down then copy the **Blob SAS URL**.
 
@@ -200,9 +200,9 @@ In this task, we will set up a C#/.NET environment in Visual Studio 2022. We'll 
 
 1. Please click on **Work or school Account** to sign in.
 
-      ![](../media/ai3.png)   
+   ![](../media/ai3.png)   
 
-      > **Note**: Navigate to the Environment Details tab to get the credentials.
+   > **Note**: Navigate to the Environment Details tab to get the credentials.
       
 1. On the Visual studio **Get Started** page, select **Create a New Project**.
 
@@ -216,9 +216,9 @@ In this task, we will set up a C#/.NET environment in Visual Studio 2022. We'll 
 
     ![](../media/Active-image159.png)
 
-1. In the **Additional information** dialog window, select **.NET 7.0**, and then select **Create**.
+1. In the **Additional information** dialog window, select **.NET 8.0**, and then select **Create**.
 
-     ![](../media/Active-image160.png)
+     ![](../media/up14.png)
     
 1. Right-click on your **document-translation-qs** project and select **Manage NuGet Packages**.
 
@@ -246,7 +246,7 @@ In this task, you'll set up a Translator resource in Azure Portal, obtain its ke
 
 1. Go to the Translator resource that is created, please get the resource keys by following the next step.
    
-      ![](../media/Active-image167.png)
+   ![](../media/Active-image167.png)
    
 1. On the left navigation pane, under **Resource Management** section, select **Keys and Endpoint (1)**. Copy and paste your **Key 1 (2)** and **Document Translation (3)** endpoint in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
 
@@ -270,7 +270,7 @@ In this task, you'll set up a Translator resource in Azure Portal, obtain its ke
     - Update **{your-document-translation-endpoint}** and **{your-api-key}** with values of Translator instance which you recorded in the notepad.   
     - Also, update **"https://YOUR-SOURCE-URL-WITH-READ-LIST-ACCESS-SAS\"** and **"https://YOUR-TARGET-URL-WITH-WRITE-LIST-ACCESS-SAS\"** with values from your Storage account container instance which you recorded in notepad.
       
-   ![](../media/Active-image171.png)
+      ![](../media/Active-image171.png)
       
 1. Once you've added the code sample to your application, choose the green Start button next to document-translation-qs to build and run your program, or press F5.
    
@@ -286,7 +286,7 @@ In this task, you'll create a Form Recognizer resource in Azure Portal by settin
 
 1. On the **Azure AI services multi-service account** blade, select the service that was deployed using the custom template.
 
-     ![](../media/Active-image174.png)
+   ![](../media/Active-image174.png)
    
 1. On **Azure AI services multi-service account** blade, click on the **Document Intelligence (1)** tab and select **Go to studio (2)**.
 
@@ -300,14 +300,14 @@ In this task, you'll create a Form Recognizer resource in Azure Portal by settin
 
     ![](../media/Active-image177.png)
 
-      > **Note**: Please sign in if prompted.
+    > **Note**: Please sign in if prompted.
 
 1. Enter the following details and click on **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
 
-    ![](../media/Active-image178.png)
+     ![](../media/Active-image178.png)
 
 1. Enter the following details under **Configure service resource** and click on **Continue** **(5)**.
 
@@ -316,7 +316,7 @@ In this task, you'll create a Form Recognizer resource in Azure Portal by settin
    - Form Recognizer or Cognitive Service Resource: Select the available Cognitive Service Form Recognizer name similar to **cogservicesbpass{suffix}** **(3)**.
    - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
 
-   ![](../media/Active-image179-1.png)
+     ![](../media/Active-image179-1.png)
 
 1. Enter the following details under **Connect training data source**. and click on **Continue** **(8)**.
 
@@ -326,11 +326,11 @@ In this task, you'll create a Form Recognizer resource in Azure Portal by settin
    - Blob container name: Click on **Create new (4)** and provide the name as **custommoduletext** **(5)** then click on **OK** **(6)**.
    - Review the settings then click on **Continue** **(7)**.
    
-   ![](../media/Active-image180-1.png)
+     ![](../media/Active-image180-1.png)
 
-   ![](../media/Active-image181-1.png)
+     ![](../media/Active-image181-1.png)
 
-   ![](../media/Active-image182-1.png)
+     ![](../media/Active-image182-1.png)
 
 1. Validate the information and choose **Create project**.
 
@@ -474,7 +474,7 @@ In this task, you'll configure Azure Cognitive Search to connect with Azure Blob
    - Subscription: Select the **existing one (4)**
    - Click on **Choose an existing connection** **(5)** under the Connection string.
   
-   ![](../media/Active-image210.png)
+     ![](../media/Active-image210.png)
 
 1. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix} (6)**. 
 
