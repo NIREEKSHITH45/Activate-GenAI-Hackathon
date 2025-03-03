@@ -52,7 +52,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
    - Obtain the necessary Azure OpenAI Key and Endpoint.
    - Please ensure the Azure OpenAI Service name follows this format: **OpenAI-xxxxxx**, where xxxxxx should be replaced with your specific **Deployment ID**.
 
-     <validation step="ccff4a0f-eb81-479e-a774-00cc5a664eeb" />
+     <validation step="a98f394c-9dd0-4b36-85a5-85d307c3f778" />
 
 2. **Deploy Large Language Models (LLM):**
    - Azure OpenAI provides a web-based portal named **Azure AI Foundry Portal** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure AI Foundry Portal to deploy a model.
