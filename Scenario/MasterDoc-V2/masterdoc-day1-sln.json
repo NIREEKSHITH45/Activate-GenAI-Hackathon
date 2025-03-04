@@ -1,1 +1,15 @@
-
+[ 
+  {
+  "Name": "Activate GenAI Hackathon - 2 Day",
+  "Language": "English",
+  "BaseURL": "https://github.com/CloudLabs-MOC/Activate-GenAI-Hackathon/",
+  "Files": [
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Nvidia-Content/Scenario/Hackathon-Day-2/README.md",
+       "Order": 1
+     },
+     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Microsoft_repo/Scenario/Hackathon-Day-2/Use-Case.md",
+       "Order": 2
+     },
+    
