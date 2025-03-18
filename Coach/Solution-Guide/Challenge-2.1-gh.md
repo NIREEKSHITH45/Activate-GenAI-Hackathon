@@ -133,17 +133,17 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
 
    ![](../../Coach/media/nvidia4.png)
 
-1. Click on **Generate API Key** to create a new key for accessing the necessary services.
+1. Click on **+ Generate Personal Key** to create a new key for accessing the necessary services.
 
-   ![](../../Coach/media/nvidia5.png)
+   ![](../../Coach/media/pass1.png)
 
-1. From the top, click on **+ Generate API Key** to create a new API key.
+1. Provide the name as **KGC (1)**, expiration for **12 months (2)**, add **Public API Endpoints (3)** for Services Included and click on **Generate Personal Key (4)**.
 
-   ![](../../Coach/media/nvidia8.png)
+   ![](../../Coach/media/pass2.png)
 
-1. Click on **Confirm** to generate your new API key.
+1. Click on **Copy Personal Key**.
 
-   ![](../../Coach/media/nvidia9.png)
+   ![](../../Coach/media/pass3.png)
 
 1. Carefully copy and paste your generated **API key** in a notepad, essential for accessing various services and features paste the API key in the notebook. Ensure you store it securely, as it may not be displayed again after you leave the page.
 
