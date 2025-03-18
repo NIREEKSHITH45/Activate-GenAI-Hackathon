@@ -140,6 +140,8 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://azcliprod.blob.core.windows.net/msi/azure-cli-2.51.0.msi -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item .\AzureCLI.msi
       ```
 
+       > **Note:** Run the above command in PowerShell.
+
    - Install the `az ml` stable extension.
 
    - Clone the following repo.
