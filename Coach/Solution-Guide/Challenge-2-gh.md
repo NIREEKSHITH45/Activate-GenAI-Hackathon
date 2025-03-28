@@ -247,7 +247,7 @@ In this task, you'll learn how to create a search solution by indexing documents
     - **Data to extract**: Content and metadata (3)
     - **Parsing mode**: Default (4)
     - **Subscription**: Leave default (5)  
-    - **Connection string**: Select **Choose an existing connection (6)**. Then select your storage account (7), and finally select the **margies (8)** container that 
+    - **Connection string**: Select **Choose an existing connection (6)**. Then select your **Storage account (7)**, and finally select the **margies (8)** container that 
        was created by the UploadDocs.cmd script. then click on **Select (9)**.
 
         ![](../media/Active-image55.png)
@@ -373,6 +373,7 @@ In this task, you'll learn to search and query the index created earlier:
       "count": true
     }
     ```
+    >**Note :** If the above query is already displayed, please click on **Search**.
 
 1. Submit the modified search. This time, the results include a **@odata.count** field at the top of the results that indicates the number of documents returned by the search.
 
@@ -455,7 +456,7 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
 1. In the Azure portal, search for **Azure AI Services (1)** resource (<u>not</u> your Azure AI Search resource!) and select it.
 
-      ![](../media/up7.png)
+     ![](../media/up7u.png)
 
 1. From the left navigate to Azure AI **Multi-Service-Account (1)** and select the **challengeservice (2)**.
 
@@ -579,6 +580,9 @@ In this task, you will update JSON definitions in Visual Studio Code for Azure A
 In this task, you'll perform a query in Azure AI Search to retrieve URLs, sentiment, and key phrases for documents mentioning "London" with positive sentiment, authored by "Reviewer".
 
 1. At the top of the overview blade for your Azure AI Search resource, select **Search explorer**.
+
+    ![](../media/Active-image68.png)
+
 1. In Search explorer, in the **Query string** box, submit the following JSON query:
 
     ```json
